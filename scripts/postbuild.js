@@ -1,6 +1,8 @@
 const path = require('path');
 const fs = require('fs-extra');
 const pick = require('./_utils/pick');
+const tsc = require('node-typescript-compiler');
+
 
 async function copyAssets() {
     try {
@@ -46,11 +48,18 @@ async function copyPackageJSON() {
     }
 }
 
+async function generateTSDefinitions() {
+    await tsc.compile({
+        'project': path.resolve(__dirname, '../tsconfig.json')
+    });
+}
+
 async function main() {
     await Promise.all([
         copyAssets(),
         copyCommon(),
-        copyPackageJSON()
+        copyPackageJSON(),
+        generateTSDefinitions()
     ]);
 }
 
