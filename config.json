@@ -1,0 +1,41 @@
+{
+  "source": ["data/json/**/*.json"],
+  "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "dist/css/",
+      "files": [{
+        "destination": "_variables.css",
+        "format": "css/variables"
+      }]
+    },
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "dist/",
+      "files": [{
+        "destination": "index.js",
+        "format": "javascript/es6"
+      }]
+    },
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "dist/scss/",
+      "files": [
+        {
+          "destination": "_variables.scss",
+          "format": "scss/variables"
+        }
+      ]
+    },
+    "less": {
+      "transformGroup": "less",
+      "buildPath": "dist/less/",
+      "files": [
+        {
+          "destination": "_variables.less",
+          "format": "less/variables"
+        }
+      ]
+    }
+  }
+}

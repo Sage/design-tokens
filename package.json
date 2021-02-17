@@ -1,0 +1,25 @@
+{
+  "name": "@sage/design-tokens",
+  "version": "0.1.0",
+  "author": "The Sage Group plc",
+  "productName": "StratosTokens",
+  "description": "Design tokens for the Sage Design System.",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sage/design-tokens"
+  },
+  "dependencies": {
+  },
+  "scripts": {
+    "prebuild": "node ./scripts/prebuild.js",
+    "build": "style-dictionary build",
+    "postbuild": "node  ./scripts/postbuild.js"
+  },
+  "devDependencies": {
+    "less": "^4.1.1",
+    "scss": "^0.2.4",
+    "style-dictionary": "^2.8.3",
+    "fs-extra": "^8.1.0"
+  }
+}
