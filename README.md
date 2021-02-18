@@ -94,7 +94,7 @@ _COMING SOON_
 
 The Sage Design team welcomes any suggestions for updates to this repository. Please open an issue to discuss your proposal before opening a pull request.
 
-This library is designed to be a platform agnostic method for .
+The values in data are exported from a design file which is the source of truth for the design tokens. We will not accept PR that have manually changed these values, although we welcome any suggestions you may have.
 
 # Licence
 
