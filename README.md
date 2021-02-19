@@ -83,21 +83,20 @@ npm install --global style-dictionary less sass
 To build this package for web, run this command:
 
 ```bash
-npm run build:web
+npm run build
 ```
 
-### Publish
+### Publishing
 
 _COMING SOON_
 
 ## Contributing
 
-The Sage Design team welcomes any suggestions for updates to this repository. Please open an issue to discuss your proposal before opening a pull request.
-
-The values in data are exported from a design file which is the source of truth for the design tokens. We will not accept PR that have manually changed these values, although we welcome any suggestions you may have.
+If you would like to help contribute to this library, please read our [contributing documentation](./docs/CONTRIBUTING.md),
 
 # Licence
+This is an open source project licensed with the [Apache 2.0 license](./license).
 
-Internal
+© The Sage Group plc.
 
 _COMING SOON_

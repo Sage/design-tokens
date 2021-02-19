@@ -9,16 +9,23 @@
     "url": "https://github.com/Sage/design-tokens"
   },
   "scripts": {
-    "prebuild:web": "node ./scripts/prebuild.js",
+    "build": "npm run build:web",
     "build:web": "style-dictionary build",
-    "postbuild:web": "node  ./scripts/postbuild.js"
+    "prebuild": "node ./scripts/prebuild.js",
+    "postbuild": "node  ./scripts/postbuild.js"
   },
   "devDependencies": {
     "fs-extra": "^8.1.0",
+    "husky": "^5.0.9",
     "less": "^4.1.1",
     "node-typescript-compiler": "^2.2.1",
     "scss": "^0.2.4",
     "style-dictionary": "^2.8.3",
     "typescript": "^4.1.5"
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": "echo \"[Husky] pre-commit\"",
+    }
   }
 }
