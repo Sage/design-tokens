@@ -1,3 +1,7 @@
+/*
+Copyright 2021
+The Sage Group plc.
+ */
 const path = require('path')
 const fs = require('fs-extra')
 

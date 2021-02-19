@@ -65,38 +65,10 @@ _COMING SOON_
 
 _COMING SOON_
 
-## Development
-
-Instructions on how to develop this library.
-
-### Prerequisites
-
-You will need to have node and npm installed on your system.
-
-It is recommended that you also install these npm libraries globally:
-```bash
-npm install --global style-dictionary less sass
-```
-
-### Build
-
-To build this package for web, run this command:
-
-```bash
-npm run build
-```
-
-### Publishing
-
-_COMING SOON_
-
 ## Contributing
 
 If you would like to help contribute to this library, please read our [contributing documentation](./docs/CONTRIBUTING.md),
 
 # Licence
-This is an open source project licensed with the [Apache 2.0 license](./license).
 
-© The Sage Group plc.
-
-_COMING SOON_
+[Apache 2.0 license](./license).
