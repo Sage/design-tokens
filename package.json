@@ -9,6 +9,7 @@
     "url": "https://github.com/Sage/design-tokens"
   },
   "scripts": {
+    "postinstall": "husky install",
     "build": "npm run build:web",
     "build:web": "style-dictionary build",
     "prebuild": "node ./scripts/prebuild.js",
@@ -33,7 +34,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && git add -A"
+      "pre-commit": "npm run format && git add -A ."
     }
   }
 }
