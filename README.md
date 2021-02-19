@@ -28,7 +28,7 @@ This will add the variables to the root element of the page.
 
 To make use of the scss variables, import them into your scss files like so:
 ```scss
-@use '~@Sage/design-tokens/scss/_variables.scss';
+@use '~@sage/design-tokens/scss/_variables.scss';
 ```
 
 You can also use `@import`, but for scss this is [being deprecated](https://sass-lang.com/documentation/at-rules/import) in favour of `@use`;
@@ -37,7 +37,7 @@ You can also use `@import`, but for scss this is [being deprecated](https://sass
 
 To make use of the less variables, import them into your less files like so:
 ```less
-@import (reference) '~@Sage/design-tokens/less/_variables.less';
+@import (reference) '~@sage/design-tokens/less/_variables.less';
 ```
 
 #### CSS-in-JS
@@ -69,6 +69,10 @@ _COMING SOON_
 
 If you would like to help contribute to this library, please read our [contributing documentation](./docs/CONTRIBUTING.md),
 
-# Licence
+## Licence
 
 [Apache 2.0 license](./license).
+
+## Repository maintainer
+
+[Mark Mizen, User Experience Engineer](mailto:mark.mizen@sage.com).

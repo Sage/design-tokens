@@ -5,7 +5,7 @@ We're happy you want to contribute to the project, this guide will aim to give y
 
 ## Please no editing the data files directly
 
-Please note that while we welcome any suggestions for making a change to the design tokens themselves, we will not be accepting any pull requests that alter the contents of the data folder.
+Please note that while we welcome any suggestions for making a change to the design tokens themselves, we will not be accepting any pull requests that alter the contents of the data folder. The contents of data is automatically generated from the design files that act as the source of truth.
 
 ## Development 
 
