@@ -73,6 +73,8 @@ If you would like to help contribute to this library, please read our [contribut
 
 [Apache 2.0 license](./license).
 
+Copyright (c) 2021 Sage Group Plc. All rights reserved.
+
 ## Repository maintainer
 
 [Mark Mizen, User Experience Engineer](mailto:mark.mizen@sage.com).
