@@ -1,0 +1,13 @@
+name: Update Tokens
+on:
+  repository_dispatch:
+    types: [update-tokens]
+jobs:
+  create_pr:
+    name: Create Pull Request
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - run: 'echo "Recieved: ${{ github.event.client_payload }}"'

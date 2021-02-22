@@ -1,0 +1,24 @@
+name: Lint
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  run-linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      # Install your linters here
+
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          eslint: true
+          auto_fix: true
+          git_name: "Github Lint"
+          git_email: ${{ secrets.ACTIONS_GIT_EMAIL }}
