@@ -11,23 +11,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Save JSON data
-        uses: jsdaniell/create-json@1.1.2
-        with:
-          name: ${{ github.event.client_payload.tokenFileName }}
-          json: ${{ github.event.client_payload.tokens }}
-          dir: 'data'
-        
-      - name: Commit data
-        run: |
-          git config user.name 'Github update tokens'
-          git config user.email '${{ secrets.ACTIONS_GIT_EMAIL }}'
-          git add .
-          git commit -am "Updated design tokens"
-
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      
+      - name: Install
+        run: npm ci 
+
+      - name: Run update data script
+        run: node ./scripts/updateData.js '${{ github.event.client_payload.tokens }}'
+
+      - name: Commit data
+        run: |
+          git config user.name 'Github update tokens'
+          git config user.email 'mark.mizen@sage.com'
+          git add .
+          git commit -m "Updated design tokens"
 
       - name: Open pull request
         id: cpr
