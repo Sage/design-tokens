@@ -1,5 +1,7 @@
 # Sage Design Tokens
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 This repository contains the design tokens from the Sage Design System. These are generated using Stratos from a Sketch library maintained by the design system team. The Design Token library is designed to be a platform agnostic tool to align all our products with the Design System.
 
 ## Using the design tokens
@@ -71,10 +73,19 @@ If you would like to help contribute to this library, please read our [contribut
 
 ## Licence
 
-[Apache 2.0 license](./license).
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use these files except in compliance with the License.
+You may obtain a copy of the License at [Apache 2.0 license](./license).
 
-Copyright (c) 2021 Sage Group Plc. All rights reserved.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 ## Repository maintainer
 
 [Mark Mizen, User Experience Engineer](mailto:mark.mizen@sage.com).
+
+
+Copyright (c) 2021 Sage Group Plc. All rights reserved.
