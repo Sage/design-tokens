@@ -4,6 +4,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
 const path = require('path')
 const fs = require('fs-extra')
 const pick = require('./_utils/pick')
+const globAsync = require('./_utils/globAsync')
 const tsc = require('node-typescript-compiler')
 
 async function copyAssets () {
@@ -56,11 +57,31 @@ async function generateTSDefinitions () {
   })
 }
 
+async function addFileHeader () {
+  const files = await globAsync('dist/**/*.@(js|css|.ts|d.ts|scss|less)')
+  await files.forEach(async (file) => {
+    try {
+      const filePath = path.resolve(__dirname, '../', file)
+
+      const data = fs.readFileSync(filePath)
+      const fd = fs.openSync(filePath, 'w+')
+      const buffer = Buffer.from('/* \nCopyright © 2021 The Sage Group plc or its licensors. All Rights reserved\n*/\n')
+
+      fs.writeSync(fd, buffer, 0, buffer.length, 0)
+      fs.writeSync(fd, data, 0, data.length, buffer.length)
+      fs.close(fd)
+    } catch (er) {
+      console.error(`Error adding header to ${file}`, er)
+    }
+  })
+}
+
 async function main () {
   copyAssets()
   copyCommon()
   copyPackageJSON()
   generateTSDefinitions()
+  addFileHeader()
 }
 
 main()

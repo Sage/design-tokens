@@ -1,12 +1,15 @@
 {
-  "source": ["data/json/**/*.json"],
+  "source": ["data/**/*.json"],
   "platforms": {
     "css": {
       "transformGroup": "css",
       "buildPath": "dist/css/",
       "files": [{
         "destination": "_variables.css",
-        "format": "css/variables"
+        "format": "css/variables",
+        "options": {
+          "showFileHeader": false
+        }
       }]
     },
     "js": {
@@ -14,7 +17,10 @@
       "buildPath": "dist/",
       "files": [{
         "destination": "index.js",
-        "format": "javascript/es6"
+        "format": "javascript/es6",
+        "options": {
+          "showFileHeader": false
+        }
       }]
     },
     "scss": {
@@ -23,7 +29,10 @@
       "files": [
         {
           "destination": "_variables.scss",
-          "format": "scss/variables"
+          "format": "scss/variables",
+          "options": {
+            "showFileHeader": false
+          }
         }
       ]
     },
@@ -33,7 +42,10 @@
       "files": [
         {
           "destination": "_variables.less",
-          "format": "less/variables"
+          "format": "less/variables",
+          "options": {
+            "showFileHeader": false
+          }
         }
       ]
     }

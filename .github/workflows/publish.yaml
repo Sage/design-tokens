@@ -1,0 +1,34 @@
+name: Publish
+on:
+  tags:
+    - 'v*'
+jobs:
+  npm:
+    name: npm package
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    # Setup .npmrc file to publish to npm
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        registry-url: 'https://registry.npmjs.org'
+
+    - name: Fetch latest release version
+      id: fetch-latest-release
+      uses: reloc8/action-latest-release-version@1.0.0
+
+    - name: Set the version number
+      run: node ./scripts/setVersion.js '${{ steps.fetch-latest-release.outputs.latest-release }}'
+
+    - name: Install dependancies
+      run: npm install
+
+    - name: Run build
+      run: npm run build
+
+    # Publish to npm
+    - name: Publish to npm
+      run: cd dist && npm publish --access public
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

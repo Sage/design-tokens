@@ -15,8 +15,21 @@ async function deleteExistingData () {
   await fs.ensureDir(dataFolder)
 }
 
+function addUnits (obj) {
+  Object.keys(obj).forEach((key) => {
+    if (typeof obj[key] === 'object') {
+      addUnits(obj)
+    }
+    if (obj.value && obj?.unit === 'pixel') {
+      obj.value += 'px'
+    }
+  })
+}
+
 // Splits the tokens into seperate files
 async function writeNewData () {
+  // Add units to the data correctly
+  addUnits(tokens)
   // Split the incoming data into seperate files based on top level category
   const writeFiles = Object.keys(tokens).map((key) => {
     const output = {
