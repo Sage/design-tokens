@@ -2,6 +2,11 @@
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 const path = require('path')
+const {
+  STRING_SPACES,
+  NAME_CONSTANT,
+  registerTransforms
+} = require('./_utils/customTransforms')
 
 const isMediumThemeValue = (token) =>
   token.type === 'color' && token.path[1] === 'small'
@@ -19,7 +24,7 @@ const StyleDictionary = require('style-dictionary').extend({
         'name/cti/kebab',
         'color/hex',
         'number/units',
-        'string/spaces'
+        STRING_SPACES
       ],
       files: [
         {
@@ -81,7 +86,7 @@ const StyleDictionary = require('style-dictionary').extend({
       buildPath: 'dist/js/themes/',
       transforms: [
         'attribute/cti',
-        'name/constant',
+        NAME_CONSTANT,
         'color/hex',
         'number/units'
       ],
@@ -112,7 +117,7 @@ const StyleDictionary = require('style-dictionary').extend({
         'name/cti/kebab',
         'color/hex',
         'number/units',
-        'string/spaces'
+        STRING_SPACES
       ],
       files: [
         {
@@ -132,7 +137,7 @@ const StyleDictionary = require('style-dictionary').extend({
         'name/cti/kebab',
         'color/hex',
         'number/units',
-        'string/spaces'
+        STRING_SPACES
       ],
       files: [
         {
@@ -175,24 +180,7 @@ StyleDictionary.registerTransform({
   }
 })
 
-StyleDictionary.registerTransform({
-  name: 'string/spaces',
-  type: 'value',
-  matcher: function (prop) {
-    return prop.type === 'string' && /\s/.test(prop.value)
-  },
-  transformer: function (prop) {
-    return `'${prop.original.value}'`
-  }
-})
-
-StyleDictionary.registerTransform({
-  name: 'name/constant',
-  type: 'name',
-  transformer: function (prop) {
-    // Makes text uppercase then replaced non alpha-numeric characters with underscores
-    return prop.name.toUpperCase().replace(/[^A-Z\d_]/g, '_')
-  }
-})
+// Registers the custom style dictionary filters from ./_utils/customTransforms
+registerTransforms(StyleDictionary)
 
 StyleDictionary.buildAllPlatforms()
