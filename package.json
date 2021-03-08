@@ -4,6 +4,7 @@
   "author": "The Sage Group plc",
   "description": "Design tokens for the Sage Design System.",
   "private": true,
+  "license": "APACHE 2.0 (https://github.com/Sage/design-tokens/blob/master/license)",
   "repository": {
     "type": "git",
     "url": "https://github.com/Sage/design-tokens"
@@ -11,7 +12,7 @@
   "scripts": {
     "postinstall": "husky install",
     "build": "npm run build:web",
-    "build:web": "style-dictionary build",
+    "build:web": "node ./scripts/build.js",
     "prebuild": "node ./scripts/prebuild.js",
     "postbuild": "node  ./scripts/postbuild.js",
     "lint": "eslint .",

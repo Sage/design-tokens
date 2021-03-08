@@ -1,7 +1,8 @@
 name: Publish
 on:
-  tags:
-    - 'v*'
+  push:
+    branches:
+      - master
 jobs:
   npm:
     name: npm package
@@ -18,17 +19,20 @@ jobs:
       id: fetch-latest-release
       uses: reloc8/action-latest-release-version@1.0.0
 
-    - name: Set the version number
-      run: node ./scripts/setVersion.js '${{ steps.fetch-latest-release.outputs.latest-release }}'
-
     - name: Install dependancies
       run: npm install
+
+    - name: Set the version number
+      run: node ./scripts/setVersion.js '${{ steps.fetch-latest-release.outputs.latest-release }}'
+    
+    - name: Commit version number
+      run: echo 'I would save here...'
 
     - name: Run build
       run: npm run build
 
     # Publish to npm
-    - name: Publish to npm
-      run: cd dist && npm publish --access public
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    # - name: Publish to npm
+    #   run: cd dist && npm publish --access public
+    #   env:
+    #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
