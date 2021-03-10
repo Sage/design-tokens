@@ -28,10 +28,11 @@ jobs:
       run: npm version ${{ github.event.inputs.type }}
 
     - name: Push changes to master
-      uses: ad-m/github-push-action@master
+      uses: colmose/push-bot@v1.0.0
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: master
+        token: ${{ secrets.ADMIN_ACCESS_TOKEN }}
+        branch_name: 'master'
+        bot_name: 'github-actions[bot]'
 
   npm:
     needs: [version]
