@@ -1,38 +1,102 @@
 name: Publish
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
+    inputs:
+      type:
+        description: "Type of release (major, minor, patch)"
+        required: true
+        default: ""
+      title:
+        description: '(optional) A title for the release'
+        required: false
+        default: ''
+
 jobs:
+  version:
+    name: Version Increment
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Version increment
+        run: npm version ${{ github.event.inputs.type }}
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - name: Commit files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Version ${{ steps.package-version.outputs.current-version }}" -a
+
+      - name: Push changes to master
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+
   npm:
+    needs: [version]
     name: npm package
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    # Setup .npmrc file to publish to npm
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-        registry-url: 'https://registry.npmjs.org'
+      - uses: actions/checkout@v2
 
-    - name: Fetch latest release version
-      id: fetch-latest-release
-      uses: reloc8/action-latest-release-version@1.0.0
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+          registry-url: "https://registry.npmjs.org"
 
-    - name: Install dependancies
-      run: npm install
+      - name: Install dependancies
+        run: npm install
 
-    - name: Set the version number
-      run: node ./scripts/setVersion.js '${{ steps.fetch-latest-release.outputs.latest-release }}'
-    
-    - name: Commit version number
-      run: echo 'I would save here...'
-
-    - name: Run build
-      run: npm run build
+      - name: Run build
+        run: npm run build
 
     # Publish to npm
     # - name: Publish to npm
     #   run: cd dist && npm publish --access public
     #   env:
     #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  release:
+    needs: [version]
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - name: Commit notes
+        id: release-notes
+        run: |
+          LOG = git log --pretty=format:'%s%n%b' $(git rev-list --tags --max-count=2 | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/.../g') 
+          echo "::set-output name=details $(LOG)"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        with:
+          tag_name: ${{ steps.package-version.outputs.current-version }}
+          release_name: Release ${{ steps.package-version.outputs.current-version }}
+          body: |
+            Release ${{ steps.package-version.outputs.current-version }} 
+            ${{ github.event.inputs.notes }}
+            
+            What's new in this release:
+
+            ${{steps.release-notes.outputs.details}}
+
+          draft: false
+          prerelease: false

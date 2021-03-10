@@ -23,8 +23,8 @@ jobs:
 
       - name: Commit data
         run: |
-          git config user.name 'Github update tokens'
-          git config user.email 'mark.mizen@sage.com'
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "Updated design tokens"
 

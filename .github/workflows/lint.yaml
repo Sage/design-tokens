@@ -14,12 +14,11 @@ jobs:
         uses: actions/checkout@v2
 
       # Install your linters here
-
       - name: Run linters
         uses: wearerequired/lint-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           eslint: true
           auto_fix: true
-          git_name: "Github Lint"
-          git_email: ${{ secrets.ACTIONS_GIT_EMAIL }}
+          git_name: github-actions[bot]
+          git_email: github-actions[bot]@users.noreply.github.com
