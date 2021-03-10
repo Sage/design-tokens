@@ -25,7 +25,7 @@ jobs:
         git config --local user.name "github-actions[bot]"
 
     - name: Version increment
-      run: npm version ${{ github.event.inputs.type }}
+      run: npm version ${{ github.event.inputs.type }} --no-git-tag-version
 
     - name: Push changes to master
       uses: colmose/push-bot@v1.0.0
