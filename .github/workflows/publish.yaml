@@ -12,31 +12,26 @@ on:
         default: ''
 
 jobs:
-  version:
+  version: 
     name: Version Increment
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Version increment
-        run: npm version ${{ github.event.inputs.type }}
+    - name: Git Config 
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
 
-      - name: get-npm-version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@master
+    - name: Version increment
+      run: npm version ${{ github.event.inputs.type }}
 
-      - name: Commit files
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "Version ${{ steps.package-version.outputs.current-version }}" -a
-
-      - name: Push changes to master
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
+    - name: Push changes to master
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: master
 
   npm:
     needs: [version]
