@@ -173,9 +173,6 @@ StyleDictionary.registerTransform({
         break
       }
     }
-    // Note the use of prop.original.value,
-    // before any transforms are performed, the build system
-    // clones the original property to the 'original' attribute.
     return prop.original.value + suffix
   }
 })
