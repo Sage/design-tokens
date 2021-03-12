@@ -40,7 +40,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          - ref: releases/${{ steps.package-version.outputs.current-version }}
+          ref: releases/${{ steps.package-version.outputs.current-version }}
 
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v1
@@ -68,7 +68,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          - ref: releases/${{ steps.package-version.outputs.current-version }}
+          ref: releases/${{ steps.package-version.outputs.current-version }}
 
       - name: get-npm-version
         id: package-version
