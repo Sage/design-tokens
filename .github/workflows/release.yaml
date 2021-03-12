@@ -2,7 +2,7 @@ name: Release
 on:
   push:
     branches:
-      - releases/*.*.*
+      - 'releases/*.*.*'
 
 jobs:
   npm:
@@ -51,7 +51,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
         with:
-          tag_name: ${{ steps.package-version.outputs.current-version }}
+          tag_name: v${{ steps.package-version.outputs.current-version }}
           release_name: Release ${{ steps.package-version.outputs.current-version }}
           body: |
             Release ${{ steps.package-version.outputs.current-version }} 
