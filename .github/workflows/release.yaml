@@ -1,0 +1,66 @@
+name: Publish
+on:
+  push:
+    branches:
+      - releases/**
+
+jobs:
+  npm:
+    needs: [version]
+    name: npm package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependancies
+        run: npm install
+
+      - name: Run build
+        run: npm run build
+
+    # Publish to npm
+    # - name: Publish to npm
+    #   run: cd dist && npm publish --access public
+    #   env:
+    #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  release:
+    needs: [version]
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+        # Outputs the logs from the git commits between the last release and the current release.
+      - name: Commit notes
+        id: release-notes
+        run: git log --pretty=format:'::set-output name=details::"%s%n%b"' $(git rev-list --tags --max-count=2 | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/.../g')
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
+        with:
+          tag_name: ${{ steps.package-version.outputs.current-version }}
+          release_name: Release ${{ steps.package-version.outputs.current-version }}
+          body: |
+            Release ${{ steps.package-version.outputs.current-version }} 
+
+            What's new in this release:
+
+            ${{steps.release-notes.outputs.details}}
+
+          draft: false
+          prerelease: false
