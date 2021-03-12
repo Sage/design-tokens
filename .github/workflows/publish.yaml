@@ -21,7 +21,7 @@ jobs:
         git config --local user.name "github-actions[bot]"
 
     - name: Version increment
-      run: npm version ${{ github.event.inputs.type }} --no-git-tag-version
+      run: npm version ${{ github.event.inputs.type }}
 
     - name: get-npm-version
       id: package-version

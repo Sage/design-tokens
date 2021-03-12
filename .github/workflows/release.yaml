@@ -2,12 +2,11 @@ name: Release
 on:
   push:
     branches:
-      - releases/**
+      - releases/*.*.*
 
 jobs:
   npm:
-    needs: [version]
-    name: npm package
+    name: Build and release npm package
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -31,7 +30,6 @@ jobs:
     #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   release:
-    needs: [version]
     name: Create Release
     runs-on: ubuntu-latest
     steps:
@@ -42,7 +40,7 @@ jobs:
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master
 
-        # Outputs the logs from the git commits between the last release and the current release.
+      # Outputs the logs from the git commits between the last release and the current release.
       - name: Commit notes
         id: release-notes
         run: git log --pretty=format:'::set-output name=details::"%s%n%b"' $(git rev-list --tags --max-count=2 | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/.../g')
