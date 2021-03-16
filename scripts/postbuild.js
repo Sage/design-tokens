@@ -37,7 +37,7 @@ async function copyPackageJSON () {
     const packageDef = await fs.readJson(path.resolve(__dirname, '../package.json'))
     const filteredPackageDef = pick(
       packageDef,
-      ['name', 'dependencies', 'repository', 'private', 'description', 'author', 'version', 'peerDependencies', 'license']
+      ['name', 'dependencies', 'repository', 'private', 'description', 'author', 'version', 'peerDependencies', 'license', 'tags']
     )
     await fs.writeJson(
       path.resolve(__dirname, '../dist/package.json'),

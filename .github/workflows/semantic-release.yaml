@@ -1,0 +1,35 @@
+name: Semantic Release
+
+on:
+  push:
+    branches:    
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        persist-credentials: false
+
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - run: npm ci
+
+    - name: Import GPG key
+      uses: crazy-max/ghaction-import-gpg@v3.0.1
+      with:
+        gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+        passphrase: ${{ secrets.GPG_PASSPHRASE }}
+        git-user-signingkey: true
+        git-commit-gpgsign: true
+
+    - run: npx semantic-release
+      env:
+        GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        GIT_COMMITTER_NAME: github-actions[bot]
+        GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
