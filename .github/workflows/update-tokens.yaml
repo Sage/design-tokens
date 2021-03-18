@@ -28,6 +28,15 @@ jobs:
           git add .
           git commit -m "Updated design tokens"
 
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          eslint: true
+          auto_fix: true
+          git_name: github-actions[bot]
+          git_email: github-actions[bot]@users.noreply.github.com
+
       - name: Open pull request
         id: cpr
         uses: peter-evans/create-pull-request@v3
