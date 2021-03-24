@@ -34,11 +34,17 @@ async function copyCommon () {
 
 async function copyPackageJSON () {
   try {
+    // gets the contents of the file
     const packageDef = await fs.readJson(path.resolve(__dirname, '../package.json'))
+    // Only add properties we want to include
     const filteredPackageDef = pick(
       packageDef,
-      ['name', 'dependencies', 'repository', 'private', 'description', 'author', 'version', 'peerDependencies', 'license', 'tags']
+      ['name', 'dependencies', 'repository', 'description', 'author', 'version', 'peerDependencies', 'license', 'tags']
     )
+
+    filteredPackageDef.private = false
+
+    // Writes to package.json in dist
     await fs.writeJson(
       path.resolve(__dirname, '../dist/package.json'),
       filteredPackageDef,
