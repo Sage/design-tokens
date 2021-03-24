@@ -52,6 +52,18 @@ async function copyPackageJSON () {
   }
 }
 
+async function copyData () {
+  try {
+    await fs.copy(
+      path.resolve(__dirname, '../data'),
+      path.resolve(__dirname, '../dist/data')
+    )
+  } catch (err) {
+    console.log('Error copying data to dist')
+    console.log(err)
+  };
+}
+
 async function generateTSDefinitions () {
   await tsc.compile({
     project: path.resolve(__dirname, '../tsconfig.json')
@@ -93,7 +105,8 @@ async function main () {
   await Promise.all([
     copyAssets(),
     copyCommon(),
-    copyPackageJSON()
+    copyPackageJSON(),
+    copyData()
   ])
   await addEntryFile()
   await generateTSDefinitions()
