@@ -29,8 +29,7 @@ jobs:
 
     - run: npx semantic-release
       env:
-        # GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         GIT_COMMITTER_NAME: github-actions[bot]
         GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
