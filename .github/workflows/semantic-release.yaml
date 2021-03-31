@@ -27,7 +27,7 @@ jobs:
         git-user-signingkey: true
         git-commit-gpgsign: true
 
-    - run: npx semantic-release
+    - run: cd dist && npx semantic-release
       env:
         GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
