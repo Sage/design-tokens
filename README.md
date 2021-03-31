@@ -2,11 +2,12 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-This repository contains the design tokens from the Sage Design System. These are generated using Stratos from a Sketch library maintained by the design system team. The Design Token library is designed to be a platform agnostic tool to align all our products with the Design System.
+This repository contains the design tokens from the Sage Design System. These are maintained by the Sage DS team. This library is for distributing these tokens across multiple playforms.
+
+## Beta
+Currently this library is in an _unstable open beta stage_. It is not ready for production at this point as the tokens are liable to drastically change between now and the production release.
 
 ## Using the design tokens
-
-_COMING SOON_
 
 ### Web
 
