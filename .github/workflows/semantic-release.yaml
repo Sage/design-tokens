@@ -27,6 +27,9 @@ jobs:
         git-user-signingkey: true
         git-commit-gpgsign: true
 
+    - name: Build
+      run: yarn run build
+
     - run: cd dist && npx semantic-release
       env:
         GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
