@@ -34,11 +34,17 @@ async function copyCommon () {
 
 async function copyPackageJSON () {
   try {
+    // gets the contents of the file
     const packageDef = await fs.readJson(path.resolve(__dirname, '../package.json'))
+    // Only add properties we want to include
     const filteredPackageDef = pick(
       packageDef,
-      ['name', 'dependencies', 'repository', 'private', 'description', 'author', 'version', 'peerDependencies', 'license']
+      ['name', 'dependencies', 'repository', 'description', 'author', 'version', 'peerDependencies', 'license', 'tags']
     )
+
+    filteredPackageDef.private = false
+
+    // Writes to package.json in dist
     await fs.writeJson(
       path.resolve(__dirname, '../dist/package.json'),
       filteredPackageDef,
@@ -50,6 +56,18 @@ async function copyPackageJSON () {
     console.log('Error copying package.json')
     console.log(err)
   }
+}
+
+async function copyData () {
+  try {
+    await fs.copy(
+      path.resolve(__dirname, '../data'),
+      path.resolve(__dirname, '../dist/data')
+    )
+  } catch (err) {
+    console.log('Error copying data to dist')
+    console.log(err)
+  };
 }
 
 async function generateTSDefinitions () {
@@ -93,7 +111,8 @@ async function main () {
   await Promise.all([
     copyAssets(),
     copyCommon(),
-    copyPackageJSON()
+    copyPackageJSON(),
+    copyData()
   ])
   await addEntryFile()
   await generateTSDefinitions()
