@@ -30,7 +30,7 @@ jobs:
     - name: Build
       run: yarn run build
 
-    - run: cd dist && npx semantic-release
+    - run: npx semantic-release
       env:
         GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
