@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/Sage/design-tokens/compare/v1.0.4...v1.0.5) (2021-03-31)
+
+
+### Bug Fixes
+
+* **package:** update to readme location in postbuild ([0d909e6](https://github.com/Sage/design-tokens/commit/0d909e660d5ecefd93d77027ed4cc235454a6603))
+
 ## [1.0.4](https://github.com/Sage/design-tokens/compare/v1.0.3...v1.0.4) (2021-03-31)
 
 
