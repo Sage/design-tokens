@@ -30,7 +30,7 @@ const StyleDictionary = require('style-dictionary').extend({
         {
           destination: '_variables.css',
           format: 'css/variables',
-          filter: (token) => token.category === 'theme',
+          filter: (token) => token.category === 'theme' || token.category === 'fill',
           options: {
             showFileHeader: false
           }
@@ -48,7 +48,7 @@ const StyleDictionary = require('style-dictionary').extend({
       ],
       files: [
         {
-          destination: 'colors.js',
+          destination: 'color.js',
           format: 'javascript/es6',
           filter: (token) => token.type === 'color',
           options: {
@@ -64,7 +64,7 @@ const StyleDictionary = require('style-dictionary').extend({
           }
         },
         {
-          destination: 'sizes.js',
+          destination: 'size.js',
           format: 'javascript/es6',
           filter: (token) => token.category === 'size',
           options: {
