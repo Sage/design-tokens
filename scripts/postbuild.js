@@ -61,11 +61,11 @@ async function copyPackageJSON () {
 async function copyReadme () {
   try {
     await fs.copy(
-      path.resolve(__dirname, 'README.md'),
+      path.resolve(__dirname, '../README.md'),
       path.resolve(__dirname, '../dist/README.md')
     )
   } catch (err) {
-    console.log('Error copying assets to dist')
+    console.log('Error copying readme to dist')
     console.log(err)
   };
 }
