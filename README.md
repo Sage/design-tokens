@@ -1,10 +1,14 @@
 # Sage Design Tokens
 
+[![GitHub release](https://img.shields.io/github/release/Sage/design-tokens.svg)](https://GitHub.com/Sage/design-tokens/releases/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Sage/design-tokens/graphs/commit-activity)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 This repository contains the design tokens from the Sage Design System. These are maintained by the Sage DS team. This library is for distributing these tokens across multiple playforms.
 
 ## Beta
+
 Currently this library is in an _unstable open beta stage_. It is not ready for production at this point as the tokens are liable to drastically change between now and the production release.
 
 ## Using the design tokens
@@ -13,16 +17,32 @@ Currently this library is in an _unstable open beta stage_. It is not ready for 
 
 To make use of these tokens in your application, import the correct variable definitions based on your styling technology.
 
+#### Install
+
+To add to a project using npm:
+
+```bash
+# If you're using npm:
+npm install --save @sage/design-tokens
+
+# OR If you're using yarn:
+yarn add @sage/design-tokens
+```
+
+You can also add the files directly by downloading from the [releases page on Github](https://github.com/Sage/design-tokens/releases).
+
 #### CSS
 
 To make use of the css variables, import them into your code like so:
+
 ```css
 /* Inside css */
-@import '~@Sage/design-tokens/css/_variables.css';
+@import "~@Sage/design-tokens/css/_variables.css";
 ```
+
 ```js
 // For projects where you can import css files into JS
-import '@Sage/design-tokens/css/_variables.css';
+import "@Sage/design-tokens/css/_variables.css";
 ```
 
 This will add the variables to the root element of the page.
@@ -30,6 +50,7 @@ This will add the variables to the root element of the page.
 #### SCSS
 
 To make use of the scss variables, import them into your scss files like so:
+
 ```scss
 @use '~@sage/design-tokens/scss/_variables.scss';
 ```
@@ -39,8 +60,9 @@ You can also use `@import`, but for scss this is [being deprecated](https://sass
 #### LESS
 
 To make use of the less variables, import them into your less files like so:
+
 ```less
-@import (reference) '~@sage/design-tokens/less/_variables.less';
+@import (reference) "~@sage/design-tokens/less/_variables.less";
 ```
 
 #### CSS-in-JS
@@ -50,12 +72,13 @@ The js variables are exported in PascalCase, rather than dash seperated in the d
 To import all of the tokens, you can do so like so:
 
 ```js
-import * as SageDesignTokens from '@sage/design-tokens';
+import * as SageDesignTokens from "@sage/design-tokens";
 ```
 
 To import a single token, such as `colors-text-black-90`, import it like so:
+
 ```js
-import { ColorsTextBlack90 } from '@sage/design-tokens';
+import { ColorsTextBlack90 } from "@sage/design-tokens";
 ```
 
 A type definition file is also included to work in projects with typescript installed.
@@ -87,6 +110,5 @@ limitations under the License.
 ## Repository maintainer
 
 [Mark Mizen, User Experience Engineer](mailto:mark.mizen@sage.com).
-
 
 Copyright (c) 2021 Sage Group Plc. All rights reserved.
