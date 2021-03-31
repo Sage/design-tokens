@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/Sage/design-tokens/compare/v1.0.5...v1.0.6) (2021-03-31)
+
+
+### Bug Fixes
+
+* **package:** Update to readme to add badges ([99083b9](https://github.com/Sage/design-tokens/commit/99083b9c57be70efafcc3b5a2937daf8e72f4f9e))
+
 ## [1.0.5](https://github.com/Sage/design-tokens/compare/v1.0.4...v1.0.5) (2021-03-31)
 
 
