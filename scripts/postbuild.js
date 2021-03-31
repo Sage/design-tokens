@@ -58,6 +58,18 @@ async function copyPackageJSON () {
   }
 }
 
+async function copyReadme () {
+  try {
+    await fs.copy(
+      path.resolve(__dirname, 'README.md'),
+      path.resolve(__dirname, '../dist/README.md')
+    )
+  } catch (err) {
+    console.log('Error copying assets to dist')
+    console.log(err)
+  };
+}
+
 async function copyData () {
   try {
     await fs.copy(
@@ -112,6 +124,7 @@ async function main () {
     copyAssets(),
     copyCommon(),
     copyPackageJSON(),
+    copyReadme(),
     copyData()
   ])
   await addEntryFile()
