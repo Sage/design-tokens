@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/Sage/design-tokens/compare/v1.0.3...v1.0.4) (2021-03-31)
+
+
+### Bug Fixes
+
+* **package:** added readme to dist ([fa3dfc2](https://github.com/Sage/design-tokens/commit/fa3dfc2ee6033b1d60eee378e1b890f97aa21d13))
+
 ## [1.0.3](https://github.com/Sage/design-tokens/compare/v1.0.2...v1.0.3) (2021-03-31)
 
 
