@@ -18,9 +18,6 @@ jobs:
       - name: Install
         run: yarn install --frozen-lockfile
 
-      # - name: Run update data script
-      #   run: node ./scripts/updateData.js '${{ github.event.client_payload.tokens }}'
-
       # Use action to get data from JSON bin
       - name: Retrieve data from "working" JSON Bin
         id: retrieveData
@@ -33,7 +30,11 @@ jobs:
           }'
 
       - name: Log data
-        run: echo ${{ steps.retrieveData.outputs.response }}
+        run: echo ${{ steps.retrieveData.outputs.response.record.values }}
+
+
+      # - name: Run update data script
+      #   run: node ./scripts/updateData.js '${{ steps.retrieveData.outputs.response }}'
 
 
       # Pass data to updateData script
