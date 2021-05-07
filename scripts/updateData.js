@@ -17,8 +17,7 @@ async function deleteExistingData () {
   await fs.ensureDir(dataFolder)
 }
 
-// Splits the tokens into seperate files
-
+// Parses tokens data object to format compatible with style-dictionary.
 function parseOutput (category, tokensData) {
   const walk = (item) => {
     switch (typeof item) {
@@ -44,24 +43,21 @@ function parseOutput (category, tokensData) {
   }
 }
 
+// Splits the tokens into seperate files
 async function writeNewData () {
-  // Split the incoming data into seperate files based on top level category
-
+  // Split the incoming data into seperate files and directories based on top level category
   const writeFiles = Object.keys(tokenValues).map((namespace) => {
     const directory = path.resolve(__dirname, `../data/${namespace}`)
     fs.ensureDirSync(directory)
 
     return Object.keys(tokenValues[namespace]).map((category) => {
-      // const output = tokenValues[namespace][category]
-      // const output = {
-      //   [namespace]: {
-      //     [category]: tokenValues[namespace][category]
-      //   }
-      // }
       const output = parseOutput(category, tokenValues[namespace][category])
+      const filePath = path.resolve(directory, `${category}.json`)
+
+      console.log('Creating file', filePath)
 
       return fs.writeJson(
-        path.resolve(directory, `${category}.json`),
+        filePath,
         output,
         {
           spaces: 4
