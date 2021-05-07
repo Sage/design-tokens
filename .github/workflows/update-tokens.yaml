@@ -1,7 +1,7 @@
 name: Update Tokens
-on:
-  repository_dispatch:
-    types: [update-tokens]
+
+on: workflow_dispatch
+
 jobs:
   create_pr:
     name: Create Pull Request
@@ -18,34 +18,51 @@ jobs:
       - name: Install
         run: yarn install --frozen-lockfile
 
-      - name: Run update data script
-        run: node ./scripts/updateData.js '${{ github.event.client_payload.tokens }}'
+      # - name: Run update data script
+      #   run: node ./scripts/updateData.js '${{ github.event.client_payload.tokens }}'
 
-      - name: Commit data
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m "Updated design tokens"
-
-      - name: Run linters
-        uses: wearerequired/lint-action@v1
+      # Use action to get data from JSON bin
+      - name: Retrieve data from "working" JSON Bin
+        id: retrieveData
+        uses: fjogeleit/http-request-action@v1.8.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          eslint: true
-          auto_fix: true
-          git_name: github-actions[bot]
-          git_email: github-actions[bot]@users.noreply.github.com
+          url: 'https://api.jsonbin.io/v3/b/${{ secrets.JSON_BIN__WORKING_BIN_ID }}/latest'
+          method: 'GET'
+          customHeaders: '{
+            "X-Master-Key": "${{ secrets.JSON_BIN__API_KEY }}"
+          }'
 
-      - name: Open pull request
-        id: cpr
-        uses: peter-evans/create-pull-request@v3
-        with:
-          title: Update to Tokens (${{ steps.date.outputs.date }})
-          body: Tokens pushed from design
-          branch: tokens-update
+      - name: Log data
+        run: echo ${{ steps.retrieveData.outputs.response }}
 
-      - name: Log pull request
-        run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+
+      # Pass data to updateData script
+
+      # - name: Commit data
+      #   run: |
+      #     git config --local user.email "github-actions[bot]@users.noreply.github.com"
+      #     git config --local user.name "github-actions[bot]"
+      #     git add .
+      #     git commit -m "Updated design tokens"
+
+      # - name: Run linters
+      #   uses: wearerequired/lint-action@v1
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     eslint: true
+      #     auto_fix: true
+      #     git_name: github-actions[bot]
+      #     git_email: github-actions[bot]@users.noreply.github.com
+
+      # - name: Open pull request
+      #   id: cpr
+      #   uses: peter-evans/create-pull-request@v3
+      #   with:
+      #     title: Update to Tokens (${{ steps.date.outputs.date }})
+      #     body: Tokens pushed from design
+      #     branch: tokens-update
+
+      # - name: Log pull request
+      #   run: |
+      #     echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+      #     echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
