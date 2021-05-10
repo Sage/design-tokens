@@ -18,9 +18,6 @@ jobs:
       with:
         node-version: '14'
 
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12'
     - run: yarn install --frozen-lockfile
 
     - name: Import GPG key
