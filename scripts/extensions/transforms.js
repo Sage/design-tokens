@@ -97,19 +97,17 @@ module.exports = function (styleDictionary) {
         ? token.value.substring(1)
         : /^{(.*)}$/.exec(token.value)[1]
 
-      const referencePathParts = referencePath.split('.')
+      let referencePathParts = referencePath.split('.')
 
-      if (referencePathParts[referencePathParts - 1] !== 'value') {
-        referencePathParts.push('value')
+      if (referencePathParts[referencePathParts.length - 1] !== 'value') {
+        referencePathParts = [...referencePathParts, 'value']
       }
 
-      if (referencePathParts[0] === token.attributes.category) { // no namespace, please add
-        referencePathParts.unshift(token.attributes.namespace)
+      if (referencePathParts[0] === token.attributes.category) {
+        referencePathParts = [token.attributes.namespace, ...referencePathParts]
       }
 
       token.value = `{${referencePathParts.join('.')}}`
-
-      return {}
     }
   })
 }
