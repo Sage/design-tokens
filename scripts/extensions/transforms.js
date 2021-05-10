@@ -85,4 +85,31 @@ module.exports = function (styleDictionary) {
       return prop.name.toUpperCase().replace(/[^A-Z\d_]/g, '_')
     }
   })
+
+  styleDictionary.registerTransform({
+    name: 'custom/attributes/fix-references',
+    type: 'attribute',
+    matcher (token) {
+      return String(token.value).startsWith('{') || String(token.value).startsWith('$')
+    },
+    transformer (token) {
+      const referencePath = token.value.startsWith('$')
+        ? token.value.substring(1)
+        : /^{(.*)}$/.exec(token.value)[1]
+
+      const referencePathParts = referencePath.split('.')
+
+      if (referencePathParts[referencePathParts - 1] !== 'value') {
+        referencePathParts.push('value')
+      }
+
+      if (referencePathParts[0] === token.attributes.category) { // no namespace, please add
+        referencePathParts.unshift(token.attributes.namespace)
+      }
+
+      token.value = `{${referencePathParts.join('.')}}`
+
+      return {}
+    }
+  })
 }
