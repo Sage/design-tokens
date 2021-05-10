@@ -85,14 +85,4 @@ module.exports = function (styleDictionary) {
       return prop.name.toUpperCase().replace(/[^A-Z\d_]/g, '_')
     }
   })
-
-  styleDictionary.registerTransform({
-    name: 'custom/value/reference',
-    type: 'name',
-    matcher: (token) => String(token.original.value).startsWith('{'),
-    transformer: function (prop) {
-      console.log(prop.value + '.value')
-      return prop.value + '.value'
-    }
-  })
 }

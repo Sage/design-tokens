@@ -1,9 +1,16 @@
 /*
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
-
 const setWith = require('lodash/setWith')
 const fileHeader = require('../_utils/fileHeader.js')
+
+function fetchReferenceValue (token) {
+  if (String(token.original?.value).startsWith('{') && typeof token.value === 'object') {
+    return token.value?.value
+  }
+
+  return token.value
+}
 
 module.exports = function (styleDictionary) {
   styleDictionary.registerFormat({
@@ -13,7 +20,8 @@ module.exports = function (styleDictionary) {
       const output = []
 
       dictionary.allProperties.forEach((token) => {
-        setWith(outputObject, token.name, token.value, Object)
+        const tokenValue = fetchReferenceValue(token)
+        setWith(outputObject, token.name, tokenValue, Object)
       })
 
       Object.entries(outputObject).forEach(([constName, constValues]) => {

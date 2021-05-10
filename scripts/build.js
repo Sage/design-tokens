@@ -42,8 +42,7 @@ const StyleDictionary = require('style-dictionary').extend({
       transforms: [
         'custom/attributes/generic',
         'custom/attributes/colors',
-        'custom/name/constant-object',
-        'transforms.js'
+        'custom/name/constant-object'
       ],
       files: [
         {
