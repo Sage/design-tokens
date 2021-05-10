@@ -18,7 +18,7 @@ async function deleteExistingData () {
 }
 
 // Parses tokens data object to format compatible with style-dictionary.
-function parseOutput (category, tokensData) {
+function parseOutput (namespace, category, tokensData) {
   const walk = (item) => {
     switch (typeof item) {
       case 'string':
@@ -38,8 +38,11 @@ function parseOutput (category, tokensData) {
     }
   }
 
+  // We need namespace information for the tokens
   return {
-    [category]: walk(tokensData)
+    [namespace]: {
+      [category]: walk(tokensData)
+    }
   }
 }
 
@@ -51,7 +54,7 @@ async function writeNewData () {
     fs.ensureDirSync(directory)
 
     return Object.keys(tokenValues[namespace]).map((category) => {
-      const output = parseOutput(category, tokenValues[namespace][category])
+      const output = parseOutput(namespace, category, tokenValues[namespace][category])
       const filePath = path.resolve(directory, `${category}.json`)
 
       console.log('Creating file', filePath)
