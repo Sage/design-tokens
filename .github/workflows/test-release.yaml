@@ -1,0 +1,55 @@
+name: Test Semantic Release
+
+on: workflow_dispatch
+
+jobs:
+  #  release:
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - uses: actions/checkout@v2
+  #        with:
+  #          fetch-depth: 0
+  #          persist-credentials: true
+  #
+  #      - uses: actions/setup-node@v2
+  #        with:
+  #          node-version: '14'
+  #
+  #      - run: yarn install --frozen-lockfile
+  #
+  #      - name: Import GPG key
+  #        uses: crazy-max/ghaction-import-gpg@v3.0.1
+  #        with:
+  #          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+  #          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+  #          git-user-signingkey: true
+  #          git-commit-gpgsign: true
+  #
+  #      - name: Build
+  #        run: yarn run build
+  #
+  #      - run: npx semantic-release
+  #        env:
+  #          GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
+  #          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  #          GIT_COMMITTER_NAME: github-actions[bot]
+  #          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+  update-tokens:
+    name: Update public JSONBin
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: get tokens data
+        id: tokensData
+        run: cat ./data/tokens.json
+
+      - name: Retrieve data from "working" JSON Bin
+        uses: fjogeleit/http-request-action@v1.8.0
+        with:
+          url: 'https://api.jsonbin.io/v3/b/${{ secrets.JSON_BIN__PUBLIC_BIN_ID }}/latest'
+          method: 'PUT'
+          customHeaders: '{
+              "Content-Type": "application/json",
+              "X-Master-Key": "${{ secrets.JSON_BIN__API_KEY }}",
+              "X-Bin-Versioning": "true"
+          }'
