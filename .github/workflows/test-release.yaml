@@ -39,17 +39,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: get tokens data
-        id: tokensData
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - id: tokensData
         run: cat ./data/tokens.json
 
-      - name: Retrieve data from "working" JSON Bin
-        uses: fjogeleit/http-request-action@v1.8.0
+      - run: echo ${{ tokensData }}
+
+      - name: Push data to "public" JSONbin
+        uses: fabasoad/jsonbin-action@main
         with:
-          url: 'https://api.jsonbin.io/v3/b/${{ secrets.JSON_BIN__PUBLIC_BIN_ID }}/latest'
-          method: 'PUT'
-          customHeaders: '{
-              "Content-Type": "application/json",
-              "X-Master-Key": "${{ secrets.JSON_BIN__API_KEY }}",
-              "X-Bin-Versioning": "true"
-          }'
+          body: ${{ tokensData }}
+          bin_id: ${{ secrets.JSON_BIN__PUBLIC_BIN_ID }}
+          method: 'UPDATE'
+          api_key: ${{ secrets.JSON_BIN__API_KEY }}
