@@ -52,7 +52,7 @@ jobs:
       - name: Push data to "public" JSONbin
         uses: fabasoad/jsonbin-action@main
         with:
-          body: ${{ tokensData }}
+          body: ${{ steps.tokensData.outputs }}
           bin_id: ${{ secrets.JSON_BIN__PUBLIC_BIN_ID }}
           method: 'UPDATE'
           api_key: ${{ secrets.JSON_BIN__API_KEY }}
