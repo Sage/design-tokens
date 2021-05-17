@@ -3,20 +3,23 @@ name: Test Semantic Release
 on: workflow_dispatch
 
 jobs:
-  #  release:
-  #    runs-on: ubuntu-latest
-  #    steps:
-  #      - uses: actions/checkout@v2
-  #        with:
-  #          fetch-depth: 0
-  #          persist-credentials: true
-  #
-  #      - uses: actions/setup-node@v2
-  #        with:
-  #          node-version: '14'
-  #
-  #      - run: yarn install --frozen-lockfile
-  #
+    release:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+          with:
+            fetch-depth: 0
+            persist-credentials: true
+
+        - uses: actions/setup-node@v2
+          with:
+            node-version: '14'
+
+        - run: yarn install --frozen-lockfile
+
+        - name: Build
+          run: yarn run build
+
   #      - name: Import GPG key
   #        uses: crazy-max/ghaction-import-gpg@v3.0.1
   #        with:
