@@ -83,9 +83,14 @@ async function copyData () {
 }
 
 async function generateTSDefinitions () {
-  await tsc.compile({
-    project: path.resolve(__dirname, '../tsconfig.json')
-  })
+  try {
+    await tsc.compile({
+      project: path.resolve(__dirname, '../tsconfig.json')
+    })
+  } catch (err) {
+    console.log('Error compiling typescript')
+    console.log(err)
+  }
 }
 
 async function addEntryFile () {
