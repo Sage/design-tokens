@@ -50,7 +50,7 @@ jobs:
       - name: Push data to "public" JSONbin
         uses: fabasoad/jsonbin-action@main
         with:
-          body: '{"version": "51","updatedAt": "Wed May 05 2021 19:37:23 GMT+0200 (czas środkowoeuropejski letni)","values": ${{ fromJSON(steps.tokensData.outputs) }} }'
+          body: '{"version": "51", "updatedAt": "Wed May 05 2021 19:37:23 GMT+0200 (czas środkowoeuropejski letni)", "values": ${{ fromJSON(steps.tokensData.outputs) }} }'
           bin_id: ${{ secrets.JSON_BIN__PUBLIC_BIN_ID }}
           method: 'UPDATE'
           api_key: ${{ secrets.JSON_BIN__API_KEY }}
