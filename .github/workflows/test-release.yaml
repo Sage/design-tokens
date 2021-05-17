@@ -45,7 +45,12 @@ jobs:
           persist-credentials: true
 
       - id: tokensData
-        run: echo "::set-output name=data::$(cat ./data/tokens.json)"
+        run: |
+          content=`cat ./data/tokens.json`
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          echo "::set-output name=data::$content"
 
       - run: echo ${{ steps.tokensData.outputs.data }}
 
