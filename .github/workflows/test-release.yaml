@@ -19,26 +19,26 @@ on: workflow_dispatch
   #          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   #          GIT_COMMITTER_NAME: github-actions[bot]
   #          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
- 
+
 jobs:
-    release:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-          with:
-            fetch-depth: 0
-            persist-credentials: true
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
-        - uses: actions/setup-node@v2
-          with:
-            node-version: '14'
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
-        - run: yarn install --frozen-lockfile
+      - run: yarn install --frozen-lockfile
 
-        - name: Build
-          run: yarn run build
+      - name: Build
+        run: yarn run build
 
-        - run: 'ls dist/js'
+      - run: 'ls dist/js'
 
   update-tokens:
     name: Update public JSONBin
