@@ -20,6 +20,10 @@ jobs:
         - name: Build
           run: yarn run build
 
+        - run: 'ls dist/js'
+
+        - run: 'ls dist/js/*.d.ts'
+
   #      - name: Import GPG key
   #        uses: crazy-max/ghaction-import-gpg@v3.0.1
   #        with:
