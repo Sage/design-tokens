@@ -2,26 +2,9 @@ name: Test Semantic Release
 
 on: workflow_dispatch
 
-  #      - name: Import GPG key
-  #        uses: crazy-max/ghaction-import-gpg@v3.0.1
-  #        with:
-  #          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
-  #          passphrase: ${{ secrets.GPG_PASSPHRASE }}
-  #          git-user-signingkey: true
-  #          git-commit-gpgsign: true
-  #
-  #      - name: Build
-  #        run: yarn run build
-  #
-  #      - run: npx semantic-release
-  #        env:
-  #          GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
-  #          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-  #          GIT_COMMITTER_NAME: github-actions[bot]
-  #          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-
 jobs:
   release:
+    name: Build and release library
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -38,7 +21,21 @@ jobs:
       - name: Build
         run: yarn run build
 
-      - run: 'ls dist/js'
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v3.0.1
+        with:
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          git-user-signingkey: true
+          git-commit-gpgsign: true
+
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+
 
   update-tokens:
     name: Update public JSONBin
