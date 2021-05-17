@@ -47,12 +47,12 @@ jobs:
       - id: tokensData
         run: echo "::set-output name=data::$(cat ./data/tokens.json)"
 
-      - run: echo ${{ fromJSON(steps.tokensData.outputs.data) }}
+      - run: echo ${{ steps.tokensData.outputs.data }}
 
       - name: Push data to "public" JSONbin
         uses: fabasoad/jsonbin-action@main
         with:
-          body: '{"version": "51", "updatedAt": "dddd", "values": ${{ fromJSON(steps.tokensData.outputs.data) }} }'
+          body: '{"version": "51", "updatedAt": "dddd", "values": ${{ steps.tokensData.outputs.data }} }'
           bin_id: ${{ secrets.JSON_BIN__PUBLIC_BIN_ID }}
           method: 'UPDATE'
           api_key: ${{ secrets.JSON_BIN__API_KEY }}
