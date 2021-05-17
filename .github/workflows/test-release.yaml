@@ -47,8 +47,6 @@ jobs:
       - id: tokensData
         run: cat ./data/tokens.json
 
-      - run: echo ${{ fromJSON(steps.tokensData.outputs) }}
-
       - name: Push data to "public" JSONbin
         uses: fabasoad/jsonbin-action@main
         with:
