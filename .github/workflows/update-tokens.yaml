@@ -3,6 +3,7 @@ name: Update Tokens
 on: workflow_dispatch
 
 jobs:
+  # Creates Pull Request with all latest changes in "working" JSONbin.
   create_pr:
     name: Create Pull Request
     runs-on: ubuntu-latest
@@ -42,7 +43,7 @@ jobs:
            git add .
            git commit -m "feat(data): Updated design tokens"
 
-#      Removed due to  422 error
+#      Removed due to 422 error
 #      - name: Run linters
 #        uses: wearerequired/lint-action@v1
 #        with:

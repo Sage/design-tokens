@@ -67,7 +67,7 @@ async function copyReadme () {
   } catch (err) {
     console.log('Error copying readme to dist')
     console.log(err)
-  };
+  }
 }
 
 async function copyData () {
@@ -79,13 +79,23 @@ async function copyData () {
   } catch (err) {
     console.log('Error copying data to dist')
     console.log(err)
-  };
+  }
 }
 
 async function generateTSDefinitions () {
-  await tsc.compile({
-    project: path.resolve(__dirname, '../tsconfig.json')
-  })
+  if (process.platform === 'win32') {
+    console.log('Typescript compiler was not executed, since current platform is win32.')
+    return
+  }
+
+  try {
+    await tsc.compile({
+      project: path.resolve(__dirname, '../tsconfig.json')
+    })
+  } catch (err) {
+    console.log('Error compiling typescript')
+    console.log(err)
+  }
 }
 
 async function addEntryFile () {
