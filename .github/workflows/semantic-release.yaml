@@ -6,6 +6,7 @@ on:
       - master
 
 jobs:
+  # Builds token library from current data/tokens.json file and releases it.
   release:
     name: Build and release library
     runs-on: ubuntu-latest
@@ -39,7 +40,9 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
 
-
+  # Pushes current data/tokens.json file contents to "public" JSONBin.
+  # This job has no access to dist folder built in `release` job.
+  # It runs independently and it checkouts its own contents.
   update-tokens:
     name: Update public JSONBin
     runs-on: ubuntu-latest
@@ -51,6 +54,8 @@ jobs:
           persist-credentials: true
 
       - id: tokensData
+        # This allows to read multi line json file.
+        # More on: https://github.community/t/set-output-truncates-multiline-strings/16852
         run: |
           content=`cat ./data/tokens.json`
           content="${content//'%'/'%25'}"
