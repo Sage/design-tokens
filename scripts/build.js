@@ -15,7 +15,8 @@ const StyleDictionary = require('style-dictionary').extend({
         'custom/attributes/generic',
         'custom/attributes/colors',
         'custom/attributes/fix-references',
-        'custom/name/constant-object'
+        'custom/name/constant-object',
+        'custom/attributes/fix-typography-references'
       ],
       files: [
         {

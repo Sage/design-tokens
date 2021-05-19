@@ -17,7 +17,7 @@ function parseOutput (tokensData) {
       case 'number':
         return { value: item }
       case 'object': {
-        if (item.value) {
+        if ('value' in item) {
           return item
         }
 
