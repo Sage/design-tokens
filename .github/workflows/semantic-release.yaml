@@ -1,9 +1,6 @@
 name: Semantic Release
 
-on:
-  push:
-    branches:
-      - master
+on: workflow_dispatch
 
 jobs:
   # Builds token library from current data/tokens.json file and releases it.
