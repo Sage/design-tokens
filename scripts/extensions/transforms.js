@@ -2,6 +2,8 @@
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
+const fixReferenceValue = require('../_utils/fixReferenceValue')
+
 module.exports = function (styleDictionary) {
   /**
    * Sets namespace, category and variant for generic tokens
@@ -93,21 +95,20 @@ module.exports = function (styleDictionary) {
       return String(token.value).startsWith('{') || String(token.value).startsWith('$')
     },
     transformer (token) {
-      const referencePath = token.value.startsWith('$')
-        ? token.value.substring(1)
-        : /^{(.*)}$/.exec(token.value)[1]
+      token.value = fixReferenceValue(token.value, token.attributes)
+    }
+  })
 
-      let referencePathParts = referencePath.split('.')
+  styleDictionary.registerTransform({
+    name: 'custom/attributes/fix-typography-references',
+    type: 'attribute',
+    matcher (token) {
+      return token.attributes.category === 'typography'
+    },
+    transformer (token) {
+      const output = Object.entries(token.value).map(([property, reference]) => [property, fixReferenceValue(reference, token.attributes)])
 
-      if (referencePathParts[referencePathParts.length - 1] !== 'value') {
-        referencePathParts = [...referencePathParts, 'value']
-      }
-
-      if (referencePathParts[0] === token.attributes.category) {
-        referencePathParts = [token.attributes.namespace, ...referencePathParts]
-      }
-
-      token.value = `{${referencePathParts.join('.')}}`
+      token.value = Object.fromEntries(output)
     }
   })
 }
