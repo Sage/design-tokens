@@ -33,10 +33,6 @@ jobs:
             "X-Master-Key": "${{ secrets.JSON_BIN__API_KEY }}"
           }'
 
-      # For future debug purposes
-      - name: Retrieved data
-        run: echo ${{ steps.retrieveData.outputs.response }}
-
       - name: Run update data script
         run: node ./scripts/updateData.js '${{ steps.retrieveData.outputs.response }}'
 
