@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Sage/design-tokens/compare/v1.1.0...v1.2.0) (2021-07-26)
+
+
+### Features
+
+* **data:** Introduced new tokens, naming and categories. ([c80cbd9](https://github.com/Sage/design-tokens/commit/c80cbd97f03bb03092c91a056075ca810725c5c8))
+
 # [1.1.0](https://github.com/Sage/design-tokens/compare/v1.0.6...v1.1.0) (2021-05-19)
 
 
