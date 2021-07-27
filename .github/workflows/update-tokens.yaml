@@ -34,7 +34,7 @@ jobs:
           }'
 
       - name: Run update data script
-        run: node ./scripts/updateData.js '${{ steps.retrieveData.outputs.response }}'
+        run: node ./scripts/update-data.js '${{ steps.retrieveData.outputs.response }}'
 
       - name: Commit data
         run: |
