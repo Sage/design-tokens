@@ -3,9 +3,9 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 const path = require('path')
 const fs = require('fs-extra')
-const pick = require('./_utils/pick')
-const filename = require('./_utils/filename')
-const globAsync = require('./_utils/globAsync')
+const pick = require('./utils/pick')
+const filename = require('./utils/filename')
+const globAsync = require('./utils/glob-async')
 const tsc = require('node-typescript-compiler')
 
 async function copyAssets () {
