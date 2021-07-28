@@ -1,12 +1,13 @@
 /*
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
+
 const camelCase = require('lodash/camelCase')
 
 module.exports = function (styleDictionary) {
   /**
-   * Sets namespace, category, name and variant attributes for token.
-   */
+     * Sets namespace, category, name and variant attributes for token.
+     */
   styleDictionary.registerTransform({
     name: 'custom/attributes/colors',
     type: 'attribute',
@@ -31,8 +32,8 @@ module.exports = function (styleDictionary) {
   })
 
   /**
-   * Transforms name to camelCase categoryNameVariant format
-   */
+     * Transforms name to camelCase categoryNameVariant format
+     */
   styleDictionary.registerTransform({
     name: 'custom/name/camel',
     type: 'name',
