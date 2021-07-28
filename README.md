@@ -38,12 +38,12 @@ To make use of the css variables, import them into your code like so:
 
 ```css
 /* Inside css */
-@import "~@Sage/design-tokens/css/_variables.css";
+@import "~@Sage/design-tokens/css/<theme>.css";
 ```
 
 ```js
 // For projects where you can import css files into JS
-import "@Sage/design-tokens/css/_variables.css";
+import "@Sage/design-tokens/css/<theme>.css";
 ```
 
 This will add the variables to the root element of the page.
@@ -53,33 +53,27 @@ This will add the variables to the root element of the page.
 To make use of the scss variables, import them into your scss files like so:
 
 ```scss
-@use '~@sage/design-tokens/scss/_variables.scss';
+@use '~@sage/design-tokens/scss/<theme>.scss';
 ```
 
 You can also use `@import`, but for scss this is [being deprecated](https://sass-lang.com/documentation/at-rules/import) in favour of `@use`;
 
-#### LESS
-
-To make use of the less variables, import them into your less files like so:
-
-```less
-@import (reference) "~@sage/design-tokens/less/_variables.less";
-```
-
-#### CSS-in-JS
-
-The js variables are exported in PascalCase, rather than dash seperated in the design system portal.
-
-To import all of the tokens, you can do so like so:
+#### Common JS module
 
 ```js
-import * as SageDesignTokens from "@sage/design-tokens";
+const tokens = require('@sage/design-tokens/js/<theme>/common')
+
+// Then use in code:
+element.style.color = tokens.colorsBase500
 ```
 
-To import a single token, such as `colors-text-black-90`, import it like so:
+#### ES6 module
 
 ```js
-import { ColorsTextBlack90 } from "@sage/design-tokens";
+import tokens from "@sage/design-tokens/js/<theme>/es6";
+
+// Then use in code:
+element.style.color = tokens.colorsBase500
 ```
 
 A type definition file is also included to work in projects with typescript installed.
