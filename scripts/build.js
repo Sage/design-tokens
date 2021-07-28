@@ -4,7 +4,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
 
 const registerCustomTransforms = require('./extensions/transforms')
 const registerCustomFormats = require('./extensions/formats')
-const themeConfigBuilder = require('./_utils/buildThemeConfig')
+const themeConfigBuilder = require('./utils/build-theme-config')
 
 const tokens = require('../data/tokens.json')
 const themes = Object.keys(tokens)
