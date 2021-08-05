@@ -1,3 +1,14 @@
+# [1.6.0](https://github.com/Sage/design-tokens/compare/v1.5.0...v1.6.0) (2021-08-05)
+
+
+### Features
+
+* **data:** Updated design tokens ([#34](https://github.com/Sage/design-tokens/issues/34)) ([7421b56](https://github.com/Sage/design-tokens/commit/7421b56c04cb931e111de461767202c72435c134))
+* **data:** Updated design tokens ([#35](https://github.com/Sage/design-tokens/issues/35)) ([3d41935](https://github.com/Sage/design-tokens/commit/3d419356f8997fd38704ef3da0598e5646dfa887))
+* **data:** Updated design tokens ([#38](https://github.com/Sage/design-tokens/issues/38)) ([1f5aaa2](https://github.com/Sage/design-tokens/commit/1f5aaa2d66bf70ae5576dd36df1a75a68a4e7b9b))
+* **data:** Updated design tokens ([#39](https://github.com/Sage/design-tokens/issues/39)) ([4a7740d](https://github.com/Sage/design-tokens/commit/4a7740dcfb6d1483c361e965612e9eeef4f653c9))
+* **data:** Updated design tokens ([#40](https://github.com/Sage/design-tokens/issues/40)) ([e6ed008](https://github.com/Sage/design-tokens/commit/e6ed0087ea3e6b06e62c1dc2483f896e1b760d42))
+
 # [1.5.0](https://github.com/Sage/design-tokens/compare/v1.4.0...v1.5.0) (2021-08-03)
 
 
