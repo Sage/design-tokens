@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/Sage/design-tokens/compare/v1.13.0...v1.14.0) (2021-08-17)
+
+
+### Features
+
+* **data:** Updated design tokens ([#49](https://github.com/Sage/design-tokens/issues/49)) ([adcd8f0](https://github.com/Sage/design-tokens/commit/adcd8f0af425922c371c628af33bcca43c6a54bb))
+
 # [1.13.0](https://github.com/Sage/design-tokens/compare/v1.12.0...v1.13.0) (2021-08-10)
 
 
