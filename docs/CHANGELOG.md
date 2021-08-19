@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/Sage/design-tokens/compare/v1.20.0...v1.21.0) (2021-08-19)
+
+
+### Features
+
+* **data:** Updated design tokens ([#56](https://github.com/Sage/design-tokens/issues/56)) ([2761811](https://github.com/Sage/design-tokens/commit/2761811bdc9884ca48be52005f8a43125b91fc07)), closes [#000000](https://github.com/Sage/design-tokens/issues/000000) [#000000](https://github.com/Sage/design-tokens/issues/000000)
+
 # [1.20.0](https://github.com/Sage/design-tokens/compare/v1.19.0...v1.20.0) (2021-08-18)
 
 
