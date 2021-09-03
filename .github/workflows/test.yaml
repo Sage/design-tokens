@@ -18,5 +18,5 @@ jobs:
           route: GET /user
         env:
           GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
-      - run: "Data: ${{ steps.get_profile.outputs.data }}"
+      - run: "Data: ${{ fromJson(steps.get_profile.outputs.data) }}"
         
