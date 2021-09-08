@@ -1,3 +1,10 @@
+# [1.52.0](https://github.com/Sage/design-tokens/compare/v1.51.0...v1.52.0) (2021-09-08)
+
+
+### Features
+
+* **tokens-documentation:** Added generated tokens documentation and upload to FTP ([#89](https://github.com/Sage/design-tokens/issues/89)) ([c724f51](https://github.com/Sage/design-tokens/commit/c724f519b1b109dbcbdd516c54d2ad5527f8ebe8)), closes [#88](https://github.com/Sage/design-tokens/issues/88)
+
 # [1.51.0](https://github.com/Sage/design-tokens/compare/v1.50.0...v1.51.0) (2021-09-08)
 
 
