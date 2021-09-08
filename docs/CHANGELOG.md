@@ -1,3 +1,66 @@
+# [1.50.0](https://github.com/Sage/design-tokens/compare/v1.49.0...v1.50.0) (2021-09-07)
+
+
+### Features
+
+* **data:** Updated design tokens ([#86](https://github.com/Sage/design-tokens/issues/86)) ([ab91555](https://github.com/Sage/design-tokens/commit/ab91555c71f75e9747d92a549f8cada6014412cc))
+
+# [1.49.0](https://github.com/Sage/design-tokens/compare/v1.48.0...v1.49.0) (2021-09-07)
+
+
+### Features
+
+* **data:** Updated design tokens ([#85](https://github.com/Sage/design-tokens/issues/85)) ([f542732](https://github.com/Sage/design-tokens/commit/f5427326b46a314ef6b04764dc7e2534f196594f))
+
+# [1.48.0](https://github.com/Sage/design-tokens/compare/v1.47.0...v1.48.0) (2021-09-07)
+
+
+### Features
+
+* **data:** Updated design tokens ([#84](https://github.com/Sage/design-tokens/issues/84)) ([8456be8](https://github.com/Sage/design-tokens/commit/8456be825c696b5cd47af70c9e0ce7571b4fce00))
+
+# [1.47.0](https://github.com/Sage/design-tokens/compare/v1.46.0...v1.47.0) (2021-09-06)
+
+
+### Features
+
+* **data:** Updated design tokens ([#83](https://github.com/Sage/design-tokens/issues/83)) ([dc148da](https://github.com/Sage/design-tokens/commit/dc148daa592079ec3907656d5f9e48ef365501cc))
+
+# [1.46.0](https://github.com/Sage/design-tokens/compare/v1.45.0...v1.46.0) (2021-09-03)
+
+
+### Features
+
+* **data:** Updated design tokens ([#82](https://github.com/Sage/design-tokens/issues/82)) ([5a5e107](https://github.com/Sage/design-tokens/commit/5a5e1070d2c19b9d3fcf998f2f36a4ffda62d37e)), closes [#ff00](https://github.com/Sage/design-tokens/issues/ff00)
+
+# [1.45.0](https://github.com/Sage/design-tokens/compare/v1.44.0...v1.45.0) (2021-09-03)
+
+
+### Features
+
+* **data:** Updated design tokens ([#81](https://github.com/Sage/design-tokens/issues/81)) ([ec4acd7](https://github.com/Sage/design-tokens/commit/ec4acd7cc4233ad2f999c6d0e2845ca981db26a8))
+
+# [1.44.0](https://github.com/Sage/design-tokens/compare/v1.43.0...v1.44.0) (2021-09-02)
+
+
+### Features
+
+* **data:** Updated design tokens ([#80](https://github.com/Sage/design-tokens/issues/80)) ([4fda912](https://github.com/Sage/design-tokens/commit/4fda912a15b3c6df0190d42c4d537019d42c916b))
+
+# [1.43.0](https://github.com/Sage/design-tokens/compare/v1.42.0...v1.43.0) (2021-09-01)
+
+
+### Features
+
+* **data:** Updated design tokens ([#79](https://github.com/Sage/design-tokens/issues/79)) ([b25ffc2](https://github.com/Sage/design-tokens/commit/b25ffc2b9cc4d41712b678dd116ae9aa8bb887dc))
+
+# [1.42.0](https://github.com/Sage/design-tokens/compare/v1.41.0...v1.42.0) (2021-09-01)
+
+
+### Features
+
+* **data:** Updated design tokens ([#78](https://github.com/Sage/design-tokens/issues/78)) ([6972c29](https://github.com/Sage/design-tokens/commit/6972c29e5fc53a6a39b9f19fdf26534f43f1ccc3))
+
 # [1.41.0](https://github.com/Sage/design-tokens/compare/v1.40.0...v1.41.0) (2021-08-26)
 
 
