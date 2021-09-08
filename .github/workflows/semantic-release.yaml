@@ -40,6 +40,16 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
 
+      - name: Upload documentation via ftp
+        uses: airvzxf/ftp-deployment-action@latest
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local_dir: "./dist/docs"
+          remote_dir: "./public/"
+          delete: "false"
+
   # Pushes current data/tokens.json file contents to "public" JSONBin.
   # This job has no access to dist folder built in `release` job.
   # It runs independently and it checkouts its own contents.
