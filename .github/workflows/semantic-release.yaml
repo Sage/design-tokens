@@ -47,8 +47,8 @@ jobs:
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local_dir: "./dist/docs"
-          remote_dir: "./public/"
-          delete: "false"
+          remote_dir: "./public"
+          delete: "true"
 
   # Pushes current data/tokens.json file contents to "public" JSONBin.
   # This job has no access to dist folder built in `release` job.
