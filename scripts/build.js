@@ -7,9 +7,11 @@ const registerCustomFormats = require('./extensions/formats')
 const themeConfigBuilder = require('./utils/build-theme-config')
 
 const tokens = require('../data/tokens.json')
-const themes = Object.keys(tokens)
+const themes = ['base', 'no-theme', 'references']
 
-const buildThemeConfig = themeConfigBuilder(tokens)
+const filteredTokens = Object.fromEntries(Object.entries(tokens).filter(([setName, tokens]) => themes.includes(setName)))
+
+const buildThemeConfig = themeConfigBuilder(filteredTokens)
 
 themes.forEach((theme) => {
   const StyleDictionary = require('style-dictionary').extend(buildThemeConfig(theme))
@@ -22,3 +24,25 @@ themes.forEach((theme) => {
 
   StyleDictionary.buildAllPlatforms()
 })
+
+// Documentation
+const DocumentationStyleDictionary = require('style-dictionary').extend({
+  tokens: filteredTokens,
+  platforms: {
+    'html-documentation': {
+      buildPath: 'dist/docs/',
+      transformGroup: 'web',
+      files: [
+        {
+          destination: 'index.html',
+          format: 'docs'
+        }
+      ]
+    }
+  }
+})
+
+registerCustomTransforms(DocumentationStyleDictionary)
+registerCustomFormats(DocumentationStyleDictionary)
+
+DocumentationStyleDictionary.buildAllPlatforms()

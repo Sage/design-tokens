@@ -1,0 +1,186 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <style>
+        * {
+            font-family: 'Lato', Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .table {
+            background-color: white;
+            border: 1px solid #ccd6db;
+            margin-bottom: 32px;
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .table__cell, .table__header-cell {
+            border: 1px solid #CCD6DB;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            line-height: 21px;
+            margin-left: 8px;
+            padding: 16px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .table__row {
+            background-color: white;
+            border: 1px solid #d9e0e4;
+            border-top: none;
+            line-height: 40px;
+            height: 40px;
+
+            border-bottom: 1px solid #ccc;
+        }
+
+        .table__header-cell {
+            background-color: #f2f5f6;
+            font-weight: 700;
+            height: 56px;
+        }
+
+        .table__color-preview,
+        .table__spacing-preview,
+        .table__border-width-preview,
+        .table__font-size-preview,
+        .table__sizing-preview,
+        .table__opacity-preview {
+            width: 100%;
+            height: 40px;
+        }
+
+        .table__spacing-preview {
+            background-color: #f2f5f6;
+            height: 10px;
+        }
+
+        .table__border-width-preview {
+            border-style: solid;
+            border-color: #CCD6DB;
+            background-color: #f2f5f6;
+        }
+
+        .table__font-size-preview {
+            height: auto;
+        }
+
+        .table__sizing-preview {
+            background-color: #f2f5f6;
+        }
+
+        .table__opacity-preview {
+            background-color: #ccc;
+        }
+
+        .table__opacity-preview div {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        .table__line-height-preview {
+            width: 40px;
+            background-color: #f2f5f6;
+        }
+    </style>
+</head>
+
+<body>
+    {{#themes}}
+        <main>
+            <h1> {{themeName}} </h1>
+            {{#sections theme}}
+                <section>
+                    <h2>{{sectionName}}</h2>
+                    <table class="table">
+                        <colgroup>
+                            <col width="40%">
+                            <col width="30%">
+                            <col width="30%">
+                        </colgroup>
+                        <thead>
+                            <tr class="table__row">
+                                <th class="table__header-cell">Name</th>
+                                <th class="table__header-cell">Value</th>`
+                                <th class="table__header-cell">Preview</th>
+                            </tr>
+                        </thead>
+                        {{#each tokens}}
+                            <tr class="table__row">
+                                <td class="table__cell">{{name}}</td>
+                                <td class="table__cell">{{value}}</td>
+                                <td class="table__cell">
+                                    {{> (lookup . 'type') value }}
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </table>
+                </section>
+            {{/sections}}
+        </main>
+    {{/themes}}
+</body>
+</html>
+
+{{#*inline "color"}}
+    <div class="table__color-preview"
+         style="background-color: {{this}};">
+    </div>
+{{/inline}}
+{{#*inline "spacing"}}
+    <div class="table__spacing-preview"
+         style="width: {{this}}">
+    </div>
+{{/inline}}
+{{#*inline "other"}}
+    OTHER {{this}}
+{{/inline}}
+{{#*inline "borderWidth"}}
+    <div class="table__border-width-preview"~~
+         style="border-width: {{this}}">
+    </div>
+{{/inline}}
+{{#*inline "boxShadow"}}
+    BOX SHADOW {{this}}
+{{/inline}}
+{{#*inline "fontSizes"}}
+    <div class="table__font-size-preview"
+         style="font-size: {{this}}; line-height: {{this}}">
+        Aa
+    </div>
+{{/inline}}
+{{#*inline "sizing"}}
+    <div class="table__sizing-preview"
+         style="width: {{this}}; height: {{this}}">
+    </div>
+{{/inline}}
+{{#*inline "opacity"}}
+    <div class="table__opacity-preview">
+        <div style="opacity: {{this}}"></div>
+    </div>
+{{/inline}}
+{{#*inline "lineHeights"}}
+    <div class="table__line-height-preview"
+         style="height: {{this}}">
+    </div>
+{{/inline}}
+{{#*inline "fontWeights"}}
+    FONT WEIGHS {{this}}
+{{/inline}}
+{{#*inline "fontFamilies"}}
+    FONT FAMILIES {{this}}
+{{/inline}}
+{{#*inline "borderRadius"}}
+    BORDER RADIUS {{this}}
+{{/inline}}
+{{#*inline "typography"}}
+    TYPOGRAPHY {{this}}
+{{/inline}}
