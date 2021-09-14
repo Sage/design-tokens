@@ -39,7 +39,9 @@ module.exports = {
       themes: contextEntries
     }
 
-    const compile = Handlebars.compile(templateContents)
+    Handlebars.registerHelper('debug', object => JSON.stringify(object, null, 2))
+
+    const compile = Handlebars.compile(templateContents, { preventIndent: true })
 
     return compile(templateContext)
   }
