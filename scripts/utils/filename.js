@@ -9,6 +9,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  *
  * @returns {string}
  */
+
 function filename (path) {
   try {
     return path.split('/').pop().split('.')[0]

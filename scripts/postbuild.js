@@ -3,7 +3,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 const path = require('path')
 const fs = require('fs-extra')
-const pick = require('./utils/pick')
+const pick = require('lodash/pick')
 const filename = require('./utils/filename')
 const globAsync = require('./utils/glob-async')
 const tsc = require('node-typescript-compiler')

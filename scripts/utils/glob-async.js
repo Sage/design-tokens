@@ -7,13 +7,13 @@ const glob = require('glob')
 /**
  * Async wrapper for glob method
  *
- * @param {string} pattern - The pattern to use for finding files
+ * @param {String} pattern - The pattern to use for finding files
  * @param {Object[]} options - Options to pass to glob
  *
  * @returns {Object}
  */
 
-async function globAsync (pattern, options = {}) {
+module.exports = function (pattern, options = {}) {
   return new Promise((resolve, reject) => {
     glob(pattern, options, function (er, files) {
       if (er) {
@@ -23,5 +23,3 @@ async function globAsync (pattern, options = {}) {
     })
   })
 }
-
-module.exports = globAsync
