@@ -67,7 +67,7 @@ jobs:
         # This allows to read multi line json file.
         # More on: https://github.community/t/set-output-truncates-multiline-strings/16852
         run: |
-          content=`cat ./data/tokens.json`
+          content=`cat ./data/all.json`
           content="${content//'%'/'%25'}"
           content="${content//$'\n'/'%0A'}"
           content="${content//$'\r'/'%0D'}"
