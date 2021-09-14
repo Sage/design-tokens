@@ -2,40 +2,30 @@
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
-const themeConfigBuilder = require('./utils/build-theme-config')
+const configFactory = require('./utils/build-theme-config')
 
-const tokens = require('../data/tokens.json')
-const outputThemes = ['base', 'no-theme', 'references']
+const tokens = require('../data/all.json')
 
-const filteredTokens = Object.fromEntries(Object.entries(tokens).filter(([setName, tokens]) => outputThemes.includes(setName)))
-
-const buildThemeConfig = themeConfigBuilder(filteredTokens)
-
-const transforms = [
-  require('./transforms/custom-attribute-default.transform'),
-  require('./transforms/custom-name-camel.transform')
-]
-
-outputThemes.forEach((theme) => {
-  const StyleDictionary = require('style-dictionary').extend(buildThemeConfig(theme))
+Object.entries(tokens).forEach(([setName, tokenSet]) => {
+  const StyleDictionary = require('style-dictionary').extend(configFactory(setName, tokenSet))
 
   StyleDictionary.registerFormat(require('./formats/es6-module-flat.format'))
-  transforms.forEach(transform => StyleDictionary.registerTransform(transform))
-  StyleDictionary.registerTransformGroup(require('./transforms/web.group'))
 
   console.log('\r\n-------------------------------------------------------------')
-  console.log(`Theme: ${theme}`)
+  console.log(`Theme: ${setName}`)
 
   StyleDictionary.buildAllPlatforms()
 })
 
-// Documentation
 const DocumentationStyleDictionary = require('style-dictionary').extend({
-  tokens: filteredTokens,
+  tokens: {},
+  include: [
+    './data/!(all)*.json'
+  ],
   platforms: {
     'html-documentation': {
       buildPath: 'dist/docs/',
-      transformGroup: 'web',
+      transforms: ['custom/attributes/default', 'name/cti/camel'],
       files: [
         {
           destination: 'index.html',
@@ -46,6 +36,7 @@ const DocumentationStyleDictionary = require('style-dictionary').extend({
   }
 })
 
+DocumentationStyleDictionary.registerTransform(require('./transforms/custom-attributes-default.transform'))
 DocumentationStyleDictionary.registerFormat(require('./formats/docs.format'))
 
 DocumentationStyleDictionary.buildAllPlatforms()

@@ -3,6 +3,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
 const kebabCase = require('lodash/kebabCase')
+const omit = require('lodash/omit')
 
 /**
  * Factory for function that generates theme config object.
@@ -12,47 +13,47 @@ const kebabCase = require('lodash/kebabCase')
  * @returns {function} function that generates config for theme.
  */
 
-module.exports = (tokens) =>
-  (theme) => ({
+module.exports = function (setName, tokenSet) {
+  const dirName = kebabCase(setName)
+  const tokens = omit(tokenSet, ['meta'])
+
+  return {
     tokens,
     platforms: {
       javascript: {
         buildPath: 'dist/js/',
-        transformGroup: 'web',
+        transforms: ['name/cti/camel'],
         files: [
           {
-            filter: (token) => token.attributes.theme === theme,
-            destination: `${kebabCase(theme)}/common.js`,
+            destination: `${dirName}/common.js`,
             format: 'javascript/module-flat'
           },
           {
-            filter: (token) => token.attributes.theme === theme,
-            destination: `${kebabCase(theme)}/es6.js`,
+            destination: `${dirName}/es6.js`,
             format: 'custom/js/es6-module-flat'
           }
         ]
       },
       css: {
         buildPath: 'dist/css/',
-        transformGroup: 'web',
+        transforms: ['name/cti/camel'],
         files: [
           {
-            filter: (token) => token.attributes.theme === theme,
-            destination: `${kebabCase(theme)}.css`,
+            destination: `${dirName}.css`,
             format: 'css/variables'
           }
         ]
       },
       scss: {
         buildPath: 'dist/scss/',
-        transformGroup: 'web',
+        transforms: ['name/cti/camel'],
         files: [
           {
-            filter: (token) => token.attributes.theme === theme,
-            destination: `${kebabCase(theme)}.scss`,
+            destination: `${dirName}.scss`,
             format: 'scss/variables'
           }
         ]
       }
     }
-  })
+  }
+}
