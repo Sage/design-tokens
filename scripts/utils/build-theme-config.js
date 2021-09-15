@@ -3,6 +3,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
 const filename = require('../utils/filename')
+const groups = require('../transforms/transforms').groups
 
 /**
  * Factory for function that generates theme config object.
@@ -21,7 +22,7 @@ module.exports = function (fileName) {
     platforms: {
       javascript: {
         buildPath: 'dist/js/',
-        transformGroup: 'group/web',
+        transforms: groups.web,
         files: [
           {
             destination: `${dirName}/common.js`,
@@ -35,7 +36,7 @@ module.exports = function (fileName) {
       },
       css: {
         buildPath: 'dist/css/',
-        transformGroup: 'group/web',
+        transforms: groups.css,
         files: [
           {
             destination: `${dirName}.css`,
@@ -45,7 +46,7 @@ module.exports = function (fileName) {
       },
       scss: {
         buildPath: 'dist/scss/',
-        transformGroup: 'group/web',
+        transforms: groups.css,
         files: [
           {
             destination: `${dirName}.scss`,
