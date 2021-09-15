@@ -11,52 +11,36 @@
       }
     },
     "colors": {
-      "appbar": {
-        "600": {
-          "value": "$colors.action.major.600",
-          "type": "color"
-        },
-        "700": {
-          "value": "$colors.action.major.700",
-          "type": "color"
-        },
-        "1000": {
-          "value": "#000000",
-          "type": "color"
-        },
-        "000": {
-          "value": "#FFFFFF",
-          "type": "color"
-        },
-        "transparent": {
-          "value": "rgba(225, 225, 225, 0)",
-          "type": "color"
-        },
-        "logo": {
-          "value": "#00D639",
-          "type": "color"
-        }
+      "logo": {
+        "value": "#00D639",
+        "type": "color"
       },
-      "navigation1": {
-        "600": {
-          "value": "$colors.action.major.600",
-          "type": "color"
-        },
-        "700": {
-          "value": "$colors.action.major.700",
-          "type": "color"
-        },
-        "1000": {
-          "value": "#000000",
-          "type": "color"
-        },
-        "000": {
-          "value": "#FFFFFF",
-          "type": "color"
-        },
-        "transparent": {
-          "value": "rgba(225, 225, 225, 0)",
-          "type": "color"
+      "components": {
+        "navigation": {
+          "500": {
+            "value": "#008146",
+            "type": "color"
+          },
+          "600": {
+            "value": "$colors.action.major.600",
+            "type": "color"
+          },
+          "700": {
+            "value": "$colors.action.major.700",
+            "type": "color"
+          },
+          "1000": {
+            "value": "#000000",
+            "type": "color"
+          },
+          "000": {
+            "value": "#FFFFFF",
+            "type": "color"
+          },
+          "transparent": {
+            "value": "rgba(225, 225, 225, 0)",
+            "type": "color"
+          }
         }
       },
       "brand": {
@@ -77,7 +61,7 @@
           "type": "color"
         },
         "transparent": {
-          "value": "rgba(225, 225, 225, 0)",
+          "value": "#00FFFF",
           "type": "color"
         }
       },
@@ -400,11 +384,11 @@
           "type": "color"
         },
         "1000": {
-          "value": "#000000",
+          "value": "#00CCCC",
           "type": "color"
         },
         "000": {
-          "value": "#FFFFFF",
+          "value": "#9DFFFF",
           "type": "color"
         }
       },
@@ -744,14 +728,22 @@
         "type": "borderWidth"
       }
     },
-    "lineHeights": {
+    "fontWeights": {
       "400": {
-        "value": "125%",
-        "type": "lineHeights"
+        "value": "Regular Beta",
+        "type": "fontWeights"
       },
       "500": {
-        "value": "150%",
-        "type": "lineHeights"
+        "value": "Medium Beta",
+        "type": "fontWeights"
+      },
+      "600": {
+        "value": "SemiBold Beta",
+        "type": "fontWeights"
+      },
+      "700": {
+        "value": "Bold Beta",
+        "type": "fontWeights"
       }
     },
     "boxShadow": {
@@ -906,22 +898,14 @@
         "type": "opacity"
       }
     },
-    "fontWeights": {
+    "lineHeights": {
       "400": {
-        "value": "Regular Beta",
-        "type": "fontWeights"
+        "value": "125%",
+        "type": "lineHeights"
       },
       "500": {
-        "value": "Medium Beta",
-        "type": "fontWeights"
-      },
-      "600": {
-        "value": "SemiBold Beta",
-        "type": "fontWeights"
-      },
-      "700": {
-        "value": "Bold Beta",
-        "type": "fontWeights"
+        "value": "150%",
+        "type": "lineHeights"
       }
     },
     "fontFamilies": {
@@ -1588,7 +1572,7 @@
         }
       },
       "switch": {
-        "label": {
+        "optionLabel": {
           "m": {
             "value": {
               "fontFamily": "$fontFamilies.default",
