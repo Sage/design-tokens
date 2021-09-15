@@ -5,6 +5,8 @@ const fs = require('fs-extra')
 const path = require('path')
 const groupBy = require('lodash/groupBy')
 const omit = require('lodash/omit')
+const isObject = require('lodash/isObject')
+const isArray = require('lodash/isArray')
 
 module.exports = {
   name: 'docs',
@@ -39,7 +41,15 @@ module.exports = {
       themes: contextEntries
     }
 
-    const compile = Handlebars.compile(templateContents)
+    Handlebars.registerHelper('debug', value => {
+      if (isObject(value) || isArray(value)) {
+        return JSON.stringify(value, null, 2)
+      }
+
+      return value
+    })
+
+    const compile = Handlebars.compile(templateContents, { preventIndent: true })
 
     return compile(templateContext)
   }

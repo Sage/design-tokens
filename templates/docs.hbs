@@ -3,6 +3,10 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
     <title>Sage Design Tokens</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +32,17 @@
             color: #212121;
             margin-top: 24px;
             margin-bottom: 24px;
+        }
+
+        pre {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: auto;
+            overflow-y: hidden;
+            font-size: 12px;
+            line-height: 20px;
+            font-family: monospace;
         }
 
         .container {
@@ -106,7 +121,11 @@
         .table__font-size-preview,
         .table__sizing-preview,
         .table__opacity-preview,
-        .table__typography-preview {
+        .table__typography-preview,
+        .table__font-weight-preview,
+        .table__box-shadow-preview,
+        .table__font-family-preview,
+        .table__border-radius-preview {
             width: 100%;
             height: 40px;
         }
@@ -147,6 +166,28 @@
 
         .table__typography-preview {
             height: auto;
+        }
+
+        .table__font-weight-preview {
+            font-size: 30px;
+            height: auto;
+        }
+
+        .table__box-shadow-preview {
+            height: auto;
+        }
+
+        .table__font-family-preview {
+            height: auto;
+            font-size: 30px;
+        }
+
+        .table__border-radius-preview {
+            width: 40px;
+            height: 40px;
+            border-color: #ccd6db;
+            border-width: 3px 3px 0 0;
+            border-style: solid;
         }
     </style>
 </head>
@@ -193,21 +234,14 @@
                                         id="{{../../themeName}}-{{../categoryName}}-{{name}}"
                                         title="{{#each attributes}}{{@key}}: {{@this}}; {{/each}}">
                                         {{name}}
-                                        <a href="#"
-                                           class="copy-name"
-                                           data-token-name="{{name}}"
-                                           title="copy token name to clipboard">
-                                            📋
-                                        </a>
                                         <a href="#{{../../themeName}}-{{../categoryName}}-{{name}}"
                                            title="permalink"
                                            class="permalink">
                                             🔗
                                         </a>
-
                                     </td>
                                     <td class="table__cell">
-                                        {{value}}
+                                        <pre>{{debug value}}</pre>
                                     </td>
                                     <td class="table__cell">
                                         {{> (lookup . 'type') value }}
@@ -240,16 +274,6 @@
                 {{/each}}
             </ul>
         </aside>
-
-    <script type="text/javascript">
-        document.querySelectorAll('.copy-name').forEach((element) => {
-            element.addEventListener('click', (event) => {
-                event.preventDefault();
-                const tokenName = event.target.getAttribute('data-token-name')
-                navigator.clipboard.writeText(tokenName);
-            })
-        })
-    </script>
 </body>
 </html>
 
@@ -272,7 +296,9 @@
     </div>
 {{/inline}}
 {{#*inline "boxShadow"}}
-    BOX SHADOW {{this}}
+    <div class="table__box-shadow-preview"
+         style="box-shadow: {{this}}">
+    </div>
 {{/inline}}
 {{#*inline "fontSizes"}}
     <div class="table__font-size-preview"
@@ -293,16 +319,25 @@
 {{#*inline "lineHeights"}}
     <div class="table__line-height-preview"
          style="height: {{this}}">
+        Aa
     </div>
 {{/inline}}
 {{#*inline "fontWeights"}}
-    FONT WEIGHS {{this}}
+    <div class="table__font-weight-preview"
+         style="font-weight: {{this}}">
+        Aa
+    </div>
 {{/inline}}
 {{#*inline "fontFamilies"}}
-    FONT FAMILIES {{this}}
+    <div class="table__font-family-preview"
+         style="font-family: {{this}}">
+        Aa
+    </div>
 {{/inline}}
 {{#*inline "borderRadius"}}
-    BORDER RADIUS {{this}}
+    <div class="table__border-radius-preview"
+         style="border-top-right-radius: {{this}}">
+    </div>
 {{/inline}}
 {{#*inline "typography"}}
     <div class="table__typography-preview"
