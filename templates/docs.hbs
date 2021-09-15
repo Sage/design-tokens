@@ -237,7 +237,7 @@
                                         </a>
                                     </td>
                                     <td class="table__cell">
-                                        {{value}}
+                                        <pre>{{debug value}}</pre>
                                     </td>
                                     <td class="table__cell">
                                         {{> (lookup . 'type') value }}
@@ -293,8 +293,7 @@
 {{/inline}}
 {{#*inline "boxShadow"}}
     <div class="table__box-shadow-preview"
-         style="height: {{this}}">
-        <pre>{{debug this}}</pre>
+         style="box-shadow: {{this}}">
     </div>
 {{/inline}}
 {{#*inline "fontSizes"}}
