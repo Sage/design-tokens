@@ -8,30 +8,6 @@ const filename = require('./utils/filename')
 const globAsync = require('./utils/glob-async')
 const tsc = require('node-typescript-compiler')
 
-async function copyAssets () {
-  try {
-    await fs.copy(
-      path.resolve(__dirname, '../assets'),
-      path.resolve(__dirname, '../dist/assets')
-    )
-  } catch (err) {
-    console.log('Error copying assets to dist')
-    console.log(err)
-  };
-}
-
-async function copyCommon () {
-  try {
-    await fs.copy(
-      path.resolve(__dirname, '../common'),
-      path.resolve(__dirname, '../dist/common')
-    )
-  } catch (err) {
-    console.log('Error copying common to dist')
-    console.log(err)
-  }
-}
-
 async function copyPackageJSON () {
   try {
     // gets the contents of the file
@@ -131,8 +107,6 @@ async function addFileHeader () {
 
 async function main () {
   await Promise.all([
-    copyAssets(),
-    copyCommon(),
     copyPackageJSON(),
     copyReadme(),
     copyData()

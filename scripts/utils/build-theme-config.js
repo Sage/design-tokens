@@ -2,8 +2,7 @@
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
-const kebabCase = require('lodash/kebabCase')
-const omit = require('lodash/omit')
+const filename = require('../utils/filename')
 
 /**
  * Factory for function that generates theme config object.
@@ -13,16 +12,16 @@ const omit = require('lodash/omit')
  * @returns {function} function that generates config for theme.
  */
 
-module.exports = function (setName, tokenSet) {
-  const dirName = kebabCase(setName)
-  const tokens = omit(tokenSet, ['meta'])
+module.exports = function (fileName) {
+  const dirName = filename(fileName)
 
   return {
-    tokens,
+    tokens: {},
+    include: [fileName],
     platforms: {
       javascript: {
         buildPath: 'dist/js/',
-        transforms: ['name/cti/camel'],
+        transformGroup: 'group/web',
         files: [
           {
             destination: `${dirName}/common.js`,
@@ -36,7 +35,7 @@ module.exports = function (setName, tokenSet) {
       },
       css: {
         buildPath: 'dist/css/',
-        transforms: ['name/cti/camel'],
+        transformGroup: 'group/web',
         files: [
           {
             destination: `${dirName}.css`,
@@ -46,7 +45,7 @@ module.exports = function (setName, tokenSet) {
       },
       scss: {
         buildPath: 'dist/scss/',
-        transforms: ['name/cti/camel'],
+        transformGroup: 'group/web',
         files: [
           {
             destination: `${dirName}.scss`,

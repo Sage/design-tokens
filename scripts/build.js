@@ -2,30 +2,23 @@
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
+const styleDictionary = require('./style-dictionary')
+const globSync = require('glob').sync
+const tokenFiles = globSync('./data/!(all)*.json')
 const configFactory = require('./utils/build-theme-config')
 
-const tokens = require('../data/all.json')
-
-Object.entries(tokens).forEach(([setName, tokenSet]) => {
-  const StyleDictionary = require('style-dictionary').extend(configFactory(setName, tokenSet))
-
-  StyleDictionary.registerFormat(require('./formats/es6-module-flat.format'))
-
-  console.log('\r\n-------------------------------------------------------------')
-  console.log(`Theme: ${setName}`)
-
-  StyleDictionary.buildAllPlatforms()
+tokenFiles.forEach((fileName) => {
+  const Themes = styleDictionary.extend(configFactory(fileName))
+  Themes.buildAllPlatforms()
 })
 
-const DocumentationStyleDictionary = require('style-dictionary').extend({
+const DocumentationStyleDictionary = styleDictionary.extend({
   tokens: {},
-  include: [
-    './data/!(all)*.json'
-  ],
+  include: tokenFiles,
   platforms: {
-    'html-documentation': {
+    docs: {
       buildPath: 'dist/docs/',
-      transforms: ['custom/attributes/default', 'name/cti/camel'],
+      transformGroup: 'group/web',
       files: [
         {
           destination: 'index.html',
@@ -35,8 +28,5 @@ const DocumentationStyleDictionary = require('style-dictionary').extend({
     }
   }
 })
-
-DocumentationStyleDictionary.registerTransform(require('./transforms/custom-attributes-default.transform'))
-DocumentationStyleDictionary.registerFormat(require('./formats/docs.format'))
 
 DocumentationStyleDictionary.buildAllPlatforms()
