@@ -67,12 +67,26 @@
             font-size: 16px;
         }
 
-        .with-icons:hover .permalink,
-        .with-icons:hover .copy-name {
+        @media screen and (max-width: 1630px){
+            .container {
+                margin: 0 0 0 auto;
+            }
+        }
+
+        @media screen and (max-width: 1300px){
+            .container {
+                margin: 0 auto;
+            }
+            .navigation {
+                display: none;
+            }
+        }
+
+        .with-icons:hover .permalink {
             visibility: visible;
         }
 
-        .permalink, .copy-name {
+        .permalink {
             visibility: hidden;
             font-size: 80%;
             line-height: inherit;
@@ -261,7 +275,6 @@
                             {{themeName}}
                         </a>
                         <ul>
-
                         {{#each categories}}
                             <li>
                                 <a href="#{{../themeName}}-{{categoryName}}">
