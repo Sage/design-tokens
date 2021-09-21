@@ -14,8 +14,8 @@ const transforms = {
 }
 
 const base = [
-  transforms.customValueReferences.name,
-  transforms.customAttributesDefault.name
+  transforms.customAttributesDefault.name,
+  transforms.customValueReferences.name
 ]
 
 const groups = {

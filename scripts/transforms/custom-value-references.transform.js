@@ -17,7 +17,7 @@ module.exports = {
   transformer (token) {
     const fixReference = (value) => {
       if (isString(value) && value.startsWith('$')) {
-        return `{${value.slice(1)}.value}`
+        return `{${token.attributes.theme}.${value.slice(1)}.value}`
       }
 
       return value

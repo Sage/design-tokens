@@ -6,14 +6,11 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  * Sets namespace, category, name and variant attributes for token.
  */
 
-const filename = require('../utils/filename')
-
 module.exports = {
   name: 'custom/attributes/default',
   type: 'attribute',
   transformer (token) {
-    const tokensFilename = filename(token.filePath || '')
-    const elements = tokensFilename ? [tokensFilename, ...token.path] : [...token.path]
+    const elements = [...token.path]
 
     if (elements.length === 3) {
       const [theme, category, variant] = elements
