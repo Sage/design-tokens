@@ -9,13 +9,13 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  *
  * @returns {string}
  */
+const path = require('path')
 
-function filename (path) {
+module.exports = (filePath) => {
   try {
-    return path.split('/').pop().split('.')[0]
+    const extension = path.extname(filePath)
+    return path.basename(filePath, extension)
   } catch (err) {
     throw Error(err)
   }
 }
-
-module.exports = filename

@@ -9,11 +9,11 @@ const groups = require('./transforms/transforms').groups
 const tokenFiles = globSync('./data/!(all)*.json')
 
 tokenFiles.forEach((fileName) => {
-  const Themes = styleDictionary.extend(configFactory(fileName))
+  const Themes = { ...styleDictionary }.extend(configFactory(fileName))
   Themes.buildAllPlatforms()
 })
 
-const DocumentationStyleDictionary = styleDictionary.extend({
+const DocumentationStyleDictionary = { ...styleDictionary }.extend({
   tokens: {},
   include: tokenFiles,
   platforms: {
