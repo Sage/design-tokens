@@ -1,7 +1,7 @@
 /*
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
-
+//comment
 
 const path = require('path')
 const fs = require('fs-extra')
