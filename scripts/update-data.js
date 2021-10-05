@@ -2,6 +2,7 @@
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
+
 const path = require('path')
 const fs = require('fs-extra')
 const kebabCase = require('lodash/kebabCase')
