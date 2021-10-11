@@ -7,6 +7,7 @@ const groupBy = require('lodash/groupBy')
 const omit = require('lodash/omit')
 const isObject = require('lodash/isObject')
 const isArray = require('lodash/isArray')
+const sortBy = require('lodash/sortBy')
 
 module.exports = {
   name: 'docs',
@@ -32,10 +33,11 @@ module.exports = {
               tokens: sortedTokens
             }
           })
+        const sortedCategoriesByCategoryName = sortBy(categories, 'categoryName', 'asc')
 
         return {
           themeName,
-          categories
+          categories: sortedCategoriesByCategoryName
         }
       })
 
