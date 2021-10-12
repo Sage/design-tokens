@@ -7,6 +7,7 @@ const groupBy = require('lodash/groupBy')
 const omit = require('lodash/omit')
 const isObject = require('lodash/isObject')
 const isArray = require('lodash/isArray')
+const sortBy = require('lodash/sortBy')
 
 module.exports = {
   name: 'docs',
@@ -25,15 +26,18 @@ module.exports = {
         const tokensByCategory = groupBy(themeTokens, 'attributes.category')
         const categories = Object.entries(tokensByCategory)
           .map(([categoryName, tokens]) => {
+            const sortedTokens = tokens.slice().sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }))
+
             return {
               categoryName,
-              tokens
+              tokens: sortedTokens
             }
           })
+        const sortedCategoriesByCategoryName = sortBy(categories, 'categoryName', 'asc')
 
         return {
           themeName,
-          categories: categories
+          categories: sortedCategoriesByCategoryName
         }
       })
 

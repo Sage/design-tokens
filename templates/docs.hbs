@@ -188,7 +188,7 @@
         }
 
         .table__box-shadow-preview {
-            height: auto;
+            height: 50px;
         }
 
         .table__font-family-preview {
@@ -310,7 +310,7 @@
 {{/inline}}
 {{#*inline "boxShadow"}}
     <div class="table__box-shadow-preview"
-         style="box-shadow: {{this}}">
+          style="box-shadow: {{this.x}} {{this.y}} {{this.blur}} {{this.spread}} {{this.color}}">
     </div>
 {{/inline}}
 {{#*inline "fontSizes"}}
