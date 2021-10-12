@@ -1,3 +1,10 @@
+## [1.70.1](https://github.com/Sage/design-tokens/compare/v1.70.0...v1.70.1) (2021-10-12)
+
+
+### Bug Fixes
+
+* **tokens-documentation:** Fix token order, add boxShadow preview ([#114](https://github.com/Sage/design-tokens/issues/114)) ([70e12b8](https://github.com/Sage/design-tokens/commit/70e12b82cce2252438a7bf0ca1ae0efe7c4f5faa)), closes [#113](https://github.com/Sage/design-tokens/issues/113) [#112](https://github.com/Sage/design-tokens/issues/112) [#117](https://github.com/Sage/design-tokens/issues/117)
+
 # [1.70.0](https://github.com/Sage/design-tokens/compare/v1.69.0...v1.70.0) (2021-10-11)
 
 
