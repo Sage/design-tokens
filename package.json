@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "postinstall": "husky install",
-    "build": "npm run build:web",
+    "build": "yarn build:web",
     "build:web": "node ./scripts/build.js",
     "prebuild": "node ./scripts/prebuild.js",
     "postbuild": "node ./scripts/postbuild.js",
