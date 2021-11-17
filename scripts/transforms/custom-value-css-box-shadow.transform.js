@@ -3,7 +3,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
 /**
- * Handles typography tokens
+ * Handles boxShadow tokens
  */
 
 module.exports = {
