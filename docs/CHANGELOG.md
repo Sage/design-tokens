@@ -1,3 +1,10 @@
+# [1.81.0](https://github.com/Sage/design-tokens/compare/v1.80.0...v1.81.0) (2021-11-18)
+
+
+### Features
+
+* **transforms:** add new typography transform for style-dictionary ([#131](https://github.com/Sage/design-tokens/issues/131)) ([be9adc9](https://github.com/Sage/design-tokens/commit/be9adc9b268c7b52a9ebea6c18c1300f82b23a3f))
+
 # [1.80.0](https://github.com/Sage/design-tokens/compare/v1.79.0...v1.80.0) (2021-11-08)
 
 
