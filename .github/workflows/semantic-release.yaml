@@ -10,6 +10,9 @@ jobs:
   release:
     name: Build and release library
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
     steps:
       - uses: actions/checkout@v2
         with:
@@ -33,7 +36,8 @@ jobs:
           git-user-signingkey: true
           git-commit-gpgsign: true
 
-      - run: npx semantic-release
+      - name: Release package to public NPM registry
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -49,6 +53,13 @@ jobs:
           local_dir: "./dist/docs"
           remote_dir: "./public"
           delete: "true"
+
+      - name: Copy released package to private GitHub NPM registry
+        run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://npm.pkg.github.com --to-email="${GIT_COMMITTER_EMAIL}" --to-token="${NODE_AUTH_TOKEN}" %40sage%2Fdesign-tokens 
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+
 
   # Pushes current data/tokens.json file contents to "public" JSONBin.
   # This job has no access to dist folder built in `release` job.
