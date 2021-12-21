@@ -36,6 +36,12 @@ jobs:
       - name: Run update data script
         run: node ./scripts/update-data.js '${{ steps.retrieveData.outputs.response }}'
 
+      - name: Run Tokens Transform on tokens
+        run: |
+          npm install -g token-transformer@0.0.14
+          token-transformer data/all.json data/base.json base
+          token-transformer data/all.json data/no-theme.json no-theme
+
       - name: Commit data
         run: |
            git config --local user.email "github-actions[bot]@users.noreply.github.com"
