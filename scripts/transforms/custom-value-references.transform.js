@@ -20,18 +20,35 @@ module.exports = {
         return `{${token.attributes.theme}.${value.slice(1)}.value}`
       }
 
+      if (value.includes('$')) {
+        const tokenRegex = /(?<=\$)(.*?)(?=,|\))/gm
+        const opacityRegex = /(?<=,\s)(.*?)(?=\))/gm
+
+        const name = value.match(tokenRegex)[0].trim()
+        const opacity = value.match(opacityRegex)[0]
+
+        const tokensValue = `{${token.attributes.theme}.${name}.value}`
+        const convertedOpacity = Math.round(opacity * 255).toString(16)
+
+        if (name.includes('yin') || name.includes('transparent')) {
+          return tokensValue
+        }
+
+        return `${tokensValue}${convertedOpacity.length > 1 ? convertedOpacity : `0${convertedOpacity}`}`
+      }
+
       return value
     }
 
     const walk = (value) => {
-      if (isObject(value) && !('value' in value)) {
+      if (isObject(value) && !isArray(value) && !('value' in value)) {
         const valueEntries = Object.entries(value).map(([key, value]) => [key, walk(value)])
 
         return Object.fromEntries(valueEntries)
       }
 
       if (isArray(value)) {
-        value.forEach(value => walk(value))
+        return value.map(value => walk(value))
       }
 
       return fixReference(value)
