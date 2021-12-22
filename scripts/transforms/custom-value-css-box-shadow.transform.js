@@ -20,14 +20,14 @@ module.exports = {
     }
 
     if (isArray(value)) {
-      return value.map(val => {
-        const boxShadow = `${val.x}px ${val.y}px ${val.blur}px ${val.spread}px ${val.color}`
-        if (val.type === 'innerShadow') {
+      return value.map(shadowDefinition => {
+        const boxShadow = `${shadowDefinition.x}px ${shadowDefinition.y}px ${shadowDefinition.blur}px ${shadowDefinition.spread}px ${shadowDefinition.color}`
+        if (shadowDefinition.type === 'innerShadow') {
           return `inset ${boxShadow}`
         }
 
         return boxShadow
-      })
+      }).join(', ')
     }
 
     return `${value.x} ${value.y} ${value.blur} ${value.spread} ${value.color}`
