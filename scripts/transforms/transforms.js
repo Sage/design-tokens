@@ -7,16 +7,13 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
 const transforms = {
-  customValueTypography: require('./custom-value-css-typography.transform'),
   customValueBoxShadow: require('./custom-value-css-box-shadow.transform'),
   customAttributesDefault: require('./custom-attributes-default.transform'),
-  customValueReferences: require('./custom-value-references.transform'),
   customNameCamel: require('./custom-name-camel.transform')
 }
 
 const base = [
-  transforms.customAttributesDefault.name,
-  transforms.customValueReferences.name
+  transforms.customAttributesDefault.name
 ]
 
 const groups = {
@@ -26,7 +23,6 @@ const groups = {
   ],
   css: [
     ...base,
-    transforms.customValueTypography.name,
     transforms.customValueBoxShadow.name,
     transforms.customNameCamel.name
   ]
