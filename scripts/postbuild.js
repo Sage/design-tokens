@@ -1,18 +1,26 @@
 /*
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
-const path = require('path')
-const fs = require('fs-extra')
+const { resolve } = require('path')
+const {
+  readJsonSync,
+  outputJsonSync,
+  copySync,
+  outputFileSync,
+  readFileSync,
+  removeSync
+} = require('fs-extra')
 const pick = require('lodash/pick')
-const filename = require('./utils/filename')
-const globAsync = require('./utils/glob-async')
+const camelCase = require('lodash/camelCase')
+const glob = require('glob').sync
 const tsc = require('node-typescript-compiler')
 
-async function copyPackageJSON () {
+const filename = require('./utils/filename')
+const headerContents = require('./utils/file-header')
+
+function copyPackageJSON () {
   try {
-    // gets the contents of the file
-    const packageDef = await fs.readJson(path.resolve(__dirname, '../package.json'))
-    // Only add properties we want to include
+    const packageDef = readJsonSync(resolve(__dirname, '../package.json'))
     const filteredPackageDef = pick(
       packageDef,
       ['name', 'dependencies', 'repository', 'description', 'author', 'version', 'peerDependencies', 'license', 'tags']
@@ -21,8 +29,8 @@ async function copyPackageJSON () {
     filteredPackageDef.private = false
 
     // Writes to package.json in dist
-    await fs.writeJson(
-      path.resolve(__dirname, '../dist/package.json'),
+    outputJsonSync(
+      resolve(__dirname, '../dist/package.json'),
       filteredPackageDef,
       {
         spaces: 4
@@ -34,11 +42,11 @@ async function copyPackageJSON () {
   }
 }
 
-async function copyReadme () {
+function copyReadme () {
   try {
-    await fs.copy(
-      path.resolve(__dirname, '../README.md'),
-      path.resolve(__dirname, '../dist/README.md')
+    copySync(
+      resolve(__dirname, '../README.md'),
+      resolve(__dirname, '../dist/README.md')
     )
   } catch (err) {
     console.log('Error copying readme to dist')
@@ -46,11 +54,11 @@ async function copyReadme () {
   }
 }
 
-async function copyData () {
+function copyData () {
   try {
-    await fs.copy(
-      path.resolve(__dirname, '../data'),
-      path.resolve(__dirname, '../dist/data')
+    copySync(
+      resolve(__dirname, '../temp/tokens.json'),
+      resolve(__dirname, '../dist/data/tokens.json')
     )
   } catch (err) {
     console.log('Error copying data to dist')
@@ -66,7 +74,7 @@ async function generateTSDefinitions () {
 
   try {
     await tsc.compile({
-      project: path.resolve(__dirname, '../tsconfig.json')
+      project: resolve(__dirname, '../tsconfig.json')
     })
   } catch (err) {
     console.log('Error compiling typescript')
@@ -74,46 +82,54 @@ async function generateTSDefinitions () {
   }
 }
 
-async function addEntryFile () {
-  const jsFiles = await globAsync('dist/js/*.js')
-  const entryFilePath = path.resolve(__dirname, '../dist/index.js')
+function addEntryFile () {
+  const jsFilePaths = glob('./dist/js/**/*.js')
+  const entryFilePath = resolve(__dirname, '../dist/index.js')
 
-  const fileExports = jsFiles
-    .map(filename)
-    .map((name) => {
-      return `export * as ${name.toUpperCase()} from './js/${name}'`
+  const fileExports = jsFilePaths
+    .map((filePath) => {
+      const [theme, fullName] = filePath.split('/').slice(-2)
+      const name = filename(fullName)
+      return {
+        theme,
+        name
+      }
+    })
+    .map((file) => {
+      const exportName = camelCase(`${file.theme} ${file.name}`)
+      return `export * as ${exportName} from './js/${file.theme}/${file.name}'`
     }).join('\n')
-  await fs.writeFile(entryFilePath, '\n' + fileExports + '\n')
+  outputFileSync(entryFilePath, '\n' + fileExports + '\n')
 }
 
-async function addFileHeader () {
-  const files = await globAsync('dist/**/*.@(js|css|ts|d.ts|scss|less)')
-  await files.forEach(async (file) => {
+function addFileHeader () {
+  const files = glob('dist/**/*.@(js|css|ts|d.ts|scss|less)')
+  files.forEach((file) => {
     try {
-      const filePath = path.resolve(__dirname, '../', file)
+      const filePath = resolve(__dirname, '../', file)
+      const outputData = headerContents + '\r\n\r\n' + readFileSync(filePath)
 
-      const data = fs.readFileSync(filePath)
-      const fd = fs.openSync(filePath, 'w+')
-      const buffer = Buffer.from('/*\nCopyright © 2021 The Sage Group plc or its licensors. All Rights reserved\n */\n')
-
-      fs.writeSync(fd, buffer, 0, buffer.length, 0)
-      fs.writeSync(fd, data, 0, data.length, buffer.length)
-      fs.close(fd)
+      outputFileSync(filePath, outputData)
     } catch (er) {
       console.error(`Error adding header to ${file}`, er)
     }
   })
 }
 
+function clearTempDir () {
+  const tempFolder = resolve(__dirname, '../temp')
+  console.log('Clearing /temp folder')
+  removeSync(tempFolder)
+}
+
 async function main () {
-  await Promise.all([
-    copyPackageJSON(),
-    copyReadme(),
-    copyData()
-  ])
-  await addEntryFile()
-  await generateTSDefinitions()
+  copyPackageJSON()
+  copyReadme()
+  copyData()
+  addEntryFile()
   addFileHeader()
+  await generateTSDefinitions()
+  clearTempDir()
 }
 
 main()
