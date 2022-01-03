@@ -15,7 +15,7 @@ const formats = require('./formats/formats')
 Object.values(transforms).forEach(transform => styleDictionary.registerTransform(transform))
 Object.values(formats).forEach(format => styleDictionary.registerFormat(format))
 
-const tokens = readJsonSync('data/tokens.json')
+const tokens = readJsonSync('temp/tokens.json')
 const publicTokens = filterPublic(tokens)
 const themes = Object.keys(publicTokens)
 
