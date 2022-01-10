@@ -70,3 +70,23 @@ themes.forEach((theme) => {
 
   console.log('Done.')
 })
+
+console.log('\r\n\r\nBuilding Documentation for design tokens')
+
+styleDictionary.extend({
+  tokens,
+  platforms: {
+    docs: {
+      buildPath: 'dist/docs/',
+      transforms: groups.web,
+      files: [
+        {
+          destination: 'index.html',
+          format: 'docs'
+        }
+      ]
+    }
+  }
+}).buildAllPlatforms()
+
+console.log('Done.')

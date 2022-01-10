@@ -8,8 +8,6 @@ const ensurePxUnits = require('../utils/ensure-px-units')
  * Handles boxShadow tokens
  */
 
-const isArray = require('lodash/isArray')
-
 module.exports = {
   name: 'custom/value/css-box-shadow',
   type: 'value',
