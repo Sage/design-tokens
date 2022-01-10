@@ -15,14 +15,14 @@ Design Tokens are Design System’s most basic, lowest level element. In atomic 
 Basically those are **key-value records named and organized the same way regardless of the platform** (e.g. web, Android, iOS, Figma). They can define various properties, such as colors, paddings, margins, sizes, font sizes, font families, transitions, animations, and others. **They represent certain design decisions.**
 
 Design tokens purpose is to:
-- **Release developers from taking design decisions.** Often while developing a component, developer needs to take decision what tint of what color should he use. This decision should be taken by designer, and not developer.
+- **Release developers from taking design decisions.** Often while developing a component, developer needs to take decision what tint of what color should be used. This decision should be taken by designer, not developer.
 - **Improve handover process and communication between designers and developers.** Both, developers and designers are going to use the same token name for given property (color, background color, border, padding, margin, transition and so on). In the end, developers don't need to know what the final value will be.
 - **Narrow value set to only needed values.** Design System uses narrow set of values (spacings, colors, typography properties and others). Those are only values that are needed for visual description of the component.
 - **Keep visual consistency across all components of the library.**
 
 ## Beta
 
-Currently this library is in an _unstable open beta stage_. It is not ready for production at this point as the tokens are liable to drastically change between now and the production release.
+Currently, this library is in an _unstable open beta stage_. It is not ready for production at this point as the tokens are liable to drastically change between now, and the production release.
 
 ## Using the design tokens
 
