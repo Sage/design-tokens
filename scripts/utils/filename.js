@@ -9,13 +9,9 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  *
  * @returns {string}
  */
-const path = require('path')
+const { extname, basename } = require('path')
 
 module.exports = (filePath) => {
-  try {
-    const extension = path.extname(filePath)
-    return path.basename(filePath, extension)
-  } catch (err) {
-    throw Error(err)
-  }
+  const extension = extname(filePath)
+  return basename(filePath, extension)
 }

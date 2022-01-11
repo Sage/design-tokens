@@ -12,17 +12,13 @@ const transforms = {
   customNameCamel: require('./custom-name-camel.transform')
 }
 
-const base = [
-  transforms.customAttributesDefault.name
-]
-
 const groups = {
   web: [
-    ...base,
+    transforms.customAttributesDefault.name,
     transforms.customNameCamel.name
   ],
   css: [
-    ...base,
+    transforms.customAttributesDefault.name,
     transforms.customValueBoxShadow.name,
     transforms.customNameCamel.name
   ]

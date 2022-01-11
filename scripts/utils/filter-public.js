@@ -3,7 +3,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
 /**
- * Filter onlu publicly available themes
+ * Filter only publicly available themes
  *
  * @param {Object} tokens - Tokens object with all themes
  *

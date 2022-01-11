@@ -8,9 +8,21 @@
 
 This repository contains the design tokens from the Sage Design System. These are maintained by the Sage DS team. This library is for distributing these tokens across multiple platforms.
 
+## What are design tokens?
+
+Design Tokens are Design System’s most basic, lowest level element. In atomic design terminology those would be the protons or electrons.
+
+Basically those are **key-value records named and organized the same way regardless of the platform** (e.g. web, Android, iOS, Figma). They can define various properties, such as colors, paddings, margins, sizes, font sizes, font families, transitions, animations, and others. **They represent certain design decisions.**
+
+Design tokens purpose is to:
+- **Release developers from taking design decisions.** Often while developing a component, developer needs to take decision what tint of what color should be used. This decision should be taken by designer, not developer.
+- **Improve handover process and communication between designers and developers.** Both, developers and designers are going to use the same token name for given property (color, background color, border, padding, margin, transition and so on). In the end, developers don't need to know what the final value will be.
+- **Narrow value set to only needed values.** Design System uses narrow set of values (spacings, colors, typography properties and others). Those are only values that are needed for visual description of the component.
+- **Keep visual consistency across all components of the library.**
+
 ## Beta
 
-Currently this library is in an _unstable open beta stage_. It is not ready for production at this point as the tokens are liable to drastically change between now and the production release.
+Currently, this library is in an _unstable open beta stage_. It is not ready for production at this point as the tokens are liable to drastically change between now, and the production release.
 
 ## Using the design tokens
 
@@ -78,13 +90,9 @@ element.style.color = tokens.colorsBase500
 
 A type definition file is also included to work in projects with typescript installed.
 
-### iOS
+#### Other formats
 
-_COMING SOON_
-
-### Android
-
-_COMING SOON_
+It is possible to export design tokens to any format or language. If you need to use design tokens in your technology, please contact us and describe your needs.
 
 ## Contributing
 
@@ -101,9 +109,5 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-## Repository maintainer
-
-[Mark Mizen, User Experience Engineer](mailto:mark.mizen@sage.com).
 
 Copyright (c) 2021 Sage Group Plc. All rights reserved.
