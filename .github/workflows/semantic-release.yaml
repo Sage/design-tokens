@@ -55,39 +55,7 @@ jobs:
           delete: "true"
 
       - name: Copy released package to private GitHub NPM registry
-        run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://npm.pkg.github.com --to-email="${GIT_COMMITTER_EMAIL}" --to-token="${NODE_AUTH_TOKEN}" %40sage%2Fdesign-tokens 
+        run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://npm.pkg.github.com --to-email="${GIT_COMMITTER_EMAIL}" --to-token="${NODE_AUTH_TOKEN}" %40sage%2Fdesign-tokens
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-
-
-  # Pushes current data/tokens.json file contents to "public" JSONBin.
-  # This job has no access to dist folder built in `release` job.
-  # It runs independently and it checkouts its own contents.
-  update-tokens:
-    name: Update public JSONBin
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          persist-credentials: true
-
-      - id: tokensData
-        # This allows to read multi line json file.
-        # More on: https://github.community/t/set-output-truncates-multiline-strings/16852
-        run: |
-          content=`cat ./data/all.json`
-          content="${content//'%'/'%25'}"
-          content="${content//$'\n'/'%0A'}"
-          content="${content//$'\r'/'%0D'}"
-          echo "::set-output name=data::$content"
-
-      - name: Push data to "public" JSONbin
-        uses: fabasoad/jsonbin-action@main
-        with:
-          body: '{"version": "51", "updatedAt": "dddd", "values": ${{ steps.tokensData.outputs.data }} }'
-          bin_id: ${{ secrets.JSON_BIN__PUBLIC_BIN_ID }}
-          method: 'UPDATE'
-          api_key: ${{ secrets.JSON_BIN__API_KEY }}
