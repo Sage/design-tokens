@@ -1,3 +1,14 @@
+# [1.87.0](https://github.com/Sage/design-tokens/compare/v1.86.0...v1.87.0) (2022-01-11)
+
+
+### Features
+
+* **boxShadow:** update boxShadow transformations for css and remove unnecessry custom-transform files ([#142](https://github.com/Sage/design-tokens/issues/142)) ([3e22b5d](https://github.com/Sage/design-tokens/commit/3e22b5d0665a4f6a3f98c0c1db070861bca676df))
+* **data:** Updated design tokens ([#144](https://github.com/Sage/design-tokens/issues/144)) ([47ddfb3](https://github.com/Sage/design-tokens/commit/47ddfb36c625e256e7e58caf41d563fc2c07f479))
+* **data:** Updated design tokens ([#145](https://github.com/Sage/design-tokens/issues/145)) ([2da652d](https://github.com/Sage/design-tokens/commit/2da652de098caa662fa6807c79354e8a50d10c53))
+* **data:** Updated design tokens ([#146](https://github.com/Sage/design-tokens/issues/146)) ([d7fa0bb](https://github.com/Sage/design-tokens/commit/d7fa0bb26dca076632cb252d70807b7d9b1fd16d))
+* **data:** Updated design tokens ([#147](https://github.com/Sage/design-tokens/issues/147)) ([f12901c](https://github.com/Sage/design-tokens/commit/f12901cff699eb4414fe8ab4874dd78f9acbc394))
+
 # [1.86.0](https://github.com/Sage/design-tokens/compare/v1.85.0...v1.86.0) (2021-12-10)
 
 
