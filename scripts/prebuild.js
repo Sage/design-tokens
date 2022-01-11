@@ -10,7 +10,7 @@ const {
 } = require('fs-extra')
 
 const distFolder = resolve(__dirname, '../dist')
-const inputFile = resolve(__dirname, '../data/all.json')
+const inputFile = resolve(__dirname, '../data/tokens.json')
 const outputFile = resolve(__dirname, '../temp/tokens.json')
 
 console.log('Clearing /dist folder')
