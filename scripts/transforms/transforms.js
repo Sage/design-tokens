@@ -15,6 +15,7 @@ const transforms = {
 const groups = {
   web: [
     transforms.customAttributesDefault.name,
+    transforms.customValueBoxShadow.name,
     transforms.customNameCamel.name
   ],
   css: [
