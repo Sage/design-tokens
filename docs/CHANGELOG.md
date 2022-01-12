@@ -1,3 +1,10 @@
+## [1.87.1](https://github.com/Sage/design-tokens/compare/v1.87.0...v1.87.1) (2022-01-12)
+
+
+### Bug Fixes
+
+* fix documentation of boxShadow; update omod version ([#152](https://github.com/Sage/design-tokens/issues/152)) ([a52d7e4](https://github.com/Sage/design-tokens/commit/a52d7e4a1d33a9c9c0ab722f3fb92167560aa086))
+
 # [1.87.0](https://github.com/Sage/design-tokens/compare/v1.86.0...v1.87.0) (2022-01-11)
 
 
