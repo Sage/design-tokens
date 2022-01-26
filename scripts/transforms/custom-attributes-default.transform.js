@@ -32,6 +32,11 @@ module.exports = {
       return { theme, category, group, name, subgroup, variant }
     }
 
+    if (elements.length === 7) {
+      const [theme, category, group, name, subgroup, element, variant] = elements
+      return { theme, category, group, name, subgroup, element, variant }
+    }
+
     return { }
   }
 }
