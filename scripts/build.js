@@ -64,6 +64,28 @@ themes.forEach((theme) => {
             format: 'scss/variables'
           }
         ]
+      },
+      android: {
+        buildPath: 'dist/android/',
+        transforms: groups.css,
+        files: [
+          {
+            filter: filterTheme(theme),
+            destination: `${theme}.xml`,
+            format: 'android/resources'
+          }
+        ]
+      },
+      ios: {
+        buildPath: 'dist/ios/',
+        transforms: groups.css,
+        files: [
+          {
+            filter: filterTheme(theme),
+            destination: `${theme}.h`,
+            format: 'ios/macros'
+          }
+        ]
       }
     }
   }).buildAllPlatforms()
