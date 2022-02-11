@@ -23,7 +23,8 @@ if (!process.env.FIGMA_ACCESS_TOKEN) {
 const distFolder = resolve(__dirname, '../dist')
 const inputFile = resolve(__dirname, '../data/tokens.json')
 const outputFile = resolve(__dirname, '../temp/tokens.json')
-const personalAccessToken = process.env.FIGMA_ACCESS_TOKEN;
+const personalAccessToken = process.env.FIGMA_ACCESS_TOKEN
+const fileId = process.env.FIGMA_FILE_ID;
 
 (async () => {
   console.log('Clearing /dist folder...')
@@ -32,13 +33,15 @@ const personalAccessToken = process.env.FIGMA_ACCESS_TOKEN;
 
   await icons({
     personalAccessToken,
-    // fileId: '4nx13cdk71Cdu3zBva1qQn', // This line shall be commented until final Figma file with icons will be provided.
+    fileId,
     distDir: distFolder,
     svgDir: `${distFolder}/assets/icons/svg`,
     fontsDir: `${distFolder}/assets/icons/fonts`,
     dataDir: `${distFolder}/assets/icons/data`,
     fontName: 'sage-icons',
     formats: ['svg', 'woff', 'woff2', 'ttf', 'eot'],
+    docsTemplate: resolve(__dirname, '../templates/icons.docs.hbs'),
+    docsFile: `${distFolder}/assets/icons/docs/index.html`,
     meta: {
       description: 'Sage Icon Font',
       url: 'http://sage.com',

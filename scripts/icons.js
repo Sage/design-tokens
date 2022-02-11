@@ -4,21 +4,26 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
 
 const Figma = require('figma-js')
 const fetch = require('node-fetch')
+const Handlebars = require('handlebars')
 const {
   outputFile,
   outputJson,
   removeSync,
-  ensureDir
+  ensureDir,
+  readFileSync
 } = require('fs-extra')
 const { generateFonts } = require('fantasticon')
 const {
   join,
   relative,
   resolve,
+  dirname,
   sep,
   posix
 } = require('path')
 const kebabCase = require('lodash/kebabCase')
+const pick = require('lodash/pick')
+
 const uniqueValues = require('./utils/unique-values')
 const collect = require('./utils/collect')
 
@@ -151,16 +156,43 @@ async function writeGlyphsData (glyphsData, config) {
   })
 }
 
+async function createDocs (glyphsData, config) {
+  console.log('Creating documentation for icons...')
+
+  const mappedGlyphsData = glyphsData.map(icon => {
+    const fullIconPath = resolve(config.distDir, icon.path)
+    const relativePath = relative(dirname(config.docsFile), fullIconPath)
+
+    return {
+      ...icon,
+      srcPath: relativePath
+    }
+  })
+  const templateContents = readFileSync(resolve(process.cwd(), config.docsTemplate), 'utf8')
+
+  Handlebars.registerHelper('json', (context) => {
+    return JSON.stringify(context)
+  })
+
+  const compile = Handlebars.compile(templateContents, { preventIndent: true })
+  const output = compile({ glyphs: mappedGlyphsData })
+
+  console.log(`  - Writing documentation to file ${config.docsFile}...`)
+  await outputFile(config.docsFile, output).then(() => console.log('Done.\r\n'))
+}
+
 /**
  * @typedef {Object} IconsConfig
- * @property {string} personalAccessToken - personal acces token for figma
+ * @property {string} personalAccessToken - personal access token for figma
  * @property {string} fileId - id of a figma file
  * @property {string} distDir - main output directory
  * @property {string} svgDir - directory for svg files
  * @property {string} fontsDir - directory for font files
  * @property {string} dataDir - directory for JSON file
+ * @property {string} docsFile - output file for icon docs
  * @property {string} fontName - name of the font
  * @property {array} formats - formats to be generated ('svg', 'ttf', 'woff', 'woff2', 'eot')as in th
+ * @property {string} docsTemplate - path to handlebars template for docs
  * @property {object} meta - meta information for font files.
  * @property {string} meta.description - font files description
  * @property {string} meta.url - url for a font manufacturer
@@ -188,31 +220,15 @@ async function icons (config) {
   const svgIcons = await writeIconsToSvg(iconsData, config)
   const glyphsData = await createWebFonts(svgIcons, config)
 
-  const formattedGlyphsData = glyphsData
-    .flat()
-    .map(({
-      name,
-      set,
-      description,
-      documentationLinks,
-      path,
-      codepoint,
-      glyph,
-      unicode
-    }) => {
-      return {
-        name: kebabCase(name),
-        set,
-        description,
-        documentationLinks,
-        path,
-        codepoint,
-        glyph,
-        unicode
-      }
-    })
+  const formattedGlyphsData = glyphsData.flat()
+    .map((icon) => pick(icon, ['name', 'set', 'description', 'documentationLinks', 'path', 'codepoint', 'glyph', 'unicode']))
+    .map((icon) => ({
+      ...icon,
+      name: kebabCase(icon.name)
+    }))
 
   await writeGlyphsData(formattedGlyphsData, config)
+  await createDocs(formattedGlyphsData, config)
 }
 
 module.exports = icons
