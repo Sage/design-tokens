@@ -36,6 +36,6 @@ module.exports = {
       }
     ]
   ],
-  dryRun: true,
-  debug: true
+  dryRun: false,
+  debug: false
 }
