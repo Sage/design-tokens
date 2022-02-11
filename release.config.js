@@ -26,6 +26,7 @@ module.exports = {
     [
       '@semantic-release/github',
       {
+        githubApiPathPrefix: '/api/v3',
         assets: `${DIST}/*.tgz`
       }
     ],
