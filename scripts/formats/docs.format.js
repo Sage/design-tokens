@@ -1,6 +1,7 @@
 /*
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
+
 const fs = require('fs-extra')
 const path = require('path')
 const groupBy = require('lodash/groupBy')
