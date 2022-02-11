@@ -3,6 +3,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 const DIST = 'dist'
 const CHANGELOG = 'docs/CHANGELOG.md'
+const PACKAGE_JSON = 'package.json'
 
 module.exports = {
   branches: ['master'],
@@ -23,18 +24,18 @@ module.exports = {
       }
     ],
     [
-      '@semantic-release/git',
-      {
-        assets: [CHANGELOG]
-      }
-    ],
-    [
       '@semantic-release/github',
       {
         assets: `${DIST}/*.tgz`
       }
+    ],
+    [
+      '@semantic-release/git',
+      {
+        assets: [CHANGELOG, PACKAGE_JSON]
+      }
     ]
   ],
-  dryRun: false,
-  debug: false
+  dryRun: true,
+  debug: true
 }
