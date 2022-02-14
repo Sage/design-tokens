@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,600" rel="stylesheet">
     <meta name="description" content="">
     <style>
         * {
@@ -109,7 +109,6 @@
           newElement.querySelector('.glyph').innerText = icon.glyph;
           newElement.querySelector('.codepoint').innerText = icon.codepoint;
           newElement.querySelector('.unicode').innerText = icon.unicode;
-          // newElement.querySelector('.keywords').innerText = icon.description;
           newElement.querySelector('img.preview').src = icon.srcPath;
 
           return newElement.children[0];

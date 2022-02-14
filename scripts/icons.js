@@ -31,13 +31,13 @@ async function getIconsArray (personalAccessToken, fileId) {
   console.log(`Fetching icon components information from Figma file ${fileId}...`)
   const client = Figma.Client({ personalAccessToken })
 
-  const components = await client.file(fileId).then((file) => {
-    console.log(`  File name: ${file.data.name}`)
-    console.log(`  Last modified: ${file.data.lastModified}`)
+  const components = await client.file(fileId).then(({ data }) => {
+    console.log(`  File name: ${data.name}`)
+    console.log(`  Last modified: ${data.lastModified}`)
 
-    const components = file.data.components
+    const components = data.components
     const componentIds = Object.keys(components)
-    const canvases = file.data.document.children.filter(node => node.type === 'CANVAS')
+    const canvases = data.document.children.filter(node => node.type === 'CANVAS')
     const verifyFn = (node) => componentIds.includes(node.id)
 
     const groupedComponents = Object.fromEntries(canvases.map(canvas => [canvas.name, collect(canvas, verifyFn).map(node => node.id)]))
