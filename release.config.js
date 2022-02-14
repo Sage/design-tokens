@@ -8,6 +8,7 @@ const PACKAGE_JSON = 'package.json'
 module.exports = {
   branches: ['master'],
   plugins: [
+    '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
     [
       '@semantic-release/changelog',
@@ -24,15 +25,15 @@ module.exports = {
       }
     ],
     [
-      '@semantic-release/github',
-      {
-        assets: `${DIST}/*.tgz`
-      }
-    ],
-    [
       '@semantic-release/git',
       {
         assets: [CHANGELOG, PACKAGE_JSON]
+      }
+    ],
+    [
+      '@semantic-release/github',
+      {
+        assets: `${DIST}/*.tgz`
       }
     ]
   ],
