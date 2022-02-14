@@ -122,10 +122,23 @@ function clearTempDir () {
   removeSync(tempFolder)
 }
 
+function copyAssets () {
+  try {
+    copySync(
+      resolve(__dirname, '../assets'),
+      resolve(__dirname, '../dist/assets/')
+    )
+  } catch (err) {
+    console.log('Error copying assets to dist')
+    console.log(err)
+  }
+}
+
 async function main () {
   copyPackageJSON()
   copyReadme()
   copyData()
+  copyAssets()
   addEntryFile()
   addFileHeader()
   await generateTSDefinitions()
