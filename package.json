@@ -24,6 +24,7 @@
     "build:web": "node ./scripts/build.js",
     "prebuild": "node ./scripts/prebuild.js",
     "postbuild": "node ./scripts/postbuild.js",
+    "prepublishOnly": "node ./scripts/bump-main-package-version.js",
     "lint": "eslint .",
     "format": "eslint --fix ."
   },
