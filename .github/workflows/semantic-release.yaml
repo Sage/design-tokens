@@ -37,7 +37,7 @@ jobs:
           git-commit-gpgsign: true
 
       - name: Release package to public NPM registry
-        run: npx semantic-release
+        run: npx semantic-release --debug
         env:
           GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
