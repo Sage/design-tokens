@@ -1,3 +1,10 @@
+## [1.92.7](https://github.com/Sage/design-tokens/compare/v1.92.6...v1.92.7) (2022-02-11)
+
+
+### Bug Fixes
+
+* fix github release ([4c16740](https://github.com/Sage/design-tokens/commit/4c1674074b92e8f52092ce164186b23786adf299))
+
 ## [1.92.6](https://github.com/Sage/design-tokens/compare/v1.92.5...v1.92.6) (2022-02-11)
 
 
