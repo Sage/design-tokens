@@ -2,16 +2,24 @@ name: Rephrase Commit Message
 
 on:
   push:
+    branches:
+      - 'develop'
     paths:
       - 'data/tokens.json'
-    branches:
-      - develop-test
 
 jobs:
-  rephrase:
-    name: Rephrase commit
+  rephrase-commit:
     runs-on: ubuntu-latest
 
     steps:
-      - run: |
-          git commit --amend -m "feat: ${{ github.event.head_commit.message }}"
+      - name: Checkout data
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Rephrase commit message
+        run: |
+          git config --global user.email ${{ github.event.head_commit.author.email }}
+          git config --global user.name ${{ github.event.head_commit.author.name }}
+          git commit --amend -m "feat(data): ${{ github.event.head_commit.message }}"
+          git push --force-with-lease
