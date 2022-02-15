@@ -2,8 +2,8 @@ name: Rephrase Commit Message
 
 on:
   push:
-    branches:
-      - develop-test
+    paths:
+      - 'data/tokens.json'
 
 jobs:
   rephrase:
