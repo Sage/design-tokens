@@ -12,8 +12,10 @@ const sortBy = require('lodash/sortBy')
 module.exports = {
   name: 'docs',
   formatter: function ({ dictionary }) {
-    const templateContents = fs.readFileSync(path.resolve('.', 'templates/docs.hbs'), 'utf8')
+    const templateContents = fs.readFileSync(path.resolve('.', 'templates/layout.hbs'), 'utf8')
     const Handlebars = require('handlebars')
+    Handlebars.registerPartial('body', fs.readFileSync(path.resolve('.', 'templates/tokens/tokens.docs.hbs'), 'utf8'))
+    Handlebars.registerPartial('table', fs.readFileSync(path.resolve('.', 'templates/tokens/table.hbs'), 'utf8'))
 
     const flatTokens = [...dictionary.allTokens]
       .filter((token) => token.attributes.category !== 'meta')
@@ -42,7 +44,8 @@ module.exports = {
       })
 
     const templateContext = {
-      themes: contextEntries
+      themes: contextEntries,
+      title: 'Sage Design Tokens'
     }
 
     Handlebars.registerHelper('debug', value => {
