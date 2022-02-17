@@ -1,0 +1,46 @@
+<div class="columns">
+	<aside class="menu column py-0">
+		<ul class="menu-list">
+			{{#each themes}}
+				<p class="menu-label is-size-5 mb-3 mt-5 has-text-primary-dark has-text-weight-bold">{{themeName}}</p>
+				<ul>
+				{{#each categories}}
+					<li class="is-size-4">
+						<a href="#{{../themeName}}-{{categoryName}}">
+							{{categoryName}}
+						</a>
+					</li>
+				{{/each}}
+				</ul>
+			{{/each}}
+		</ul>
+	</aside>
+	<main class="column is-9-tablet is-10-desktop">
+		{{#each themes}}
+			<section class="container">
+				<h2 class="with-icons title is-2 is-uppercase has-text-primary-dark has-text-weight-bold" id="{{themeName}}">
+					{{themeName}}
+					<a href="#{{themeName}}"
+						title="permalink"
+						class="permalink">
+						🔗
+					</a>
+				</h2>
+				{{#each categories}}
+					<section class="my-6">
+						<h3 class="with-icons title is-3 has-text-weight-bold" 
+							id="{{../themeName}}-{{categoryName}}">
+							{{categoryName}}
+							<a href="#{{../themeName}}-{{categoryName}}"
+									title="permalink"
+									class="permalink">
+									🔗
+							</a>
+						</h3>
+						{{> table}}
+					</section>
+				{{/each}}
+			</section>
+		{{/each}}
+	</main>
+</div>
