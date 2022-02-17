@@ -5,6 +5,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
 const Figma = require('figma-js')
 const fetch = require('node-fetch')
 const Handlebars = require('handlebars')
+const path = require('path')
 const {
   outputFile,
   outputJson,
@@ -168,14 +169,21 @@ async function createDocs (glyphsData, config) {
       srcPath: relativePath
     }
   })
-  const templateContents = readFileSync(resolve(process.cwd(), config.docsTemplate), 'utf8')
+
+  const templateContents = readFileSync(path.resolve('.', 'templates/layout.hbs'), 'utf8')
+  Handlebars.registerPartial('body', readFileSync(resolve(process.cwd(), config.docsTemplate), 'utf8'))
 
   Handlebars.registerHelper('json', (context) => {
     return JSON.stringify(context)
   })
 
+  const templateContext = {
+    glyphs: mappedGlyphsData,
+    title: 'Sage Icons Preview'
+  }
+
   const compile = Handlebars.compile(templateContents, { preventIndent: true })
-  const output = compile({ glyphs: mappedGlyphsData })
+  const output = compile(templateContext)
 
   console.log(`  - Writing documentation to file ${config.docsFile}...`)
   await outputFile(config.docsFile, output).then(() => console.log('Done.\r\n'))

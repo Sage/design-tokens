@@ -1,0 +1,99 @@
+<table class="table is-bordered is-hoverable is-fullwidth">
+  <colgroup>
+    <col width="50%">
+    <col width="25%">
+    <col width="35%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="has-background-light">Name</th>
+      <th class="has-background-light">Value</th>
+      <th class="has-background-light">Preview</th>
+    </tr>
+  </thead>
+  {{#each tokens}}
+    <tr>
+      <td class="with-icons is-vcentered"
+        id="{{../../themeName}}-{{../categoryName}}-{{name}}"
+        title="{{#each attributes}}{{@key}}: {{@this}}; {{/each}}">
+        {{name}}
+        <a href="#{{../../themeName}}-{{../categoryName}}-{{name}}"
+          title="permalink"
+          class="permalink">
+          🔗
+        </a>
+      </td>
+      <td class="is-vcentered">
+        <pre>{{debug value}}</pre>
+      </td>
+      <td class="is-vcentered">
+        {{> (lookup . 'type') value }}
+      </td>
+    </tr>
+  {{/each}}
+</table>
+
+{{#*inline "color"}}
+  <div class="table__color-preview"
+    style="background-color: {{this}};">
+  </div>
+{{/inline}}
+{{#*inline "spacing"}}
+  <div class="table__spacing-preview"
+    style="width: {{this}}">
+  </div>
+{{/inline}}
+{{#*inline "other"}}
+  OTHER {{this}}
+{{/inline}}
+{{#*inline "borderWidth"}}
+  <div class="table__border-width-preview"
+    style="border-width: {{this}}">
+  </div>
+{{/inline}}
+{{#*inline "boxShadow"}}
+  <div class="table__box-shadow-preview"
+    style="box-shadow: {{this}}">
+  </div>
+{{/inline}}
+{{#*inline "fontSizes"}}
+  <div class="table__font-size-preview"
+    style="font-size: {{this}}; line-height: {{this}}">
+      Aa
+  </div>
+{{/inline}}
+{{#*inline "sizing"}}
+  <div class="table__sizing-preview"
+    style="width: {{this}}; height: {{this}}">
+  </div>
+{{/inline}}
+{{#*inline "opacity"}}
+  <div class="table__opacity-preview">
+    <div style="opacity: {{this}}"></div>
+  </div>
+{{/inline}}
+{{#*inline "lineHeights"}}
+  <div class="table__line-height-preview" style="height: {{this}}">
+    Aa
+  </div>
+{{/inline}}
+{{#*inline "fontWeights"}}
+  <div class="table__font-weight-preview" style="font-weight: {{this}}">
+    Aa
+  </div>
+{{/inline}}
+{{#*inline "fontFamilies"}}
+  <div class="table__font-family-preview">
+    n/a
+  </div>
+{{/inline}}
+{{#*inline "borderRadius"}}
+  <div class="table__border-radius-preview"
+    style="border-top-right-radius: {{this}}">
+  </div>
+{{/inline}}
+{{#*inline "typography"}}
+  <div class="table__typography-preview">
+    n/a
+  </div>
+{{/inline}}

@@ -36,7 +36,7 @@ const fileId = process.env.FIGMA_FILE_ID;
       dataDir: `${distFolder}/assets/icons/data`,
       fontName: 'sage-icons',
       formats: ['svg', 'woff', 'woff2', 'ttf', 'eot'],
-      docsTemplate: resolve(__dirname, '../templates/icons.docs.hbs'),
+      docsTemplate: resolve(__dirname, '../templates/icons/icons.docs.hbs'),
       docsFile: `${distFolder}/assets/icons/docs/index.html`,
       meta: {
         description: 'Sage Icon Font',

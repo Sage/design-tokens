@@ -1,0 +1,55 @@
+
+<template id="icon-template">
+	<div class="box grid-item mb-0">
+		<img class="preview mb-4 mt-0 mx-auto" src="path">
+		<span class="name is-size-5" title="icon name">Icon name</span>
+		<div class="codes is-size-6">
+			<div class="glyph" title="font glyph">Glyph</div>
+			<div class="codepoint" title="codepoint">Codepoint</div>
+			<div class="unicode" title="unicode">Unicode</div>
+		</div>
+	</div>
+</template>
+<div id="main-container" class="box">
+	<h2 class="is-size-3 has-text-primary-dark has-text-weight-bold">Sage icons</h2>
+	<div class="divider">
+		<input id="filter-query" type="text" class="input is-medium">
+	</div>
+	<div id="icons-container">
+	</div>
+</div>
+
+
+<script>
+	const fullGlyphs = {{{json glyphs}}}
+	const templateContents = document.querySelector('#icon-template').content
+	const iconsContainerElement = document.querySelector('#icons-container')
+	const searchInputElement = document.querySelector('#filter-query')
+
+	const createIconTemplate = (template) => (icon) => {
+		const newElement = template.cloneNode(true)
+		newElement.querySelector('.name').innerText = icon.name;
+		newElement.querySelector('.glyph').innerText = icon.glyph;
+		newElement.querySelector('.codepoint').innerText = icon.codepoint;
+		newElement.querySelector('.unicode').innerText = icon.unicode;
+		newElement.querySelector('img.preview').src = icon.srcPath;
+
+		return newElement.children[0];
+	}
+
+	const iconTemplate = createIconTemplate(templateContents)
+
+	const renderItems = (glyphs) => {
+		iconsContainerElement.innerHTML = glyphs.map(icon => iconTemplate(icon).outerHTML).join('')
+	}
+
+	const filterGlyphs = (phrase) => {
+		const glyphs = phrase.length > 0 ? fullGlyphs.filter((glyph) => glyph.name.includes(phrase) || glyph.description.includes(phrase)) : fullGlyphs
+		renderItems(glyphs)
+	}
+
+	filterGlyphs('');
+
+	searchInputElement.addEventListener('keyup', (event) => filterGlyphs(event.target.value))
+</script>
+
