@@ -39,7 +39,7 @@ async function getIconsArray (personalAccessToken, fileId) {
     const components = data.components
     const componentIds = Object.keys(components)
     const canvases = data.document.children.filter(node => node.type === 'CANVAS')
-    const verifyFn = (node) => componentIds.includes(node.id)
+    const verifyFn = (node) => componentIds.includes(node?.id)
 
     const groupedComponents = Object.fromEntries(canvases.map(canvas => [canvas.name, collect(canvas, verifyFn).map(node => node.id)]))
 
@@ -103,7 +103,7 @@ async function createWebFonts (iconsList, config) {
   console.log('Writing font files...')
   console.log(`  Using formats: ${config.formats.join(', ')} \r\n`)
 
-  const sets = uniqueValues(iconsList, 'set')
+  const sets = uniqueValues(iconsList, item => item.set)
   return await Promise.all(sets.map(async (set) => {
     const icons = iconsList.filter(icon => icon.set === set)
     const name = `${config.fontName}-${set}`
@@ -148,7 +148,7 @@ async function createWebFonts (iconsList, config) {
 async function writeGlyphsData (glyphsData, config) {
   console.log('Writing glyph data...')
   const glyphsDataFilePath = resolve(config.dataDir, 'glyphs.json')
-  const sets = uniqueValues(glyphsData, 'set')
+  const sets = uniqueValues(glyphsData, item => item.set)
   console.log(`  Writing data for ${glyphsData.length} in ${sets.length} sets`)
 
   await outputJson(glyphsDataFilePath, glyphsData).then(() => {
