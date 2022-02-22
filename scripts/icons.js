@@ -4,8 +4,6 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
 
 const Figma = require('figma-js')
 const fetch = require('node-fetch')
-const Handlebars = require('handlebars')
-const path = require('path')
 const {
   outputFile,
   outputJson,
@@ -18,7 +16,6 @@ const {
   join,
   relative,
   resolve,
-  dirname,
   sep,
   posix
 } = require('path')
@@ -27,6 +24,8 @@ const pick = require('lodash/pick')
 
 const uniqueValues = require('./utils/unique-values')
 const collect = require('./utils/collect')
+
+require('dotenv').config()
 
 async function getIconsArray (personalAccessToken, fileId) {
   console.log(`Fetching icon components information from Figma file ${fileId}...`)
@@ -157,12 +156,14 @@ async function writeGlyphsData (glyphsData, config) {
   })
 }
 
-async function createDocs (glyphsData, config) {
+function createDocs (glyphsData, config) {
   console.log('Creating documentation for icons...')
+
+  const buildDocsFile = require('./handlebars')(config.docsPartials)
 
   const mappedGlyphsData = glyphsData.map(icon => {
     const fullIconPath = resolve(config.distDir, icon.path)
-    const relativePath = relative(dirname(config.docsFile), fullIconPath)
+    const relativePath = relative(config.docsDir, fullIconPath)
 
     return {
       ...icon,
@@ -170,23 +171,18 @@ async function createDocs (glyphsData, config) {
     }
   })
 
-  const templateContents = readFileSync(path.resolve('.', 'templates/layout.hbs'), 'utf8')
-  Handlebars.registerPartial('body', readFileSync(resolve(process.cwd(), config.docsTemplate), 'utf8'))
+  const template = readFileSync(config.mainTemplate, 'utf8')
 
-  Handlebars.registerHelper('json', (context) => {
-    return JSON.stringify(context)
-  })
-
-  const templateContext = {
+  const context = {
     glyphs: mappedGlyphsData,
-    title: 'Sage Icons Preview'
+    title: 'Sage Icons Preview',
+    bodyType: 'icons'
   }
 
-  const compile = Handlebars.compile(templateContents, { preventIndent: true })
-  const output = compile(templateContext)
+  console.log(resolve(process.cwd(), config.docsDir, 'index.html'))
 
-  console.log(`  - Writing documentation to file ${config.docsFile}...`)
-  await outputFile(config.docsFile, output).then(() => console.log('Done.\r\n'))
+  buildDocsFile(template, context, [config.docsDir, 'index.html'])
+  console.log('Done.\r\n')
 }
 
 /**
@@ -197,7 +193,7 @@ async function createDocs (glyphsData, config) {
  * @property {string} svgDir - directory for svg files
  * @property {string} fontsDir - directory for font files
  * @property {string} dataDir - directory for JSON file
- * @property {string} docsFile - output file for icon docs
+ * @property {string} docsDir - output file for icon docs
  * @property {string} fontName - name of the font
  * @property {array} formats - formats to be generated ('svg', 'ttf', 'woff', 'woff2', 'eot')as in th
  * @property {string} docsTemplate - path to handlebars template for docs
@@ -213,9 +209,10 @@ async function createDocs (glyphsData, config) {
  * @param {IconsConfig} config - config for icons generator
  * @returns {Promise<void>}
  */
-async function icons (config) {
-  if (!config.fileId) {
-    console.error('Skipping icons fetch. Please provide Figma File ID.\r\n')
+(async (config) => {
+  if (!config.fileId || !config.personalAccessToken) {
+    console.error('Icons will not be generated, since token and figma file id were not found.')
+    console.error('Please provide FIGMA_ACCESS_TOKEN and FIGMA_FILE_ID env variables or in .env file.\r\n')
     return
   }
 
@@ -236,7 +233,23 @@ async function icons (config) {
     }))
 
   await writeGlyphsData(formattedGlyphsData, config)
-  await createDocs(formattedGlyphsData, config)
-}
-
-module.exports = icons
+  createDocs(formattedGlyphsData, config)
+})({
+  personalAccessToken: process.env.FIGMA_ACCESS_TOKEN,
+  fileId: process.env.FIGMA_FILE_ID,
+  distDir: './dist',
+  svgDir: './dist/assets/icons/svg',
+  fontsDir: './dist/assets/icons/fonts',
+  dataDir: './dist/assets/icons/data',
+  fontName: 'sage-icons',
+  formats: ['svg', 'woff', 'woff2', 'ttf', 'eot'],
+  mainTemplate: './templates/layout.hbs',
+  docsDir: './dist/docs/icons/',
+  docsPartials: './templates/partials/**/*.hbs',
+  meta: {
+    description: 'Sage Icon Font',
+    url: 'http://sage.com',
+    copyright: 'Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved.',
+    version: '1.0'
+  }
+})

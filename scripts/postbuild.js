@@ -135,6 +135,8 @@ async function main () {
   copyAssets()
   addEntryFile()
   addFileHeader()
+  require('./tokens-documentation')
+  await require('./icons')
   await generateTSDefinitions()
 }
 
