@@ -16,7 +16,6 @@ const tsc = require('node-typescript-compiler')
 
 const filename = require('./utils/filename')
 const headerContents = require('./utils/file-header')
-// const createTokensDocumentation = require('./tokens-documentation')
 
 function copyPackageJSON () {
   try {
