@@ -21,10 +21,12 @@ module.exports = (object, callback = () => true) => {
   const walk = (walkObject) => {
     if (callback(walkObject)) {
       output.push(walkObject)
+      return
     }
 
     if (walkObject instanceof Object) {
       Object.values(walkObject).forEach((childObj) => walk(childObj))
+      return
     }
 
     if (Array.isArray(walkObject)) {

@@ -150,7 +150,7 @@ async function writeGlyphsData (glyphsData, config) {
   const sets = uniqueValues(glyphsData, item => item.set)
   console.log(`  Writing data for ${glyphsData.length} in ${sets.length} sets`)
 
-  await outputJson(glyphsDataFilePath, glyphsData).then(() => {
+  await outputJson(glyphsDataFilePath, glyphsData, { spaces: 2 }).then(() => {
     console.log(`  - glyphs data in file: ${glyphsDataFilePath}`)
     console.log('Done.\r\n')
   })

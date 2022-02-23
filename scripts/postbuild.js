@@ -32,7 +32,7 @@ function copyPackageJSON () {
       resolve(__dirname, '../dist/package.json'),
       filteredPackageDef,
       {
-        spaces: 4
+        spaces: 2
       }
     )
   } catch (err) {
