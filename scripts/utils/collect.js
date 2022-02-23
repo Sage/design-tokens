@@ -5,7 +5,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
 /**
  * Callback function for collect util.
  * @callback CollectCallback
- * @param {*} node - node to check
+ * @param {Object} node - node to check
  * @return {boolean}
  */
 
@@ -16,18 +16,22 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  * @returns {*|*[]}
  */
 module.exports = (object, callback = () => true) => {
-  const out = []
+  const output = []
 
-  const walk = (node) => {
-    if (callback(node)) {
-      out.push(node)
+  const walk = (walkObject) => {
+    if (callback(walkObject)) {
+      output.push(walkObject)
     }
 
-    if (Array.isArray(node.children)) {
-      node.children.forEach(childNode => walk(childNode))
+    if (walkObject instanceof Object) {
+      Object.values(walkObject).forEach((childObj) => walk(childObj))
+    }
+
+    if (Array.isArray(walkObject)) {
+      walkObject.forEach(childObj => walk(childObj))
     }
   }
 
   walk(object)
-  return out
+  return output
 }

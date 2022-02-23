@@ -7,8 +7,7 @@ const {
   outputJsonSync,
   copySync,
   outputFileSync,
-  readFileSync,
-  removeSync
+  readFileSync
 } = require('fs-extra')
 const pick = require('lodash/pick')
 const camelCase = require('lodash/camelCase')
@@ -116,12 +115,6 @@ function addFileHeader () {
   })
 }
 
-function clearTempDir () {
-  const tempFolder = resolve(__dirname, '../temp')
-  console.log('Clearing /temp folder')
-  removeSync(tempFolder)
-}
-
 function copyAssets () {
   try {
     copySync(
@@ -141,8 +134,9 @@ async function main () {
   copyAssets()
   addEntryFile()
   addFileHeader()
+  require('./tokens-documentation')
+  await require('./icons')
   await generateTSDefinitions()
-  clearTempDir()
 }
 
 main()
