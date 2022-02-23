@@ -49,7 +49,7 @@ const groupTokens = (flattenedTokens) => {
   const navigation = omod(groupedTokens, undefined, node => node?.name ? undefined : node)
 
   const generalContext = {
-    title: '',
+    title: 'Sage Design Tokens',
     bodyType: 'general',
     themes: groupedTokens,
     navigation
@@ -58,7 +58,7 @@ const groupTokens = (flattenedTokens) => {
 
   Object.entries(groupedTokens).forEach(([theme, categories]) => {
     const themeContext = {
-      title: theme,
+      title: `Sage Design Tokens / ${theme}`,
       bodyType: 'theme',
       themeName: theme,
       categories,
@@ -68,7 +68,7 @@ const groupTokens = (flattenedTokens) => {
 
     Object.entries(categories).forEach(([category, tokens]) => {
       const categoryContext = {
-        title: `${theme} / ${category}`,
+        title: `Sage Design Tokens / ${theme} / ${category}`,
         bodyType: 'category',
         themeName: theme,
         categoryName: category,

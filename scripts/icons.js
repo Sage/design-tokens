@@ -175,7 +175,7 @@ function createDocs (glyphsData, config) {
 
   const context = {
     glyphs: mappedGlyphsData,
-    title: 'Sage Icons Preview',
+    title: 'Sage Icons',
     bodyType: 'icons'
   }
 
