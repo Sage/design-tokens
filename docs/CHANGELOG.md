@@ -1,3 +1,84 @@
+## [1.92.9](https://github.com/Sage/design-tokens/compare/v1.92.8...v1.92.9) (2022-02-14)
+
+
+### Bug Fixes
+
+* fix github release ([dd6716c](https://github.com/Sage/design-tokens/commit/dd6716c98ccc6825a76a9973bb05f4fcf51550c1))
+* fix github release ([858def1](https://github.com/Sage/design-tokens/commit/858def18ae9cb01157b2d61a5554cef0809ceb34))
+
+## [1.92.8](https://github.com/Sage/design-tokens/compare/v1.92.7...v1.92.8) (2022-02-14)
+
+
+### Bug Fixes
+
+* fix github release ([8d04adc](https://github.com/Sage/design-tokens/commit/8d04adc857f7925b0a4e4f2ce189ad9abf01bbfe))
+
+## [1.92.7](https://github.com/Sage/design-tokens/compare/v1.92.6...v1.92.7) (2022-02-11)
+
+
+### Bug Fixes
+
+* fix github release ([4c16740](https://github.com/Sage/design-tokens/commit/4c1674074b92e8f52092ce164186b23786adf299))
+
+## [1.92.6](https://github.com/Sage/design-tokens/compare/v1.92.5...v1.92.6) (2022-02-11)
+
+
+### Bug Fixes
+
+* test commit ([9bc03ac](https://github.com/Sage/design-tokens/commit/9bc03aca22acf4600197e6b7f3b1b71a248a83ce))
+
+## [1.92.5](https://github.com/Sage/design-tokens/compare/v1.92.4...v1.92.5) (2022-02-11)
+
+
+### Bug Fixes
+
+* fix github release ([95040a5](https://github.com/Sage/design-tokens/commit/95040a54cd5e8ac0990d8977689085dc5b1bc1e1))
+
+## [1.92.4](https://github.com/Sage/design-tokens/compare/v1.92.3...v1.92.4) (2022-02-11)
+
+
+### Bug Fixes
+
+* fix github release ([9a82158](https://github.com/Sage/design-tokens/commit/9a821587657ea2ee3295c9e5bb2034b2a2a556fd))
+
+## [1.92.3](https://github.com/Sage/design-tokens/compare/v1.92.2...v1.92.3) (2022-02-11)
+
+
+### Bug Fixes
+
+* upgrade dependencies ([744a088](https://github.com/Sage/design-tokens/commit/744a088f6d82b46ed736d032ab11025c4fecb9e8))
+
+## [1.92.2](https://github.com/Sage/design-tokens/compare/v1.92.1...v1.92.2) (2022-02-11)
+
+
+### Bug Fixes
+
+* test commit ([0c44cb7](https://github.com/Sage/design-tokens/commit/0c44cb74fe177505a18ff8586284229a328e0cc7))
+* **test:** test commit ([83b3e11](https://github.com/Sage/design-tokens/commit/83b3e1197e1cf5218c13dcc225c66754d0561fcb))
+
+## [1.92.1](https://github.com/Sage/design-tokens/compare/v1.92.0...v1.92.1) (2022-02-11)
+
+
+### Bug Fixes
+
+* **ci:** fix github release ([d07d09f](https://github.com/Sage/design-tokens/commit/d07d09f6b1c9a1273cc616c212a34e887a7eb1e8))
+* **semantic-release:** test commit ([#168](https://github.com/Sage/design-tokens/issues/168)) ([dc6d13c](https://github.com/Sage/design-tokens/commit/dc6d13cf43e6f5662b0769dd6e0e82b6d62aef51))
+* **semantic-release:** test release ([86b9d51](https://github.com/Sage/design-tokens/commit/86b9d512b82c408e97f4281b0090deaa75c7b448))
+
+# [1.92.0](https://github.com/Sage/design-tokens/compare/v1.91.0...v1.92.0) (2022-02-10)
+
+
+### Features
+
+* **form:** update tokens ([9257f02](https://github.com/Sage/design-tokens/commit/9257f02b107bbbd672a0bf63de5d46eae01aa5ce))
+
+# [1.91.0](https://github.com/Sage/design-tokens/compare/v1.90.0...v1.91.0) (2022-02-08)
+
+
+### Features
+
+* **data:** update tokens ([4656e1a](https://github.com/Sage/design-tokens/commit/4656e1a42c18cfd6f4d655f1c7ff91160d14473c))
+
 # [1.90.0](https://github.com/Sage/design-tokens/compare/v1.89.0...v1.90.0) (2022-02-04)
 
 
