@@ -27,30 +27,67 @@ const collect = require('./utils/collect')
 
 require('dotenv').config()
 
-async function getIconsArray (personalAccessToken, fileId) {
-  console.log(`Fetching icon components information from Figma file ${fileId}...`)
-  const client = Figma.Client({ personalAccessToken })
+const getDataFromDescription = (description) => {
+  const output = {}
+  const unicodeMatch = description.match(/code: ?([a-zA-Z0-9]{4})\s?/)
 
-  const components = await client.file(fileId).then(({ data }) => {
+  if (unicodeMatch && unicodeMatch[1]) {
+    output.unicode = unicodeMatch[1]
+    output.description = description.replace(unicodeMatch[0], '')
+  }
+
+  return output
+}
+/**
+ *
+ * {
+ *   key: 'fb171f29455979c67fe3e9d6522c6fa8cb9451e1',
+ *   name: 'Info Squared',
+ *   description: '',
+ *   documentationLinks: [],
+ *   id: '2:43',
+ *   set: 'outline',
+ *   url: 'https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/9743/2b96/4e06db87240266d37ccd2f0d9cd9e184'
+ * }
+ */
+
+async function getIconsArray (config) {
+  console.log(`Fetching icon components information from Figma file ${config.fileId}...`)
+  const client = Figma.Client({ personalAccessToken: config.personalAccessToken })
+
+  const components = await client.file(config.fileId).then(({ data }) => {
     console.log(`  File name: ${data.name}`)
     console.log(`  Last modified: ${data.lastModified}`)
 
     const components = data.components
     const componentIds = Object.keys(components)
-    const canvases = data.document.children.filter(node => node.type === 'CANVAS')
+    let canvases = data.document.children.filter(node => node.type === 'CANVAS')
+    if (config.pages && config.pages.length > 0) {
+      canvases = canvases.filter(node => config.pages.includes(node.name))
+    }
     const verifyFn = (node) => componentIds.includes(node?.id)
 
     const groupedComponents = Object.fromEntries(canvases.map(canvas => [canvas.name, collect(canvas, verifyFn).map(node => node.id)]))
 
     return Object.entries(groupedComponents)
-      .map(([set, ids]) => ids.map(id => ({
-        ...components[id],
-        id,
-        set
-      }))).flat()
+      .map(([set, ids]) => ids.map(id => {
+        const currentComponent = components[id]
+        const output = {
+          id,
+          ...currentComponent,
+          ...getDataFromDescription(currentComponent.description)
+        }
+
+        if (config.multipleSets) {
+          output.set = set
+        }
+
+        return output
+      }))
+      .flat()
   })
 
-  return await client.fileImages(fileId, {
+  return await client.fileImages(config.fileId, {
     ids: components.map(component => component.id),
     format: 'svg',
     scale: 4
@@ -82,7 +119,9 @@ async function writeIconsToSvg (iconsList, config) {
   console.log('Writing svg icons data to files...')
   return await Promise.all(
     iconsList.map(async (icon) => {
-      const filePath = join(config.svgDir, kebabCase(icon.set), `${kebabCase(icon.name)}.svg`)
+      const filePath = config.multipleSets
+        ? join(config.svgDir, kebabCase(icon.set), `${kebabCase(icon.name)}.svg`)
+        : join(config.svgDir, `${kebabCase(icon.name)}.svg`)
 
       return await outputFile(filePath, icon.svg).then(() => {
         console.log(`  - ${icon.name} written to ${filePath}`)
@@ -102,12 +141,13 @@ async function createWebFonts (iconsList, config) {
   console.log('Writing font files...')
   console.log(`  Using formats: ${config.formats.join(', ')} \r\n`)
 
-  const sets = uniqueValues(iconsList, item => item.set)
+  const sets = config.multipleSets ? uniqueValues(iconsList, item => item.set) : ['']
   return await Promise.all(sets.map(async (set) => {
-    const icons = iconsList.filter(icon => icon.set === set)
-    const name = `${config.fontName}-${set}`
-    const inputDir = resolve('.', config.svgDir, set)
+    const icons = config.multipleSets ? iconsList.filter(icon => icon.set === set) : iconsList
+    const name = config.multipleSets ? `${config.fontName}-${set}` : config.fontName
+    const inputDir = config.multipleSets ? resolve('.', config.svgDir, kebabCase(set)) : resolve('.', config.svgDir)
     const outputDir = resolve('.', config.fontsDir)
+    const codepoints = Object.fromEntries(icons.filter(icon => !!icon.unicode).map(icon => [kebabCase(icon.name), parseInt(icon.unicode, 16)]))
 
     ensureDir(outputDir)
 
@@ -115,6 +155,7 @@ async function createWebFonts (iconsList, config) {
       name,
       inputDir,
       outputDir,
+      codepoints,
       fontTypes: config.formats,
       formatOptions: {
         ttf: config.meta
@@ -147,8 +188,12 @@ async function createWebFonts (iconsList, config) {
 async function writeGlyphsData (glyphsData, config) {
   console.log('Writing glyph data...')
   const glyphsDataFilePath = resolve(config.dataDir, 'glyphs.json')
-  const sets = uniqueValues(glyphsData, item => item.set)
-  console.log(`  Writing data for ${glyphsData.length} in ${sets.length} sets`)
+  if (config.multipleSets) {
+    const sets = uniqueValues(glyphsData, item => item.set)
+    console.log(`  Writing data for ${glyphsData.length} icons in ${sets.length} sets`)
+  } else {
+    console.log(`  Writing data for ${glyphsData.length} icons in 1 set`)
+  }
 
   await outputJson(glyphsDataFilePath, glyphsData, { spaces: 2 }).then(() => {
     console.log(`  - glyphs data in file: ${glyphsDataFilePath}`)
@@ -189,6 +234,8 @@ function createDocs (glyphsData, config) {
  * @typedef {Object} IconsConfig
  * @property {string} personalAccessToken - personal access token for figma
  * @property {string} fileId - id of a figma file
+ * @property {string[]} pages - names of the pages that are containing icons
+ * @property {boolean} multipleSets - if multiple sets should be created. If true, then each page will be different set.
  * @property {string} distDir - main output directory
  * @property {string} svgDir - directory for svg files
  * @property {string} fontsDir - directory for font files
@@ -220,7 +267,7 @@ function createDocs (glyphsData, config) {
   removeSync(config.dataDir)
   removeSync(config.fontsDir)
 
-  const iconsList = await getIconsArray(config.personalAccessToken, config.fileId)
+  const iconsList = await getIconsArray(config)
   const iconsData = await fetchIconData(iconsList)
   const svgIcons = await writeIconsToSvg(iconsData, config)
   const glyphsData = await createWebFonts(svgIcons, config)
@@ -237,6 +284,8 @@ function createDocs (glyphsData, config) {
 })({
   personalAccessToken: process.env.FIGMA_ACCESS_TOKEN,
   fileId: process.env.FIGMA_FILE_ID,
+  pages: ['icons'],
+  multipleSets: false,
   distDir: './dist',
   svgDir: './dist/assets/icons/svg',
   fontsDir: './dist/assets/icons/fonts',
