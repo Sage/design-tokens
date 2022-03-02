@@ -12,11 +12,18 @@ const groups = {
     'custom/attributes/default',
     'custom/name/camel',
     'custom/value/css-box-shadow',
-    'custom/value/css-typography'
+    'custom/value/css-typography',
+    'custom/value/css-font-weight'
   ],
   name: [
     'custom/attributes/default',
     'custom/name/camel'
+  ],
+  mobile: [
+    'custom/attributes/default',
+    'custom/name/camel',
+    'custom/value/css-box-shadow',
+    'custom/value/css-typography'
   ]
 }
 
