@@ -60,7 +60,7 @@ themes.forEach((theme) => {
       },
       android: {
         buildPath: 'dist/android/',
-        transforms: groups.web,
+        transforms: groups.mobile,
         files: [
           {
             filter: filterTheme(theme),
@@ -71,7 +71,7 @@ themes.forEach((theme) => {
       },
       ios: {
         buildPath: 'dist/ios/',
-        transforms: groups.web,
+        transforms: groups.mobile,
         files: [
           {
             filter: filterTheme(theme),
