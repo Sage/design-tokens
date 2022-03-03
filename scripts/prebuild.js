@@ -28,7 +28,6 @@ const outputFile = resolve(__dirname, '../temp/tokens.json')
 
   // Below temporary /temp/tokens.json file is created.
   // It contains all pre-transformed data.
-  // Eventually, whole /temp folder is removed during post-build.
   outputJsonSync(outputFile, outputTokens, { spaces: 2 })
 
   console.log(`  - Writing output to ${outputFile}`)
