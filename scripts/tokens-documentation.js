@@ -34,6 +34,16 @@ const groupTokens = (flattenedTokens) => {
   return mapValues(tokensByTheme, app => groupBy(app, 'attributes.category'))
 }
 
+/**
+ * @typedef TokensDocumentationConfig
+ * @property {string} mainTemplate - Path to main template for documentation
+ * @property {string} docsPartials - Glob to partials for tokens documentation
+ * @property {string} docsDir - Output dir for generated documentation
+ */
+
+/**
+ * @param {TokensDocumentationConfig} config - config for Tokens documentation generator
+ */
 ((config) => {
   console.log('Building Documentation for design tokens...')
 

@@ -38,18 +38,6 @@ const getDataFromDescription = (description) => {
 
   return output
 }
-/**
- *
- * {
- *   key: 'fb171f29455979c67fe3e9d6522c6fa8cb9451e1',
- *   name: 'Info Squared',
- *   description: '',
- *   documentationLinks: [],
- *   id: '2:43',
- *   set: 'outline',
- *   url: 'https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/9743/2b96/4e06db87240266d37ccd2f0d9cd9e184'
- * }
- */
 
 async function getIconsArray (config) {
   console.log(`Fetching icon components information from Figma file ${config.fileId}...`)
@@ -243,7 +231,8 @@ function createDocs (glyphsData, config) {
  * @property {string} docsDir - output file for icon docs
  * @property {string} fontName - name of the font
  * @property {array} formats - formats to be generated ('svg', 'ttf', 'woff', 'woff2', 'eot')as in th
- * @property {string} docsTemplate - path to handlebars template for docs
+ * @property {string} mainTemplate - path to handlebars template for docs
+ * @property {string} docsPartials - glob to partials for tokens documentation
  * @property {object} meta - meta information for font files.
  * @property {string} meta.description - font files description
  * @property {string} meta.url - url for a font manufacturer
@@ -252,7 +241,6 @@ function createDocs (glyphsData, config) {
  */
 
 /**
- *
  * @param {IconsConfig} config - config for icons generator
  * @returns {Promise<void>}
  */
