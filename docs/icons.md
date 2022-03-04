@@ -12,7 +12,7 @@ require('./scripts/icons')
 ```
 
 ## Disclaimer
-Purpose of this tool is to delegate whole responsibility for the icons to the designers, and to speed up and facilitate the whole font creation process. They will maintain icons inside specified Figma file, and then
+Purpose of this tool is to delegate whole responsibility for the icons to the designers, and to speed up and facilitate the whole font creation process. Thanks to this, Designers are able to maintain icons and icon sets form the environment that they are most comfortable with.
 
 Icons script uses Figma API to request given file, and fetch all Icons Data - their name, preferred unicode, set as well as svg icons. They are then placed in a directory given in a config. Downloaded files are finally used to generate webfont file(s). In the end, all the data is saved to JSON file and documentation for icons is generated. 
 
