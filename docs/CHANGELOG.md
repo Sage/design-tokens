@@ -1,3 +1,16 @@
+# [1.94.0](https://github.com/Sage/design-tokens/compare/v1.93.0...v1.94.0) (2022-03-04)
+
+
+### Bug Fixes
+
+* change branch name ([19a78bd](https://github.com/Sage/design-tokens/commit/19a78bdb9baf24b3c39f6e4748b9b9776562e9ec))
+
+
+### Features
+
+* **data:** Correct font size of formField.characterCount.l to 200 (16px) ([4acfd69](https://github.com/Sage/design-tokens/commit/4acfd69f0f772321cd2f82e035fee625960efb13))
+* improve build process for design tokens ([#172](https://github.com/Sage/design-tokens/issues/172)) ([bc7b65b](https://github.com/Sage/design-tokens/commit/bc7b65baf599faf3b04ba46f102d054b0060547b)), closes [#164](https://github.com/Sage/design-tokens/issues/164) [#175](https://github.com/Sage/design-tokens/issues/175) [#173](https://github.com/Sage/design-tokens/issues/173) [#176](https://github.com/Sage/design-tokens/issues/176) [#177](https://github.com/Sage/design-tokens/issues/177) [#179](https://github.com/Sage/design-tokens/issues/179) [#181](https://github.com/Sage/design-tokens/issues/181) [#182](https://github.com/Sage/design-tokens/issues/182) [#183](https://github.com/Sage/design-tokens/issues/183) [#184](https://github.com/Sage/design-tokens/issues/184)
+
 # [1.93.0](https://github.com/Sage/design-tokens/compare/v1.92.9...v1.93.0) (2022-02-28)
 
 
