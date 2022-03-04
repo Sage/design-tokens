@@ -1,0 +1,18 @@
+<tr>
+    <td class="with-icons is-vcentered"
+        id="{{attributes.theme}}-{{name}}"
+        title="{{#each attributes}}{{@key}}: {{@this}}; {{/each}}">
+        {{name}}
+        <a href="#{{attributes.theme}}-{{name}}"
+           title="permalink"
+           class="permalink">
+            🔗
+        </a>
+    </td>
+    <td class="is-vcentered">
+        <pre>{{debug value}}</pre>
+    </td>
+    <td class="is-vcentered">
+        {{ prefixedPartial this 'type' 'token-preview' }}
+    </td>
+</tr>

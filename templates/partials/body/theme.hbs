@@ -1,0 +1,20 @@
+<div class="layout">
+    <aside class="hide-on-embedded navigation menu py-0">
+        {{>tokens-navigation}}
+    </aside>
+    <main class="content">
+        <h1 class="hide-on-embedded">
+            <a href="../index.html">
+                Sage Design Tokens
+            </a>
+            /
+            {{themeName}}
+        </h1>
+        {{#each categories as |tokens categoryName|}}
+            <section class="my-6">
+                <h2 class="hide-on-embedded">{{categoryName}}</h2>
+                {{>list tokens=tokens category=categoryName theme=themeName}}
+            </section>
+        {{/each}}
+    </main>
+</div>

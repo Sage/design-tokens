@@ -3,17 +3,10 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
 const { readJsonSync } = require('fs-extra')
-const styleDictionary = require('style-dictionary')
+const { dictionary, groups } = require('./style-dictionary')
 
 const filterPublic = require('./utils/filter-public')
 const filterTheme = require('./utils/filter-theme')
-
-const groups = require('./transforms/transforms').groups
-const transforms = require('./transforms/transforms').transforms
-const formats = require('./formats/formats')
-
-Object.values(transforms).forEach(transform => styleDictionary.registerTransform(transform))
-Object.values(formats).forEach(format => styleDictionary.registerFormat(format))
 
 const tokens = readJsonSync('temp/tokens.json')
 const publicTokens = filterPublic(tokens)
@@ -22,9 +15,9 @@ const themes = Object.keys(publicTokens)
 console.log(`Found ${themes.length} public themes: ${themes.join(', ')}.`)
 
 themes.forEach((theme) => {
-  console.log(`\r\n\r\nBuilding all platforms for ${theme} theme:`)
+  console.log(`\r\nBuilding all platforms for ${theme} theme:`)
 
-  styleDictionary.extend({
+  dictionary.extend({
     tokens,
     platforms: {
       javascript: {
@@ -45,7 +38,7 @@ themes.forEach((theme) => {
       },
       css: {
         buildPath: 'dist/css/',
-        transforms: groups.css,
+        transforms: groups.web,
         files: [
           {
             filter: filterTheme(theme),
@@ -56,7 +49,7 @@ themes.forEach((theme) => {
       },
       scss: {
         buildPath: 'dist/scss/',
-        transforms: groups.css,
+        transforms: groups.web,
         files: [
           {
             filter: filterTheme(theme),
@@ -67,7 +60,7 @@ themes.forEach((theme) => {
       },
       android: {
         buildPath: 'dist/android/',
-        transforms: groups.css,
+        transforms: groups.mobile,
         files: [
           {
             filter: filterTheme(theme),
@@ -78,7 +71,7 @@ themes.forEach((theme) => {
       },
       ios: {
         buildPath: 'dist/ios/',
-        transforms: groups.css,
+        transforms: groups.mobile,
         files: [
           {
             filter: filterTheme(theme),
@@ -90,25 +83,5 @@ themes.forEach((theme) => {
     }
   }).buildAllPlatforms()
 
-  console.log('Done.')
+  console.log('\r\nDone.\r\n')
 })
-
-console.log('\r\n\r\nBuilding Documentation for design tokens')
-
-styleDictionary.extend({
-  tokens,
-  platforms: {
-    docs: {
-      buildPath: 'dist/docs/',
-      transforms: groups.web,
-      files: [
-        {
-          destination: 'index.html',
-          format: 'docs'
-        }
-      ]
-    }
-  }
-}).buildAllPlatforms()
-
-console.log('Done.')

@@ -7,8 +7,7 @@ const {
   outputJsonSync,
   copySync,
   outputFileSync,
-  readFileSync,
-  removeSync
+  readFileSync
 } = require('fs-extra')
 const pick = require('lodash/pick')
 const camelCase = require('lodash/camelCase')
@@ -33,7 +32,7 @@ function copyPackageJSON () {
       resolve(__dirname, '../dist/package.json'),
       filteredPackageDef,
       {
-        spaces: 4
+        spaces: 2
       }
     )
   } catch (err) {
@@ -116,20 +115,28 @@ function addFileHeader () {
   })
 }
 
-function clearTempDir () {
-  const tempFolder = resolve(__dirname, '../temp')
-  console.log('Clearing /temp folder')
-  removeSync(tempFolder)
+function copyAssets () {
+  try {
+    copySync(
+      resolve(__dirname, '../assets'),
+      resolve(__dirname, '../dist/assets/')
+    )
+  } catch (err) {
+    console.log('Error copying assets to dist')
+    console.log(err)
+  }
 }
 
 async function main () {
   copyPackageJSON()
   copyReadme()
   copyData()
+  copyAssets()
   addEntryFile()
   addFileHeader()
+  require('./tokens-documentation')
+  await require('./icons')
   await generateTSDefinitions()
-  clearTempDir()
 }
 
 main()
