@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/Sage/design-tokens/compare/v1.94.0...v2.0.0) (2022-03-04)
+
+
+### Features
+
+* Add SageUI fonts to the library ([d2c6f70](https://github.com/Sage/design-tokens/commit/d2c6f70bc350a355665a71a6d98fa185827a6d1b))
+
+
+### BREAKING CHANGES
+
+* now library includes also assets
+
 # [1.94.0](https://github.com/Sage/design-tokens/compare/v1.93.0...v1.94.0) (2022-03-04)
 
 
