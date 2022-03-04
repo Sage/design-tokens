@@ -20,9 +20,11 @@ Design tokens purpose is to:
 - **Narrow value set to only needed values.** Design System uses narrow set of values (spacings, colors, typography properties and others). Those are only values that are needed for visual description of the component.
 - **Keep visual consistency across all components of the library.**
 
-## Beta
-
-Currently, this library is in an _unstable open beta stage_. It is not ready for production at this point as the tokens are liable to drastically change between now, and the production release.
+## Docs:
+- [Figma tokens github workflow](./docs/figma-github-workflow.md)
+- [Pre-transform phase](./docs/pretransform-phase.md)
+- [Generating icons](./docs/icons.md)
+- [Generating tokens documentation](./docs/tokens-documentation.md)
 
 ## Using the design tokens
 
