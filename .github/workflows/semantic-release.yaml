@@ -53,9 +53,3 @@ jobs:
           local_dir: "./dist/docs"
           remote_dir: "./public"
           delete: "true"
-
-      - name: Copy released package to private GitHub NPM registry
-        run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://npm.pkg.github.com --to-email="${GIT_COMMITTER_EMAIL}" --to-token="${NODE_AUTH_TOKEN}" %40sage%2Fdesign-tokens
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
