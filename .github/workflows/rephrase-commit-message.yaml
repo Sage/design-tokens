@@ -33,3 +33,8 @@ jobs:
           git config --global user.name ${{ github.event.head_commit.author.name }}
           git commit --amend -m "feat(data): ${{ github.event.head_commit.message }}"
           git push --force-with-lease
+
+      - name: Automatic merge
+        uses: "pascalgn/automerge-action@v0.14.3"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
