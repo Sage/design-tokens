@@ -1,3 +1,16 @@
+# [2.1.0](https://github.com/Sage/design-tokens/compare/v2.0.0...v2.1.0) (2022-03-14)
+
+
+### Features
+
+* **data:** Add colors: yin.030, action.major.yin.030, action.major.350 ([152215b](https://github.com/Sage/design-tokens/commit/152215b181feec2805c2c62dba3b7e2ae502cc2a))
+* **data:** Add colors.action.major.450 for default CTA on dark. (350 from previous push is for hover on dark) ([028bc06](https://github.com/Sage/design-tokens/commit/028bc0657e65b10eb85b4b9dd7a875ff52134b6b))
+* **data:** Add link.s typography token (12px) ([fc53431](https://github.com/Sage/design-tokens/commit/fc534315b8fc64988bffcb7c57be105657829801))
+* **data:** Add paragraph.m typography tokens for drawer and sidebar ([2370526](https://github.com/Sage/design-tokens/commit/2370526a06a94257929054536628496ccc24ab73))
+* **data:** Add table typography tokens for xs, s, l and xl sizes ([c7aa974](https://github.com/Sage/design-tokens/commit/c7aa974c248a6207898b732909c550bd1acfa528))
+* **data:** Add typography token for tile.paragraph.m ([c89d472](https://github.com/Sage/design-tokens/commit/c89d47296cad6b846c963b52918448048434f200))
+* **data:** Delete XS, S, MS, ML, L, XL typography tokens for dialog title and dialog paragraph. Only M size remains ([3dcda96](https://github.com/Sage/design-tokens/commit/3dcda96362483109474d118c88df7a56d2933fe5))
+
 # [2.0.0](https://github.com/Sage/design-tokens/compare/v1.94.0...v2.0.0) (2022-03-04)
 
 
