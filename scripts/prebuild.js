@@ -12,6 +12,8 @@ const {
   outputJsonSync
 } = require('fs-extra')
 
+const filterPublic = require('./utils/filter-public')
+
 const distFolder = resolve(__dirname, '../dist')
 const inputFile = resolve(__dirname, '../data/tokens.json')
 const outputFile = resolve(__dirname, '../temp/tokens.json')
@@ -24,7 +26,8 @@ const outputFile = resolve(__dirname, '../temp/tokens.json')
   console.log(`Transforming ${inputFile}`)
 
   const tokens = readJsonSync(inputFile)
-  const outputTokens = omod(tokens, figmaTokensToStyleDictionary)
+  const filteredTokens = filterPublic(tokens)
+  const outputTokens = omod(filteredTokens, figmaTokensToStyleDictionary)
 
   // Below temporary /temp/tokens.json file is created.
   // It contains all pre-transformed data.

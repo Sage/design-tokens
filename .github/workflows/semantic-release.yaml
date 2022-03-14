@@ -45,11 +45,11 @@ jobs:
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
 
       - name: Upload documentation via ftp
-        uses: airvzxf/ftp-deployment-action@latest
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local_dir: "./dist/docs"
-          remote_dir: "./public"
-          delete: "true"
+          local-dir: "./dist/docs"
+          server-dir: "./public"
+          dangerous-clean-slate: "true"
