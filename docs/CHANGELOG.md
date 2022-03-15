@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/Sage/design-tokens/compare/v2.1.0...v2.2.0) (2022-03-15)
+
+
+### Features
+
+* **data:** Make no-theme non-public ([f0d5708](https://github.com/Sage/design-tokens/commit/f0d5708dceb6890fb67a7d2d9cf689aea8e1351c))
+
 # [2.1.0](https://github.com/Sage/design-tokens/compare/v2.0.0...v2.1.0) (2022-03-14)
 
 
