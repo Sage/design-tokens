@@ -1,3 +1,16 @@
+# [2.3.0](https://github.com/Sage/design-tokens/compare/v2.2.0...v2.3.0) (2022-03-15)
+
+
+### Bug Fixes
+
+* fix Sage UI font definition [skip ci] ([8dede27](https://github.com/Sage/design-tokens/commit/8dede2730399a078b26655d5f75c2371b85662f8))
+
+
+### Features
+
+* **data): feat(data:** remove no-theme set from public ([0a4608b](https://github.com/Sage/design-tokens/commit/0a4608b510a75b6d4c8b34847b26d85b146423fd))
+* **data:** hide no-theme set ([5adfcbc](https://github.com/Sage/design-tokens/commit/5adfcbc956cd3826f07c8a59c944786c8addfd5c))
+
 # [2.2.0](https://github.com/Sage/design-tokens/compare/v2.1.0...v2.2.0) (2022-03-15)
 
 
