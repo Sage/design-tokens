@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/Sage/design-tokens/compare/v2.3.0...v2.4.0) (2022-03-22)
+
+
+### Features
+
+* **data:** Add new link typography tokens and rename old ones to OLDtext to be removed later ([ee23f3d](https://github.com/Sage/design-tokens/commit/ee23f3dfc8ecaa8f9fb8e11cc99e89a2efe2f72c))
+
 # [2.3.0](https://github.com/Sage/design-tokens/compare/v2.2.0...v2.3.0) (2022-03-15)
 
 
