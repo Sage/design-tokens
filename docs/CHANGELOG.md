@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/Sage/design-tokens/compare/v2.6.0...v2.7.0) (2022-03-23)
+
+
+### Features
+
+* **data:** add text decoration underline to link typography tokens ([19a52f9](https://github.com/Sage/design-tokens/commit/19a52f99baa757e66dd79dd0efb6aab79ff8bb91))
+
 # [2.6.0](https://github.com/Sage/design-tokens/compare/v2.5.0...v2.6.0) (2022-03-23)
 
 
