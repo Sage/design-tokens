@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/Sage/design-tokens/compare/v2.4.0...v2.5.0) (2022-03-23)
+
+
+### Features
+
+* **data:** update description of 0hack token ([4a717bf](https://github.com/Sage/design-tokens/commit/4a717bf673d695388814cf0be0417dae90c5e3be))
+
 # [2.4.0](https://github.com/Sage/design-tokens/compare/v2.3.0...v2.4.0) (2022-03-22)
 
 
