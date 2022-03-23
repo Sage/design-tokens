@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/Sage/design-tokens/compare/v2.5.0...v2.6.0) (2022-03-23)
+
+
+### Features
+
+* **data:** remove duplicate test tokens for typography link text ([0c08fe3](https://github.com/Sage/design-tokens/commit/0c08fe3a148948fd9559dee57828d60b9e9b1cb3))
+
 # [2.5.0](https://github.com/Sage/design-tokens/compare/v2.4.0...v2.5.0) (2022-03-23)
 
 
