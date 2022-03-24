@@ -1,3 +1,11 @@
+# [2.10.0](https://github.com/Sage/design-tokens/compare/v2.9.0...v2.10.0) (2022-03-24)
+
+
+### Features
+
+* **data:** 0hack value changed back from 0.001 to 0.01. 0.001 size doesn't apply in figma so we have to use 0.01 instead. ([5c26f95](https://github.com/Sage/design-tokens/commit/5c26f954022a3228f59a1f85cf271639e76ae10f))
+* **data:** update 0hack token to 0.01px (forgot the px last time) ([a364604](https://github.com/Sage/design-tokens/commit/a364604c7bb8abfe7095c3239db59d2064956383))
+
 # [2.9.0](https://github.com/Sage/design-tokens/compare/v2.8.0...v2.9.0) (2022-03-24)
 
 
