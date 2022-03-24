@@ -1,3 +1,10 @@
+# [2.9.0](https://github.com/Sage/design-tokens/compare/v2.8.0...v2.9.0) (2022-03-24)
+
+
+### Features
+
+* **data:** Add profile.emailText typography tokens, rename profile.email to profile.emailLink and add text decoration underline. ([ca3ca99](https://github.com/Sage/design-tokens/commit/ca3ca99a25001dc533d95c8990c7f8a0c72aa916))
+
 # [2.8.0](https://github.com/Sage/design-tokens/compare/v2.7.0...v2.8.0) (2022-03-24)
 
 
