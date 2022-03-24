@@ -1,3 +1,10 @@
+# [2.8.0](https://github.com/Sage/design-tokens/compare/v2.7.0...v2.8.0) (2022-03-24)
+
+
+### Features
+
+* **data:** Change value of 0hack from 0.01 to 0.001 ([e3e81dd](https://github.com/Sage/design-tokens/commit/e3e81dd204f991a9b40958646866d70a858f3fa9))
+
 # [2.7.0](https://github.com/Sage/design-tokens/compare/v2.6.0...v2.7.0) (2022-03-23)
 
 
