@@ -1,3 +1,12 @@
+# [2.11.0](https://github.com/Sage/design-tokens/compare/v2.10.0...v2.11.0) (2022-03-31)
+
+
+### Features
+
+* **data:** Add and edit tokens for colors.components.menu. Add typography token L size for menu.label. (Menu redesign is underway in Figma.) ([aaaa04d](https://github.com/Sage/design-tokens/commit/aaaa04d45afa38f65627e2521513715ec5b2096f))
+* **data:** Update color values for component.menu. All hover now $colors.action.major.500. Add 400 to childAlt. Correct gray.900 from [#1](https://github.com/Sage/design-tokens/issues/1)a1a1a to [#191919](https://github.com/Sage/design-tokens/issues/191919). Color values of component.menu.winter to be updated shortly ([7b023ef](https://github.com/Sage/design-tokens/commit/7b023efd0c78e4f03f2cca1a049cfa168d53d338)), closes [#1a1a1](https://github.com/Sage/design-tokens/issues/1a1a1)
+* **data:** Update descriptions on "origin" colours. ([5ef2c21](https://github.com/Sage/design-tokens/commit/5ef2c21496bd4e6bac38959e1f5f1e5017a070ee))
+
 # [2.10.0](https://github.com/Sage/design-tokens/compare/v2.9.0...v2.10.0) (2022-03-24)
 
 
