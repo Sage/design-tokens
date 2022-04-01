@@ -1,3 +1,10 @@
+# [2.12.0](https://github.com/Sage/design-tokens/compare/v2.11.0...v2.12.0) (2022-04-01)
+
+
+### Features
+
+* **data:** Add 090 and 091 boxShadow tokens, used in product nav (top and left) ([1adca1e](https://github.com/Sage/design-tokens/commit/1adca1e9228a8e3967f71b7e2b0f8bfe13fe6af8))
+
 # [2.11.0](https://github.com/Sage/design-tokens/compare/v2.10.0...v2.11.0) (2022-03-31)
 
 
