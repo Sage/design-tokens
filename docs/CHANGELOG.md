@@ -1,3 +1,10 @@
+# [2.13.0](https://github.com/Sage/design-tokens/compare/v2.12.0...v2.13.0) (2022-04-04)
+
+
+### Features
+
+* **data:** Add sizing.525 token, Edit typography.switch.optionLabel and typography.profile.initials tokens to be uppercase. ([f98fd3d](https://github.com/Sage/design-tokens/commit/f98fd3d522a21ba3cd1ddbafe775364ca558d448))
+
 # [2.12.0](https://github.com/Sage/design-tokens/compare/v2.11.0...v2.12.0) (2022-04-01)
 
 
