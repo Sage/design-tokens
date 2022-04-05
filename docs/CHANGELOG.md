@@ -1,3 +1,10 @@
+# [2.14.0](https://github.com/Sage/design-tokens/compare/v2.13.0...v2.14.0) (2022-04-05)
+
+
+### Features
+
+* **data:** Add xs, s, ms, ml, l, xl, xxl typography tokens for dialog title and paragraph ([1f80835](https://github.com/Sage/design-tokens/commit/1f80835010a448a90ac907ab58420cf3e440a5c1))
+
 # [2.13.0](https://github.com/Sage/design-tokens/compare/v2.12.0...v2.13.0) (2022-04-04)
 
 
