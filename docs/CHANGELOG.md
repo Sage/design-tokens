@@ -1,3 +1,10 @@
+# [2.15.0](https://github.com/Sage/design-tokens/compare/v2.14.0...v2.15.0) (2022-04-06)
+
+
+### Features
+
+* **data:** Add typography token for card.paragraph.m ([3de33f1](https://github.com/Sage/design-tokens/commit/3de33f1e46c41bca2a020888059981897c2c0841))
+
 # [2.14.0](https://github.com/Sage/design-tokens/compare/v2.13.0...v2.14.0) (2022-04-05)
 
 
