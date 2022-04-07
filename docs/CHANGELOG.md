@@ -1,3 +1,10 @@
+# [2.18.0](https://github.com/Sage/design-tokens/compare/v2.17.0...v2.18.0) (2022-04-07)
+
+
+### Features
+
+* **data:** Update values for components.menu.winter standard, child and childAlt 300 and 400 tokens ([cb359e5](https://github.com/Sage/design-tokens/commit/cb359e5a61de522e0a8229bad4069d3c4f45595e))
+
 # [2.17.0](https://github.com/Sage/design-tokens/compare/v2.16.0...v2.17.0) (2022-04-07)
 
 
