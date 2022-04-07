@@ -1,3 +1,10 @@
+# [2.16.0](https://github.com/Sage/design-tokens/compare/v2.15.0...v2.16.0) (2022-04-07)
+
+
+### Features
+
+* **data:** Part 1: Update color values for component.menu.winter. All hover now $colors.action.major.500. Add 400 to childAlt. ([d8c8375](https://github.com/Sage/design-tokens/commit/d8c8375dfecee4c1404c1506494806cd6fdcd2e4))
+
 # [2.15.0](https://github.com/Sage/design-tokens/compare/v2.14.0...v2.15.0) (2022-04-06)
 
 
