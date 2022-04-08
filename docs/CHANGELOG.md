@@ -1,3 +1,10 @@
+# [2.19.0](https://github.com/Sage/design-tokens/compare/v2.18.0...v2.19.0) (2022-04-08)
+
+
+### Features
+
+* **data:** Add color tokens for components.menu summer and winter parent 400 and 800 (for parent with clickable action, in selected state) ([f5cba81](https://github.com/Sage/design-tokens/commit/f5cba810f2a5e6bb931511d319824865f4916af2))
+
 # [2.18.0](https://github.com/Sage/design-tokens/compare/v2.17.0...v2.18.0) (2022-04-07)
 
 
