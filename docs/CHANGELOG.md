@@ -1,3 +1,11 @@
+## [2.19.1](https://github.com/Sage/design-tokens/compare/v2.19.0...v2.19.1) (2022-04-11)
+
+
+### Bug Fixes
+
+* correct the semantic release config ([2b71235](https://github.com/Sage/design-tokens/commit/2b71235a8ff82f8f63cd73f171d885ece0637503))
+* remove legacy doc upload and trigger new version ([d636539](https://github.com/Sage/design-tokens/commit/d6365393d1beb10ab62cb8eedc73fceed609e8d0))
+
 # [2.19.0](https://github.com/Sage/design-tokens/compare/v2.18.0...v2.19.0) (2022-04-08)
 
 
