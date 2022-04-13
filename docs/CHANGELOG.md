@@ -1,3 +1,10 @@
+# [2.20.0](https://github.com/Sage/design-tokens/compare/v2.19.2...v2.20.0) (2022-04-13)
+
+
+### Features
+
+* **data:** Update values for colors.components.menu. summer/winter standard/parent 500 (from gray.000 and gray.1000 to transaprent). Add boxShadow.010 for navigation bar (bottom border). ([46d1e0e](https://github.com/Sage/design-tokens/commit/46d1e0e547feef3b066906acf22138accfb1a970))
+
 ## [2.19.2](https://github.com/Sage/design-tokens/compare/v2.19.1...v2.19.2) (2022-04-11)
 
 
