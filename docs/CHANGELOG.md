@@ -1,3 +1,10 @@
+# [2.21.0](https://github.com/Sage/design-tokens/compare/v2.20.0...v2.21.0) (2022-04-13)
+
+
+### Features
+
+* **data:** Add colors.component.menu.transparent token (for internal borders on menu buttons) ([1a0cc60](https://github.com/Sage/design-tokens/commit/1a0cc601f2f7ff343ecabe3550cc6d778f8b6147))
+
 # [2.20.0](https://github.com/Sage/design-tokens/compare/v2.19.2...v2.20.0) (2022-04-13)
 
 
