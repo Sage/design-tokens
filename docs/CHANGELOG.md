@@ -1,3 +1,10 @@
+# [2.22.0](https://github.com/Sage/design-tokens/compare/v2.21.0...v2.22.0) (2022-04-22)
+
+
+### Features
+
+* **data:** add different size typography tokens for sidebar title and paragraph ([f593486](https://github.com/Sage/design-tokens/commit/f59348683a6ef524f282c091357b3e6d9351ed81))
+
 # [2.21.0](https://github.com/Sage/design-tokens/compare/v2.20.0...v2.21.0) (2022-04-13)
 
 
