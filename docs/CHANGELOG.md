@@ -1,3 +1,10 @@
+# [2.23.0](https://github.com/Sage/design-tokens/compare/v2.22.0...v2.23.0) (2022-04-22)
+
+
+### Features
+
+* **data:** Correct font weight in button label typography tokens (now 500/medium instead of 700/bold) ([ec7f24d](https://github.com/Sage/design-tokens/commit/ec7f24d896e5ec30ccd832464b8f7ab74fec56c0))
+
 # [2.22.0](https://github.com/Sage/design-tokens/compare/v2.21.0...v2.22.0) (2022-04-22)
 
 
