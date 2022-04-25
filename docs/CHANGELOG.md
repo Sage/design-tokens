@@ -1,3 +1,10 @@
+# [2.24.0](https://github.com/Sage/design-tokens/compare/v2.23.0...v2.24.0) (2022-04-25)
+
+
+### Features
+
+* **data:** Change colour value of components.menu. summer/winter standard/parent 500 to black or white instead of transparent ([8be19f0](https://github.com/Sage/design-tokens/commit/8be19f072366894a2e4710844d8321fbe865ea92))
+
 # [2.23.0](https://github.com/Sage/design-tokens/compare/v2.22.0...v2.23.0) (2022-04-22)
 
 
