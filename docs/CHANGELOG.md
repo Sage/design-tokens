@@ -1,3 +1,10 @@
+# [2.25.0](https://github.com/Sage/design-tokens/compare/v2.24.0...v2.25.0) (2022-04-27)
+
+
+### Features
+
+* **data:** Add sizing token 1200 (96px) for tables that have alt header bg ([43c8b73](https://github.com/Sage/design-tokens/commit/43c8b739731cebf30e99ef229bf104e029b4f63a))
+
 # [2.24.0](https://github.com/Sage/design-tokens/compare/v2.23.0...v2.24.0) (2022-04-25)
 
 
