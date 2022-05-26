@@ -1,3 +1,10 @@
+# [2.26.0](https://github.com/Sage/design-tokens/compare/v2.25.0...v2.26.0) (2022-05-26)
+
+
+### Features
+
+* **data:** correct token referencing for typography.drawer.paragraph.m, typography.link.text.l, typography.sidebar.paragraph. (all sizes) ([8020a62](https://github.com/Sage/design-tokens/commit/8020a62612bc71613ccf8d99dbe3e6626f2dbdbf))
+
 # [2.25.0](https://github.com/Sage/design-tokens/compare/v2.24.0...v2.25.0) (2022-04-27)
 
 
