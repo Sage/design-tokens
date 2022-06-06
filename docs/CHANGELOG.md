@@ -1,3 +1,10 @@
+# [2.27.0](https://github.com/Sage/design-tokens/compare/v2.26.0...v2.27.0) (2022-06-06)
+
+
+### Features
+
+* **data:** Remove meta data from base ([1769346](https://github.com/Sage/design-tokens/commit/17693462bb6168ff523ccee58546978fb8ef931a))
+
 # [2.26.0](https://github.com/Sage/design-tokens/compare/v2.25.0...v2.26.0) (2022-05-26)
 
 
