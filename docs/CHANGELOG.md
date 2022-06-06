@@ -1,3 +1,10 @@
+# [2.28.0](https://github.com/Sage/design-tokens/compare/v2.27.0...v2.28.0) (2022-06-06)
+
+
+### Features
+
+* **data:** Remove metadata from no-theme and figma-only token sets ([ec0e8a4](https://github.com/Sage/design-tokens/commit/ec0e8a46a376fea3fd4ff1bbfd31161a4a073401))
+
 # [2.27.0](https://github.com/Sage/design-tokens/compare/v2.26.0...v2.27.0) (2022-06-06)
 
 
