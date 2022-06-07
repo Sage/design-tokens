@@ -1,3 +1,10 @@
+# [2.30.0](https://github.com/Sage/design-tokens/compare/v2.29.0...v2.30.0) (2022-06-07)
+
+
+### Features
+
+* **data:** Correct lineheight value of typography.drawer.paragraph.m ([b876b63](https://github.com/Sage/design-tokens/commit/b876b63270553c3238d10db2787197a2c34b680d))
+
 # [2.29.0](https://github.com/Sage/design-tokens/compare/v2.28.0...v2.29.0) (2022-06-06)
 
 
