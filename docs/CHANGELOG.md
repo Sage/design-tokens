@@ -1,3 +1,10 @@
+# [2.31.0](https://github.com/Sage/design-tokens/compare/v2.30.0...v2.31.0) (2022-06-22)
+
+
+### Features
+
+* **data:** Small font size, not recommended for use, as not accessible ([36b1499](https://github.com/Sage/design-tokens/commit/36b149977f9b0af8f55dad90258a2050a32c0445))
+
 # [2.30.0](https://github.com/Sage/design-tokens/compare/v2.29.0...v2.30.0) (2022-06-07)
 
 
