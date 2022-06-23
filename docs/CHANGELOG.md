@@ -1,3 +1,10 @@
+# [2.34.0](https://github.com/Sage/design-tokens/compare/v2.33.0...v2.34.0) (2022-06-23)
+
+
+### Features
+
+* **data:** 1. Add warning description to reference (origin) colors. Add warning description to XS Profile typography tokens. Re-order color tokens. ([467cb96](https://github.com/Sage/design-tokens/commit/467cb962add669ae758f1c2da68aae7050027a70))
+
 # [2.33.0](https://github.com/Sage/design-tokens/compare/v2.32.0...v2.33.0) (2022-06-23)
 
 
