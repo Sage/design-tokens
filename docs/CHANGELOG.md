@@ -1,3 +1,10 @@
+# [2.32.0](https://github.com/Sage/design-tokens/compare/v2.31.0...v2.32.0) (2022-06-23)
+
+
+### Features
+
+* **data:** Add colors.semantic.negative tokens 350 and 450, used for red Link on dark bg (eg for links on negative numbers) ([426db48](https://github.com/Sage/design-tokens/commit/426db4827fde949f815b0368eac077bfcc58beee))
+
 # [2.31.0](https://github.com/Sage/design-tokens/compare/v2.30.0...v2.31.0) (2022-06-22)
 
 
