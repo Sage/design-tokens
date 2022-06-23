@@ -1,3 +1,10 @@
+# [2.33.0](https://github.com/Sage/design-tokens/compare/v2.32.0...v2.33.0) (2022-06-23)
+
+
+### Features
+
+* **data:** Update typography.datePicker.calendar.date.m value from 700 to 500 ([e2b3a4e](https://github.com/Sage/design-tokens/commit/e2b3a4e3c88a77bcdcf6e11a6621634c12ca5cf8))
+
 # [2.32.0](https://github.com/Sage/design-tokens/compare/v2.31.0...v2.32.0) (2022-06-23)
 
 
