@@ -1,3 +1,10 @@
+# [2.36.0](https://github.com/Sage/design-tokens/compare/v2.35.0...v2.36.0) (2022-06-23)
+
+
+### Features
+
+* **data:** Remove XS Profile tokens (use S instead if needed). Remove typography search.label.m (use formField.inputText.m instead). ([71b9aa1](https://github.com/Sage/design-tokens/commit/71b9aa1d63125348ad4596822cc8079033ca3766))
+
 # [2.35.0](https://github.com/Sage/design-tokens/compare/v2.34.0...v2.35.0) (2022-06-23)
 
 
