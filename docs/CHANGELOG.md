@@ -1,3 +1,10 @@
+# [2.35.0](https://github.com/Sage/design-tokens/compare/v2.34.0...v2.35.0) (2022-06-23)
+
+
+### Features
+
+* **data:** Add warning description to logo color ([ce74bb8](https://github.com/Sage/design-tokens/commit/ce74bb87b568e80c735e9183e9bdbc9cb4da4319))
+
 # [2.34.0](https://github.com/Sage/design-tokens/compare/v2.33.0...v2.34.0) (2022-06-23)
 
 
