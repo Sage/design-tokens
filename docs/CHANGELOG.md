@@ -1,3 +1,10 @@
+# [2.37.0](https://github.com/Sage/design-tokens/compare/v2.36.0...v2.37.0) (2022-06-24)
+
+
+### Features
+
+* **data:** Changing calendar popover weight from bold to medium. ([50862d5](https://github.com/Sage/design-tokens/commit/50862d5935f76fbc8bd9609cb9242150f5a3eac9))
+
 # [2.36.0](https://github.com/Sage/design-tokens/compare/v2.35.0...v2.36.0) (2022-06-23)
 
 
