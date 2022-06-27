@@ -1,3 +1,15 @@
+## [2.37.1](https://github.com/Sage/design-tokens/compare/v2.37.0...v2.37.1) (2022-06-27)
+
+
+### Bug Fixes
+
+* add back zeroheight deployment ([ebcc8be](https://github.com/Sage/design-tokens/commit/ebcc8be011571fb770da3fcd1186b5e3fa821ef9))
+
+
+### Reverts
+
+* Revert "fix: remove legacy doc upload and trigger new version" ([614b448](https://github.com/Sage/design-tokens/commit/614b448e7fd3bc3f471a128dd60643bf0512cad4))
+
 # [2.37.0](https://github.com/Sage/design-tokens/compare/v2.36.0...v2.37.0) (2022-06-24)
 
 
