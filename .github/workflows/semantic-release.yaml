@@ -47,7 +47,7 @@ jobs:
       - name: Upload documentation via ftp
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: "145.14.151.211"
+          server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: "./dist/docs/"
