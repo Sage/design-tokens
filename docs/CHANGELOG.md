@@ -1,3 +1,11 @@
+# [2.38.0](https://github.com/Sage/design-tokens/compare/v2.37.1...v2.38.0) (2022-06-28)
+
+
+### Features
+
+* **data:** Add colors.utility.major.450 token for use in dark_alt table headers ([d703323](https://github.com/Sage/design-tokens/commit/d70332397486f54a62b1e8785ea9044c7406920d))
+* **data:** Change value of colors.utility.major.450 token to reference origin colour ([4e021fb](https://github.com/Sage/design-tokens/commit/4e021fb4436cd39337df96edbd773ef8f4893f43))
+
 ## [2.37.1](https://github.com/Sage/design-tokens/compare/v2.37.0...v2.37.1) (2022-06-27)
 
 
