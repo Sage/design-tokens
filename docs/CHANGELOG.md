@@ -1,3 +1,10 @@
+# [2.39.0](https://github.com/Sage/design-tokens/compare/v2.38.0...v2.39.0) (2022-07-13)
+
+
+### Features
+
+* **data:** edit description on typography.link.text.s ([6e3ed51](https://github.com/Sage/design-tokens/commit/6e3ed51d6da148923c26d937aebcdf475ff0aba7))
+
 # [2.38.0](https://github.com/Sage/design-tokens/compare/v2.37.1...v2.38.0) (2022-06-28)
 
 
