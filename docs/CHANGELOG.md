@@ -1,3 +1,10 @@
+# [2.40.0](https://github.com/Sage/design-tokens/compare/v2.39.0...v2.40.0) (2022-07-13)
+
+
+### Features
+
+* **data:** Add new token typography.cardSelect.footer.m for footer text in Card select component ([e61cb2d](https://github.com/Sage/design-tokens/commit/e61cb2d92428de9ceadef1849c6bd21d775d7a7c))
+
 # [2.39.0](https://github.com/Sage/design-tokens/compare/v2.38.0...v2.39.0) (2022-07-13)
 
 
