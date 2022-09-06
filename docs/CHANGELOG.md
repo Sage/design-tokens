@@ -1,3 +1,18 @@
+# [2.41.0](https://github.com/Sage/design-tokens/compare/v2.40.0...v2.41.0) (2022-09-06)
+
+
+### Features
+
+* **data:** Add negative spacing tokens -010 and -025 for use in button bars ([a2c7e66](https://github.com/Sage/design-tokens/commit/a2c7e664338c531e56882467f04b467a0b326fd6))
+* **data:** Add spacing tokens for -4px (050) and -6px (075) - used in Pills ([ddedd49](https://github.com/Sage/design-tokens/commit/ddedd494d8657af8877d5310e97396e0b3921fef))
+* **data:** adding 3px padding token needed for gap on dropdown menus ([09b9463](https://github.com/Sage/design-tokens/commit/09b9463eeea54d78034abd940322c4ae23976375))
+* **data:** adding new token for subtitle on dialogs ([3392509](https://github.com/Sage/design-tokens/commit/3392509d029c542c39b87a27d168728b1ebbae85))
+* **data:** fixing dupe negative token issue ([cc71e3b](https://github.com/Sage/design-tokens/commit/cc71e3bad1d93d0896d68dba038bc5bfd5a5d903))
+* **data:** reaorder negative spacing tokens in json ([7edfb64](https://github.com/Sage/design-tokens/commit/7edfb642f268030874f60cfcefa3d886023767e8))
+* **data:** removing redundant 3px spacing token ([e5ca707](https://github.com/Sage/design-tokens/commit/e5ca7074e8b55e9ff230381cc278b27e093a8d92))
+* **data:** trying to fix dupe token name for -010 spacing token ([a6c8423](https://github.com/Sage/design-tokens/commit/a6c842381b6419794978847fe48e2386436887f1))
+* **data:** Update error reds to be accessible. ([4876183](https://github.com/Sage/design-tokens/commit/48761830a0f87ec0c768d02405045b8a0519cc4d))
+
 # [2.40.0](https://github.com/Sage/design-tokens/compare/v2.39.0...v2.40.0) (2022-07-13)
 
 
