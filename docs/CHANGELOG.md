@@ -1,3 +1,10 @@
+# [2.42.0](https://github.com/Sage/design-tokens/compare/v2.41.0...v2.42.0) (2022-09-23)
+
+
+### Features
+
+* **data:** fixing the name of the subtitle token to be consistent with other tokens ([c171ef9](https://github.com/Sage/design-tokens/commit/c171ef91da4de0185b2526d72399da9af1700039))
+
 # [2.41.0](https://github.com/Sage/design-tokens/compare/v2.40.0...v2.41.0) (2022-09-06)
 
 
