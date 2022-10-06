@@ -1,3 +1,10 @@
+# [2.44.0](https://github.com/Sage/design-tokens/compare/v2.43.0...v2.44.0) (2022-10-06)
+
+
+### Features
+
+* **data:** add small title size for accordion, and change weight for all titles to 500 ([4e20951](https://github.com/Sage/design-tokens/commit/4e209519bac7e292926bcc65e4aea4c608a50054))
+
 # [2.43.0](https://github.com/Sage/design-tokens/compare/v2.42.0...v2.43.0) (2022-10-06)
 
 
