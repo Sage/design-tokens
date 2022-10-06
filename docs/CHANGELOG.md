@@ -1,3 +1,10 @@
+# [2.43.0](https://github.com/Sage/design-tokens/compare/v2.42.0...v2.43.0) (2022-10-06)
+
+
+### Features
+
+* **data:** Correct the $lineHeights token consumed by typography.profile.name.s , typography.profile.emailLink.s, typography.profile.emailText.s Before: $lineHeights.300 (=100%), After: $lineHeights.400 (=125%). ([caa9eec](https://github.com/Sage/design-tokens/commit/caa9eec3b6a36c3889516361abfada157cd8ecc5))
+
 # [2.42.0](https://github.com/Sage/design-tokens/compare/v2.41.0...v2.42.0) (2022-09-23)
 
 
