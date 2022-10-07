@@ -1,3 +1,11 @@
+# [2.45.0](https://github.com/Sage/design-tokens/compare/v2.44.0...v2.45.0) (2022-10-07)
+
+
+### Features
+
+* **data:** add 2 new typography tokens to be consumed by the breadcrumb component (for the slash-separator and the current page text). ([42c1164](https://github.com/Sage/design-tokens/commit/42c1164e5de3739af9e3c9b09db013466d1b09f0))
+* **data:** Tidy up the new breadcrumb tokens category ([a788a35](https://github.com/Sage/design-tokens/commit/a788a35913411c8eb6e5bb3764a32ffc5e244518))
+
 # [2.44.0](https://github.com/Sage/design-tokens/compare/v2.43.0...v2.44.0) (2022-10-06)
 
 
