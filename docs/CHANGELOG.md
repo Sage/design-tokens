@@ -1,3 +1,10 @@
+# [2.46.0](https://github.com/Sage/design-tokens/compare/v2.45.0...v2.46.0) (2022-10-11)
+
+
+### Features
+
+* **data:** add small typography tokens for small accordion variant ([3e71140](https://github.com/Sage/design-tokens/commit/3e71140ef4cb676c293a44ea1e9973d649d86751))
+
 # [2.45.0](https://github.com/Sage/design-tokens/compare/v2.44.0...v2.45.0) (2022-10-07)
 
 
