@@ -1,3 +1,10 @@
+# [2.47.0](https://github.com/Sage/design-tokens/compare/v2.46.0...v2.47.0) (2022-10-13)
+
+
+### Features
+
+* **data:** DS TEST for corner radius. DO NOT USE ([3279b93](https://github.com/Sage/design-tokens/commit/3279b9328f5cf37139dda3b36551b75758649cb8))
+
 # [2.46.0](https://github.com/Sage/design-tokens/compare/v2.45.0...v2.46.0) (2022-10-11)
 
 
