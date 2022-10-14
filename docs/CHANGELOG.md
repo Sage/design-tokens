@@ -1,3 +1,10 @@
+# [2.48.0](https://github.com/Sage/design-tokens/compare/v2.47.0...v2.48.0) (2022-10-14)
+
+
+### Features
+
+* **data:** change Segment title font size from 12 to 14px ([4485c6e](https://github.com/Sage/design-tokens/commit/4485c6efef7939b8c4521368d434a6ce241c46fe))
+
 # [2.47.0](https://github.com/Sage/design-tokens/compare/v2.46.0...v2.47.0) (2022-10-13)
 
 
