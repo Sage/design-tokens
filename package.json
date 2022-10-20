@@ -23,7 +23,7 @@
     "build": "node ./scripts/build.js",
     "prebuild": "node ./scripts/prebuild.js",
     "postbuild": "node ./scripts/postbuild.js",
-    "dev:docs": "npx chokidar-cli \"./scripts/*\" \"./templates/**/*\" -c \"node ./scripts/tokens-documentation.js\"",
+    "dev:docs": "npx nodemon \"./scripts/*\" \"./templates/**/*\" -c \"node ./scripts/tokens-documentation.js\"",
     "prepublishOnly": "node ./scripts/bump-main-package-version.js",
     "lint": "eslint .",
     "format": "eslint --fix ."
@@ -61,6 +61,6 @@
   },
   "dependencies": {
     "@semantic-release/commit-analyzer": "^9.0.2",
-    "chokidar-cli": "^3.0.0"
+    "nodemon": "^2.0.20"
   }
 }
