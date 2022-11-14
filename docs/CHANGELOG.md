@@ -1,3 +1,10 @@
+# [2.49.0](https://github.com/Sage/design-tokens/compare/v2.48.0...v2.49.0) (2022-11-14)
+
+
+### Features
+
+* **data:** Add yin.100 token. Add utility.yin.100 token. ([74b1dba](https://github.com/Sage/design-tokens/commit/74b1dba553600cdb4ab027df57ef6040e49c7d66))
+
 # [2.48.0](https://github.com/Sage/design-tokens/compare/v2.47.0...v2.48.0) (2022-10-14)
 
 
