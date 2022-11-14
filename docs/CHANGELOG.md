@@ -1,3 +1,10 @@
+# [2.50.0](https://github.com/Sage/design-tokens/compare/v2.49.0...v2.50.0) (2022-11-14)
+
+
+### Features
+
+* **data:** deleting out temporary roundness token sets ([8de7361](https://github.com/Sage/design-tokens/commit/8de7361f11f0ef80612b813ea922f06508bf5d25))
+
 # [2.49.0](https://github.com/Sage/design-tokens/compare/v2.48.0...v2.49.0) (2022-11-14)
 
 
