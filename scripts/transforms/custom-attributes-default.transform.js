@@ -7,36 +7,37 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 
 module.exports = {
-  name: 'custom/attributes/default',
-  type: 'attribute',
-  transformer (token) {
-    const elements = [...token.path]
+  name: "custom/attributes/default",
+  type: "attribute",
+  transformer(token) {
+    const elements = [...token.path];
 
     if (elements.length === 3) {
-      const [theme, category, variant] = elements
-      return { theme, category, variant }
+      const [theme, category, variant] = elements;
+      return { theme, category, variant };
     }
 
     if (elements.length === 4) {
-      const [theme, category, name, variant] = elements
-      return { theme, category, name, variant }
+      const [theme, category, name, variant] = elements;
+      return { theme, category, name, variant };
     }
 
     if (elements.length === 5) {
-      const [theme, category, group, name, variant] = elements
-      return { theme, category, group, name, variant }
+      const [theme, category, group, name, variant] = elements;
+      return { theme, category, group, name, variant };
     }
 
     if (elements.length === 6) {
-      const [theme, category, group, name, subgroup, variant] = elements
-      return { theme, category, group, name, subgroup, variant }
+      const [theme, category, group, name, subgroup, variant] = elements;
+      return { theme, category, group, name, subgroup, variant };
     }
 
     if (elements.length === 7) {
-      const [theme, category, group, name, subgroup, element, variant] = elements
-      return { theme, category, group, name, subgroup, element, variant }
+      const [theme, category, group, name, subgroup, element, variant] =
+        elements;
+      return { theme, category, group, name, subgroup, element, variant };
     }
 
-    return { }
-  }
-}
+    return {};
+  },
+};

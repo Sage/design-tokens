@@ -6,4 +6,4 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  * @param input
  * @returns {*|*[]}
  */
-module.exports = (input) => Array.isArray(input) ? input : [input]
+module.exports = (input) => (Array.isArray(input) ? input : [input]);

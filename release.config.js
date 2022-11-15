@@ -1,42 +1,42 @@
 /*
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
-const DIST = 'dist'
-const CHANGELOG = 'docs/CHANGELOG.md'
-const PACKAGE_JSON = 'package.json'
+const DIST = "dist";
+const CHANGELOG = "docs/CHANGELOG.md";
+const PACKAGE_JSON = "package.json";
 
 module.exports = {
-  branches: ['master'],
+  branches: ["master"],
   plugins: [
-    '@semantic-release/commit-analyzer',
-    '@semantic-release/release-notes-generator',
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
     [
-      '@semantic-release/changelog',
+      "@semantic-release/changelog",
       {
-        changelogFile: CHANGELOG
-      }
+        changelogFile: CHANGELOG,
+      },
     ],
     [
-      '@semantic-release/npm',
+      "@semantic-release/npm",
       {
         changelogFile: CHANGELOG,
         pkgRoot: DIST,
-        tarballDir: DIST
-      }
+        tarballDir: DIST,
+      },
     ],
     [
-      '@semantic-release/git',
+      "@semantic-release/git",
       {
-        assets: [CHANGELOG, PACKAGE_JSON]
-      }
+        assets: [CHANGELOG, PACKAGE_JSON],
+      },
     ],
     [
-      '@semantic-release/github',
+      "@semantic-release/github",
       {
-        assets: `${DIST}/*.tgz`
-      }
-    ]
+        assets: `${DIST}/*.tgz`,
+      },
+    ],
   ],
   dryRun: false,
-  debug: false
-}
+  debug: false,
+};

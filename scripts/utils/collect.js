@@ -16,24 +16,24 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  * @returns {*|*[]}
  */
 module.exports = (object, callback = () => true) => {
-  const output = []
+  const output = [];
 
   const walk = (walkObject) => {
     if (callback(walkObject)) {
-      output.push(walkObject)
-      return
+      output.push(walkObject);
+      return;
     }
 
     if (walkObject instanceof Object) {
-      Object.values(walkObject).forEach((childObj) => walk(childObj))
-      return
+      Object.values(walkObject).forEach((childObj) => walk(childObj));
+      return;
     }
 
     if (Array.isArray(walkObject)) {
-      walkObject.forEach(childObj => walk(childObj))
+      walkObject.forEach((childObj) => walk(childObj));
     }
-  }
+  };
 
-  walk(object)
-  return output
-}
+  walk(object);
+  return output;
+};

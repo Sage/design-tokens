@@ -14,22 +14,20 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
 module.exports = function (tokensData) {
   const walk = (item) => {
     switch (typeof item) {
-      case 'string':
-      case 'number':
-        return { value: item }
-      case 'object': {
-        if ('value' in item) {
-          return item
+      case "string":
+      case "number":
+        return { value: item };
+      case "object": {
+        if ("value" in item) {
+          return item;
         }
 
-        const output = Object
-          .keys(item)
-          .map((key) => [key, walk(item[key])])
+        const output = Object.keys(item).map((key) => [key, walk(item[key])]);
 
-        return Object.fromEntries(output)
+        return Object.fromEntries(output);
       }
     }
-  }
+  };
 
-  return walk(tokensData)
-}
+  return walk(tokensData);
+};

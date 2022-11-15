@@ -26,7 +26,7 @@
     "dev:docs": "npx chokidar-cli \"./scripts/*\" \"./templates/**/*\" -c \"node ./scripts/tokens-documentation.js\"",
     "prepublishOnly": "node ./scripts/bump-main-package-version.js",
     "lint": "eslint .",
-    "format": "eslint --fix ."
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
@@ -37,11 +37,8 @@
     "@types/glob": "^7.1.4",
     "dotenv": "^16.0.0",
     "eslint": "^7.23.0",
-    "eslint-config-standard": "^16.0.2",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-header": "^3.1.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
     "fantasticon": "^1.2.3",
     "figma-js": "^1.14.0",
     "fs-extra": "^9.1.0",
