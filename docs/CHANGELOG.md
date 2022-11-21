@@ -1,3 +1,10 @@
+# [2.51.0](https://github.com/Sage/design-tokens/compare/v2.50.0...v2.51.0) (2022-11-21)
+
+
+### Features
+
+* **data:** Delete no-theme token set as it's out of date and not used by developers. ([080ee86](https://github.com/Sage/design-tokens/commit/080ee869ac9b8bd3c700c40e7f2139fd08f8277a))
+
 # [2.50.0](https://github.com/Sage/design-tokens/compare/v2.49.0...v2.50.0) (2022-11-14)
 
 
