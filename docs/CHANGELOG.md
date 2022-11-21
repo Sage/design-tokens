@@ -1,3 +1,10 @@
+# [2.52.0](https://github.com/Sage/design-tokens/compare/v2.51.0...v2.52.0) (2022-11-21)
+
+
+### Features
+
+* **data:** adding border radius for rounded corner work ([0e0ab60](https://github.com/Sage/design-tokens/commit/0e0ab60be345f283c5c6db1bba5302cad29a99f2))
+
 # [2.51.0](https://github.com/Sage/design-tokens/compare/v2.50.0...v2.51.0) (2022-11-21)
 
 
