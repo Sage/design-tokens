@@ -1,3 +1,10 @@
+# [2.53.0](https://github.com/Sage/design-tokens/compare/v2.52.0...v2.53.0) (2022-11-23)
+
+
+### Features
+
+* **data:** add border-radius descriptions and remove unused 300 token. ([0b6f454](https://github.com/Sage/design-tokens/commit/0b6f454df8c4fa680ee334405e30a61e4afebc45))
+
 # [2.52.0](https://github.com/Sage/design-tokens/compare/v2.51.0...v2.52.0) (2022-11-21)
 
 
