@@ -1,3 +1,10 @@
+# [2.54.0](https://github.com/Sage/design-tokens/compare/v2.53.0...v2.54.0) (2022-11-24)
+
+
+### Features
+
+* **data:** Create new ORIGIN token set for extended color palette ([a949784](https://github.com/Sage/design-tokens/commit/a949784e2f860c179958fd61b6e7007ebe247b14))
+
 # [2.53.0](https://github.com/Sage/design-tokens/compare/v2.52.0...v2.53.0) (2022-11-23)
 
 
