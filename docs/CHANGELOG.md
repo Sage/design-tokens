@@ -1,3 +1,10 @@
+# [2.56.0](https://github.com/Sage/design-tokens/compare/v2.55.0...v2.56.0) (2022-11-24)
+
+
+### Features
+
+* **data:** Remove unused blacks and whites from color categories ([fe8e973](https://github.com/Sage/design-tokens/commit/fe8e973508bd35dbf6073a5b104bd90f6bc08b42))
+
 # [2.55.0](https://github.com/Sage/design-tokens/compare/v2.54.0...v2.55.0) (2022-11-24)
 
 
