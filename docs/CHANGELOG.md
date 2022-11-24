@@ -1,3 +1,10 @@
+# [2.55.0](https://github.com/Sage/design-tokens/compare/v2.54.0...v2.55.0) (2022-11-24)
+
+
+### Features
+
+* **data:** remove figma only token set as not needed. ([aad8e68](https://github.com/Sage/design-tokens/commit/aad8e688856db0c573463fcf2047e2194a65419e))
+
 # [2.54.0](https://github.com/Sage/design-tokens/compare/v2.53.0...v2.54.0) (2022-11-24)
 
 
