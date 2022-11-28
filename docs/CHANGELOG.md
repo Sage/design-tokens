@@ -1,3 +1,59 @@
+# [2.56.0](https://github.com/Sage/design-tokens/compare/v2.55.0...v2.56.0) (2022-11-24)
+
+
+### Features
+
+* **data:** Remove unused blacks and whites from color categories ([fe8e973](https://github.com/Sage/design-tokens/commit/fe8e973508bd35dbf6073a5b104bd90f6bc08b42))
+
+# [2.55.0](https://github.com/Sage/design-tokens/compare/v2.54.0...v2.55.0) (2022-11-24)
+
+
+### Features
+
+* **data:** remove figma only token set as not needed. ([aad8e68](https://github.com/Sage/design-tokens/commit/aad8e688856db0c573463fcf2047e2194a65419e))
+
+# [2.54.0](https://github.com/Sage/design-tokens/compare/v2.53.0...v2.54.0) (2022-11-24)
+
+
+### Features
+
+* **data:** Create new ORIGIN token set for extended color palette ([a949784](https://github.com/Sage/design-tokens/commit/a949784e2f860c179958fd61b6e7007ebe247b14))
+
+# [2.53.0](https://github.com/Sage/design-tokens/compare/v2.52.0...v2.53.0) (2022-11-23)
+
+
+### Features
+
+* **data:** add border-radius descriptions and remove unused 300 token. ([0b6f454](https://github.com/Sage/design-tokens/commit/0b6f454df8c4fa680ee334405e30a61e4afebc45))
+
+# [2.52.0](https://github.com/Sage/design-tokens/compare/v2.51.0...v2.52.0) (2022-11-21)
+
+
+### Features
+
+* **data:** adding border radius for rounded corner work ([0e0ab60](https://github.com/Sage/design-tokens/commit/0e0ab60be345f283c5c6db1bba5302cad29a99f2))
+
+# [2.51.0](https://github.com/Sage/design-tokens/compare/v2.50.0...v2.51.0) (2022-11-21)
+
+
+### Features
+
+* **data:** Delete no-theme token set as it's out of date and not used by developers. ([080ee86](https://github.com/Sage/design-tokens/commit/080ee869ac9b8bd3c700c40e7f2139fd08f8277a))
+
+# [2.50.0](https://github.com/Sage/design-tokens/compare/v2.49.0...v2.50.0) (2022-11-14)
+
+
+### Features
+
+* **data:** deleting out temporary roundness token sets ([8de7361](https://github.com/Sage/design-tokens/commit/8de7361f11f0ef80612b813ea922f06508bf5d25))
+
+# [2.49.0](https://github.com/Sage/design-tokens/compare/v2.48.0...v2.49.0) (2022-11-14)
+
+
+### Features
+
+* **data:** Add yin.100 token. Add utility.yin.100 token. ([74b1dba](https://github.com/Sage/design-tokens/commit/74b1dba553600cdb4ab027df57ef6040e49c7d66))
+
 # [2.48.0](https://github.com/Sage/design-tokens/compare/v2.47.0...v2.48.0) (2022-10-14)
 
 
