@@ -1,3 +1,10 @@
+# [2.57.0](https://github.com/Sage/design-tokens/compare/v2.56.0...v2.57.0) (2022-11-29)
+
+
+### Features
+
+* **data:** Rename "origin" parent folder to "colors" ([02147e0](https://github.com/Sage/design-tokens/commit/02147e0c69eac2769daeb05257e1a88e80553c3b))
+
 # [2.56.0](https://github.com/Sage/design-tokens/compare/v2.55.0...v2.56.0) (2022-11-24)
 
 
