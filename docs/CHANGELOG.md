@@ -1,3 +1,10 @@
+# [2.59.0](https://github.com/Sage/design-tokens/compare/v2.58.0...v2.59.0) (2022-11-30)
+
+
+### Features
+
+* **data:** Final descriptions on border radius tokens ([b0bab57](https://github.com/Sage/design-tokens/commit/b0bab57df2a9eff92ea50f912c53e9a5303100da))
+
 # [2.58.0](https://github.com/Sage/design-tokens/compare/v2.57.0...v2.58.0) (2022-11-30)
 
 
