@@ -1,3 +1,10 @@
+# [2.58.0](https://github.com/Sage/design-tokens/compare/v2.57.0...v2.58.0) (2022-11-30)
+
+
+### Features
+
+* **data:** create text-specific tokens for PageState components, change subtitle height to 500 ([5d3a926](https://github.com/Sage/design-tokens/commit/5d3a926137533b43a7550feb0b132269a932db24))
+
 # [2.57.0](https://github.com/Sage/design-tokens/compare/v2.56.0...v2.57.0) (2022-11-29)
 
 
