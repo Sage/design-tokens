@@ -1,3 +1,24 @@
+# [2.59.0](https://github.com/Sage/design-tokens/compare/v2.58.0...v2.59.0) (2022-11-30)
+
+
+### Features
+
+* **data:** Final descriptions on border radius tokens ([b0bab57](https://github.com/Sage/design-tokens/commit/b0bab57df2a9eff92ea50f912c53e9a5303100da))
+
+# [2.58.0](https://github.com/Sage/design-tokens/compare/v2.57.0...v2.58.0) (2022-11-30)
+
+
+### Features
+
+* **data:** create text-specific tokens for PageState components, change subtitle height to 500 ([5d3a926](https://github.com/Sage/design-tokens/commit/5d3a926137533b43a7550feb0b132269a932db24))
+
+# [2.57.0](https://github.com/Sage/design-tokens/compare/v2.56.0...v2.57.0) (2022-11-29)
+
+
+### Features
+
+* **data:** Rename "origin" parent folder to "colors" ([02147e0](https://github.com/Sage/design-tokens/commit/02147e0c69eac2769daeb05257e1a88e80553c3b))
+
 # [2.56.0](https://github.com/Sage/design-tokens/compare/v2.55.0...v2.56.0) (2022-11-24)
 
 
