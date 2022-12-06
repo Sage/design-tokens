@@ -1,3 +1,10 @@
+# [2.60.0](https://github.com/Sage/design-tokens/compare/v2.59.0...v2.60.0) (2022-12-06)
+
+
+### Features
+
+* **data:** Add new tokens for left navigation ([a14c23c](https://github.com/Sage/design-tokens/commit/a14c23c5079d910143d6c04141137f9d16b0e118))
+
 # [2.59.0](https://github.com/Sage/design-tokens/compare/v2.58.0...v2.59.0) (2022-11-30)
 
 
