@@ -1,3 +1,10 @@
+# [2.61.0](https://github.com/Sage/design-tokens/compare/v2.60.0...v2.61.0) (2022-12-08)
+
+
+### Features
+
+* **data:** Update borderRadius token description. Pill now has 2px radius. ([c26d53d](https://github.com/Sage/design-tokens/commit/c26d53dcc0bd76acc3da57b4cad54e87d17ea393))
+
 # [2.60.0](https://github.com/Sage/design-tokens/compare/v2.59.0...v2.60.0) (2022-12-06)
 
 
