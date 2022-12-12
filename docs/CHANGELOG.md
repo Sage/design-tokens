@@ -1,3 +1,10 @@
+# [2.62.0](https://github.com/Sage/design-tokens/compare/v2.61.0...v2.62.0) (2022-12-12)
+
+
+### Features
+
+* **data:** Add a token spacing.175 (14px) ([0e5de1d](https://github.com/Sage/design-tokens/commit/0e5de1d39d1a82c4479d9110ff69b4ad7207188f))
+
 # [2.61.0](https://github.com/Sage/design-tokens/compare/v2.60.0...v2.61.0) (2022-12-08)
 
 
