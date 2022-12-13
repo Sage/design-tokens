@@ -1,3 +1,10 @@
+# [2.63.0](https://github.com/Sage/design-tokens/compare/v2.62.0...v2.63.0) (2022-12-13)
+
+
+### Features
+
+* **data:** updating left-nav tokens to be semantic and updating descriptions of border radius ([cfd7ad8](https://github.com/Sage/design-tokens/commit/cfd7ad8f106b33ee3c5b19e21059b04219569330))
+
 # [2.62.0](https://github.com/Sage/design-tokens/compare/v2.61.0...v2.62.0) (2022-12-12)
 
 
