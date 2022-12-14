@@ -1,3 +1,10 @@
+# [2.64.0](https://github.com/Sage/design-tokens/compare/v2.63.0...v2.64.0) (2022-12-14)
+
+
+### Features
+
+* **data:** update script for correct page name for font generation ([5b4a0b5](https://github.com/Sage/design-tokens/commit/5b4a0b52b77a6be42aab15812eb6da8d3b75469c))
+
 # [2.63.0](https://github.com/Sage/design-tokens/compare/v2.62.0...v2.63.0) (2022-12-13)
 
 
