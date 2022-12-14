@@ -1,3 +1,31 @@
+# [2.63.0](https://github.com/Sage/design-tokens/compare/v2.62.0...v2.63.0) (2022-12-13)
+
+
+### Features
+
+* **data:** updating left-nav tokens to be semantic and updating descriptions of border radius ([cfd7ad8](https://github.com/Sage/design-tokens/commit/cfd7ad8f106b33ee3c5b19e21059b04219569330))
+
+# [2.62.0](https://github.com/Sage/design-tokens/compare/v2.61.0...v2.62.0) (2022-12-12)
+
+
+### Features
+
+* **data:** Add a token spacing.175 (14px) ([0e5de1d](https://github.com/Sage/design-tokens/commit/0e5de1d39d1a82c4479d9110ff69b4ad7207188f))
+
+# [2.61.0](https://github.com/Sage/design-tokens/compare/v2.60.0...v2.61.0) (2022-12-08)
+
+
+### Features
+
+* **data:** Update borderRadius token description. Pill now has 2px radius. ([c26d53d](https://github.com/Sage/design-tokens/commit/c26d53dcc0bd76acc3da57b4cad54e87d17ea393))
+
+# [2.60.0](https://github.com/Sage/design-tokens/compare/v2.59.0...v2.60.0) (2022-12-06)
+
+
+### Features
+
+* **data:** Add new tokens for left navigation ([a14c23c](https://github.com/Sage/design-tokens/commit/a14c23c5079d910143d6c04141137f9d16b0e118))
+
 # [2.59.0](https://github.com/Sage/design-tokens/compare/v2.58.0...v2.59.0) (2022-11-30)
 
 
