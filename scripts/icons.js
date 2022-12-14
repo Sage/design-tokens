@@ -272,7 +272,7 @@ function createDocs (glyphsData, config) {
 })({
   personalAccessToken: process.env.FIGMA_ACCESS_TOKEN,
   fileId: process.env.FIGMA_FILE_ID,
-  pages: ['icons'],
+  pages: ['Icons'],
   multipleSets: false,
   distDir: './dist',
   svgDir: './dist/assets/icons/svg',
