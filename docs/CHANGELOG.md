@@ -1,3 +1,10 @@
+# [2.65.0](https://github.com/Sage/design-tokens/compare/v2.64.0...v2.65.0) (2022-12-21)
+
+
+### Features
+
+* **data:** Add new origin, dashboard-light, and dashboard-dark colour tokens ([2389376](https://github.com/Sage/design-tokens/commit/2389376e8036079f00cf8498af15110993f85e99))
+
 # [2.64.0](https://github.com/Sage/design-tokens/compare/v2.63.0...v2.64.0) (2022-12-14)
 
 
