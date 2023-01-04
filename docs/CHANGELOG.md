@@ -1,3 +1,17 @@
+# [3.0.0](https://github.com/Sage/design-tokens/compare/v2.65.0...v3.0.0) (2023-01-04)
+
+
+### Features
+
+* **data:** Rename evolutive to progressive and re-order code ([832749f](https://github.com/Sage/design-tokens/commit/832749fa3ad9ead7041dc4d76af45f5461db67a1))
+* **data:** Rename evolutive to progressive, reorder code ([4fc2b62](https://github.com/Sage/design-tokens/commit/4fc2b6274b7fd63d53ac2112a8ebc35d3bfab6c7))
+
+
+### BREAKING CHANGES
+
+* **data:** renames evolutive to progressive
+* **data:** renames evolutive to progressive
+
 # [2.65.0](https://github.com/Sage/design-tokens/compare/v2.64.0...v2.65.0) (2022-12-21)
 
 
