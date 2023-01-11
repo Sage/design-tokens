@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/Sage/design-tokens/compare/v3.0.0...v3.1.0) (2023-01-11)
+
+
+### Features
+
+* **data:** Add theme "DS components" ([ddd3165](https://github.com/Sage/design-tokens/commit/ddd3165c4e0bb07fd7013447250e582bcce174f3))
+
 # [3.0.0](https://github.com/Sage/design-tokens/compare/v2.65.0...v3.0.0) (2023-01-04)
 
 
