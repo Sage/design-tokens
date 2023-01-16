@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/Sage/design-tokens/compare/v3.1.0...v3.2.0) (2023-01-16)
+
+
+### Features
+
+* **data:** Add 225 sizing token (For L size Loader) ([9a1a857](https://github.com/Sage/design-tokens/commit/9a1a857afe9ea523f669e084d8aaccf2db8650f0))
+
 # [3.1.0](https://github.com/Sage/design-tokens/compare/v3.0.0...v3.1.0) (2023-01-11)
 
 
