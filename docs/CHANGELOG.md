@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/Sage/design-tokens/compare/v3.2.0...v4.0.0) (2023-01-18)
+
+
+### Features
+
+* **data:** update tokens object to remove dashboard-colors property and rename dashboard themes ([7b8a5f6](https://github.com/Sage/design-tokens/commit/7b8a5f62dd5e6a4cebe1c6ec026eda84e40065cd))
+
+
+### BREAKING CHANGES
+
+* **data:** The `dasboard-colors` property has been removed, the token values held within it have been moved to the root of the dashboard themes. The `DS dashboard-darkMode` theme is renamed to `DS dash-dark`. The `DS dashboard-lightMode` theme is renamed to `DS dash-light`. Adds token `origin-colors (reference only).yang.010. 5)`. Change values of `dashboard-darkmode.background` tokens
+
 # [3.2.0](https://github.com/Sage/design-tokens/compare/v3.1.0...v3.2.0) (2023-01-16)
 
 
