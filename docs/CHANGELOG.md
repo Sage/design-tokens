@@ -1,3 +1,10 @@
+# [4.2.0](https://github.com/Sage/design-tokens/compare/v4.1.0...v4.2.0) (2023-01-18)
+
+
+### Features
+
+* **data:** reorder origin yang tokens in the code ([013c43f](https://github.com/Sage/design-tokens/commit/013c43f89af0bb81d6bfdfd3e2c92f0609bb5905))
+
 # [4.1.0](https://github.com/Sage/design-tokens/compare/v4.0.0...v4.1.0) (2023-01-18)
 
 
