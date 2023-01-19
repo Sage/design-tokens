@@ -1,3 +1,10 @@
+# [4.4.0](https://github.com/Sage/design-tokens/compare/v4.3.0...v4.4.0) (2023-01-19)
+
+
+### Features
+
+* **data:** Update border radius token descriptions. ([c79b03f](https://github.com/Sage/design-tokens/commit/c79b03f9772c3d98311c3131481ff04f991a4bff))
+
 # [4.3.0](https://github.com/Sage/design-tokens/compare/v4.2.0...v4.3.0) (2023-01-19)
 
 
