@@ -1,3 +1,10 @@
+# [4.3.0](https://github.com/Sage/design-tokens/compare/v4.2.0...v4.3.0) (2023-01-19)
+
+
+### Features
+
+* **data:** Add tokens for neutral pill and info pill on dark background. ([2414e73](https://github.com/Sage/design-tokens/commit/2414e73b273a8b239c36eef0c4a8ec47a96db7c1))
+
 # [4.2.0](https://github.com/Sage/design-tokens/compare/v4.1.0...v4.2.0) (2023-01-18)
 
 
