@@ -1,3 +1,10 @@
+# [4.5.0](https://github.com/Sage/design-tokens/compare/v4.4.0...v4.5.0) (2023-01-31)
+
+
+### Features
+
+* **data:** Change value of comparative.neutral.fill-1 and comparative.neutral.fill-2 tokens (now both a shade darker) ([dc32f4a](https://github.com/Sage/design-tokens/commit/dc32f4a919479083a467656fe364fdb735776bfb))
+
 # [4.4.0](https://github.com/Sage/design-tokens/compare/v4.3.0...v4.4.0) (2023-01-19)
 
 
