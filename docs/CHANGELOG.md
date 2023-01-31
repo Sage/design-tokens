@@ -1,3 +1,10 @@
+# [4.6.0](https://github.com/Sage/design-tokens/compare/v4.5.0...v4.6.0) (2023-01-31)
+
+
+### Features
+
+* **data:** Add new color tokens for accessible focus black&white borders ([16e0638](https://github.com/Sage/design-tokens/commit/16e063849ea2de7d7b776829036b8e696f8fe2fc))
+
 # [4.5.0](https://github.com/Sage/design-tokens/compare/v4.4.0...v4.5.0) (2023-01-31)
 
 
