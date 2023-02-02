@@ -1,3 +1,10 @@
+# [4.8.0](https://github.com/Sage/design-tokens/compare/v4.7.0...v4.8.0) (2023-02-02)
+
+
+### Features
+
+* **data:** Synch Figma styles with tokens ([5202a76](https://github.com/Sage/design-tokens/commit/5202a76c9343ed0266cb777402e5755ec2c3d069))
+
 # [4.7.0](https://github.com/Sage/design-tokens/compare/v4.6.0...v4.7.0) (2023-02-02)
 
 
