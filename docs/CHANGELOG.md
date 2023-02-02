@@ -1,3 +1,10 @@
+# [4.7.0](https://github.com/Sage/design-tokens/compare/v4.6.0...v4.7.0) (2023-02-02)
+
+
+### Features
+
+* **data:** Add typography tokens for new tileSubscription. ([86b7934](https://github.com/Sage/design-tokens/commit/86b79347615356900b2115800d36e0c42ea69586))
+
 # [4.6.0](https://github.com/Sage/design-tokens/compare/v4.5.0...v4.6.0) (2023-01-31)
 
 
