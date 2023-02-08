@@ -1,3 +1,85 @@
+# [4.8.0](https://github.com/Sage/design-tokens/compare/v4.7.0...v4.8.0) (2023-02-02)
+
+
+### Features
+
+* **data:** Synch Figma styles with tokens ([5202a76](https://github.com/Sage/design-tokens/commit/5202a76c9343ed0266cb777402e5755ec2c3d069))
+
+# [4.7.0](https://github.com/Sage/design-tokens/compare/v4.6.0...v4.7.0) (2023-02-02)
+
+
+### Features
+
+* **data:** Add typography tokens for new tileSubscription. ([86b7934](https://github.com/Sage/design-tokens/commit/86b79347615356900b2115800d36e0c42ea69586))
+
+# [4.6.0](https://github.com/Sage/design-tokens/compare/v4.5.0...v4.6.0) (2023-01-31)
+
+
+### Features
+
+* **data:** Add new color tokens for accessible focus black&white borders ([16e0638](https://github.com/Sage/design-tokens/commit/16e063849ea2de7d7b776829036b8e696f8fe2fc))
+
+# [4.5.0](https://github.com/Sage/design-tokens/compare/v4.4.0...v4.5.0) (2023-01-31)
+
+
+### Features
+
+* **data:** Change value of comparative.neutral.fill-1 and comparative.neutral.fill-2 tokens (now both a shade darker) ([dc32f4a](https://github.com/Sage/design-tokens/commit/dc32f4a919479083a467656fe364fdb735776bfb))
+
+# [4.4.0](https://github.com/Sage/design-tokens/compare/v4.3.0...v4.4.0) (2023-01-19)
+
+
+### Features
+
+* **data:** Update border radius token descriptions. ([c79b03f](https://github.com/Sage/design-tokens/commit/c79b03f9772c3d98311c3131481ff04f991a4bff))
+
+# [4.3.0](https://github.com/Sage/design-tokens/compare/v4.2.0...v4.3.0) (2023-01-19)
+
+
+### Features
+
+* **data:** Add tokens for neutral pill and info pill on dark background. ([2414e73](https://github.com/Sage/design-tokens/commit/2414e73b273a8b239c36eef0c4a8ec47a96db7c1))
+
+# [4.2.0](https://github.com/Sage/design-tokens/compare/v4.1.0...v4.2.0) (2023-01-18)
+
+
+### Features
+
+* **data:** reorder origin yang tokens in the code ([013c43f](https://github.com/Sage/design-tokens/commit/013c43f89af0bb81d6bfdfd3e2c92f0609bb5905))
+
+# [4.1.0](https://github.com/Sage/design-tokens/compare/v4.0.0...v4.1.0) (2023-01-18)
+
+
+### Features
+
+* **data:** Update some token descriptions. ([7ca11f2](https://github.com/Sage/design-tokens/commit/7ca11f2fdbf57aff44711fea037d91183150e622))
+
+# [4.0.0](https://github.com/Sage/design-tokens/compare/v3.2.0...v4.0.0) (2023-01-18)
+
+
+### Features
+
+* **data:** update tokens object to remove dashboard-colors property and rename dashboard themes ([7b8a5f6](https://github.com/Sage/design-tokens/commit/7b8a5f62dd5e6a4cebe1c6ec026eda84e40065cd))
+
+
+### BREAKING CHANGES
+
+* **data:** The `dasboard-colors` property has been removed, the token values held within it have been moved to the root of the dashboard themes. The `DS dashboard-darkMode` theme is renamed to `DS dash-dark`. The `DS dashboard-lightMode` theme is renamed to `DS dash-light`. Adds token `origin-colors (reference only).yang.010. 5)`. Change values of `dashboard-darkmode.background` tokens
+
+# [3.2.0](https://github.com/Sage/design-tokens/compare/v3.1.0...v3.2.0) (2023-01-16)
+
+
+### Features
+
+* **data:** Add 225 sizing token (For L size Loader) ([9a1a857](https://github.com/Sage/design-tokens/commit/9a1a857afe9ea523f669e084d8aaccf2db8650f0))
+
+# [3.1.0](https://github.com/Sage/design-tokens/compare/v3.0.0...v3.1.0) (2023-01-11)
+
+
+### Features
+
+* **data:** Add theme "DS components" ([ddd3165](https://github.com/Sage/design-tokens/commit/ddd3165c4e0bb07fd7013447250e582bcce174f3))
+
 # [3.0.0](https://github.com/Sage/design-tokens/compare/v2.65.0...v3.0.0) (2023-01-04)
 
 
