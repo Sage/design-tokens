@@ -28,3 +28,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+
+      - name: Copy released package to private to X3 Nexus Registry
+        run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://npm.pkg.github.com --to-email="${GIT_COMMITTER_EMAIL}" --to-username="${X3_NPM_USER}"  --to-password="${X3_NPM_PASSWORD}" %40sage%2Fdesign-tokens
+        env:
+          X3_NPM_USER: ${{ secrets.X3_NPM_USER }}
+          X3_NPM_PASSWORD: ${{ secrets.X3_NPM_PASSWORD }}
