@@ -1,3 +1,10 @@
+# [4.9.0](https://github.com/Sage/design-tokens/compare/v4.8.0...v4.9.0) (2023-02-14)
+
+
+### Features
+
+* **data:** resync themes and figma styles with tokens ([16ea00e](https://github.com/Sage/design-tokens/commit/16ea00e96029f8dfc01696ea62896a936e629e4a))
+
 # [4.8.0](https://github.com/Sage/design-tokens/compare/v4.7.0...v4.8.0) (2023-02-02)
 
 
