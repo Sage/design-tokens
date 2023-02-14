@@ -1,3 +1,10 @@
+# [4.10.0](https://github.com/Sage/design-tokens/compare/v4.9.0...v4.10.0) (2023-02-14)
+
+
+### Features
+
+* **data:** syncing some figma styles for designer use only ([4f8ecb5](https://github.com/Sage/design-tokens/commit/4f8ecb5c1dcb289c4636f026159e66ccf284c183))
+
 # [4.9.0](https://github.com/Sage/design-tokens/compare/v4.8.0...v4.9.0) (2023-02-14)
 
 
