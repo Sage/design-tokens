@@ -1,3 +1,10 @@
+# [4.11.0](https://github.com/Sage/design-tokens/compare/v4.10.0...v4.11.0) (2023-02-15)
+
+
+### Features
+
+* **data:** Add token for Search on dark placeholder ([0e4d0b5](https://github.com/Sage/design-tokens/commit/0e4d0b5aa1f918b542ee00c0e0b2dc6384c930c9))
+
 # [4.10.0](https://github.com/Sage/design-tokens/compare/v4.9.0...v4.10.0) (2023-02-14)
 
 
