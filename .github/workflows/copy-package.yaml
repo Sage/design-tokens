@@ -25,13 +25,15 @@ jobs:
           node-version: '14'
 
       - name: Copy released package to private GitHub NPM registry
-        run: npx @kenan/npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://npm.pkg.github.com --to-email="${GIT_COMMITTER_EMAIL}" --to-token="${NODE_AUTH_TOKEN}" %40sage%2Fdesign-tokens
+        run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://npm.pkg.github.com --to-email="${GIT_COMMITTER_EMAIL}" --to-token="${NODE_AUTH_TOKEN}" %40sage%2Fdesign-tokens
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
 
       - name: Copy released package to private to X3 Nexus Registry
-        run: npx @kenan/npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://repository.sagex3.com:8443/repository/x3-npm-hosted/ --to-email="${GIT_COMMITTER_EMAIL}" --to-username="${X3_NPM_USER}"  --to-password="${X3_NPM_PASSWORD}" %40sage%2Fdesign-tokens
+        run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://repository.sagex3.com:8443/repository/x3-npm-hosted/ --to-email="${GIT_COMMITTER_EMAIL}" --to-username="${X3_NPM_USER}"  --to-password="${X3_NPM_PASSWORD}" %40sage%2Fdesign-tokens
         env:
           X3_NPM_USER: ${{ secrets.X3_NPM_USER }}
           X3_NPM_PASSWORD: ${{ secrets.X3_NPM_PASSWORD }}
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+
