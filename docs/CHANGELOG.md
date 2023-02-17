@@ -1,3 +1,10 @@
+# [4.12.0](https://github.com/Sage/design-tokens/compare/v4.11.0...v4.12.0) (2023-02-17)
+
+
+### Features
+
+* **data:** Updating pagination labels to 14px in order to be more legible/accessible. ([#294](https://github.com/Sage/design-tokens/issues/294)) ([90e6c96](https://github.com/Sage/design-tokens/commit/90e6c96780c9729c2735322ccaa58e2dee510917))
+
 # [4.11.0](https://github.com/Sage/design-tokens/compare/v4.10.0...v4.11.0) (2023-02-15)
 
 
