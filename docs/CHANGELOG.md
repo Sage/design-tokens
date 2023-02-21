@@ -1,3 +1,10 @@
+# [4.13.0](https://github.com/Sage/design-tokens/compare/v4.12.0...v4.13.0) (2023-02-21)
+
+
+### Features
+
+* **data:** All dashboard color token VALUES have been updated to meet accessibility requirements. ([a15cee6](https://github.com/Sage/design-tokens/commit/a15cee6736ff54fe73a00d92154a442211dc08b0))
+
 # [4.12.0](https://github.com/Sage/design-tokens/compare/v4.11.0...v4.12.0) (2023-02-17)
 
 
