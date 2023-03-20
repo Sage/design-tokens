@@ -1,3 +1,10 @@
+# [4.14.0](https://github.com/Sage/design-tokens/compare/v4.13.0...v4.14.0) (2023-03-20)
+
+
+### Features
+
+* **data:** Add 6px borderWidth token. ([471bf59](https://github.com/Sage/design-tokens/commit/471bf59103f79376145e1081ffb7fa1961c92a03))
+
 # [4.13.0](https://github.com/Sage/design-tokens/compare/v4.12.0...v4.13.0) (2023-02-21)
 
 
