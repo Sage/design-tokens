@@ -1,3 +1,10 @@
+# [4.15.0](https://github.com/Sage/design-tokens/compare/v4.14.0...v4.15.0) (2023-03-23)
+
+
+### Features
+
+* **data:** Change hex value of focus.500 (gold) to meet accessibility requirements. ([9f8be4e](https://github.com/Sage/design-tokens/commit/9f8be4e5bf9f99522d208baff521ed4a3a64f688))
+
 # [4.14.0](https://github.com/Sage/design-tokens/compare/v4.13.0...v4.14.0) (2023-03-20)
 
 
