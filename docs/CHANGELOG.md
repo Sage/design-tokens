@@ -1,3 +1,10 @@
+# [4.16.0](https://github.com/Sage/design-tokens/compare/v4.15.0...v4.16.0) (2023-03-29)
+
+
+### Features
+
+* **data:** Add new typography.link.textFocus token and radius styling updates ([a075846](https://github.com/Sage/design-tokens/commit/a07584609e5dd0727e9c38aea56df5ae762ed21f))
+
 # [4.15.0](https://github.com/Sage/design-tokens/compare/v4.14.0...v4.15.0) (2023-03-23)
 
 
