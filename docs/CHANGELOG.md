@@ -1,3 +1,10 @@
+# [4.17.0](https://github.com/Sage/design-tokens/compare/v4.16.0...v4.17.0) (2023-03-31)
+
+
+### Features
+
+* **data:** Add note component typography tokens ([33dd35b](https://github.com/Sage/design-tokens/commit/33dd35b6690b0375ad92dc80eab450d9d16d74f8))
+
 # [4.16.0](https://github.com/Sage/design-tokens/compare/v4.15.0...v4.16.0) (2023-03-29)
 
 
