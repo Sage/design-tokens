@@ -1,3 +1,10 @@
+# [4.18.0](https://github.com/Sage/design-tokens/compare/v4.17.0...v4.18.0) (2023-04-03)
+
+
+### Features
+
+* **data:** change note title fontside ([ac46621](https://github.com/Sage/design-tokens/commit/ac46621724e9ef6ac9a0d34cfaab2d46389efa74))
+
 # [4.17.0](https://github.com/Sage/design-tokens/compare/v4.16.0...v4.17.0) (2023-03-31)
 
 
