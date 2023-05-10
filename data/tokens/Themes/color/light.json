@@ -3,8 +3,47 @@
     "color": {
       "container": {
         "bg": {
-          "value": "white",
+          "value": "{origin.colors.grayProduct.000}",
           "type": "color"
+        },
+        "bgAlt": {
+          "value": "{origin.colors.navyAdjusted.500}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "lighten",
+                "value": "{base.color.modifiers.tint.95}",
+                "space": "lch"
+              }
+            }
+          }
+        },
+        "hover": {
+          "value": "{origin.colors.navyAdjusted.500}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "lighten",
+                "value": "{base.color.modifiers.tint.95}",
+                "space": "lch"
+              }
+            }
+          }
+        },
+        "border": {
+          "value": "{origin.colors.navyAdjusted.500}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "lighten",
+                "value": "{base.color.modifiers.tint.70}",
+                "space": "lch"
+              }
+            }
+          }
         }
       },
       "destructive": {
