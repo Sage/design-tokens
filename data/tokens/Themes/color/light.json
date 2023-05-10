@@ -3,11 +3,11 @@
     "color": {
       "destructive": {
         "default": {
-          "value": "{origin.colors.grayProduct.000}",
+          "value": "{origin.colors.red.500}",
           "type": "color"
         },
         "hover": {
-          "value": "{base.color.major.default}",
+          "value": "{origin.colors.red.500}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -22,19 +22,6 @@
         "fg": {
           "value": "{origin.colors.grayProduct.000}",
           "type": "color"
-        },
-        "active": {
-          "value": "{base.color.major.default}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "darken",
-                "value": "{base.color.modifiers.tint.40}",
-                "space": "lch"
-              }
-            }
-          }
         }
       },
       "form": {
@@ -99,7 +86,7 @@
       },
       "major": {
         "default": {
-          "value": "{origin.colors.grayProduct.000}",
+          "value": "{origin.colors.jade.500}",
           "type": "color"
         },
         "hover": {
@@ -135,12 +122,30 @@
       },
       "status": {
         "negative": {
+          "border": {
+            "value": "{origin.colors.red.500}",
+            "type": "color"
+          },
           "bg": {
             "value": "{origin.colors.red.500}",
             "type": "color"
           },
-          "hover": {
+          "fg": {
             "value": "{origin.colors.red.500}",
+            "type": "color"
+          }
+        },
+        "warning": {
+          "bg": {
+            "value": "{origin.colors.orange.500}",
+            "type": "color"
+          },
+          "border": {
+            "value": "{origin.colors.orange.500}",
+            "type": "color"
+          },
+          "fg": {
+            "value": "{origin.colors.orange.500}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -204,6 +209,12 @@
             "value": "1",
             "type": "other"
           }
+        }
+      },
+      "container": {
+        "bg": {
+          "value": "white",
+          "type": "color"
         }
       }
     }
