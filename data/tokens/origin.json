@@ -243,256 +243,119 @@
           "type": "color"
         }
       }
-    }
-  },
-  "sizing": {
-   
-  },
-  "spacing": {
-   
-  },
-  "borderWidth": {
-    "100": {
-      "value": "1px",
-      "type": "borderWidth"
     },
-    "200": {
-      "value": "2px",
-      "type": "borderWidth"
+    "size": {
+      "SCALE": {
+        "value": "8",
+        "type": "sizing",
+        "description": "SCALE is the base-scale of all size-related tokens (size, space, dimension). It's set to 8px as this is our default multiplier used across the majority of components. If you change it, it will change all size-related tokens."
+      }
     },
-    "300": {
-      "value": "3px",
-      "type": "borderWidth"
-    },
-    "400": {
-      "value": "4px",
-      "type": "borderWidth"
-    },
-    "000": {
-      "value": "0px",
-      "type": "borderWidth"
-    }
-  },
-  "fontSizes": {
-    "100": {
-      "value": "14px",
-      "type": "fontSizes"
-    },
-    "200": {
-      "value": "16px",
-      "type": "fontSizes"
-    },
-    "300": {
-      "value": "18px",
-      "type": "fontSizes"
-    },
-    "400": {
-      "value": "20px",
-      "type": "fontSizes"
-    },
-    "500": {
-      "value": "22px",
-      "type": "fontSizes"
-    },
-    "600": {
-      "value": "24px",
-      "type": "fontSizes"
-    },
-    "700": {
-      "value": "32px",
-      "type": "fontSizes"
-    },
-    "800": {
-      "value": "40px",
-      "type": "fontSizes"
-    },
-    "900": {
-      "value": "48px",
-      "type": "fontSizes"
-    },
-    "1000": {
-      "value": "56px",
-      "type": "fontSizes"
-    },
-    "010": {
-      "value": "10px",
-      "type": "fontSizes"
-    },
-    "025": {
-      "value": "12px",
-      "type": "fontSizes"
-    },
-    "050": {
-      "value": "13px",
-      "type": "fontSizes"
-    }
-  },
-  "boxShadow": {
-    "100": {
-      "value": [
-        {
-          "x": "0",
-          "y": "5",
-          "blur": "5",
-          "spread": "0",
-          "color": "rgba({midNEW.colors.minor.shadow}, 0.2)",
-          "type": "dropShadow"
-        },
-        {
-          "x": "0",
-          "y": "10",
-          "blur": "10",
-          "spread": "0",
-          "color": "rgba({midNEW.colors.minor.shadow}, 0.1)",
-          "type": "dropShadow"
-        }
-      ],
-      "type": "boxShadow"
-    },
-    "150": {
-      "value": {
-        "x": "0",
-        "y": "-4",
-        "blur": "12",
-        "spread": "0",
-        "color": "rgba({midNEW.colors.minor.shadow}, 0.05)",
-        "type": "dropShadow"
+    "dimension": {
+      "0": {
+        "value": "{origin.dimension.base} * 0",
+        "type": "dimension"
       },
-      "description": "for sticky footers",
-      "type": "boxShadow"
-    },
-    "200": {
-      "value": [
-        {
-          "x": "0",
-          "y": "10",
-          "blur": "20",
-          "spread": "0",
-          "color": "rgba({midNEW.colors.minor.shadow}, 0.2)",
-          "type": "dropShadow"
-        },
-        {
-          "x": "0",
-          "y": "20",
-          "blur": "40",
-          "spread": "0",
-          "color": "rgba({midNEW.colors.minor.shadow}, 0.1)",
-          "type": "dropShadow"
-        }
-      ],
-      "type": "boxShadow"
-    },
-    "300": {
-      "value": [
-        {
-          "x": "0",
-          "y": "10",
-          "blur": "30",
-          "spread": "0",
-          "color": "rgba({midNEW.colors.minor.shadow}, 0.1)",
-          "type": "dropShadow"
-        },
-        {
-          "x": "0",
-          "y": "30",
-          "blur": "60",
-          "spread": "0",
-          "color": "rgba({midNEW.colors.minor.shadow}, 0.1)",
-          "type": "dropShadow"
-        }
-      ],
-      "type": "boxShadow"
-    },
-    "400": {
-      "value": [
-        {
-          "x": "0",
-          "y": "10",
-          "blur": "40",
-          "spread": "0",
-          "color": "rgba({midNEW.colors.minor.shadow}, 0.04)",
-          "type": "dropShadow"
-        },
-        {
-          "x": "0",
-          "y": "50",
-          "blur": "80",
-          "spread": "0",
-          "color": "rgba({midNEW.colors.minor.shadow}, 0.1)",
-          "type": "dropShadow"
-        }
-      ],
-      "type": "boxShadow"
-    },
-    "010": {
-      "value": {
-        "x": "0",
-        "y": "-1px",
-        "blur": "0",
-        "spread": "0",
-        "color": "{midNEW.colors.minor.050}",
-        "type": "innerShadow"
+      "12": {
+        "value": "{origin.dimension.base} * 12.5",
+        "type": "dimension"
       },
-      "description": "bottom internal border",
-      "type": "boxShadow"
-    },
-    "050": {
-      "value": [
-        {
-          "x": "0",
-          "y": "3",
-          "blur": "3",
-          "spread": "0",
-          "color": "rgba({midNEW.colors.minor.shadow}, 0.2)",
-          "type": "dropShadow"
-        },
-        {
-          "x": "0",
-          "y": "2",
-          "blur": "4",
-          "spread": "0",
-          "color": "rgba({midNEW.colors.minor.shadow}, 0.15)",
-          "type": "dropShadow"
-        }
-      ],
-      "description": "",
-      "type": "boxShadow"
-    },
-    "075": {
-      "value": {
-        "x": "0",
-        "y": "6",
-        "blur": "4",
-        "spread": "-4",
-        "color": "rgba({midNEW.colors.minor.shadow}, 0.05)",
-        "type": "innerShadow"
+      "25": {
+        "value": "{origin.dimension.base} * 25",
+        "type": "dimension"
       },
-      "description": "for table expandable row 1st child",
-      "type": "boxShadow"
-    },
-    "090": {
-      "value": {
-        "x": "0",
-        "y": "4px",
-        "blur": "8px",
-        "spread": "-4px",
-        "color": "rgba({midNEW.colors.minor.shadow}, 0.1)",
-        "type": "dropShadow"
+      "50": {
+        "value": "{origin.dimension.base} * 50",
+        "type": "dimension"
       },
-      "type": "boxShadow",
-      "description": "product nav horizontal"
-    },
-    "091": {
-      "value": {
-        "x": "4px",
-        "y": "0",
-        "blur": "8px",
-        "spread": "-4px",
-        "color": "rgba({midNEW.colors.minor.shadow}, 0.1)",
-        "type": "dropShadow"
+      "62": {
+        "value": "{origin.dimension.base} * 62.5",
+        "type": "dimension"
       },
-      "type": "boxShadow",
-      "description": "product nav vertical"
+      "75": {
+        "value": "{origin.dimension.base} * 75",
+        "type": "dimension"
+      },
+      "100": {
+        "value": "{origin.dimension.base} * 100",
+        "type": "dimension"
+      },
+      "150": {
+        "value": "{origin.dimension.base} * 150",
+        "type": "dimension"
+      },
+      "200": {
+        "value": "{origin.dimension.base} * 200",
+        "type": "dimension"
+      },
+      "250": {
+        "value": "{origin.dimension.base} * 250",
+        "type": "dimension"
+      },
+      "300": {
+        "value": "{origin.dimension.base} * 300",
+        "type": "dimension"
+      },
+      "350": {
+        "value": "{origin.dimension.base} * 350",
+        "type": "dimension"
+      },
+      "400": {
+        "value": "{origin.dimension.base} * 400",
+        "type": "dimension"
+      },
+      "450": {
+        "value": "{origin.dimension.base} * 450",
+        "type": "dimension"
+      },
+      "500": {
+        "value": "{origin.dimension.base} * 500",
+        "type": "dimension"
+      },
+      "550": {
+        "value": "{origin.dimension.base} * 550",
+        "type": "dimension"
+      },
+      "600": {
+        "value": "{origin.dimension.base} * 600",
+        "type": "dimension"
+      },
+      "650": {
+        "value": "{origin.dimension.base} * 650",
+        "type": "dimension"
+      },
+      "700": {
+        "value": "{origin.dimension.base} * 700",
+        "type": "dimension"
+      },
+      "750": {
+        "value": "{origin.dimension.base} * 750",
+        "type": "dimension"
+      },
+      "800": {
+        "value": "{origin.dimension.base} * 800",
+        "type": "dimension"
+      },
+      "850": {
+        "value": "{origin.dimension.base} * 850",
+        "type": "dimension"
+      },
+      "900": {
+        "value": "{origin.dimension.base} * 900",
+        "type": "dimension"
+      },
+      "950": {
+        "value": "{origin.dimension.base} * 950",
+        "type": "dimension"
+      },
+      "1000": {
+        "value": "{origin.dimension.base} * 1000",
+        "type": "dimension"
+      },
+      "base": {
+        "value": "{origin.size.SCALE} / 100",
+        "type": "dimension"
+      }
     }
   },
   "fontWeights": {
@@ -539,48 +402,6 @@
     "other": {
       "value": "Open Sans",
       "type": "fontFamilies"
-    }
-  },
-  "borderRadius": {
-    "100": {
-      "value": "8px",
-      "type": "borderRadius",
-      "description": "Action popover (menu), Anchor navigation, Button: minor (including button bar), Button: multi-action & split (menu), Button toggle: minor, Card (less rounded), Card select (single), Card select group (outer corners), Carousel (slides), Color picker standard (container), Menu (bottom corners), Message, Navigation: top (menu bottom corners), Navigation: left (selected menu), Pagination, Tab, Table, Tile (less rounded), Toast."
-    },
-    "200": {
-      "value": "16px",
-      "type": "borderRadius",
-      "description": "Carousel (outer part), Card (more rounded), Color picker advanced (outer container), Dialog (not full screen), Tile (more rounded)."
-    },
-    "400": {
-      "value": "32px",
-      "type": "borderRadius",
-      "description": "Action popover (button), Button: major (including button bar), Button: multi-action & split, Button toggle: major, Loader bar, Progress tracker, Switch."
-    },
-    "circle": {
-      "value": "50%",
-      "type": "borderRadius",
-      "description": "Badge, Portrait, Radio button."
-    },
-    "000": {
-      "value": "0px",
-      "type": "borderRadius",
-      "description": "Button groups (internal/adjacent corners), Card select group (internal/adjacent corners), File input (integrated base bar top corners)."
-    },
-    "010": {
-      "value": "1px",
-      "type": "borderRadius",
-      "description": "Validation bar"
-    },
-    "025": {
-      "value": "2px",
-      "type": "borderRadius",
-      "description": "Checkbox (small), Pill"
-    },
-    "050": {
-      "value": "4px",
-      "type": "borderRadius",
-      "description": "Checkbox (large), Color picker advanced (inner container), Date picker, Date range, Dropdown: select (trigger & menu), File input, Link (focus), Search, Text area, Text input, Tooltip."
     }
   },
   "opacity": {
