@@ -14,6 +14,18 @@ const platforms = [
     outputDir: 'src/styles',
     fileFormat: 'js',
     template: 'styled-components'
+  },
+  {
+    name: 'ios',
+    outputDir: 'MyApp/SupportingFiles',
+    fileFormat: 'swift',
+    template: 'swift'
+  },
+  {
+    name: 'android',
+    outputDir: '/src/main/res/values/android',
+    fileFormat: 'xml',
+    template: 'android-xml'
   }
 ]
 
