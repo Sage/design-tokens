@@ -280,8 +280,16 @@
         "value": "{origin.dimension.base} * 100",
         "type": "dimension"
       },
+      "125": {
+        "value": "{origin.dimension.base} * 125",
+        "type": "dimension"
+      },
       "150": {
         "value": "{origin.dimension.base} * 150",
+        "type": "dimension"
+      },
+      "175": {
+        "value": "{origin.dimension.base} * 175",
         "type": "dimension"
       },
       "200": {
@@ -355,6 +363,54 @@
       "base": {
         "value": "{origin.size.SCALE} / 100",
         "type": "dimension"
+      }
+    },
+    "font-size": {
+      "REM": {
+        "value": "16",
+        "type": "fontSizes"
+      },
+      "typescale": {
+        "scale": {
+          "value": "1.16",
+          "type": "fontSizes"
+        },
+        "XS": {
+          "value": "{origin.font-size.typescale.S} / {origin.font-size.typescale.scale}",
+          "type": "fontSizes"
+        },
+        "S": {
+          "value": "{origin.font-size.typescale.base} / {origin.font-size.typescale.scale}",
+          "type": "fontSizes"
+        },
+        "M": {
+          "value": "{origin.font-size.typescale.base}",
+          "type": "fontSizes"
+        },
+        "ML": {
+          "value": "{origin.font-size.typescale.M} * {origin.font-size.typescale.scale}",
+          "type": "fontSizes"
+        },
+        "L": {
+          "value": "{origin.font-size.typescale.ML} * {origin.font-size.typescale.scale}",
+          "type": "fontSizes"
+        },
+        "XL": {
+          "value": "{origin.font-size.typescale.L} * {origin.font-size.typescale.scale}",
+          "type": "fontSizes"
+        },
+        "XXL": {
+          "value": "{origin.font-size.typescale.XL} * {origin.font-size.typescale.scale}",
+          "type": "fontSizes"
+        },
+        "XXXL": {
+          "value": "{origin.font-size.typescale.XXL} * {origin.font-size.typescale.scale}",
+          "type": "fontSizes"
+        },
+        "base": {
+          "value": "{origin.font-size.REM}",
+          "type": "fontSizes"
+        }
       }
     }
   },
