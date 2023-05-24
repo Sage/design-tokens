@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "postinstall": "husky install",
-    "build-dictionary": "style-dictionary build",
+    "build-dictionary": "style-dictionary build --config style-dictionary-config.js",
     "build": "node ./scripts/build.js",
     "prebuild": "node ./scripts/prebuild.js",
     "postbuild": "node ./scripts/postbuild.js",

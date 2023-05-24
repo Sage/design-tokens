@@ -26,7 +26,7 @@ processAllPlatforms()
 
 function getStyleDictionaryConfig () {
   return {
-    source: ['path/to/source/files/*.json'],
+    source: ['data/tokens/**/*.json'],
     platforms: {
       web: {
         buildPath: 'build/web/',
@@ -45,16 +45,16 @@ function getStyleDictionaryConfig () {
             format: 'ios/plist'
           }
         ]
-      },
-      android: {
-        buildPath: 'build/android/',
-        files: [
-          {
-            destination: 'tokens.xml',
-            format: 'android/xml'
-          }
-        ]
       }
+    //   android: {
+    //     buildPath: 'build/android/',
+    //     files: [
+    //       {
+    //         destination: 'tokens.xml',
+    //         format: 'android/xml'
+    //       }
+    //     ]
+    //   }
     }
   }
 }
