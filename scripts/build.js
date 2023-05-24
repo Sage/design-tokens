@@ -5,12 +5,10 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
 const { readJsonSync } = require('fs-extra')
 const { dictionary, groups } = require('./style-dictionary')
 
-const filterPublic = require('./utils/filter-public')
 const filterTheme = require('./utils/filter-theme')
 
 const tokens = readJsonSync('temp/tokens.json')
-const publicTokens = filterPublic(tokens)
-const themes = Object.keys(publicTokens)
+const themes = Object.keys(tokens)
 
 console.log(`Found ${themes.length} public themes: ${themes.join(', ')}.`)
 
