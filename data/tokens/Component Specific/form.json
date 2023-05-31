@@ -1,0 +1,53 @@
+{
+  "form": {
+    "standard": {
+      "bg-default": {
+        "value": "{base.color.selectable.input.canvas-bg}",
+        "type": "color"
+      },
+      "bg-disabled": {
+        "value": "{base.color.selectable.inactive.canvas-bg}",
+        "type": "color"
+      },
+      "bg-readOnly": {
+        "value": "{base.color.selectable.inactive.canvas-bg}",
+        "type": "color"
+      },
+      "border-default": {
+        "value": "{base.color.selectable.input.canvas-border}",
+        "type": "color"
+      },
+      "border-disabled": {
+        "value": "{base.color.selectable.inactive.canvas-border}",
+        "type": "color"
+      },
+      "border-readOnly": {
+        "value": "{base.color.selectable.inactive.canvas-border}",
+        "type": "color"
+      }
+    },
+    "validation": {
+      "border-error": {
+        "value": "{base.color.status.negative.default}",
+        "type": "color"
+      },
+      "text-error": {
+        "value": "{base.color.status.negative.default}",
+        "type": "color"
+      },
+      "text-warning": {
+        "value": "{base.color.status.negative.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.tint.20}",
+              "space": "lch"
+            }
+          }
+        }
+      }
+    }
+  }
+}

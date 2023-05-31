@@ -53,17 +53,17 @@ function copyReadme () {
   }
 }
 
-function copyData () {
-  try {
-    copySync(
-      resolve(__dirname, '../temp/tokens.json'),
-      resolve(__dirname, '../dist/data/tokens.json')
-    )
-  } catch (err) {
-    console.log('Error copying data to dist')
-    console.log(err)
-  }
-}
+// function copyData () {
+//   try {
+//     copySync(
+//       resolve(__dirname, '../temp/tokens.json'),
+//       resolve(__dirname, '../dist/data/tokens.json')
+//     )
+//   } catch (err) {
+//     console.log('Error copying data to dist')
+//     console.log(err)
+//   }
+// }
 
 async function generateTSDefinitions () {
   if (process.platform === 'win32') {
@@ -115,26 +115,26 @@ function addFileHeader () {
   })
 }
 
-function copyAssets () {
-  try {
-    copySync(
-      resolve(__dirname, '../assets'),
-      resolve(__dirname, '../dist/assets/')
-    )
-  } catch (err) {
-    console.log('Error copying assets to dist')
-    console.log(err)
-  }
-}
+// function copyAssets () {
+//   try {
+//     copySync(
+//       resolve(__dirname, '../assets'),
+//       resolve(__dirname, '../dist/assets/')
+//     )
+//   } catch (err) {
+//     console.log('Error copying assets to dist')
+//     console.log(err)
+//   }
+// }
 
 async function main () {
   copyPackageJSON()
   copyReadme()
-  copyData()
-  copyAssets()
+  // copyData()
+  // copyAssets()
   addEntryFile()
   addFileHeader()
-  require('./tokens-documentation')
+  // require('./tokens-documentation')
   await require('./icons')
   await generateTSDefinitions()
 }
