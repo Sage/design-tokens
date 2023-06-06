@@ -1,3 +1,10 @@
+# [4.19.0](https://github.com/Sage/design-tokens/compare/v4.18.0...v4.19.0) (2023-06-06)
+
+
+### Features
+
+* **data:** add new sizing 44px ([a265de7](https://github.com/Sage/design-tokens/commit/a265de7cbed75075644b3a72e62160e6628d62b9))
+
 # [4.18.0](https://github.com/Sage/design-tokens/compare/v4.17.0...v4.18.0) (2023-04-03)
 
 
