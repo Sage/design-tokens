@@ -1,6 +1,11 @@
 {
   "base": {
     "border-radius": {
+      "scale": {
+        "value": "1",
+        "type": "borderRadius",
+        "description": "We can override this to locally change the size of radius in the future if required."
+      },
       "container": {
         "XS": {
           "value": "{origin.dimension.12} * {base.border-radius.scale}",
@@ -52,11 +57,6 @@
           "value": "0",
           "type": "borderRadius"
         }
-      },
-      "scale": {
-        "value": "1",
-        "type": "borderRadius",
-        "description": "We can override this to locally change the size of radius in the future if required."
       }
     },
     "border-width": {
