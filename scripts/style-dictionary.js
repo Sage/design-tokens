@@ -2,6 +2,7 @@
 Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
  */
 const styleDictionary = require('style-dictionary')
+const { registerTransforms } = require('@tokens-studio/sd-transforms')
 const { resolve } = require('path')
 const glob = require('glob').sync
 
@@ -9,24 +10,42 @@ const transforms = glob('./scripts/transforms/*.transform.js').map(path => requi
 const formats = glob('./scripts/formats/*.format.js').map(path => require(resolve(path)))
 const groups = {
   web: [
-    'custom/attributes/default',
-    'custom/name/camel',
-    'custom/value/css-box-shadow',
-    'custom/value/css-typography',
-    'custom/value/css-font-weight'
+    // // 'custom/attributes/default',
+    // 'custom/name/camel',
+    // 'custom/value/css-eval',
+    // // 'ts/color/css/hexrgba',
+    // 'ts/descriptionToComment',
+    // 'ts/color/modifiers',
+    // 'custom/value/css-box-shadow',
+    // 'custom/value/css-typography',
+    // 'custom/value/css-font-weight'
+    'ts/descriptionToComment',
+    'ts/size/px',
+    'ts/opacity',
+    'ts/size/lineheight',
+    'ts/type/fontWeight',
+    'ts/resolveMath',
+    'ts/size/css/letterspacing',
+    'ts/typography/css/shorthand',
+    'ts/border/css/shorthand',
+    'ts/shadow/css/shorthand',
+    'ts/color/css/hexrgba',
+    'ts/color/modifiers',
+    'name/cti/camel'
   ],
   name: [
-    'custom/attributes/default',
+    // 'custom/attributes/default',
     'custom/name/camel'
   ],
   mobile: [
-    'custom/attributes/default',
+    // 'custom/attributes/default',
     'custom/name/camel',
     'custom/value/css-box-shadow',
     'custom/value/css-typography'
   ]
 }
 
+registerTransforms(styleDictionary)
 transforms.forEach(transform => styleDictionary.registerTransform(transform))
 formats.forEach(format => styleDictionary.registerFormat(format))
 

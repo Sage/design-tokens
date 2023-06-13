@@ -12,6 +12,6 @@ module.exports = {
   name: 'custom/name/camel',
   type: 'name',
   transformer (token) {
-    return camelCase(Object.values(token.attributes).slice(1).join(' '))
+    return camelCase(Object.values(token.path))
   }
 }

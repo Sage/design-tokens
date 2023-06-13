@@ -10,8 +10,8 @@ module.exports = {
   name: 'custom/value/css-font-weight',
   type: 'value',
   matcher: (token) =>
-    token.attributes.category === 'typography' ||
-    token.attributes.category === 'fontWeights',
+    token.type === 'typography' ||
+    token.type === 'fontWeights',
   transformer: (token) => {
     return token.value
       .replace('Regular', '400')

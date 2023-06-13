@@ -12,6 +12,11 @@ module.exports = {
   transformer (token) {
     const elements = [...token.path]
 
+    if (elements.length === 2) {
+      const [category, variant] = elements
+      return { category, variant }
+    }
+
     if (elements.length === 3) {
       const [theme, category, variant] = elements
       return { theme, category, variant }

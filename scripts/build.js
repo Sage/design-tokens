@@ -20,47 +20,92 @@ const getConfig = (platform, mode) => {
       `./data/tokens/Platforms/${platform}/*.json`
     ],
     platforms: {
-      javascript: {
-        buildPath: 'dist/js/',
+      web: {
+        buildPath: 'dist/web/',
         transforms: groups.web,
         files: [
           {
-            destination: `${platform}/common/${modeName}/all.js`,
+            destination: `js/common/${modeName}/all.js`,
             format: 'javascript/module-flat'
           },
           {
-            destination: `${platform}/es6/${modeName}/all.js`,
+            destination: `js/es6/${modeName}/all.js`,
             format: 'custom/js/es6-module-flat'
-          }
-        ]
-      },
-      css: {
-        buildPath: 'dist/css/',
-        transforms: groups.web,
-        files: [
+          },
+          // {
+          //   destination: `css/${modeName}/all.css`,
+          //   format: 'css/variables'
+          // },
+          // {
+          //   destination: `css/${modeName}/color.css`,
+          //   filter: (token) => token.type === 'color' && token.path.indexOf('origin') === -1,
+          //   format: 'css/variables'
+          // },
           {
-            destination: `${platform}/${modeName}/all.css`,
+            destination: 'css/sizing.css',
+            filter: { type: 'sizing' },
             format: 'css/variables'
           },
           {
-            destination: `${platform}/${modeName}/color.css`, // this can be extended for each type
-            filter: { type: 'color' },
-            format: 'css/variables'
-          },
-          {
-            destination: `${platform}/${modeName}/spacing.css`, // this can be extended for each type
+            destination: 'css/spacing.css',
             filter: { type: 'spacing' },
             format: 'css/variables'
+          },
+          {
+            destination: 'css/typography.css',
+            filter: { type: 'typography' },
+            format: 'css/variables'
+          },
+          {
+            destination: `scss/${modeName}/all.scss`,
+            format: 'scss/variables'
           }
         ]
       },
-      scss: {
-        buildPath: 'dist/scss/',
+      android: {
+        buildPath: 'dist/android/',
+        transforms: groups.mobile,
+        files: [
+          {
+            destination: `${modeName}/all.xml`,
+            format: 'android/resources'
+          }
+        ]
+      },
+      ios: {
+        buildPath: 'dist/ios/',
+        transforms: groups.mobile,
+        files: [
+          {
+            destination: `${modeName}/all.h`,
+            format: 'ios/macros'
+          }
+        ]
+      }
+    }
+  }
+}
+
+const getColorConfig = (platform, mode) => {
+  const modeName = mode.split('.json')[0]
+
+  return {
+    source: [
+      './data/tokens/origin.json',
+      './data/tokens/Global/*.json',
+      `./data/tokens/Modes/${mode}`,
+      './data/tokens/Component Specific/*.json',
+      `./data/tokens/Platforms/${platform}/*.json`
+    ],
+    platforms: {
+      web: {
+        buildPath: 'dist/web/',
         transforms: groups.web,
         files: [
           {
-            destination: `${platform}/${modeName}/all.scss`,
-            format: 'scss/variables'
+            destination: `css/color/${modeName}.css`,
+            filter: (token) => token.type === 'color' && token.path.indexOf('origin') === -1,
+            format: 'css/variables'
           }
         ]
       },
@@ -95,13 +140,29 @@ platforms.forEach((platform) => {
     const StyleDictionary = dictionary.extend(getConfig(platform, mode))
 
     if (platform === 'small-viewports') {
-      StyleDictionary.buildPlatform('javascript')
-      StyleDictionary.buildPlatform('css')
-      StyleDictionary.buildPlatform('scss')
+      StyleDictionary.buildPlatform('web')
     } else if (platform === 'IOS') {
       StyleDictionary.buildPlatform('ios')
     } else if (platform === 'android') {
       StyleDictionary.buildPlatform('android')
+    }
+
+    console.log('\r\nDone.\r\n')
+  })
+})
+
+platforms.forEach((platform) => {
+  modes.forEach((mode) => {
+    console.log(`\r\nBuilding platform: ${platform} \r\nBuilding mode: ${mode}`)
+
+    const StyleDictionary = dictionary.extend(getColorConfig(platform, mode))
+
+    if (platform === 'small-viewports') {
+      StyleDictionary.buildPlatform('web')
+    } else if (platform === 'IOS') {
+      // StyleDictionary.buildPlatform('ios')
+    } else if (platform === 'android') {
+      // StyleDictionary.buildPlatform('android')
     }
 
     console.log('\r\nDone.\r\n')
