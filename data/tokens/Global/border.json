@@ -1,0 +1,111 @@
+{
+  "base": {
+    "border-radius": {
+      "scale": {
+        "value": "1",
+        "type": "borderRadius",
+        "description": "We can override this to locally change the size of radius in the future if required."
+      },
+      "container": {
+        "XS": {
+          "value": "{origin.dimension.12} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Validation bar"
+        },
+        "S": {
+          "value": "{origin.dimension.50} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Color picker advanced (inner container), Tooltip."
+        },
+        "M": {
+          "value": "{origin.dimension.100} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Action popover (menu), Anchor navigation, Card (less rounded), Card select (single), Card select group (outer corners), Carousel (slides), Color picker standard (container), Menu (bottom corners), Message, Navigation: top (menu bottom corners), Navigation: left (selected menu), Pagination, Table, Tile (less rounded), Toast."
+        },
+        "L": {
+          "value": "{origin.dimension.200} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Carousel (outer part), Card (more rounded), Color picker advanced (outer container), Dialog (not full screen), Tile (more rounded)."
+        },
+        "none": {
+          "value": "0",
+          "type": "borderRadius"
+        }
+      },
+      "selectable": {
+        "XS": {
+          "value": "{origin.dimension.25} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Checkbox (S, M), Link (focus background),Pill"
+        },
+        "S": {
+          "value": "{origin.dimension.50} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Button: minor (including button bar), Button: multi-action & split (menu), Button toggle: minor, Checkbox (large), Date picker, Date range, Dropdown: select (trigger & menu), File input, Link (focus), Search, Text area, Text input."
+        },
+        "M": {
+          "value": "{origin.dimension.100} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Tab"
+        },
+        "L": {
+          "value": "{origin.dimension.400} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Action popover (button), Button: major (including button bar), Button: multi-action & split, Button toggle: major, Loader bar, Progress tracker, Switch."
+        },
+        "none": {
+          "value": "0",
+          "type": "borderRadius"
+        }
+      }
+    },
+    "border-width": {
+      "scale": {
+        "value": "1",
+        "type": "borderWidth"
+      },
+      "container": {
+        "S": {
+          "value": "{origin.dimension.12} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Dividing lines"
+        },
+        "none": {
+          "value": "0",
+          "type": "borderWidth"
+        }
+      },
+      "selectable": {
+        "S": {
+          "value": "{origin.dimension.12} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Inputs, buttons"
+        },
+        "MS": {
+          "value": "{origin.dimension.25} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Buttons, Validation bars"
+        },
+        "M": {
+          "value": "{origin.dimension.38} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Focus\n"
+        },
+        "L": {
+          "value": "{origin.dimension.50} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Focus underline\n"
+        },
+        "XL": {
+          "value": "{origin.dimension.75} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Double Focus Border"
+        },
+        "none": {
+          "value": "0",
+          "type": "borderWidth"
+        }
+      }
+    }
+  }
+}
