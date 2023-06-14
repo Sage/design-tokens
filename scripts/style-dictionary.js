@@ -19,6 +19,7 @@ const groups = {
     // 'custom/value/css-box-shadow',
     // 'custom/value/css-typography',
     // 'custom/value/css-font-weight'
+    'name/cti/camel',
     'ts/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
@@ -29,9 +30,7 @@ const groups = {
     'ts/typography/css/shorthand',
     'ts/border/css/shorthand',
     'ts/shadow/css/shorthand',
-    'ts/color/css/hexrgba',
-    'ts/color/modifiers',
-    'name/cti/camel'
+    'ts/color/modifiers/hex'
   ],
   name: [
     // 'custom/attributes/default',

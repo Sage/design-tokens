@@ -16,7 +16,7 @@ const getConfig = (platform, mode) => {
       './data/tokens/origin.json',
       './data/tokens/Global/*.json',
       `./data/tokens/Modes/${mode}`,
-      './data/tokens/Component Specific/*.json',
+      './data/tokens/Components/*.json',
       `./data/tokens/Platforms/${platform}/*.json`
     ],
     platforms: {
@@ -41,6 +41,16 @@ const getConfig = (platform, mode) => {
           //   filter: (token) => token.type === 'color' && token.path.indexOf('origin') === -1,
           //   format: 'css/variables'
           // },
+          {
+            destination: 'css/borders.css',
+            filter: (token) => (token.type === 'borderRadius' || token.type === 'borderWidth') && token.path.indexOf('origin') === -1,
+            format: 'css/variables'
+          },
+          {
+            destination: 'css/shadows.css',
+            filter: (token) => token.type === 'boxShadow' && token.path.indexOf('origin') === -1,
+            format: 'css/variables'
+          },
           {
             destination: 'css/sizing.css',
             filter: { type: 'sizing' },
@@ -94,7 +104,7 @@ const getColorConfig = (platform, mode) => {
       './data/tokens/origin.json',
       './data/tokens/Global/*.json',
       `./data/tokens/Modes/${mode}`,
-      './data/tokens/Component Specific/*.json',
+      './data/tokens/Components/*.json',
       `./data/tokens/Platforms/${platform}/*.json`
     ],
     platforms: {
