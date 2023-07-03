@@ -24,13 +24,13 @@ const groups = {
     'ts/size/px',
     'ts/opacity',
     'ts/size/lineheight',
-    'ts/type/fontWeight',
+    'ts/typography/fontWeight',
     'ts/resolveMath',
     'ts/size/css/letterspacing',
     'ts/typography/css/shorthand',
     'ts/border/css/shorthand',
     'ts/shadow/css/shorthand',
-    'ts/color/modifiers/hex'
+    'ts/color/modifiers'
   ],
   name: [
     // 'custom/attributes/default',
@@ -44,7 +44,11 @@ const groups = {
   ]
 }
 
-registerTransforms(styleDictionary)
+registerTransforms(styleDictionary, {
+  'ts/color/modifiers': {
+    format: 'hex'
+  }
+})
 transforms.forEach(transform => styleDictionary.registerTransform(transform))
 formats.forEach(format => styleDictionary.registerFormat(format))
 
