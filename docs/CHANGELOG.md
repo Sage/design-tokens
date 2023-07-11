@@ -1,3 +1,10 @@
+# [4.20.0](https://github.com/Sage/design-tokens/compare/v4.19.0...v4.20.0) (2023-07-11)
+
+
+### Features
+
+* **data:** update pill font token for better a11y. ([d594444](https://github.com/Sage/design-tokens/commit/d5944443792eda42ba84dbae803547e539c7cd61))
+
 # [4.19.0](https://github.com/Sage/design-tokens/compare/v4.18.0...v4.19.0) (2023-06-06)
 
 
