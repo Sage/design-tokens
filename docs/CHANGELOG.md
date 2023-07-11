@@ -1,3 +1,10 @@
+# [4.21.0](https://github.com/Sage/design-tokens/compare/v4.20.0...v4.21.0) (2023-07-11)
+
+
+### Features
+
+* **data:** adding a new token spacing.neg080 for pill XL ([b0c2e93](https://github.com/Sage/design-tokens/commit/b0c2e93db1771522ce8492571010da79e971c5b3))
+
 # [4.20.0](https://github.com/Sage/design-tokens/compare/v4.19.0...v4.20.0) (2023-07-11)
 
 
