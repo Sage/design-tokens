@@ -1,3 +1,10 @@
+# [4.22.0](https://github.com/Sage/design-tokens/compare/v4.21.0...v4.22.0) (2023-07-18)
+
+
+### Features
+
+* **data:** add minor gray hover state ([f827479](https://github.com/Sage/design-tokens/commit/f8274797284860947dddbb494bbd6f6815b11ca0))
+
 # [4.21.0](https://github.com/Sage/design-tokens/compare/v4.20.0...v4.21.0) (2023-07-11)
 
 
