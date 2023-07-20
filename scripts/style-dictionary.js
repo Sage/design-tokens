@@ -24,6 +24,7 @@ const groups = {
     'ts/color/modifiers'
   ],
   name: [
+<<<<<<< HEAD
 
   ],
   mobile: [
@@ -39,6 +40,14 @@ const groups = {
     'ts/border/css/shorthand',
     'ts/shadow/css/shorthand',
     'ts/color/modifiers'
+=======
+    'custom/name/camel'
+  ],
+  mobile: [
+    'custom/name/camel',
+    'custom/value/css-box-shadow',
+    'custom/value/css-typography'
+>>>>>>> 901bace (feat: use updated sd-transforms package)
   ]
 }
 

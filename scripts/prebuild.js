@@ -7,7 +7,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
 // } = require('omod')
 const { resolve } = require('path')
 const {
-  removeSync,
+  removeSync
   // readJsonSync,
   // outputJsonSync
 } = require('fs-extra')
