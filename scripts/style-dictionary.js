@@ -10,15 +10,6 @@ const transforms = glob('./scripts/transforms/*.transform.js').map(path => requi
 const formats = glob('./scripts/formats/*.format.js').map(path => require(resolve(path)))
 const groups = {
   web: [
-    // // 'custom/attributes/default',
-    // 'custom/name/camel',
-    // 'custom/value/css-eval',
-    // // 'ts/color/css/hexrgba',
-    // 'ts/descriptionToComment',
-    // 'ts/color/modifiers',
-    // 'custom/value/css-box-shadow',
-    // 'custom/value/css-typography',
-    // 'custom/value/css-font-weight'
     'name/cti/camel',
     'ts/descriptionToComment',
     'ts/size/px',
@@ -33,11 +24,9 @@ const groups = {
     'ts/color/modifiers'
   ],
   name: [
-    // 'custom/attributes/default',
     'custom/name/camel'
   ],
   mobile: [
-    // 'custom/attributes/default',
     'custom/name/camel',
     'custom/value/css-box-shadow',
     'custom/value/css-typography'
