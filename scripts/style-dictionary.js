@@ -24,12 +24,21 @@ const groups = {
     'ts/color/modifiers'
   ],
   name: [
-    'custom/name/camel'
+
   ],
   mobile: [
-    'custom/name/camel',
-    'custom/value/css-box-shadow',
-    'custom/value/css-typography'
+    'name/cti/camel',
+    'ts/descriptionToComment',
+    'ts/size/px',
+    'ts/opacity',
+    'ts/size/lineheight',
+    'ts/typography/fontWeight',
+    'ts/resolveMath',
+    'ts/size/css/letterspacing',
+    'ts/typography/css/shorthand',
+    'ts/border/css/shorthand',
+    'ts/shadow/css/shorthand',
+    'ts/color/modifiers'
   ]
 }
 
