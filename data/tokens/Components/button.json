@@ -1,0 +1,413 @@
+{
+  "buttonMajor": {
+    "primary": {
+      "bg-active": {
+        "value": "{base.color.selectable.major.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.active-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "bg-disabled": {
+        "value": "{base.color.selectable.inactive.canvas-bg}",
+        "type": "color"
+      },
+      "bg-enabled": {
+        "value": "{base.color.selectable.major.default}",
+        "type": "color"
+      },
+      "bg-hover": {
+        "value": "{base.color.selectable.major.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.hover-darkness}",
+              "space": "lch",
+              "color": "{base.color.fg-default}"
+            }
+          }
+        }
+      },
+      "label-disabled": {
+        "value": "{base.color.fg-delicate}",
+        "type": "color"
+      },
+      "label-enabled": {
+        "value": "{base.color.selectable.major.on-default}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.major.on-default}",
+        "type": "color"
+      }
+    },
+    "secondary": {
+      "bg-active": {
+        "value": "{base.color.selectable.major.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.active-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "bg-hover": {
+        "value": "{base.color.selectable.major.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.hover-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "border-disabled": {
+        "value": "{base.color.selectable.inactive.canvas-bg}",
+        "type": "color"
+      },
+      "border-enabled": {
+        "value": "{base.color.selectable.major.default}",
+        "type": "color"
+      },
+      "label-disabled": {
+        "value": "{base.color.fg-delicate}",
+        "type": "color"
+      },
+      "label-enabled": {
+        "value": "{base.color.selectable.major.default}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.major.on-default}",
+        "type": "color"
+      }
+    },
+    "tertiary": {
+      "bg-active": {
+        "value": "{base.color.selectable.major.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.active-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "bg-hover": {
+        "value": "{base.color.selectable.major.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.hover-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "label-disabled": {
+        "value": "{base.color.fg-delicate}",
+        "type": "color"
+      },
+      "label-enabled": {
+        "value": "{base.color.selectable.major.default}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.major.on-default}",
+        "type": "color"
+      }
+    }
+  },
+  "buttonMinor": {
+    "primary": {
+      "bg-active": {
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.active-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "bg-disabled": {
+        "value": "{base.color.selectable.inactive.canvas-bg}",
+        "type": "color"
+      },
+      "bg-enabled": {
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color"
+      },
+      "bg-hover": {
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.hover-darkness}",
+              "space": "lch",
+              "color": "{base.color.fg-default}"
+            }
+          }
+        }
+      },
+      "label-disabled": {
+        "value": "{base.color.fg-delicate}",
+        "type": "color"
+      },
+      "label-enabled": {
+        "value": "{base.color.selectable.minor.on-default}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.minor.on-default}",
+        "type": "color"
+      }
+    },
+    "secondary": {
+      "bg-active": {
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.active-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "bg-hover": {
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.hover-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "border-disabled": {
+        "value": "{base.color.selectable.inactive.canvas-bg}",
+        "type": "color"
+      },
+      "border-enabled": {
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color"
+      },
+      "label-disabled": {
+        "value": "{base.color.fg-delicate}",
+        "type": "color"
+      },
+      "label-enabled": {
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.minor.on-default}",
+        "type": "color"
+      }
+    },
+    "tertiary": {
+      "bg-active": {
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.active-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "bg-hover": {
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.hover-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "label-disabled": {
+        "value": "{base.color.fg-delicate}",
+        "type": "color"
+      },
+      "label-enabled": {
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.minor.on-default}",
+        "type": "color"
+      }
+    }
+  },
+  "buttonDestructive": {
+    "primary": {
+      "bg-disabled": {
+        "value": "{base.color.selectable.inactive.canvas-bg}",
+        "type": "color"
+      },
+      "bg-enabled": {
+        "value": "{base.color.selectable.destructive.default}",
+        "type": "color"
+      },
+      "bg-hover": {
+        "value": "{base.color.selectable.destructive.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.hover-darkness}",
+              "space": "lch",
+              "color": "{base.color.fg-default}"
+            }
+          }
+        }
+      },
+      "label-disabled": {
+        "value": "{base.color.fg-delicate}",
+        "type": "color"
+      },
+      "label-enabled": {
+        "value": "{base.color.selectable.destructive.fg}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.destructive.fg}",
+        "type": "color"
+      }
+    },
+    "secondary": {
+      "bg-hover": {
+        "value": "{base.color.selectable.destructive.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.hover-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "border-disabled": {
+        "value": "{base.color.selectable.inactive.canvas-bg}",
+        "type": "color"
+      },
+      "border-enabled": {
+        "value": "{base.color.selectable.destructive.default}",
+        "type": "color"
+      },
+      "label-disabled": {
+        "value": "{base.color.fg-delicate}",
+        "type": "color"
+      },
+      "label-enabled": {
+        "value": "{base.color.selectable.destructive.default}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.destructive.fg}",
+        "type": "color"
+      }
+    },
+    "tertiary": {
+      "bg-hover": {
+        "value": "{base.color.selectable.destructive.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "{base.color.modifiers.button.hover-darkness}",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "label-disabled": {
+        "value": "{base.color.fg-delicate}",
+        "type": "color"
+      },
+      "label-enabled": {
+        "value": "{base.color.selectable.destructive.default}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.destructive.fg}",
+        "type": "color"
+      }
+    }
+  },
+  "buttonSubtle": {
+    "bg-hover": {
+      "value": "{base.color.selectable.minor.default}",
+      "type": "color",
+      "$extensions": {
+        "studio.tokens": {
+          "modify": {
+            "type": "lighten",
+            "value": "{base.color.modifiers.tint.90}",
+            "space": "lch",
+            "color": "{base.color.fg-default}"
+          }
+        }
+      }
+    },
+    "label-enabled": {
+      "value": "{base.color.selectable.minor.default}",
+      "type": "color",
+      "$extensions": {
+        "studio.tokens": {
+          "modify": {
+            "type": "lighten",
+            "value": "{base.color.modifiers.tint.20}",
+            "space": "lch"
+          }
+        }
+      }
+    },
+    "label-hover": {
+      "value": "{base.color.selectable.minor.default}",
+      "type": "color"
+    }
+  }
+}

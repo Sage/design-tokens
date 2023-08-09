@@ -27,6 +27,19 @@
           }
         }
       },
+      "fg-soft": {
+        "value": "{origin.colors.grayProduct.1000}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.55",
+              "space": "lch"
+            }
+          }
+        }
+      },
       "fg-delicate": {
         "value": "{origin.colors.grayProduct.1000}",
         "type": "color",
@@ -133,6 +146,16 @@
         "major": {
           "default": {
             "value": "{origin.colors.jade.500}",
+            "type": "color"
+          },
+          "on-default": {
+            "value": "{origin.colors.grayProduct.000}",
+            "type": "color"
+          }
+        },
+        "minor": {
+          "default": {
+            "value": "{origin.colors.navyAdjusted.500}",
             "type": "color"
           },
           "on-default": {
