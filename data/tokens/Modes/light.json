@@ -1,7 +1,7 @@
 {
   "base": {
     "color": {
-      "fg-severe": {
+      "fg-extreme": {
         "value": "{origin.colors.grayProduct.1000}",
         "type": "color",
         "$extensions": {}
@@ -72,12 +72,12 @@
           }
         }
       },
-      "bg-harsh": {
+      "bg-extreme": {
         "value": "{origin.colors.grayProduct.000}",
         "type": "color",
         "$extensions": {}
       },
-      "bg-firm": {
+      "bg-harsh": {
         "value": "{origin.colors.grayProduct.000}",
         "type": "color",
         "$extensions": {
@@ -93,16 +93,16 @@
       },
       "container": {
         "bg": {
-          "value": "{base.color.bg-harsh}",
+          "value": "{base.color.bg-extreme}",
           "type": "color"
         },
         "bg-Alt": {
-          "value": "{base.color.bg-firm}",
+          "value": "{base.color.bg-harsh}",
           "type": "color",
           "$extensions": {}
         },
         "border": {
-          "value": "{base.color.bg-harsh}",
+          "value": "{base.color.bg-extreme}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -129,11 +129,11 @@
         },
         "form": {
           "bg": {
-            "value": "{base.color.bg-firm}",
+            "value": "{base.color.bg-extreme}",
             "type": "color"
           },
           "border": {
-            "value": "{base.color.bg-harsh}",
+            "value": "{base.color.bg-extreme}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -148,8 +148,8 @@
           }
         },
         "inactive": {
-          "bg": {
-            "value": "{base.color.bg-harsh}",
+          "default": {
+            "value": "{origin.colors.navyAdjusted.500}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -157,21 +157,21 @@
                   "type": "mix",
                   "value": "{base.color.modifiers.button.disabled-mix} ",
                   "space": "lch",
-                  "color": "{origin.colors.navyAdjusted.500} "
+                  "color": "{base.color.bg-harsh}"
                 }
               }
             }
           },
           "border": {
-            "value": "{base.color.bg-harsh}",
+            "value": "{origin.colors.navyAdjusted.500}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "0.4",
+                  "value": "0.8",
                   "space": "lch",
-                  "color": "{origin.colors.navyAdjusted.500} "
+                  "color": "{base.color.bg-harsh} "
                 }
               }
             }
@@ -572,7 +572,7 @@
             "type": "other"
           },
           "disabled-mix": {
-            "value": "0.1",
+            "value": "0.9",
             "type": "other"
           }
         }
