@@ -1,6 +1,11 @@
 {
   "base": {
     "color": {
+      "fg-severe": {
+        "value": "{origin.colors.grayProduct.1000}",
+        "type": "color",
+        "$extensions": {}
+      },
       "fg-firm": {
         "value": "{origin.colors.grayProduct.1000}",
         "type": "color",
@@ -144,14 +149,15 @@
         },
         "inactive": {
           "bg": {
-            "value": "{origin.colors.navyAdjusted.500}",
+            "value": "{base.color.bg-harsh}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "lighten",
-                  "value": "{base.color.modifiers.button.disabled-lighten}",
-                  "space": "lch"
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.disabled-mix} ",
+                  "space": "lch",
+                  "color": "{origin.colors.navyAdjusted.500} "
                 }
               }
             }
@@ -552,20 +558,16 @@
           }
         },
         "button": {
-          "hover-darkness": {
+          "hover-mix": {
             "value": "0.2",
             "type": "other"
           },
-          "active-darkness": {
+          "active-mix": {
             "value": "0.4",
             "type": "other"
           },
-          "disabled-content-alpha": {
-            "value": "0.3",
-            "type": "other"
-          },
-          "disabled-lighten": {
-            "value": "0.9",
+          "disabled-mix": {
+            "value": "0.1",
             "type": "other"
           }
         }
