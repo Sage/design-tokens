@@ -202,6 +202,16 @@
             "value": "{origin.colors.grayProduct.000}",
             "type": "color"
           }
+        },
+        "minorGray": {
+          "default": {
+            "value": "#6D6D6D",
+            "type": "color"
+          },
+          "on-default": {
+            "value": "{origin.colors.grayProduct.000}",
+            "type": "color"
+          }
         }
       },
       "TEST": {
@@ -396,6 +406,40 @@
           },
           "active": {
             "value": "{base.color.selectable.minorDull.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.tint.40} ",
+                  "space": "hsl",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          }
+        },
+        "minorGray": {
+          "default": {
+            "value": "{base.color.selectable.minorGray.default}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{base.color.selectable.minorGray.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.tint.20}",
+                  "space": "hsl",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "active": {
+            "value": "{base.color.selectable.minorGray.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
