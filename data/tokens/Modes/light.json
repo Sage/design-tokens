@@ -172,6 +172,36 @@
             "value": "{origin.colors.grayProduct.000}",
             "type": "color"
           }
+        },
+        "minorBright": {
+          "default": {
+            "value": "#45738A",
+            "type": "color"
+          },
+          "on-default": {
+            "value": "{origin.colors.grayProduct.000}",
+            "type": "color"
+          }
+        },
+        "minorBrighter": {
+          "default": {
+            "value": "#2E7497",
+            "type": "color"
+          },
+          "on-default": {
+            "value": "{origin.colors.grayProduct.000}",
+            "type": "color"
+          }
+        },
+        "minorDull": {
+          "default": {
+            "value": "#626F76",
+            "type": "color"
+          },
+          "on-default": {
+            "value": "{origin.colors.grayProduct.000}",
+            "type": "color"
+          }
         }
       },
       "TEST": {
@@ -279,11 +309,11 @@
         },
         "minorBright": {
           "default": {
-            "value": "#45738A",
+            "value": "{base.color.selectable.minorBright.default}",
             "type": "color"
           },
           "hover": {
-            "value": "#45738A",
+            "value": "{base.color.selectable.minorBright.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -297,13 +327,81 @@
             }
           },
           "active": {
-            "value": "#45738A",
+            "value": "{base.color.selectable.minorBright.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.40}",
+                  "value": "{base.color.modifiers.tint.40} ",
+                  "space": "hsl",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          }
+        },
+        "minorBrighter": {
+          "default": {
+            "value": "{base.color.selectable.minorBrighter.default}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{base.color.selectable.minorBrighter.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.tint.20}",
+                  "space": "hsl",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "active": {
+            "value": "{base.color.selectable.minorBrighter.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.tint.40} ",
+                  "space": "hsl",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          }
+        },
+        "minorDull": {
+          "default": {
+            "value": "{base.color.selectable.minorDull.default}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{base.color.selectable.minorDull.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.tint.20}",
+                  "space": "hsl",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "active": {
+            "value": "{base.color.selectable.minorDull.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.tint.40} ",
                   "space": "hsl",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -408,6 +506,28 @@
         "contrastMore": {
           "value": "{origin.colors.grayProduct.1000}",
           "type": "color"
+        }
+      }
+    }
+  },
+  "{base": {
+    "color": {
+      "selectable": {
+        "minorBright": {
+          "default}": {
+            "value": "#45738A",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.tint.40}",
+                  "space": "hsl",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          }
         }
       }
     }
