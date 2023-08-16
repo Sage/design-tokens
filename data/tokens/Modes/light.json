@@ -207,7 +207,7 @@
             "value": "{origin.colors.navyOffsetBase.500}",
             "type": "color"
           },
-          "on-default": {
+          "fg": {
             "value": "{origin.colors.grayProduct.000}",
             "type": "color"
           }
@@ -217,7 +217,7 @@
             "value": "#45738A",
             "type": "color"
           },
-          "on-default": {
+          "fg": {
             "value": "{origin.colors.grayProduct.000}",
             "type": "color"
           }
@@ -227,7 +227,7 @@
             "value": "#2E7497",
             "type": "color"
           },
-          "on-default": {
+          "fg": {
             "value": "{origin.colors.grayProduct.000}",
             "type": "color"
           }
@@ -237,7 +237,7 @@
             "value": "#626F76",
             "type": "color"
           },
-          "on-default": {
+          "fg": {
             "value": "{origin.colors.grayProduct.000}",
             "type": "color"
           }
@@ -247,7 +247,17 @@
             "value": "#6D6D6D",
             "type": "color"
           },
-          "on-default": {
+          "fg": {
+            "value": "{origin.colors.grayProduct.000}",
+            "type": "color"
+          }
+        },
+        "minorBlack": {
+          "default": {
+            "value": "{origin.colors.grayProduct.1000}",
+            "type": "color"
+          },
+          "fg": {
             "value": "{origin.colors.grayProduct.000}",
             "type": "color"
           }
@@ -324,32 +334,32 @@
         },
         "minorBlack": {
           "default": {
-            "value": "{origin.colors.grayProduct.1000}",
+            "value": "{base.color.selectable.minorBlack.default}",
             "type": "color"
           },
           "hover": {
-            "value": "{origin.colors.grayProduct.1000}",
+            "value": "{base.color.selectable.minorBlack.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.20}",
-                  "space": "lch",
+                  "value": "0.15",
+                  "space": "hsl",
                   "color": "{base.color.modifier.contrastLess} "
                 }
               }
             }
           },
           "active": {
-            "value": "{origin.colors.grayProduct.1000}",
+            "value": "{base.color.selectable.minorBlack.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.40}",
-                  "space": "lch",
+                  "value": "{base.color.modifiers.tint.30} ",
+                  "space": "hsl",
                   "color": "{base.color.modifier.contrastLess} "
                 }
               }
