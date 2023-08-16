@@ -1,3 +1,10 @@
+# [4.23.0](https://github.com/Sage/design-tokens/compare/v4.22.0...v4.23.0) (2023-08-16)
+
+
+### Features
+
+* **data:** add 2 color token for divider ([185c773](https://github.com/Sage/design-tokens/commit/185c7733ef206be5d3e8a786e576698e1856be7e))
+
 # [4.22.0](https://github.com/Sage/design-tokens/compare/v4.21.0...v4.22.0) (2023-07-18)
 
 
