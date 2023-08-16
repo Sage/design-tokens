@@ -195,7 +195,8 @@
         "minor": {
           "default": {
             "value": "{origin.colors.navyOffsetBase.500}",
-            "type": "color"
+            "type": "color",
+            "$extensions": {}
           },
           "fg": {
             "value": "{origin.colors.grayProduct.000}",
@@ -204,8 +205,9 @@
         },
         "minorEven": {
           "default": {
-            "value": "{origin.colors.navyOffsetBase.500}",
-            "type": "color"
+            "value": "#4F7284",
+            "type": "color",
+            "$extensions": {}
           },
           "fg": {
             "value": "{origin.colors.grayProduct.000}",
@@ -300,11 +302,11 @@
         },
         "minorEven": {
           "default": {
-            "value": "#4F7284",
+            "value": "{base.color.selectable.minorEven.default}",
             "type": "color"
           },
           "hover": {
-            "value": "#4F7284",
+            "value": "{base.color.selectable.minorEven.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -318,7 +320,7 @@
             }
           },
           "active": {
-            "value": "#4F7284",
+            "value": "{base.color.selectable.minorEven.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -518,7 +520,7 @@
         }
       },
       "modifiers": {
-        "tint": {
+        "ratio": {
           "0": {
             "value": "0",
             "type": "other"
@@ -573,17 +575,32 @@
           }
         },
         "button": {
-          "hover-mix": {
+          "hover-shade": {
             "value": "0.2",
-            "type": "other"
+            "type": "other",
+            "description": "shade"
           },
-          "active-mix": {
+          "active-shade": {
             "value": "0.4",
-            "type": "other"
+            "type": "other",
+            "description": "shade"
           },
-          "disabled-mix": {
+          "disabled-tint": {
             "value": "0.9",
-            "type": "other"
+            "type": "other",
+            "description": "tint"
+          }
+        },
+        "menuBg": {
+          "hover-tint": {
+            "value": "0.7",
+            "type": "other",
+            "description": "tint"
+          },
+          "active-shade": {
+            "value": "0.4",
+            "type": "other",
+            "description": "shade"
           }
         }
       },
