@@ -18,11 +18,11 @@
         "type": "color"
       },
       "border-disabled": {
-        "value": "{base.color.selectable.inactive.border}",
+        "value": "{base.color.selectable.inactive.alt}",
         "type": "color"
       },
       "border-readOnly": {
-        "value": "{base.color.selectable.inactive.border}",
+        "value": "{base.color.selectable.inactive.alt}",
         "type": "color"
       }
     },
@@ -45,9 +45,10 @@
         "$extensions": {
           "studio.tokens": {
             "modify": {
-              "type": "darken",
-              "value": "{base.color.modifiers.tint.20}",
-              "space": "lch"
+              "type": "mix",
+              "value": "{base.color.modifiers.ratio.20}",
+              "space": "lch",
+              "color": "{base.color.modifier.contrastMore}"
             }
           }
         }

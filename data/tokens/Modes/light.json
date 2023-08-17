@@ -114,6 +114,11 @@
               }
             }
           }
+        },
+        "divder": {
+          "value": "{base.color.fg-faint}",
+          "type": "color",
+          "$extensions": {}
         }
       },
       "selectable": {
@@ -133,15 +138,15 @@
             "type": "color"
           },
           "border": {
-            "value": "{base.color.bg-extreme}",
+            "value": "{origin.colors.navyAdjusted.500}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "0.7",
+                  "value": "0.4",
                   "space": "lch",
-                  "color": "{origin.colors.navyAdjusted.500} "
+                  "color": "{base.color.bg-extreme}"
                 }
               }
             }
@@ -157,12 +162,12 @@
                   "type": "mix",
                   "value": "{base.color.modifiers.button.disabled-mix} ",
                   "space": "lch",
-                  "color": "{base.color.bg-harsh}"
+                  "color": "{base.color.bg-extreme}"
                 }
               }
             }
           },
-          "border": {
+          "alt": {
             "value": "{origin.colors.navyAdjusted.500}",
             "type": "color",
             "$extensions": {
@@ -171,13 +176,18 @@
                   "type": "mix",
                   "value": "0.8",
                   "space": "lch",
-                  "color": "{base.color.bg-harsh} "
+                  "color": "{base.color.bg-extreme} "
                 }
               }
             }
           },
           "fg": {
             "value": "{base.color.fg-delicate}",
+            "type": "color",
+            "$extensions": {}
+          },
+          "fg-alt": {
+            "value": "{base.color.bg-extreme}",
             "type": "color",
             "$extensions": {}
           }
@@ -194,7 +204,7 @@
         },
         "minor": {
           "default": {
-            "value": "{origin.colors.navyOffsetBase.500}",
+            "value": "{origin.colors.navyNEW.500}",
             "type": "color",
             "$extensions": {}
           },
@@ -278,7 +288,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.20}",
+                  "value": "{base.color.modifiers.button.hover-mix}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -292,7 +302,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.40}",
+                  "value": "{base.color.modifiers.button.active-mix}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -312,7 +322,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.20}",
+                  "value": "{base.color.modifiers.button.hover-mix}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -326,7 +336,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.40}",
+                  "value": "{base.color.modifiers.button.active-mix}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -380,7 +390,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.20}",
+                  "value": "{base.color.modifiers.button.hover-mix}",
                   "space": "hsl",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -394,7 +404,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.40} ",
+                  "value": "{base.color.modifiers.button.active-mix}",
                   "space": "hsl",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -414,7 +424,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.20}",
+                  "value": "{base.color.modifiers.button.hover-mix}",
                   "space": "hsl",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -428,7 +438,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.40} ",
+                  "value": "{base.color.modifiers.button.active-mix}",
                   "space": "hsl",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -448,7 +458,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.20}",
+                  "value": "{base.color.modifiers.button.hover-mix}",
                   "space": "hsl",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -462,7 +472,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.40} ",
+                  "value": "{base.color.modifiers.button.active-mix}",
                   "space": "hsl",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -482,7 +492,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.20}",
+                  "value": "{base.color.modifiers.button.hover-mix}",
                   "space": "hsl",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -496,7 +506,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.tint.40} ",
+                  "value": "{base.color.modifiers.button.active-mix}",
                   "space": "hsl",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -575,32 +585,20 @@
           }
         },
         "button": {
-          "hover-shade": {
+          "hover-mix": {
             "value": "0.2",
             "type": "other",
-            "description": "shade"
+            "description": "more contrast"
           },
-          "active-shade": {
+          "active-mix": {
             "value": "0.4",
             "type": "other",
-            "description": "shade"
+            "description": "more contrast"
           },
-          "disabled-tint": {
-            "value": "0.9",
+          "disabled-mix": {
+            "value": "0.90",
             "type": "other",
-            "description": "tint"
-          }
-        },
-        "menuBg": {
-          "hover-tint": {
-            "value": "0.7",
-            "type": "other",
-            "description": "tint"
-          },
-          "active-shade": {
-            "value": "0.4",
-            "type": "other",
-            "description": "shade"
+            "description": "less contrast"
           }
         }
       },
@@ -612,28 +610,6 @@
         "contrastMore": {
           "value": "{origin.colors.grayProduct.1000}",
           "type": "color"
-        }
-      }
-    }
-  },
-  "{base": {
-    "color": {
-      "selectable": {
-        "minorBright": {
-          "default}": {
-            "value": "#45738A",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.tint.40}",
-                  "space": "hsl",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          }
         }
       }
     }
