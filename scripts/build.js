@@ -8,6 +8,66 @@ const { dictionary, groups } = require('./style-dictionary')
 const platforms = readdirSync('./data/tokens/Platforms/')
 const modes = readdirSync('./data/tokens/Modes/')
 
+const getFiles = (modeName, format, subType, suffix) => {
+  return [
+    ...getSplit(modeName, format, subType, suffix),
+    ...getComponents(modeName, format, subType, suffix)
+  ]
+}
+
+const getComponents = (modeName, format, subType, suffix) => {
+  return [
+    ...getComponentSplit('/components/buttonMajor', 'buttonMajor', modeName, format, subType, suffix),
+    ...getComponentSplit('/components/container', 'container', modeName, format, subType, suffix),
+    ...getComponentSplit('/components/form', 'form', modeName, format, subType, suffix)
+  ]
+}
+
+const getComponentSplit = (componentName, componentFilter, modeName, format, subType, suffix) => {
+  return [
+    {
+      destination: `${subType}${modeName}${componentName}/all.${suffix}`,
+      filter: (token) => token.path[0] === componentFilter,
+      format: format
+    },
+    {
+      destination: `${subType}${modeName}${componentName}/color.${suffix}`,
+      filter: (token) => token.type === 'color' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      format: format
+    },
+    {
+      destination: `${subType}${modeName}${componentName}/borderRadius.${suffix}`,
+      filter: (token) => token.type === 'borderRadius' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      format: format
+    },
+    {
+      destination: `${subType}${modeName}${componentName}/borderWidth.${suffix}`,
+      filter: (token) => token.type === 'borderWidth' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      format: format
+    },
+    {
+      destination: `${subType}${modeName}${componentName}/shadow.${suffix}`,
+      filter: (token) => token.type === 'boxShadow' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      format: format
+    },
+    {
+      destination: `${subType}${modeName}${componentName}/sizing.${suffix}`,
+      filter: (token) => token.type === 'sizing' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      format: format
+    },
+    {
+      destination: `${subType}${modeName}${componentName}/spacing.${suffix}`,
+      filter: (token) => token.type === 'spacing' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      format: format
+    },
+    {
+      destination: `${subType}${modeName}${componentName}/typography.${suffix}`,
+      filter: (token) => token.type === 'typography' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      format: format
+    }
+  ]
+}
+
 const getSplit = (modeName, format, subType, suffix) => {
   return [
     {
@@ -20,12 +80,17 @@ const getSplit = (modeName, format, subType, suffix) => {
       format: format
     },
     {
-      destination: `${subType}${modeName}/borders.${suffix}`,
-      filter: (token) => (token.type === 'borderRadius' || token.type === 'borderWidth') && token.path.indexOf('origin') === -1,
+      destination: `${subType}${modeName}/borderRadius.${suffix}`,
+      filter: (token) => token.type === 'borderRadius' && token.path.indexOf('origin') === -1,
       format: format
     },
     {
-      destination: `${subType}${modeName}/shadows.${suffix}`,
+      destination: `${subType}${modeName}/borderWidth.${suffix}`,
+      filter: (token) => token.type === 'borderWidth' && token.path.indexOf('origin') === -1,
+      format: format
+    },
+    {
+      destination: `${subType}${modeName}/shadow.${suffix}`,
       filter: (token) => token.type === 'boxShadow' && token.path.indexOf('origin') === -1,
       format: format
     },
@@ -63,10 +128,12 @@ const getConfig = (platform, mode) => {
         buildPath: 'dist/web/',
         transforms: groups.web,
         files: [
-          ...getSplit(modeName, 'javascript/module-flat', 'js/common/', 'js'),
-          ...getSplit(modeName, 'custom/js/es6-module-flat', 'js/es6/', 'js'),
-          ...getSplit(modeName, 'css/variables', 'css/', 'css'),
-          ...getSplit(modeName, 'scss/variables', 'scss/', 'scss')
+          ...getFiles(modeName, 'javascript/module', 'js/common/', 'js'),
+          ...getFiles(modeName, 'javascript/es6', 'js/es6/', 'js'),
+          ...getFiles(modeName, 'javascript/umd', 'js/umd/', 'js'),
+          ...getFiles(modeName, 'json', 'js/json/', 'json'),
+          ...getFiles(modeName, 'css/variables', 'css/', 'css'),
+          ...getFiles(modeName, 'scss/variables', 'scss/', 'scss')
         ]
       },
       android: {

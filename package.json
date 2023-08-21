@@ -26,7 +26,9 @@
     "dev:docs": "nodemon --watch \"./scripts/*\" --watch \"./templates/**/*\" --exec \"node ./scripts/tokens-documentation.js\"",
     "prepublishOnly": "node ./scripts/bump-main-package-version.js",
     "lint": "eslint .",
-    "format": "eslint --fix ."
+    "format": "eslint --fix .",
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
@@ -35,8 +37,17 @@
     "@semantic-release/github": "^8.0.2",
     "@semantic-release/npm": "^9.0.0",
     "@semantic-release/release-notes-generator": "^10.0.3",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-react": "^7.22.5",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/builder-webpack5": "^6.3.12",
+    "@storybook/html": "^6.3.12",
+    "@storybook/manager-webpack5": "^6.3.12",
     "@tokens-studio/sd-transforms": "^0.10.3",
     "@types/glob": "^7.1.4",
+    "babel-loader": "^8.2.3",
     "colorjs.io": "^0.4.4-patch.1",
     "dotenv": "^16.0.0",
     "eslint": "^7.25.0",
@@ -58,8 +69,12 @@
     "nodemon": "^2.0.20",
     "omod": "1.2.0",
     "prettier": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "scss": "^0.2.4",
+    "storybook-design-token": "^2.0.0",
     "style-dictionary": "^3.0.1",
+    "styled-components": "^4.4.1",
     "tinycolor2": "^1.4.2",
     "typescript": "^4.6.2"
   }

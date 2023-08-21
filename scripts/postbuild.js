@@ -12,6 +12,7 @@ const {
 const pick = require('lodash/pick')
 const camelCase = require('lodash/camelCase')
 const glob = require('glob').sync
+const path = require('path')
 const tsc = require('node-typescript-compiler')
 
 const filename = require('./utils/filename')
@@ -94,7 +95,7 @@ function addFileHeader () {
   files.forEach((file) => {
     try {
       const filePath = resolve(__dirname, '../', file)
-      const outputData = headerContents + '\r\n\r\n' + readFileSync(filePath)
+      const outputData = headerContents(filename(filePath), file) + '\r\n\r\n' + readFileSync(filePath)
 
       outputFileSync(filePath, outputData)
     } catch (er) {
