@@ -1,108 +1,112 @@
 {
   "base": {
     "color": {
-      "fg-extreme": {
-        "value": "{origin.colors.grayProduct.1000}",
-        "type": "color",
-        "$extensions": {}
-      },
-      "fg-firm": {
-        "value": "{origin.colors.grayProduct.1000}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "alpha",
-              "value": "0.9",
-              "space": "lch"
+      "content": {
+        "fg-extreme": {
+          "value": "{origin.colors.grayProduct.1000}",
+          "type": "color",
+          "$extensions": {}
+        },
+        "fg-firm": {
+          "value": "{origin.colors.grayProduct.1000}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.9",
+                "space": "lch"
+              }
+            }
+          }
+        },
+        "fg-moderate": {
+          "value": "{origin.colors.grayProduct.1000}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.65",
+                "space": "lch"
+              }
+            }
+          }
+        },
+        "fg-soft": {
+          "value": "{origin.colors.grayProduct.1000}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.55",
+                "space": "lch"
+              }
+            }
+          }
+        },
+        "fg-delicate": {
+          "value": "{origin.colors.grayProduct.1000}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.30",
+                "space": "lch"
+              }
+            }
+          }
+        },
+        "fg-faint": {
+          "value": "{origin.colors.grayProduct.1000}",
+          "type": "color",
+          "description": "used for dividers",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.10",
+                "space": "lch"
+              }
             }
           }
         }
       },
-      "fg-moderate": {
-        "value": "{origin.colors.grayProduct.1000}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "alpha",
-              "value": "0.65",
-              "space": "lch"
-            }
-          }
-        }
-      },
-      "fg-soft": {
-        "value": "{origin.colors.grayProduct.1000}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "alpha",
-              "value": "0.55",
-              "space": "lch"
-            }
-          }
-        }
-      },
-      "fg-delicate": {
-        "value": "{origin.colors.grayProduct.1000}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "alpha",
-              "value": "0.30",
-              "space": "lch"
-            }
-          }
-        }
-      },
-      "fg-faint": {
-        "value": "{origin.colors.grayProduct.1000}",
-        "type": "color",
-        "description": "used for dividers",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "alpha",
-              "value": "0.10",
-              "space": "lch"
-            }
-          }
-        }
-      },
-      "bg-extreme": {
-        "value": "{origin.colors.grayProduct.000}",
-        "type": "color",
-        "$extensions": {}
-      },
-      "bg-harsh": {
-        "value": "{origin.colors.grayProduct.000}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "0.050",
-              "space": "lch",
-              "color": "{origin.colors.navyAdjusted.500} "
+      "backdrop": {
+        "bg": {
+          "value": "{origin.colors.grayProduct.000}",
+          "type": "color",
+          "$extensions": {}
+        },
+        "bg-alt": {
+          "value": "{origin.colors.grayProduct.000}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.050",
+                "space": "lch",
+                "color": "{origin.colors.navyAdjusted.500} "
+              }
             }
           }
         }
       },
       "container": {
         "bg": {
-          "value": "{base.color.bg-extreme}",
+          "value": "{base.color.backdrop.bg}",
           "type": "color"
         },
-        "bg-Alt": {
-          "value": "{base.color.bg-harsh}",
+        "bg-alt": {
+          "value": "{base.color.backdrop.bg-alt}",
           "type": "color",
           "$extensions": {}
         },
         "border": {
-          "value": "{base.color.bg-extreme}",
+          "value": "{base.color.backdrop.bg}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -110,13 +114,13 @@
                 "type": "mix",
                 "value": "0.3",
                 "space": "lch",
-                "color": "{base.color.fg-faint}"
+                "color": "{base.color.modifier.contrastMore}"
               }
             }
           }
         },
-        "divder": {
-          "value": "{base.color.fg-faint}",
+        "divider": {
+          "value": "{base.color.content.fg-faint}",
           "type": "color",
           "$extensions": {}
         }
@@ -162,7 +166,7 @@
         },
         "form": {
           "bg": {
-            "value": "{base.color.bg-extreme}",
+            "value": "{base.color.backdrop.bg}",
             "type": "color"
           },
           "border": {
@@ -181,41 +185,38 @@
           }
         },
         "inactive": {
-          "default": {
+          "bg": {
             "value": "{origin.colors.navyAdjusted.500}",
             "type": "color",
+            "description": "Used on disabled form inputs.",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.disabled-mix} ",
+                  "value": "{base.color.modifiers.input.disabled-mix}",
                   "space": "lch",
-                  "color": "{base.color.bg-extreme}"
+                  "color": "{base.color.modifier.contrastLess}"
                 }
               }
             }
           },
-          "alt": {
+          "bg-alt": {
             "value": "{origin.colors.navyAdjusted.500}",
             "type": "color",
+            "description": "Used on disabled buttons.",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
                   "value": "0.8",
                   "space": "lch",
-                  "color": "{base.color.bg-extreme} "
+                  "color": "{base.color.modifier.contrastLess}"
                 }
               }
             }
           },
           "fg": {
-            "value": "{base.color.fg-delicate}",
-            "type": "color",
-            "$extensions": {}
-          },
-          "fg-alt": {
-            "value": "{base.color.bg-extreme}",
+            "value": "{base.color.content.fg-delicate}",
             "type": "color",
             "$extensions": {}
           }
@@ -517,24 +518,130 @@
           "default": {
             "value": "{origin.colors.red.500}",
             "type": "color"
+          },
+          "hover": {
+            "value": "{base.color.status.negative.default}",
+            "type": "color",
+            "description": "used on pill hover states",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.hover-mix}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
           }
         },
         "caution": {
           "default": {
             "value": "{origin.colors.orange.500}",
             "type": "color"
+          },
+          "hover": {
+            "value": "{base.color.status.caution.default}",
+            "type": "color",
+            "description": "used on pill hover states",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.hover-mix}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "default-alt": {
+            "value": "{base.color.status.caution.default}",
+            "type": "color",
+            "description": "used on message text - have to make text darker for it to be accessible.",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.2",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
           }
         },
         "success": {
           "default": {
             "value": "{origin.colors.green.500}",
             "type": "color"
+          },
+          "hover": {
+            "value": "{base.color.status.success.default}",
+            "type": "color",
+            "description": "used on pill hover states",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.hover-mix}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
           }
         },
         "info": {
           "default": {
             "value": "{origin.colors.blue.500}",
             "type": "color"
+          },
+          "hover": {
+            "value": "{base.color.status.info.default}",
+            "type": "color",
+            "description": "used on pill hover states",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.hover-mix}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          }
+        },
+        "neutral": {
+          "default": {
+            "value": "{origin.colors.navyAdjusted.800}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.2",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess}"
+                }
+              }
+            }
+          },
+          "hover": {
+            "value": "{base.color.status.neutral.default}",
+            "type": "color",
+            "description": "used on pill hover states",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.hover-mix}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
           }
         }
       },
@@ -606,6 +713,13 @@
           },
           "disabled-mix": {
             "value": "0.90",
+            "type": "other",
+            "description": "less contrast"
+          }
+        },
+        "input": {
+          "disabled-mix": {
+            "value": "0.95",
             "type": "other",
             "description": "less contrast"
           }
