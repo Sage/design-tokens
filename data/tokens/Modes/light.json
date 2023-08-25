@@ -497,6 +497,30 @@
               }
             }
           }
+        },
+        "focus": {
+          "border": {
+            "value": "{origin.colors.gold.500}",
+            "type": "color"
+          },
+          "bg": {
+            "value": "{origin.colors.gold.500}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.4",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess}"
+                }
+              }
+            }
+          },
+          "border-alt": {
+            "value": "{origin.colors.grayProduct.1000}",
+            "type": "color"
+          }
         }
       },
       "status": {
