@@ -3,12 +3,12 @@
     "color": {
       "content": {
         "fg-extreme": {
-          "value": "{origin.colors.grayProduct.1000}",
+          "value": "{origin.colors.black}",
           "type": "color",
           "$extensions": {}
         },
         "fg-firm": {
-          "value": "{origin.colors.grayProduct.1000}",
+          "value": "{origin.colors.black}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -21,7 +21,7 @@
           }
         },
         "fg-moderate": {
-          "value": "{origin.colors.grayProduct.1000}",
+          "value": "{origin.colors.black}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -34,7 +34,7 @@
           }
         },
         "fg-soft": {
-          "value": "{origin.colors.grayProduct.1000}",
+          "value": "{origin.colors.black}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -47,7 +47,7 @@
           }
         },
         "fg-delicate": {
-          "value": "{origin.colors.grayProduct.1000}",
+          "value": "{origin.colors.black}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -60,7 +60,7 @@
           }
         },
         "fg-faint": {
-          "value": "{origin.colors.grayProduct.1000}",
+          "value": "{origin.colors.black}",
           "type": "color",
           "description": "used for dividers",
           "$extensions": {
@@ -76,12 +76,12 @@
       },
       "backdrop": {
         "bg": {
-          "value": "{origin.colors.grayProduct.000}",
+          "value": "{origin.colors.white}",
           "type": "color",
           "$extensions": {}
         },
-        "bg-alt": {
-          "value": "{origin.colors.grayProduct.000}",
+        "bgAlt": {
+          "value": "{origin.colors.white}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -100,8 +100,8 @@
           "value": "{base.color.backdrop.bg}",
           "type": "color"
         },
-        "bg-alt": {
-          "value": "{base.color.backdrop.bg-alt}",
+        "bgAlt": {
+          "value": "{base.color.backdrop.bgAlt}",
           "type": "color",
           "$extensions": {}
         },
@@ -128,11 +128,11 @@
       "selectable": {
         "danger": {
           "default": {
-            "value": "{origin.colors.red.500}",
+            "value": "{origin.colors.red}",
             "type": "color"
           },
           "fg": {
-            "value": "{origin.colors.grayProduct.000}",
+            "value": "{origin.colors.white}",
             "type": "color"
           },
           "active": {
@@ -170,7 +170,7 @@
             "type": "color"
           },
           "border": {
-            "value": "{origin.colors.navyAdjusted.500}",
+            "value": "{origin.colors.navyAdjusted}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -178,7 +178,7 @@
                   "type": "mix",
                   "value": "0.4",
                   "space": "lch",
-                  "color": "{base.color.bg-extreme}"
+                  "color": "{base.color.backdrop.bg}"
                 }
               }
             }
@@ -186,7 +186,7 @@
         },
         "inactive": {
           "bg": {
-            "value": "{origin.colors.navyAdjusted.500}",
+            "value": "{origin.colors.navyAdjusted}",
             "type": "color",
             "description": "Used on disabled form inputs.",
             "$extensions": {
@@ -200,8 +200,8 @@
               }
             }
           },
-          "bg-alt": {
-            "value": "{origin.colors.navyAdjusted.500}",
+          "bgAlt": {
+            "value": "{origin.colors.navyAdjusted}",
             "type": "color",
             "description": "Used on disabled buttons.",
             "$extensions": {
@@ -223,11 +223,11 @@
         },
         "major": {
           "default": {
-            "value": "{origin.colors.jade.500}",
+            "value": "{origin.colors.jade}",
             "type": "color"
           },
           "fg": {
-            "value": "{origin.colors.grayProduct.000}",
+            "value": "{origin.colors.white}",
             "type": "color"
           },
           "hover": {
@@ -266,7 +266,7 @@
             "$extensions": {}
           },
           "fg": {
-            "value": "{origin.colors.grayProduct.000}",
+            "value": "{origin.colors.white}",
             "type": "color"
           },
           "hover": {
@@ -304,7 +304,7 @@
             "type": "color"
           },
           "fg": {
-            "value": "{origin.colors.grayProduct.000}",
+            "value": "{origin.colors.white}",
             "type": "color"
           },
           "hover": {
@@ -342,7 +342,7 @@
             "type": "color"
           },
           "fg": {
-            "value": "{origin.colors.grayProduct.000}",
+            "value": "{origin.colors.white}",
             "type": "color"
           },
           "hover": {
@@ -380,7 +380,7 @@
             "type": "color"
           },
           "fg": {
-            "value": "{origin.colors.grayProduct.000}",
+            "value": "{origin.colors.white}",
             "type": "color"
           },
           "hover": {
@@ -418,7 +418,7 @@
             "type": "color"
           },
           "fg": {
-            "value": "{origin.colors.grayProduct.000}",
+            "value": "{origin.colors.white}",
             "type": "color"
           },
           "active": {
@@ -452,11 +452,11 @@
         },
         "minorBlack": {
           "default": {
-            "value": "{origin.colors.grayProduct.1000}",
+            "value": "{origin.colors.black}",
             "type": "color"
           },
           "fg": {
-            "value": "{origin.colors.grayProduct.000}",
+            "value": "{origin.colors.white}",
             "type": "color"
           },
           "hover": {
@@ -489,12 +489,12 @@
           }
         },
         "focus": {
-          "border": {
-            "value": "{origin.colors.gold.500}",
+          "borderAlt": {
+            "value": "{origin.colors.gold}",
             "type": "color"
           },
           "bg": {
-            "value": "{origin.colors.gold.500}",
+            "value": "{origin.colors.gold}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -507,8 +507,8 @@
               }
             }
           },
-          "border-alt": {
-            "value": "{origin.colors.grayProduct.1000}",
+          "border": {
+            "value": "{origin.colors.black}",
             "type": "color"
           }
         }
@@ -516,7 +516,7 @@
       "status": {
         "negative": {
           "default": {
-            "value": "{origin.colors.red.500}",
+            "value": "{origin.colors.red}",
             "type": "color"
           },
           "hover": {
@@ -533,11 +533,15 @@
                 }
               }
             }
+          },
+          "fg": {
+            "value": "{origin.colors.white}",
+            "type": "color"
           }
         },
         "caution": {
           "default": {
-            "value": "{origin.colors.orange.500}",
+            "value": "{origin.colors.orange}",
             "type": "color"
           },
           "hover": {
@@ -555,7 +559,7 @@
               }
             }
           },
-          "default-alt": {
+          "defaultAlt": {
             "value": "{base.color.status.caution.default}",
             "type": "color",
             "description": "used on message text - have to make text darker for it to be accessible.",
@@ -569,11 +573,15 @@
                 }
               }
             }
+          },
+          "fg": {
+            "value": "{origin.colors.white}",
+            "type": "color"
           }
         },
         "success": {
           "default": {
-            "value": "{origin.colors.green.500}",
+            "value": "{origin.colors.green}",
             "type": "color"
           },
           "hover": {
@@ -590,11 +598,15 @@
                 }
               }
             }
+          },
+          "fg": {
+            "value": "{origin.colors.white}",
+            "type": "color"
           }
         },
         "info": {
           "default": {
-            "value": "{origin.colors.blue.500}",
+            "value": "{origin.colors.blue}",
             "type": "color"
           },
           "hover": {
@@ -611,19 +623,23 @@
                 }
               }
             }
+          },
+          "fg": {
+            "value": "{origin.colors.white}",
+            "type": "color"
           }
         },
         "neutral": {
           "default": {
-            "value": "{origin.colors.navyAdjusted.800}",
+            "value": "{origin.colors.navyAdjusted}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "0.2",
+                  "value": "0.25",
                   "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
+                  "color": "{base.color.modifier.contrastLess} "
                 }
               }
             }
@@ -642,64 +658,14 @@
                 }
               }
             }
+          },
+          "fg": {
+            "value": "{origin.colors.white}",
+            "type": "color"
           }
         }
       },
       "modifiers": {
-        "ratio": {
-          "0": {
-            "value": "0",
-            "type": "other"
-          },
-          "10": {
-            "value": "0.1",
-            "type": "other"
-          },
-          "20": {
-            "value": "0.2",
-            "type": "other"
-          },
-          "30": {
-            "value": "0.3",
-            "type": "other"
-          },
-          "40": {
-            "value": "0.4",
-            "type": "other"
-          },
-          "50": {
-            "value": "0.5",
-            "type": "other"
-          },
-          "60": {
-            "value": "0.60",
-            "type": "other"
-          },
-          "70": {
-            "value": "0.7",
-            "type": "other"
-          },
-          "80": {
-            "value": "0.8",
-            "type": "other"
-          },
-          "90": {
-            "value": "0.9",
-            "type": "other"
-          },
-          "95": {
-            "value": "0.95",
-            "type": "other"
-          },
-          "97": {
-            "value": "0.97",
-            "type": "other"
-          },
-          "100": {
-            "value": "1",
-            "type": "other"
-          }
-        },
         "button": {
           "hover-mix": {
             "value": "0.2",
@@ -727,11 +693,11 @@
       },
       "modifier": {
         "contrastLess": {
-          "value": "{origin.colors.grayProduct.000}",
+          "value": "{origin.colors.white}",
           "type": "color"
         },
         "contrastMore": {
-          "value": "{origin.colors.grayProduct.1000}",
+          "value": "{origin.colors.black}",
           "type": "color"
         }
       }
