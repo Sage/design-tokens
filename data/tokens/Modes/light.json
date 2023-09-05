@@ -201,14 +201,14 @@
             }
           },
           "bgAlt": {
-            "value": "{origin.colors.navyAdjusted}",
+            "value": "{origin.colors.black}",
             "type": "color",
             "description": "Used on disabled buttons.",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "0.8",
+                  "value": "0.7",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastLess}"
                 }
@@ -216,7 +216,7 @@
             }
           },
           "fg": {
-            "value": "{base.color.content.fg-delicate}",
+            "value": "{origin.colors.white}",
             "type": "color",
             "$extensions": {}
           }
@@ -226,7 +226,7 @@
             "value": "{origin.colors.jade}",
             "type": "color"
           },
-          "fg": {
+          "withDefault": {
             "value": "{origin.colors.white}",
             "type": "color"
           },
@@ -243,6 +243,65 @@
                 }
               }
             }
+          },
+          "hoverAlt": {
+            "value": "{base.color.selectable.major.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{base.color.modifiers.button.hover-mix}",
+                  "space": "lch"
+                }
+              }
+            }
+          },
+          "withHoverAlt": {
+            "value": "{base.color.selectable.major.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.active-mix}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "pressed": {
+            "value": "{base.color.selectable.major.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.pressed-mix} ",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "pressedAlt": {
+            "value": "{base.color.selectable.major.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{base.color.modifiers.button.pressed-mix} ",
+                  "space": "lch"
+                }
+              }
+            }
+          },
+          "withPressedAlt": {
+            "value": "{base.color.content.fg-firm}",
+            "type": "color",
+            "$extensions": {}
           },
           "active": {
             "value": "{base.color.selectable.major.default}",
@@ -668,12 +727,17 @@
       "modifiers": {
         "button": {
           "hover-mix": {
-            "value": "0.2",
+            "value": "0.1",
             "type": "other",
             "description": "more contrast"
           },
           "active-mix": {
             "value": "0.4",
+            "type": "other",
+            "description": "more contrast"
+          },
+          "pressed-mix": {
+            "value": "0.2",
             "type": "other",
             "description": "more contrast"
           },

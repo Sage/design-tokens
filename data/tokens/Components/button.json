@@ -2,7 +2,7 @@
   "buttonMajor": {
     "primary": {
       "bg-disabled": {
-        "value": "{base.color.selectable.inactive.bg}",
+        "value": "{base.color.selectable.inactive.bgAlt}",
         "type": "color"
       },
       "bg-enabled": {
@@ -18,8 +18,17 @@
         "type": "color",
         "$extensions": {}
       },
+      "bg-pressed": {
+        "value": "{base.color.selectable.major.pressed}",
+        "type": "color"
+      },
       "label-active": {
-        "value": "{base.color.selectable.major.fg}",
+        "value": "{base.color.selectable.major.withDefault}",
+        "type": "color",
+        "$extensions": {}
+      },
+      "label-pressed": {
+        "value": "{base.color.selectable.major.withDefault}",
         "type": "color",
         "$extensions": {}
       },
@@ -28,11 +37,11 @@
         "type": "color"
       },
       "label-enabled": {
-        "value": "{base.color.selectable.major.fg}",
+        "value": "{base.color.selectable.major.withDefault}",
         "type": "color"
       },
       "label-hover": {
-        "value": "{base.color.selectable.major.fg}",
+        "value": "{base.color.selectable.major.withDefault}",
         "type": "color"
       }
     },
@@ -43,33 +52,50 @@
         "$extensions": {}
       },
       "bg-hover": {
-        "value": "{base.color.selectable.major.hover}",
+        "value": "{base.color.selectable.major.hoverAlt}",
+        "type": "color",
+        "$extensions": {}
+      },
+      "bg-pressed": {
+        "value": "{base.color.selectable.major.pressedAlt}",
         "type": "color",
         "$extensions": {}
       },
       "border-disabled": {
-        "value": "{base.color.selectable.inactive.bg}",
+        "value": "{base.color.selectable.inactive.bgAlt}",
         "type": "color"
       },
       "border-enabled": {
         "value": "{base.color.selectable.major.default}",
         "type": "color"
       },
+      "border-hover": {
+        "value": "{base.color.selectable.major.withHoverAlt}",
+        "type": "color"
+      },
+      "border-pressed": {
+        "value": "{base.color.selectable.major.withPressedAlt}",
+        "type": "color"
+      },
       "label-active": {
-        "value": "{base.color.selectable.major.fg}",
+        "value": "{base.color.selectable.major.withDefault}",
         "type": "color",
         "$extensions": {}
       },
+      "label-hover": {
+        "value": "{base.color.selectable.major.withHoverAlt}",
+        "type": "color"
+      },
+      "label-pressed": {
+        "value": "{base.color.selectable.major.withPressedAlt}",
+        "type": "color"
+      },
       "label-disabled": {
-        "value": "{base.color.selectable.inactive.fg}",
+        "value": "{base.color.selectable.inactive.bgAlt}",
         "type": "color"
       },
       "label-enabled": {
         "value": "{base.color.selectable.major.default}",
-        "type": "color"
-      },
-      "label-hover": {
-        "value": "{base.color.selectable.major.fg}",
         "type": "color"
       }
     },
@@ -80,25 +106,34 @@
         "$extensions": {}
       },
       "bg-hover": {
-        "value": "{base.color.selectable.major.hover}",
+        "value": "{base.color.selectable.major.hoverAlt}",
         "type": "color",
         "$extensions": {}
       },
+      "bg-pressed": {
+        "value": "{base.color.selectable.major.pressedAlt}",
+        "type": "color",
+        "$extensions": {}
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.major.withHoverAlt}",
+        "type": "color"
+      },
       "label-active": {
-        "value": "{base.color.selectable.major.fg}",
+        "value": "{base.color.selectable.major.withDefault}",
         "type": "color",
         "$extensions": {}
       },
       "label-disabled": {
-        "value": "{base.color.selectable.inactive.fg}",
+        "value": "{base.color.selectable.inactive.bgAlt}",
         "type": "color"
       },
       "label-enabled": {
         "value": "{base.color.selectable.major.default}",
         "type": "color"
       },
-      "label-hover": {
-        "value": "{base.color.selectable.major.fg}",
+      "label-pressed": {
+        "value": "{base.color.selectable.major.withPressedAlt}",
         "type": "color"
       }
     }
