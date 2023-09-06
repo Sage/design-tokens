@@ -222,12 +222,22 @@
           }
         },
         "major": {
+          "active": {
+            "value": "{base.color.selectable.major.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.active-mix}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
           "default": {
             "value": "{origin.colors.jade}",
-            "type": "color"
-          },
-          "withDefault": {
-            "value": "{origin.colors.white}",
             "type": "color"
           },
           "hover": {
@@ -253,20 +263,6 @@
                   "type": "alpha",
                   "value": "{base.color.modifiers.button.hover-mix}",
                   "space": "lch"
-                }
-              }
-            }
-          },
-          "withHoverAlt": {
-            "value": "{base.color.selectable.major.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active-mix}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
                 }
               }
             }
@@ -298,12 +294,11 @@
               }
             }
           },
-          "withPressedAlt": {
-            "value": "{base.color.content.fg-firm}",
-            "type": "color",
-            "$extensions": {}
+          "withDefault": {
+            "value": "{origin.colors.white}",
+            "type": "color"
           },
-          "active": {
+          "withHoverAlt": {
             "value": "{base.color.selectable.major.default}",
             "type": "color",
             "$extensions": {
@@ -316,6 +311,11 @@
                 }
               }
             }
+          },
+          "withPressedAlt": {
+            "value": "{base.color.content.fg-firm}",
+            "type": "color",
+            "$extensions": {}
           }
         },
         "minorEven": {
