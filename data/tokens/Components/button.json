@@ -10,7 +10,7 @@
         "type": "color"
       },
       "bg-active": {
-        "value": "{base.color.selectable.major.activated}",
+        "value": "{base.color.selectable.major.active}",
         "type": "color"
       },
       "bg-hover": {
@@ -18,17 +18,8 @@
         "type": "color",
         "$extensions": {}
       },
-      "bg-pressed": {
-        "value": "{base.color.selectable.major.active}",
-        "type": "color"
-      },
       "label-active": {
-        "value": "{base.color.selectable.major.withActivated}",
-        "type": "color",
-        "$extensions": {}
-      },
-      "label-pressed": {
-        "value": "{base.color.selectable.major.withDefault}",
+        "value": "{base.color.selectable.major.withActive}",
         "type": "color",
         "$extensions": {}
       },
@@ -47,17 +38,12 @@
     },
     "secondary": {
       "bg-active": {
-        "value": "{base.color.selectable.major.activated}",
+        "value": "{base.color.selectable.major.activeAlt}",
         "type": "color",
         "$extensions": {}
       },
       "bg-hover": {
         "value": "{base.color.selectable.major.hoverAlt}",
-        "type": "color",
-        "$extensions": {}
-      },
-      "bg-pressed": {
-        "value": "{base.color.selectable.major.activeAlt}",
         "type": "color",
         "$extensions": {}
       },
@@ -78,20 +64,15 @@
         "type": "color"
       },
       "label-active": {
-        "value": "{base.color.selectable.major.withActivated}",
-        "type": "color",
-        "$extensions": {}
+        "value": "{base.color.selectable.major.withActiveAlt}",
+        "type": "color"
       },
       "label-hover": {
         "value": "{base.color.selectable.major.withHoverAlt}",
         "type": "color"
       },
-      "label-pressed": {
-        "value": "{base.color.selectable.major.withActiveAlt}",
-        "type": "color"
-      },
       "label-disabled": {
-        "value": "{base.color.selectable.inactive.border}",
+        "value": "{base.color.selectable.inactive.content}",
         "type": "color"
       },
       "label-enabled": {
@@ -101,7 +82,7 @@
     },
     "tertiary": {
       "bg-active": {
-        "value": "{base.color.selectable.major.activated}",
+        "value": "{base.color.selectable.major.activeAlt}",
         "type": "color",
         "$extensions": {}
       },
@@ -110,22 +91,17 @@
         "type": "color",
         "$extensions": {}
       },
-      "bg-pressed": {
-        "value": "{base.color.selectable.major.activeAlt}",
-        "type": "color",
-        "$extensions": {}
-      },
       "label-hover": {
         "value": "{base.color.selectable.major.withHoverAlt}",
         "type": "color"
       },
       "label-active": {
-        "value": "{base.color.selectable.major.withActivated}",
+        "value": "{base.color.selectable.major.withActiveAlt}",
         "type": "color",
         "$extensions": {}
       },
       "label-disabled": {
-        "value": "{base.color.selectable.inactive.border}",
+        "value": "{base.color.selectable.inactive.content}",
         "type": "color"
       },
       "label-enabled": {
@@ -140,26 +116,25 @@
   },
   "buttonMinor": {
     "primary": {
-      "bg-active": {
-        "value": "{base.color.selectable.minorBlack.active}",
-        "type": "color",
-        "$extensions": {}
-      },
       "bg-disabled": {
-        "value": "{base.color.selectable.inactive.bg}",
+        "value": "{base.color.selectable.inactive.border}",
         "type": "color"
       },
       "bg-enabled": {
-        "value": "{base.color.selectable.minorBlack.default}",
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color"
+      },
+      "bg-active": {
+        "value": "{base.color.selectable.minor.active}",
         "type": "color"
       },
       "bg-hover": {
-        "value": "{base.color.selectable.minorBlack.hover}",
+        "value": "{base.color.selectable.minor.hover}",
         "type": "color",
         "$extensions": {}
       },
       "label-active": {
-        "value": "{base.color.selectable.minor.fg}",
+        "value": "{base.color.selectable.minor.withActive}",
         "type": "color",
         "$extensions": {}
       },
@@ -168,59 +143,75 @@
         "type": "color"
       },
       "label-enabled": {
-        "value": "{base.color.selectable.minor.fg}",
+        "value": "{base.color.selectable.minor.withDefault}",
         "type": "color"
       },
       "label-hover": {
-        "value": "{base.color.selectable.minor.fg}",
+        "value": "{base.color.selectable.minor.withDefault}",
         "type": "color"
       }
     },
     "secondary": {
       "bg-active": {
-        "value": "{base.color.selectable.minorBlack.active}",
+        "value": "{base.color.selectable.minor.activeAlt}",
         "type": "color",
         "$extensions": {}
       },
       "bg-hover": {
-        "value": "{base.color.selectable.minorBlack.hover}",
+        "value": "{base.color.selectable.minor.hoverAlt}",
         "type": "color",
         "$extensions": {}
       },
       "border-disabled": {
-        "value": "{base.color.selectable.inactive.bg}",
+        "value": "{base.color.selectable.inactive.border}",
         "type": "color"
       },
       "border-enabled": {
-        "value": "{base.color.selectable.minorBlack.default}",
+        "value": "{base.color.selectable.minor.default}",
+        "type": "color"
+      },
+      "border-hover": {
+        "value": "{base.color.selectable.minor.withHoverAlt}",
+        "type": "color"
+      },
+      "border-pressed": {
+        "value": "{base.color.selectable.minor.withActiveAlt}",
         "type": "color"
       },
       "label-active": {
-        "value": "{base.color.selectable.minor.fg}",
-        "type": "color",
-        "$extensions": {}
+        "value": "{base.color.selectable.major.withActiveAlt}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.minor.withHoverAlt}",
+        "type": "color"
       },
       "label-disabled": {
         "value": "{base.color.selectable.inactive.content}",
         "type": "color"
       },
       "label-enabled": {
-        "value": "{base.color.selectable.minorBlack.default}",
-        "type": "color"
-      },
-      "label-hover": {
-        "value": "{base.color.selectable.minor.fg}",
+        "value": "{base.color.selectable.minor.default}",
         "type": "color"
       }
     },
     "tertiary": {
       "bg-active": {
-        "value": "{base.color.selectable.minorBlack.active}",
+        "value": "{base.color.selectable.major.activeAlt}",
         "type": "color",
         "$extensions": {}
       },
       "bg-hover": {
-        "value": "{base.color.selectable.minorBlack.hover}",
+        "value": "{base.color.selectable.minor.hoverAlt}",
+        "type": "color",
+        "$extensions": {}
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.minor.withHoverAlt}",
+        "type": "color"
+      },
+      "label-active": {
+        "value": "{base.color.selectable.minor.withActiveAlt}",
         "type": "color",
         "$extensions": {}
       },
@@ -228,17 +219,12 @@
         "value": "{base.color.selectable.inactive.content}",
         "type": "color"
       },
-      "label-active": {
-        "value": "{base.color.selectable.minor.fg}",
-        "type": "color",
-        "$extensions": {}
-      },
       "label-enabled": {
-        "value": "{base.color.selectable.minorBlack.default}",
+        "value": "{base.color.selectable.minor.default}",
         "type": "color"
       },
-      "label-hover": {
-        "value": "{base.color.selectable.minor.fg}",
+      "label-pressed": {
+        "value": "{base.color.selectable.minor.withActiveAlt}",
         "type": "color"
       }
     }
@@ -246,15 +232,24 @@
   "buttonDanger": {
     "primary": {
       "bg-disabled": {
-        "value": "{base.color.selectable.inactive.bg}",
+        "value": "{base.color.selectable.inactive.border}",
         "type": "color"
       },
       "bg-enabled": {
         "value": "{base.color.selectable.danger.default}",
         "type": "color"
       },
+      "bg-active": {
+        "value": "{base.color.selectable.danger.active}",
+        "type": "color"
+      },
       "bg-hover": {
         "value": "{base.color.selectable.danger.hover}",
+        "type": "color",
+        "$extensions": {}
+      },
+      "label-active": {
+        "value": "{base.color.selectable.danger.withActive}",
         "type": "color",
         "$extensions": {}
       },
@@ -263,28 +258,49 @@
         "type": "color"
       },
       "label-enabled": {
-        "value": "{base.color.selectable.danger.fg}",
+        "value": "{base.color.selectable.danger.withDefault}",
         "type": "color"
       },
       "label-hover": {
-        "value": "{base.color.selectable.danger.fg}",
+        "value": "{base.color.selectable.danger.withDefault}",
         "type": "color"
       }
     },
     "secondary": {
+      "bg-active": {
+        "value": "{base.color.selectable.danger.activeAlt}",
+        "type": "color",
+        "$extensions": {}
+      },
       "bg-hover": {
-        "value": "{base.color.selectable.danger.hover}",
+        "value": "{base.color.selectable.danger.hoverAlt}",
         "type": "color",
         "$extensions": {}
       },
       "border-disabled": {
-        "value": "{base.color.selectable.inactive.bg}",
+        "value": "{base.color.selectable.inactive.border}",
         "type": "color"
       },
       "border-enabled": {
         "value": "{base.color.selectable.danger.default}",
         "type": "color"
       },
+      "border-hover": {
+        "value": "{base.color.selectable.danger.withHoverAlt}",
+        "type": "color"
+      },
+      "border-pressed": {
+        "value": "{base.color.selectable.danger.withActiveAlt}",
+        "type": "color"
+      },
+      "label-active": {
+        "value": "{base.color.selectable.major.withActiveAlt}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{base.color.selectable.danger.withHoverAlt}",
+        "type": "color"
+      },
       "label-disabled": {
         "value": "{base.color.selectable.inactive.content}",
         "type": "color"
@@ -292,47 +308,7 @@
       "label-enabled": {
         "value": "{base.color.selectable.danger.default}",
         "type": "color"
-      },
-      "label-hover": {
-        "value": "{base.color.selectable.danger.fg}",
-        "type": "color"
       }
-    },
-    "tertiary": {
-      "bg-hover": {
-        "value": "{base.color.selectable.danger.hover}",
-        "type": "color",
-        "$extensions": {}
-      },
-      "label-disabled": {
-        "value": "{base.color.selectable.inactive.content}",
-        "type": "color"
-      },
-      "label-enabled": {
-        "value": "{base.color.selectable.danger.default}",
-        "type": "color"
-      },
-      "label-hover": {
-        "value": "{base.color.selectable.danger.fg}",
-        "type": "color"
-      }
-    }
-  },
-  "buttonSubtle": {
-    "bg-hover": {
-      "value": "{base.color.selectable.minorBlack.hover}",
-      "type": "color",
-      "$extensions": {}
-    },
-    "label-enabled": {
-      "value": "{base.color.selectable.minorBlack.default}",
-      "type": "color",
-      "$extensions": {}
-    },
-    "label-hover": {
-      "value": "{base.color.selectable.minorBlack.fg}",
-      "type": "color",
-      "$extensions": {}
     }
   }
 }

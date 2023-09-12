@@ -2,37 +2,19 @@
   "actionPopover": {
     "menu": {
       "bg-hover": {
-        "value": "{base.color.selectable.minor.default}",
+        "value": "{base.color.selectable.minor.hoverAlt}",
         "type": "color",
         "description": "was action minor 100\n",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "{base.color.modifiers.button.hover-mix} ",
-              "space": "lch",
-              "color": "{origin.colors.grayProduct.000}"
-            }
-          }
-        }
+        "$extensions": {}
       },
-      "bg-selected": {
-        "value": "{base.color.selectable.minor.default}",
+      "bg-active": {
+        "value": "{base.color.selectable.minor.active}",
         "type": "color",
         "description": "previously action minor 850",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "{base.color.modifiers.button.active-mix} ",
-              "space": "lch",
-              "color": "{origin.colors.grayProduct.1000}"
-            }
-          }
-        }
+        "$extensions": {}
       },
       "label-disabled": {
-        "value": "{base.color.content.standard.fg-delicate}",
+        "value": "{base.color.selectable.inactive.content}",
         "type": "color"
       },
       "label-enabled": {
@@ -40,21 +22,12 @@
         "type": "color"
       },
       "label-hover": {
-        "value": "{base.color.selectable.minor.default}",
+        "value": "{base.color.selectable.minor.withHoverAlt}",
         "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "{base.color.modifiers.button.hover-mix} ",
-              "space": "lch",
-              "color": "{origin.colors.grayProduct.1000}"
-            }
-          }
-        }
+        "$extensions": {}
       },
-      "label-selected": {
-        "value": "{base.color.selectable.minor.fg}",
+      "label-active": {
+        "value": "{base.color.selectable.minor.withActive}",
         "type": "color",
         "$extensions": {}
       }

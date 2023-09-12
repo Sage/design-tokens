@@ -80,72 +80,6 @@
             "value": "{origin.colors.white}",
             "type": "color",
             "$extensions": {}
-          },
-          "fg-firm": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "fg-moderate": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.65",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "fg-soft": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.55",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "fg-delicate": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.30",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "fg-faint": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "description": "used for dividers",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.10",
-                  "space": "lch"
-                }
-              }
-            }
           }
         }
       },
@@ -195,15 +129,15 @@
           }
         },
         "divider": {
-          "value": "base.color.backdrop.bg",
+          "value": "{base.color.backdrop.bg}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
               "modify": {
                 "type": "mix",
-                "value": "1",
+                "value": "0.1",
                 "space": "lch",
-                "color": "{base.color.content.standard.fg-faint}"
+                "color": "{base.color.modifier.contrastMore} "
               }
             }
           }
@@ -224,21 +158,6 @@
                 "modify": {
                   "type": "mix",
                   "value": "{base.color.modifiers.button.hover}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "activated": {
-            "value": "{base.color.status.negative.default}",
-            "type": "color",
-            "description": "used on pill hover states",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -268,7 +187,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.pressed}",
+                  "value": "{base.color.modifiers.button.active}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -290,7 +209,7 @@
               }
             }
           },
-          "withActivated": {
+          "withActive": {
             "value": "{base.color.content.inverse.fg-extreme}",
             "type": "color"
           },
@@ -298,11 +217,11 @@
             "value": "{base.color.content.inverse.fg-extreme}",
             "type": "color"
           },
-          "withHoverAlt": {
+          "withActiveAlt": {
             "value": "{base.color.content.standard.fg-firm}",
             "type": "color"
           },
-          "withActiveAlt": {
+          "withHoverAlt": {
             "value": "{base.color.content.standard.fg-firm}",
             "type": "color"
           }
@@ -366,20 +285,6 @@
           }
         },
         "major": {
-          "activated": {
-            "value": "{base.color.selectable.major.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
           "default": {
             "value": "{origin.colors.jade}",
             "type": "color"
@@ -418,7 +323,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.pressed} ",
+                  "value": "{base.color.modifiers.button.active}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -438,7 +343,7 @@
               }
             }
           },
-          "withActivated": {
+          "withActive": {
             "value": "{base.color.content.inverse.fg-extreme}",
             "type": "color"
           },
@@ -491,20 +396,6 @@
           }
         },
         "minor": {
-          "activated": {
-            "value": "{base.color.selectable.minor.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
           "default": {
             "value": "{origin.colors.slate}",
             "type": "color"
@@ -543,7 +434,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.pressed} ",
+                  "value": "{base.color.modifiers.button.active}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -563,7 +454,7 @@
               }
             }
           },
-          "withActivated": {
+          "withActive": {
             "value": "{base.color.content.inverse.fg-extreme}",
             "type": "color"
           },
@@ -636,7 +527,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.pressed}",
+                  "value": "{base.color.modifiers.button.active}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -714,7 +605,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.pressed}",
+                  "value": "{base.color.modifiers.button.active}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -792,7 +683,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.pressed}",
+                  "value": "{base.color.modifiers.button.active}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -870,7 +761,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.pressed}",
+                  "value": "{base.color.modifiers.button.active}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -948,7 +839,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.pressed}",
+                  "value": "{base.color.modifiers.button.active}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -998,11 +889,6 @@
           },
           "hover": {
             "value": "0.16",
-            "type": "other",
-            "description": "more contrast"
-          },
-          "pressed": {
-            "value": "0.32",
             "type": "other",
             "description": "more contrast"
           }
