@@ -128,6 +128,12 @@
             }
           }
         },
+        "borderAlt": {
+          "value": "{origin.colors.black}",
+          "type": "color",
+          "description": "Selectable tile border state.",
+          "$extensions": {}
+        },
         "divider": {
           "value": "{base.color.backdrop.bg}",
           "type": "color",
@@ -248,7 +254,7 @@
         },
         "inactive": {
           "bg": {
-            "value": "{origin.colors.slate}",
+            "value": "{origin.colors.white}",
             "type": "color",
             "description": "Disabled input and button backgrounds, button borders and input backgrounds.",
             "$extensions": {
@@ -257,22 +263,22 @@
                   "type": "mix",
                   "value": "{base.color.modifiers.input.disabled}",
                   "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
+                  "color": "{base.color.modifier.contrastMore}"
                 }
               }
             }
           },
           "border": {
-            "value": "{origin.colors.black}",
+            "value": "{origin.colors.white}",
             "type": "color",
             "description": "Disabled form input borders.",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "0.80",
+                  "value": "0.30",
                   "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
+                  "color": "{base.color.modifier.contrastMore} "
                 }
               }
             }
@@ -397,7 +403,7 @@
         },
         "minor": {
           "default": {
-            "value": "{origin.colors.slate}",
+            "value": "{origin.colors.denim}",
             "type": "color"
           },
           "hover": {
@@ -720,7 +726,7 @@
         },
         "neutral": {
           "default": {
-            "value": "{origin.colors.slate}",
+            "value": "{origin.colors.denim}",
             "type": "color"
           },
           "hover": {
@@ -895,7 +901,7 @@
         },
         "input": {
           "disabled": {
-            "value": "0.95",
+            "value": "0.05",
             "type": "other",
             "description": "less contrast"
           }
