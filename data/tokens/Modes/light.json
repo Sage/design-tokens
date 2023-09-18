@@ -147,6 +147,20 @@
               }
             }
           }
+        },
+        "shadow": {
+          "value": "{origin.colors.white}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{base.color.modifiers.shadow.standard}",
+                "space": "lch",
+                "color": "{origin.colors.black}"
+              }
+            }
+          }
         }
       },
       "selectable": {
@@ -904,6 +918,13 @@
             "value": "0.05",
             "type": "other",
             "description": "less contrast"
+          }
+        },
+        "shadow": {
+          "standard": {
+            "value": "0.5",
+            "type": "other",
+            "description": "standard mixer for shadow"
           }
         }
       },
