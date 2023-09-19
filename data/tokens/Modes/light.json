@@ -84,21 +84,44 @@
         }
       },
       "backdrop": {
-        "bg": {
-          "value": "{origin.colors.white}",
-          "type": "color",
-          "$extensions": {}
+        "standard": {
+          "bg": {
+            "value": "{origin.colors.white}",
+            "type": "color",
+            "$extensions": {}
+          },
+          "bgAlt": {
+            "value": "{origin.colors.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.080",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          }
         },
-        "bgAlt": {
-          "value": "{origin.colors.white}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.050",
-                "space": "lch",
-                "color": "{base.color.modifier.contrastMore}"
+        "inverse": {
+          "bg": {
+            "value": "{origin.colors.black}",
+            "type": "color",
+            "$extensions": {}
+          },
+          "bgAlt": {
+            "value": "{origin.colors.black}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.32",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess} "
+                }
               }
             }
           }
@@ -106,16 +129,16 @@
       },
       "container": {
         "bg": {
-          "value": "{base.color.backdrop.bg}",
+          "value": "{base.color.backdrop.standard.bg}",
           "type": "color"
         },
         "bgAlt": {
-          "value": "{base.color.backdrop.bgAlt}",
+          "value": "{base.color.backdrop.standard.bgAlt}",
           "type": "color",
           "$extensions": {}
         },
         "border": {
-          "value": "{base.color.backdrop.bg}",
+          "value": "{base.color.backdrop.standard.bg}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -135,7 +158,7 @@
           "$extensions": {}
         },
         "divider": {
-          "value": "{base.color.backdrop.bg}",
+          "value": "{base.color.backdrop.standard.bg}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -248,7 +271,7 @@
         },
         "form": {
           "bg": {
-            "value": "{base.color.backdrop.bg}",
+            "value": "{base.color.backdrop.standard.bg}",
             "type": "color"
           },
           "border": {
@@ -910,7 +933,7 @@
         },
         "input": {
           "disabled": {
-            "value": "0.05",
+            "value": "0.04",
             "type": "other",
             "description": "less contrast"
           }
