@@ -1,3 +1,10 @@
+# [4.25.0](https://github.com/Sage/design-tokens/compare/v4.24.0...v4.25.0) (2023-09-21)
+
+
+### Features
+
+* **data:** typography for loader ([b61ced5](https://github.com/Sage/design-tokens/commit/b61ced5bb0dd1cd4256ec395eb52b83ecb12025f))
+
 # [4.24.0](https://github.com/Sage/design-tokens/compare/v4.23.0...v4.24.0) (2023-09-21)
 
 
