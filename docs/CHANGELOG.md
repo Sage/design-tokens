@@ -1,3 +1,10 @@
+# [4.24.0](https://github.com/Sage/design-tokens/compare/v4.23.0...v4.24.0) (2023-09-21)
+
+
+### Features
+
+* **data:** adding a new token spacing.035 for padding in skeleton text ([1e21129](https://github.com/Sage/design-tokens/commit/1e2112951e6c23ac3af05f0fd66f505cc7710342))
+
 # [4.23.0](https://github.com/Sage/design-tokens/compare/v4.22.0...v4.23.0) (2023-08-16)
 
 
