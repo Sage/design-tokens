@@ -188,6 +188,36 @@
       },
       "selectable": {
         "danger": {
+          "active": {
+            "value": "{base.color.selectable.danger.default}",
+            "type": "color",
+            "description": "used on pill hover states",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.active}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "activeAlt": {
+            "value": "{base.color.selectable.danger.default}",
+            "type": "color",
+            "description": "used on pill hover states",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{base.color.modifiers.button.active} ",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
           "default": {
             "value": "{origin.colors.red}",
             "type": "color"
@@ -222,46 +252,16 @@
               }
             }
           },
-          "active": {
-            "value": "{base.color.selectable.danger.default}",
-            "type": "color",
-            "description": "used on pill hover states",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "activeAlt": {
-            "value": "{base.color.selectable.danger.default}",
-            "type": "color",
-            "description": "used on pill hover states",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.button.active} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
           "withActive": {
-            "value": "{base.color.content.inverse.fgextreme}",
-            "type": "color"
-          },
-          "withDefault": {
             "value": "{base.color.content.inverse.fgextreme}",
             "type": "color"
           },
           "withActiveAlt": {
             "value": "{base.color.content.standard.fgFirm}",
+            "type": "color"
+          },
+          "withDefault": {
+            "value": "{base.color.content.inverse.fgextreme}",
             "type": "color"
           },
           "withHoverAlt": {
@@ -328,6 +328,33 @@
           }
         },
         "major": {
+          "active": {
+            "value": "{base.color.selectable.major.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.active}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "activeAlt": {
+            "value": "{base.color.selectable.major.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{base.color.modifiers.button.active} ",
+                  "space": "lch"
+                }
+              }
+            }
+          },
           "default": {
             "value": "{origin.colors.jade}",
             "type": "color"
@@ -359,36 +386,14 @@
               }
             }
           },
-          "active": {
-            "value": "{base.color.selectable.major.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "activeAlt": {
-            "value": "{base.color.selectable.major.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.button.active} ",
-                  "space": "lch"
-                }
-              }
-            }
-          },
           "withActive": {
             "value": "{base.color.content.inverse.fgextreme}",
             "type": "color"
+          },
+          "withActiveAlt": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color",
+            "$extensions": {}
           },
           "withDefault": {
             "value": "{base.color.content.inverse.fgextreme}",
@@ -407,11 +412,6 @@
                 }
               }
             }
-          },
-          "withActiveAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color",
-            "$extensions": {}
           }
         },
         "focus": {
@@ -439,6 +439,33 @@
           }
         },
         "minor": {
+          "active": {
+            "value": "{base.color.selectable.minor.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.active}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "activeAlt": {
+            "value": "{base.color.selectable.minor.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{base.color.modifiers.button.active} ",
+                  "space": "lch"
+                }
+              }
+            }
+          },
           "default": {
             "value": "{origin.colors.denim}",
             "type": "color"
@@ -470,36 +497,14 @@
               }
             }
           },
-          "active": {
-            "value": "{base.color.selectable.minor.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "activeAlt": {
-            "value": "{base.color.selectable.minor.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.button.active} ",
-                  "space": "lch"
-                }
-              }
-            }
-          },
           "withActive": {
             "value": "{base.color.content.inverse.fgextreme}",
             "type": "color"
+          },
+          "withActiveAlt": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color",
+            "$extensions": {}
           },
           "withDefault": {
             "value": "{base.color.content.inverse.fgextreme}",
@@ -518,11 +523,6 @@
                 }
               }
             }
-          },
-          "withActiveAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color",
-            "$extensions": {}
           }
         }
       },
@@ -531,6 +531,21 @@
           "default": {
             "value": "{origin.colors.orange}",
             "type": "color"
+          },
+          "activeAlt": {
+            "value": "{base.color.status.caution.default}",
+            "type": "color",
+            "description": "used on pill hover states",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{base.color.modifiers.button.active} ",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
           },
           "hover": {
             "value": "{base.color.status.caution.default}",
@@ -577,8 +592,41 @@
               }
             }
           },
+          "withActive": {
+            "value": "{base.color.content.inverse.fgextreme}",
+            "type": "color"
+          },
+          "withActiveAlt": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color"
+          },
+          "withDefault": {
+            "value": "{base.color.content.inverse.fgextreme}",
+            "type": "color"
+          },
+          "withHoverAlt": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color"
+          }
+        },
+        "success": {
+          "active": {
+            "value": "{base.color.status.success.default}",
+            "type": "color",
+            "description": "used on pill hover states",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.active}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
           "activeAlt": {
-            "value": "{base.color.status.caution.default}",
+            "value": "{base.color.status.success.default}",
             "type": "color",
             "description": "used on pill hover states",
             "$extensions": {
@@ -592,20 +640,6 @@
               }
             }
           },
-          "withDefault": {
-            "value": "{base.color.content.inverse.fgextreme}",
-            "type": "color"
-          },
-          "withHoverAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          },
-          "withActiveAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          }
-        },
-        "success": {
           "default": {
             "value": "{origin.colors.green}",
             "type": "color"
@@ -640,8 +674,26 @@
               }
             }
           },
+          "withActive": {
+            "value": "{base.color.content.inverse.fgextreme}",
+            "type": "color"
+          },
+          "withActiveAlt": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color"
+          },
+          "withDefault": {
+            "value": "{base.color.content.inverse.fgextreme}",
+            "type": "color"
+          },
+          "withHoverAlt": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color"
+          }
+        },
+        "info": {
           "active": {
-            "value": "{base.color.status.success.default}",
+            "value": "{base.color.status.info.default}",
             "type": "color",
             "description": "used on pill hover states",
             "$extensions": {
@@ -656,7 +708,7 @@
             }
           },
           "activeAlt": {
-            "value": "{base.color.status.success.default}",
+            "value": "{base.color.status.info.default}",
             "type": "color",
             "description": "used on pill hover states",
             "$extensions": {
@@ -670,20 +722,6 @@
               }
             }
           },
-          "withDefault": {
-            "value": "{base.color.content.inverse.fgextreme}",
-            "type": "color"
-          },
-          "withHoverAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          },
-          "withActiveAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          }
-        },
-        "info": {
           "default": {
             "value": "{origin.colors.blue}",
             "type": "color"
@@ -718,8 +756,26 @@
               }
             }
           },
+          "withActive": {
+            "value": "{base.color.content.inverse.fgextreme}",
+            "type": "color"
+          },
+          "withActiveAlt": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color"
+          },
+          "withDefault": {
+            "value": "{base.color.content.inverse.fgextreme}",
+            "type": "color"
+          },
+          "withHoverAlt": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color"
+          }
+        },
+        "neutral": {
           "active": {
-            "value": "{base.color.status.info.default}",
+            "value": "{base.color.status.neutral.default}",
             "type": "color",
             "description": "used on pill hover states",
             "$extensions": {
@@ -734,7 +790,7 @@
             }
           },
           "activeAlt": {
-            "value": "{base.color.status.info.default}",
+            "value": "{base.color.status.neutral.default}",
             "type": "color",
             "description": "used on pill hover states",
             "$extensions": {
@@ -748,20 +804,6 @@
               }
             }
           },
-          "withDefault": {
-            "value": "{base.color.content.inverse.fgextreme}",
-            "type": "color"
-          },
-          "withHoverAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          },
-          "withActiveAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          }
-        },
-        "neutral": {
           "default": {
             "value": "{origin.colors.denim}",
             "type": "color"
@@ -796,8 +838,26 @@
               }
             }
           },
+          "withActive": {
+            "value": "{base.color.content.inverse.fgextreme}",
+            "type": "color"
+          },
+          "withActiveAlt": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color"
+          },
+          "withDefault": {
+            "value": "{base.color.content.inverse.fgextreme}",
+            "type": "color"
+          },
+          "withHoverAlt": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color"
+          }
+        },
+        "negative": {
           "active": {
-            "value": "{base.color.status.neutral.default}",
+            "value": "{base.color.status.negative.default}",
             "type": "color",
             "description": "used on pill hover states",
             "$extensions": {
@@ -812,7 +872,7 @@
             }
           },
           "activeAlt": {
-            "value": "{base.color.status.neutral.default}",
+            "value": "{base.color.status.negative.default}",
             "type": "color",
             "description": "used on pill hover states",
             "$extensions": {
@@ -826,20 +886,6 @@
               }
             }
           },
-          "withDefault": {
-            "value": "{base.color.content.inverse.fgextreme}",
-            "type": "color"
-          },
-          "withHoverAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          },
-          "withActiveAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          }
-        },
-        "negative": {
           "default": {
             "value": "{origin.colors.red}",
             "type": "color"
@@ -874,45 +920,19 @@
               }
             }
           },
-          "active": {
-            "value": "{base.color.status.negative.default}",
-            "type": "color",
-            "description": "used on pill hover states",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
+          "withActive": {
+            "value": "{base.color.content.inverse.fgextreme}",
+            "type": "color"
           },
-          "activeAlt": {
-            "value": "{base.color.status.negative.default}",
-            "type": "color",
-            "description": "used on pill hover states",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.button.active} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
+          "withActiveAlt": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color"
           },
           "withDefault": {
             "value": "{base.color.content.inverse.fgextreme}",
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          },
-          "withActiveAlt": {
             "value": "{base.color.content.standard.fgFirm}",
             "type": "color"
           }
