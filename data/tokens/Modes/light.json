@@ -5,8 +5,7 @@
         "standard": {
           "fgExtreme": {
             "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
           "fgFirm": {
             "value": "{origin.colors.black}",
@@ -78,26 +77,52 @@
         "inverse": {
           "fgExtreme": {
             "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           }
         }
       },
       "backdrop": {
         "standard": {
-          "bg": {
+          "bgExtreme": {
             "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
-          "bgAlt": {
+          "bgFirm": {
             "value": "{origin.colors.white}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "0.080",
+                  "value": "0.04",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "bgModerate": {
+            "value": "{origin.colors.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.08",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "bgSoft": {
+            "value": "{origin.colors.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.16",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -106,12 +131,39 @@
           }
         },
         "inverse": {
-          "bg": {
+          "bgExtreme": {
+            "value": "{origin.colors.black}",
+            "type": "color"
+          },
+          "bgFirm": {
             "value": "{origin.colors.black}",
             "type": "color",
-            "$extensions": {}
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.16",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess} "
+                }
+              }
+            }
           },
-          "bgAlt": {
+          "bgModerate": {
+            "value": "{origin.colors.black}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.24",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess} "
+                }
+              }
+            }
+          },
+          "bgSoft": {
             "value": "{origin.colors.black}",
             "type": "color",
             "$extensions": {
@@ -129,16 +181,15 @@
       },
       "container": {
         "bg": {
-          "value": "{base.color.backdrop.standard.bg}",
+          "value": "{base.color.backdrop.standard.bgExtreme}",
           "type": "color"
         },
         "bgAlt": {
-          "value": "{base.color.backdrop.standard.bgAlt}",
-          "type": "color",
-          "$extensions": {}
+          "value": "{base.color.backdrop.standard.bgFirm}",
+          "type": "color"
         },
         "border": {
-          "value": "{base.color.backdrop.standard.bg}",
+          "value": "{base.color.backdrop.standard.bgExtreme}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -154,11 +205,10 @@
         "borderAlt": {
           "value": "{origin.colors.black}",
           "type": "color",
-          "description": "Selectable tile border state.",
-          "$extensions": {}
+          "description": "Selectable tile border state."
         },
         "divider": {
-          "value": "{base.color.backdrop.standard.bg}",
+          "value": "{base.color.backdrop.standard.bgExtreme}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -271,7 +321,7 @@
         },
         "form": {
           "bg": {
-            "value": "{base.color.backdrop.standard.bg}",
+            "value": "{base.color.backdrop.standard.bgExtreme}",
             "type": "color"
           },
           "border": {
@@ -323,8 +373,7 @@
           "content": {
             "value": "{base.color.content.standard.fgDelicate}",
             "type": "color",
-            "description": "Disabled text inside buttons and form inputs.",
-            "$extensions": {}
+            "description": "Disabled text inside buttons and form inputs."
           }
         },
         "major": {
@@ -392,8 +441,7 @@
           },
           "withActiveAlt": {
             "value": "{base.color.content.standard.fgFirm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
           "withDefault": {
             "value": "{base.color.content.inverse.fgExtreme}",
@@ -503,8 +551,7 @@
           },
           "withActiveAlt": {
             "value": "{base.color.content.standard.fgFirm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
           "withDefault": {
             "value": "{base.color.content.inverse.fgExtreme}",
