@@ -27,7 +27,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "0.65",
+                  "value": "0.67",
                   "space": "lch"
                 }
               }
@@ -341,34 +341,34 @@
         },
         "inactive": {
           "bg": {
-            "value": "{origin.colors.white}",
+            "value": "{origin.colors.black}",
             "type": "color",
-            "description": "Disabled input and button backgrounds, button borders and input backgrounds.",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
+                  "type": "alpha",
                   "value": "{base.color.modifiers.input.disabled}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
               }
-            }
+            },
+            "description": "Disabled input and button backgrounds, button borders and input backgrounds."
           },
           "border": {
-            "value": "{origin.colors.white}",
+            "value": "{origin.colors.black}",
             "type": "color",
-            "description": "Disabled form input borders.",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
+                  "type": "alpha",
                   "value": "0.30",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore} "
                 }
               }
-            }
+            },
+            "description": "Disabled form input borders."
           },
           "content": {
             "value": "{base.color.content.standard.fgDelicate}",
@@ -576,8 +576,7 @@
           "standard": {
             "active": {
               "value": "{base.color.backdrop.standard.bgExtreme}",
-              "type": "color",
-              "$extensions": {}
+              "type": "color"
             },
             "default": {
               "value": "{origin.colors.transparent}",
@@ -609,8 +608,7 @@
           "inverse": {
             "active": {
               "value": "{base.color.backdrop.inverse.bgExtreme}",
-              "type": "color",
-              "$extensions": {}
+              "type": "color"
             },
             "default": {
               "value": "{origin.colors.transparent}",
