@@ -128,6 +128,20 @@
                 }
               }
             }
+          },
+          "bgDelicate": {
+            "value": "{origin.colors.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.24",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
           }
         },
         "inverse": {
@@ -179,63 +193,6 @@
           }
         }
       },
-      "container": {
-        "bg": {
-          "value": "{base.color.backdrop.standard.bgExtreme}",
-          "type": "color"
-        },
-        "bgAlt": {
-          "value": "{base.color.backdrop.standard.bgFirm}",
-          "type": "color"
-        },
-        "border": {
-          "value": "{base.color.backdrop.standard.bgExtreme}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.3",
-                "space": "lch",
-                "color": "{base.color.modifier.contrastMore}"
-              }
-            }
-          }
-        },
-        "borderAlt": {
-          "value": "{origin.colors.black}",
-          "type": "color",
-          "description": "Selectable tile border state."
-        },
-        "divider": {
-          "value": "{base.color.backdrop.standard.bgExtreme}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.1",
-                "space": "lch",
-                "color": "{base.color.modifier.contrastMore} "
-              }
-            }
-          }
-        },
-        "shadow": {
-          "value": "{origin.colors.white}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "{base.color.modifiers.shadow.standard}",
-                "space": "lch",
-                "color": "{base.color.modifier.contrastMore}"
-              }
-            }
-          }
-        }
-      },
       "selectable": {
         "danger": {
           "active": {
@@ -253,27 +210,8 @@
               }
             }
           },
-          "activeAlt": {
-            "value": "{base.color.selectable.danger.default}",
-            "type": "color",
-            "description": "used on pill hover states",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.button.active} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
           "default": {
             "value": "{origin.colors.red}",
-            "type": "color"
-          },
-          "defaultAlt": {
-            "value": "{origin.colors.transparent}",
             "type": "color"
           },
           "hover": {
@@ -310,16 +248,8 @@
             "value": "{base.color.content.inverse.fgExtreme}",
             "type": "color"
           },
-          "withActiveAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          },
           "withDefault": {
             "value": "{base.color.content.inverse.fgExtreme}",
-            "type": "color"
-          },
-          "withHoverAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
             "type": "color"
           }
         },
@@ -385,9 +315,9 @@
             "description": "Disabled text inside buttons and form inputs."
           }
         },
-        "major": {
+        "primary": {
           "active": {
-            "value": "{base.color.selectable.major.default}",
+            "value": "{base.color.selectable.primary.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -405,7 +335,7 @@
             "type": "color"
           },
           "hover": {
-            "value": "{base.color.selectable.major.default}",
+            "value": "{base.color.selectable.primary.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -457,64 +387,31 @@
           }
         },
         "minor": {
-          "active": {
-            "value": "{base.color.selectable.minor.default}",
-            "type": "color",
-            "$extensions": {}
-          },
-          "default": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          },
-          "defaultAlt": {
-            "value": "{base.color.selectable.minor.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.67",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "hover": {
-            "value": "{base.color.selectable.minor.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.button.hover}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "withActive": {
-            "value": "{base.color.content.inverse.fgExtreme}",
-            "type": "color"
-          },
-          "withHover": {
-            "value": "{base.color.selectable.minor.default}",
-            "type": "color",
-            "$extensions": {}
-          }
-        },
-        "monochrome": {
           "standard": {
             "active": {
-              "value": "{base.color.backdrop.inverse.bgExtreme}",
-              "type": "color"
+              "value": "{base.color.selectable.minor.standard.default}",
+              "type": "color",
+              "$extensions": {}
             },
             "default": {
-              "value": "{origin.colors.transparent}",
+              "value": "{base.color.content.standard.fgFirm}",
               "type": "color"
             },
+            "defaultAlt": {
+              "value": "{base.color.selectable.minor.standard.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
             "hover": {
-              "value": "{base.color.backdrop.inverse.bgExtreme}",
+              "value": "{base.color.selectable.minor.standard.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -527,22 +424,23 @@
                 }
               }
             },
-            "withDefault": {
-              "value": "{base.color.content.standard.fgExtreme}",
+            "withActive": {
+              "value": "{base.color.content.inverse.fgExtreme}",
               "type": "color"
             },
-            "withActive": {
-              "value": "base.color.content.inverse.fgExtreme",
-              "type": "color"
+            "withHover": {
+              "value": "{base.color.selectable.minor.standard.default}",
+              "type": "color",
+              "$extensions": {}
             }
           },
           "inverse": {
             "active": {
-              "value": "{base.color.backdrop.standard.bgExtreme}",
+              "value": "{base.color.selectable.minor.inverse.default}",
               "type": "color"
             },
             "default": {
-              "value": "{origin.colors.transparent}",
+              "value": "{base.color.backdrop.standard.bgExtreme}",
               "type": "color"
             },
             "hover": {
@@ -558,10 +456,6 @@
                   }
                 }
               }
-            },
-            "withDefault": {
-              "value": "{base.color.content.inverse.fgExtreme}",
-              "type": "color"
             },
             "withActive": {
               "value": "{base.color.content.standard.fgExtreme}",
