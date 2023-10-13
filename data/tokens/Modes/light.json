@@ -272,6 +272,10 @@
             "value": "{origin.colors.red}",
             "type": "color"
           },
+          "defaultAlt": {
+            "value": "{origin.colors.transparent}",
+            "type": "color"
+          },
           "hover": {
             "value": "{base.color.status.negative.default}",
             "type": "color",
@@ -340,22 +344,7 @@
           }
         },
         "inactive": {
-          "bg": {
-            "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.input.disabled}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            },
-            "description": "Disabled input and button backgrounds, button borders and input backgrounds."
-          },
-          "border": {
+          "default": {
             "value": "{origin.colors.black}",
             "type": "color",
             "$extensions": {
@@ -370,8 +359,28 @@
             },
             "description": "Disabled form input borders."
           },
+          "defaultAlt": {
+            "value": "{origin.colors.black}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{base.color.modifiers.input.disabled}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            },
+            "description": "Disabled input and button backgrounds, button borders and input backgrounds."
+          },
           "content": {
             "value": "{base.color.content.standard.fgDelicate}",
+            "type": "color",
+            "description": "Disabled text inside buttons and form inputs."
+          },
+          "contentAlt": {
+            "value": "{base.color.content.inverse.fgExtreme}",
             "type": "color",
             "description": "Disabled text inside buttons and form inputs."
           }
@@ -387,19 +396,6 @@
                   "value": "{base.color.modifiers.button.active}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "activeAlt": {
-            "value": "{base.color.selectable.major.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.button.active} ",
-                  "space": "lch"
                 }
               }
             }
@@ -422,44 +418,18 @@
               }
             }
           },
-          "hoverAlt": {
-            "value": "{base.color.selectable.major.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.button.hover}",
-                  "space": "lch"
-                }
-              }
-            }
-          },
           "withActive": {
             "value": "{base.color.content.inverse.fgExtreme}",
-            "type": "color"
-          },
-          "withActiveAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
             "type": "color"
           },
           "withDefault": {
             "value": "{base.color.content.inverse.fgExtreme}",
             "type": "color"
           },
-          "withHoverAlt": {
-            "value": "{base.color.selectable.major.default}",
+          "withHover": {
+            "value": "{base.color.content.inverse.fgExtreme}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
+            "$extensions": {}
           }
         },
         "focus": {
@@ -490,33 +460,24 @@
           "active": {
             "value": "{base.color.selectable.minor.default}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
+            "$extensions": {}
           },
-          "activeAlt": {
+          "default": {
+            "value": "{base.color.content.standard.fgFirm}",
+            "type": "color"
+          },
+          "defaultAlt": {
             "value": "{base.color.selectable.minor.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "{base.color.modifiers.button.active} ",
+                  "value": "0.67",
                   "space": "lch"
                 }
               }
             }
-          },
-          "default": {
-            "value": "{origin.colors.denim}",
-            "type": "color"
           },
           "hover": {
             "value": "{base.color.selectable.minor.default}",
@@ -524,23 +485,10 @@
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
+                  "type": "alpha",
                   "value": "{base.color.modifiers.button.hover}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "hoverAlt": {
-            "value": "{base.color.selectable.minor.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.button.hover}",
-                  "space": "lch"
                 }
               }
             }
@@ -549,27 +497,10 @@
             "value": "{base.color.content.inverse.fgExtreme}",
             "type": "color"
           },
-          "withActiveAlt": {
-            "value": "{base.color.content.standard.fgFirm}",
-            "type": "color"
-          },
-          "withDefault": {
-            "value": "{base.color.content.inverse.fgExtreme}",
-            "type": "color"
-          },
-          "withHoverAlt": {
+          "withHover": {
             "value": "{base.color.selectable.minor.default}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
+            "$extensions": {}
           }
         },
         "monochrome": {
