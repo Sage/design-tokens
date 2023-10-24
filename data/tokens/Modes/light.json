@@ -232,17 +232,17 @@
           "hoverAlt": {
             "value": "{base.color.selectable.danger.default}",
             "type": "color",
-            "description": "used on pill hover states",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "{base.color.modifiers.button.hover}",
+                  "value": "{base.color.modifiers.button.hoverAlt}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
               }
-            }
+            },
+            "description": "used on pill hover states"
           },
           "withActive": {
             "value": "{base.color.content.inverse.fgExtreme}",
@@ -415,7 +415,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "{base.color.modifiers.button.hover}",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastMore}"
                   }
@@ -515,17 +515,17 @@
           "hoverAlt": {
             "value": "{base.color.status.caution.default}",
             "type": "color",
-            "description": "used on pill hover states",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "{base.color.modifiers.button.hover}",
+                  "value": "{base.color.modifiers.button.hoverAlt} ",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
               }
-            }
+            },
+            "description": "used on pill hover states"
           },
           "withActive": {
             "value": "{base.color.content.inverse.fgExtreme}",
@@ -597,17 +597,17 @@
           "hoverAlt": {
             "value": "{base.color.status.success.default}",
             "type": "color",
-            "description": "used on pill hover states",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "{base.color.modifiers.button.hover}",
+                  "value": "{base.color.modifiers.button.hoverAlt}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
               }
-            }
+            },
+            "description": "used on pill hover states"
           },
           "withActive": {
             "value": "{base.color.content.inverse.fgExtreme}",
@@ -679,17 +679,17 @@
           "hoverAlt": {
             "value": "{base.color.status.info.default}",
             "type": "color",
-            "description": "used on pill hover states",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "{base.color.modifiers.button.hover}",
+                  "value": "{base.color.modifiers.button.hoverAlt} ",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
               }
-            }
+            },
+            "description": "used on pill hover states"
           },
           "withActive": {
             "value": "{base.color.content.inverse.fgExtreme}",
@@ -761,17 +761,17 @@
           "hoverAlt": {
             "value": "{base.color.status.neutral.default}",
             "type": "color",
-            "description": "used on pill hover states",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "{base.color.modifiers.button.hover}",
+                  "value": "{base.color.modifiers.button.hoverAlt} ",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
               }
-            }
+            },
+            "description": "used on pill hover states"
           },
           "withActive": {
             "value": "{base.color.content.inverse.fgExtreme}",
@@ -843,17 +843,17 @@
           "hoverAlt": {
             "value": "{base.color.status.negative.default}",
             "type": "color",
-            "description": "used on pill hover states",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "{base.color.modifiers.button.hover}",
+                  "value": "{base.color.modifiers.button.hoverAlt} ",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
               }
-            }
+            },
+            "description": "used on pill hover states"
           },
           "withActive": {
             "value": "{base.color.content.inverse.fgExtreme}",
@@ -881,12 +881,12 @@
             "description": "more contrast"
           },
           "hover": {
-            "value": "0.16",
+            "value": "0.12",
             "type": "other",
             "description": "Hover used on primary buttons"
           },
           "hoverAlt": {
-            "value": "0.12",
+            "value": "0.16",
             "type": "other",
             "description": "Hover used on secondary and tertiary buttons"
           }
