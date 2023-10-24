@@ -1,3 +1,10 @@
+# [4.26.0](https://github.com/Sage/design-tokens/compare/v4.25.0...v4.26.0) (2023-10-24)
+
+
+### Features
+
+* **data:** add 2 size token for button toggle asset M and L. ([37161f8](https://github.com/Sage/design-tokens/commit/37161f835527ecc7916a446e4d8992b7fab4e902))
+
 # [4.25.0](https://github.com/Sage/design-tokens/compare/v4.24.0...v4.25.0) (2023-09-21)
 
 
