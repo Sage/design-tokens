@@ -1,29 +1,62 @@
 {
   "container": {
     "standard": {
-      "bg-default": {
-        "value": "{base.color.backdrop.standard.bgExtreme}",
-        "type": "color"
-      },
       "bgAlt-default": {
         "value": "{base.color.backdrop.standard.bgFirm}",
         "type": "color"
       },
+      "bg-default": {
+        "value": "{base.color.backdrop.standard.bgExtreme}",
+        "type": "color"
+      },
       "bgFooter-default": {
         "value": "{base.color.backdrop.standard.bgFirm}",
-        "type": "color"
+        "type": "color",
+        "description": "tile footer bg color\n"
       },
       "border-default": {
         "value": "{base.color.backdrop.standard.bgDelicate}",
         "type": "color"
+      }
+    },
+    "selectable": {
+      "bgFooter-default": {
+        "value": "{base.color.backdrop.standard.bgFirm}",
+        "type": "color",
+        "description": "tile footer bg color\n"
       },
       "bg-enabled": {
         "value": "{base.color.backdrop.standard.bgExtreme}",
         "type": "color"
       },
+      "bg-inactive": {
+        "value": "{base.color.selectable.inactive.defaultAlt}",
+        "type": "color"
+      },
+      "bgFooter-active": {
+        "value": "{base.color.selectable.monochrome.standard.active}",
+        "type": "color"
+      },
+      "bgFooter-activated": {
+        "value": "{base.color.status.success.default}",
+        "type": "color"
+      },
+      "border-inactive": {
+        "value": "{base.color.selectable.inactive.default}",
+        "type": "color"
+      },
+      "border-enabled": {
+        "value": "{base.color.content.standard.fgDelicate}",
+        "type": "color"
+      },
+      "labelFooter-active": {
+        "value": "{base.color.content.inverse.fgExtreme}",
+        "type": "color"
+      },
       "bg-hover": {
         "value": "{base.color.selectable.monochrome.standard.hover}",
-        "type": "color"
+        "type": "color",
+        "description": "Used for accordion hover backgrounds\n"
       }
     }
   }
