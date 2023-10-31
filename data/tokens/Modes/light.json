@@ -217,17 +217,17 @@
           "hover": {
             "value": "{base.color.status.negative.default}",
             "type": "color",
-            "description": "used on pill hover states",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.hover}",
+                  "value": "{base.color.modifiers.button.hoverAlt} ",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
               }
-            }
+            },
+            "description": "used on pill hover states"
           },
           "hoverAlt": {
             "value": "{base.color.selectable.danger.default}",
@@ -341,7 +341,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.hover}",
+                  "value": "{base.color.modifiers.button.hoverAlt} ",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore}"
                 }
@@ -409,18 +409,10 @@
               }
             },
             "hover": {
-              "value": "{base.color.selectable.monochrome.standard.default}",
+              "value": "{base.color.content.standard.fgExtreme}",
               "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "{base.color.modifiers.button.hover} ",
-                    "space": "lch",
-                    "color": "{base.color.modifier.contrastMore}"
-                  }
-                }
-              }
+              "$extensions": {},
+              "description": "Secondary button border on hover"
             },
             "hoverAlt": {
               "value": "{base.color.selectable.monochrome.standard.default}",
@@ -434,7 +426,8 @@
                     "color": "{base.color.modifier.contrastMore}"
                   }
                 }
-              }
+              },
+              "description": "- Accordion bg on hover\n- Menu item bg on hover"
             },
             "withActive": {
               "value": "{base.color.content.inverse.fgExtreme}",
