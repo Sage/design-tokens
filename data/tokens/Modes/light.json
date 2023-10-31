@@ -142,6 +142,20 @@
                 }
               }
             }
+          },
+          "bgFaint": {
+            "value": "{origin.colors.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.32",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
           }
         },
         "inverse": {
@@ -251,26 +265,6 @@
           "withDefault": {
             "value": "{base.color.content.inverse.fgExtreme}",
             "type": "color"
-          }
-        },
-        "form": {
-          "bg": {
-            "value": "{base.color.backdrop.standard.bgExtreme}",
-            "type": "color"
-          },
-          "border": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.5",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
           }
         },
         "inactive": {

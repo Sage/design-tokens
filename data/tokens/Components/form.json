@@ -2,8 +2,13 @@
   "form": {
     "standard": {
       "bg-default": {
-        "value": "{base.color.selectable.form.bg}",
+        "value": "{base.color.backdrop.standard.bgExtreme}",
         "type": "color"
+      },
+      "bg-alt": {
+        "value": "{base.color.backdrop.standard.bgFirm}",
+        "type": "color",
+        "description": "progress bar bg, text editor preview and text editor footer"
       },
       "bg-disabled": {
         "value": "{base.color.selectable.inactive.defaultAlt}",
@@ -14,7 +19,7 @@
         "type": "color"
       },
       "border-default": {
-        "value": "{base.color.selectable.form.border}",
+        "value": "{base.color.backdrop.standard.bgFaint}",
         "type": "color"
       },
       "border-disabled": {
@@ -45,19 +50,24 @@
       }
     },
     "labelset": {
-      "content-required": {
+      "label-required": {
         "value": "{base.color.selectable.danger.default}",
         "type": "color"
       },
-      "content-default": {
+      "label-default": {
         "value": "{base.color.content.standard.fgFirm}",
         "type": "color"
       },
-      "content-disabled": {
+      "label-alt": {
+        "value": "{base.color.content.standard.fgModerate}",
+        "type": "color",
+        "description": "used for '(optional)' text and hint text."
+      },
+      "label-disabled": {
         "value": "{base.color.content.standard.fgDelicate}",
         "type": "color"
       },
-      "content-readOnly": {
+      "label-readOnly": {
         "value": "{base.color.content.standard.fgFirm}",
         "type": "color"
       }
