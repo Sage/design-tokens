@@ -261,6 +261,33 @@
             "type": "color"
           }
         },
+        "dataEntry": {
+          "default": {
+            "value": "{origin.colors.black}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.50",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess} "
+                }
+              }
+            },
+            "description": "Enabled form input borders."
+          },
+          "bg": {
+            "value": "{origin.colors.white}",
+            "type": "color",
+            "description": "Input backgrounds."
+          },
+          "bgAlt": {
+            "value": "{base.color.passive.standard.bgFirm}",
+            "type": "color",
+            "description": "Input footer bgs (e.g text editor)."
+          }
+        },
         "focus": {
           "bg": {
             "value": "{origin.colors.gold}",
@@ -334,33 +361,6 @@
           "contentAlt": {
             "value": "{origin.colors.white}",
             "type": "color"
-          }
-        },
-        "dataEntry": {
-          "default": {
-            "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.50",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess} "
-                }
-              }
-            },
-            "description": "Enabled form input borders."
-          },
-          "bg": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "description": "Input backgrounds."
-          },
-          "bgAlt": {
-            "value": "{base.color.passive.standard.bgFirm}",
-            "type": "color",
-            "description": "Input footer bgs (e.g text editor)."
           }
         },
         "monochrome": {
