@@ -2,13 +2,17 @@
   "form": {
     "standard": {
       "bg-enabled": {
-        "value": "{base.color.interactive.dataEntry.bg}",
+        "value": "{base.color.interactive.dataEntry.default}",
         "type": "color"
       },
       "bg-alt": {
-        "value": "{base.color.interactive.dataEntry.bgAlt}",
+        "value": "{base.color.interactive.dataEntry.defaultAlt}",
         "type": "color",
         "description": "progress bar bg, text editor preview and text editor footer"
+      },
+      "bg-hover": {
+        "value": "{base.color.interactive.dataEntry.hoverAlt}",
+        "type": "color"
       },
       "bg-disabled": {
         "value": "{base.color.interactive.inactive.defaultAlt}",
@@ -19,24 +23,24 @@
         "type": "color"
       },
       "border-enabled": {
-        "value": "{base.color.interactive.dataEntry.border}",
+        "value": "{base.color.interactive.dataEntry.withDefault}",
         "type": "color"
-      },
-      "border-hover": {
-        "value": "{base.color.interactive.dataEntry.border-hover}",
-        "type": "color",
-        "description": "File input draggable border state"
       },
       "border-disabled": {
         "value": "{base.color.interactive.inactive.default}",
         "type": "color"
+      },
+      "border-hover": {
+        "value": "{base.color.interactive.dataEntry.hover}",
+        "type": "color",
+        "description": "File input draggable border state"
       },
       "border-readOnly": {
         "value": "{base.color.interactive.inactive.default}",
         "type": "color"
       },
       "icon-default": {
-        "value": "{base.color.passive.standard.fgFirm}",
+        "value": "{base.color.interactive.dataEntry.content}",
         "type": "color"
       },
       "icon-disabled": {
@@ -48,12 +52,17 @@
         "type": "color"
       },
       "text-default": {
-        "value": "{base.color.passive.standard.fgModerate}",
+        "value": "{base.color.interactive.dataEntry.content}",
         "type": "color"
       },
       "text-disabled": {
         "value": "{base.color.interactive.inactive.content}",
         "type": "color"
+      },
+      "text-hover": {
+        "value": "{base.color.interactive.dataEntry.hover}",
+        "type": "color",
+        "description": "text hover state when dragging a file over file input"
       },
       "text-readOnly": {
         "value": "{base.color.passive.standard.fgFirm}",

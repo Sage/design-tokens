@@ -262,36 +262,56 @@
           }
         },
         "dataEntry": {
-          "border": {
+          "default": {
+            "value": "{origin.colors.white}",
+            "type": "color",
+            "description": "Input backgrounds."
+          },
+          "hover": {
+            "value": "{origin.colors.black}",
+            "type": "color",
+            "$extensions": {},
+            "description": "hover for draggable area on file input"
+          },
+          "hoverAlt": {
+            "value": "{origin.colors.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.hoverAlt} ",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            },
+            "description": "bg hover for draggable area on file input"
+          },
+          "withDefault": {
             "value": "{origin.colors.black}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "0.50",
+                  "value": "0.5",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastLess} "
                 }
               }
             },
-            "description": "Enabled form input borders."
+            "description": "Input borders."
           },
-          "border-hover": {
-            "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {},
-            "description": "hover for draggable area on file input"
-          },
-          "bg": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "description": "Input backgrounds."
-          },
-          "bgAlt": {
+          "defaultAlt": {
             "value": "{base.color.passive.standard.bgFirm}",
             "type": "color",
             "description": "Input footer bgs (e.g text editor)."
+          },
+          "content": {
+            "value": "{base.color.passive.standard.fgFirm}",
+            "type": "color",
+            "description": "Input Text"
           }
         },
         "focus": {
