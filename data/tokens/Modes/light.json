@@ -267,6 +267,30 @@
             "type": "color"
           }
         },
+        "focus": {
+          "bg": {
+            "value": "{origin.colors.gold}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.4",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess}"
+                }
+              }
+            }
+          },
+          "border": {
+            "value": "{origin.colors.black}",
+            "type": "color"
+          },
+          "borderAlt": {
+            "value": "{origin.colors.gold}",
+            "type": "color"
+          }
+        },
         "inactive": {
           "default": {
             "value": "{origin.colors.black}",
@@ -309,74 +333,31 @@
             "description": "Disabled text inside buttons and form inputs."
           }
         },
-        "primary": {
-          "active": {
-            "value": "{base.color.selectable.primary.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
+        "input": {
           "default": {
-            "value": "{origin.colors.jade}",
-            "type": "color"
-          },
-          "hover": {
-            "value": "{base.color.selectable.primary.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.hoverAlt} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "withActive": {
-            "value": "{base.color.content.inverse.fgExtreme}",
-            "type": "color"
-          },
-          "withDefault": {
-            "value": "{base.color.content.inverse.fgExtreme}",
-            "type": "color"
-          },
-          "withHover": {
-            "value": "{base.color.content.inverse.fgExtreme}",
-            "type": "color"
-          }
-        },
-        "focus": {
-          "bg": {
-            "value": "{origin.colors.gold}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.4",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
-                }
-              }
-            }
-          },
-          "border": {
             "value": "{origin.colors.black}",
-            "type": "color"
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.50",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess} "
+                }
+              }
+            },
+            "description": "Enabled form input borders."
           },
-          "borderAlt": {
-            "value": "{origin.colors.gold}",
-            "type": "color"
+          "bg": {
+            "value": "{base.color.backdrop.standard.bgExtreme}",
+            "type": "color",
+            "description": "Input backgrounds."
+          },
+          "bgAlt": {
+            "value": "{base.color.backdrop.standard.bgFirm}",
+            "type": "color",
+            "description": "Input footer bgs (e.g text editor)."
           }
         },
         "monochrome": {
@@ -405,7 +386,6 @@
             "hover": {
               "value": "{base.color.content.standard.fgExtreme}",
               "type": "color",
-              "$extensions": {},
               "description": "Secondary button border on hover"
             },
             "hoverAlt": {
@@ -463,6 +443,52 @@
               "value": "{base.color.backdrop.standard.bgExtreme}",
               "type": "color"
             }
+          }
+        },
+        "primary": {
+          "active": {
+            "value": "{base.color.selectable.primary.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.active}",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "default": {
+            "value": "{origin.colors.jade}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{base.color.selectable.primary.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.hoverAlt} ",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "withActive": {
+            "value": "{base.color.content.inverse.fgExtreme}",
+            "type": "color"
+          },
+          "withDefault": {
+            "value": "{base.color.content.inverse.fgExtreme}",
+            "type": "color"
+          },
+          "withHover": {
+            "value": "{base.color.content.inverse.fgExtreme}",
+            "type": "color"
           }
         }
       },
