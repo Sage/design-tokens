@@ -312,6 +312,11 @@
             "value": "{base.color.passive.standard.fgFirm}",
             "type": "color",
             "description": "Input Text"
+          },
+          "contentAlt": {
+            "value": "{base.color.passive.standard.fgModerate}",
+            "type": "color",
+            "description": "Input Text"
           }
         },
         "focus": {
@@ -340,12 +345,12 @@
         },
         "inactive": {
           "default": {
-            "value": "{origin.colors.black}",
+            "value": "{origin.colors.white}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
+                  "type": "mix",
                   "value": "{base.color.modifiers.input.disabledFg}",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore} "
@@ -355,27 +360,27 @@
             "description": "Disabled form input borders."
           },
           "defaultAlt": {
-            "value": "{origin.colors.black}",
+            "value": "{origin.colors.white}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
+                  "type": "mix",
                   "value": "{base.color.modifiers.input.disabledBg} ",
                   "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
+                  "color": "{base.color.modifier.contrastMore} "
                 }
               }
             },
             "description": "Disabled input and button backgrounds, button borders and input backgrounds."
           },
           "content": {
-            "value": "{origin.colors.black}",
+            "value": "{origin.colors.white}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
+                  "type": "mix",
                   "value": "{base.color.modifiers.input.disabledFg} ",
                   "space": "lch",
                   "color": "{base.color.modifier.contrastMore} "
