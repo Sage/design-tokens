@@ -16,6 +16,20 @@
       },
       "border-default": {
         "value": "{base.color.passive.standard.bgFaint}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "mix",
+              "value": "0",
+              "space": "lch",
+              "color": "{base.color.passive.standard.bgExtreme} "
+            }
+          }
+        }
+      },
+      "text-default": {
+        "value": "{base.color.interactive.monochrome.standard.default}",
         "type": "color"
       }
     },
@@ -60,7 +74,17 @@
       },
       "border-enabled": {
         "value": "{base.color.passive.standard.bgFaint}",
-        "type": "color"
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "mix",
+              "value": "0",
+              "space": "lch",
+              "color": "{base.color.passive.standard.bgExtreme} "
+            }
+          }
+        }
       },
       "labelFooter-active": {
         "value": "{base.color.passive.inverse.fgExtreme}",
@@ -68,10 +92,6 @@
       },
       "text-active": {
         "value": "{base.color.interactive.monochrome.standard.active}",
-        "type": "color"
-      },
-      "text-default": {
-        "value": "{base.color.interactive.monochrome.standard.default}",
         "type": "color"
       },
       "text-disabled": {
