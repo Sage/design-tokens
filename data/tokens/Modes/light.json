@@ -13,9 +13,10 @@
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
+                  "type": "mix",
+                  "value": "0.1",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess}"
                 }
               }
             }
@@ -26,9 +27,10 @@
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "0.67",
-                  "space": "lch"
+                  "type": "mix",
+                  "value": "0.33",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess}"
                 }
               }
             }
@@ -39,9 +41,10 @@
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
+                  "type": "mix",
                   "value": "0.50",
-                  "space": "lch"
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess}"
                 }
               }
             }
@@ -52,9 +55,10 @@
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "0.30",
-                  "space": "lch"
+                  "type": "mix",
+                  "value": "0.70",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess}"
                 }
               }
             }
@@ -62,16 +66,17 @@
           "fgFaint": {
             "value": "{origin.colors.black}",
             "type": "color",
-            "description": "used for dividers",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "0.10",
-                  "space": "lch"
+                  "type": "mix",
+                  "value": "0.90",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess} "
                 }
               }
-            }
+            },
+            "description": "used for dividers"
           },
           "bgExtreme": {
             "value": "{origin.colors.white}",
@@ -288,7 +293,7 @@
             "description": "bg hover for draggable area on file input"
           },
           "withDefault": {
-            "value": "{origin.colors.black}",
+            "value": "{origin.colors.white}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -296,7 +301,7 @@
                   "type": "mix",
                   "value": "0.5",
                   "space": "lch",
-                  "color": "{base.color.modifier.contrastLess} "
+                  "color": "{base.color.modifier.contrastMore} "
                 }
               }
             },
