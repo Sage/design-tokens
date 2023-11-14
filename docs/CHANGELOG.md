@@ -1,3 +1,10 @@
+# [4.28.0](https://github.com/Sage/design-tokens/compare/v4.27.0...v4.28.0) (2023-11-14)
+
+
+### Features
+
+* **data:** add 1 size token for tile ([5bfe37d](https://github.com/Sage/design-tokens/commit/5bfe37dc58876b49d9493bbc914ee1f3218795c8))
+
 # [4.27.0](https://github.com/Sage/design-tokens/compare/v4.26.0...v4.27.0) (2023-11-13)
 
 
