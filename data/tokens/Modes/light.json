@@ -2,74 +2,13 @@
   "base": {
     "color": {
       "passive": {
-        "content": {
-          "extreme": {
-            "value": "{origin.colors.black}",
-            "type": "color"
-          },
-          "firm": {
-            "value": "{base.color.passive.content.extreme}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
-                }
-              }
-            }
-          },
-          "moderate": {
-            "value": "{base.color.passive.content.extreme}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.67",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "soft": {
-            "value": "{base.color.passive.content.extreme}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.5",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "delicate": {
-            "value": "{base.color.passive.content.extreme}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.3",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
-                }
-              }
-            },
-            "description": "Used for disabled text"
-          }
-        },
         "standard": {
           "fgExtreme": {
-            "value": "{origin.colors.black}",
+            "value": "{origin.colors.testBlack}",
             "type": "color"
           },
           "fgFirm": {
-            "value": "{origin.colors.black}",
+            "value": "{origin.colors.testBlack}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -83,7 +22,7 @@
             }
           },
           "fgModerate": {
-            "value": "{origin.colors.black}",
+            "value": "{origin.colors.testBlack}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -97,7 +36,7 @@
             }
           },
           "fgSoft": {
-            "value": "{origin.colors.black}",
+            "value": "{origin.colors.testBlack}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -111,7 +50,7 @@
             }
           },
           "fgDelicate": {
-            "value": "{origin.colors.black}",
+            "value": "{origin.colors.testBlack}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -125,7 +64,7 @@
             }
           },
           "fgFaint": {
-            "value": "{origin.colors.black}",
+            "value": "{origin.colors.testBlack}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -144,7 +83,7 @@
             "type": "color"
           },
           "bgFirm": {
-            "value": "{origin.colors.white}",
+            "value": "{origin.colors.testWhite}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -158,7 +97,7 @@
             }
           },
           "bgModerate": {
-            "value": "{origin.colors.white}",
+            "value": "{origin.colors.testWhite}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -172,7 +111,7 @@
             }
           },
           "bgSoft": {
-            "value": "{origin.colors.white}",
+            "value": "{origin.colors.testWhite}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -186,7 +125,7 @@
             }
           },
           "bgDelicate": {
-            "value": "{origin.colors.white}",
+            "value": "{origin.colors.testWhite}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -200,7 +139,7 @@
             }
           },
           "bgFaint": {
-            "value": "{origin.colors.white}",
+            "value": "{origin.colors.testWhite}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -440,9 +379,18 @@
             "description": "Disabled input and button backgrounds, button borders and input backgrounds."
           },
           "content": {
-            "value": "{base.color.passive.content.delicate}",
+            "value": "{origin.colors.white}",
             "type": "color",
-            "$extensions": {},
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.input.disabledFg} ",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore} "
+                }
+              }
+            },
             "description": "Disabled text inside buttons and form inputs."
           },
           "contentAlt": {
@@ -1138,7 +1086,7 @@
             "description": "less contrast"
           },
           "disabledFg": {
-            "value": "0.30",
+            "value": "0.3",
             "type": "other",
             "description": "less contrast"
           }
