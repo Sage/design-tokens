@@ -2,6 +2,48 @@
   "base": {
     "color": {
       "passive": {
+        "bg": {
+          "standard": {
+            "extreme": {
+              "value": "{origin.colors.white}",
+              "type": "color"
+            },
+            "firm": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.04",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              }
+            },
+            "moderate": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.08",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              }
+            }
+          },
+          "inverse": {
+            "Extreme": {
+              "value": "{origin.colors.black}",
+              "type": "color"
+            }
+          }
+        },
         "content": {
           "firm": {
             "value": "{origin.colors.black}",
@@ -88,48 +130,6 @@
                   "color": "{base.color.modifier.contrastMore} "
                 }
               }
-            }
-          }
-        },
-        "bg": {
-          "standard": {
-            "extreme": {
-              "value": "{origin.colors.white}",
-              "type": "color"
-            },
-            "firm": {
-              "value": "{origin.colors.white}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.04",
-                    "space": "lch",
-                    "color": "{base.color.modifier.contrastMore}"
-                  }
-                }
-              }
-            },
-            "moderate": {
-              "value": "{origin.colors.white}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.08",
-                    "space": "lch",
-                    "color": "{base.color.modifier.contrastMore}"
-                  }
-                }
-              }
-            }
-          },
-          "inverse": {
-            "Extreme": {
-              "value": "{origin.colors.black}",
-              "type": "color"
             }
           }
         }
@@ -543,8 +543,7 @@
           },
           "withActiveAlt": {
             "value": "{base.color.passive.content.firm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
           "withDefault": {
             "value": "{origin.colors.white}",
@@ -552,8 +551,7 @@
           },
           "withHoverAlt": {
             "value": "{base.color.passive.content.firm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           }
         },
         "success": {
@@ -627,8 +625,7 @@
           },
           "withActiveAlt": {
             "value": "{base.color.passive.content.firm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
           "withDefault": {
             "value": "{origin.colors.white}",
@@ -636,8 +633,7 @@
           },
           "withHoverAlt": {
             "value": "{base.color.passive.content.firm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           }
         },
         "info": {
@@ -711,8 +707,7 @@
           },
           "withActiveAlt": {
             "value": "{base.color.passive.content.firm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
           "withDefault": {
             "value": "{origin.colors.white}",
@@ -720,8 +715,7 @@
           },
           "withHoverAlt": {
             "value": "{base.color.passive.content.firm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           }
         },
         "neutral": {
@@ -795,8 +789,7 @@
           },
           "withActiveAlt": {
             "value": "{base.color.passive.content.firm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
           "withDefault": {
             "value": "{origin.colors.white}",
@@ -804,8 +797,7 @@
           },
           "withHoverAlt": {
             "value": "{base.color.passive.content.firm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           }
         },
         "negative": {
@@ -879,8 +871,7 @@
           },
           "withActiveAlt": {
             "value": "{base.color.passive.content.firm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
           "withDefault": {
             "value": "{origin.colors.white}",
@@ -888,8 +879,7 @@
           },
           "withHoverAlt": {
             "value": "{base.color.passive.content.firm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           }
         },
         "notify": {
