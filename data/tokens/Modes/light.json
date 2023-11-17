@@ -3,12 +3,8 @@
     "color": {
       "passive": {
         "content": {
-          "extreme": {
-            "value": "{origin.colors.black}",
-            "type": "color"
-          },
           "firm": {
-            "value": "{base.color.passive.content.extreme}",
+            "value": "{origin.colors.black}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -22,7 +18,7 @@
             }
           },
           "moderate": {
-            "value": "{base.color.passive.content.extreme}",
+            "value": "{origin.colors.black}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -34,21 +30,8 @@
               }
             }
           },
-          "soft": {
-            "value": "{base.color.passive.content.extreme}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.5",
-                  "space": "lch"
-                }
-              }
-            }
-          },
           "delicate": {
-            "value": "{base.color.passive.content.extreme}",
+            "value": "{origin.colors.black}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -63,13 +46,9 @@
             "description": "Used for disabled text"
           }
         },
-        "standard": {
-          "fgExtreme": {
-            "value": "{origin.colors.black}",
-            "type": "color"
-          },
-          "fgFirm": {
-            "value": "{origin.colors.black}",
+        "fg": {
+          "faint": {
+            "value": "{origin.colors.white}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -77,27 +56,28 @@
                   "type": "mix",
                   "value": "0.1",
                   "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
+                  "color": "{base.color.modifier.contrastMore} "
                 }
               }
-            }
+            },
+            "description": "used for dividers"
           },
-          "fgModerate": {
-            "value": "{origin.colors.black}",
+          "delicate": {
+            "value": "{origin.colors.white}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "0.33",
+                  "value": "0.30",
                   "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
+                  "color": "{base.color.modifier.contrastMore} "
                 }
               }
             }
           },
-          "fgSoft": {
-            "value": "{origin.colors.black}",
+          "soft": {
+            "value": "{origin.colors.white}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -105,164 +85,51 @@
                   "type": "mix",
                   "value": "0.50",
                   "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
-                }
-              }
-            }
-          },
-          "fgDelicate": {
-            "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.70",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
-                }
-              }
-            }
-          },
-          "fgFaint": {
-            "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.90",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess} "
-                }
-              }
-            },
-            "description": "used for dividers"
-          },
-          "bgExtreme": {
-            "value": "{origin.colors.white}",
-            "type": "color"
-          },
-          "bgFirm": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.04",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "bgModerate": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.08",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "bgSoft": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.16",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "bgDelicate": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.24",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
-          "bgFaint": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.32",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
+                  "color": "{base.color.modifier.contrastMore} "
                 }
               }
             }
           }
         },
-        "inverse": {
-          "fgExtreme": {
-            "value": "{origin.colors.white}",
-            "type": "color"
-          },
-          "bgExtreme": {
-            "value": "{origin.colors.black}",
-            "type": "color"
-          },
-          "bgFirm": {
-            "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.16",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess} "
+        "bg": {
+          "standard": {
+            "extreme": {
+              "value": "{origin.colors.white}",
+              "type": "color"
+            },
+            "firm": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.04",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              }
+            },
+            "moderate": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.08",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
                 }
               }
             }
           },
-          "bgModerate": {
-            "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.24",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess} "
-                }
-              }
-            }
-          },
-          "bgSoft": {
-            "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.32",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess} "
-                }
-              }
+          "inverse": {
+            "Extreme": {
+              "value": "{origin.colors.black}",
+              "type": "color"
             }
           }
         }
@@ -369,17 +236,17 @@
             "description": "Input borders."
           },
           "defaultAlt": {
-            "value": "{base.color.passive.standard.bgFirm}",
+            "value": "{base.color.passive.bg.standard.firm}",
             "type": "color",
             "description": "Input footer bgs (e.g text editor)."
           },
           "content": {
-            "value": "{base.color.passive.standard.fgFirm}",
+            "value": "{base.color.passive.content.firm}",
             "type": "color",
             "description": "Input Text"
           },
           "contentAlt": {
-            "value": "{base.color.passive.standard.fgModerate}",
+            "value": "{base.color.passive.content.moderate}",
             "type": "color",
             "description": "Input Text"
           }
@@ -442,7 +309,6 @@
           "content": {
             "value": "{base.color.passive.content.delicate}",
             "type": "color",
-            "$extensions": {},
             "description": "Disabled text inside buttons and form inputs."
           },
           "contentAlt": {
@@ -676,34 +542,18 @@
             "type": "color"
           },
           "withActiveAlt": {
-            "value": "{origin.colors.black}",
+            "value": "{base.color.passive.content.firm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
+            "$extensions": {}
           },
           "withDefault": {
             "value": "{origin.colors.white}",
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{origin.colors.black}",
+            "value": "{base.color.passive.content.firm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
+            "$extensions": {}
           }
         },
         "success": {
@@ -776,34 +626,18 @@
             "type": "color"
           },
           "withActiveAlt": {
-            "value": "{origin.colors.black}",
+            "value": "{base.color.passive.content.firm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
+            "$extensions": {}
           },
           "withDefault": {
             "value": "{origin.colors.white}",
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{base.color.passive.standard.fgFirm}",
+            "value": "{base.color.passive.content.firm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
+            "$extensions": {}
           }
         },
         "info": {
@@ -876,34 +710,18 @@
             "type": "color"
           },
           "withActiveAlt": {
-            "value": "{origin.colors.black}",
+            "value": "{base.color.passive.content.firm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
+            "$extensions": {}
           },
           "withDefault": {
             "value": "{origin.colors.white}",
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{origin.colors.black}",
+            "value": "{base.color.passive.content.firm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
+            "$extensions": {}
           }
         },
         "neutral": {
@@ -976,34 +794,18 @@
             "type": "color"
           },
           "withActiveAlt": {
-            "value": "{origin.colors.black}",
+            "value": "{base.color.passive.content.firm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
+            "$extensions": {}
           },
           "withDefault": {
             "value": "{origin.colors.white}",
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{origin.colors.black}",
+            "value": "{base.color.passive.content.firm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
+            "$extensions": {}
           }
         },
         "negative": {
@@ -1076,34 +878,18 @@
             "type": "color"
           },
           "withActiveAlt": {
-            "value": "{origin.colors.black}",
+            "value": "{base.color.passive.content.firm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
+            "$extensions": {}
           },
           "withDefault": {
             "value": "{origin.colors.white}",
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{origin.colors.black}",
+            "value": "{base.color.passive.content.firm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
+            "$extensions": {}
           }
         },
         "notify": {
