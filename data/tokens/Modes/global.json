@@ -1,5 +1,296 @@
 {
   "base": {
+    "box-shadow": {
+      "container": {
+        "XS": {
+          "value": "{origin.box-shadow.downward.1}",
+          "type": "boxShadow"
+        },
+        "S": {
+          "value": "{origin.box-shadow.downward.2}",
+          "type": "boxShadow"
+        },
+        "M": {
+          "value": "{origin.box-shadow.downward.3}",
+          "type": "boxShadow"
+        },
+        "L": {
+          "value": "{origin.box-shadow.downward.4}",
+          "type": "boxShadow"
+        },
+        "XL": {
+          "value": "{origin.box-shadow.downward.5}",
+          "type": "boxShadow"
+        },
+        "sticky-footer": {
+          "value": "{origin.box-shadow.upward.1}",
+          "type": "boxShadow"
+        },
+        "solid-border": {
+          "value": "{origin.box-shadow.solid.border}",
+          "type": "boxShadow"
+        }
+      },
+      "selectable": {
+        "S": {
+          "value": "{origin.box-shadow.downward.1}",
+          "type": "boxShadow"
+        },
+        "M": {
+          "value": "{origin.box-shadow.downward.2}",
+          "type": "boxShadow"
+        }
+      }
+    },
+    "border-radius": {
+      "scale": {
+        "value": "1",
+        "type": "borderRadius",
+        "description": "We can override this to locally change the size of radius in the future if required."
+      },
+      "container": {
+        "XS": {
+          "value": "{origin.dimension.12} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Validation bar"
+        },
+        "S": {
+          "value": "{origin.dimension.50} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Color picker advanced (inner container), Tooltip."
+        },
+        "M": {
+          "value": "{origin.dimension.100} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Action popover (menu), Anchor navigation, Card (less rounded), Card select (single), Card select group (outer corners), Carousel (slides), Color picker standard (container), Menu (bottom corners), Message, Navigation: top (menu bottom corners), Navigation: left (selected menu), Pagination, Table, Tile (less rounded), Toast."
+        },
+        "L": {
+          "value": "{origin.dimension.200} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Carousel (outer part), Card (more rounded), Color picker advanced (outer container), Dialog (not full screen), Tile (more rounded)."
+        },
+        "none": {
+          "value": "0",
+          "type": "borderRadius"
+        }
+      },
+      "selectable": {
+        "XS": {
+          "value": "{origin.dimension.25} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Checkbox (S, M), Link (focus background),Pill"
+        },
+        "S": {
+          "value": "{origin.dimension.50} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Button: minor (including button bar), Button: multi-action & split (menu), Button toggle: minor, Checkbox (large), Date picker, Date range, Dropdown: select (trigger & menu), File input, Link (focus), Search, Text area, Text input."
+        },
+        "M": {
+          "value": "{origin.dimension.100} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Tab"
+        },
+        "L": {
+          "value": "{origin.dimension.400} * {base.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Action popover (button), Button: major (including button bar), Button: multi-action & split, Button toggle: major, Loader bar, Progress tracker, Switch."
+        },
+        "none": {
+          "value": "0",
+          "type": "borderRadius"
+        }
+      }
+    },
+    "border-width": {
+      "scale": {
+        "value": "1",
+        "type": "borderWidth"
+      },
+      "container": {
+        "S": {
+          "value": "{origin.dimension.12} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Dividing lines"
+        },
+        "none": {
+          "value": "0",
+          "type": "borderWidth"
+        }
+      },
+      "selectable": {
+        "S": {
+          "value": "{origin.dimension.12} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Inputs, buttons"
+        },
+        "MS": {
+          "value": "{origin.dimension.25} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Buttons, Validation bars"
+        },
+        "M": {
+          "value": "{origin.dimension.38} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Focus\n"
+        },
+        "L": {
+          "value": "{origin.dimension.50} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Focus underline\n"
+        },
+        "XL": {
+          "value": "{origin.dimension.75} * {base.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Double Focus Border"
+        },
+        "none": {
+          "value": "0",
+          "type": "borderWidth"
+        }
+      }
+    },
+    "size": {
+      "selectable": {
+        "S": {
+          "value": "{origin.dimension.400}",
+          "type": "sizing"
+        },
+        "M": {
+          "value": "{origin.dimension.500}",
+          "type": "sizing"
+        },
+        "L": {
+          "value": "{origin.dimension.600}",
+          "type": "sizing"
+        }
+      }
+    },
+    "space": {
+      "selectable": {
+        "inside": {
+          "Neg-XS": {
+            "value": "{origin.dimension.25} * -1",
+            "type": "spacing"
+          },
+          "Neg-XXS": {
+            "value": "{origin.dimension.12} * -1",
+            "type": "spacing"
+          },
+          "XXS": {
+            "value": "{origin.dimension.12}",
+            "type": "spacing"
+          },
+          "none": {
+            "value": "{origin.dimension.0}",
+            "type": "spacing"
+          },
+          "XS": {
+            "value": "{origin.dimension.25}",
+            "type": "spacing"
+          },
+          "S": {
+            "value": "{origin.dimension.50}",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "{origin.dimension.100}",
+            "type": "spacing"
+          },
+          "M": {
+            "value": "{origin.dimension.150}",
+            "type": "spacing"
+          },
+          "ML": {
+            "value": "{origin.dimension.200}",
+            "type": "spacing"
+          },
+          "L": {
+            "value": "{origin.dimension.300}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "{origin.dimension.400}",
+            "type": "spacing"
+          },
+          "XXL": {
+            "value": "{origin.dimension.500}",
+            "type": "spacing"
+          }
+        },
+        "stack": {
+          "Neg-XS": {
+            "value": "{origin.dimension.25} * -1",
+            "type": "spacing"
+          },
+          "Neg-XXS": {
+            "value": "{origin.dimension.12} * -1",
+            "type": "spacing"
+          },
+          "XXS": {
+            "value": "{origin.dimension.12}",
+            "type": "spacing"
+          },
+          "none": {
+            "value": "{origin.dimension.0}",
+            "type": "spacing"
+          },
+          "XS": {
+            "value": "{origin.dimension.25}",
+            "type": "spacing"
+          },
+          "S": {
+            "value": "{origin.dimension.50}",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "{origin.dimension.100}",
+            "type": "spacing"
+          },
+          "M": {
+            "value": "{origin.dimension.150}",
+            "type": "spacing"
+          },
+          "ML": {
+            "value": "{origin.dimension.200}",
+            "type": "spacing"
+          },
+          "L": {
+            "value": "{origin.dimension.300}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "{origin.dimension.400}",
+            "type": "spacing"
+          },
+          "XXL": {
+            "value": "{origin.dimension.500}",
+            "type": "spacing"
+          }
+        }
+      },
+      "page": {
+        "inside": {
+          "none": {
+            "value": "{origin.dimension.0}",
+            "type": "spacing"
+          },
+          "L": {
+            "value": "{origin.dimension.12}",
+            "type": "spacing"
+          }
+        },
+        "outside": {
+          "none": {
+            "value": "{origin.dimension.0}",
+            "type": "spacing"
+          },
+          "L": {
+            "value": "{origin.dimension.12}",
+            "type": "spacing"
+          }
+        }
+      }
+    },
     "typography": {
       "large viewports": {
         "hero heading": {
