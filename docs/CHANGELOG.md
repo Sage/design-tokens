@@ -1,3 +1,11 @@
+# [4.30.0](https://github.com/Sage/design-tokens/compare/v4.29.0...v4.30.0) (2023-11-21)
+
+
+### Features
+
+* **data:** semantic.positive 500 and 600 darkened to meet WCAG requirements on #F2F5F6 ([689eedd](https://github.com/Sage/design-tokens/commit/689eedd9eaa7e25f3c774320cf5d6dfb8d8b43b8)), closes [#F2F5F6](https://github.com/Sage/design-tokens/issues/F2F5F6)
+* **data:** Sync Figma styles with tokens ([e835410](https://github.com/Sage/design-tokens/commit/e835410a1c8aec4057e229a10aeaf3a071a178ba))
+
 # [4.29.0](https://github.com/Sage/design-tokens/compare/v4.28.0...v4.29.0) (2023-11-16)
 
 
