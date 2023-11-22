@@ -1,3 +1,10 @@
+# [4.31.0](https://github.com/Sage/design-tokens/compare/v4.30.0...v4.31.0) (2023-11-22)
+
+
+### Features
+
+* **data:** add 1 typogrraphy token for badge. ([734aa74](https://github.com/Sage/design-tokens/commit/734aa747e4d04602e4015cc2d917df33e695e7a1))
+
 # [4.30.0](https://github.com/Sage/design-tokens/compare/v4.29.0...v4.30.0) (2023-11-21)
 
 
