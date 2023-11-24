@@ -36,9 +36,23 @@
         "description": "headerborders"
       },
       "label-default": {
-        "value": "{base.color.passive.content.firm}",
+        "value": "{base.color.passive.content.standard.firm}",
         "type": "color",
         "description": "headerborders"
+      }
+    },
+    "row": {
+      "bg-activated": {
+        "value": "{base.color.interactive.primary.default}",
+        "type": "color"
+      },
+      "bg-activatedHover": {
+        "value": "{base.color.interactive.primary.hover}",
+        "type": "color"
+      },
+      "bg-active": {
+        "value": "{base.color.interactive.monochrome.standard.active}",
+        "type": "color"
       }
     },
     "headerAlt": {
@@ -57,7 +71,7 @@
         }
       },
       "bgAlt-default": {
-        "value": "{dataTable.header.bg-default}",
+        "value": "{dataTable.headerAlt.bg-default}",
         "type": "color",
         "$extensions": {
           "studio.tokens": {
@@ -65,14 +79,14 @@
               "type": "mix",
               "value": "0.08",
               "space": "lch",
-              "color": "{base.color.modifier.contrastMore} "
+              "color": "{base.color.modifier.contrastLess} "
             }
           }
         },
         "description": "Zebra stripes"
       },
       "border-default": {
-        "value": "{dataTable.header.bg-default}",
+        "value": "{dataTable.headerAlt.bg-default}",
         "type": "color",
         "$extensions": {
           "studio.tokens": {
@@ -80,14 +94,14 @@
               "type": "mix",
               "value": "0.16",
               "space": "lch",
-              "color": "{base.color.modifier.contrastMore} "
+              "color": "{base.color.modifier.contrastLess} "
             }
           }
         },
         "description": "headerborders"
       },
       "label-default": {
-        "value": "{base.color.passive.content.firm}",
+        "value": "{base.color.passive.content.inverse.firm}",
         "type": "color",
         "description": "headerborders"
       }

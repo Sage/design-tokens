@@ -45,47 +45,93 @@
           }
         },
         "content": {
-          "firm": {
-            "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
-                }
-              }
-            }
-          },
-          "moderate": {
-            "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.67",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "delicate": {
-            "value": "{origin.colors.black}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.3",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess}"
+          "standard": {
+            "firm": {
+              "value": "{origin.colors.black}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.9",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess}"
+                  }
                 }
               }
             },
-            "description": "Used for disabled text"
+            "moderate": {
+              "value": "{origin.colors.black}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "delicate": {
+              "value": "{origin.colors.black}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.3",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "description": "Used for disabled text"
+            }
+          },
+          "inverse": {
+            "firm": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.9",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess}"
+                  }
+                }
+              }
+            },
+            "moderate": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "delicate": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.3",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "description": "Used for disabled text"
+            }
           }
         },
         "fg": {
@@ -241,12 +287,12 @@
             "description": "Input footer bgs (e.g text editor)."
           },
           "content": {
-            "value": "{base.color.passive.content.firm}",
+            "value": "{base.color.passive.content.standard.firm}",
             "type": "color",
             "description": "Input Text"
           },
           "contentAlt": {
-            "value": "{base.color.passive.content.moderate}",
+            "value": "{base.color.passive.content.standard.moderate}",
             "type": "color",
             "description": "Input Text"
           }
@@ -307,7 +353,7 @@
             "description": "Disabled input and button backgrounds, button borders and input backgrounds."
           },
           "content": {
-            "value": "{base.color.passive.content.delicate}",
+            "value": "{base.color.passive.content.standard.delicate}",
             "type": "color",
             "description": "Disabled text inside buttons and form inputs."
           },
@@ -542,7 +588,7 @@
             "type": "color"
           },
           "withActiveAlt": {
-            "value": "{base.color.passive.content.firm}",
+            "value": "{base.color.passive.content.standard.firm}",
             "type": "color"
           },
           "withDefault": {
@@ -550,7 +596,7 @@
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{base.color.passive.content.firm}",
+            "value": "{base.color.passive.content.standard.firm}",
             "type": "color"
           }
         },
@@ -624,7 +670,7 @@
             "type": "color"
           },
           "withActiveAlt": {
-            "value": "{base.color.passive.content.firm}",
+            "value": "{base.color.passive.content.standard.firm}",
             "type": "color"
           },
           "withDefault": {
@@ -632,7 +678,7 @@
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{base.color.passive.content.firm}",
+            "value": "{base.color.passive.content.standard.firm}",
             "type": "color"
           }
         },
@@ -706,7 +752,7 @@
             "type": "color"
           },
           "withActiveAlt": {
-            "value": "{base.color.passive.content.firm}",
+            "value": "{base.color.passive.content.standard.firm}",
             "type": "color"
           },
           "withDefault": {
@@ -714,7 +760,7 @@
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{base.color.passive.content.firm}",
+            "value": "{base.color.passive.content.standard.firm}",
             "type": "color"
           }
         },
@@ -788,7 +834,7 @@
             "type": "color"
           },
           "withActiveAlt": {
-            "value": "{base.color.passive.content.firm}",
+            "value": "{base.color.passive.content.standard.firm}",
             "type": "color"
           },
           "withDefault": {
@@ -796,7 +842,7 @@
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{base.color.passive.content.firm}",
+            "value": "{base.color.passive.content.standard.firm}",
             "type": "color"
           }
         },
@@ -870,7 +916,7 @@
             "type": "color"
           },
           "withActiveAlt": {
-            "value": "{base.color.passive.content.firm}",
+            "value": "{base.color.passive.content.standard.firm}",
             "type": "color"
           },
           "withDefault": {
@@ -878,7 +924,7 @@
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{base.color.passive.content.firm}",
+            "value": "{base.color.passive.content.standard.firm}",
             "type": "color"
           }
         },
