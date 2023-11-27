@@ -6,15 +6,13 @@
         "type": "color"
       },
       "bgAlt-default": {
-        "value": "{base.color.passive.fg.faint}",
+        "value": "{base.color.passive.bg.standard.moderate}",
         "type": "color",
-        "$extensions": {},
         "description": "Zebra stripes"
       },
       "border-default": {
-        "value": "{base.color.passive.fg.delicate}",
+        "value": "{base.color.passive.fg.standard.delicate}",
         "type": "color",
-        "$extensions": {},
         "description": "Header borders"
       },
       "label-default": {
@@ -24,47 +22,20 @@
     },
     "headerAlt": {
       "bg-default": {
-        "value": "{base.color.passive.bg.inverse.Extreme}",
+        "value": "{base.color.passive.bg.inverse.delicate}",
         "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "0.24",
-              "space": "lch",
-              "color": "{base.color.modifier.contrastLess}"
-            }
-          }
-        }
+        "$extensions": {}
       },
       "bgAlt-default": {
-        "value": "{dataTable.headerAlt.bg-default}",
+        "value": "{base.color.passive.bg.inverse.moderate}",
         "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "0.08",
-              "space": "lch",
-              "color": "{base.color.modifier.contrastLess} "
-            }
-          }
-        },
+        "$extensions": {},
         "description": "Zebra stripes"
       },
       "border-default": {
-        "value": "{dataTable.headerAlt.bg-default}",
+        "value": "{base.color.passive.fg.inverse.delicate}",
         "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "0.16",
-              "space": "lch",
-              "color": "{base.color.modifier.contrastLess} "
-            }
-          }
-        }
+        "$extensions": {}
       },
       "label-default": {
         "value": "{base.color.interactive.monochrome.inverse.default}",
@@ -103,18 +74,9 @@
         "type": "color"
       },
       "bgAlt-default": {
-        "value": "{dataTable.row.bg-default}",
+        "value": "{base.color.passive.bg.standard.soft}",
         "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "0.08",
-              "space": "lch",
-              "color": "{base.color.modifier.contrastMore}"
-            }
-          }
-        },
+        "$extensions": {},
         "description": "Zebra stripes"
       },
       "bg-hover": {
@@ -122,18 +84,9 @@
         "type": "color"
       },
       "border-default": {
-        "value": "{dataTable.row.bg-default}",
+        "value": "{base.color.passive.fg.standard.delicate}",
         "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "0.16",
-              "space": "lch",
-              "color": "{base.color.modifier.contrastMore} "
-            }
-          }
-        }
+        "$extensions": {}
       },
       "label-active": {
         "value": "{base.color.interactive.monochrome.standard.withActive}",
@@ -154,32 +107,14 @@
     },
     "footer": {
       "bg-default": {
-        "value": "{base.color.passive.bg.standard.extreme}",
+        "value": "{base.color.passive.bg.standard.moderate}",
         "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "0.08",
-              "space": "lch",
-              "color": "{base.color.modifier.contrastMore}"
-            }
-          }
-        }
+        "$extensions": {}
       },
       "border-default": {
-        "value": "{dataTable.header.bg-default}",
+        "value": "{base.color.passive.fg.standard.delicate}",
         "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "0.16",
-              "space": "lch",
-              "color": "{base.color.modifier.contrastMore} "
-            }
-          }
-        },
+        "$extensions": {},
         "description": "Header borders"
       },
       "label-default": {

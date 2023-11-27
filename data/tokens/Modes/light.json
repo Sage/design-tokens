@@ -15,7 +15,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "0.16",
+                    "value": "0.04",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastMore}"
                   }
@@ -35,12 +35,82 @@
                   }
                 }
               }
+            },
+            "soft": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.16",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              }
             }
           },
           "inverse": {
             "Extreme": {
               "value": "{origin.colors.black}",
               "type": "color"
+            },
+            "firm": {
+              "value": "{origin.colors.black}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.04",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            },
+            "moderate": {
+              "value": "{origin.colors.black}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.08",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            },
+            "soft": {
+              "value": "{origin.colors.black}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.16",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            },
+            "delicate": {
+              "value": "{origin.colors.black}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.24",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
             }
           }
         },
@@ -104,19 +174,6 @@
                 }
               }
             },
-            "moderate": {
-              "value": "{origin.colors.white}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.67",
-                    "space": "lch"
-                  }
-                }
-              }
-            },
             "delicate": {
               "value": "{origin.colors.white}",
               "type": "color",
@@ -131,66 +188,98 @@
                 }
               },
               "description": "Used for disabled text"
+            },
+            "moderate": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              }
             }
           }
         },
         "fg": {
-          "faint": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.08",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore} "
+          "standard": {
+            "faint": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.08",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore} "
+                  }
+                }
+              },
+              "description": "used for dividers"
+            },
+            "delicate": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.16",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore} "
+                  }
+                }
+              },
+              "description": "table dividers and borders"
+            },
+            "soft": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.30",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore} "
+                  }
                 }
               }
             },
-            "description": "used for dividers"
-          },
-          "delicate": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.16",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore} "
-                }
-              }
-            },
-            "description": "table dividers and borders"
-          },
-          "soft": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.30",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore} "
+            "moderate": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.50",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore} "
+                  }
                 }
               }
             }
           },
-          "moderate": {
-            "value": "{origin.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.50",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore} "
+          "inverse": {
+            "delicate": {
+              "value": "{origin.colors.black}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.16",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastless} "
+                  }
                 }
-              }
+              },
+              "description": "table dividers and borders"
             }
           }
         }
@@ -812,8 +901,7 @@
           },
           "default": {
             "value": "{origin.colors.storm}",
-            "type": "color",
-            "$extensions": {}
+            "type": "color"
           },
           "hover": {
             "value": "{base.color.status.neutral.default}",
