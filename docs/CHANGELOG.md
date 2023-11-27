@@ -1,3 +1,10 @@
+# [4.32.0](https://github.com/Sage/design-tokens/compare/v4.31.0...v4.32.0) (2023-11-27)
+
+
+### Features
+
+* **data:** Rename token category "origin-colors (reference only)" to "origin-color-reference-only". ([276c3ec](https://github.com/Sage/design-tokens/commit/276c3ec968760780676b4cd323566b84e08da68b))
+
 # [4.31.0](https://github.com/Sage/design-tokens/compare/v4.30.0...v4.31.0) (2023-11-22)
 
 
