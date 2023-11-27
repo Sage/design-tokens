@@ -796,8 +796,18 @@
             }
           },
           "default": {
-            "value": "{origin.colors.denim}",
-            "type": "color"
+            "value": "{origin.colors.black}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.64",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess}"
+                }
+              }
+            }
           },
           "hover": {
             "value": "{base.color.status.neutral.default}",
