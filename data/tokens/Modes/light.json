@@ -216,8 +216,13 @@
         },
         "fg": {
           "standard": {
-            "faint": {
+            "blank": {
               "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {}
+            },
+            "faint": {
+              "value": "{base.color.passive.fg.standard.blank}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -232,7 +237,7 @@
               "description": "used for dividers"
             },
             "delicate": {
-              "value": "{origin.colors.white}",
+              "value": "{base.color.passive.fg.standard.blank}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -247,7 +252,7 @@
               "description": "table dividers and borders"
             },
             "soft": {
-              "value": "{origin.colors.white}",
+              "value": "{base.color.passive.fg.standard.blank}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -261,7 +266,7 @@
               }
             },
             "moderate": {
-              "value": "{origin.colors.white}",
+              "value": "{base.color.passive.fg.standard.blank}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -277,7 +282,7 @@
           },
           "inverse": {
             "delicate": {
-              "value": "{origin.colors.black}",
+              "value": "{base.color.passive.fg.inverse.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -290,6 +295,11 @@
                 }
               },
               "description": "table dividers and borders"
+            },
+            "extreme": {
+              "value": "{origin.colors.black}",
+              "type": "color",
+              "$extensions": {}
             }
           }
         }
@@ -346,27 +356,27 @@
             "description": "used on pill hover states"
           },
           "withActive": {
-            "value": "{origin.colors.white}",
+            "value": "{base.color.passive.content.inverse.extreme}",
             "type": "color"
           },
           "withDefault": {
-            "value": "{origin.colors.white}",
+            "value": "{base.color.passive.content.inverse.extreme}",
             "type": "color"
           }
         },
         "dataEntry": {
           "default": {
-            "value": "{origin.colors.white}",
+            "value": "{base.color.passive.bg.standard.extreme}",
             "type": "color",
             "description": "Input backgrounds."
           },
-          "hover": {
-            "value": "{origin.colors.black}",
+          "withHover": {
+            "value": "{base.color.passive.fg.inverse.extreme}",
             "type": "color",
             "description": "hover for draggable area on file input"
           },
           "hoverAlt": {
-            "value": "{origin.colors.white}",
+            "value": "{base.color.interactive.dataEntry.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -381,18 +391,9 @@
             "description": "bg hover for draggable area on file input"
           },
           "withDefault": {
-            "value": "{origin.colors.white}",
+            "value": "{base.color.passive.fg.standard.moderate}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.5",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore} "
-                }
-              }
-            },
+            "$extensions": {},
             "description": "Input borders."
           },
           "defaultAlt": {
@@ -437,33 +438,15 @@
         },
         "inactive": {
           "default": {
-            "value": "{origin.colors.white}",
+            "value": "{base.color.passive.fg.standard.soft}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.input.disabledFg}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore} "
-                }
-              }
-            },
+            "$extensions": {},
             "description": "Disabled form input borders."
           },
           "defaultAlt": {
-            "value": "{origin.colors.black}",
+            "value": "{base.color.passive.bg.standard.firm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.input.disabledBg} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore} "
-                }
-              }
-            },
+            "$extensions": {},
             "description": "Disabled input and button backgrounds, button borders and input backgrounds."
           },
           "content": {
@@ -472,7 +455,7 @@
             "description": "Disabled text inside buttons and form inputs."
           },
           "contentAlt": {
-            "value": "{origin.colors.white}",
+            "value": "{base.color.passive.content.inverse.extreme}",
             "type": "color"
           }
         },
@@ -483,7 +466,7 @@
               "type": "color"
             },
             "default": {
-              "value": "{origin.colors.black}",
+              "value": "{base.color.interactive.monochrome.standard.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -496,7 +479,7 @@
               }
             },
             "defaultAlt": {
-              "value": "{origin.colors.black}",
+              "value": "{base.color.interactive.monochrome.standard.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -509,12 +492,12 @@
               }
             },
             "hover": {
-              "value": "{origin.colors.black}",
+              "value": "{base.color.interactive.monochrome.standard.active}",
               "type": "color",
               "description": "Secondary button border on hover"
             },
             "hoverAlt": {
-              "value": "{base.color.interactive.monochrome.standard.default}",
+              "value": "{base.color.interactive.monochrome.standard.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -529,15 +512,15 @@
               "description": "Accordion and menu bg on hover\n"
             },
             "withActive": {
-              "value": "{origin.colors.white}",
+              "value": "{base.color.passive.content.inverse.extreme}",
               "type": "color"
             },
             "withDefault": {
-              "value": "{origin.colors.white}",
+              "value": "{base.color.passive.content.inverse.extreme}",
               "type": "color"
             },
             "withHover": {
-              "value": "{origin.colors.black}",
+              "value": "{base.color.interactive.monochrome.standard.active}",
               "type": "color",
               "description": "maybe should be white to align with primary group logic\n"
             }
@@ -548,7 +531,7 @@
               "type": "color"
             },
             "default": {
-              "value": "{origin.colors.white}",
+              "value": "{base.color.interactive.monochrome.inverse.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -561,7 +544,7 @@
               }
             },
             "hover": {
-              "value": "{origin.colors.white}",
+              "value": "{base.color.interactive.monochrome.inverse.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -575,11 +558,11 @@
               }
             },
             "withActive": {
-              "value": "{origin.colors.black}",
+              "value": "{base.color.passive.content.standard.extreme}",
               "type": "color"
             },
             "withHover": {
-              "value": "{origin.colors.white}",
+              "value": "{base.color.passive.content.inverse.extreme}",
               "type": "color"
             }
           }
@@ -618,15 +601,15 @@
             }
           },
           "withActive": {
-            "value": "{origin.colors.white}",
+            "value": "{base.color.passive.content.inverse.extreme}",
             "type": "color"
           },
           "withDefault": {
-            "value": "{origin.colors.white}",
+            "value": "{base.color.passive.content.inverse.extreme}",
             "type": "color"
           },
           "withHover": {
-            "value": "{origin.colors.white}",
+            "value": "{base.color.passive.content.inverse.extreme}",
             "type": "color"
           }
         }
