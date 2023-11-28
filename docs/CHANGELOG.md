@@ -1,3 +1,11 @@
+# [4.33.0](https://github.com/Sage/design-tokens/compare/v4.32.0...v4.33.0) (2023-11-28)
+
+
+### Features
+
+* **data:** add new color for badge ([773acf3](https://github.com/Sage/design-tokens/commit/773acf3ca534d5d48b3f93542d70edaa11855fee))
+* **data:** color update for badge ([ae5d8b7](https://github.com/Sage/design-tokens/commit/ae5d8b74be1babd536f83c206ebf02b5edb5999b))
+
 # [4.32.0](https://github.com/Sage/design-tokens/compare/v4.31.0...v4.32.0) (2023-11-27)
 
 
