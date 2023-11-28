@@ -1,3 +1,10 @@
+# [4.34.0](https://github.com/Sage/design-tokens/compare/v4.33.0...v4.34.0) (2023-11-28)
+
+
+### Features
+
+* **data:** remove unwanted token for badge notification ([f96073f](https://github.com/Sage/design-tokens/commit/f96073f0bdb2384020b0eacc08ad861edafbecc2))
+
 # [4.33.0](https://github.com/Sage/design-tokens/compare/v4.32.0...v4.33.0) (2023-11-28)
 
 
