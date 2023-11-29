@@ -118,8 +118,7 @@
           "standard": {
             "extreme": {
               "value": "{origin.colors.black}",
-              "type": "color",
-              "$extensions": {}
+              "type": "color"
             },
             "firm": {
               "value": "{base.color.passive.content.standard.extreme}",
@@ -167,8 +166,7 @@
           "inverse": {
             "extreme": {
               "value": "{origin.colors.white}",
-              "type": "color",
-              "$extensions": {}
+              "type": "color"
             },
             "firm": {
               "value": "{base.color.passive.content.inverse.extreme}",
@@ -218,8 +216,7 @@
           "standard": {
             "blank": {
               "value": "{origin.colors.white}",
-              "type": "color",
-              "$extensions": {}
+              "type": "color"
             },
             "faint": {
               "value": "{base.color.passive.fg.standard.blank}",
@@ -298,8 +295,7 @@
             },
             "extreme": {
               "value": "{origin.colors.black}",
-              "type": "color",
-              "$extensions": {}
+              "type": "color"
             }
           }
         }
@@ -393,7 +389,6 @@
           "withDefault": {
             "value": "{base.color.passive.fg.standard.moderate}",
             "type": "color",
-            "$extensions": {},
             "description": "Input borders."
           },
           "defaultAlt": {
@@ -440,13 +435,11 @@
           "default": {
             "value": "{base.color.passive.fg.standard.soft}",
             "type": "color",
-            "$extensions": {},
             "description": "Disabled form input borders."
           },
           "defaultAlt": {
             "value": "{base.color.passive.bg.standard.firm}",
             "type": "color",
-            "$extensions": {},
             "description": "Disabled input and button backgrounds, button borders and input backgrounds."
           },
           "content": {
@@ -586,8 +579,36 @@
             "value": "{origin.colors.jade}",
             "type": "color"
           },
+          "defaultAlt": {
+            "value": "{base.color.interactive.primary.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.12",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
           "hover": {
             "value": "{base.color.interactive.primary.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.hoverAlt} ",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "hoverAlt": {
+            "value": "{base.color.interactive.primary.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
