@@ -2,40 +2,48 @@
   "dataTable": {
     "header": {
       "bg-default": {
-        "value": "{base.color.passive.bg.standard.extreme}",
+        "value": "{origin.colors.transparent}",
+        "type": "color"
+      },
+      "bg-hover": {
+        "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
         "type": "color"
       },
       "bgAlt-default": {
-        "value": "{base.color.passive.bg.standard.moderate}",
+        "value": "{base.color.generic.bg.standard.moderate}",
         "type": "color",
         "description": "Zebra stripes"
       },
       "border-default": {
-        "value": "{base.color.passive.fg.standard.delicate}",
+        "value": "{base.color.generic.fg.standard.delicate}",
         "type": "color",
         "description": "Header borders"
       },
       "label-default": {
-        "value": "{base.color.interactive.monochrome.standard.default}",
+        "value": "{base.color.generic.content.standard.firm}",
         "type": "color"
       }
     },
     "headerAlt": {
       "bg-default": {
-        "value": "{base.color.passive.bg.inverse.delicate}",
+        "value": "{base.color.generic.bg.inverse.delicate}",
+        "type": "color"
+      },
+      "bg-hover": {
+        "value": "{base.color.generic.bg.inverse.soft}",
         "type": "color"
       },
       "bgAlt-default": {
-        "value": "{base.color.passive.bg.inverse.moderate}",
+        "value": "{base.color.generic.bg.inverse.moderate}",
         "type": "color",
         "description": "Zebra stripes"
       },
       "border-default": {
-        "value": "{base.color.passive.fg.inverse.delicate}",
+        "value": "{base.color.generic.fg.inverse.delicate}",
         "type": "color"
       },
       "label-default": {
-        "value": "{base.color.interactive.monochrome.inverse.default}",
+        "value": "{base.color.generic.content.inverse.firm}",
         "type": "color"
       }
     },
@@ -44,34 +52,16 @@
         "value": "{base.color.interactive.primary.default}",
         "type": "color"
       },
-      "bg-activatedHover": {
-        "value": "{base.color.interactive.primary.hover}",
-        "type": "color"
-      },
       "bg-active": {
         "value": "{base.color.interactive.monochrome.standard.active}",
         "type": "color"
       },
-      "bg-activeHover": {
-        "value": "{dataTable.row.bg-active}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "mix",
-              "value": "0.12",
-              "space": "lch",
-              "color": "{base.color.modifier.contrastLess} "
-            }
-          }
-        }
-      },
       "bg-default": {
-        "value": "{base.color.interactive.monochrome.standard.withDefault}",
+        "value": "{base.color.generic.bg.standard.extreme}",
         "type": "color"
       },
-      "bgAlt-default": {
-        "value": "{base.color.passive.bg.standard.moderate}",
+      "bg-alt": {
+        "value": "{base.color.generic.bg.standard.moderate}",
         "type": "color",
         "description": "Zebra stripes"
       },
@@ -80,33 +70,33 @@
         "type": "color"
       },
       "border-default": {
-        "value": "{base.color.passive.fg.standard.delicate}",
+        "value": "{base.color.generic.fg.standard.delicate}",
         "type": "color"
       },
       "label-active": {
-        "value": "{base.color.interactive.monochrome.standard.withActive}",
+        "value": "{base.color.generic.content.inverse.extreme}",
         "type": "color"
       },
       "label-activated": {
-        "value": "{base.color.interactive.monochrome.standard.withActive}",
+        "value": "{base.color.generic.content.inverse.extreme}",
         "type": "color"
       },
       "label-default": {
-        "value": "{base.color.interactive.monochrome.standard.default}",
+        "value": "{base.color.generic.content.standard.firm}",
         "type": "color"
       },
       "label-hover": {
-        "value": "{base.color.interactive.monochrome.standard.hover}",
+        "value": "{base.color.generic.content.standard.extreme}",
         "type": "color"
       }
     },
     "footer": {
       "bg-default": {
-        "value": "{base.color.passive.bg.standard.moderate}",
+        "value": "{base.color.generic.bg.standard.moderate}",
         "type": "color"
       },
       "border-default": {
-        "value": "{base.color.passive.fg.standard.delicate}",
+        "value": "{base.color.generic.fg.standard.delicate}",
         "type": "color",
         "description": "Header borders"
       },
