@@ -111,6 +111,34 @@
                   }
                 }
               }
+            },
+            "faint": {
+              "value": "{base.color.generic.bg.inverse.Extreme}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.32",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            },
+            "whisper": {
+              "value": "{base.color.generic.bg.inverse.Extreme}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.40",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
             }
           }
         },
