@@ -182,7 +182,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "0.3",
+                    "value": "0.32",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastLess}"
                   }
@@ -210,6 +210,19 @@
                 }
               }
             },
+            "moderate": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
             "delicate": {
               "value": "{base.color.generic.content.inverse.extreme}",
               "type": "color",
@@ -224,19 +237,6 @@
                 }
               },
               "description": "Used for disabled text"
-            },
-            "moderate": {
-              "value": "{base.color.generic.content.inverse.extreme}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.67",
-                    "space": "lch"
-                  }
-                }
-              }
             }
           }
         },
@@ -283,7 +283,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "0.30",
+                    "value": "0.32",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastMore} "
                   }
@@ -306,7 +306,11 @@
             }
           },
           "inverse": {
-            "delicate": {
+            "extreme": {
+              "value": "{origin.colors.black}",
+              "type": "color"
+            },
+            "soft": {
               "value": "{base.color.generic.fg.inverse.extreme}",
               "type": "color",
               "$extensions": {
@@ -321,9 +325,19 @@
               },
               "description": "table dividers and borders"
             },
-            "extreme": {
-              "value": "{origin.colors.black}",
-              "type": "color"
+            "faint": {
+              "value": "{base.color.generic.fg.inverse.extreme}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.32",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
             }
           }
         }
