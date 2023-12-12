@@ -1,0 +1,53 @@
+{
+  "progress": {
+    "standard": {
+      "bg-default": {
+        "value": "{base.color.generic.bg.standard.moderate}",
+        "type": "color"
+      },
+      "border-default": {
+        "value": "{base.color.generic.fg.standard.delicate}",
+        "type": "color"
+      },
+      "fg-alt": {
+        "value": "{base.color.interactive.primary.default}",
+        "type": "color"
+      },
+      "fg-default": {
+        "value": "{base.color.interactive.monochrome.standard.default}",
+        "type": "color"
+      },
+      "fg-error": {
+        "value": "{base.color.status.negative.standard.default}",
+        "type": "color"
+      },
+      "label-default": {
+        "value": "{base.color.generic.content.standard.firm}",
+        "type": "color"
+      }
+    },
+    "inverse": {
+      "bg-default": {
+        "value": "{base.color.interactive.monochrome.inverse.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.3",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "fg-default": {
+        "value": "{base.color.interactive.monochrome.inverse.default}",
+        "type": "color"
+      },
+      "label-default": {
+        "value": "{base.color.interactive.monochrome.inverse.default}",
+        "type": "color"
+      }
+    }
+  }
+}

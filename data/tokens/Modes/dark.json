@@ -2,7 +2,7 @@
   "base": {
     "color": {
       "fg-default": {
-        "value": "{origin.colors.grayProduct.1000}",
+        "value": "{origin.colors.black}",
         "type": "color",
         "$extensions": {
           "studio.tokens": {
@@ -15,7 +15,7 @@
         }
       },
       "fg-moderate": {
-        "value": "{origin.colors.grayProduct.1000}",
+        "value": "{origin.colors.black}",
         "type": "color",
         "$extensions": {
           "studio.tokens": {
@@ -27,8 +27,21 @@
           }
         }
       },
+      "fg-soft": {
+        "value": "{origin.colors.black}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.55",
+              "space": "lch"
+            }
+          }
+        }
+      },
       "fg-delicate": {
-        "value": "{origin.colors.grayProduct.1000}",
+        "value": "{origin.colors.black}",
         "type": "color",
         "$extensions": {
           "studio.tokens": {
@@ -42,11 +55,11 @@
       },
       "container": {
         "canvas-bg": {
-          "value": "{origin.colors.grayProduct.000}",
+          "value": "{origin.colors.white}",
           "type": "color"
         },
         "canvas-bgAlt": {
-          "value": "{origin.colors.navyAdjusted.500}",
+          "value": "{origin.colors.denim}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -59,7 +72,7 @@
           }
         },
         "canvas-border": {
-          "value": "{origin.colors.navyAdjusted.500}",
+          "value": "{origin.colors.denim}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -75,21 +88,21 @@
       "selectable": {
         "destructive": {
           "default": {
-            "value": "{origin.colors.red.500}",
+            "value": "{origin.colors.red}",
             "type": "color"
           },
           "fg": {
-            "value": "{origin.colors.grayProduct.000}",
+            "value": "{origin.colors.white}",
             "type": "color"
           }
         },
         "input": {
           "canvas-bg": {
-            "value": "{origin.colors.grayProduct.000}",
+            "value": "{origin.colors.white}",
             "type": "color"
           },
           "canvas-border": {
-            "value": "{origin.colors.navyAdjusted.500}",
+            "value": "{origin.colors.denim}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -104,7 +117,7 @@
         },
         "inactive": {
           "canvas-bg": {
-            "value": "{origin.colors.navyAdjusted.500}",
+            "value": "{origin.colors.denim}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -117,7 +130,7 @@
             }
           },
           "canvas-border": {
-            "value": "{origin.colors.navyAdjusted.500}",
+            "value": "{origin.colors.denim}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -132,11 +145,21 @@
         },
         "major": {
           "default": {
-            "value": "{origin.colors.jade.500}",
+            "value": "{origin.colors.jade}",
+            "type": "color"
+          },
+          "fg": {
+            "value": "{origin.colors.white}",
+            "type": "color"
+          }
+        },
+        "minor": {
+          "default": {
+            "value": "{origin.colors.denim}",
             "type": "color"
           },
           "on-default": {
-            "value": "{origin.colors.grayProduct.000}",
+            "value": "{origin.colors.white}",
             "type": "color"
           }
         }
@@ -144,13 +167,13 @@
       "status": {
         "negative": {
           "default": {
-            "value": "{origin.colors.red.500}",
+            "value": "{origin.colors.red}",
             "type": "color"
           }
         },
         "caution": {
           "default": {
-            "value": "{origin.colors.orange.500}",
+            "value": "{origin.colors.orange}",
             "type": "color"
           }
         }
