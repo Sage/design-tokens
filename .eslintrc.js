@@ -9,9 +9,7 @@ module.exports = {
   plugins: [
     'header'
   ],
-  extends: [
-    'standard'
-  ],
+  extends: ['standard', 'plugin:storybook/recommended'],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module'

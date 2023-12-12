@@ -9,8 +9,8 @@ const glob = require('glob').sync
 const transforms = glob('./scripts/transforms/*.transform.js').map(path => require(resolve(path)))
 const formats = glob('./scripts/formats/*.format.js').map(path => require(resolve(path)))
 const groups = {
-  web: [
-    'name/cti/camel',
+  css: [
+    'name/cti/kebab',
     'ts/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
@@ -23,8 +23,33 @@ const groups = {
     'ts/shadow/css/shorthand',
     'ts/color/modifiers'
   ],
-  name: [
-
+  scss: [
+    'name/cti/kebab',
+    'ts/descriptionToComment',
+    'ts/size/px',
+    'ts/opacity',
+    'ts/size/lineheight',
+    'ts/typography/fontWeight',
+    'ts/resolveMath',
+    'ts/size/css/letterspacing',
+    'ts/typography/css/shorthand',
+    'ts/border/css/shorthand',
+    'ts/shadow/css/shorthand',
+    'ts/color/modifiers'
+  ],
+  js: [
+    'name/cti/camel',
+    'ts/descriptionToComment',
+    'ts/size/px',
+    'ts/opacity',
+    'ts/size/lineheight',
+    'ts/typography/fontWeight',
+    'ts/resolveMath',
+    'ts/size/css/letterspacing',
+    'ts/typography/css/shorthand',
+    'ts/border/css/shorthand',
+    'ts/shadow/css/shorthand',
+    'ts/color/modifiers'
   ],
   mobile: [
     'name/cti/camel',

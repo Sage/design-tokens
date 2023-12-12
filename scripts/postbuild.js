@@ -91,7 +91,7 @@ function addEntryFile () {
 }
 
 function addFileHeader () {
-  const files = glob('dist/**/*.@(js|css|ts|d.ts|scss|less)')
+  const files = glob('dist/**/*.@(css|js|json|ts|d.ts|scss|less)')
   files.forEach((file) => {
     try {
       const filePath = resolve(__dirname, '../', file)

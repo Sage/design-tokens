@@ -3,18 +3,20 @@ module.exports = {
     '../stories/**/*.stories.mdx',
     '../stories/**/*.stories.@(js|jsx|ts|tsx)'
   ],
+
   addons: [
-    'storybook-design-token',
+    { name: 'storybook-design-token', options: { }},
     '@storybook/addon-links',
-    '@storybook/addon-essentials'
+    '@storybook/addon-essentials',
+    '@storybook/addon-mdx-gfm'
   ],
-  babel: async (options) => {
-    return {
-      ...options,
-      presets: [...options.presets, '@babel/preset-react'],
-    };
+
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {}
   },
-  core: {
-    builder: 'webpack5'
+
+  docs: {
+    autodocs: true
   }
 };

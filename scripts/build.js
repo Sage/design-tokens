@@ -124,16 +124,28 @@ const getConfig = (platform, mode) => {
       `./data/tokens/Platforms/${platform}/*.json`
     ],
     platforms: {
-      web: {
-        buildPath: 'dist/web/',
-        transforms: groups.web,
+      css: {
+        buildPath: 'dist/css/',
+        transforms: groups.css,
         files: [
-          ...getFiles(modeName, 'javascript/module', 'js/common/', 'js'),
-          ...getFiles(modeName, 'javascript/es6', 'js/es6/', 'js'),
-          ...getFiles(modeName, 'javascript/umd', 'js/umd/', 'js'),
-          ...getFiles(modeName, 'json', 'js/json/', 'json'),
-          ...getFiles(modeName, 'css/variables', 'css/', 'css'),
-          ...getFiles(modeName, 'scss/variables', 'scss/', 'scss')
+          ...getFiles(modeName, 'css/variables', '', 'css')
+        ]
+      },
+      scss: {
+        buildPath: 'dist/scss/',
+        transforms: groups.scss,
+        files: [
+          ...getFiles(modeName, 'scss/variables', '', 'scss')
+        ]
+      },
+      js: {
+        buildPath: 'dist/js/',
+        transforms: groups.js,
+        files: [
+          ...getFiles(modeName, 'javascript/module', 'common/', 'js'),
+          ...getFiles(modeName, 'javascript/es6', 'es6/', 'js'),
+          ...getFiles(modeName, 'javascript/umd', 'umd/', 'js'),
+          ...getFiles(modeName, 'json', 'json/', 'json')
         ]
       },
       android: {
@@ -161,7 +173,9 @@ platforms.forEach((platform) => {
     const StyleDictionary = dictionary.extend(getConfig(platform, mode))
 
     if (platform === 'small-viewports') {
-      StyleDictionary.buildPlatform('web')
+      StyleDictionary.buildPlatform('css')
+      StyleDictionary.buildPlatform('scss')
+      StyleDictionary.buildPlatform('js')
     } else if (platform === 'IOS') {
       StyleDictionary.buildPlatform('ios')
     } else if (platform === 'android') {
