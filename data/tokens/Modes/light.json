@@ -338,6 +338,20 @@
                   }
                 }
               }
+            },
+            "whisper": {
+              "value": "{base.color.generic.fg.inverse.extreme}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.48",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
             }
           }
         }
