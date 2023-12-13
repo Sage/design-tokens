@@ -2,31 +2,40 @@
   "progress": {
     "inverse": {
       "bg-default": {
-        "value": "{base.color.interactive.monochrome.inverse.default}",
+        "value": "{base.color.generic.bg.standard.extreme}",
         "type": "color",
         "$extensions": {
           "studio.tokens": {
             "modify": {
-              "type": "alpha",
-              "value": "0.3",
+              "type": "lighten",
+              "value": "0.03",
               "space": "lch"
             }
           }
         }
       },
       "fg-default": {
-        "value": "{base.color.interactive.monochrome.inverse.default}",
+        "value": "{base.color.generic.fg.standard.blank}",
         "type": "color"
       },
       "label-default": {
-        "value": "{base.color.interactive.monochrome.inverse.default}",
+        "value": "{progress.inverse.bg-default}",
         "type": "color"
       }
     },
     "standard": {
       "bg-default": {
-        "value": "{base.color.generic.bg.standard.moderate}",
-        "type": "color"
+        "value": "{base.color.generic.bg.inverse.extreme}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.03",
+              "space": "lch"
+            }
+          }
+        }
       },
       "border-default": {
         "value": "{base.color.generic.fg.standard.soft}",
@@ -37,7 +46,7 @@
         "type": "color"
       },
       "fg-default": {
-        "value": "{base.color.interactive.monochrome.standard.default}",
+        "value": "{base.color.generic.fg.inverse.extreme}",
         "type": "color"
       },
       "fg-error": {
