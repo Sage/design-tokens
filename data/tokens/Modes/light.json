@@ -610,6 +610,19 @@
                 }
               }
             },
+            "defaultAlt": {
+              "value": "{base.color.interactive.monochrome.inverse.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
             "hover": {
               "value": "{base.color.interactive.monochrome.inverse.active}",
               "type": "color",
@@ -623,6 +636,21 @@
                   }
                 }
               }
+            },
+            "hoverAlt": {
+              "value": "{base.color.interactive.monochrome.inverse.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "Accordion and menu bg on hover\n"
             },
             "withActive": {
               "value": "{base.color.generic.content.standard.extreme}",
