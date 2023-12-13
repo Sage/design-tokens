@@ -43,6 +43,20 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
+                    "value": "0.12",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              }
+            },
+            "delicate": {
+              "value": "{base.color.generic.bg.standard.extreme}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
                     "value": "0.16",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastMore}"
@@ -52,12 +66,12 @@
             }
           },
           "inverse": {
-            "Extreme": {
+            "extreme": {
               "value": "{origin.colors.black}",
               "type": "color"
             },
             "firm": {
-              "value": "{base.color.generic.bg.inverse.Extreme}",
+              "value": "{base.color.generic.bg.inverse.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -71,7 +85,7 @@
               }
             },
             "moderate": {
-              "value": "{base.color.generic.bg.inverse.Extreme}",
+              "value": "{base.color.generic.bg.inverse.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -85,7 +99,7 @@
               }
             },
             "soft": {
-              "value": "{base.color.generic.bg.inverse.Extreme}",
+              "value": "{base.color.generic.bg.inverse.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -99,7 +113,7 @@
               }
             },
             "delicate": {
-              "value": "{base.color.generic.bg.inverse.Extreme}",
+              "value": "{base.color.generic.bg.inverse.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -113,7 +127,7 @@
               }
             },
             "faint": {
-              "value": "{base.color.generic.bg.inverse.Extreme}",
+              "value": "{base.color.generic.bg.inverse.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -127,7 +141,7 @@
               }
             },
             "whisper": {
-              "value": "{base.color.generic.bg.inverse.Extreme}",
+              "value": "{base.color.generic.bg.inverse.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -338,6 +352,20 @@
                   }
                 }
               }
+            },
+            "whisper": {
+              "value": "{base.color.generic.fg.inverse.extreme}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.48",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
             }
           }
         }
@@ -407,6 +435,10 @@
             "value": "{base.color.generic.bg.standard.extreme}",
             "type": "color",
             "description": "Input backgrounds."
+          },
+          "withActive": {
+            "value": "{base.color.generic.fg.inverse.extreme}",
+            "type": "color"
           },
           "withHover": {
             "value": "{base.color.generic.fg.inverse.extreme}",
@@ -740,7 +772,7 @@
         "content": {
           "standard": {
             "withDefault": {
-              "value": "{base.color.generic.content.inverse.firm}",
+              "value": "{base.color.generic.content.inverse.extreme}",
               "type": "color"
             },
             "withDefaultAlt": {
@@ -758,7 +790,7 @@
           },
           "inverse": {
             "withDefault": {
-              "value": "{base.color.generic.content.standard.firm}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "withDefaultAlt": {
