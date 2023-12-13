@@ -74,8 +74,18 @@
         "description": "Zebra stripes"
       },
       "bg-hover": {
-        "value": "{base.color.interactive.monochrome.inverse.hoverAlt}",
-        "type": "color"
+        "value": "{dataTable.row.bg-default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "mix",
+              "value": "1",
+              "space": "lch",
+              "color": "{base.color.interactive.monochrome.standard.hoverAlt} "
+            }
+          }
+        }
       },
       "border-default": {
         "value": "{base.color.generic.fg.standard.delicate}",
