@@ -6,13 +6,31 @@
         "type": "color"
       },
       "bg-hover": {
-        "value": "{base.color.interactive.monochrome.inverse.hoverAlt}",
-        "type": "color"
+        "value": "{base.color.generic.content.standard.extreme}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.12",
+              "space": "lch"
+            }
+          }
+        }
       },
       "bgAlt-default": {
-        "value": "{base.color.generic.bg.standard.moderate}",
+        "value": "{base.color.generic.content.standard.extreme}",
         "type": "color",
-        "description": "Zebra stripes"
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.08",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "header alt"
       },
       "border-default": {
         "value": "{base.color.generic.fg.standard.delicate}",
