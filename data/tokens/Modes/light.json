@@ -4,12 +4,12 @@
       "generic": {
         "bg": {
           "standard": {
-            "extreme": {
+            "nought": {
               "value": "{origin.colors.white}",
               "type": "color"
             },
             "faint": {
-              "value": "{base.color.generic.bg.standard.extreme}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -23,7 +23,7 @@
               }
             },
             "delicate": {
-              "value": "{base.color.generic.bg.standard.extreme}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -37,7 +37,7 @@
               }
             },
             "soft": {
-              "value": "{base.color.generic.bg.standard.extreme}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -51,7 +51,7 @@
               }
             },
             "moderate": {
-              "value": "{base.color.generic.bg.standard.extreme}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -66,12 +66,12 @@
             }
           },
           "inverse": {
-            "extreme": {
+            "nought": {
               "value": "{origin.colors.black}",
               "type": "color"
             },
             "faint": {
-              "value": "{base.color.generic.bg.inverse.extreme}",
+              "value": "{base.color.generic.bg.inverse.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -85,7 +85,7 @@
               }
             },
             "delicate": {
-              "value": "{base.color.generic.bg.inverse.extreme}",
+              "value": "{base.color.generic.bg.inverse.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -99,7 +99,7 @@
               }
             },
             "soft": {
-              "value": "{base.color.generic.bg.inverse.extreme}",
+              "value": "{base.color.generic.bg.inverse.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -113,7 +113,7 @@
               }
             },
             "moderate": {
-              "value": "{base.color.generic.bg.inverse.extreme}",
+              "value": "{base.color.generic.bg.inverse.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -127,7 +127,7 @@
               }
             },
             "firm": {
-              "value": "{base.color.generic.bg.inverse.extreme}",
+              "value": "{base.color.generic.bg.inverse.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -141,7 +141,7 @@
               }
             },
             "harsh": {
-              "value": "{base.color.generic.bg.inverse.extreme}",
+              "value": "{base.color.generic.bg.inverse.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -256,12 +256,12 @@
         },
         "fg": {
           "standard": {
-            "blank": {
+            "nought": {
               "value": "{origin.colors.white}",
               "type": "color"
             },
             "faint": {
-              "value": "{base.color.generic.fg.standard.blank}",
+              "value": "{base.color.generic.fg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -276,7 +276,7 @@
               "description": "used for dividers"
             },
             "delicate": {
-              "value": "{base.color.generic.fg.standard.blank}",
+              "value": "{base.color.generic.fg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -291,7 +291,7 @@
               "description": "table dividers and borders"
             },
             "soft": {
-              "value": "{base.color.generic.fg.standard.blank}",
+              "value": "{base.color.generic.fg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -305,7 +305,7 @@
               }
             },
             "moderate": {
-              "value": "{base.color.generic.fg.standard.blank}",
+              "value": "{base.color.generic.fg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -320,27 +320,12 @@
             }
           },
           "inverse": {
-            "extreme": {
+            "nought": {
               "value": "{origin.colors.black}",
               "type": "color"
             },
-            "delicate": {
-              "value": "{base.color.generic.fg.inverse.extreme}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.16",
-                    "space": "lch",
-                    "color": "{base.color.modifier.contrastLess} "
-                  }
-                }
-              },
-              "description": "table dividers and borders"
-            },
             "faint": {
-              "value": "{base.color.generic.fg.inverse.extreme}",
+              "value": "{base.color.generic.fg.inverse.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -354,8 +339,23 @@
               },
               "description": "table dividers and borders"
             },
+            "delicate": {
+              "value": "{base.color.generic.fg.inverse.nought}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.16",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "description": "table dividers and borders"
+            },
             "soft": {
-              "value": "{base.color.generic.fg.inverse.extreme}",
+              "value": "{base.color.generic.fg.inverse.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -369,7 +369,7 @@
               }
             },
             "moderate": {
-              "value": "{base.color.generic.fg.inverse.extreme}",
+              "value": "{base.color.generic.fg.inverse.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -447,16 +447,16 @@
         },
         "dataEntry": {
           "default": {
-            "value": "{base.color.generic.bg.standard.extreme}",
+            "value": "{base.color.generic.bg.standard.nought}",
             "type": "color",
             "description": "Input backgrounds."
           },
           "withActive": {
-            "value": "{base.color.generic.fg.inverse.extreme}",
+            "value": "{base.color.generic.fg.inverse.nought}",
             "type": "color"
           },
           "withHover": {
-            "value": "{base.color.generic.fg.inverse.extreme}",
+            "value": "{base.color.generic.fg.inverse.nought}",
             "type": "color",
             "description": "hover for draggable area on file input"
           },
