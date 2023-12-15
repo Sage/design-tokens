@@ -1,18 +1,36 @@
 {
-  "dataTable": {
+  "datatable": {
     "header": {
       "bg-default": {
         "value": "{origin.colors.transparent}",
         "type": "color"
       },
       "bg-hover": {
-        "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
-        "type": "color"
+        "value": "{base.color.generic.content.standard.extreme}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.12",
+              "space": "lch"
+            }
+          }
+        }
       },
       "bgAlt-default": {
-        "value": "{base.color.generic.bg.standard.moderate}",
+        "value": "{base.color.generic.content.standard.extreme}",
         "type": "color",
-        "description": "Zebra stripes"
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.08",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "header alt"
       },
       "border-default": {
         "value": "{base.color.generic.fg.standard.delicate}",
@@ -20,7 +38,7 @@
         "description": "Header borders"
       },
       "label-default": {
-        "value": "{base.color.generic.content.standard.firm}",
+        "value": "{base.color.generic.content.standard.harsh}",
         "type": "color"
       },
       "label-hover": {
@@ -28,9 +46,9 @@
         "type": "color"
       }
     },
-    "headerAlt": {
+    "headeralt": {
       "bg-default": {
-        "value": "{base.color.generic.bg.inverse.delicate}",
+        "value": "{base.color.generic.bg.inverse.moderate}",
         "type": "color"
       },
       "bg-hover": {
@@ -38,16 +56,16 @@
         "type": "color"
       },
       "bgAlt-default": {
-        "value": "{base.color.generic.bg.inverse.faint}",
+        "value": "{base.color.generic.bg.inverse.firm}",
         "type": "color",
         "description": "Zebra stripes"
       },
       "border-default": {
-        "value": "{base.color.generic.fg.inverse.whisper}",
+        "value": "{base.color.generic.fg.inverse.moderate}",
         "type": "color"
       },
       "label-default": {
-        "value": "{base.color.generic.content.inverse.firm}",
+        "value": "{base.color.generic.content.inverse.harsh}",
         "type": "color"
       },
       "label-hover": {
@@ -65,18 +83,32 @@
         "type": "color"
       },
       "bg-default": {
-        "value": "{base.color.generic.bg.standard.extreme}",
+        "value": "{base.color.generic.bg.standard.nought}",
         "type": "color"
       },
       "bg-alt": {
-        "value": "{base.color.generic.bg.standard.moderate}",
+        "value": "{base.color.generic.bg.standard.delicate}",
         "type": "color",
         "description": "Zebra stripes"
       },
-      "bg-hover": {
-        "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
+      "bg-alt2": {
+        "value": "{base.color.generic.bg.standard.soft}",
         "type": "color",
-        "$extensions": {}
+        "description": "Zebra stripes + child items"
+      },
+      "bg-hover": {
+        "value": "{datatable.row.bg-default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "mix",
+              "value": "0.12",
+              "space": "lch",
+              "color": "{base.color.generic.bg.inverse.extreme} "
+            }
+          }
+        }
       },
       "border-default": {
         "value": "{base.color.generic.fg.standard.delicate}",
@@ -91,7 +123,7 @@
         "type": "color"
       },
       "label-default": {
-        "value": "{base.color.generic.content.standard.firm}",
+        "value": "{base.color.generic.content.standard.harsh}",
         "type": "color"
       },
       "label-hover": {
