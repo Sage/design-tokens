@@ -5,123 +5,128 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
 const { readdirSync } = require('fs-extra')
 const { dictionary, groups } = require('./style-dictionary')
 
-const platforms = readdirSync('./data/tokens/Platforms/')
+// const platforms = readdirSync('./data/tokens/Platforms/')
+const components = readdirSync('./data/tokens/Components/')
 const modes = readdirSync('./data/tokens/Modes/')
 
 const getFiles = (modeName, format, subType, suffix) => {
   return [
-    ...getSplit(modeName, format, subType, suffix),
+    ...getSplit(undefined, modeName, format, subType, suffix),
     ...getComponents(modeName, format, subType, suffix)
   ]
 }
 
 const getComponents = (modeName, format, subType, suffix) => {
-  return [
-    ...getComponentSplit('/components/buttonMajor', 'buttonMajor', modeName, format, subType, suffix),
-    ...getComponentSplit('/components/container', 'container', modeName, format, subType, suffix),
-    ...getComponentSplit('/components/form', 'form', modeName, format, subType, suffix)
-  ]
+  const componentArray = []
+
+  components.forEach((component) => {
+    componentArray.push(...getSplit(component.split('.')[0], modeName, format, subType, suffix))
+  })
+
+  return componentArray
 }
 
-const getComponentSplit = (componentName, componentFilter, modeName, format, subType, suffix) => {
+const getSplit = (componentName, modeName, format, subType, suffix) => {
+  const path = componentName ? '/components/' + componentName : ''
+
   return [
     {
-      destination: `${subType}${modeName}${componentName}/all.${suffix}`,
-      filter: (token) => token.path[0] === componentFilter,
+      destination: `${subType}${modeName}${path}/all.${suffix}`,
+      filter: (token) => componentName ? token.path[0] === componentName : true,
       format: format
     },
     {
-      destination: `${subType}${modeName}${componentName}/color.${suffix}`,
-      filter: (token) => token.type === 'color' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      destination: `${subType}${modeName}${path}/color.${suffix}`,
+      filter: (token) => token.type === 'color' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
       format: format
     },
     {
-      destination: `${subType}${modeName}${componentName}/borderRadius.${suffix}`,
-      filter: (token) => token.type === 'borderRadius' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      destination: `${subType}${modeName}${path}/borderRadius.${suffix}`,
+      filter: (token) => token.type === 'borderRadius' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
       format: format
     },
     {
-      destination: `${subType}${modeName}${componentName}/borderWidth.${suffix}`,
-      filter: (token) => token.type === 'borderWidth' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      destination: `${subType}${modeName}${path}/borderWidth.${suffix}`,
+      filter: (token) => token.type === 'borderWidth' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
       format: format
     },
     {
-      destination: `${subType}${modeName}${componentName}/shadow.${suffix}`,
-      filter: (token) => token.type === 'boxShadow' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      destination: `${subType}${modeName}${path}/shadow.${suffix}`,
+      filter: (token) => token.type === 'boxShadow' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
       format: format
     },
     {
-      destination: `${subType}${modeName}${componentName}/sizing.${suffix}`,
-      filter: (token) => token.type === 'sizing' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      destination: `${subType}${modeName}${path}/sizing.${suffix}`,
+      filter: (token) => token.type === 'sizing' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
       format: format
     },
     {
-      destination: `${subType}${modeName}${componentName}/spacing.${suffix}`,
-      filter: (token) => token.type === 'spacing' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      destination: `${subType}${modeName}${path}/spacing.${suffix}`,
+      filter: (token) => token.type === 'spacing' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
       format: format
     },
     {
-      destination: `${subType}${modeName}${componentName}/typography.${suffix}`,
-      filter: (token) => token.type === 'typography' && token.path.indexOf('origin') === -1 && token.path[0] === componentFilter,
+      destination: `${subType}${modeName}${path}/typography.${suffix}`,
+      filter: (token) => token.type === 'typography' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
       format: format
     }
   ]
 }
 
-const getSplit = (modeName, format, subType, suffix) => {
-  return [
-    {
-      destination: `${subType}${modeName}/all.${suffix}`,
-      format: format
-    },
-    {
-      destination: `${subType}${modeName}/color.${suffix}`,
-      filter: (token) => token.type === 'color' && token.path.indexOf('origin') === -1,
-      format: format
-    },
-    {
-      destination: `${subType}${modeName}/borderRadius.${suffix}`,
-      filter: (token) => token.type === 'borderRadius' && token.path.indexOf('origin') === -1,
-      format: format
-    },
-    {
-      destination: `${subType}${modeName}/borderWidth.${suffix}`,
-      filter: (token) => token.type === 'borderWidth' && token.path.indexOf('origin') === -1,
-      format: format
-    },
-    {
-      destination: `${subType}${modeName}/shadow.${suffix}`,
-      filter: (token) => token.type === 'boxShadow' && token.path.indexOf('origin') === -1,
-      format: format
-    },
-    {
-      destination: `${subType}${modeName}/sizing.${suffix}`,
-      filter: (token) => token.type === 'sizing' && token.path.indexOf('origin') === -1,
-      format: format
-    },
-    {
-      destination: `${subType}${modeName}/spacing.${suffix}`,
-      filter: (token) => token.type === 'spacing' && token.path.indexOf('origin') === -1,
-      format: format
-    },
-    {
-      destination: `${subType}${modeName}/typography.${suffix}`,
-      filter: (token) => token.type === 'typography' && token.path.indexOf('origin') === -1,
-      format: format
-    }
-  ]
-}
+// const getSplit = (modeName, format, subType, suffix) => {
+//   return [
+//     {
+//       destination: `${subType}${modeName}/all.${suffix}`,
+//       format: format
+//     },
+//     {
+//       destination: `${subType}${modeName}/color.${suffix}`,
+//       filter: (token) => token.type === 'color' && token.path.indexOf('origin') === -1,
+//       format: format
+//     },
+//     {
+//       destination: `${subType}${modeName}/borderRadius.${suffix}`,
+//       filter: (token) => token.type === 'borderRadius' && token.path.indexOf('origin') === -1,
+//       format: format
+//     },
+//     {
+//       destination: `${subType}${modeName}/borderWidth.${suffix}`,
+//       filter: (token) => token.type === 'borderWidth' && token.path.indexOf('origin') === -1,
+//       format: format
+//     },
+//     {
+//       destination: `${subType}${modeName}/shadow.${suffix}`,
+//       filter: (token) => token.type === 'boxShadow' && token.path.indexOf('origin') === -1,
+//       format: format
+//     },
+//     {
+//       destination: `${subType}${modeName}/sizing.${suffix}`,
+//       filter: (token) => token.type === 'sizing' && token.path.indexOf('origin') === -1,
+//       format: format
+//     },
+//     {
+//       destination: `${subType}${modeName}/spacing.${suffix}`,
+//       filter: (token) => token.type === 'spacing' && token.path.indexOf('origin') === -1,
+//       format: format
+//     },
+//     {
+//       destination: `${subType}${modeName}/typography.${suffix}`,
+//       filter: (token) => token.type === 'typography' && token.path.indexOf('origin') === -1,
+//       format: format
+//     }
+//   ]
+// }
 
-const getConfig = (platform, mode) => {
+const getConfig = (mode) => {
   const modeName = mode.split('.json')[0]
 
   return {
     source: [
       './data/tokens/origin.json',
-      './data/tokens/Global/*.json',
+      './data/tokens/global.json',
       `./data/tokens/Modes/${mode}`,
-      './data/tokens/Components/*.json',
-      `./data/tokens/Platforms/${platform}/*.json`
+      './data/tokens/Components/*.json'
+      // `./data/tokens/Platforms/${platform}/*.json`
     ],
     platforms: {
       css: {
@@ -152,36 +157,30 @@ const getConfig = (platform, mode) => {
         buildPath: 'dist/android/',
         transforms: groups.mobile,
         files: [
-          ...getSplit(modeName, 'android/resources', '', 'xml')
+          ...getFiles(modeName, 'android/resources', '', 'xml')
         ]
       },
       ios: {
         buildPath: 'dist/ios/',
         transforms: groups.mobile,
         files: [
-          ...getSplit(modeName, 'ios/macros', '', 'h')
+          ...getFiles(modeName, 'ios/macros', '', 'h')
         ]
       }
     }
   }
 }
 
-platforms.forEach((platform) => {
-  modes.forEach((mode) => {
-    console.log(`\r\nBuilding platform: ${platform} \r\nBuilding mode: ${mode}`)
+modes.forEach((mode) => {
+  console.log(`\r\n\r\nBuilding mode: ${mode}`)
 
-    const StyleDictionary = dictionary.extend(getConfig(platform, mode))
+  const StyleDictionary = dictionary.extend(getConfig(mode))
 
-    if (platform === 'small-viewports') {
-      StyleDictionary.buildPlatform('css')
-      StyleDictionary.buildPlatform('scss')
-      StyleDictionary.buildPlatform('js')
-    } else if (platform === 'IOS') {
-      StyleDictionary.buildPlatform('ios')
-    } else if (platform === 'android') {
-      StyleDictionary.buildPlatform('android')
-    }
+  StyleDictionary.buildPlatform('css')
+  StyleDictionary.buildPlatform('scss')
+  StyleDictionary.buildPlatform('js')
+  StyleDictionary.buildPlatform('ios')
+  StyleDictionary.buildPlatform('android')
 
-    console.log('\r\nDone.\r\n')
-  })
+  console.log('\r\nDone.\r\n')
 })
