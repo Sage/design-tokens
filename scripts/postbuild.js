@@ -12,7 +12,6 @@ const {
 const pick = require('lodash/pick')
 const camelCase = require('lodash/camelCase')
 const glob = require('glob').sync
-const path = require('path')
 const tsc = require('node-typescript-compiler')
 
 const filename = require('./utils/filename')

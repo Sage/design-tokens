@@ -4,6 +4,7 @@ Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
 
 const { readdirSync } = require('fs-extra')
 const { dictionary, groups } = require('./style-dictionary')
+const filterComponent = require('./utils/filter-component')
 
 // const platforms = readdirSync('./data/tokens/Platforms/')
 const components = readdirSync('./data/tokens/Components/')
@@ -32,90 +33,46 @@ const getSplit = (componentName, modeName, format, subType, suffix) => {
   return [
     {
       destination: `${subType}${modeName}${path}/all.${suffix}`,
-      filter: (token) => componentName ? token.path[0] === componentName : true,
+      filter: (token) => filterComponent(token, componentName),
       format: format
     },
     {
       destination: `${subType}${modeName}${path}/color.${suffix}`,
-      filter: (token) => token.type === 'color' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
+      filter: (token) => token.type === 'color' && filterComponent(token, componentName),
       format: format
     },
     {
       destination: `${subType}${modeName}${path}/borderRadius.${suffix}`,
-      filter: (token) => token.type === 'borderRadius' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
+      filter: (token) => token.type === 'borderRadius' && filterComponent(token, componentName),
       format: format
     },
     {
       destination: `${subType}${modeName}${path}/borderWidth.${suffix}`,
-      filter: (token) => token.type === 'borderWidth' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
+      filter: (token) => token.type === 'borderWidth' && filterComponent(token, componentName),
       format: format
     },
     {
       destination: `${subType}${modeName}${path}/shadow.${suffix}`,
-      filter: (token) => token.type === 'boxShadow' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
+      filter: (token) => token.type === 'boxShadow' && filterComponent(token, componentName),
       format: format
     },
     {
       destination: `${subType}${modeName}${path}/sizing.${suffix}`,
-      filter: (token) => token.type === 'sizing' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
+      filter: (token) => token.type === 'sizing' && filterComponent(token, componentName),
       format: format
     },
     {
       destination: `${subType}${modeName}${path}/spacing.${suffix}`,
-      filter: (token) => token.type === 'spacing' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
+      filter: (token) => token.type === 'spacing' && filterComponent(token, componentName),
       format: format
     },
     {
       destination: `${subType}${modeName}${path}/typography.${suffix}`,
-      filter: (token) => token.type === 'typography' && token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : true),
+      filter: (token) => token.type === 'typography' && filterComponent(token, componentName),
       format: format
     }
   ]
 }
-
-// const getSplit = (modeName, format, subType, suffix) => {
-//   return [
-//     {
-//       destination: `${subType}${modeName}/all.${suffix}`,
-//       format: format
-//     },
-//     {
-//       destination: `${subType}${modeName}/color.${suffix}`,
-//       filter: (token) => token.type === 'color' && token.path.indexOf('origin') === -1,
-//       format: format
-//     },
-//     {
-//       destination: `${subType}${modeName}/borderRadius.${suffix}`,
-//       filter: (token) => token.type === 'borderRadius' && token.path.indexOf('origin') === -1,
-//       format: format
-//     },
-//     {
-//       destination: `${subType}${modeName}/borderWidth.${suffix}`,
-//       filter: (token) => token.type === 'borderWidth' && token.path.indexOf('origin') === -1,
-//       format: format
-//     },
-//     {
-//       destination: `${subType}${modeName}/shadow.${suffix}`,
-//       filter: (token) => token.type === 'boxShadow' && token.path.indexOf('origin') === -1,
-//       format: format
-//     },
-//     {
-//       destination: `${subType}${modeName}/sizing.${suffix}`,
-//       filter: (token) => token.type === 'sizing' && token.path.indexOf('origin') === -1,
-//       format: format
-//     },
-//     {
-//       destination: `${subType}${modeName}/spacing.${suffix}`,
-//       filter: (token) => token.type === 'spacing' && token.path.indexOf('origin') === -1,
-//       format: format
-//     },
-//     {
-//       destination: `${subType}${modeName}/typography.${suffix}`,
-//       filter: (token) => token.type === 'typography' && token.path.indexOf('origin') === -1,
-//       format: format
-//     }
-//   ]
-// }
 
 const getConfig = (mode) => {
   const modeName = mode.split('.json')[0]
