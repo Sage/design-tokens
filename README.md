@@ -51,12 +51,12 @@ To make use of the css variables, import them into your code like so:
 
 ```css
 /* Inside css */
-@import "~@Sage/design-tokens/css/<theme>.css";
+@import "~@sage/design-tokens/css/<theme>.css";
 ```
 
 ```js
 // For projects where you can import css files into JS
-import "@Sage/design-tokens/css/<theme>.css";
+import "@sage/design-tokens/css/<theme>.css";
 ```
 
 This will add the variables to the root element of the page.

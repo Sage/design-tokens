@@ -1,3 +1,117 @@
+# [4.34.0](https://github.com/Sage/design-tokens/compare/v4.33.0...v4.34.0) (2023-11-28)
+
+
+### Features
+
+* **data:** remove unwanted token for badge notification ([f96073f](https://github.com/Sage/design-tokens/commit/f96073f0bdb2384020b0eacc08ad861edafbecc2))
+
+# [4.33.0](https://github.com/Sage/design-tokens/compare/v4.32.0...v4.33.0) (2023-11-28)
+
+
+### Features
+
+* **data:** add new color for badge ([773acf3](https://github.com/Sage/design-tokens/commit/773acf3ca534d5d48b3f93542d70edaa11855fee))
+* **data:** color update for badge ([ae5d8b7](https://github.com/Sage/design-tokens/commit/ae5d8b74be1babd536f83c206ebf02b5edb5999b))
+
+# [4.32.0](https://github.com/Sage/design-tokens/compare/v4.31.0...v4.32.0) (2023-11-27)
+
+
+### Features
+
+* **data:** Rename token category "origin-colors (reference only)" to "origin-color-reference-only". ([276c3ec](https://github.com/Sage/design-tokens/commit/276c3ec968760780676b4cd323566b84e08da68b))
+
+# [4.31.0](https://github.com/Sage/design-tokens/compare/v4.30.0...v4.31.0) (2023-11-22)
+
+
+### Features
+
+* **data:** add 1 typogrraphy token for badge. ([734aa74](https://github.com/Sage/design-tokens/commit/734aa747e4d04602e4015cc2d917df33e695e7a1))
+
+# [4.30.0](https://github.com/Sage/design-tokens/compare/v4.29.0...v4.30.0) (2023-11-21)
+
+
+### Features
+
+* **data:** semantic.positive 500 and 600 darkened to meet WCAG requirements on #F2F5F6 ([689eedd](https://github.com/Sage/design-tokens/commit/689eedd9eaa7e25f3c774320cf5d6dfb8d8b43b8)), closes [#F2F5F6](https://github.com/Sage/design-tokens/issues/F2F5F6)
+* **data:** Sync Figma styles with tokens ([e835410](https://github.com/Sage/design-tokens/commit/e835410a1c8aec4057e229a10aeaf3a071a178ba))
+
+# [4.29.0](https://github.com/Sage/design-tokens/compare/v4.28.0...v4.29.0) (2023-11-16)
+
+
+### Features
+
+* **data:** adding positive 400 bg color ([d26b9c9](https://github.com/Sage/design-tokens/commit/d26b9c912fcba89dd49478b1fa76652eb58f2127))
+
+# [4.28.0](https://github.com/Sage/design-tokens/compare/v4.27.0...v4.28.0) (2023-11-14)
+
+
+### Features
+
+* **data:** add 1 size token for tile ([5bfe37d](https://github.com/Sage/design-tokens/commit/5bfe37dc58876b49d9493bbc914ee1f3218795c8))
+
+# [4.27.0](https://github.com/Sage/design-tokens/compare/v4.26.0...v4.27.0) (2023-11-13)
+
+
+### Features
+
+* **data:** add 3 new size token for tile ([b7a261e](https://github.com/Sage/design-tokens/commit/b7a261e2d03d1cb30cf97daa09df12a576a9e08a))
+
+# [4.26.0](https://github.com/Sage/design-tokens/compare/v4.25.0...v4.26.0) (2023-10-24)
+
+
+### Features
+
+* **data:** add 2 size token for button toggle asset M and L. ([37161f8](https://github.com/Sage/design-tokens/commit/37161f835527ecc7916a446e4d8992b7fab4e902))
+
+# [4.25.0](https://github.com/Sage/design-tokens/compare/v4.24.0...v4.25.0) (2023-09-21)
+
+
+### Features
+
+* **data:** typography for loader ([b61ced5](https://github.com/Sage/design-tokens/commit/b61ced5bb0dd1cd4256ec395eb52b83ecb12025f))
+
+# [4.24.0](https://github.com/Sage/design-tokens/compare/v4.23.0...v4.24.0) (2023-09-21)
+
+
+### Features
+
+* **data:** adding a new token spacing.035 for padding in skeleton text ([1e21129](https://github.com/Sage/design-tokens/commit/1e2112951e6c23ac3af05f0fd66f505cc7710342))
+
+# [4.23.0](https://github.com/Sage/design-tokens/compare/v4.22.0...v4.23.0) (2023-08-16)
+
+
+### Features
+
+* **data:** add 2 color token for divider ([185c773](https://github.com/Sage/design-tokens/commit/185c7733ef206be5d3e8a786e576698e1856be7e))
+
+# [4.22.0](https://github.com/Sage/design-tokens/compare/v4.21.0...v4.22.0) (2023-07-18)
+
+
+### Features
+
+* **data:** add minor gray hover state ([f827479](https://github.com/Sage/design-tokens/commit/f8274797284860947dddbb494bbd6f6815b11ca0))
+
+# [4.21.0](https://github.com/Sage/design-tokens/compare/v4.20.0...v4.21.0) (2023-07-11)
+
+
+### Features
+
+* **data:** adding a new token spacing.neg080 for pill XL ([b0c2e93](https://github.com/Sage/design-tokens/commit/b0c2e93db1771522ce8492571010da79e971c5b3))
+
+# [4.20.0](https://github.com/Sage/design-tokens/compare/v4.19.0...v4.20.0) (2023-07-11)
+
+
+### Features
+
+* **data:** update pill font token for better a11y. ([d594444](https://github.com/Sage/design-tokens/commit/d5944443792eda42ba84dbae803547e539c7cd61))
+
+# [4.19.0](https://github.com/Sage/design-tokens/compare/v4.18.0...v4.19.0) (2023-06-06)
+
+
+### Features
+
+* **data:** add new sizing 44px ([a265de7](https://github.com/Sage/design-tokens/commit/a265de7cbed75075644b3a72e62160e6628d62b9))
+
 # [4.18.0](https://github.com/Sage/design-tokens/compare/v4.17.0...v4.18.0) (2023-04-03)
 
 
