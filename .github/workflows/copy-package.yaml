@@ -15,14 +15,14 @@ jobs:
       contents: write
       packages: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: true
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '16'
 
       - name: Copy released package to private GitHub NPM registry
         run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://npm.pkg.github.com --to-email="${GIT_COMMITTER_EMAIL}" --to-token="${NODE_AUTH_TOKEN}" %40sage%2Fdesign-tokens

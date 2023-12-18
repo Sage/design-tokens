@@ -11,9 +11,9 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: '16'
 
@@ -22,7 +22,7 @@ jobs:
 
       # Install your linters here
       - name: Run linters
-        uses: wearerequired/lint-action@v1
+        uses: wearerequired/lint-action@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           eslint: true
