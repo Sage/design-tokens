@@ -2,25 +2,20 @@
   "base": {
     "box-shadow": {
       "container": {
-        "XS": {
-          "value": "{origin.box-shadow.downward.1}",
-          "type": "boxShadow"
-        },
         "S": {
-          "value": "{origin.box-shadow.downward.2}",
-          "type": "boxShadow"
+          "value": "{origin.box-shadow.downward.3}",
+          "type": "boxShadow",
+          "description": "Popover menus used on split, multiaction and action popovers"
         },
         "M": {
-          "value": "{origin.box-shadow.downward.3}",
-          "type": "boxShadow"
+          "value": "{origin.box-shadow.downward.4}",
+          "type": "boxShadow",
+          "description": "Toasts"
         },
         "L": {
-          "value": "{origin.box-shadow.downward.4}",
-          "type": "boxShadow"
-        },
-        "XL": {
           "value": "{origin.box-shadow.downward.5}",
-          "type": "boxShadow"
+          "type": "boxShadow",
+          "description": "Dialogs and sidebars"
         },
         "sticky-footer": {
           "value": "{origin.box-shadow.upward.1}",
@@ -31,14 +26,16 @@
           "type": "boxShadow"
         }
       },
-      "selectable": {
-        "S": {
-          "value": "{origin.box-shadow.downward.1}",
-          "type": "boxShadow"
-        },
+      "interactive": {
         "M": {
-          "value": "{origin.box-shadow.downward.2}",
-          "type": "boxShadow"
+          "value": "{origin.box-shadow.downward.3}",
+          "type": "boxShadow",
+          "description": "Default card state"
+        },
+        "L": {
+          "value": "{origin.box-shadow.downward.5}",
+          "type": "boxShadow",
+          "description": "Card hover state"
         }
       }
     },
