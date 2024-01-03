@@ -373,33 +373,6 @@
       }
     },
     "box-shadow": {
-      "upward": {
-        "0": {
-          "value": {
-            "x": "0",
-            "y": "0",
-            "blur": "0",
-            "spread": "0",
-            "color": "{origin.colors.black}",
-            "type": "dropShadow"
-          },
-          "type": "boxShadow"
-        },
-        "1": {
-          "value": [
-            {
-              "x": "0",
-              "y": "-4",
-              "blur": "12",
-              "spread": "0",
-              "color": "rgba({origin.colors.black}, 0.05)",
-              "type": "innerShadow"
-            }
-          ],
-          "type": "boxShadow",
-          "description": "sticky footers"
-        }
-      },
       "downward": {
         "1": {
           "value": [
@@ -501,6 +474,21 @@
               "blur": "4",
               "spread": "0",
               "color": "rgba( {origin.colors.storm} , 0.6)",
+              "type": "dropShadow"
+            }
+          ],
+          "type": "boxShadow"
+        }
+      },
+      "upward": {
+        "4": {
+          "value": [
+            {
+              "x": "0",
+              "y": "-6",
+              "blur": "10",
+              "spread": "4",
+              "color": "rgba( {origin.colors.storm} , 0.15)",
               "type": "dropShadow"
             }
           ],
