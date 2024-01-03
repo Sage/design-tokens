@@ -2,17 +2,17 @@
   "global": {
     "box-shadow": {
       "container": {
-        "S": {
+        "near": {
           "value": "{origin.box-shadow.downward.3}",
           "type": "boxShadow",
           "description": "Popover menus used on split, multiaction, dropdown and action popovers"
         },
-        "M": {
+        "far": {
           "value": "{origin.box-shadow.downward.4}",
           "type": "boxShadow",
           "description": "Toasts"
         },
-        "L": {
+        "distant": {
           "value": "{origin.box-shadow.downward.5}",
           "type": "boxShadow",
           "description": "Dialogs and sidebars"
@@ -114,7 +114,7 @@
           "type": "borderWidth"
         }
       },
-      "selectable": {
+      "interactive": {
         "S": {
           "value": "{origin.dimension.12} * {global.border-width.scale}",
           "type": "borderWidth",
