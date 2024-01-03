@@ -1,5 +1,5 @@
 /*
-Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
+Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
 
 const { readdirSync } = require('fs-extra')
@@ -28,48 +28,48 @@ const getComponents = (modeName, format, subType, suffix) => {
 }
 
 const getSplit = (componentName, modeName, format, subType, suffix) => {
-  const path = componentName ? '/components/' + componentName : ''
+  const path = componentName ? '/' + componentName : ''
 
   return [
     {
       destination: `${subType}${modeName}${path}/all.${suffix}`,
       filter: (token) => filterComponent(token, componentName),
-      format: format
+      format
     },
     {
       destination: `${subType}${modeName}${path}/color.${suffix}`,
       filter: (token) => token.type === 'color' && filterComponent(token, componentName),
-      format: format
+      format
     },
     {
       destination: `${subType}${modeName}${path}/borderRadius.${suffix}`,
       filter: (token) => token.type === 'borderRadius' && filterComponent(token, componentName),
-      format: format
+      format
     },
     {
       destination: `${subType}${modeName}${path}/borderWidth.${suffix}`,
       filter: (token) => token.type === 'borderWidth' && filterComponent(token, componentName),
-      format: format
+      format
     },
     {
       destination: `${subType}${modeName}${path}/shadow.${suffix}`,
       filter: (token) => token.type === 'boxShadow' && filterComponent(token, componentName),
-      format: format
+      format
     },
     {
       destination: `${subType}${modeName}${path}/sizing.${suffix}`,
       filter: (token) => token.type === 'sizing' && filterComponent(token, componentName),
-      format: format
+      format
     },
     {
       destination: `${subType}${modeName}${path}/spacing.${suffix}`,
       filter: (token) => token.type === 'spacing' && filterComponent(token, componentName),
-      format: format
+      format
     },
     {
       destination: `${subType}${modeName}${path}/typography.${suffix}`,
       filter: (token) => token.type === 'typography' && filterComponent(token, componentName),
-      format: format
+      format
     }
   ]
 }
@@ -105,7 +105,9 @@ const getConfig = (mode) => {
         transforms: groups.js,
         files: [
           ...getFiles(modeName, 'javascript/module', 'common/', 'js'),
+          ...getFiles(modeName, 'typescript/module-declarations', 'common/', 'd.ts'),
           ...getFiles(modeName, 'javascript/es6', 'es6/', 'js'),
+          ...getFiles(modeName, 'typescript/es6-declarations', 'es6/', 'd.ts'),
           ...getFiles(modeName, 'javascript/umd', 'umd/', 'js'),
           ...getFiles(modeName, 'json', 'json/', 'json')
         ]

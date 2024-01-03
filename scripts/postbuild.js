@@ -1,5 +1,5 @@
 /*
-Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
+Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
 const { resolve } = require('path')
 const {
@@ -12,7 +12,6 @@ const {
 const pick = require('lodash/pick')
 const camelCase = require('lodash/camelCase')
 const glob = require('glob').sync
-const tsc = require('node-typescript-compiler')
 
 const filename = require('./utils/filename')
 const headerContents = require('./utils/file-header')
@@ -53,40 +52,41 @@ function copyReadme () {
   }
 }
 
-async function generateTSDefinitions () {
-  if (process.platform === 'win32') {
-    console.log('Typescript compiler was not executed, since current platform is win32.')
-    return
-  }
-
-  try {
-    await tsc.compile({
-      project: resolve(__dirname, '../tsconfig.json')
-    })
-  } catch (err) {
-    console.log('Error compiling typescript')
-    console.log(err)
-  }
-}
-
 function addEntryFile () {
-  const jsFilePaths = glob('./dist/js/**/*.js')
+  const jsFilePaths = glob('./dist/js/*/*/*.js')
+  const jsComponentPaths = glob('./dist/js/*/*/*/*.js')
   const entryFilePath = resolve(__dirname, '../dist/index.js')
 
   const fileExports = jsFilePaths
     .map((filePath) => {
-      const [theme, fullName] = filePath.split('/').slice(-2)
+      const [mode, theme, fullName] = filePath.split('/').slice(-3)
       const name = filename(fullName)
       return {
+        mode,
         theme,
         name
       }
     })
     .map((file) => {
-      const exportName = camelCase(`${file.theme} ${file.name}`)
-      return `export * as ${exportName} from './js/${file.theme}/${file.name}'`
+      const exportName = camelCase(`${file.mode} ${file.theme} ${file.name}`)
+      return `export * as ${exportName} from './js/${file.mode}/${file.theme}/${file.name}'`
     }).join('\n')
-  outputFileSync(entryFilePath, '\n' + fileExports + '\n')
+  const componentExports = jsComponentPaths
+    .map((filePath) => {
+      const [mode, theme, component, fullName] = filePath.split('/').slice(-4)
+      const name = filename(fullName)
+      return {
+        mode,
+        theme,
+        component,
+        name
+      }
+    })
+    .map((file) => {
+      const exportName = camelCase(`${file.mode} ${file.theme} ${file.component} ${file.name}`)
+      return `export * as ${exportName} from './js/${file.mode}/${file.theme}/${file.component}/${file.name}'`
+    }).join('\n')
+  outputFileSync(entryFilePath, '\n' + fileExports + '\r\n\r\n' + componentExports + '\n')
 }
 
 function addFileHeader () {
@@ -109,7 +109,6 @@ async function main () {
   addEntryFile()
   addFileHeader()
   // await require('./icons')
-  await generateTSDefinitions()
 }
 
 main()

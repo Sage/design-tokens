@@ -1,5 +1,5 @@
 /*
-Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
+Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
 const { resolve } = require('path')
 const { readJsonSync, outputJsonSync } = require('fs-extra')

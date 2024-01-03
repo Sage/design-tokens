@@ -1,5 +1,5 @@
 /*
-Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
+Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
 module.exports = {
   env: {
@@ -9,7 +9,7 @@ module.exports = {
   plugins: [
     'header'
   ],
-  extends: ['standard', 'plugin:storybook/recommended'],
+  extends: ['standard'],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module'
@@ -18,7 +18,7 @@ module.exports = {
     'header/header': [
       2,
       'block',
-      '\nCopyright © 2021 The Sage Group plc or its licensors. All Rights reserved\n '
+      '\nCopyright © 2024 The Sage Group plc or its licensors. All Rights reserved\n '
     ]
   }
 }
