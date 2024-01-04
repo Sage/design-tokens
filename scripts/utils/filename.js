@@ -1,11 +1,11 @@
 /*
-Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
+Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
 
 /**
  * Gets the filename for a file
  *
- * @param {string} path - the path to the file
+ * @param {string} filePath - the path to the file
  *
  * @returns {string}
  */

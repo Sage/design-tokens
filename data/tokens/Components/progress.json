@@ -1,0 +1,70 @@
+{
+  "progress": {
+    "inverse": {
+      "bg-default": {
+        "value": "{base.color.generic.bg.standard.nought}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.12",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "fg-default": {
+        "value": "{base.color.generic.fg.standard.nought}",
+        "type": "color"
+      },
+      "label-alt": {
+        "value": "{base.color.generic.content.inverse.firm}",
+        "type": "color"
+      },
+      "label-default": {
+        "value": "{base.color.generic.content.inverse.harsh}",
+        "type": "color"
+      }
+    },
+    "standard": {
+      "bg-default": {
+        "value": "{base.color.generic.bg.inverse.nought}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.12",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "border-default": {
+        "value": "{base.color.generic.fg.standard.soft}",
+        "type": "color"
+      },
+      "fg-alt": {
+        "value": "{base.color.status.success.standard.default}",
+        "type": "color"
+      },
+      "fg-default": {
+        "value": "{base.color.generic.fg.inverse.nought}",
+        "type": "color"
+      },
+      "fg-error": {
+        "value": "{base.color.status.negative.standard.default}",
+        "type": "color"
+      },
+      "label-alt": {
+        "value": "{base.color.generic.content.standard.firm}",
+        "type": "color"
+      },
+      "label-default": {
+        "value": "{base.color.generic.content.standard.harsh}",
+        "type": "color"
+      }
+    }
+  }
+}

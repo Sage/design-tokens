@@ -1,5 +1,5 @@
 /*
-Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
+Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
 const { resolve } = require('path')
 const {
@@ -12,7 +12,6 @@ const {
 const pick = require('lodash/pick')
 const camelCase = require('lodash/camelCase')
 const glob = require('glob').sync
-const tsc = require('node-typescript-compiler')
 
 const filename = require('./utils/filename')
 const headerContents = require('./utils/file-header')
@@ -53,60 +52,49 @@ function copyReadme () {
   }
 }
 
-function copyData () {
-  try {
-    copySync(
-      resolve(__dirname, '../temp/tokens.json'),
-      resolve(__dirname, '../dist/data/tokens.json')
-    )
-  } catch (err) {
-    console.log('Error copying data to dist')
-    console.log(err)
-  }
-}
-
-async function generateTSDefinitions () {
-  if (process.platform === 'win32') {
-    console.log('Typescript compiler was not executed, since current platform is win32.')
-    return
-  }
-
-  try {
-    await tsc.compile({
-      project: resolve(__dirname, '../tsconfig.json')
-    })
-  } catch (err) {
-    console.log('Error compiling typescript')
-    console.log(err)
-  }
-}
-
 function addEntryFile () {
-  const jsFilePaths = glob('./dist/js/**/*.js')
+  const jsFilePaths = glob('./dist/js/*/*/*.js')
+  const jsComponentPaths = glob('./dist/js/*/*/*/*.js')
   const entryFilePath = resolve(__dirname, '../dist/index.js')
 
   const fileExports = jsFilePaths
     .map((filePath) => {
-      const [theme, fullName] = filePath.split('/').slice(-2)
+      const [mode, theme, fullName] = filePath.split('/').slice(-3)
       const name = filename(fullName)
       return {
+        mode,
         theme,
         name
       }
     })
     .map((file) => {
-      const exportName = camelCase(`${file.theme} ${file.name}`)
-      return `export * as ${exportName} from './js/${file.theme}/${file.name}'`
+      const exportName = camelCase(`${file.mode} ${file.theme} ${file.name}`)
+      return `export * as ${exportName} from './js/${file.mode}/${file.theme}/${file.name}'`
     }).join('\n')
-  outputFileSync(entryFilePath, '\n' + fileExports + '\n')
+  const componentExports = jsComponentPaths
+    .map((filePath) => {
+      const [mode, theme, component, fullName] = filePath.split('/').slice(-4)
+      const name = filename(fullName)
+      return {
+        mode,
+        theme,
+        component,
+        name
+      }
+    })
+    .map((file) => {
+      const exportName = camelCase(`${file.mode} ${file.theme} ${file.component} ${file.name}`)
+      return `export * as ${exportName} from './js/${file.mode}/${file.theme}/${file.component}/${file.name}'`
+    }).join('\n')
+  outputFileSync(entryFilePath, '\n' + fileExports + '\r\n\r\n' + componentExports + '\n')
 }
 
 function addFileHeader () {
-  const files = glob('dist/**/*.@(js|css|ts|d.ts|scss|less)')
+  const files = glob('dist/**/*.@(css|js|json|ts|d.ts|scss|less)')
   files.forEach((file) => {
     try {
       const filePath = resolve(__dirname, '../', file)
-      const outputData = headerContents + '\r\n\r\n' + readFileSync(filePath)
+      const outputData = headerContents(filename(filePath), file) + '\r\n\r\n' + readFileSync(filePath)
 
       outputFileSync(filePath, outputData)
     } catch (er) {
@@ -115,28 +103,12 @@ function addFileHeader () {
   })
 }
 
-function copyAssets () {
-  try {
-    copySync(
-      resolve(__dirname, '../assets'),
-      resolve(__dirname, '../dist/assets/')
-    )
-  } catch (err) {
-    console.log('Error copying assets to dist')
-    console.log(err)
-  }
-}
-
 async function main () {
   copyPackageJSON()
   copyReadme()
-  copyData()
-  copyAssets()
   addEntryFile()
   addFileHeader()
-  require('./tokens-documentation')
-  await require('./icons')
-  await generateTSDefinitions()
+  // await require('./icons')
 }
 
 main()

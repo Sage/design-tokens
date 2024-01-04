@@ -22,7 +22,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20'
 
       - name: Copy released package to private GitHub NPM registry
         run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://npm.pkg.github.com --to-email="${GIT_COMMITTER_EMAIL}" --to-token="${NODE_AUTH_TOKEN}" %40sage%2Fdesign-tokens

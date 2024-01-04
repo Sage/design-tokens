@@ -1,87 +1,145 @@
 /*
-Copyright © 2021 The Sage Group plc or its licensors. All Rights reserved
+Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
 
-const { readJsonSync } = require('fs-extra')
+const { readdirSync } = require('fs-extra')
 const { dictionary, groups } = require('./style-dictionary')
+const filterComponent = require('./utils/filter-component')
 
-const filterPublic = require('./utils/filter-public')
-const filterTheme = require('./utils/filter-theme')
+// const platforms = readdirSync('./data/tokens/Platforms/')
+const components = readdirSync('./data/tokens/Components/')
+const modes = readdirSync('./data/tokens/Modes/')
 
-const tokens = readJsonSync('temp/tokens.json')
-const publicTokens = filterPublic(tokens)
-const themes = Object.keys(publicTokens)
+const getFiles = (modeName, format, subType, suffix) => {
+  return [
+    ...getSplit(undefined, modeName, format, subType, suffix),
+    ...getComponents(modeName, format, subType, suffix)
+  ]
+}
 
-console.log(`Found ${themes.length} public themes: ${themes.join(', ')}.`)
+const getComponents = (modeName, format, subType, suffix) => {
+  const componentArray = []
 
-themes.forEach((theme) => {
-  console.log(`\r\nBuilding all platforms for ${theme} theme:`)
+  components.forEach((component) => {
+    componentArray.push(...getSplit(component.split('.')[0], modeName, format, subType, suffix))
+  })
 
-  dictionary.extend({
-    tokens,
+  return componentArray
+}
+
+const getSplit = (componentName, modeName, format, subType, suffix) => {
+  const path = componentName ? '/' + componentName : ''
+
+  return [
+    {
+      destination: `${subType}${modeName}${path}/all.${suffix}`,
+      filter: (token) => filterComponent(token, componentName),
+      format
+    },
+    {
+      destination: `${subType}${modeName}${path}/color.${suffix}`,
+      filter: (token) => token.type === 'color' && filterComponent(token, componentName),
+      format
+    },
+    {
+      destination: `${subType}${modeName}${path}/borderRadius.${suffix}`,
+      filter: (token) => token.type === 'borderRadius' && filterComponent(token, componentName),
+      format
+    },
+    {
+      destination: `${subType}${modeName}${path}/borderWidth.${suffix}`,
+      filter: (token) => token.type === 'borderWidth' && filterComponent(token, componentName),
+      format
+    },
+    {
+      destination: `${subType}${modeName}${path}/shadow.${suffix}`,
+      filter: (token) => token.type === 'boxShadow' && filterComponent(token, componentName),
+      format
+    },
+    {
+      destination: `${subType}${modeName}${path}/sizing.${suffix}`,
+      filter: (token) => token.type === 'sizing' && filterComponent(token, componentName),
+      format
+    },
+    {
+      destination: `${subType}${modeName}${path}/spacing.${suffix}`,
+      filter: (token) => token.type === 'spacing' && filterComponent(token, componentName),
+      format
+    },
+    {
+      destination: `${subType}${modeName}${path}/typography.${suffix}`,
+      filter: (token) => token.type === 'typography' && filterComponent(token, componentName),
+      format
+    }
+  ]
+}
+
+const getConfig = (mode) => {
+  const modeName = mode.split('.json')[0]
+
+  return {
+    source: [
+      './data/tokens/origin.json',
+      './data/tokens/global.json',
+      `./data/tokens/Modes/${mode}`,
+      './data/tokens/Components/*.json'
+      // `./data/tokens/Platforms/${platform}/*.json`
+    ],
     platforms: {
-      javascript: {
-        buildPath: 'dist/js/',
-        transforms: groups.web,
-        files: [
-          {
-            filter: filterTheme(theme),
-            destination: `${theme}/common.js`,
-            format: 'javascript/module-flat'
-          },
-          {
-            filter: filterTheme(theme),
-            destination: `${theme}/es6.js`,
-            format: 'custom/js/es6-module-flat'
-          }
-        ]
-      },
       css: {
         buildPath: 'dist/css/',
-        transforms: groups.web,
+        transforms: groups.css,
         files: [
-          {
-            filter: filterTheme(theme),
-            destination: `${theme}.css`,
-            format: 'css/variables'
-          }
+          ...getFiles(modeName, 'css/variables', '', 'css')
         ]
       },
       scss: {
         buildPath: 'dist/scss/',
-        transforms: groups.web,
+        transforms: groups.scss,
         files: [
-          {
-            filter: filterTheme(theme),
-            destination: `${theme}.scss`,
-            format: 'scss/variables'
-          }
+          ...getFiles(modeName, 'scss/variables', '', 'scss')
+        ]
+      },
+      js: {
+        buildPath: 'dist/js/',
+        transforms: groups.js,
+        files: [
+          ...getFiles(modeName, 'javascript/module', 'common/', 'js'),
+          ...getFiles(modeName, 'typescript/module-declarations', 'common/', 'd.ts'),
+          ...getFiles(modeName, 'javascript/es6', 'es6/', 'js'),
+          ...getFiles(modeName, 'typescript/es6-declarations', 'es6/', 'd.ts'),
+          ...getFiles(modeName, 'javascript/umd', 'umd/', 'js'),
+          ...getFiles(modeName, 'json', 'json/', 'json')
         ]
       },
       android: {
         buildPath: 'dist/android/',
         transforms: groups.mobile,
         files: [
-          {
-            filter: filterTheme(theme),
-            destination: `${theme}.xml`,
-            format: 'android/resources'
-          }
+          ...getFiles(modeName, 'android/resources', '', 'xml')
         ]
       },
       ios: {
         buildPath: 'dist/ios/',
         transforms: groups.mobile,
         files: [
-          {
-            filter: filterTheme(theme),
-            destination: `${theme}.h`,
-            format: 'ios/macros'
-          }
+          ...getFiles(modeName, 'ios/macros', '', 'h')
         ]
       }
     }
-  }).buildAllPlatforms()
+  }
+}
+
+modes.forEach((mode) => {
+  console.log(`\r\n\r\nBuilding mode: ${mode}`)
+
+  const StyleDictionary = dictionary.extend(getConfig(mode))
+
+  StyleDictionary.buildPlatform('css')
+  StyleDictionary.buildPlatform('scss')
+  StyleDictionary.buildPlatform('js')
+  StyleDictionary.buildPlatform('ios')
+  StyleDictionary.buildPlatform('android')
 
   console.log('\r\nDone.\r\n')
 })
