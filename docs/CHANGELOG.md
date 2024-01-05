@@ -1,3 +1,18 @@
+# [5.0.0-beta.2](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.1...v5.0.0-beta.2) (2024-01-05)
+
+
+### Features
+
+* **data:** 3rd push on datatable header tokens ([a602356](https://github.com/Sage/design-tokens/commit/a6023562d998a67a1cf9fa7dd8253894fa8822e3))
+* **data:** add bg-hover colour for button.standard.subtle ([a5ab7be](https://github.com/Sage/design-tokens/commit/a5ab7bed36bb117c89d3697b44cd0190969370fd))
+* **data:** add container.standard.border-alt token ([a76f601](https://github.com/Sage/design-tokens/commit/a76f601a300064321b7ea714dd6c64690a8775ed))
+* **data:** Change active standard primary button bg from dark green to black ([d776084](https://github.com/Sage/design-tokens/commit/d776084f15050b8e04943d9478d3fd8af97cd451))
+* **data:** finalising shadows for claire ([6127873](https://github.com/Sage/design-tokens/commit/612787342743fcf95366476f9b32de79b7a7b8e0))
+* **data:** fixing the mid layer bg standard tokens ([05d5a65](https://github.com/Sage/design-tokens/commit/05d5a65349a8e970e13b6ab5cb3174c22222e40f))
+* **data:** re-order button colour tokens to be alphabetical ([009d56d](https://github.com/Sage/design-tokens/commit/009d56d7be7cfcc56bced69e46de7a1ff31ff2a7))
+* **data:** rename datatable header tokens ([52ac948](https://github.com/Sage/design-tokens/commit/52ac9481270d17e6f8e13483a89774edc26be1a1))
+* **data:** Update values of container.interactive.border -enabled and -inactive, and add token for -alt ([7718785](https://github.com/Sage/design-tokens/commit/771878540acbf99744e1a67eace4737055fdb68f))
+
 # [5.0.0-beta.1](https://github.com/Sage/design-tokens/compare/v4.34.0...v5.0.0-beta.1) (2024-01-05)
 
 
