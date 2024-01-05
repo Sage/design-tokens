@@ -1,29 +1,24 @@
 {
-  "base": {
+  "global": {
     "box-shadow": {
       "container": {
-        "XS": {
-          "value": "{origin.box-shadow.downward.1}",
-          "type": "boxShadow"
-        },
-        "S": {
-          "value": "{origin.box-shadow.downward.2}",
-          "type": "boxShadow"
-        },
-        "M": {
+        "near": {
           "value": "{origin.box-shadow.downward.3}",
-          "type": "boxShadow"
+          "type": "boxShadow",
+          "description": "Popover menus used on split, multiaction, dropdown and action popovers"
         },
-        "L": {
+        "far": {
           "value": "{origin.box-shadow.downward.4}",
-          "type": "boxShadow"
+          "type": "boxShadow",
+          "description": "Toasts"
         },
-        "XL": {
+        "distant": {
           "value": "{origin.box-shadow.downward.5}",
-          "type": "boxShadow"
+          "type": "boxShadow",
+          "description": "Dialogs and sidebars"
         },
         "sticky-footer": {
-          "value": "{origin.box-shadow.upward.1}",
+          "value": "{origin.box-shadow.upward.4}",
           "type": "boxShadow"
         },
         "solid-border": {
@@ -31,14 +26,16 @@
           "type": "boxShadow"
         }
       },
-      "selectable": {
-        "S": {
-          "value": "{origin.box-shadow.downward.1}",
-          "type": "boxShadow"
+      "interactive": {
+        "enabled": {
+          "value": "{origin.box-shadow.downward.3}",
+          "type": "boxShadow",
+          "description": "Default card state"
         },
-        "M": {
-          "value": "{origin.box-shadow.downward.2}",
-          "type": "boxShadow"
+        "hover": {
+          "value": "{origin.box-shadow.downward.5}",
+          "type": "boxShadow",
+          "description": "Card hover state"
         }
       }
     },
@@ -49,55 +46,72 @@
         "description": "We can override this to locally change the size of radius in the future if required."
       },
       "container": {
-        "XS": {
-          "value": "{origin.dimension.12} * {base.border-radius.scale}",
+        "XXS": {
+          "value": "{origin.dimension.12} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Validation bar"
+          "description": "Validation bar on input components"
+        },
+        "XS": {
+          "value": "{origin.dimension.25} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Pill"
         },
         "S": {
-          "value": "{origin.dimension.50} * {base.border-radius.scale}",
+          "value": "{origin.dimension.50} * {global.border-radius.scale}",
           "type": "borderRadius",
           "description": "Color picker advanced (inner container), Tooltip."
         },
         "M": {
-          "value": "{origin.dimension.100} * {base.border-radius.scale}",
+          "value": "{origin.dimension.100} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Action popover (menu), Anchor navigation, Card (less rounded), Card select (single), Card select group (outer corners), Carousel (slides), Color picker standard (container), Menu (bottom corners), Message, Navigation: top (menu bottom corners), Navigation: left (selected menu), Pagination, Table, Tile (less rounded), Toast."
+          "description": "Popover menus (action popover, split button etc), Color picker standard (container), Menu (bottom corners), Message, Navigation: top (menu bottom corners), Navigation: left (selected menu), Pagination, Table, Tile (less rounded), Toast"
         },
         "L": {
-          "value": "{origin.dimension.200} * {base.border-radius.scale}",
+          "value": "{origin.dimension.200} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Carousel (outer part), Card (more rounded), Color picker advanced (outer container), Dialog (not full screen), Tile (more rounded)."
+          "description": "Carousel (outer part), Color picker advanced (outer container), Dialog (not full screen), Tile (more rounded)."
         },
-        "none": {
-          "value": "0",
-          "type": "borderRadius"
+        "circle": {
+          "value": "10000",
+          "type": "borderRadius",
+          "description": "Badge, Portrait"
         }
       },
-      "selectable": {
+      "interactive": {
         "XS": {
-          "value": "{origin.dimension.25} * {base.border-radius.scale}",
+          "value": "{origin.dimension.25} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Checkbox (S, M), Link (focus background),Pill"
+          "description": "Checkbox (S, M), Link (focus background)"
         },
         "S": {
-          "value": "{origin.dimension.50} * {base.border-radius.scale}",
+          "value": "{origin.dimension.50} * {global.border-radius.scale}",
           "type": "borderRadius",
           "description": "Button: minor (including button bar), Button: multi-action & split (menu), Button toggle: minor, Checkbox (large), Date picker, Date range, Dropdown: select (trigger & menu), File input, Link (focus), Search, Text area, Text input."
         },
         "M": {
-          "value": "{origin.dimension.100} * {base.border-radius.scale}",
+          "value": "{origin.dimension.100} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Tab"
+          "description": "Anchor navigation items, Card (less rounded), Card select (single), Card select group (outer corners), Carousel (slides), Tab items"
         },
         "L": {
-          "value": "{origin.dimension.400} * {base.border-radius.scale}",
+          "value": "{origin.dimension.200} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Action popover (button), Button: major (including button bar), Button: multi-action & split, Button toggle: major, Loader bar, Progress tracker, Switch."
+          "description": "Card (more rounded)"
+        },
+        "XL": {
+          "value": "{origin.dimension.400} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Buttons, Loader bar, Progress tracker, Switch"
+        },
+        "circle": {
+          "value": "10000",
+          "type": "borderRadius",
+          "description": "Radio button"
         },
         "none": {
           "value": "0",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "description": "Button groups (internal/adjacent corners), Card select group (internal/adjacent corners), File input (integrated base bar top corners)."
         }
       }
     },
@@ -108,7 +122,12 @@
       },
       "container": {
         "S": {
-          "value": "{origin.dimension.12} * {base.border-width.scale}",
+          "value": "{origin.dimension.12} * {global.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Dividing lines"
+        },
+        "M": {
+          "value": "{origin.dimension.50} * {global.border-width.scale}",
           "type": "borderWidth",
           "description": "Dividing lines"
         },
@@ -117,29 +136,29 @@
           "type": "borderWidth"
         }
       },
-      "selectable": {
+      "interactive": {
         "S": {
-          "value": "{origin.dimension.12} * {base.border-width.scale}",
+          "value": "{origin.dimension.12} * {global.border-width.scale}",
           "type": "borderWidth",
           "description": "Inputs, buttons"
         },
         "MS": {
-          "value": "{origin.dimension.25} * {base.border-width.scale}",
+          "value": "{origin.dimension.25} * {global.border-width.scale}",
           "type": "borderWidth",
           "description": "Buttons, Validation bars"
         },
         "M": {
-          "value": "{origin.dimension.38} * {base.border-width.scale}",
+          "value": "{origin.dimension.38} * {global.border-width.scale}",
           "type": "borderWidth",
           "description": "Focus\n"
         },
         "L": {
-          "value": "{origin.dimension.50} * {base.border-width.scale}",
+          "value": "{origin.dimension.50} * {global.border-width.scale}",
           "type": "borderWidth",
           "description": "Focus underline\n"
         },
         "XL": {
-          "value": "{origin.dimension.75} * {base.border-width.scale}",
+          "value": "{origin.dimension.75} * {global.border-width.scale}",
           "type": "borderWidth",
           "description": "Double Focus Border"
         },
@@ -166,7 +185,7 @@
       }
     },
     "space": {
-      "selectable": {
+      "interactive": {
         "inside": {
           "Neg-XS": {
             "value": "{origin.dimension.25} * -1",
@@ -292,323 +311,161 @@
       }
     },
     "typography": {
-      "large viewports": {
-        "hero heading": {
-          "M": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-headline}",
-              "fontWeight": "{origin.fontWeights.black}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.large viewports.7}"
-            },
-            "type": "typography"
+      "hero heading": {
+        "M": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-headline}",
+            "fontWeight": "{origin.fontWeights.black}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.font-size.f7}"
           },
-          "L": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-headline}",
-              "fontWeight": "{origin.fontWeights.black}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.large viewports.8}"
-            },
-            "type": "typography"
-          }
+          "type": "typography"
         },
-        "heading": {
-          "S": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.large viewports.3}"
-            },
-            "type": "typography"
+        "L": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-headline}",
+            "fontWeight": "{origin.fontWeights.black}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.font-size.f8}"
           },
-          "M": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.large viewports.4}"
-            },
-            "type": "typography"
-          },
-          "L": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.large viewports.5}"
-            },
-            "type": "typography"
-          },
-          "XL": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.large viewports.6}"
-            },
-            "type": "typography"
-          }
-        },
-        "subheading": {
-          "M": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.medium}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.large viewports.2}"
-            },
-            "type": "typography"
-          },
-          "L": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.medium}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.large viewports.3}"
-            },
-            "type": "typography"
-          }
-        },
-        "body": {
-          "M": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.regular}",
-              "lineHeight": "{origin.lineHeights.500}",
-              "fontSize": "{origin.font-size.typescale.large viewports.0}"
-            },
-            "type": "typography"
-          },
-          "L": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.regular}",
-              "lineHeight": "{origin.lineHeights.500}",
-              "fontSize": "{origin.font-size.typescale.large viewports.1}"
-            },
-            "type": "typography"
-          }
-        },
-        "component": {
-          "strong": {
-            "M": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.medium}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.font-size.typescale.large viewports.0}"
-              },
-              "type": "typography"
-            },
-            "L": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.medium}",
-                "lineHeight": "{origin.lineHeights.400}",
-                "fontSize": "{origin.font-size.typescale.large viewports.1}"
-              },
-              "type": "typography"
-            },
-            "XL": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.medium}",
-                "lineHeight": "{origin.lineHeights.400}",
-                "fontSize": "{origin.font-size.typescale.large viewports.2}"
-              },
-              "type": "typography"
-            }
-          },
-          "subtle": {
-            "M": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.regular}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.font-size.typescale.large viewports.0}"
-              },
-              "type": "typography"
-            },
-            "L": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.regular}",
-                "lineHeight": "{origin.lineHeights.400}",
-                "fontSize": "{origin.font-size.typescale.large viewports.1}"
-              },
-              "type": "typography"
-            },
-            "XL": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.regular}",
-                "lineHeight": "{origin.lineHeights.400}",
-                "fontSize": "{origin.font-size.typescale.large viewports.2}"
-              },
-              "type": "typography"
-            }
-          }
+          "type": "typography"
         }
       },
-      "small viewports": {
-        "hero heading": {
-          "M": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-headline}",
-              "fontWeight": "{origin.fontWeights.black}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.small viewports.7}"
-            },
-            "type": "typography"
+      "heading": {
+        "S": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.bold}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.font-size.f3}"
           },
-          "L": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-headline}",
-              "fontWeight": "{origin.fontWeights.black}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.small viewports.8}"
-            },
-            "type": "typography"
-          }
+          "type": "typography"
         },
-        "heading": {
-          "S": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.small viewports.3}"
-            },
-            "type": "typography"
+        "M": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.bold}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.font-size.f4}"
           },
+          "type": "typography"
+        },
+        "L": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.bold}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.font-size.f5}"
+          },
+          "type": "typography"
+        },
+        "XL": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.bold}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.font-size.f6}"
+          },
+          "type": "typography"
+        }
+      },
+      "subheading": {
+        "M": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.medium}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.font-size.f3}"
+          },
+          "type": "typography"
+        },
+        "L": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.medium}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.font-size.f4}"
+          },
+          "type": "typography"
+        }
+      },
+      "body": {
+        "M": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.regular}",
+            "lineHeight": "{origin.lineHeights.500}",
+            "fontSize": "{origin.font-size.f0}"
+          },
+          "type": "typography"
+        },
+        "L": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.regular}",
+            "lineHeight": "{origin.lineHeights.500}",
+            "fontSize": "{origin.font-size.f2}"
+          },
+          "type": "typography"
+        }
+      },
+      "component": {
+        "strong": {
           "M": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.small viewports.4}"
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.medium}",
+              "lineHeight": "{origin.lineHeights.500}",
+              "fontSize": "{origin.font-size.f0}"
             },
             "type": "typography"
           },
           "L": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.medium}",
               "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.small viewports.5}"
+              "fontSize": "{origin.font-size.f1}"
             },
             "type": "typography"
           },
           "XL": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.medium}",
               "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.small viewports.6}"
+              "fontSize": "{origin.font-size.f3}"
             },
             "type": "typography"
           }
         },
-        "subheading": {
+        "default": {
           "M": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.medium}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.small viewports.2}"
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.regular}",
+              "lineHeight": "{origin.lineHeights.500}",
+              "fontSize": "{origin.font-size.f0}"
             },
             "type": "typography"
           },
           "L": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.medium}",
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.regular}",
               "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.font-size.typescale.small viewports.3}"
-            },
-            "type": "typography"
-          }
-        },
-        "body": {
-          "M": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.regular}",
-              "lineHeight": "{origin.lineHeights.500}",
-              "fontSize": "{origin.font-size.typescale.small viewports.0}"
+              "fontSize": "{origin.font-size.f1}"
             },
             "type": "typography"
           },
-          "L": {
+          "XL": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
               "fontWeight": "{origin.fontWeights.regular}",
-              "lineHeight": "{origin.lineHeights.500}",
-              "fontSize": "{origin.font-size.typescale.small viewports.1}"
+              "lineHeight": "{origin.lineHeights.400}",
+              "fontSize": "{origin.font-size.f3}"
             },
             "type": "typography"
-          }
-        },
-        "component": {
-          "strong": {
-            "M": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.medium}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.font-size.typescale.small viewports.0}"
-              },
-              "type": "typography"
-            },
-            "L": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.medium}",
-                "lineHeight": "{origin.lineHeights.400}",
-                "fontSize": "{origin.font-size.typescale.small viewports.1}"
-              },
-              "type": "typography"
-            },
-            "XL": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.medium}",
-                "lineHeight": "{origin.lineHeights.400}",
-                "fontSize": "{origin.font-size.typescale.small viewports.2}"
-              },
-              "type": "typography"
-            }
-          },
-          "subtle": {
-            "M": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.regular}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.font-size.typescale.small viewports.0}"
-              },
-              "type": "typography"
-            },
-            "L": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.regular}",
-                "lineHeight": "{origin.lineHeights.400}",
-                "fontSize": "{origin.font-size.typescale.small viewports.1}"
-              },
-              "type": "typography"
-            },
-            "XL": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.regular}",
-                "lineHeight": "{origin.lineHeights.400}",
-                "fontSize": "{origin.font-size.typescale.small viewports.2}"
-              },
-              "type": "typography"
-            }
           }
         }
       }
