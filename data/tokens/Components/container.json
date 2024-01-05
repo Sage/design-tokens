@@ -122,6 +122,20 @@
         "value": "{base.color.generic.fg.standard.delicate}",
         "type": "color"
       },
+      "dimmer": {
+        "value": "{base.color.generic.bg.inverse.nought}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.4",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "dimmed mask for dialogs"
+      },
       "text-default": {
         "value": "{base.color.generic.content.standard.harsh}",
         "type": "color",
