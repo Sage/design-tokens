@@ -1,3 +1,10 @@
+# [5.0.0-beta.3](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.2...v5.0.0-beta.3) (2024-01-08)
+
+
+### Features
+
+* **data:** Adding descriptions to origin web fonts to explain what the clamp values are. Also added a subfolder for fonts to show these are for web only. ([449d0c3](https://github.com/Sage/design-tokens/commit/449d0c3b3c241fcd3087375d2a3da821bb145d51))
+
 # [5.0.0-beta.2](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.1...v5.0.0-beta.2) (2024-01-05)
 
 
