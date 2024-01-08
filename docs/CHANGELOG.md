@@ -1,3 +1,10 @@
+# [5.0.0-beta.4](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.3...v5.0.0-beta.4) (2024-01-08)
+
+
+### Features
+
+* **data:** add XS font size for global component group of type sizes and also adding type sizes to descriptions ([bf46e85](https://github.com/Sage/design-tokens/commit/bf46e85c2df7c0f0df2caa1d13b883c750406306))
+
 # [5.0.0-beta.3](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.2...v5.0.0-beta.3) (2024-01-08)
 
 
