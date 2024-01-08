@@ -1,3 +1,11 @@
+# [5.0.0-beta.5](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.4...v5.0.0-beta.5) (2024-01-08)
+
+
+### Features
+
+* **data:** 2nd push on nav colour tokens ([ccbd0ee](https://github.com/Sage/design-tokens/commit/ccbd0eef178c1b0acf0f0281b608ed39157e95b4))
+* **data:** update nav colours by moving the root colours to a menu folder, then adding 2 new colour tokens to nav.subtle and 2 new to the nav.harsh. ([9d5db77](https://github.com/Sage/design-tokens/commit/9d5db7782ba836cdb40b316c0e487a2ee79f5bce))
+
 # [5.0.0-beta.4](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.3...v5.0.0-beta.4) (2024-01-08)
 
 
