@@ -4,6 +4,17 @@
 ### Features
 
 * **data:** 2nd push on nav colour tokens ([ccbd0ee](https://github.com/Sage/design-tokens/commit/ccbd0eef178c1b0acf0f0281b608ed39157e95b4))
+* **data:** adding missing border size tokens and adding missing size tokens. ([fde80af](https://github.com/Sage/design-tokens/commit/fde80afab83010ca77ad37584a4b19064e700557))
+* **data:** changing component subfolder names to be more generic so that they better fit with their usecases. ([2a1b04b](https://github.com/Sage/design-tokens/commit/2a1b04b282b1ce3be75b0c2dfddd523545376bcd))
+* **data:** update badge.standard.label-default and add badge.standard.border-default ([eb25cd6](https://github.com/Sage/design-tokens/commit/eb25cd69b6a7d54ab038a8598f29a0115628d4e1))
+* **data:** update nav colours by moving the root colours to a menu folder, then adding 2 new colour tokens to nav.subtle and 2 new to the nav.harsh. ([9d5db77](https://github.com/Sage/design-tokens/commit/9d5db7782ba836cdb40b316c0e487a2ee79f5bce))
+
+# [5.0.0-beta.5](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.4...v5.0.0-beta.5) (2024-01-08)
+
+
+### Features
+
+* **data:** 2nd push on nav colour tokens ([ccbd0ee](https://github.com/Sage/design-tokens/commit/ccbd0eef178c1b0acf0f0281b608ed39157e95b4))
 * **data:** changing component subfolder names to be more generic so that they better fit with their usecases. ([2a1b04b](https://github.com/Sage/design-tokens/commit/2a1b04b282b1ce3be75b0c2dfddd523545376bcd))
 * **data:** update badge.standard.label-default and add badge.standard.border-default ([eb25cd6](https://github.com/Sage/design-tokens/commit/eb25cd69b6a7d54ab038a8598f29a0115628d4e1))
 * **data:** update nav colours by moving the root colours to a menu folder, then adding 2 new colour tokens to nav.subtle and 2 new to the nav.harsh. ([9d5db77](https://github.com/Sage/design-tokens/commit/9d5db7782ba836cdb40b316c0e487a2ee79f5bce))
