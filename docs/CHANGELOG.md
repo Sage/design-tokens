@@ -1,3 +1,10 @@
+# [5.0.0-beta.8](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.7...v5.0.0-beta.8) (2024-01-09)
+
+
+### Features
+
+* include font and icon assets ([3b626fe](https://github.com/Sage/design-tokens/commit/3b626fe085d079604aa9d2d70f6010129e6284f8))
+
 # [5.0.0-beta.7](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.6...v5.0.0-beta.7) (2024-01-09)
 
 
