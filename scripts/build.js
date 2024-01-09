@@ -12,7 +12,7 @@ const modes = readdirSync('./data/tokens/Modes/')
 
 const getFiles = (modeName, format, subType, suffix) => {
   return [
-    ...getSplit(undefined, modeName, format, subType, suffix),
+    ...getSplit(undefined, modeName, format, subType, suffix, false),
     ...getComponents(modeName, format, subType, suffix)
   ]
 }
@@ -21,55 +21,79 @@ const getComponents = (modeName, format, subType, suffix) => {
   const componentArray = []
 
   components.forEach((component) => {
-    componentArray.push(...getSplit(component.split('.')[0], modeName, format, subType, suffix))
+    componentArray.push(...getSplit(component.split('.')[0], modeName, format, subType, suffix, true))
   })
 
   return componentArray
 }
 
-const getSplit = (componentName, modeName, format, subType, suffix) => {
+const getSplit = (componentName, modeName, format, subType, suffix, outputReferences) => {
   const path = componentName ? '/' + componentName : ''
 
   return [
     {
       destination: `${subType}${modeName}${path}/all.${suffix}`,
       filter: (token) => filterComponent(token, componentName),
-      format
+      format,
+      options: {
+        outputReferences
+      }
     },
     {
       destination: `${subType}${modeName}${path}/color.${suffix}`,
       filter: (token) => token.type === 'color' && filterComponent(token, componentName),
-      format
+      format,
+      options: {
+        outputReferences
+      }
     },
     {
       destination: `${subType}${modeName}${path}/borderRadius.${suffix}`,
       filter: (token) => token.type === 'borderRadius' && filterComponent(token, componentName),
-      format
+      format,
+      options: {
+        outputReferences
+      }
     },
     {
       destination: `${subType}${modeName}${path}/borderWidth.${suffix}`,
       filter: (token) => token.type === 'borderWidth' && filterComponent(token, componentName),
-      format
+      format,
+      options: {
+        outputReferences
+      }
     },
     {
       destination: `${subType}${modeName}${path}/shadow.${suffix}`,
       filter: (token) => token.type === 'boxShadow' && filterComponent(token, componentName),
-      format
+      format,
+      options: {
+        outputReferences
+      }
     },
     {
       destination: `${subType}${modeName}${path}/sizing.${suffix}`,
       filter: (token) => token.type === 'sizing' && filterComponent(token, componentName),
-      format
+      format,
+      options: {
+        outputReferences
+      }
     },
     {
       destination: `${subType}${modeName}${path}/spacing.${suffix}`,
       filter: (token) => token.type === 'spacing' && filterComponent(token, componentName),
-      format
+      format,
+      options: {
+        outputReferences
+      }
     },
     {
       destination: `${subType}${modeName}${path}/typography.${suffix}`,
       filter: (token) => token.type === 'typography' && filterComponent(token, componentName),
-      format
+      format,
+      options: {
+        outputReferences
+      }
     }
   ]
 }
