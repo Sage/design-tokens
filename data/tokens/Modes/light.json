@@ -420,6 +420,21 @@
             "value": "{origin.colors.red}",
             "type": "color"
           },
+          "defaultAlt": {
+            "value": "{origin.colors.red}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.12",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastMore}"
+                }
+              }
+            },
+            "description": "For links in datatables"
+          },
           "hover": {
             "value": "{base.color.status.negative.standard.default}",
             "type": "color",
@@ -721,7 +736,8 @@
                   "color": "{base.color.modifier.contrastMore}"
                 }
               }
-            }
+            },
+            "description": "for links in datatables\n"
           },
           "hover": {
             "value": "{base.color.interactive.primary.default}",
