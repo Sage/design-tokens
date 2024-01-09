@@ -1,3 +1,10 @@
+# [5.0.0-beta.7](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.6...v5.0.0-beta.7) (2024-01-09)
+
+
+### Features
+
+* **data:** Add form.standard.bg-disabled colour token ([69c40d9](https://github.com/Sage/design-tokens/commit/69c40d904ac0a3823b9241ec3e7f1f42c3feb1ff))
+
 # [5.0.0-beta.6](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.5...v5.0.0-beta.6) (2024-01-09)
 
 
