@@ -753,20 +753,6 @@
               }
             }
           },
-          "hoverAlt": {
-            "value": "{base.color.interactive.primary.defaultAlt}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.hoverAlt} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
-            }
-          },
           "withActive": {
             "value": "{base.color.generic.content.inverse.extreme}",
             "type": "color"
@@ -778,6 +764,42 @@
           "withHover": {
             "value": "{base.color.generic.content.inverse.extreme}",
             "type": "color"
+          }
+        },
+        "inverse": {
+          "default": {
+            "value": "{origin.inverse.jade}",
+            "type": "color"
+          },
+          "defaultAlt": {
+            "value": "{base.color.interactive.inverse.default}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.12",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess} "
+                }
+              }
+            },
+            "description": "for links in datatables\n"
+          },
+          "hoverAlt": {
+            "value": "{base.color.interactive.inverse.defaultAlt}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{base.color.modifiers.button.hoverAlt} ",
+                  "space": "lch",
+                  "color": "{base.color.modifier.contrastLess} "
+                }
+              }
+            },
+            "description": "for links in datatables"
           }
         }
       },
