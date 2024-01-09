@@ -1,3 +1,15 @@
+# [5.0.0-beta.6](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.5...v5.0.0-beta.6) (2024-01-09)
+
+
+### chore
+
+* update docs ([aecaa6e](https://github.com/Sage/design-tokens/commit/aecaa6e795f70bc9cbad208dc1d7ae1c55dfb15c))
+
+
+### BREAKING CHANGES
+
+* Force version bump on npmjs.com
+
 # [5.0.0-beta.5](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.4...v5.0.0-beta.5) (2024-01-09)
 
 
