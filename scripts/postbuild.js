@@ -103,12 +103,25 @@ function addFileHeader () {
   })
 }
 
+function copyAssets () {
+  try {
+    copySync(
+      resolve(__dirname, '../assets'),
+      resolve(__dirname, '../dist/assets/')
+    )
+  } catch (err) {
+    console.log('Error copying assets to dist')
+    console.log(err)
+  }
+}
+
 async function main () {
   copyPackageJSON()
   copyReadme()
+  copyAssets()
   addEntryFile()
   addFileHeader()
-  // await require('./icons')
+  await require('./icons')
 }
 
 main()
