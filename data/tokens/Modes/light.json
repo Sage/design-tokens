@@ -43,7 +43,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "0.12",
+                    "value": "0.117",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastMore}"
                   }
@@ -535,24 +535,33 @@
           }
         },
         "inactive": {
-          "default": {
-            "value": "{base.color.generic.fg.standard.soft}",
-            "type": "color",
-            "description": "Disabled form input borders."
+          "standard": {
+            "default": {
+              "value": "{base.color.generic.fg.standard.soft}",
+              "type": "color",
+              "description": "Disabled form input borders."
+            },
+            "defaultAlt": {
+              "value": "{base.color.generic.bg.standard.faint}",
+              "type": "color",
+              "description": "Disabled input and button backgrounds, button borders and input backgrounds."
+            },
+            "content": {
+              "value": "{base.color.generic.content.standard.soft}",
+              "type": "color",
+              "description": "Disabled text inside buttons and form inputs."
+            },
+            "contentAlt": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color"
+            }
           },
-          "defaultAlt": {
-            "value": "{base.color.generic.bg.standard.faint}",
-            "type": "color",
-            "description": "Disabled input and button backgrounds, button borders and input backgrounds."
-          },
-          "content": {
-            "value": "{base.color.generic.content.standard.soft}",
-            "type": "color",
-            "description": "Disabled text inside buttons and form inputs."
-          },
-          "contentAlt": {
-            "value": "{base.color.generic.content.inverse.extreme}",
-            "type": "color"
+          "inverse": {
+            "content": {
+              "value": "{base.color.generic.content.inverse.soft}",
+              "type": "color",
+              "description": "Disabled text inside buttons and form inputs."
+            }
           }
         },
         "monochrome": {
@@ -655,16 +664,7 @@
             "hover": {
               "value": "{base.color.interactive.monochrome.inverse.active}",
               "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "{base.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{base.color.modifier.contrastMore}"
-                  }
-                }
-              }
+              "$extensions": {}
             },
             "hoverAlt": {
               "value": "{base.color.interactive.monochrome.inverse.active}",
