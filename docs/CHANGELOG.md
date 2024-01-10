@@ -1,3 +1,15 @@
+# [5.0.0-beta.10](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.9...v5.0.0-beta.10) (2024-01-10)
+
+
+### Features
+
+* restructure output tokens and filter global and base ([32d43d7](https://github.com/Sage/design-tokens/commit/32d43d729ae83393660aa0b6da46bc71a05781aa))
+
+
+### BREAKING CHANGES
+
+* Restructure output tokens
+
 # [5.0.0-beta.9](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.8...v5.0.0-beta.9) (2024-01-10)
 
 
