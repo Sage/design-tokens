@@ -1,3 +1,10 @@
+# [5.0.0-beta.9](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.8...v5.0.0-beta.9) (2024-01-10)
+
+
+### Features
+
+* enable figma tokens to allow icon generation ([3c85bdb](https://github.com/Sage/design-tokens/commit/3c85bdb787bb78a92e89b4d1fa15c6c924176731))
+
 # [5.0.0-beta.8](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.7...v5.0.0-beta.8) (2024-01-09)
 
 
