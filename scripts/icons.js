@@ -8,8 +8,8 @@ const {
   outputFile,
   outputJson,
   removeSync,
-  ensureDir,
-  readFileSync
+  ensureDir
+  // readFileSync
 } = require('fs-extra')
 const { generateFonts } = require('fantasticon')
 const {

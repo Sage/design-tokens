@@ -53,31 +53,33 @@ function copyReadme () {
 }
 
 function addEntryFile () {
-  const jsFilePaths = glob('./dist/js/*/*/*.js')
-  const jsComponentPaths = glob('./dist/js/*/*/*/*.js')
+  const jsFilePaths = glob('./dist/js/*/*/{base,global}/*.js')
+  const jsComponentPaths = glob('./dist/js/*/*/components/*/*.js')
   const entryFilePath = resolve(__dirname, '../dist/index.js')
 
   const fileExports = jsFilePaths
     .map((filePath) => {
-      const [mode, theme, fullName] = filePath.split('/').slice(-3)
+      const [mode, theme, type, fullName] = filePath.split('/').slice(-4)
       const name = filename(fullName)
       return {
         mode,
         theme,
+        type,
         name
       }
     })
     .map((file) => {
-      const exportName = camelCase(`${file.mode} ${file.theme} ${file.name}`)
-      return `export * as ${exportName} from './js/${file.mode}/${file.theme}/${file.name}'`
+      const exportName = camelCase(`${file.mode} ${file.theme} ${file.type} ${file.name}`)
+      return `export * as ${exportName} from './js/${file.mode}/${file.theme}/${file.type}/${file.name}'`
     }).join('\n')
   const componentExports = jsComponentPaths
     .map((filePath) => {
-      const [mode, theme, component, fullName] = filePath.split('/').slice(-4)
+      const [mode, theme, components, component, fullName] = filePath.split('/').slice(-5)
       const name = filename(fullName)
       return {
         mode,
         theme,
+        components,
         component,
         name
       }
