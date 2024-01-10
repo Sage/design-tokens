@@ -1,0 +1,494 @@
+{
+  "origin": {
+    "colors": {
+      "black": {
+        "value": "#000000",
+        "type": "color",
+        "description": "Reference only. Do not use in components."
+      },
+      "blue": {
+        "value": "#0072C4",
+        "type": "color"
+      },
+      "brightBlue": {
+        "value": "#008AEB",
+        "type": "color"
+      },
+      "brightOrange": {
+        "value": "#DF6000",
+        "type": "color",
+        "description": "Reference only. Do not use in components."
+      },
+      "brilliantGreen": {
+        "value": "#00D639",
+        "type": "color",
+        "description": "Reference only. Do not use in components."
+      },
+      "gold": {
+        "value": "#FFB500",
+        "type": "color"
+      },
+      "green": {
+        "value": "#00821E",
+        "type": "color"
+      },
+      "brightGreen": {
+        "value": "#009C26",
+        "type": "color"
+      },
+      "storm": {
+        "value": "#6f6f6f",
+        "type": "color"
+      },
+      "brightStorm": {
+        "value": "#868686",
+        "type": "color"
+      },
+      "jade": {
+        "value": "#008147",
+        "type": "color",
+        "description": "origin BASE (was originally #008146, darkened by 2% black to meet accessibility requirements)"
+      },
+      "orange": {
+        "value": "#BB4F00",
+        "type": "color",
+        "description": "was #E96400"
+      },
+      "red": {
+        "value": "#CC374B",
+        "type": "color"
+      },
+      "brightRed": {
+        "value": "#FF3053",
+        "type": "color"
+      },
+      "transparent": {
+        "value": "rgba(0,0,0,0)",
+        "type": "color",
+        "description": "Reference only. Do not use in components."
+      },
+      "white": {
+        "value": "#FFFFFF",
+        "type": "color",
+        "description": "Reference only. Do not use in components."
+      }
+    },
+    "inverse": {
+      "jade": {
+        "value": "#008F4F",
+        "type": "color",
+        "description": "origin BASE (has AAA 5 to 1 ratio against 000000)"
+      }
+    },
+    "size": {
+      "SCALE": {
+        "value": "8",
+        "type": "sizing",
+        "description": "SCALE is the base-scale of all size-related tokens (size, space, dimension). It's set to 8px as this is our default multiplier used across the majority of components. If you change it, it will change all size-related tokens."
+      },
+      "viewport": {
+        "min": {
+          "value": "320",
+          "type": "sizing"
+        },
+        "max": {
+          "value": "1920",
+          "type": "sizing"
+        }
+      }
+    },
+    "dimension": {
+      "0": {
+        "value": "{origin.dimension.base} * 0",
+        "type": "dimension"
+      },
+      "12": {
+        "value": "{origin.dimension.base} * 12.5",
+        "type": "dimension"
+      },
+      "25": {
+        "value": "{origin.dimension.base} * 25",
+        "type": "dimension"
+      },
+      "38": {
+        "value": "{origin.dimension.base} * 37.5",
+        "type": "dimension"
+      },
+      "50": {
+        "value": "{origin.dimension.base} * 50",
+        "type": "dimension"
+      },
+      "62": {
+        "value": "{origin.dimension.base} * 62.5",
+        "type": "dimension"
+      },
+      "75": {
+        "value": "{origin.dimension.base} * 75",
+        "type": "dimension"
+      },
+      "100": {
+        "value": "{origin.dimension.base} * 100",
+        "type": "dimension"
+      },
+      "125": {
+        "value": "{origin.dimension.base} * 125",
+        "type": "dimension"
+      },
+      "150": {
+        "value": "{origin.dimension.base} * 150",
+        "type": "dimension"
+      },
+      "175": {
+        "value": "{origin.dimension.base} * 175",
+        "type": "dimension"
+      },
+      "200": {
+        "value": "{origin.dimension.base} * 200",
+        "type": "dimension"
+      },
+      "250": {
+        "value": "{origin.dimension.base} * 250",
+        "type": "dimension"
+      },
+      "300": {
+        "value": "{origin.dimension.base} * 300",
+        "type": "dimension"
+      },
+      "350": {
+        "value": "{origin.dimension.base} * 350",
+        "type": "dimension"
+      },
+      "400": {
+        "value": "{origin.dimension.base} * 400",
+        "type": "dimension"
+      },
+      "450": {
+        "value": "{origin.dimension.base} * 450",
+        "type": "dimension"
+      },
+      "500": {
+        "value": "{origin.dimension.base} * 500",
+        "type": "dimension"
+      },
+      "550": {
+        "value": "{origin.dimension.base} * 550",
+        "type": "dimension"
+      },
+      "600": {
+        "value": "{origin.dimension.base} * 600",
+        "type": "dimension"
+      },
+      "650": {
+        "value": "{origin.dimension.base} * 650",
+        "type": "dimension"
+      },
+      "700": {
+        "value": "{origin.dimension.base} * 700",
+        "type": "dimension"
+      },
+      "750": {
+        "value": "{origin.dimension.base} * 750",
+        "type": "dimension"
+      },
+      "800": {
+        "value": "{origin.dimension.base} * 800",
+        "type": "dimension"
+      },
+      "850": {
+        "value": "{origin.dimension.base} * 850",
+        "type": "dimension"
+      },
+      "900": {
+        "value": "{origin.dimension.base} * 900",
+        "type": "dimension"
+      },
+      "950": {
+        "value": "{origin.dimension.base} * 950",
+        "type": "dimension"
+      },
+      "1000": {
+        "value": "{origin.dimension.base} * 1000",
+        "type": "dimension"
+      },
+      "1300": {
+        "value": "{origin.dimension.base} * 1300",
+        "type": "dimension"
+      },
+      "1600": {
+        "value": "{origin.dimension.base} * 1600",
+        "type": "dimension"
+      },
+      "base": {
+        "value": "{origin.size.SCALE} / 100",
+        "type": "dimension"
+      }
+    },
+    "fontWeights": {
+      "regular": {
+        "value": "Regular",
+        "type": "fontWeights"
+      },
+      "medium": {
+        "value": "Medium",
+        "type": "fontWeights"
+      },
+      "bold": {
+        "value": "Bold",
+        "type": "fontWeights"
+      },
+      "black": {
+        "value": "Black",
+        "type": "fontWeights"
+      }
+    },
+    "lineHeights": {
+      "300": {
+        "value": "100%",
+        "type": "lineHeights"
+      },
+      "400": {
+        "value": "120%",
+        "type": "lineHeights"
+      },
+      "500": {
+        "value": "160%",
+        "type": "lineHeights"
+      }
+    },
+    "fontFamilies": {
+      "sage-ui": {
+        "value": "Sage UI",
+        "type": "fontFamilies"
+      },
+      "sage-headline": {
+        "value": "Sage Headline",
+        "type": "fontFamilies"
+      },
+      "sage-text": {
+        "value": "Sage Text",
+        "type": "fontFamilies"
+      },
+      "ios": {
+        "value": "San Francisco",
+        "type": "fontFamilies"
+      },
+      "android": {
+        "value": "Roboto",
+        "type": "fontFamilies"
+      },
+      "other": {
+        "value": "Open Sans",
+        "type": "fontFamilies"
+      }
+    },
+    "box-shadow": {
+      "downward": {
+        "1": {
+          "value": [
+            {
+              "x": "0",
+              "y": "1",
+              "blur": "2",
+              "spread": "0",
+              "color": "rgba( {origin.colors.storm} , 0.6)",
+              "type": "dropShadow"
+            },
+            {
+              "x": "0",
+              "y": "1",
+              "blur": "3",
+              "spread": "0",
+              "color": "rgba( {origin.colors.storm} , 0.2)",
+              "type": "dropShadow"
+            }
+          ],
+          "type": "boxShadow"
+        },
+        "2": {
+          "value": [
+            {
+              "x": "0",
+              "y": "1",
+              "blur": "2",
+              "spread": "0",
+              "color": "rgba( {origin.colors.storm} , 0.6)",
+              "type": "dropShadow"
+            },
+            {
+              "x": "0",
+              "y": "2",
+              "blur": "6",
+              "spread": "2",
+              "color": "rgba( {origin.colors.storm} , 0.2)",
+              "type": "dropShadow"
+            }
+          ],
+          "type": "boxShadow"
+        },
+        "3": {
+          "value": [
+            {
+              "x": "0",
+              "y": "4",
+              "blur": "8",
+              "spread": "3",
+              "color": "rgba( {origin.colors.storm} , 0.2)",
+              "type": "dropShadow"
+            },
+            {
+              "x": "0",
+              "y": "1",
+              "blur": "3",
+              "spread": "0",
+              "color": "rgba( {origin.colors.storm} , 0.60)",
+              "type": "dropShadow"
+            }
+          ],
+          "type": "boxShadow"
+        },
+        "4": {
+          "value": [
+            {
+              "x": "0",
+              "y": "6",
+              "blur": "10",
+              "spread": "4",
+              "color": "rgba( {origin.colors.storm} , 0.2)",
+              "type": "dropShadow"
+            },
+            {
+              "x": "0",
+              "y": "2",
+              "blur": "3",
+              "spread": "0",
+              "color": "rgba( {origin.colors.storm} , 0.6)",
+              "type": "dropShadow"
+            }
+          ],
+          "type": "boxShadow"
+        },
+        "5": {
+          "value": [
+            {
+              "x": "0",
+              "y": "8",
+              "blur": "12",
+              "spread": "6",
+              "color": "rgba( {origin.colors.storm} , 0.2)",
+              "type": "dropShadow"
+            },
+            {
+              "x": "0",
+              "y": "4",
+              "blur": "4",
+              "spread": "0",
+              "color": "rgba( {origin.colors.storm} , 0.6)",
+              "type": "dropShadow"
+            }
+          ],
+          "type": "boxShadow"
+        }
+      },
+      "upward": {
+        "4": {
+          "value": [
+            {
+              "x": "0",
+              "y": "-6",
+              "blur": "10",
+              "spread": "4",
+              "color": "rgba( {origin.colors.storm} , 0.15)",
+              "type": "dropShadow"
+            }
+          ],
+          "type": "boxShadow"
+        }
+      },
+      "solid": {
+        "border": {
+          "value": [
+            {
+              "x": "0",
+              "y": "-1",
+              "blur": "0",
+              "spread": "0",
+              "color": "rgba( {origin.colors.black} , 0.3)",
+              "type": "innerShadow"
+            }
+          ],
+          "type": "boxShadow",
+          "description": "sticky footers"
+        }
+      }
+    },
+    "fontSize": {
+      "web": {
+        "step-2": {
+          "value": "clamp(0.7431rem, 0.8804rem + -0.1144vw, 0.8575rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 13.72, Large Viewports: 11.89"
+        },
+        "step-1": {
+          "value": "clamp(0.8619rem, 0.9384rem + -0.0637vw, 0.9256rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 14.81, Large Viewports: 13.79"
+        },
+        "step0": {
+          "value": "clamp(1rem, 1rem + 0vw, 1rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 16, Large Viewports: 16"
+        },
+        "step1": {
+          "value": "clamp(1.08rem, 1.064rem + 0.08vw, 1.16rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+        },
+        "step2": {
+          "value": "clamp(1.1663rem, 1.1304rem + 0.1794vw, 1.3456rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 18.66, Large Viewports: 21.53"
+        },
+        "step3": {
+          "value": "clamp(1.26rem, 1.1999rem + 0.3006vw, 1.5606rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 20.16, Large Viewports: 24.97"
+        },
+        "step4": {
+          "value": "clamp(1.3606rem, 1.2706rem + 0.45vw, 1.8106rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 21.77, Large Viewports: 28.97"
+        },
+        "step5": {
+          "value": "clamp(1.4694rem, 1.3431rem + 0.6313vw, 2.1006rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 23.51, Large Viewports: 33.61"
+        },
+        "step6": {
+          "value": "clamp(1.5869rem, 1.417rem + 0.8494vw, 2.4363rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 25.39, Large Viewports: 38.98"
+        },
+        "step7": {
+          "value": "clamp(1.7138rem, 1.4913rem + 1.1125vw, 2.8263rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 27.42, Large Viewports: 45.22"
+        },
+        "step8": {
+          "value": "clamp(1.8506rem, 1.5651rem + 1.4275vw, 3.2781rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 29.61, Large Viewports: 52.45"
+        },
+        "step9": {
+          "value": "clamp(1.9988rem, 1.6379rem + 1.8044vw, 3.8031rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 31.98, Large Viewports: 60.85"
+        },
+        "step10": {
+          "value": "clamp(2.1588rem, 1.7083rem + 2.2525vw, 4.4113rem))",
+          "type": "fontSizes",
+          "description": "Small Viewports: 34.54, Large Viewports: 70.58"
+        }
+      }
+    }
+  }
+}
