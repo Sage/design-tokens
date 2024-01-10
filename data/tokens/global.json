@@ -185,7 +185,7 @@
           "description": "Icons"
         }
       },
-      "typical": {
+      "components": {
         "XS": {
           "value": "{origin.dimension.300}",
           "type": "sizing"
@@ -209,24 +209,12 @@
       }
     },
     "space": {
-      "interactive": {
+      "none": {
+        "value": "{origin.dimension.0}",
+        "type": "spacing"
+      },
+      "components": {
         "inside": {
-          "Neg-XS": {
-            "value": "{origin.dimension.25} * -1",
-            "type": "spacing"
-          },
-          "Neg-XXS": {
-            "value": "{origin.dimension.12} * -1",
-            "type": "spacing"
-          },
-          "XXS": {
-            "value": "{origin.dimension.12}",
-            "type": "spacing"
-          },
-          "none": {
-            "value": "{origin.dimension.0}",
-            "type": "spacing"
-          },
           "XS": {
             "value": "{origin.dimension.25}",
             "type": "spacing"
@@ -235,65 +223,25 @@
             "value": "{origin.dimension.50}",
             "type": "spacing"
           },
-          "SM": {
+          "M": {
             "value": "{origin.dimension.100}",
             "type": "spacing"
           },
-          "M": {
+          "L": {
             "value": "{origin.dimension.150}",
             "type": "spacing"
           },
-          "ML": {
-            "value": "{origin.dimension.200}",
-            "type": "spacing"
-          },
-          "L": {
-            "value": "{origin.dimension.300}",
-            "type": "spacing"
-          },
           "XL": {
-            "value": "{origin.dimension.400}",
-            "type": "spacing"
-          },
-          "XXL": {
-            "value": "{origin.dimension.500}",
+            "value": "{origin.dimension.200}",
             "type": "spacing"
           }
         },
         "stack": {
-          "Neg-XS": {
-            "value": "{origin.dimension.25} * -1",
-            "type": "spacing"
-          },
-          "Neg-XXS": {
-            "value": "{origin.dimension.12} * -1",
-            "type": "spacing"
-          },
-          "XXS": {
-            "value": "{origin.dimension.12}",
-            "type": "spacing"
-          },
-          "none": {
-            "value": "{origin.dimension.0}",
-            "type": "spacing"
-          },
-          "XS": {
-            "value": "{origin.dimension.25}",
-            "type": "spacing"
-          },
           "S": {
-            "value": "{origin.dimension.50}",
-            "type": "spacing"
-          },
-          "SM": {
             "value": "{origin.dimension.100}",
             "type": "spacing"
           },
           "M": {
-            "value": "{origin.dimension.150}",
-            "type": "spacing"
-          },
-          "ML": {
             "value": "{origin.dimension.200}",
             "type": "spacing"
           },
@@ -303,32 +251,44 @@
           },
           "XL": {
             "value": "{origin.dimension.400}",
-            "type": "spacing"
-          },
-          "XXL": {
-            "value": "{origin.dimension.500}",
             "type": "spacing"
           }
         }
       },
       "page": {
         "inside": {
-          "none": {
-            "value": "{origin.dimension.0}",
+          "S": {
+            "value": "{origin.dimension.300}",
+            "type": "spacing"
+          },
+          "M": {
+            "value": "{origin.dimension.400}",
             "type": "spacing"
           },
           "L": {
-            "value": "{origin.dimension.12}",
+            "value": "{origin.dimension.500}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "{origin.dimension.600}",
             "type": "spacing"
           }
         },
         "outside": {
-          "none": {
-            "value": "{origin.dimension.0}",
+          "S": {
+            "value": "{origin.dimension.300}",
+            "type": "spacing"
+          },
+          "M": {
+            "value": "{origin.dimension.400}",
             "type": "spacing"
           },
           "L": {
-            "value": "{origin.dimension.12}",
+            "value": "{origin.dimension.500}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "{origin.dimension.600}",
             "type": "spacing"
           }
         }
