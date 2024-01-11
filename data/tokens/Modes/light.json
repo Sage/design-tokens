@@ -401,77 +401,115 @@
       },
       "interactive": {
         "danger": {
-          "active": {
-            "value": "{base.color.interactive.danger.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active}",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
+          "typical": {
+            "active": {
+              "value": "{base.color.interactive.danger.typical.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.active}",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
                 }
-              }
+              },
+              "description": "used on pill hover states"
             },
-            "description": "used on pill hover states"
-          },
-          "default": {
-            "value": "{origin.colors.red}",
-            "type": "color"
-          },
-          "defaultAlt": {
-            "value": "{origin.colors.red}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.12",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
+            "default": {
+              "value": "{origin.colors.red}",
+              "type": "color"
+            },
+            "defaultAlt": {
+              "value": "{origin.colors.red}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.12",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
                 }
-              }
+              },
+              "description": "For links in datatables"
             },
-            "description": "For links in datatables"
-          },
-          "hover": {
-            "value": "{base.color.status.negative.standard.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.hoverAlt} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
+            "hover": {
+              "value": "{base.color.status.negative.standard.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
                 }
-              }
+              },
+              "description": "used on pill hover states"
             },
-            "description": "used on pill hover states"
-          },
-          "hoverAlt": {
-            "value": "{base.color.interactive.danger.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{base.color.modifiers.button.hover} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
+            "hoverAlt": {
+              "value": "{base.color.interactive.danger.typical.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{base.color.modifiers.button.hover} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
                 }
-              }
+              },
+              "description": "used on pill hover states"
             },
-            "description": "used on pill hover states"
+            "withActive": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color"
+            },
+            "withDefault": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color"
+            }
           },
-          "withActive": {
-            "value": "{base.color.generic.content.inverse.extreme}",
-            "type": "color"
-          },
-          "withDefault": {
-            "value": "{base.color.generic.content.inverse.extreme}",
-            "type": "color"
+          "inverse": {
+            "default": {
+              "value": "{origin.colors.lightRed}",
+              "type": "color"
+            },
+            "defaultAlt": {
+              "value": "{base.color.interactive.danger.inverse.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.12",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "description": "for links in datatables\n"
+            },
+            "hoverAlt": {
+              "value": "{base.color.interactive.danger.inverse.defaultAlt}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "description": "for links in datatables"
+            }
           }
         },
         "dataEntry": {
@@ -715,100 +753,102 @@
           }
         },
         "primary": {
-          "active": {
-            "value": "{base.color.interactive.primary.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.active} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
+          "typical": {
+            "active": {
+              "value": "{base.color.interactive.primary.typical.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.active} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
                 }
               }
+            },
+            "default": {
+              "value": "{origin.colors.jade}",
+              "type": "color"
+            },
+            "defaultAlt": {
+              "value": "{base.color.interactive.primary.typical.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.12",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "for links in datatables\n"
+            },
+            "hover": {
+              "value": "{base.color.interactive.primary.typical.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              }
+            },
+            "withActive": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color"
+            },
+            "withDefault": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color"
+            },
+            "withHover": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color"
             }
           },
-          "default": {
-            "value": "{origin.colors.jade}",
-            "type": "color"
-          },
-          "defaultAlt": {
-            "value": "{base.color.interactive.primary.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.12",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
-                }
-              }
+          "inverse": {
+            "default": {
+              "value": "{origin.colors.lightJade}",
+              "type": "color"
             },
-            "description": "for links in datatables\n"
-          },
-          "hover": {
-            "value": "{base.color.interactive.primary.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.hoverAlt} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastMore}"
+            "defaultAlt": {
+              "value": "{base.color.interactive.primary.inverse.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.12",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
                 }
-              }
+              },
+              "description": "for links in datatables\n"
+            },
+            "hoverAlt": {
+              "value": "{base.color.interactive.primary.inverse.defaultAlt}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "description": "for links in datatables"
             }
-          },
-          "withActive": {
-            "value": "{base.color.generic.content.inverse.extreme}",
-            "type": "color"
-          },
-          "withDefault": {
-            "value": "{base.color.generic.content.inverse.extreme}",
-            "type": "color"
-          },
-          "withHover": {
-            "value": "{base.color.generic.content.inverse.extreme}",
-            "type": "color"
-          }
-        },
-        "inverse": {
-          "default": {
-            "value": "{origin.inverse.jade}",
-            "type": "color"
-          },
-          "defaultAlt": {
-            "value": "{base.color.interactive.inverse.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.12",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess} "
-                }
-              }
-            },
-            "description": "for links in datatables\n"
-          },
-          "hoverAlt": {
-            "value": "{base.color.interactive.inverse.defaultAlt}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.hoverAlt} ",
-                  "space": "lch",
-                  "color": "{base.color.modifier.contrastLess} "
-                }
-              }
-            },
-            "description": "for links in datatables"
           }
         }
       },
