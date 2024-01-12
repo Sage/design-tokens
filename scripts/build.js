@@ -12,7 +12,8 @@ const modes = readdirSync('./data/tokens/Modes/')
 
 const getFiles = (modeName, format, subType, suffix) => {
   return [
-    ...getSplit(undefined, modeName, format, subType, suffix, false),
+    ...getSplit('base', modeName, format, subType, suffix, false),
+    ...getSplit('global', modeName, format, subType, suffix, false),
     ...getComponents(modeName, format, subType, suffix)
   ]
 }
@@ -28,7 +29,15 @@ const getComponents = (modeName, format, subType, suffix) => {
 }
 
 const getSplit = (componentName, modeName, format, subType, suffix, outputReferences) => {
-  const path = componentName ? '/' + componentName : ''
+  const getPath = (componentName) => {
+    const path = {
+      base: '/base/',
+      global: '/global/'
+    }
+    return path[componentName] || '/components/' + componentName
+  }
+
+  const path = getPath(componentName)
 
   return [
     {

@@ -1,3 +1,29 @@
+# [5.0.0-beta.10](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.9...v5.0.0-beta.10) (2024-01-10)
+
+
+### Features
+
+* restructure output tokens and filter global and base ([32d43d7](https://github.com/Sage/design-tokens/commit/32d43d729ae83393660aa0b6da46bc71a05781aa))
+
+
+### BREAKING CHANGES
+
+* Restructure output tokens
+
+# [5.0.0-beta.9](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.8...v5.0.0-beta.9) (2024-01-10)
+
+
+### Features
+
+* enable figma tokens to allow icon generation ([3c85bdb](https://github.com/Sage/design-tokens/commit/3c85bdb787bb78a92e89b4d1fa15c6c924176731))
+
+# [5.0.0-beta.8](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.7...v5.0.0-beta.8) (2024-01-09)
+
+
+### Features
+
+* include font and icon assets ([3b626fe](https://github.com/Sage/design-tokens/commit/3b626fe085d079604aa9d2d70f6010129e6284f8))
+
 # [5.0.0-beta.7](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.6...v5.0.0-beta.7) (2024-01-09)
 
 

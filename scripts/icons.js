@@ -8,8 +8,8 @@ const {
   outputFile,
   outputJson,
   removeSync,
-  ensureDir,
-  readFileSync
+  ensureDir
+  // readFileSync
 } = require('fs-extra')
 const { generateFonts } = require('fantasticon')
 const {
@@ -137,7 +137,7 @@ async function createWebFonts (iconsList, config) {
     const outputDir = resolve('.', config.fontsDir)
     const codepoints = Object.fromEntries(icons.filter(icon => !!icon.unicode).map(icon => [kebabCase(icon.name), parseInt(icon.unicode, 16)]))
 
-    ensureDir(outputDir)
+    await ensureDir(outputDir)
 
     return generateFonts({
       name,
@@ -189,34 +189,34 @@ async function writeGlyphsData (glyphsData, config) {
   })
 }
 
-function createDocs (glyphsData, config) {
-  console.log('Creating documentation for icons...')
+// function createDocs (glyphsData, config) {
+//   console.log('Creating documentation for icons...')
 
-  const buildDocsFile = require('./handlebars')(config.docsPartials)
+//   const buildDocsFile = require('./handlebars')(config.docsPartials)
 
-  const mappedGlyphsData = glyphsData.map(icon => {
-    const fullIconPath = resolve(config.distDir, icon.path)
-    const relativePath = relative(config.docsDir, fullIconPath)
+//   const mappedGlyphsData = glyphsData.map(icon => {
+//     const fullIconPath = resolve(config.distDir, icon.path)
+//     const relativePath = relative(config.docsDir, fullIconPath)
 
-    return {
-      ...icon,
-      srcPath: relativePath
-    }
-  })
+//     return {
+//       ...icon,
+//       srcPath: relativePath
+//     }
+//   })
 
-  const template = readFileSync(config.mainTemplate, 'utf8')
+//   const template = readFileSync(config.mainTemplate, 'utf8')
 
-  const context = {
-    glyphs: mappedGlyphsData,
-    title: 'Sage Icons',
-    bodyType: 'icons'
-  }
+//   const context = {
+//     glyphs: mappedGlyphsData,
+//     title: 'Sage Icons',
+//     bodyType: 'icons'
+//   }
 
-  console.log(resolve(process.cwd(), config.docsDir, 'index.html'))
+//   console.log(resolve(process.cwd(), config.docsDir, 'index.html'))
 
-  buildDocsFile(template, context, [config.docsDir, 'index.html'])
-  console.log('Done.\r\n')
-}
+//   buildDocsFile(template, context, [config.docsDir, 'index.html'])
+//   console.log('Done.\r\n')
+// }
 
 /**
  * @typedef {Object} IconsConfig
@@ -268,7 +268,7 @@ function createDocs (glyphsData, config) {
     }))
 
   await writeGlyphsData(formattedGlyphsData, config)
-  createDocs(formattedGlyphsData, config)
+  // createDocs(formattedGlyphsData, config)
 })({
   personalAccessToken: process.env.FIGMA_ACCESS_TOKEN,
   fileId: process.env.FIGMA_FILE_ID,
