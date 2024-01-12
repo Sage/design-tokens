@@ -1,69 +1,117 @@
 {
   "progress": {
-    "inverse": {
-      "bg-default": {
-        "value": "{base.color.generic.bg.standard.nought}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "alpha",
-              "value": "0.32",
-              "space": "lch"
-            }
-          }
+    "size": {
+      "bar": {
+        "S": {
+          "value": "{origin.dimension.50}",
+          "type": "sizing",
+          "description": "S loader bar, S progress tracker bar"
+        },
+        "M": {
+          "value": "{origin.dimension.100}",
+          "type": "sizing",
+          "description": "M progress tracker bar, M loader bar"
+        },
+        "L": {
+          "value": "{origin.dimension.200}",
+          "type": "sizing",
+          "description": "L loader bar, L progress tracker bar"
         }
       },
-      "fg-default": {
-        "value": "{base.color.generic.fg.standard.nought}",
-        "type": "color"
-      },
-      "label-alt": {
-        "value": "{base.color.generic.content.inverse.firm}",
-        "type": "color"
-      },
-      "label-default": {
-        "value": "{base.color.generic.content.inverse.harsh}",
-        "type": "color"
+      "spinner": {
+        "XS": {
+          "value": "{origin.dimension.300}",
+          "type": "sizing",
+          "description": "XS Portraits, XS spinners"
+        },
+        "S": {
+          "value": "{origin.dimension.400}",
+          "type": "sizing",
+          "description": "S Portraits, S Spinners"
+        },
+        "M": {
+          "value": "{origin.dimension.500}",
+          "type": "sizing",
+          "description": "M Portraits, M Spinners"
+        },
+        "L": {
+          "value": "{origin.dimension.900}",
+          "type": "sizing",
+          "description": "L Portraits, L Spinners"
+        },
+        "XL": {
+          "value": "{origin.dimension.1300}",
+          "type": "sizing",
+          "description": "XL spinners"
+        }
       }
     },
-    "standard": {
-      "bg-default": {
-        "value": "{base.color.generic.bg.inverse.nought}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "alpha",
-              "value": "0.12",
-              "space": "lch"
+    "color": {
+      "inverse": {
+        "bg-default": {
+          "value": "{base.color.generic.bg.standard.nought}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.32",
+                "space": "lch"
+              }
             }
           }
+        },
+        "fg-default": {
+          "value": "{base.color.generic.fg.standard.nought}",
+          "type": "color"
+        },
+        "label-alt": {
+          "value": "{base.color.generic.content.inverse.firm}",
+          "type": "color"
+        },
+        "label-default": {
+          "value": "{base.color.generic.content.inverse.harsh}",
+          "type": "color"
         }
       },
-      "border-default": {
-        "value": "{base.color.generic.fg.standard.soft}",
-        "type": "color"
-      },
-      "fg-alt": {
-        "value": "{base.color.status.success.standard.default}",
-        "type": "color"
-      },
-      "fg-default": {
-        "value": "{base.color.generic.fg.inverse.nought}",
-        "type": "color"
-      },
-      "fg-error": {
-        "value": "{base.color.status.negative.standard.default}",
-        "type": "color"
-      },
-      "label-alt": {
-        "value": "{base.color.generic.content.standard.firm}",
-        "type": "color"
-      },
-      "label-default": {
-        "value": "{base.color.generic.content.standard.harsh}",
-        "type": "color"
+      "standard": {
+        "bg-default": {
+          "value": "{base.color.generic.bg.inverse.nought}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.12",
+                "space": "lch"
+              }
+            }
+          }
+        },
+        "border-default": {
+          "value": "{base.color.generic.fg.standard.soft}",
+          "type": "color"
+        },
+        "fg-alt": {
+          "value": "{base.color.status.success.standard.default}",
+          "type": "color"
+        },
+        "fg-default": {
+          "value": "{base.color.generic.fg.inverse.nought}",
+          "type": "color"
+        },
+        "fg-error": {
+          "value": "{base.color.status.negative.standard.default}",
+          "type": "color"
+        },
+        "label-alt": {
+          "value": "{base.color.generic.content.standard.firm}",
+          "type": "color"
+        },
+        "label-default": {
+          "value": "{base.color.generic.content.standard.harsh}",
+          "type": "color"
+        }
       }
     }
   }
