@@ -1,3 +1,17 @@
+# [5.0.0-beta.12](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.11...v5.0.0-beta.12) (2024-01-17)
+
+
+### Features
+
+* **data:** add pill sizes ([e674e38](https://github.com/Sage/design-tokens/commit/e674e38097f4801d420b37b9a19be7c98a06482f))
+* **data:** add typography group and fix on dark button green to be brill green ([69b38ab](https://github.com/Sage/design-tokens/commit/69b38ab15b77f6dade0b79595237d4ec667d9878))
+* **data:** adding flexbox item min and max sizes ([02dc63d](https://github.com/Sage/design-tokens/commit/02dc63dfe302671bccac0427bb5613287c54cba0))
+* **data:** adding nav sizes ([7eab9d6](https://github.com/Sage/design-tokens/commit/7eab9d606cb6ba64a3f73ebaa7068030e4114c90))
+* **data:** adding portrait sizes ([d569203](https://github.com/Sage/design-tokens/commit/d569203b6b76ed3c00e7dcb34206d657465dfcee))
+* **data:** adding sizing tokens for forms and buttons ([5ba0e70](https://github.com/Sage/design-tokens/commit/5ba0e70232b501650529c51648c949ba80faafa5))
+* **data:** adding table sizing tokens ([dc4c696](https://github.com/Sage/design-tokens/commit/dc4c696534e7ac5da014dfd699957c82b2a97bf6))
+* **data:** finalising first draft of all sizes needed ([7258d2e](https://github.com/Sage/design-tokens/commit/7258d2e2825cffb0dc4534c8c0a082acf1d49122))
+
 # [5.0.0-beta.11](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.10...v5.0.0-beta.11) (2024-01-12)
 
 
