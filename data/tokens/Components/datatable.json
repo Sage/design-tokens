@@ -149,6 +149,76 @@
           "type": "color"
         }
       }
+    },
+    "size": {
+      "row": {
+        "XS": {
+          "value": "{global.size.component.XS}",
+          "type": "sizing"
+        },
+        "S": {
+          "value": "{global.size.component.S}",
+          "type": "sizing"
+        },
+        "M": {
+          "value": "{global.size.component.M}",
+          "type": "sizing"
+        },
+        "L": {
+          "value": "{global.size.component.L}",
+          "type": "sizing"
+        },
+        "XL": {
+          "value": "{global.size.component.XL} + {origin.dimension.100}",
+          "type": "sizing"
+        }
+      },
+      "header": {
+        "standard": {
+          "XS": {
+            "value": "{global.size.component.XS}",
+            "type": "sizing"
+          },
+          "S": {
+            "value": "{global.size.component.S}",
+            "type": "sizing"
+          },
+          "M": {
+            "value": "{global.size.component.M}",
+            "type": "sizing"
+          },
+          "L": {
+            "value": "{global.size.component.L}",
+            "type": "sizing"
+          },
+          "XL": {
+            "value": "{global.size.component.XL} + {origin.dimension.100}",
+            "type": "sizing"
+          }
+        },
+        "double": {
+          "XS": {
+            "value": "{global.size.component.XS} * 2",
+            "type": "sizing"
+          },
+          "S": {
+            "value": "{global.size.component.S} * 2",
+            "type": "sizing"
+          },
+          "M": {
+            "value": "{global.size.component.M} * 2",
+            "type": "sizing"
+          },
+          "L": {
+            "value": "{global.size.component.L} * 2",
+            "type": "sizing"
+          },
+          "XL": {
+            "value": "({global.size.component.XL} + {origin.dimension.100}) * 2",
+            "type": "sizing"
+          }
+        }
+      }
     }
   }
 }
