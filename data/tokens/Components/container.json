@@ -158,6 +158,90 @@
           }
         }
       }
+    },
+    "size": {
+      "scrollbar": {
+        "outside": {
+          "value": "{global.size.decorative.XL}",
+          "type": "sizing"
+        },
+        "inside": {
+          "value": "{global.size.decorative.S}",
+          "type": "sizing",
+          "description": "scrollbar handle"
+        }
+      },
+      "pagination": {
+        "dots": {
+          "value": "{global.size.decorative.L}",
+          "type": "sizing"
+        }
+      },
+      "items": {
+        "XS": {
+          "value": "{origin.dimension.1000}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "S": {
+          "value": "{origin.dimension.1600}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "L": {
+          "value": "{origin.dimension.2000}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "XL": {
+          "value": "{origin.dimension.2500}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "XXL": {
+          "value": "{origin.dimension.3000}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "XXXL": {
+          "value": "{origin.dimension.7000}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        }
+      },
+      "drawer": {
+        "closed": {
+          "M": {
+            "value": "{global.size.component.M}",
+            "type": "sizing",
+            "description": "width for the closed drawer state"
+          }
+        }
+      },
+      "footer": {
+        "M": {
+          "value": "{global.size.component.XL}",
+          "type": "sizing",
+          "description": "card and tile footers"
+        },
+        "L": {
+          "value": "{global.size.component.M} + {global.size.component.S}",
+          "type": "sizing",
+          "description": "Dialog, sidebar and drawer footer max-height"
+        }
+      },
+      "tooltip": {
+        "width": {
+          "value": "{global.size.decorative.XXL}",
+          "type": "sizing",
+          "description": "tooltip arrow width"
+        },
+        "height": {
+          "value": "{global.size.decorative.M}",
+          "type": "sizing",
+          "description": "tooltip arrow height"
+        }
+      }
     }
   }
 }

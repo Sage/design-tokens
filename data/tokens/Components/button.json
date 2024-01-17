@@ -2,19 +2,34 @@
   "button": {
     "size": {
       "S": {
-        "value": "{origin.dimension.400}",
+        "value": "{global.size.component.S}",
         "type": "sizing",
         "description": "min-height on S Buttons"
       },
       "M": {
-        "value": "{origin.dimension.500}",
+        "value": "{global.size.component.M}",
         "type": "sizing",
         "description": "min-height on M Buttons"
       },
       "L": {
-        "value": "{origin.dimension.600}",
+        "value": "{global.size.component.L}",
         "type": "sizing",
         "description": "min-height on L Buttons"
+      },
+      "XL": {
+        "value": "{global.size.component.XL}",
+        "type": "sizing",
+        "description": "min-height on XL Buttons"
+      },
+      "XXL": {
+        "value": "{global.size.component.S} * 2",
+        "type": "sizing",
+        "description": "color picker items on hover, Small file preview thumbnails"
+      },
+      "XXXL": {
+        "value": "{global.size.component.M} + {global.size.component.S}",
+        "type": "sizing",
+        "description": "Large file preview thumbnails"
       }
     },
     "space": {

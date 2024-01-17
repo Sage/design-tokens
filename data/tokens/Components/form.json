@@ -44,51 +44,65 @@
       },
       "input": {
         "XS": {
-          "value": "{origin.dimension.300}",
+          "value": "{global.size.component.XS}",
           "type": "sizing",
           "description": "min-height on XS inputs"
         },
         "S": {
-          "value": "{origin.dimension.400}",
+          "value": "{global.size.component.S}",
           "type": "sizing",
           "description": "min-height on S inputs"
         },
         "M": {
-          "value": "{origin.dimension.500}",
+          "value": "{global.size.component.M}",
           "type": "sizing",
           "description": "Min height on M Inputs and M Dropdowns. Fixed height on Calendar days"
         },
         "L": {
-          "value": "{origin.dimension.600}",
+          "value": "{global.size.component.L}",
           "type": "sizing",
           "description": "L Inputs, Color picker square"
         }
       },
       "switch": {
-        "M": {
-          "value": "{origin.dimension.200}",
-          "type": "sizing",
-          "description": "S switch knob"
+        "inside": {
+          "M": {
+            "value": "{origin.dimension.200}",
+            "type": "sizing",
+            "description": "S switch knob"
+          },
+          "L": {
+            "value": "{origin.dimension.350}",
+            "type": "sizing",
+            "description": "L switch knob"
+          }
         },
-        "L": {
-          "value": "{origin.dimension.350}",
-          "type": "sizing",
-          "description": "L switch knob"
+        "outside": {
+          "M": {
+            "value": "{origin.dimension.400}",
+            "type": "sizing",
+            "description": "S switch container"
+          },
+          "L": {
+            "value": "{origin.dimension.600}",
+            "type": "sizing",
+            "description": "L switch container"
+          }
         }
       },
       "checkbox": {
         "S": {
-          "value": "{origin.dimension.200}",
+          "value": "{global.size.component.XXS}",
           "type": "sizing",
           "description": "S checkboxes"
         },
         "M": {
-          "value": "{origin.dimension.300}",
+          "value": "{global.size.component.XS}",
           "type": "sizing",
           "description": "M checkboxes"
         },
         "L": {
-          "value": "{origin.dimension.400}",
+          "value": "{global.size.component.S}",
           "type": "sizing",
           "description": "L checkboxes"
         }
@@ -96,37 +110,56 @@
       "radio": {
         "outside": {
           "S": {
-            "value": "{origin.dimension.200}",
+            "value": "{global.size.component.XXS}",
             "type": "sizing",
             "description": "S radios"
           },
           "M": {
-            "value": "{origin.dimension.300}",
+            "value": "{global.size.component.XS}",
             "type": "sizing",
             "description": "M radios"
           },
           "L": {
-            "value": "{origin.dimension.400}",
+            "value": "{global.size.component.S}",
             "type": "sizing",
             "description": "L radios"
           }
         },
         "inside": {
           "S": {
-            "value": "{origin.dimension.100}",
+            "value": "{global.size.decorative.M}",
             "type": "sizing",
             "description": "S radio dot"
           },
           "M": {
-            "value": "{origin.dimension.150}",
+            "value": "{global.size.decorative.XL}",
             "type": "sizing",
             "description": "M radio dot"
           },
           "L": {
-            "value": "{origin.dimension.200}",
+            "value": "{global.size.decorative.XXL}",
             "type": "sizing",
             "description": "L radio dot"
           }
+        }
+      },
+      "calendar": {
+        "M": {
+          "value": "{global.size.component.M}",
+          "type": "sizing",
+          "description": "day buttons"
+        },
+        "underline": {
+          "value": "{global.size.decorative.XS}",
+          "type": "sizing",
+          "description": "day underline"
+        }
+      },
+      "validation": {
+        "bar": {
+          "value": "{global.size.decorative.XXS}",
+          "type": "sizing",
+          "description": "2px validation bar used on errors and warnings"
         }
       }
     },

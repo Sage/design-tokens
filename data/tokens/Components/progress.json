@@ -2,20 +2,30 @@
   "progress": {
     "size": {
       "bar": {
-        "S": {
-          "value": "{origin.dimension.50}",
+        "XS": {
+          "value": "{global.size.decorative.XS}",
           "type": "sizing",
-          "description": "S loader bar, S progress tracker bar"
+          "description": "S progress tracker bar"
+        },
+        "S": {
+          "value": "{global.size.decorative.S}",
+          "type": "sizing",
+          "description": "S loader bar"
         },
         "M": {
-          "value": "{origin.dimension.100}",
+          "value": "{global.size.decorative.M}",
           "type": "sizing",
           "description": "M progress tracker bar, M loader bar"
         },
         "L": {
-          "value": "{origin.dimension.200}",
+          "value": "{global.size.decorative.XL}",
           "type": "sizing",
-          "description": "L loader bar, L progress tracker bar"
+          "description": "L loader bar"
+        },
+        "XL": {
+          "value": "{global.size.decorative.XXL}",
+          "type": "sizing",
+          "description": "XL loader bar, L progress tracker bar"
         }
       },
       "spinner": {
@@ -43,6 +53,33 @@
           "value": "{origin.dimension.1300}",
           "type": "sizing",
           "description": "XL spinners"
+        }
+      },
+      "skeleton": {
+        "XS": {
+          "value": "{origin.dimension.200}",
+          "type": "sizing",
+          "description": "Skeleton paragraph and H5"
+        },
+        "S": {
+          "value": "{origin.dimension.200} + {origin.dimension.25}",
+          "type": "sizing",
+          "description": "H3 Skeletons"
+        },
+        "M": {
+          "value": "{origin.dimension.250}",
+          "type": "sizing",
+          "description": "H3 Skeletons"
+        },
+        "L": {
+          "value": "{origin.dimension.250} + {origin.dimension.25}",
+          "type": "sizing",
+          "description": "H2 Skeletons"
+        },
+        "XL": {
+          "value": "{origin.dimension.300}",
+          "type": "sizing",
+          "description": "H1 Skeletons"
         }
       }
     },
