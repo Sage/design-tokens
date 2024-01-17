@@ -1,3 +1,57 @@
+# [5.0.0-beta.11](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.10...v5.0.0-beta.11) (2024-01-12)
+
+
+### Bug Fixes
+
+* **data:** removing a token reference in the description value that was causing build to fail. ([4fb3e30](https://github.com/Sage/design-tokens/commit/4fb3e303224d6fb3931da850e9bf1ed0a56cb072))
+
+
+### Features
+
+* **data:** 2nd push for container.standard.text-alt and form.standard.border-alt ([7507f9c](https://github.com/Sage/design-tokens/commit/7507f9c854b8c699da4806dae7559267670ca439))
+* **data:** 2nd push for LOTS ([c4f1b91](https://github.com/Sage/design-tokens/commit/c4f1b91e67aaeff70253d48651ce42678fcd1f3c))
+* **data:** 2nd push on Add link.color.inverse.destructive tokens and profile.color tokens ([1b5293f](https://github.com/Sage/design-tokens/commit/1b5293fe450bf9f98d4881dd52d479d6c3141210))
+* **data:** 2nd push on badge ([899fa17](https://github.com/Sage/design-tokens/commit/899fa17b06bce8c06c90ec222d0b5ae4c9ecc921))
+* **data:** 2nd push on MANY ORIGIN and MIDLAYER changes including... ([19cb9cf](https://github.com/Sage/design-tokens/commit/19cb9cfd0f68718038dbebf5922b95a239df470b))
+* **data:** 2nd push on reordering code ([8bfc398](https://github.com/Sage/design-tokens/commit/8bfc398b4c043f740368b6a7e5dbdb26b57961b8))
+* **data:** 2nd push on tab ([5970c34](https://github.com/Sage/design-tokens/commit/5970c340e8524f73ec5a23e5f4992f3d73784510))
+* **data:** 3rd push for container.standard.text-alt and form.standard.border-alt ([1922f49](https://github.com/Sage/design-tokens/commit/1922f49773b0cdb0a85e6fd078220cf9dc234b06))
+* **data:** 3rd push for LOTS ([8dbd025](https://github.com/Sage/design-tokens/commit/8dbd0256307b7644e23a642b49f201bd8f13046d))
+* **data:** 3rd push on Add link.color.inverse.destructive tokens and profile.color tokens ([6cc9ee8](https://github.com/Sage/design-tokens/commit/6cc9ee89ce40eaa0ad9a2e0111cd7d50e8b19cb4))
+* **data:** 3rd push on button.color.standard ([7434427](https://github.com/Sage/design-tokens/commit/74344275e720b4834030824be8a9d5dc66db1939))
+* **data:** 3rd push on tab colours ([fe4609b](https://github.com/Sage/design-tokens/commit/fe4609b238b73c0d4d9bbed130cc900286663995))
+* **data:** Add base.interactive.danger.defaultAlt colour token ([60879b2](https://github.com/Sage/design-tokens/commit/60879b2b7565d5bfb9badd5dabd382e5d9f87b52))
+* **data:** add container.inverse.text-default token (for profile on dark surface) ([4e8af45](https://github.com/Sage/design-tokens/commit/4e8af45d43cf8c331710c5f9669e8d1e7b404dc4))
+* **data:** Add container.standard.bg-default colour token ([91314ce](https://github.com/Sage/design-tokens/commit/91314ce9805864576446a0abefbf8ccfcb94b881))
+* **data:** Add container.standard.text-alt and form.standard.border-alt colour tokens ([cd9025e](https://github.com/Sage/design-tokens/commit/cd9025e1c8eca3acc7a7b7ef4ea5cfe06aeb1570))
+* **data:** Add link.color.inverse.destructive tokens and profile.color tokens ([eaa4d12](https://github.com/Sage/design-tokens/commit/eaa4d123dc293ce834754e93567d6a0ccf7148c7))
+* **data:** Add new form.calendar.bg-default colour token. Re-order the form.standard tokens to be alphabetical ([b5dceaa](https://github.com/Sage/design-tokens/commit/b5dceaaf8cd82afc7a0041977bf6a959cc47c062))
+* **data:** Add origin.inverse.jade colour token, for use in links on dark bg ([37ea521](https://github.com/Sage/design-tokens/commit/37ea5216a6b8922a3a4399e461c40cac71440f5c))
+* **data:** adding component specific sizes ([72556d2](https://github.com/Sage/design-tokens/commit/72556d2ca1d7434099e365c4c47d59505657d8dd))
+* **data:** adding component-specific sizes ([e741c6b](https://github.com/Sage/design-tokens/commit/e741c6b98c853a3b384249567fe7919ee7373823))
+* **data:** adding generic global spacing tokens ([c5e375c](https://github.com/Sage/design-tokens/commit/c5e375c3f1c73803a634cfadc438449bd82b2053))
+* **data:** Another push on badge ([d17163c](https://github.com/Sage/design-tokens/commit/d17163ca5ec48abceb6208d994e2d1566907598f))
+* **data:** Change badge.color.typical to badge.color.standard.warning. And add badge.color.inverse tokens ([9fda233](https://github.com/Sage/design-tokens/commit/9fda23381831777c4a5a1250cc8a3d82bf0d7ab9))
+* **data:** Change button.color to button.color.standard ([8c42a1c](https://github.com/Sage/design-tokens/commit/8c42a1c7909036fc60a6b1024b64a5f94f68de39))
+* **data:** Change link.standard to link.typical.  ([975f084](https://github.com/Sage/design-tokens/commit/975f08485d8a5503bb71bcedfc54f4534b5b9835))
+* **data:** changing name of typical global sizing to 'components' ([6be4a6c](https://github.com/Sage/design-tokens/commit/6be4a6ccabdd929c73d9e2ef5bd6d740ac90aaac))
+* **data:** changing naming to be more semantic for sizing ([053c6c4](https://github.com/Sage/design-tokens/commit/053c6c47f00a164966f010a515c555445b7a4d2d))
+* **data:** Fix for mid layer modifiers being broken ([0ed9a26](https://github.com/Sage/design-tokens/commit/0ed9a26994ca1666d2415e7a9bdad0e58a888043))
+* **data:** LOADS OF CHANGES, including ([56289d4](https://github.com/Sage/design-tokens/commit/56289d4b740892925cb3d4f94a2357d9f6e96923))
+* **data:** MANY CHANGES FOR BUTTONS ON DARK, including ([5e110c1](https://github.com/Sage/design-tokens/commit/5e110c1edfd20b81a899c2752ea1d261f057b966))
+* **data:** MANY ORIGIN and MIDLAYER changes including... ([068ec3d](https://github.com/Sage/design-tokens/commit/068ec3d623a20c5d0620f2e91b1357918b1840b6))
+* **data:** Not sure what changes ([41afdaf](https://github.com/Sage/design-tokens/commit/41afdaf8db25985fc8f90fb3d4f02ab54c61affa))
+* **data:** Remove obsolete descriptions from some nav tokens ([4029229](https://github.com/Sage/design-tokens/commit/40292299f7cdac013ead0b64cad6c3a56478d578))
+* **data:** removing redundant 0px sizing options from global. ([2b0e02f](https://github.com/Sage/design-tokens/commit/2b0e02f8a9db3630347e50a5feee4809762de18d))
+* **data:** rename tab.color.standard to tab.color.typical ([5c39855](https://github.com/Sage/design-tokens/commit/5c39855ce0bcd3ec9f5cfe7ae4de10fad56a7f77))
+* **data:** Reorder code to arrange folders in alphabetical order ([56b54f2](https://github.com/Sage/design-tokens/commit/56b54f2b9ef9299450156aebcb83dbb9658e8cf3))
+* **data:** Reset base.color.interactive.monochrome.inverse.hover back to previous value ([725f3e7](https://github.com/Sage/design-tokens/commit/725f3e764e6a7844e74b4f3624b548734b058f28))
+* **data:** Tiny tweak to value of origin red and Jade to be AAA accessible on FFFFFF bgs ([1a81540](https://github.com/Sage/design-tokens/commit/1a81540c9186620c06f3302d8e6c1d76c8b2ee6e))
+* **data:** update container.inverse token values ([0ac95c9](https://github.com/Sage/design-tokens/commit/0ac95c93bc8870b39f321eeca457c7ffe70ca805))
+* **data:** Update some nav colour token values to make all navigation components work better together ([3b11415](https://github.com/Sage/design-tokens/commit/3b11415f6ab79a56277304bd97f88af825d1bb2d))
+* **data:** Update value of link.inverse.label-readonly ([cc16ad1](https://github.com/Sage/design-tokens/commit/cc16ad11f4c3b2b38b0fb260f1bc0556fa062cce))
+* **data:** various inverse colour tokens added for jade green in origin, base, and link ([41ce987](https://github.com/Sage/design-tokens/commit/41ce98790a0e0ec6821094318f6fe3e898b8a2cd))
+
 # [5.0.0-beta.10](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.9...v5.0.0-beta.10) (2024-01-10)
 
 
