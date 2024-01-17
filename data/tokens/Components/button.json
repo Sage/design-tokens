@@ -22,9 +22,14 @@
         "description": "min-height on XL Buttons"
       },
       "XXL": {
-        "value": "{global.size.component.XL} + {origin.dimension.100}",
+        "value": "{global.size.component.S} * 2",
         "type": "sizing",
-        "description": "color picker items on hover"
+        "description": "color picker items on hover, Small file preview thumbnails"
+      },
+      "XXXL": {
+        "value": "{global.size.component.M} + {global.size.component.S}",
+        "type": "sizing",
+        "description": "Large file preview thumbnails"
       }
     },
     "space": {

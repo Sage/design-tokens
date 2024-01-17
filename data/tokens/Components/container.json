@@ -208,6 +208,39 @@
           "type": "sizing",
           "description": "min and max widths for responsive tile items"
         }
+      },
+      "drawer": {
+        "closed": {
+          "M": {
+            "value": "{global.size.component.M}",
+            "type": "sizing",
+            "description": "width for the closed drawer state"
+          }
+        }
+      },
+      "footer": {
+        "M": {
+          "value": "{global.size.component.XL}",
+          "type": "sizing",
+          "description": "card and tile footers"
+        },
+        "L": {
+          "value": "{global.size.component.M} + {global.size.component.S}",
+          "type": "sizing",
+          "description": "Dialog, sidebar and drawer footer max-height"
+        }
+      },
+      "tooltip": {
+        "width": {
+          "value": "{global.size.decorative.XXL}",
+          "type": "sizing",
+          "description": "tooltip arrow width"
+        },
+        "height": {
+          "value": "{global.size.decorative.M}",
+          "type": "sizing",
+          "description": "tooltip arrow height"
+        }
       }
     }
   }
