@@ -449,7 +449,7 @@
                   }
                 }
               },
-              "description": "used on pill hover states"
+              "description": "used on solid-pill and primary-button hover states"
             },
             "hoverAlt": {
               "value": "{base.color.interactive.danger.standard.default}",
@@ -464,7 +464,22 @@
                   }
                 }
               },
-              "description": "used on pill hover states"
+              "description": "used on outlined-pill and secondary-button hover states"
+            },
+            "hoverAlt2": {
+              "value": "{base.color.interactive.danger.standard.defaultAlt}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "used on link hover state"
             },
             "withActive": {
               "value": "{base.color.generic.content.inverse.extreme}",
@@ -866,6 +881,21 @@
                   }
                 }
               }
+            },
+            "hoverAlt": {
+              "value": "{base.color.interactive.primary.standard.defaultAlt}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "for link hover"
             },
             "withActive": {
               "value": "{base.color.generic.content.inverse.extreme}",
