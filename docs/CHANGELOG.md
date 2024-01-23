@@ -1,3 +1,15 @@
+# [5.0.0-beta.13](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.12...v5.0.0-beta.13) (2024-01-23)
+
+
+### Features
+
+* split global tokens from modes ([e52c23d](https://github.com/Sage/design-tokens/commit/e52c23dc5e76a26246f410c8d71dd0aa3d4ecfd8))
+
+
+### BREAKING CHANGES
+
+* Token structure change
+
 # [5.0.0-beta.12](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.11...v5.0.0-beta.12) (2024-01-17)
 
 
