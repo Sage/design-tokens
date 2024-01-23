@@ -1,3 +1,15 @@
+# [5.0.0-beta.14](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.13...v5.0.0-beta.14) (2024-01-23)
+
+
+### Features
+
+* split component tokens from modes for css & scss references ([6c4a304](https://github.com/Sage/design-tokens/commit/6c4a3043f645d254941390ddb9dc4f555b5d048a))
+
+
+### BREAKING CHANGES
+
+* Token structure change
+
 # [5.0.0-beta.13](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.12...v5.0.0-beta.13) (2024-01-23)
 
 
