@@ -38,6 +38,8 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
   }
 
   const path = getPath(componentName)
+  
+  const selector = outputReferences ? `.sds-mode` : modeName ? `.sds-mode-${modeName}` : undefined
 
   return [
     {
@@ -46,7 +48,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       format,
       options: {
         outputReferences,
-        selector: modeName ? `.sds-mode-${modeName}` : undefined
+        selector
       }
     },
     {
@@ -55,7 +57,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       format,
       options: {
         outputReferences,
-        selector: modeName ? `.sds-mode-${modeName}` : undefined
+        selector
       }
     },
     {
@@ -64,7 +66,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       format,
       options: {
         outputReferences,
-        selector: modeName ? `.sds-mode-${modeName}` : undefined
+        selector
       }
     },
     {
@@ -73,7 +75,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       format,
       options: {
         outputReferences,
-        selector: modeName ? `.sds-mode-${modeName}` : undefined
+        selector
       }
     },
     {
@@ -82,7 +84,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       format,
       options: {
         outputReferences,
-        selector: modeName ? `.sds-mode-${modeName}` : undefined
+        selector
       }
     },
     {
@@ -91,7 +93,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       format,
       options: {
         outputReferences,
-        selector: modeName ? `.sds-mode-${modeName}` : undefined
+        selector
       }
     },
     {
@@ -100,7 +102,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       format,
       options: {
         outputReferences,
-        selector: modeName ? `.sds-mode-${modeName}` : undefined
+        selector
       }
     },
     {
@@ -109,7 +111,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       format,
       options: {
         outputReferences,
-        selector: modeName ? `.sds-mode-${modeName}` : undefined
+        selector
       }
     }
   ]
