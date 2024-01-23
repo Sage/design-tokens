@@ -13,7 +13,6 @@ const modes = readdirSync('./data/tokens/Modes/')
 const getFiles = (modeName, format, subType, suffix) => {
   return [
     ...getSplit('base', modeName, format, subType, suffix, false),
-    ...getSplit('global', modeName, format, subType, suffix, false),
     ...getComponents(modeName, format, subType, suffix)
   ]
 }
@@ -31,8 +30,8 @@ const getComponents = (modeName, format, subType, suffix) => {
 const getSplit = (componentName, modeName, format, subType, suffix, outputReferences) => {
   const getPath = (componentName) => {
     const path = {
-      base: '/base/',
-      global: '/global/'
+      base: '/base',
+      global: '/global'
     }
     return path[componentName] || '/components/' + componentName
   }
@@ -45,7 +44,8 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       filter: (token) => filterComponent(token, componentName),
       format,
       options: {
-        outputReferences
+        outputReferences,
+        selector: modeName ? `.sds-mode-${modeName}` : undefined
       }
     },
     {
@@ -53,7 +53,8 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       filter: (token) => token.type === 'color' && filterComponent(token, componentName),
       format,
       options: {
-        outputReferences
+        outputReferences,
+        selector: modeName ? `.sds-mode-${modeName}` : undefined
       }
     },
     {
@@ -61,7 +62,8 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       filter: (token) => token.type === 'borderRadius' && filterComponent(token, componentName),
       format,
       options: {
-        outputReferences
+        outputReferences,
+        selector: modeName ? `.sds-mode-${modeName}` : undefined
       }
     },
     {
@@ -69,7 +71,8 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       filter: (token) => token.type === 'borderWidth' && filterComponent(token, componentName),
       format,
       options: {
-        outputReferences
+        outputReferences,
+        selector: modeName ? `.sds-mode-${modeName}` : undefined
       }
     },
     {
@@ -77,7 +80,8 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       filter: (token) => token.type === 'boxShadow' && filterComponent(token, componentName),
       format,
       options: {
-        outputReferences
+        outputReferences,
+        selector: modeName ? `.sds-mode-${modeName}` : undefined
       }
     },
     {
@@ -85,7 +89,8 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       filter: (token) => token.type === 'sizing' && filterComponent(token, componentName),
       format,
       options: {
-        outputReferences
+        outputReferences,
+        selector: modeName ? `.sds-mode-${modeName}` : undefined
       }
     },
     {
@@ -93,7 +98,8 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       filter: (token) => token.type === 'spacing' && filterComponent(token, componentName),
       format,
       options: {
-        outputReferences
+        outputReferences,
+        selector: modeName ? `.sds-mode-${modeName}` : undefined
       }
     },
     {
@@ -101,13 +107,79 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       filter: (token) => token.type === 'typography' && filterComponent(token, componentName),
       format,
       options: {
-        outputReferences
+        outputReferences,
+        selector: modeName ? `.sds-mode-${modeName}` : undefined
       }
     }
   ]
 }
 
-const getConfig = (mode) => {
+const getGlobalConfig = () => {
+  return {
+    source: [
+      './data/tokens/origin.json',
+      './data/tokens/global.json'
+    ],
+    platforms: {
+      css: {
+        buildPath: 'dist/css/',
+        transforms: groups.css,
+        files: [
+          ...getSplit('global', '', 'css/variables', '', 'css', false)
+        ]
+      },
+      scss: {
+        buildPath: 'dist/scss/',
+        transforms: groups.scss,
+        files: [
+          ...getSplit('global', '', 'scss/variables', '', 'scss', false)
+        ]
+      },
+      js: {
+        buildPath: 'dist/js/',
+        transforms: groups.js,
+        files: [
+          ...getSplit('global', '', 'javascript/module', 'common/', 'js', false),
+          ...getSplit('global', '', 'typescript/module-declarations', 'common/', 'd.ts', false),
+          ...getSplit('global', '', 'javascript/es6', 'es6/', 'js', false),
+          ...getSplit('global', '', 'typescript/es6-declarations', 'es6/', 'd.ts', false),
+          ...getSplit('global', '', 'javascript/umd', 'umd/', 'js', false),
+          ...getSplit('global', '', 'json', 'json/', 'json', false)
+        ]
+      },
+      android: {
+        buildPath: 'dist/android/',
+        transforms: groups.mobile,
+        files: [
+          ...getSplit('global', '', 'android/resources', '', 'xml', false)
+        ]
+      },
+      ios: {
+        buildPath: 'dist/ios/',
+        transforms: groups.mobile,
+        files: [
+          ...getSplit('global', '', 'ios/macros', '', 'h', false)
+        ]
+      }
+    }
+  }
+}
+
+(() => {
+  console.log('\r\n\r\nBuilding global')
+
+  const StyleDictionary = dictionary.extend(getGlobalConfig())
+
+  StyleDictionary.buildPlatform('css')
+  StyleDictionary.buildPlatform('scss')
+  StyleDictionary.buildPlatform('js')
+  StyleDictionary.buildPlatform('ios')
+  StyleDictionary.buildPlatform('android')
+
+  console.log('\r\nDone.\r\n')
+})()
+
+const getModeConfig = (mode) => {
   const modeName = mode.split('.json')[0]
 
   return {
@@ -166,7 +238,7 @@ const getConfig = (mode) => {
 modes.forEach((mode) => {
   console.log(`\r\n\r\nBuilding mode: ${mode}`)
 
-  const StyleDictionary = dictionary.extend(getConfig(mode))
+  const StyleDictionary = dictionary.extend(getModeConfig(mode))
 
   StyleDictionary.buildPlatform('css')
   StyleDictionary.buildPlatform('scss')

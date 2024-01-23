@@ -20,5 +20,6 @@ module.exports = {
       'block',
       '\nCopyright © 2024 The Sage Group plc or its licensors. All Rights reserved\n '
     ]
-  }
+  },
+  ignorePatterns: ['dist/']
 }
