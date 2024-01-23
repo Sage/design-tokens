@@ -1,3 +1,15 @@
+# [5.0.0-beta.15](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.14...v5.0.0-beta.15) (2024-01-23)
+
+
+### Features
+
+* update component selector for css & scss references ([4b8007f](https://github.com/Sage/design-tokens/commit/4b8007f68c203117c6913cf8ccc68aa5ef14d31f))
+
+
+### BREAKING CHANGES
+
+* Token structure change
+
 # [5.0.0-beta.14](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.13...v5.0.0-beta.14) (2024-01-23)
 
 
