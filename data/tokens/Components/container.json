@@ -11,6 +11,26 @@
           "type": "color"
         }
       },
+      "scroll": {
+        "bg-default": {
+          "value": "{base.color.generic.bg.inverse.nought}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "0.12",
+                "space": "lch"
+              }
+            }
+          }
+        },
+        "fg-default": {
+          "value": "{base.color.generic.fg.standard.moderate}",
+          "type": "color",
+          "$extensions": {}
+        }
+      },
       "standard": {
         "bg-alt": {
           "value": "{base.color.generic.bg.standard.faint}",
