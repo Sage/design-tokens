@@ -11,9 +11,10 @@ const components = readdirSync('./data/tokens/Components/')
 const modes = readdirSync('./data/tokens/Modes/')
 
 const getFiles = (modeName, format, subType, suffix) => {
+  const mode = format.includes('variables') ? '' : modeName
   return [
     ...getSplit('base', modeName, format, subType, suffix, false),
-    ...getComponents(modeName, format, subType, suffix)
+    ...getComponents(mode, format, subType, suffix)
   ]
 }
 
