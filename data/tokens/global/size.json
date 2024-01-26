@@ -1,0 +1,138 @@
+{
+  "global": {
+    "border-width": {
+      "scale": {
+        "value": "1",
+        "type": "borderWidth"
+      },
+      "container": {
+        "S": {
+          "value": "{origin.dimension.12} * {global.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Dividing lines and container borders"
+        },
+        "M": {
+          "value": "{origin.dimension.25} * {global.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Step flow, Validation bars"
+        },
+        "L": {
+          "value": "{origin.dimension.50} * {global.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Dividing lines"
+        },
+        "none": {
+          "value": "0",
+          "type": "borderWidth"
+        }
+      },
+      "interactive": {
+        "S": {
+          "value": "{origin.dimension.12} * {global.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Buttons, Inputs"
+        },
+        "MS": {
+          "value": "{origin.dimension.25} * {global.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Buttons"
+        },
+        "M": {
+          "value": "{origin.dimension.38} * {global.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Focus\n"
+        },
+        "L": {
+          "value": "{origin.dimension.50} * {global.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Focus underline\n"
+        },
+        "XL": {
+          "value": "{origin.dimension.75} * {global.border-width.scale}",
+          "type": "borderWidth",
+          "description": "Double Focus Border"
+        },
+        "none": {
+          "value": "0",
+          "type": "borderWidth"
+        }
+      }
+    },
+    "size": {
+      "none": {
+        "value": "{origin.dimension.0}",
+        "type": "sizing"
+      },
+      "icon": {
+        "S": {
+          "value": "{origin.dimension.200}",
+          "type": "sizing"
+        },
+        "M": {
+          "value": "{origin.dimension.250}",
+          "type": "sizing"
+        },
+        "L": {
+          "value": "{origin.dimension.400}",
+          "type": "sizing"
+        }
+      },
+      "component": {
+        "XXS": {
+          "value": "{origin.dimension.200}",
+          "type": "sizing"
+        },
+        "XS": {
+          "value": "{origin.dimension.300}",
+          "type": "sizing"
+        },
+        "S": {
+          "value": "{origin.dimension.400}",
+          "type": "sizing"
+        },
+        "M": {
+          "value": "{origin.dimension.500}",
+          "type": "sizing"
+        },
+        "L": {
+          "value": "{origin.dimension.600}",
+          "type": "sizing"
+        },
+        "XL": {
+          "value": "{origin.dimension.700}",
+          "type": "sizing"
+        }
+      },
+      "decorative": {
+        "XXS": {
+          "value": "{origin.dimension.25}",
+          "type": "sizing"
+        },
+        "XS": {
+          "value": "{origin.dimension.50}",
+          "type": "sizing"
+        },
+        "S": {
+          "value": "{origin.dimension.75}",
+          "type": "sizing"
+        },
+        "M": {
+          "value": "{origin.dimension.100}",
+          "type": "sizing"
+        },
+        "L": {
+          "value": "{origin.dimension.125}",
+          "type": "sizing"
+        },
+        "XL": {
+          "value": "{origin.dimension.150}",
+          "type": "sizing"
+        },
+        "XXL": {
+          "value": "{origin.dimension.200}",
+          "type": "sizing"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "global": {
+    "border-radius": {
+      "scale": {
+        "value": "1",
+        "type": "borderRadius",
+        "description": "We can override this to locally change the size of radius in the future if required."
+      },
+      "container": {
+        "XXS": {
+          "value": "{origin.dimension.12} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Validation bar on input components"
+        },
+        "XS": {
+          "value": "{origin.dimension.25} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Pill"
+        },
+        "S": {
+          "value": "{origin.dimension.50} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Color picker advanced (inner container), Tooltip."
+        },
+        "M": {
+          "value": "{origin.dimension.100} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Popover menus (action popover, split button etc), Color picker standard (container), Menu (bottom corners), Message, Navigation: top (menu bottom corners), Navigation: left (selected menu), Pagination, Table, Tile (less rounded), Toast"
+        },
+        "L": {
+          "value": "{origin.dimension.200} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Carousel (outer part), Color picker advanced (outer container), Dialog (not full screen), Tile (more rounded)."
+        },
+        "circle": {
+          "value": "10000",
+          "type": "borderRadius",
+          "description": "Badge, Portrait"
+        }
+      },
+      "interactive": {
+        "XS": {
+          "value": "{origin.dimension.25} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Checkbox (S, M), Link (focus background)"
+        },
+        "S": {
+          "value": "{origin.dimension.50} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Button: minor (including button bar), Button: multi-action & split (menu), Button toggle: minor, Checkbox (large), Date picker, Date range, Dropdown: select (trigger & menu), File input, Link (focus), Search, Text area, Text input."
+        },
+        "M": {
+          "value": "{origin.dimension.100} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Anchor navigation items, Card (less rounded), Card select (single), Card select group (outer corners), Carousel (slides), Tab items"
+        },
+        "L": {
+          "value": "{origin.dimension.200} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Card (more rounded)"
+        },
+        "XL": {
+          "value": "{origin.dimension.400} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Buttons, Loader bar, Progress tracker, Switch"
+        },
+        "circle": {
+          "value": "10000",
+          "type": "borderRadius",
+          "description": "Radio button"
+        },
+        "none": {
+          "value": "0",
+          "type": "borderRadius",
+          "description": "Button groups (internal/adjacent corners), Card select group (internal/adjacent corners), File input (integrated base bar top corners)."
+        }
+      }
+    }
+  }
+}
