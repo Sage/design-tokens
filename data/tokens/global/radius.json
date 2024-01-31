@@ -20,54 +20,59 @@
         "S": {
           "value": "{origin.dimension.50} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Color picker advanced (inner container), Tooltip."
+          "description": "Calendar asset (used in date components), Color picker advanced (inner swatch container), Dropdown select (menu container), File input (file uploads & integrated progress bar (bottom corners), Link preview, Tooltip."
         },
         "M": {
           "value": "{origin.dimension.100} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Popover menus (action popover, split button etc), Color picker standard (container), Menu (bottom corners), Message, Navigation: top (menu bottom corners), Navigation: left (selected menu), Pagination, Table, Tile (less rounded), Toast"
+          "description": "Card select (single), Card select group (outer corners), Carousel (slides), File preview (File selector assets on left), Message, Note, Popover (menu container in Action popovers), Table (parent container), Tile & Tile flexbox (less rounded), Toast"
         },
         "L": {
           "value": "{origin.dimension.200} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Carousel (outer part), Color picker advanced (outer container), Dialog (not full screen), Tile (more rounded)."
+          "description": "Carousel (parent container), Color picker advanced (parent container), Dialog (not full screen), File preview (parent container), Tile & Tile flexbox (more rounded)."
         },
         "circle": {
-          "value": "10000",
+          "value": "999",
           "type": "borderRadius",
-          "description": "Badge, Portrait"
+          "description": "Badge, Loader bar, Portrait, Progress tracker, Step flow step indicators"
         }
       },
       "interactive": {
         "XS": {
           "value": "{origin.dimension.25} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Checkbox (S, M), Link (focus background)"
+          "description": "Checkbox (S, M), Link (focus background and underline)"
         },
         "S": {
           "value": "{origin.dimension.50} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Button: minor (including button bar), Button: multi-action & split (menu), Button toggle: minor, Checkbox (large), Date picker, Date range, Dropdown: select (trigger & menu), File input, Link (focus), Search, Text area, Text input."
+          "description": "Checkbox L, Date picker input, Date range input, Dropdown select (trigger), File input (draggable area), Link (focus bg and underline bottom-right and bottom-left), Menu (state bg shape), Search, Text area, Text editor, Text input"
         },
         "M": {
           "value": "{origin.dimension.100} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Anchor navigation items, Card (less rounded), Card select (single), Card select group (outer corners), Carousel (slides), Tab items"
+          "description": "Card (less rounded), Menu (bottom corners), Navigation: left (state bg shape), Skip focus, \nSubscription tile (currently a pattern), \nTab, "
         },
         "L": {
           "value": "{origin.dimension.200} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Card (more rounded)"
+          "description": "Buttons S (typical and destructive, and inc bar, split and multi), \nButton toggle M, Card (more rounded), Navigation left (collapsible Assets/Menu select top-right and bottom-right corners), "
         },
         "XL": {
-          "value": "{origin.dimension.400} * {global.border-radius.scale}",
+          "value": "{origin.dimension.250} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Buttons, Loader bar, Progress tracker, Switch"
+          "description": "Buttons M (typical and destructive and inc bar split and multi), Button toggle L"
+        },
+        "XXL": {
+          "value": "{origin.dimension.300} * {global.border-radius.scale}",
+          "type": "borderRadius",
+          "description": "Buttons L (typical and destructive and inc bar split and multi), "
         },
         "circle": {
           "value": "10000",
           "type": "borderRadius",
-          "description": "Radio button"
+          "description": "Carousel selector dots, Radio button, Switch"
         },
         "none": {
           "value": "0",
