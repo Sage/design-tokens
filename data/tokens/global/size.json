@@ -59,77 +59,81 @@
       }
     },
     "size": {
+      "scale": {
+        "value": "1",
+        "type": "sizing"
+      },
       "none": {
         "value": "{origin.dimension.0}",
         "type": "sizing"
       },
       "icon": {
         "S": {
-          "value": "{origin.dimension.200}",
+          "value": "{origin.dimension.200} * {global.size.scale}",
           "type": "sizing"
         },
         "M": {
-          "value": "{origin.dimension.250}",
+          "value": "{origin.dimension.250} * {global.size.scale}",
           "type": "sizing"
         },
         "L": {
-          "value": "{origin.dimension.400}",
+          "value": "{origin.dimension.400} * {global.size.scale}",
           "type": "sizing"
         }
       },
-      "component": {
+      "macro": {
         "XXS": {
-          "value": "{origin.dimension.200}",
+          "value": "{origin.dimension.200} * {global.size.scale}",
           "type": "sizing"
         },
         "XS": {
-          "value": "{origin.dimension.300}",
+          "value": "{origin.dimension.300} * {global.size.scale}",
           "type": "sizing"
         },
         "S": {
-          "value": "{origin.dimension.400}",
+          "value": "{origin.dimension.400} * {global.size.scale}",
           "type": "sizing"
         },
         "M": {
-          "value": "{origin.dimension.500}",
+          "value": "{origin.dimension.500} * {global.size.scale}",
           "type": "sizing"
         },
         "L": {
-          "value": "{origin.dimension.600}",
+          "value": "{origin.dimension.600} * {global.size.scale}",
           "type": "sizing"
         },
         "XL": {
-          "value": "{origin.dimension.700}",
+          "value": "{origin.dimension.700} * {global.size.scale}",
           "type": "sizing"
         }
       },
-      "decorative": {
+      "micro": {
         "XXS": {
-          "value": "{origin.dimension.25}",
+          "value": "{origin.dimension.25} * {global.size.scale}",
           "type": "sizing"
         },
         "XS": {
-          "value": "{origin.dimension.50}",
+          "value": "{origin.dimension.50} * {global.size.scale}",
           "type": "sizing"
         },
         "S": {
-          "value": "{origin.dimension.75}",
+          "value": "{origin.dimension.75} * {global.size.scale}",
           "type": "sizing"
         },
         "M": {
-          "value": "{origin.dimension.100}",
+          "value": "{origin.dimension.100} * {global.size.scale}",
           "type": "sizing"
         },
         "L": {
-          "value": "{origin.dimension.125}",
+          "value": "{origin.dimension.125} * {global.size.scale}",
           "type": "sizing"
         },
         "XL": {
-          "value": "{origin.dimension.150}",
+          "value": "{origin.dimension.150} * {global.size.scale}",
           "type": "sizing"
         },
         "XXL": {
-          "value": "{origin.dimension.200}",
+          "value": "{origin.dimension.200} * {global.size.scale}",
           "type": "sizing"
         }
       }
