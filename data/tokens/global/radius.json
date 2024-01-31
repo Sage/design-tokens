@@ -52,7 +52,7 @@
         "M": {
           "value": "{origin.dimension.100} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Card (less rounded), Menu (bottom corners), Navigation: left (state bg shape), Skip focus, \nSubscription tile (currently a pattern), \nTab, "
+          "description": "Button subtle, Card (less rounded), Menu (bottom corners), Navigation: left (state bg shape), Skip focus, \nSubscription tile (currently a pattern), \nTab, "
         },
         "L": {
           "value": "{origin.dimension.200} * {global.border-radius.scale}",
@@ -62,23 +62,23 @@
         "XL": {
           "value": "{origin.dimension.250} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Buttons M (typical and destructive and inc bar split and multi), Button toggle L"
+          "description": "Buttons M (typical and destructive and inc bar split and multi), Button toggle M (parent container), "
         },
         "XXL": {
           "value": "{origin.dimension.300} * {global.border-radius.scale}",
           "type": "borderRadius",
-          "description": "Buttons L (typical and destructive and inc bar split and multi), "
+          "description": "Buttons L (typical and destructive and inc bar split and multi), Button toggle L (parent container), "
         },
         "circle": {
           "value": "10000",
           "type": "borderRadius",
           "description": "Carousel selector dots, Radio button, Switch"
-        },
-        "none": {
-          "value": "0",
-          "type": "borderRadius",
-          "description": "Button groups (internal/adjacent corners), Card select group (internal/adjacent corners), File input (integrated base bar top corners)."
         }
+      },
+      "none": {
+        "value": "0",
+        "type": "borderRadius",
+        "description": "Button groups (internal/adjacent corners), Card select group (internal/adjacent corners), File input (integrated base bar top corners)."
       }
     }
   }
