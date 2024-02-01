@@ -439,12 +439,32 @@
       }
     },
     "borderradius": {
+      "none": {
+        "value": "{global.border-radius.none}",
+        "type": "borderRadius",
+        "description": "Text editor (internal corners)"
+      },
       "input": {
         "value": "{global.border-radius.interactive.S}",
         "type": "borderRadius",
-        "description": "Date picker input, Date range input,  "
+        "description": "Date picker input, Date range input, Dropdown select (trigger),"
+      },
+      "preview": {
+        "value": "{global.border-radius.container.S}",
+        "type": "borderRadius",
+        "description": "File input (file uploads), Link preview"
+      },
+      "switch": {
+        "value": "{global.border-radius.interactive.circle}",
+        "type": "borderRadius",
+        "description": "Switch container and handle"
       },
       "calendar": {
+        "none": {
+          "value": "{global.border-radius.none}",
+          "type": "borderRadius",
+          "description": "Calendar (start and end duration)"
+        },
         "date": {
           "value": "{global.border-radius.interactive.circle}",
           "type": "borderRadius",
@@ -454,11 +474,6 @@
           "value": "{global.border-radius.container.XS}",
           "type": "borderRadius",
           "description": "Calendar (today indicator)"
-        },
-        "none": {
-          "value": "{global.border-radius.none}",
-          "type": "borderRadius",
-          "description": "Calendar (start and end duration)"
         }
       }
     }
