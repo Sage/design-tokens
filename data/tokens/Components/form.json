@@ -444,18 +444,38 @@
         "type": "borderRadius",
         "description": "Text editor (internal corners)"
       },
+      "dialog": {
+        "value": "{global.border-radius.container.L}",
+        "type": "borderRadius",
+        "description": "Dialog\n"
+      },
       "input": {
         "value": "{global.border-radius.interactive.S}",
         "type": "borderRadius",
-        "description": "Checkbox, Date picker input, Date range input, Dropdown select (trigger), File input (draggable area)"
+        "description": "Checkbox, Date picker input, Date range input, Dropdown select (trigger), Search, File input (draggable area), Text area, Text input"
+      },
+      "validationbar": {
+        "value": "{global.border-radius.interactive.XS}",
+        "type": "borderRadius",
+        "description": "Validation bar"
+      },
+      "portrait": {
+        "value": "{global.border-radius.circle}",
+        "type": "borderRadius",
+        "description": "Portrait"
       },
       "preview": {
         "value": "{global.border-radius.container.S}",
         "type": "borderRadius",
         "description": "File input (file uploads), Link preview"
       },
+      "radio": {
+        "value": "{global.border-radius.circle}",
+        "type": "borderRadius",
+        "description": "Radio button"
+      },
       "switch": {
-        "value": "{global.border-radius.interactive.circle}",
+        "value": "{global.border-radius.circle}",
         "type": "borderRadius",
         "description": "Switch container and handle"
       },
@@ -466,7 +486,7 @@
           "description": "Calendar (start and end duration)"
         },
         "date": {
-          "value": "{global.border-radius.interactive.circle}",
+          "value": "{global.border-radius.circle}",
           "type": "borderRadius",
           "description": "Calendar date (hover & selected), "
         },
@@ -474,6 +494,18 @@
           "value": "{global.border-radius.container.XS}",
           "type": "borderRadius",
           "description": "Calendar (today indicator)"
+        }
+      },
+      "colorpicker": {
+        "inner": {
+          "value": "{global.border-radius.interactive.S}",
+          "type": "borderRadius",
+          "description": "Color picker (swatch container), \n"
+        },
+        "outer": {
+          "value": "{global.border-radius.container.L}",
+          "type": "borderRadius",
+          "description": "Color picker advanced (parent container), \n"
         }
       }
     }

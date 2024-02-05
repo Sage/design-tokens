@@ -286,12 +286,27 @@
       "none": {
         "value": "{global.border-radius.none}",
         "type": "borderRadius",
-        "description": "Subscription tile footer top corners,"
+        "description": "Card select (inner adjacent corners), Subscription tile footer top corners,"
       },
-      "M": {
+      "carousel": {
+        "value": "{global.border-radius.container.L}",
+        "type": "borderRadius",
+        "description": "Carousel (parent container), "
+      },
+      "note": {
         "value": "{global.border-radius.container.M}",
         "type": "borderRadius",
-        "description": "Subscription tile, "
+        "description": "Note"
+      },
+      "preview": {
+        "value": "{global.border-radius.container.M}",
+        "type": "borderRadius",
+        "description": "Carousel (slide), Link preview"
+      },
+      "subscriptiontile": {
+        "value": "{global.border-radius.container.M}",
+        "type": "borderRadius",
+        "description": "Subscription tile (and card select), "
       },
       "texteditor": {
         "value": "{global.border-radius.container.M}",
@@ -302,6 +317,18 @@
         "value": "{global.border-radius.container.S}",
         "type": "borderRadius",
         "description": "Tooltip\n"
+      },
+      "skeleton": {
+        "rectangle": {
+          "value": "{global.border-radius.container.M}",
+          "type": "borderRadius",
+          "description": "Skeleton (rectangle & text)"
+        },
+        "circle": {
+          "value": "{global.border-radius.circle}",
+          "type": "borderRadius",
+          "description": "Skeleton (circle)"
+        }
       }
     }
   }

@@ -173,12 +173,39 @@
       "none": {
         "value": "{global.border-radius.none}",
         "type": "borderRadius",
-        "description": "File input (top corners of integrated progress bar), "
+        "description": "File input (top corners of integrated progress bar),"
       },
-      "progressbar": {
+      "carouselselector": {
+        "value": "{global.border-radius.circle}",
+        "type": "borderRadius",
+        "description": "Carousel (selector dot)"
+      },
+      "integrated": {
         "value": "{global.border-radius.container.S}",
         "type": "borderRadius",
-        "description": "File input (bottom corners of integrated progress bar), "
+        "description": "File input (bottom corners of integrated status bar)"
+      },
+      "stepflow": {
+        "value": "{global.border-radius.circle}",
+        "type": "borderRadius",
+        "description": "Step flow (step indicators)"
+      },
+      "standalone": {
+        "S": {
+          "value": "{global.border-radius.container.XS}",
+          "type": "borderRadius",
+          "description": "Progress tracker S"
+        },
+        "M": {
+          "value": "{global.border-radius.container.S}",
+          "type": "borderRadius",
+          "description": "File input (bottom corners of integrated status bar), Progress tracker M, Scrollbar"
+        },
+        "L": {
+          "value": "{global.border-radius.container.M}",
+          "type": "borderRadius",
+          "description": "Progress tracker L"
+        }
       }
     }
   }
