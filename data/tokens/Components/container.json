@@ -316,12 +316,17 @@
       "subscriptiontile": {
         "value": "{global.border-radius.container.M}",
         "type": "borderRadius",
-        "description": "Subscription tile"
+        "description": "Subscription tile (and card select), "
       },
       "texteditor": {
         "value": "{global.border-radius.container.M}",
         "type": "borderRadius",
         "description": "Text editor (footer bottom corners)\n"
+      },
+      "tooltip": {
+        "value": "{global.border-radius.container.S}",
+        "type": "borderRadius",
+        "description": "Tooltip\n"
       },
       "card": {
         "moderate": {
@@ -379,6 +384,10 @@
           "type": "spacing"
         }
       },
+      "none": {
+        "value": "0",
+        "type": "spacing"
+      },
       "body": {
         "S": {
           "value": "{global.space.macro.XS}",
@@ -402,57 +411,13 @@
           "value": "{global.space.macro.XS}",
           "type": "spacing"
         },
-        "SM": {
+        "M": {
           "value": "{global.space.macro.S}",
           "type": "spacing"
         },
-        "M": {
+        "L": {
           "value": "{global.space.macro.M}",
           "type": "spacing"
-        }
-      }
-    },
-    "boxshadow": {
-      "carousel": {
-        "value": "{global.box-shadow.container.distant}",
-        "type": "boxShadow",
-        "description": "Carousel\n"
-      },
-      "colorpicker": {
-        "value": "{global.box-shadow.container.near}",
-        "type": "boxShadow",
-        "description": "Color picker (advanced)\n"
-      },
-      "dialog": {
-        "value": "{global.box-shadow.container.distant}",
-        "type": "boxShadow",
-        "description": "Dialog\n"
-      },
-      "filepreview": {
-        "value": "{global.box-shadow.container.distant}",
-        "type": "boxShadow",
-        "description": "File preview"
-      },
-      "sidebar": {
-        "value": "{global.box-shadow.container.distant}",
-        "type": "boxShadow",
-        "description": "Sidebar"
-      },
-      "stickyfooter": {
-        "value": "{global.box-shadow.container.sticky-footer}",
-        "type": "boxShadow",
-        "description": "Sticky footer in Dialog, Drawer, Sidebar."
-      },
-      "card": {
-        "enabled": {
-          "value": "{global.box-shadow.interactive.enabled}",
-          "type": "boxShadow",
-          "description": "Card (enabled)"
-        },
-        "hover": {
-          "value": "{global.box-shadow.interactive.hover}",
-          "type": "boxShadow",
-          "description": "Card (hover state)"
         }
       }
     }
