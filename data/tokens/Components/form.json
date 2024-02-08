@@ -149,15 +149,20 @@
         }
       },
       "calendar": {
-        "M": {
+        "date": {
           "value": "{global.size.macro.M}",
           "type": "sizing",
-          "description": "day buttons"
+          "description": "date buttons\n"
         },
-        "underline": {
+        "day": {
+          "value": "{global.size.macro.M}",
+          "type": "sizing",
+          "description": "Calendar day of the week HEIGHT\n"
+        },
+        "today": {
           "value": "{global.size.micro.XS}",
           "type": "sizing",
-          "description": "day underline"
+          "description": "today underline"
         }
       },
       "validation": {
@@ -445,67 +450,123 @@
     },
     "borderradius": {
       "none": {
-        "value": "{global.border-radius.none}",
+        "value": "{global.borderradius.none}",
         "type": "borderRadius",
         "description": "Text editor (internal corners)"
       },
       "fileupload": {
-        "value": "{global.border-radius.container.S}",
+        "value": "{global.borderradius.container.S}",
         "type": "borderRadius",
         "description": "File input (file uploads)"
       },
       "fileselector": {
-        "value": "{global.border-radius.container.S}",
+        "value": "{global.borderradius.container.S}",
         "type": "borderRadius",
         "description": "File preview (file selector asset)"
       },
       "input": {
-        "value": "{global.border-radius.interactive.S}",
+        "value": "{global.borderradius.interactive.S}",
         "type": "borderRadius",
         "description": "Checkbox, Date picker input, Date range input, Dropdown select (trigger), Search, File input (draggable area), Text area, Text input"
       },
       "radio": {
-        "value": "{global.border-radius.circle}",
+        "value": "{global.borderradius.circle}",
         "type": "borderRadius",
         "description": "Radio button"
       },
       "switch": {
-        "value": "{global.border-radius.circle}",
+        "value": "{global.borderradius.circle}",
         "type": "borderRadius",
         "description": "Switch container and handle"
       },
       "validationbar": {
-        "value": "{global.border-radius.interactive.XS}",
+        "value": "{global.borderradius.interactive.XS}",
         "type": "borderRadius",
         "description": "Validation bar"
       },
       "calendar": {
         "none": {
-          "value": "{global.border-radius.none}",
+          "value": "{global.borderradius.none}",
           "type": "borderRadius",
           "description": "Calendar (start and end duration)"
         },
         "date": {
-          "value": "{global.border-radius.circle}",
+          "value": "{global.borderradius.circle}",
           "type": "borderRadius",
           "description": "Calendar date (hover & selected), "
         },
         "today": {
-          "value": "{global.border-radius.container.XS}",
+          "value": "{global.borderradius.container.XS}",
           "type": "borderRadius",
           "description": "Calendar (today indicator)"
         }
       },
       "colorpicker": {
         "inner": {
-          "value": "{global.border-radius.interactive.S}",
+          "value": "{global.borderradius.interactive.S}",
           "type": "borderRadius",
           "description": "Color picker (swatch container), \n"
         },
         "outer": {
-          "value": "{global.border-radius.container.L}",
+          "value": "{global.borderradius.container.L}",
           "type": "borderRadius",
           "description": "Color picker advanced (parent container), \n"
+        }
+      }
+    },
+    "borderwidth": {
+      "caution": {
+        "value": "{global.borderwidth.interactive.XS}",
+        "type": "borderWidth",
+        "description": "Caution border"
+      },
+      "dragover": {
+        "value": "{global.borderwidth.interactive.S}",
+        "type": "borderWidth",
+        "description": "File upload (drag over state)"
+      },
+      "error": {
+        "value": "{global.borderwidth.interactive.S}",
+        "type": "borderWidth",
+        "description": "Error border"
+      },
+      "fileupload": {
+        "value": "{global.borderwidth.interactive.XS}",
+        "type": "borderWidth",
+        "description": "File input (file uploads)"
+      },
+      "input": {
+        "value": "{global.borderwidth.interactive.XS}",
+        "type": "borderWidth",
+        "description": "Input border"
+      },
+      "searchunderline": {
+        "value": "{global.borderwidth.interactive.S}",
+        "type": "borderWidth",
+        "description": "Search (without button variant)"
+      },
+      "switch": {
+        "value": "{global.borderwidth.interactive.S}",
+        "type": "borderWidth",
+        "description": "Switch"
+      },
+      "tile": {
+        "value": "{global.borderwidth.container.XS}",
+        "type": "borderWidth",
+        "description": "Tile border"
+      },
+      "divider": {
+        "item": {
+          "value": "{global.borderwidth.container.XS}",
+          "type": "borderWidth",
+          "description": "Dropdown menu (item divider)"
+        }
+      },
+      "calendar": {
+        "duration": {
+          "value": "{global.borderwidth.interactive.S}",
+          "type": "borderWidth",
+          "description": "Calendar (duration date top and bottom borders)"
         }
       }
     }

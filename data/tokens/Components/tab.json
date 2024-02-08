@@ -103,9 +103,31 @@
     },
     "borderradius": {
       "M": {
-        "value": "{global.border-radius.interactive.M}",
+        "value": "{global.borderradius.interactive.M}",
         "type": "borderRadius",
         "description": "Tab (top corners)"
+      }
+    },
+    "borderwidth": {
+      "active": {
+        "value": "{global.borderwidth.interactive.L}",
+        "type": "borderWidth",
+        "description": "Tab (active, active error, active caution bottom border)"
+      },
+      "caution": {
+        "value": "{global.borderwidth.interactive.XS}",
+        "type": "borderWidth",
+        "description": "Tab (caution: top, right, left borders)"
+      },
+      "enabled": {
+        "value": "{global.borderwidth.interactive.S}",
+        "type": "borderWidth",
+        "description": "Tab (enabled and hover bottom border)"
+      },
+      "error": {
+        "value": "{global.borderwidth.interactive.S}",
+        "type": "borderWidth",
+        "description": "Tab (error: top, right, left borders)"
       }
     }
   }

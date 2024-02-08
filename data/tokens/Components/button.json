@@ -1,6 +1,11 @@
 {
   "button": {
     "size": {
+      "split": {
+        "value": "{global.size.micro.XXS}",
+        "type": "sizing",
+        "description": "Split button (divider width)"
+      },
       "S": {
         "value": "{global.size.macro.S}",
         "type": "sizing",
@@ -260,7 +265,7 @@
               "type": "color"
             },
             "border-active": {
-              "value": "{base.color.interactive.monochrome.standard.active}",
+              "value": "{base.color.interactive.monochrome.inverse.active}",
               "type": "color"
             },
             "border-disabled": {
@@ -434,7 +439,7 @@
               "description": "If needed the value should be {base.color.interactive.danger.standard.withActive}"
             },
             "label-disabled": {
-              "value": "{base.color.interactive.inactive.standard.content}",
+              "value": "{base.color.interactive.inactive.standard.contentAlt}",
               "type": "color"
             },
             "label-enabled": {
@@ -521,7 +526,7 @@
               "type": "color"
             },
             "label-disabled": {
-              "value": "{base.color.interactive.inactive.standard.content}",
+              "value": "{base.color.interactive.inactive.standard.contentAlt}",
               "type": "color"
             },
             "label-enabled": {
@@ -652,29 +657,51 @@
     },
     "borderradius": {
       "none": {
-        "value": "{global.border-radius.none}",
+        "value": "{global.borderradius.none}",
         "type": "borderRadius",
         "description": "Button bar S, M, L (internal/adjacent corners), Search bar (button left corners)"
       },
       "S": {
-        "value": "{global.border-radius.interactive.L}",
+        "value": "{global.borderradius.interactive.L}",
         "type": "borderRadius",
         "description": "Buttons S (typical and destructive, and inc bar, split and multi), \nButton toggle M (parent container)"
       },
       "M": {
-        "value": "{global.border-radius.interactive.XL}",
+        "value": "{global.borderradius.interactive.XL}",
         "type": "borderRadius",
         "description": "Buttons  M (typical and destructive, and inc bar, split and multi), \nButton toggle L (parent container), Button toggle M (parent container)"
       },
       "L": {
-        "value": "{global.border-radius.interactive.XXL}",
+        "value": "{global.borderradius.interactive.XXL}",
         "type": "borderRadius",
         "description": "Buttons L (typical and destructive, and inc bar, split and multi), Button toggle L (parent container)"
       },
       "subtle": {
-        "value": "{global.border-radius.interactive.M}",
+        "value": "{global.borderradius.interactive.M}",
         "type": "borderRadius",
         "description": "Buttons subtle"
+      }
+    },
+    "borderwidth": {
+      "none": {
+        "value": "{global.borderwidth.none}",
+        "type": "borderWidth",
+        "description": "Override on tertiary buttons within Button-toggle.\n"
+      },
+      "secondary": {
+        "value": "{global.borderwidth.interactive.S}",
+        "type": "borderWidth",
+        "description": "Secondary button.\n"
+      },
+      "tertiary": {
+        "value": "{global.borderwidth.interactive.XS}",
+        "type": "borderWidth",
+        "description": "Tertiary button.\n"
+      },
+      "togglecontainer": {
+        "value": "{global.borderwidth.interactive.XS}",
+        "type": "borderWidth",
+        "description": "Toggle container"
       }
     }
   }
