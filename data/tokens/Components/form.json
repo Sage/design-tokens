@@ -32,32 +32,38 @@
         }
       },
       "divider": {
-        "M": {
-          "vertical": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Top and bottom padding on option divider in M size Dropdown"
-          },
-          "horizontal": {
+        "px": {
+          "M": {
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
             "description": "Left and right padding on option divider in M size Dropdown"
           }
+        },
+        "py": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top and bottom padding on option divider in M size Dropdown"
+          }
         }
       },
       "input": {
-        "M": {
-          "gap": {
+        "gap": {
+          "M": {
             "value": "{global.space.micro.S}",
             "type": "spacing",
             "description": "space between M size input label and icon"
-          },
-          "horizontal": {
+          }
+        },
+        "px": {
+          "M": {
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
             "description": "Left and right padding for M size input.\n"
-          },
-          "vertical": {
+          }
+        },
+        "py": {
+          "M": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
             "description": "Top and bottom padding for M size input and dropdown option."
@@ -65,23 +71,29 @@
         }
       },
       "fileinput": {
-        "M": {
-          "gap": {
+        "inputgap": {
+          "M": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
             "description": "Gap between placeholder and button in File input\n"
-          },
-          "horizontal": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "Left and right padding for M size File input.\n"
-          },
-          "row": {
+          }
+        },
+        "previewgap": {
+          "M": {
             "value": "{global.space.micro.XS}",
             "type": "spacing",
             "description": "Gap between file name row and uploading status row\n"
-          },
-          "vertical": {
+          }
+        },
+        "px": {
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Left and right padding for M size File input.\n"
+          }
+        },
+        "py": {
+          "M": {
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
             "description": "Top and bottom padding on File input"
@@ -89,41 +101,50 @@
         }
       },
       "option": {
-        "M": {
-          "slot": {
+        "icon": {
+          "M": {
             "value": "{global.space.micro.S}",
             "type": "spacing",
-            "description": "Right padding on icon, prefix and action text in M size dropdown"
-          },
-          "heading": {
+            "description": "Right spacing on icon in dropdown option"
+          }
+        },
+        "heading": {
+          "M": {
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
             "description": "top padding on dropdown option heading"
-          },
-          "right": {
+          }
+        },
+        "prefix": {
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Right spacing on prefix in dropdown option"
+          }
+        },
+        "pr": {
+          "M": {
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
             "description": "Right padding on option in M size Dropdown\n"
           }
         }
       },
-      "stack": {
-        "elements": {
+      "outer": {
+        "cozy": {
           "value": "{global.space.micro.L}",
           "type": "spacing",
           "description": "Space between label set and input"
-        }
-      },
-      "outer": {
-        "S": {
+        },
+        "comfortable": {
           "value": "{global.space.macro.XS}",
           "type": "spacing"
         },
-        "M": {
+        "generous": {
           "value": "{global.space.macro.M}",
           "type": "spacing"
         },
-        "L": {
+        "roomy": {
           "value": "{global.space.macro.L}",
           "type": "spacing"
         }
