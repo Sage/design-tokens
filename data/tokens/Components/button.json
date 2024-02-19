@@ -38,59 +38,87 @@
       }
     },
     "space": {
-      "inside": {
-        "XXS": {
-          "value": "{global.space.micro.XS}",
-          "type": "spacing",
-          "description": "left and right padding on subtle buttons"
-        },
-        "XS": {
-          "value": "{origin.dimension.50}",
-          "type": "spacing",
-          "description": "Item spacing on subtle button. Bottom and top padding on all buttons."
-        },
-        "S": {
-          "value": "{global.space.micro.L}",
-          "type": "spacing",
-          "description": "Item spacing on all buttons"
-        },
-        "M": {
-          "value": "{global.space.micro.XXL}",
-          "type": "spacing",
-          "description": "Left and right padding on small buttons"
-        },
-        "L": {
-          "value": "{global.space.macro.XS}",
-          "type": "spacing",
-          "description": "Left and right padding on medium buttons"
-        },
-        "XL": {
-          "value": "{global.space.macro.S}",
-          "type": "spacing",
-          "description": "Left and right padding on large buttons"
-        }
-      },
-      "layout": {
-        "S": {
-          "value": "{global.space.micro.L}",
-          "type": "spacing",
-          "description": "Item spacing on all buttons"
-        },
-        "M": {
-          "value": "{global.space.micro.XXL}",
-          "type": "spacing",
-          "description": "Left and right padding on small buttons"
-        },
-        "L": {
-          "value": "{global.space.macro.XS}",
-          "type": "spacing",
-          "description": "Left and right padding on medium buttons"
-        }
-      },
       "none": {
         "value": "0",
         "type": "spacing",
         "description": "top and bottom padding on small buttons"
+      },
+      "subtle": {
+        "px": {
+          "S": {
+            "value": "{global.space.micro.XS}",
+            "type": "spacing",
+            "description": "left and right padding on subtle buttons"
+          },
+          "M": {
+            "value": "{global.space.micro.XS}",
+            "type": "spacing",
+            "description": "left and right padding on subtle buttons"
+          },
+          "L": {
+            "value": "{global.space.micro.XS}",
+            "type": "spacing",
+            "description": "left and right padding on subtle buttons"
+          }
+        }
+      },
+      "typical": {
+        "py": {
+          "S": {
+            "value": "{origin.dimension.50}",
+            "type": "spacing",
+            "description": "Bottom and top padding on small buttons."
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top and bottom padding on medium buttons\n"
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Top and bottom padding on Large buttons\n"
+          }
+        },
+        "px": {
+          "S": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Left and right padding on small buttons"
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding on medium buttons"
+          },
+          "L": {
+            "value": "{global.space.macro.S}",
+            "type": "spacing",
+            "description": "Left and right padding on large buttons"
+          }
+        }
+      },
+      "layout": {
+        "XS": {
+          "value": "{global.space.micro.S}",
+          "type": "spacing",
+          "description": "Item spacing on subtle buttons"
+        },
+        "S": {
+          "value": "{global.space.micro.L}",
+          "type": "spacing",
+          "description": "Item spacing on small buttons"
+        },
+        "M": {
+          "value": "{global.space.macro.XS}",
+          "type": "spacing",
+          "description": "Item spacing on medium buttons"
+        },
+        "L": {
+          "value": "{global.space.macro.M}",
+          "type": "spacing",
+          "description": "Item spacing on Large buttons"
+        }
       }
     },
     "color": {
