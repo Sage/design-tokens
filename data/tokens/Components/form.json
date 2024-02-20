@@ -21,121 +21,166 @@
           }
         }
       },
-      "input": {
-        "gap": {
-          "M": {
-            "value": "{global.space.micro.S}",
-            "type": "spacing",
-            "description": "space between M size input label and icon"
-          }
-        },
-        "px": {
-          "M": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "Left and right padding for M size input. Right padding on dropdown option. Right padding on Password input container. Left and right padding on password inputText.\n"
-          }
-        },
-        "py": {
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Top and bottom padding for M size input and dropdown option."
-          }
-        }
-      },
       "fileinput": {
-        "inputgap": {
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Gap between placeholder and button in File input. Gap between checkbox/radio and label.\n"
-          }
-        },
-        "previewgap": {
-          "M": {
-            "value": "{global.space.micro.XS}",
-            "type": "spacing",
-            "description": "Gap between file name row and uploading status row\n"
-          }
-        },
-        "px": {
+        "x": {
           "M": {
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
-            "description": "Left and right padding for M size File input.\n"
+            "description": "Right left padding in File input (preview container)."
           }
         },
-        "py": {
+        "y": {
           "M": {
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
-            "description": "Top and bottom padding on File input"
+            "description": "Top padding in file input (preview container)."
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Vertical gap in file input (input container)."
           }
         }
       },
       "integral": {
-        "gap": {
-          "pv": {
+        "numdate": {
+          "value": "{global.space.micro.S}",
+          "type": "spacing",
+          "description": "Space between secondarylabel&input in Numeral date."
+        },
+        "popover": {
+          "value": "{global.space.micro.M}",
+          "type": "spacing",
+          "description": "Space between input and popover"
+        },
+        "stack": {
+          "value": "{global.space.micro.L}",
+          "type": "spacing",
+          "description": "Space below labelset, before the input. Space between input and preview containers in File input. Space between input and character count."
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button)"
+          },
+          "M": {
+            "value": "{global.space.micro.M}",
+            "type": "spacing",
+            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button, dropdown option icon and label)"
+          },
+          "L": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
-            "description": "Space below labelset, before the input. Space between input and preview containers in File input."
+            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button)"
+          }
+        }
+      },
+      "input": {
+        "stack": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Vertical gap on custom date range between the 2 inputs."
+          },
+          "M": {
+            "value": "{global.space.macro.S}",
+            "type": "spacing",
+            "description": "Vertical gap on custom date range between the 2 inputs."
+          },
+          "L": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Vertical gap on custom date range between the 2 inputs."
+          }
+        },
+        "x": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Left right padding on input."
+          },
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Left right padding on input. Right padding on dropdown option."
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left right padding on input."
+          }
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Horizontal gap between checkboxes and radios within a group."
+          },
+          "M": {
+            "value": "{global.space.macro.S}",
+            "type": "spacing",
+            "description": "Horizontal gap between checkboxes and radios within a group."
+          },
+          "L": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Horizontal gap between checkboxes and radios within a group."
+          }
+        },
+        "y": {
+          "S": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Top bottom padding on input."
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top bottom padding on input."
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Top bottom padding on input."
+          }
+        },
+        "yg": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between rows of checkboxes or radios within a group."
+          },
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Gap between rows of checkboxes or radios within a group."
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Gap between rows of checkboxes or radios within a group."
           }
         }
       },
       "layout": {
-        "XS": {
-          "value": "{global.space.macro.XS}",
-          "type": "spacing",
-          "description": "Spacing between horizontal and vertical XS form components"
-        },
-        "S": {
-          "value": "{global.space.macro.XS}",
-          "type": "spacing",
-          "description": "Spacing between horizontal and vertical S form components"
-        },
-        "M": {
-          "value": "{global.space.macro.S}",
-          "type": "spacing",
-          "description": "Spacing between horizontal and vertical M form components"
-        },
-        "L": {
-          "value": "{global.space.macro.M}",
-          "type": "spacing",
-          "description": "Spacing between horizontal and vertical L form components"
-        },
-        "WHAT IS THIS FOR": {
-          "value": "{global.space.macro.L}",
-          "type": "spacing"
-        }
-      },
-      "option": {
-        "icon": {
-          "M": {
-            "value": "{global.space.micro.S}",
+        "stack": {
+          "S": {
+            "value": "{global.space.macro.XS}",
             "type": "spacing",
-            "description": "Right spacing on icon in dropdown option"
-          }
-        },
-        "heading": {
+            "description": "Spacing between horizontal and vertical S form components"
+          },
           "M": {
-            "value": "{global.space.micro.XXL}",
+            "value": "{global.space.macro.S}",
             "type": "spacing",
-            "description": "top padding on dropdown option heading"
-          }
-        },
-        "prefix": {
-          "M": {
-            "value": "{global.space.micro.S}",
+            "description": "Spacing between horizontal and vertical M form components"
+          },
+          "L": {
+            "value": "{global.space.macro.M}",
             "type": "spacing",
-            "description": "Right spacing on prefix in dropdown option"
-          }
-        },
-        "pr": {
-          "M": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "Right padding on option in M size Dropdown\n"
+            "description": "Spacing between horizontal and vertical L form components"
           }
         }
       }
