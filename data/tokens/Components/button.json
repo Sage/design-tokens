@@ -44,7 +44,7 @@
         "description": "top and bottom padding on small buttons"
       },
       "subtle": {
-        "px": {
+        "x": {
           "S": {
             "value": "{global.space.micro.XS}",
             "type": "spacing",
@@ -61,7 +61,7 @@
             "description": "left and right padding on subtle buttons"
           }
         },
-        "py": {
+        "y": {
           "S": {
             "value": "{origin.dimension.50}",
             "type": "spacing",
@@ -76,11 +76,28 @@
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
             "description": "Top and bottom padding on Large buttons\n"
+          }
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Item spacing on small buttons"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Item spacing on medium buttons"
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Item spacing on large buttons"
           }
         }
       },
       "typical": {
-        "py": {
+        "y": {
           "S": {
             "value": "{origin.dimension.50}",
             "type": "spacing",
@@ -97,7 +114,7 @@
             "description": "Top and bottom padding on Large buttons\n"
           }
         },
-        "px": {
+        "x": {
           "S": {
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
@@ -113,28 +130,47 @@
             "type": "spacing",
             "description": "Left and right padding on large buttons"
           }
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Item spacing on small buttons"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Item spacing on medium buttons"
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Item spacing on large buttons"
+          }
         }
       },
       "layout": {
-        "XS": {
-          "value": "{global.space.micro.S}",
-          "type": "spacing",
-          "description": "Item spacing on subtle buttons"
-        },
-        "S": {
-          "value": "{global.space.micro.L}",
-          "type": "spacing",
-          "description": "Item spacing on small buttons"
-        },
-        "M": {
-          "value": "{global.space.macro.XS}",
-          "type": "spacing",
-          "description": "Item spacing on medium buttons"
-        },
-        "L": {
-          "value": "{global.space.macro.M}",
-          "type": "spacing",
-          "description": "Item spacing on Large buttons"
+        "stack": {
+          "XS": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Item spacing on subtle buttons"
+          },
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Item spacing on small buttons"
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Item spacing on medium buttons"
+          },
+          "L": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Item spacing on Large buttons"
+          }
         }
       }
     },
