@@ -6,11 +6,25 @@
         "type": "spacing"
       },
       "fileinput": {
+        "status": {
+          "M": {
+            "value": "{global.space.macro.ML}",
+            "type": "spacing",
+            "description": "Left padding in File input (no-thumbnail variant, status text."
+          }
+        },
+        "thumbnail": {
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "All padding in File input (thumbnail container)."
+          }
+        },
         "x": {
           "M": {
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
-            "description": "Right left padding in File input (preview container)."
+            "description": "Right left padding in File input (preview container), the input container uses Input tokens."
           }
         },
         "y": {
@@ -101,17 +115,17 @@
           "S": {
             "value": "{global.space.macro.XS}",
             "type": "spacing",
-            "description": "Horizontal gap between checkboxes and radios within a group."
+            "description": "Horizontal gap between checkboxes and radios within a group, and between date or time inputs within a group."
           },
           "M": {
             "value": "{global.space.macro.S}",
             "type": "spacing",
-            "description": "Horizontal gap between checkboxes and radios within a group."
+            "description": "Horizontal gap between checkboxes and radios within a group, and between date or time inputs within a group."
           },
           "L": {
             "value": "{global.space.macro.M}",
             "type": "spacing",
-            "description": "Horizontal gap between checkboxes and radios within a group."
+            "description": "Horizontal gap between checkboxes and radios within a group, and between date or time inputs within a group."
           }
         },
         "y": {
@@ -180,11 +194,6 @@
         "description": "icon"
       },
       "input": {
-        "XS": {
-          "value": "{global.size.macro.XS}",
-          "type": "sizing",
-          "description": "min-height on XS inputs"
-        },
         "S": {
           "value": "{global.size.macro.S}",
           "type": "sizing",
