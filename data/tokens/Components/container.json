@@ -200,11 +200,17 @@
     },
     "size": {
       "scrollbar": {
-        "outside": {
+        "container": {
           "value": "{global.size.micro.XL}",
-          "type": "sizing"
+          "type": "sizing",
+          "description": "Container that the scrollbar sits within\n"
         },
-        "inside": {
+        "bg": {
+          "value": "{global.size.micro.M}",
+          "type": "sizing",
+          "description": "Scrollbar bg\n"
+        },
+        "fg": {
           "value": "{global.size.micro.S}",
           "type": "sizing",
           "description": "scrollbar handle"
@@ -323,6 +329,11 @@
         "value": "{global.borderradius.interactive.M}",
         "type": "borderRadius",
         "description": "Link preview (outer corners)"
+      },
+      "scrollbar": {
+        "value": "{global.borderradius.circle}",
+        "type": "borderRadius",
+        "description": "Scrollbar"
       },
       "subscriptiontile": {
         "value": "{global.borderradius.container.M}",
