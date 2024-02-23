@@ -199,31 +199,32 @@
       }
     },
     "size": {
-      "scrollbar": {
-        "container": {
-          "value": "{global.size.micro.XL}",
+      "accordionstandard": {
+        "chevron": {
+          "value": "{global.size.icon.L}",
           "type": "sizing",
-          "description": "Container that the scrollbar sits within\n"
-        },
-        "bg": {
-          "value": "{global.size.micro.M}",
-          "type": "sizing",
-          "description": "Scrollbar bg\n"
-        },
-        "fg": {
-          "value": "{global.size.micro.S}",
-          "type": "sizing",
-          "description": "scrollbar handle"
+          "description": "Accordion chevron container"
         }
       },
-      "pagination": {
-        "dots": {
-          "value": "{global.size.micro.L}",
-          "type": "sizing"
+      "drawer": {
+        "closed": {
+          "M": {
+            "value": "{global.size.macro.M}",
+            "type": "sizing",
+            "description": "width for the closed drawer state"
+          }
+        }
+      },
+      "footer": {
+        "M": {
+          "value": "{global.size.macro.XL}",
+          "type": "sizing",
+          "description": "card and tile footers"
         },
-        "height": {
-          "value": "{global.size.macro.M}",
-          "type": "sizing"
+        "L": {
+          "value": "{global.size.macro.XS} * 3",
+          "type": "sizing",
+          "description": "Dialog, sidebar and drawer footer max-height"
         }
       },
       "items": {
@@ -258,32 +259,38 @@
           "description": "min and max widths for responsive tile items"
         }
       },
-      "drawer": {
-        "closed": {
-          "M": {
-            "value": "{global.size.macro.M}",
-            "type": "sizing",
-            "description": "width for the closed drawer state"
-          }
-        }
-      },
-      "footer": {
-        "M": {
-          "value": "{global.size.macro.XL}",
-          "type": "sizing",
-          "description": "card and tile footers"
-        },
-        "L": {
-          "value": "{global.size.macro.XS} * 3",
-          "type": "sizing",
-          "description": "Dialog, sidebar and drawer footer max-height"
-        }
-      },
       "linkpreview": {
         "M": {
           "value": "{global.size.macro.XXXL}",
           "type": "sizing",
           "description": "Thumbnail container"
+        }
+      },
+      "pagination": {
+        "dots": {
+          "value": "{global.size.micro.L}",
+          "type": "sizing"
+        },
+        "height": {
+          "value": "{global.size.macro.M}",
+          "type": "sizing"
+        }
+      },
+      "scrollbar": {
+        "container": {
+          "value": "{global.size.micro.XL}",
+          "type": "sizing",
+          "description": "Container that the scrollbar sits within\n"
+        },
+        "bg": {
+          "value": "{global.size.micro.M}",
+          "type": "sizing",
+          "description": "Scrollbar bg\n"
+        },
+        "fg": {
+          "value": "{global.size.micro.S}",
+          "type": "sizing",
+          "description": "scrollbar handle"
         }
       },
       "tooltipArrow": {
@@ -387,40 +394,56 @@
         "value": "0",
         "type": "spacing"
       },
-      "footer": {
-        "x": {
-          "S": {
-            "value": "{global.space.macro.S}",
-            "type": "spacing",
-            "description": "Left and right padding S card and S tile footers"
-          },
+      "accordionsubtle": {
+        "integral": {
+          "value": "{global.space.micro.S}",
+          "type": "spacing",
+          "description": "Gap between icon and label in subtle accordion."
+        },
+        "pl": {
           "M": {
-            "value": "{global.space.macro.M}",
+            "value": "{global.space.micro.XL}",
             "type": "spacing",
-            "description": "Left and right padding on dialog, drawer, M card, M tile and sidebar footers"
-          },
-          "L": {
-            "value": "{global.space.macro.L}",
+            "description": "Left padding on Subtle accordion vertical line"
+          }
+        },
+        "x": {
+          "M": {
+            "value": "{global.space.micro.XS}",
             "type": "spacing",
-            "description": "Left and right padding on large card and tile footers"
+            "description": "Horizontal padding on Accordion subtle."
           }
         },
         "y": {
           "M": {
+            "value": "{global.space.micro.XS}",
+            "type": "spacing",
+            "description": "Vertical padding on Accordion subtle."
+          }
+        },
+        "yg": {
+          "M": {
             "value": "{global.space.macro.XS}",
             "type": "spacing",
-            "description": "top and bottom padding on dialog, drawer and sidebar footers"
+            "description": "Gap between Accordion subtle trigger and content"
           }
         }
       },
-      "integral": {
-        "timestamp": {
-          "value": "{global.space.micro.S}",
-          "type": "spacing",
-          "description": "Gap between text elements inside timestamp."
-        }
-      },
       "content": {
+        "pb": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Bottom padding on content in Accordion, Dialog, Drawer, Sidebar"
+          }
+        },
+        "pt": {
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Top padding on content in Accordion, Dialog, Drawer, Sidebar"
+          }
+        },
         "x": {
           "S": {
             "value": "{global.space.macro.S}",
@@ -449,7 +472,33 @@
           "M": {
             "value": "{global.space.macro.XS}",
             "type": "spacing",
-            "description": "vertical gap between content items in dialog, drawer, sidebar, M card and M tile"
+            "description": "Vertical gap between content items in dialog, drawer, sidebar, M card and M tile. "
+          }
+        }
+      },
+      "footer": {
+        "x": {
+          "S": {
+            "value": "{global.space.macro.S}",
+            "type": "spacing",
+            "description": "Left and right padding S card and S tile footers"
+          },
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Left and right padding on dialog, drawer, M card, M tile and sidebar footers"
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Left and right padding on large card and tile footers"
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "top and bottom padding on dialog, drawer and sidebar footers"
           }
         }
       },
@@ -468,12 +517,26 @@
             "description": "horizontal space between dialog heading and subheader"
           }
         },
+        "y": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Vertical padding on Accordion header"
+          }
+        },
         "yg": {
           "M": {
             "value": "{global.space.micro.S}",
             "type": "spacing",
-            "description": "vertical space between dialog heading and subheader"
+            "description": "vertical space between heading and subheading in dialog, accordion"
           }
+        }
+      },
+      "timestamp": {
+        "integral": {
+          "value": "{global.space.micro.S}",
+          "type": "spacing",
+          "description": "Gap between text elements inside timestamp."
         }
       }
     },
