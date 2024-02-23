@@ -42,6 +42,22 @@
           }
         }
       },
+      "calendar": {
+        "largevp": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Horizontal padding on calendar, for large viewports."
+          }
+        },
+        "smallvp": {
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Horizontal padding on calendar, for small viewports."
+          }
+        }
+      },
       "integral": {
         "numdate": {
           "value": "{global.space.micro.S}",
@@ -193,54 +209,21 @@
         "type": "sizing",
         "description": "icon"
       },
-      "input": {
-        "S": {
-          "value": "{global.size.macro.S}",
-          "type": "sizing",
-          "description": "min-height on S inputs"
-        },
-        "M": {
+      "calendar": {
+        "date": {
           "value": "{global.size.macro.M}",
           "type": "sizing",
-          "description": "Min height on M Inputs and M Dropdowns. Fixed height on Calendar days"
+          "description": "date buttons\n"
         },
-        "L": {
-          "value": "{global.size.macro.L}",
+        "day": {
+          "value": "{global.size.macro.M}",
           "type": "sizing",
-          "description": "L Inputs, Color picker square"
-        }
-      },
-      "fileinput": {
-        "preview": {
-          "value": "{global.size.macro.XXXL}",
-          "type": "sizing",
-          "description": "File input container for thumbnail, progress, or icon."
-        }
-      },
-      "switch": {
-        "handle": {
-          "M": {
-            "value": "{global.size.macro.XXS}",
-            "type": "sizing",
-            "description": "S switch knob"
-          },
-          "L": {
-            "value": "{global.size.macro.XS} + {global.size.micro.XS}",
-            "type": "sizing",
-            "description": "L switch knob"
-          }
+          "description": "Calendar day of the week HEIGHT\n"
         },
-        "container": {
-          "M": {
-            "value": "{global.size.macro.S}",
-            "type": "sizing",
-            "description": "S switch container"
-          },
-          "L": {
-            "value": "{global.size.macro.L}",
-            "type": "sizing",
-            "description": "L switch container"
-          }
+        "today": {
+          "value": "{global.size.micro.XS}",
+          "type": "sizing",
+          "description": "today underline"
         }
       },
       "checkbox": {
@@ -258,6 +241,56 @@
           "value": "{global.size.macro.S}",
           "type": "sizing",
           "description": "L checkboxes"
+        }
+      },
+      "fileinput": {
+        "preview": {
+          "value": "{global.size.macro.XXXL}",
+          "type": "sizing",
+          "description": "File input container for thumbnail, progress, or icon."
+        }
+      },
+      "input": {
+        "S": {
+          "value": "{global.size.macro.S}",
+          "type": "sizing",
+          "description": "min-height on S inputs"
+        },
+        "M": {
+          "value": "{global.size.macro.M}",
+          "type": "sizing",
+          "description": "Min height on M Inputs and M Dropdowns. Fixed height on Calendar days"
+        },
+        "L": {
+          "value": "{global.size.macro.L}",
+          "type": "sizing",
+          "description": "L Inputs, Color picker square"
+        }
+      },
+      "switch": {
+        "container": {
+          "M": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "S switch container"
+          },
+          "L": {
+            "value": "{global.size.macro.L}",
+            "type": "sizing",
+            "description": "L switch container"
+          }
+        },
+        "handle": {
+          "M": {
+            "value": "{global.size.macro.XXS}",
+            "type": "sizing",
+            "description": "S switch knob"
+          },
+          "L": {
+            "value": "{global.size.macro.XS} + {global.size.micro.XS}",
+            "type": "sizing",
+            "description": "L switch knob"
+          }
         }
       },
       "radio": {
@@ -296,23 +329,6 @@
           }
         }
       },
-      "calendar": {
-        "date": {
-          "value": "{global.size.macro.M}",
-          "type": "sizing",
-          "description": "date buttons\n"
-        },
-        "day": {
-          "value": "{global.size.macro.M}",
-          "type": "sizing",
-          "description": "Calendar day of the week HEIGHT\n"
-        },
-        "today": {
-          "value": "{global.size.micro.XS}",
-          "type": "sizing",
-          "description": "today underline"
-        }
-      },
       "validation": {
         "bar": {
           "value": "{global.size.micro.XXS}",
@@ -325,10 +341,6 @@
       "calendar": {
         "bg-active": {
           "value": "{base.color.interactive.monochrome.standard.active}",
-          "type": "color"
-        },
-        "bg-default": {
-          "value": "{base.color.interactive.monochrome.standard.withActive}",
           "type": "color"
         },
         "bg-disabled": {
