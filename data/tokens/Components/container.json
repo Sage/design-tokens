@@ -227,36 +227,51 @@
           "description": "Dialog, sidebar and drawer footer max-height"
         }
       },
-      "items": {
+      "responsive": {
+        "XXS": {
+          "value": "{global.size.mega.XXS}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
         "XS": {
-          "value": "{global.size.flexbox.Items.XS}",
+          "value": "{global.size.mega.XS}",
           "type": "sizing",
           "description": "min and max widths for responsive tile items"
         },
         "S": {
-          "value": "{global.size.flexbox.Items.S}",
+          "value": "{global.size.mega.S}",
           "type": "sizing",
-          "description": "min and max widths for responsive tile items"
+          "description": "min and max widths for responsive tile items. Min width for Tile select content wrapper."
         },
         "M": {
-          "value": "{global.size.flexbox.Items.M}",
+          "value": "{global.size.mega.M}",
           "type": "sizing",
           "description": "min and max widths for responsive tile items"
         },
         "L": {
-          "value": "{global.size.flexbox.Items.L}",
+          "value": "{global.size.mega.L}",
           "type": "sizing",
           "description": "min and max widths for responsive tile items"
         },
         "XL": {
-          "value": "{global.size.flexbox.Items.XL}",
+          "value": "{global.size.mega.XL}",
+          "type": "sizing",
+          "description": "Small screen mid width inside page margins."
+        },
+        "XXL": {
+          "value": "{global.size.mega.XXL}",
+          "type": "sizing",
+          "description": "Small screen full page width."
+        },
+        "XXXL": {
+          "value": "{global.size.mega.XXXL}",
           "type": "sizing",
           "description": "min and max widths for responsive tile items"
         },
-        "XXL": {
-          "value": "{global.size.flexbox.Items.XXL}",
+        "XXXXL": {
+          "value": "{global.size.mega.XXXXL}",
           "type": "sizing",
-          "description": "min and max widths for responsive tile items"
+          "description": "Max width for single line of text."
         }
       },
       "linkpreview": {
@@ -605,6 +620,78 @@
             }
           }
         }
+      },
+      "tilecard": {
+        "x": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Right left padding on Tile or Card."
+          },
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Right left padding on Tile or Card."
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Right left padding on Tile or Card."
+          }
+        },
+        "y": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Top bottom padding on Tile or Card."
+          },
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Top bottom padding on Tile or Card."
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Top bottom padding on Tile or Card."
+          }
+        }
+      },
+      "tileflex": {
+        "x": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding on Tile flex"
+          },
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Left and right padding on Tile flex"
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Left and right padding on Tile flex"
+          }
+        },
+        "y": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top bottom padding on Tile flex"
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Top bottom padding on Tile flex"
+          },
+          "L": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Top bottom padding on Tile flex"
+          }
+        }
       }
     },
     "boxshadow": {
@@ -751,6 +838,18 @@
           "value": "{global.borderwidth.XS}",
           "type": "borderWidth",
           "description": "Subscription tile (unavailable product)"
+        }
+      },
+      "tileselect": {
+        "enabled": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth",
+          "description": "Tile select (enabled tile)"
+        },
+        "selected": {
+          "value": "{global.borderwidth.S}",
+          "type": "borderWidth",
+          "description": "Tile select (selected tile)"
         }
       }
     }

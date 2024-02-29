@@ -9,6 +9,18 @@
         "value": "{origin.dimension.0}",
         "type": "sizing"
       },
+      "container": {
+        "M": {
+          "value": "{origin.dimension.3600}",
+          "type": "sizing",
+          "description": "Inside page margins full width component in smallest mobile screen."
+        },
+        "L": {
+          "value": "{origin.dimension.4000}",
+          "type": "sizing",
+          "description": "Full width component in smallest mobile screen."
+        }
+      },
       "icon": {
         "S": {
           "value": "{origin.dimension.200} * {global.size.scale}",
@@ -21,6 +33,53 @@
         "L": {
           "value": "{origin.dimension.400} * {global.size.scale}",
           "type": "sizing"
+        }
+      },
+      "mega": {
+        "XXS": {
+          "value": "{origin.dimension.1000}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "XS": {
+          "value": "{origin.dimension.1600}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "S": {
+          "value": "{origin.dimension.2000}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items. Min width for Tile select content wrapper."
+        },
+        "M": {
+          "value": "{origin.dimension.2500}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "L": {
+          "value": "{origin.dimension.3000}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "XL": {
+          "value": "{origin.dimension.3600}",
+          "type": "sizing",
+          "description": "Max size of small screen component within page margin"
+        },
+        "XXL": {
+          "value": "{origin.dimension.4000}",
+          "type": "sizing",
+          "description": "Full width of small screen component"
+        },
+        "XXXL": {
+          "value": "{origin.dimension.7000}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "XXXXL": {
+          "value": "{origin.dimension.9500}",
+          "type": "sizing",
+          "description": "Max width on single lines of text."
         }
       },
       "macro": {
@@ -81,40 +140,6 @@
         "XXL": {
           "value": "{origin.dimension.200} * {global.size.scale}",
           "type": "sizing"
-        }
-      },
-      "flexbox": {
-        "Items": {
-          "XS": {
-            "value": "{origin.dimension.1000}",
-            "type": "sizing",
-            "description": "min and max widths for responsive tile items"
-          },
-          "S": {
-            "value": "{origin.dimension.1600}",
-            "type": "sizing",
-            "description": "min and max widths for responsive tile items"
-          },
-          "M": {
-            "value": "{origin.dimension.2000}",
-            "type": "sizing",
-            "description": "min and max widths for responsive tile items"
-          },
-          "L": {
-            "value": "{origin.dimension.2500}",
-            "type": "sizing",
-            "description": "min and max widths for responsive tile items"
-          },
-          "XL": {
-            "value": "{origin.dimension.3000}",
-            "type": "sizing",
-            "description": "min and max widths for responsive tile items"
-          },
-          "XXL": {
-            "value": "{origin.dimension.7000}",
-            "type": "sizing",
-            "description": "min and max widths for responsive tile items"
-          }
         }
       }
     }
