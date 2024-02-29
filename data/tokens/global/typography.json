@@ -1,224 +1,281 @@
 {
   "global": {
     "typography": {
-      "web": {
-        "hero heading": {
+      "heroheading": {
+        "M": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-headline}",
+            "fontWeight": "{origin.fontWeights.black}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.fontSize.web.step7}"
+          },
+          "type": "typography",
+          "description": "Small Viewports: 27.42, Large Viewports: 45.22"
+        },
+        "L": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-headline}",
+            "fontWeight": "{origin.fontWeights.black}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.fontSize.web.step8}"
+          },
+          "type": "typography",
+          "description": "Small Viewports: 29.61, Large Viewports: 52.45"
+        }
+      },
+      "heading": {
+        "S": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.bold}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.fontSize.web.step3}"
+          },
+          "type": "typography",
+          "description": "Small Viewports: 20.16, Large Viewports: 24.97"
+        },
+        "M": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.bold}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.fontSize.web.step4}"
+          },
+          "type": "typography",
+          "description": "Small Viewports: 21.77, Large Viewports: 28.97"
+        },
+        "L": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.bold}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.fontSize.web.step5}"
+          },
+          "type": "typography",
+          "description": "Small Viewports: 23.51, Large Viewports: 33.61"
+        },
+        "XL": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.bold}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.fontSize.web.step6}"
+          },
+          "type": "typography",
+          "description": "Small Viewports: 25.39, Large Viewports: 38.98"
+        }
+      },
+      "subheading": {
+        "M": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.medium}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.fontSize.web.step3}"
+          },
+          "type": "typography",
+          "description": "Small Viewports: 20.16, Large Viewports: 24.97"
+        },
+        "L": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.medium}",
+            "lineHeight": "{origin.lineHeights.400}",
+            "fontSize": "{origin.fontSize.web.step4}"
+          },
+          "type": "typography",
+          "description": "Small Viewports: 21.77, Large Viewports: 28.97"
+        }
+      },
+      "body": {
+        "M": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.regular}",
+            "lineHeight": "{origin.lineHeights.500}",
+            "fontSize": "{origin.fontSize.web.step0}"
+          },
+          "type": "typography",
+          "description": "Small Viewports: 16, Large Viewports: 16"
+        },
+        "L": {
+          "value": {
+            "fontFamily": "{origin.fontFamilies.sage-text}",
+            "fontWeight": "{origin.fontWeights.regular}",
+            "lineHeight": "{origin.lineHeights.500}",
+            "fontSize": "{origin.fontSize.web.step2}"
+          },
+          "type": "typography",
+          "description": "Small Viewports: 18.66, Large Viewports: 21.53"
+        }
+      },
+      "component": {
+        "badge": {
           "M": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-headline}",
-              "fontWeight": "{origin.fontWeights.black}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.fontSize.web.step7}"
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.medium}",
+              "lineHeight": "{origin.lineHeights.500}",
+              "fontSize": "{origin.fontSize.web.step-2}"
             },
             "type": "typography",
-            "description": "Small Viewports: 27.42, Large Viewports: 45.22"
-          },
-          "L": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-headline}",
-              "fontWeight": "{origin.fontWeights.black}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.fontSize.web.step8}"
-            },
-            "type": "typography",
-            "description": "Small Viewports: 29.61, Large Viewports: 52.45"
+            "description": "Small Viewports: 13.72, Large Viewports: 11.89. Match token size to component size."
           }
         },
-        "heading": {
+        "firm": {
           "S": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.fontSize.web.step3}"
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.medium}",
+              "lineHeight": "{origin.lineHeights.500}",
+              "fontSize": "{origin.fontSize.web.step-1}"
             },
             "type": "typography",
-            "description": "Small Viewports: 20.16, Large Viewports: 24.97"
+            "description": "Small Viewports: 14.81, Large Viewports: 13.79. Match token size to component size."
           },
           "M": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.fontSize.web.step4}"
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.medium}",
+              "lineHeight": "{origin.lineHeights.500}",
+              "fontSize": "{origin.fontSize.web.step0}"
             },
             "type": "typography",
-            "description": "Small Viewports: 21.77, Large Viewports: 28.97"
+            "description": "Small Viewports: 16, Large Viewports: 16. Match token size to component size."
           },
           "L": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.fontSize.web.step5}"
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.medium}",
+              "lineHeight": "{origin.lineHeights.500}",
+              "fontSize": "{origin.fontSize.web.step1}"
             },
             "type": "typography",
-            "description": "Small Viewports: 23.51, Large Viewports: 33.61"
-          },
-          "XL": {
-            "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.bold}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.fontSize.web.step6}"
-            },
-            "type": "typography",
-            "description": "Small Viewports: 25.39, Large Viewports: 38.98"
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56. Match token size to component size."
           }
         },
-        "subheading": {
+        "container": {
+          "heading": {
+            "S": {
+              "value": {
+                "fontFamily": "{origin.fontFamilies.sage-ui}",
+                "fontWeight": "{origin.fontWeights.medium}",
+                "lineHeight": "{origin.lineHeights.500}",
+                "fontSize": "{origin.fontSize.web.step1}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 17.28, Large Viewports: 18.56. Token size may not match component size. Subscription tile, Tile select, Note."
+            },
+            "M": {
+              "value": {
+                "fontFamily": "{origin.fontFamilies.sage-ui}",
+                "fontWeight": "{origin.fontWeights.medium}",
+                "lineHeight": "{origin.lineHeights.500}",
+                "fontSize": "{origin.fontSize.web.step2}"
+              },
+              "type": "typography",
+              "description": "MEDIUM. Small Viewports: 18.66, Large Viewports: 21.53. Token size may not match component size. Accordion standard."
+            },
+            "L": {
+              "value": {
+                "fontFamily": "{origin.fontFamilies.sage-ui}",
+                "fontWeight": "{origin.fontWeights.bold}",
+                "lineHeight": "{origin.lineHeights.500}",
+                "fontSize": "{origin.fontSize.web.step3}"
+              },
+              "type": "typography",
+              "description": "BOLD Small Viewports: 20.16, Large Viewports: 24.97. Token size may not match component size. Dialog, Drawer, Sidebar."
+            }
+          },
+          "preheading": {
+            "S": {
+              "value": {
+                "fontFamily": "{origin.fontFamilies.sage-ui}",
+                "fontWeight": "{origin.fontWeights.medium}",
+                "lineHeight": "{origin.lineHeights.500}",
+                "fontSize": "{origin.fontSize.web.step0}"
+              },
+              "type": "typography",
+              "description": "MEDIUM. Small Viewports: 16, Large Viewports: 16. Token size may not match component size. Dialog (goal heading)."
+            }
+          },
+          "subheading": {
+            "S": {
+              "value": {
+                "fontFamily": "{origin.fontFamilies.sage-ui}",
+                "fontWeight": "{origin.fontWeights.regular}",
+                "lineHeight": "{origin.lineHeights.500}",
+                "fontSize": "{origin.fontSize.web.step0}"
+              },
+              "type": "typography",
+              "description": "REGULAR. Small Viewports: 16, Large Viewports: 16. Token size may not match component size. Accordion standard."
+            },
+            "M": {
+              "value": {
+                "fontFamily": "{origin.fontFamilies.sage-ui}",
+                "fontWeight": "{origin.fontWeights.regular}",
+                "lineHeight": "{origin.lineHeights.500}",
+                "fontSize": "{origin.fontSize.web.step1}"
+              },
+              "type": "typography",
+              "description": "REGULAR. Small Viewports: 17.28, Large Viewports: 18.56. Token size may not match component size. Dialog."
+            }
+          }
+        },
+        "link": {
           "M": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.medium}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.fontSize.web.step3}"
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.regular}",
+              "lineHeight": "{origin.lineHeights.500}",
+              "fontSize": "{origin.fontSize.web.step0}",
+              "textDecoration": "underline"
             },
             "type": "typography",
-            "description": "Small Viewports: 20.16, Large Viewports: 24.97"
+            "description": "Small Viewports: 16, Large Viewports: 16. Match token size to component size."
           },
           "L": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
-              "fontWeight": "{origin.fontWeights.medium}",
-              "lineHeight": "{origin.lineHeights.400}",
-              "fontSize": "{origin.fontSize.web.step4}"
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.regular}",
+              "lineHeight": "{origin.lineHeights.500}",
+              "fontSize": "{origin.fontSize.web.step1}",
+              "textDecoration": "underline"
             },
             "type": "typography",
-            "description": "Small Viewports: 21.77, Large Viewports: 28.97"
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56. Match token size to component size."
           }
         },
-        "body": {
+        "neutral": {
+          "S": {
+            "value": {
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
+              "fontWeight": "{origin.fontWeights.regular}",
+              "lineHeight": "{origin.lineHeights.500}",
+              "fontSize": "{origin.fontSize.web.step-1}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 14.81, Large Viewports: 13.79. Match token size to component size."
+          },
           "M": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
               "fontWeight": "{origin.fontWeights.regular}",
               "lineHeight": "{origin.lineHeights.500}",
               "fontSize": "{origin.fontSize.web.step0}"
             },
             "type": "typography",
-            "description": "Small Viewports: 16, Large Viewports: 16"
+            "description": "Small Viewports: 16, Large Viewports: 16. Match token size to component size."
           },
           "L": {
             "value": {
-              "fontFamily": "{origin.fontFamilies.sage-text}",
+              "fontFamily": "{origin.fontFamilies.sage-ui}",
               "fontWeight": "{origin.fontWeights.regular}",
               "lineHeight": "{origin.lineHeights.500}",
-              "fontSize": "{origin.fontSize.web.step2}"
+              "fontSize": "{origin.fontSize.web.step1}"
             },
             "type": "typography",
-            "description": "Small Viewports: 18.66, Large Viewports: 21.53"
-          }
-        },
-        "component": {
-          "badge": {
-            "M": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.medium}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.fontSize.web.step-2}"
-              },
-              "type": "typography",
-              "description": "Small Viewports: 12, Large Viewports: 12"
-            }
-          },
-          "firm": {
-            "XS": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.medium}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.fontSize.web.step-2}"
-              },
-              "type": "typography",
-              "description": "Small Viewports: 13.72, Large Viewports: 11.89"
-            },
-            "S": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.medium}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.fontSize.web.step-1}"
-              },
-              "type": "typography",
-              "description": "Small Viewports: 14.81, Large Viewports: 13.79"
-            },
-            "M": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.medium}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.fontSize.web.step0}"
-              },
-              "type": "typography",
-              "description": "Small Viewports: 16, Large Viewports: 16"
-            },
-            "L": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.medium}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.fontSize.web.step1}"
-              },
-              "type": "typography",
-              "description": "Small Viewports: 17.28, Large Viewports: 18.56"
-            }
-          },
-          "link": {
-            "M": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.regular}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.fontSize.web.step0}",
-                "textDecoration": "underline"
-              },
-              "type": "typography",
-              "description": "Small Viewports: 16, Large Viewports: 16"
-            }
-          },
-          "neutral": {
-            "XS": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.regular}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.fontSize.web.step-2}"
-              },
-              "type": "typography",
-              "description": "Small Viewports: 13.72, Large Viewports: 11.89"
-            },
-            "S": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.regular}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.fontSize.web.step-1}"
-              },
-              "type": "typography",
-              "description": "Small Viewports: 14.81, Large Viewports: 13.79"
-            },
-            "M": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.regular}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.fontSize.web.step0}"
-              },
-              "type": "typography",
-              "description": "Small Viewports: 16, Large Viewports: 16"
-            },
-            "L": {
-              "value": {
-                "fontFamily": "{origin.fontFamilies.sage-ui}",
-                "fontWeight": "{origin.fontWeights.regular}",
-                "lineHeight": "{origin.lineHeights.500}",
-                "fontSize": "{origin.fontSize.web.step1}"
-              },
-              "type": "typography",
-              "description": "Small Viewports: 17.28, Large Viewports: 18.56"
-            }
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56. Match token size to component size."
           }
         }
       }
