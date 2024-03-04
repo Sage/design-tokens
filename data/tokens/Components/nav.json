@@ -182,6 +182,77 @@
           "description": "Menu (segment divider)"
         }
       }
+    },
+    "space": {
+      "menu": {
+        "button": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Left right padding on button within menu item."
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Gap spacing inside button within menu item."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top bottom padding in button within menu item."
+            }
+          }
+        },
+        "item": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Left right padding on menu item (which contains menu button)."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top bottom padding on menu item (which contains menu button)."
+            }
+          }
+        }
+      },
+      "navleft": {
+        "collapsed": {
+          "button": {
+            "y": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top bottom spacing on left nav collapsed menu item."
+            },
+            "yg": {
+              "value": "{global.space.micro.XS}",
+              "type": "spacing",
+              "description": "Spacing gap inside collapsible menu buttons."
+            }
+          },
+          "container": {
+            "y": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Top bottom padding in collapsible left nav."
+            },
+            "yg": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "Space between menu items in collapsible left nav."
+            }
+          }
+        }
+      }
     }
   }
 }

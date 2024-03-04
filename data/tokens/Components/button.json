@@ -28,6 +28,25 @@
         "type": "spacing",
         "description": "top and bottom padding on small buttons"
       },
+      "layout": {
+        "gap": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Spacing between small buttons"
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Spacing between medium buttons"
+          },
+          "L": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Spacing between Large buttons"
+          }
+        }
+      },
       "subtle": {
         "x": {
           "S": {
@@ -46,42 +65,23 @@
             "description": "left and right padding on subtle buttons"
           }
         },
-        "y": {
-          "S": {
-            "value": "{origin.dimension.50}",
-            "type": "spacing",
-            "description": "Bottom and top padding on small buttons."
-          },
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Top and bottom padding on medium buttons\n"
-          },
-          "L": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "Top and bottom padding on Large buttons\n"
-          }
-        },
         "xg": {
           "S": {
             "value": "{global.space.micro.S}",
             "type": "spacing",
-            "description": "Item spacing on small buttons"
+            "description": "Item spacing inside buttons"
           },
           "M": {
             "value": "{global.space.micro.S}",
             "type": "spacing",
-            "description": "Item spacing on medium buttons"
+            "description": "Item spacing inside buttons"
           },
           "L": {
             "value": "{global.space.micro.S}",
             "type": "spacing",
-            "description": "Item spacing on large buttons"
+            "description": "Item spacing inside buttons"
           }
-        }
-      },
-      "typical": {
+        },
         "y": {
           "S": {
             "value": "{origin.dimension.50}",
@@ -98,7 +98,87 @@
             "type": "spacing",
             "description": "Top and bottom padding on Large buttons\n"
           }
+        }
+      },
+      "toggle": {
+        "button": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Left and right padding on medium toggle buttons"
+            },
+            "L": {
+              "value": "{global.space.macro.S}",
+              "type": "spacing",
+              "description": "Left and right padding on buttons"
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Item spacing inside toggle buttons"
+            },
+            "L": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Item spacing inside toggle buttons"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top and bottom padding on toggle buttons\n"
+            },
+            "L": {
+              "value": "{global.space.micro.M}",
+              "type": "spacing",
+              "description": "Top and bottom padding on toggle buttons\n"
+            }
+          }
         },
+        "container": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Horizontal padding"
+            },
+            "L": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Horizontal padding"
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Spacing between buttons in Toggle.\n"
+            },
+            "L": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Spacing between buttons in Toggle.\n"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Vertical padding"
+            },
+            "L": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Vertical padding"
+            }
+          }
+        }
+      },
+      "typical": {
         "x": {
           "S": {
             "value": "{global.space.micro.XXL}",
@@ -120,74 +200,34 @@
           "S": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
-            "description": "Item spacing on small buttons"
+            "description": "Item spacing inside buttons"
           },
           "M": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
-            "description": "Item spacing on medium buttons"
+            "description": "Item spacing inside buttons"
           },
           "L": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
-            "description": "Item spacing on large buttons"
-          }
-        }
-      },
-      "layout": {
-        "gap": {
-          "S": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Spacing between small buttons"
-          },
-          "M": {
-            "value": "{global.space.macro.XS}",
-            "type": "spacing",
-            "description": "Spacing between medium buttons"
-          },
-          "L": {
-            "value": "{global.space.macro.M}",
-            "type": "spacing",
-            "description": "Spacing between Large buttons"
-          }
-        }
-      },
-      "toggle": {
-        "xg": {
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Spacing between buttons in Toggle.\n"
-          },
-          "L": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Spacing between buttons in Toggle.\n"
-          }
-        },
-        "x": {
-          "M": {
-            "value": "{global.space.micro.S}",
-            "type": "spacing",
-            "description": "Horizontal padding"
-          },
-          "L": {
-            "value": "{global.space.micro.S}",
-            "type": "spacing",
-            "description": "Horizontal padding"
+            "description": "Item spacing inside buttons"
           }
         },
         "y": {
-          "M": {
-            "value": "{global.space.micro.S}",
+          "S": {
+            "value": "{origin.dimension.50}",
             "type": "spacing",
-            "description": "Vertical padding"
+            "description": "Bottom and top padding on small buttons."
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top and bottom padding on medium buttons\n"
           },
           "L": {
-            "value": "{global.space.micro.S}",
+            "value": "{global.space.micro.XXL}",
             "type": "spacing",
-            "description": "Vertical padding"
+            "description": "Top and bottom padding on Large buttons\n"
           }
         }
       }
