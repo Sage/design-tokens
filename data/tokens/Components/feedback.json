@@ -290,10 +290,17 @@
         }
       },
       "message": {
-        "M": {
-          "value": "{global.size.macro.M}",
-          "type": "sizing",
-          "description": "message and toast icon container width"
+        "statuscontainer": {
+          "M": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "message and toast icon container width"
+          },
+          "L": {
+            "value": "{global.size.macro.M}",
+            "type": "sizing",
+            "description": "message and toast icon container width"
+          }
         }
       }
     },
@@ -359,7 +366,7 @@
         "type": "spacing"
       },
       "pill": {
-        "px": {
+        "x": {
           "S": {
             "value": "{global.space.micro.S}",
             "type": "spacing"
@@ -384,6 +391,56 @@
           "value": "{global.space.micro.L}",
           "type": "spacing",
           "description": "Top bottom padding.\n"
+        }
+      },
+      "message": {
+        "x": {
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding on Medium message"
+          },
+          "L": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Left and right paddding on Large Message"
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top and bottom padding on Medium message"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Top and bottom paddding on Large Message"
+          }
+        },
+        "xg": {
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "gap between text and optional subtle button"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "gap between text and optional subtle button"
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{feedback.space.none}",
+            "type": "spacing",
+            "description": "gap between header and body copy"
+          },
+          "L": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Gap between text and subtle button"
+          }
         }
       }
     }
