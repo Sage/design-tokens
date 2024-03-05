@@ -5,6 +5,22 @@
         "value": "0",
         "type": "spacing"
       },
+      "calendar": {
+        "largevp": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Horizontal padding on calendar, for large viewports."
+          }
+        },
+        "smallvp": {
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Horizontal padding on calendar, for small viewports."
+          }
+        }
+      },
       "fileinput": {
         "status": {
           "M": {
@@ -42,22 +58,6 @@
           }
         }
       },
-      "calendar": {
-        "largevp": {
-          "M": {
-            "value": "{global.space.macro.M}",
-            "type": "spacing",
-            "description": "Horizontal padding on calendar, for large viewports."
-          }
-        },
-        "smallvp": {
-          "M": {
-            "value": "{global.space.micro.S}",
-            "type": "spacing",
-            "description": "Horizontal padding on calendar, for small viewports."
-          }
-        }
-      },
       "integral": {
         "numdate": {
           "value": "{global.space.micro.S}",
@@ -83,7 +83,7 @@
           "M": {
             "value": "{global.space.micro.M}",
             "type": "spacing",
-            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button, dropdown option icon and label)"
+            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button, dropdown option icon and label), Switch and processing text."
           },
           "L": {
             "value": "{global.space.micro.L}",
@@ -197,6 +197,32 @@
             "description": "Spacing between horizontal and vertical L form components"
           }
         }
+      },
+      "switch": {
+        "handleside": {
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Padding on handle side."
+          },
+          "L": {
+            "value": "{global.space.micro.M}",
+            "type": "spacing",
+            "description": "Padding on handle side."
+          }
+        },
+        "labelside": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Padding on label side."
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Padding on label side."
+          }
+        }
       }
     },
     "size": {
@@ -267,32 +293,6 @@
           "description": "L Inputs, Color picker square"
         }
       },
-      "switch": {
-        "container": {
-          "M": {
-            "value": "{global.size.macro.S}",
-            "type": "sizing",
-            "description": "S switch container"
-          },
-          "L": {
-            "value": "{global.size.macro.L}",
-            "type": "sizing",
-            "description": "L switch container"
-          }
-        },
-        "handle": {
-          "M": {
-            "value": "{global.size.macro.XXS}",
-            "type": "sizing",
-            "description": "S switch knob"
-          },
-          "L": {
-            "value": "{global.size.macro.XS} + {global.size.micro.XS}",
-            "type": "sizing",
-            "description": "L switch knob"
-          }
-        }
-      },
       "radio": {
         "circle": {
           "S": {
@@ -326,6 +326,32 @@
             "value": "{global.size.micro.XXL}",
             "type": "sizing",
             "description": "L radio dot"
+          }
+        }
+      },
+      "switch": {
+        "container": {
+          "M": {
+            "value": "{global.size.macro.XS}",
+            "type": "sizing",
+            "description": "Switch container"
+          },
+          "L": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "Switch container"
+          }
+        },
+        "handle": {
+          "M": {
+            "value": "{global.size.macro.XXS}",
+            "type": "sizing",
+            "description": "S switch knob"
+          },
+          "L": {
+            "value": "{global.size.macro.XS} + {global.size.micro.XS}",
+            "type": "sizing",
+            "description": "L switch knob"
           }
         }
       },
