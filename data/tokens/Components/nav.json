@@ -185,42 +185,81 @@
     },
     "space": {
       "menu": {
-        "button": {
+        "child": {
           "x": {
             "M": {
               "value": "{global.space.micro.L}",
               "type": "spacing",
-              "description": "Left right padding on button within menu item."
+              "description": "Left right padding."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top bottom padding."
+            }
+          }
+        },
+        "list": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Left right padding on menu list."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Top bottom padding on menu list."
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Space between menu items in list."
+            }
+          }
+        },
+        "parent": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Left right padding."
             }
           },
           "xg": {
             "M": {
               "value": "{global.space.micro.S}",
               "type": "spacing",
-              "description": "Gap spacing inside button within menu item."
+              "description": "Gap spacing between elements."
             }
           },
           "y": {
             "M": {
               "value": "{global.space.micro.S}",
               "type": "spacing",
-              "description": "Top bottom padding in button within menu item."
+              "description": "Top bottom padding."
             }
           }
         },
-        "item": {
+        "segment": {
           "x": {
             "M": {
               "value": "{global.space.micro.L}",
               "type": "spacing",
-              "description": "Left right padding on menu item (which contains menu button)."
+              "description": "Left right padding on segment title."
             }
           },
           "y": {
             "M": {
-              "value": "{global.space.micro.S}",
+              "value": "{global.space.macro.XS}",
               "type": "spacing",
-              "description": "Top bottom padding on menu item (which contains menu button)."
+              "description": "Top padding on segment title."
             }
           }
         }
@@ -228,6 +267,13 @@
       "navleft": {
         "collapsed": {
           "button": {
+            "x": {
+              "M": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "Left right spacing on left nav collapsed menu item."
+              }
+            },
             "y": {
               "M": {
                 "value": "{global.space.micro.S}",
@@ -241,25 +287,22 @@
                 "type": "spacing",
                 "description": "Spacing gap inside collapsible menu buttons."
               }
-            },
-            "x": {
-              "M": {
-                "value": "{global.space.micro.S}",
-                "type": "spacing",
-                "description": "Left right spacing on left nav collapsed menu item."
-              }
             }
           },
           "container": {
             "y": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Top bottom padding in collapsible left nav."
+              "M": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "Top bottom padding in collapsible left nav."
+              }
             },
             "yg": {
-              "value": "{global.space.micro.XXL}",
-              "type": "spacing",
-              "description": "Space between menu items in collapsible left nav."
+              "M": {
+                "value": "{global.space.micro.XXL}",
+                "type": "spacing",
+                "description": "Space between menu items in collapsible left nav."
+              }
             }
           }
         }
