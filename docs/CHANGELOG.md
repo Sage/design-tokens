@@ -1,3 +1,10 @@
+# [5.0.0-beta.16](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.15...v5.0.0-beta.16) (2024-03-08)
+
+
+### Bug Fixes
+
+* maintain icon names as snake case ([e64fadc](https://github.com/Sage/design-tokens/commit/e64fadc94c04ee4420e0a2ed08942ca00105810e))
+
 # [5.0.0-beta.15](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.14...v5.0.0-beta.15) (2024-01-23)
 
 
