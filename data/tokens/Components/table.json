@@ -205,7 +205,7 @@
             "description": "internal spacing between text, checkboxes, icons etc"
           },
           "M": {
-            "value": "{global.space.micro.L}",
+            "value": "{global.space.macro.XS}",
             "type": "spacing",
             "description": "internal spacing between text, checkboxes, icons etc"
           },
@@ -219,30 +219,90 @@
             "type": "spacing",
             "description": "internal spacing between text, checkboxes, icons etc"
           }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "top and bottom adding inside pagination"
+          }
+        }
+      },
+      "rowchild": {
+        "x": {
+          "XS": {
+            "value": "{global.space.macro.L} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside XS child row cells"
+          },
+          "S": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside S child row cells"
+          },
+          "M": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside M child row cells"
+          },
+          "L": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside L child row cells"
+          },
+          "XL": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside XL child row cells"
+          }
         }
       }
     },
     "size": {
       "row": {
-        "XS": {
-          "value": "{global.size.macro.XS}",
-          "type": "sizing"
+        "standard": {
+          "XS": {
+            "value": "{global.size.macro.XS}",
+            "type": "sizing"
+          },
+          "S": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing"
+          },
+          "M": {
+            "value": "{global.size.macro.M}",
+            "type": "sizing"
+          },
+          "L": {
+            "value": "{global.size.macro.L}",
+            "type": "sizing"
+          },
+          "XL": {
+            "value": "{global.size.macro.XL} + {global.size.micro.M}",
+            "type": "sizing"
+          }
         },
-        "S": {
-          "value": "{global.size.macro.S}",
-          "type": "sizing"
-        },
-        "M": {
-          "value": "{global.size.macro.M}",
-          "type": "sizing"
-        },
-        "L": {
-          "value": "{global.size.macro.L}",
-          "type": "sizing"
-        },
-        "XL": {
-          "value": "{global.size.macro.XL} + {global.size.micro.M}",
-          "type": "sizing"
+        "doubleheight": {
+          "XS": {
+            "value": "{table.size.row.standard.XS} * 2",
+            "type": "sizing"
+          },
+          "S": {
+            "value": "{table.size.row.standard.S} * 2",
+            "type": "sizing"
+          },
+          "M": {
+            "value": "{table.size.row.standard.M} * 2",
+            "type": "sizing"
+          },
+          "L": {
+            "value": "{table.size.row.standard.L} * 2",
+            "type": "sizing"
+          },
+          "XL": {
+            "value": "{table.size.row.standard.XL} * 2",
+            "type": "sizing"
+          }
         }
       }
     }
