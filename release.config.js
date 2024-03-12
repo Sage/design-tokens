@@ -17,6 +17,28 @@ module.exports = {
       }
     ],
     [
+      "@amanda-mitchell/semantic-release-npm-multiple",
+      {
+        "registries": {
+          "github": {
+            changelogFile: CHANGELOG,
+            pkgRoot: DIST,
+            tarballDir: DIST
+          },
+          "public": {
+            changelogFile: CHANGELOG,
+            pkgRoot: DIST,
+            tarballDir: DIST
+          },
+          "x3": {
+            changelogFile: CHANGELOG,
+            pkgRoot: DIST,
+            tarballDir: DIST
+          }
+        }
+      }
+    ],
+    [
       '@semantic-release/npm',
       {
         changelogFile: CHANGELOG,
