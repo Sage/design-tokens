@@ -39,7 +39,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
 
   const path = getPath(componentName)
   
-  const selector = outputReferences ? `.sds-mode` : modeName ? `.sds-mode-${modeName}` : undefined
+  const selector = outputReferences ? `[class^="sds-mode-"]` : modeName ? `.sds-mode-${modeName}` : undefined
 
   return [
     {
