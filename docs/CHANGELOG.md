@@ -1,3 +1,10 @@
+# [5.0.0-beta.17](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.16...v5.0.0-beta.17) (2024-03-12)
+
+
+### Features
+
+* update component css selector ([7a8a6eb](https://github.com/Sage/design-tokens/commit/7a8a6eb0349300e5fbe96a4bb4319b53a130f8c4))
+
 # [5.0.0-beta.16](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.15...v5.0.0-beta.16) (2024-03-08)
 
 
