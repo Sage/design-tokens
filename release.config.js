@@ -39,14 +39,6 @@ module.exports = {
       }
     ],
     [
-      '@semantic-release/npm',
-      {
-        changelogFile: CHANGELOG,
-        pkgRoot: DIST,
-        tarballDir: DIST
-      }
-    ],
-    [
       '@semantic-release/git',
       {
         assets: [CHANGELOG, PACKAGE_JSON]
