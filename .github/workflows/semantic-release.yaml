@@ -50,6 +50,9 @@ jobs:
           GIT_COMMITTER_NAME: Sage Carbon
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
 
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+
           # GitHub registry - @amanda-mitchell/semantic-release-npm-multiple
           GITHUB_NPM_CONFIG_REGISTRY: https://npm.pkg.github.com
           GITHUB_NPM_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
