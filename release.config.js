@@ -31,7 +31,7 @@ module.exports = {
           },
           "x3": {
             changelogFile: CHANGELOG,
-            pkgRoot: DIST,
+            pkgRoot: DIST
           }
         }
       }
