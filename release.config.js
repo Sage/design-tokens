@@ -22,7 +22,8 @@ module.exports = {
         "registries": {
           "github": {
             changelogFile: CHANGELOG,
-            pkgRoot: DIST
+            pkgRoot: DIST,
+            tarballDir: DIST
           },
           "public": {
             changelogFile: CHANGELOG,
@@ -30,7 +31,7 @@ module.exports = {
           },
           "x3": {
             changelogFile: CHANGELOG,
-            pkgRoot: DIST
+            pkgRoot: DIST,
           }
         }
       }
@@ -39,6 +40,12 @@ module.exports = {
       '@semantic-release/git',
       {
         assets: [CHANGELOG, PACKAGE_JSON]
+      }
+    ],
+    [
+      '@semantic-release/github',
+      {
+        assets: `${DIST}/*.tgz`
       }
     ]
   ],
