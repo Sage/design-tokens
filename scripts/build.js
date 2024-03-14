@@ -121,7 +121,7 @@ const getGlobalConfig = () => {
   return {
     source: [
       './data/tokens/origin.json',
-      './data/tokens/global.json'
+      './data/tokens/global/*.json'
     ],
     platforms: {
       css: {
