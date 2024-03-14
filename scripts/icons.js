@@ -264,7 +264,7 @@ async function writeGlyphsData (glyphsData, config) {
     .map((icon) => pick(icon, ['name', 'set', 'description', 'documentationLinks', 'path', 'codepoint', 'glyph', 'unicode']))
     .map((icon) => ({
       ...icon,
-      name: kebabCase(icon.name)
+      name: icon.name
     }))
 
   await writeGlyphsData(formattedGlyphsData, config)
