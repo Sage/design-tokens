@@ -188,7 +188,7 @@ const getModeConfig = (mode) => {
   return {
     source: [
       './data/tokens/origin.json',
-      './data/tokens/global.json',
+      './data/tokens/global/*.json',
       `./data/tokens/Modes/${mode}`,
       './data/tokens/Components/*.json'
       // `./data/tokens/Platforms/${platform}/*.json`
