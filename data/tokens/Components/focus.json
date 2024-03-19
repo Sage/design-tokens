@@ -5,7 +5,7 @@
         "value": "{base.color.interactive.focus.withDefaultAlt}",
         "type": "color"
       },
-      "border-alt": {
+      "borderalt": {
         "value": "{base.color.interactive.focus.withDefault}",
         "type": "color"
       },
@@ -20,9 +20,26 @@
     },
     "size": {
       "underline": {
-        "value": "{global.size.decorative.XS}",
+        "value": "{global.size.micro.XS}",
         "type": "sizing",
         "description": "focus black underline on links and skiplink"
+      }
+    },
+    "borderwidth": {
+      "secondary": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "Secondary focus (dropdown item)"
+      },
+      "inner": {
+        "value": "{global.borderwidth.M}",
+        "type": "borderWidth",
+        "description": "Focus border (inner)"
+      },
+      "outer": {
+        "value": "{global.borderwidth.XL}",
+        "type": "borderWidth",
+        "description": "Focus border (outer)"
       }
     }
   }

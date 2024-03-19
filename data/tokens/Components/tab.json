@@ -2,32 +2,51 @@
   "tab": {
     "size": {
       "M": {
-        "value": "{global.size.component.M}",
+        "value": "{global.size.macro.M}",
         "type": "sizing",
         "description": "Anchor nav, M Tab"
       },
       "L": {
-        "value": "{global.size.component.L}",
+        "value": "{global.size.macro.L}",
         "type": "sizing",
         "description": "L tab"
       }
     },
     "space": {
-      "inside": {
-        "S": {
-          "value": "{origin.dimension.100}",
-          "type": "spacing",
-          "description": "top and bottom padding on medium buttons"
-        },
+      "x": {
         "M": {
-          "value": "{origin.dimension.200}",
+          "value": "{global.space.macro.XS}",
           "type": "spacing",
-          "description": "left and right padding on small buttons"
+          "description": "Left and right padding on Tab."
         },
         "L": {
-          "value": "{origin.dimension.300}",
+          "value": "{global.space.macro.M}",
           "type": "spacing",
-          "description": "left and right padding on Medium buttons"
+          "description": "Left and right padding on Tab."
+        }
+      },
+      "xg": {
+        "M": {
+          "value": "{global.space.micro.L}",
+          "type": "spacing",
+          "description": "Gap between elements in Tab."
+        },
+        "L": {
+          "value": "{global.space.micro.L}",
+          "type": "spacing",
+          "description": "Gap between elements in Tab."
+        }
+      },
+      "y": {
+        "M": {
+          "value": "{global.space.micro.L}",
+          "type": "spacing",
+          "description": "Top bottom padding in Tab."
+        },
+        "L": {
+          "value": "{global.space.micro.XXL}",
+          "type": "spacing",
+          "description": "Top bottom padding in Tab."
         }
       }
     },
@@ -99,6 +118,35 @@
           "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
           "type": "color"
         }
+      }
+    },
+    "borderradius": {
+      "M": {
+        "value": "{global.borderradius.interactive.M}",
+        "type": "borderRadius",
+        "description": "Tab (top corners)"
+      }
+    },
+    "borderwidth": {
+      "active": {
+        "value": "{global.borderwidth.L}",
+        "type": "borderWidth",
+        "description": "Tab (active, active error, active caution bottom border)"
+      },
+      "caution": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Tab (caution: top, right, left borders)"
+      },
+      "enabled": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "Tab (enabled and hover bottom border)"
+      },
+      "error": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "Tab (error: top, right, left borders)"
       }
     }
   }

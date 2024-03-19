@@ -7,7 +7,7 @@
         "description": "Reference only. Do not use in components."
       },
       "blue": {
-        "value": "#0072C4",
+        "value": "#0072c4",
         "type": "color"
       },
       "brightBlue": {
@@ -15,7 +15,7 @@
         "type": "color"
       },
       "green": {
-        "value": "#00821E",
+        "value": "#00821e",
         "type": "color"
       },
       "brilliantGreen": {
@@ -28,7 +28,7 @@
         "type": "color"
       },
       "orange": {
-        "value": "#BB4F00",
+        "value": "#BA4E00",
         "type": "color",
         "description": "was #E96400"
       },
@@ -81,6 +81,16 @@
         "value": "#FFFFFF",
         "type": "color",
         "description": "Reference only. Do not use in components."
+      },
+      "aiH": {
+        "value": "linear-gradient(90deg, #13A038 0%, #0092DB 50%, #8F49FE 100%)",
+        "type": "color",
+        "description": "Ai gradient horizontal - on light. H in the token name means horizontal"
+      },
+      "lightAiH": {
+        "value": "linear-gradient(90deg, #00D639 0%, #11AFFF 50%, #8F49FE 100%)",
+        "type": "color",
+        "description": "Ai gradient horizontal - on dark. H in the token name means horizontal"
       }
     },
     "size": {
@@ -233,8 +243,20 @@
         "value": "{origin.dimension.base} * 3000",
         "type": "dimension"
       },
+      "3600": {
+        "value": "{origin.dimension.base} * 3600",
+        "type": "dimension"
+      },
+      "4000": {
+        "value": "{origin.dimension.base} * 4000",
+        "type": "dimension"
+      },
       "7000": {
         "value": "{origin.dimension.base} * 7000",
+        "type": "dimension"
+      },
+      "9500": {
+        "value": "{origin.dimension.base} * 9500",
         "type": "dimension"
       },
       "base": {
@@ -263,15 +285,18 @@
     "lineHeights": {
       "300": {
         "value": "100%",
-        "type": "lineHeights"
+        "type": "lineHeights",
+        "description": "For components where space is tight"
       },
       "400": {
-        "value": "120%",
-        "type": "lineHeights"
+        "value": "125%",
+        "type": "lineHeights",
+        "description": "For headings"
       },
       "500": {
-        "value": "160%",
-        "type": "lineHeights"
+        "value": "150%",
+        "type": "lineHeights",
+        "description": "For body and components"
       }
     },
     "fontFamilies": {
@@ -506,6 +531,16 @@
           "value": "clamp(2.1588rem, 1.7083rem + 2.2525vw, 4.4113rem))",
           "type": "fontSizes",
           "description": "Small Viewports: 34.54, Large Viewports: 70.58"
+        },
+        "step11": {
+          "value": "clamp(2.3322rem, 1.6361rem + 3.4803vi, 5.1164rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 37.31, Large Viewports: 81.86"
+        },
+        "step12": {
+          "value": "clamp(2.5187rem, 1.6647rem + 4.2703vi, 5.935rem)",
+          "type": "fontSizes",
+          "description": "Small Viewports: 40.30, Large Viewports: 94.96"
         }
       }
     }

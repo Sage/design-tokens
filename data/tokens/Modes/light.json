@@ -400,6 +400,28 @@
         }
       },
       "interactive": {
+        "ai": {
+          "standard": {
+            "hover": {
+              "value": "linear-gradient(90deg, rgba(#13A038,0.16) 0%, rgba(#0092DB,0.16) 50%, rgba(#8F49FE,0.16) 100%)",
+              "type": "color"
+            },
+            "default": {
+              "value": "{origin.colors.aiH}",
+              "type": "color"
+            }
+          },
+          "inverse": {
+            "hover": {
+              "value": "linear-gradient(90deg, rgba(#00D639,0.16) 0%, rgba(#11AFFF,0.16) 50%, rgba(#8F49FE,0.16) 100%)",
+              "type": "color"
+            },
+            "default": {
+              "value": "{origin.colors.lightAiH}",
+              "type": "color"
+            }
+          }
+        },
         "danger": {
           "standard": {
             "active": {
@@ -449,7 +471,7 @@
                   }
                 }
               },
-              "description": "used on pill hover states"
+              "description": "used on solid-pill and primary-button hover states"
             },
             "hoverAlt": {
               "value": "{base.color.interactive.danger.standard.default}",
@@ -464,7 +486,22 @@
                   }
                 }
               },
-              "description": "used on pill hover states"
+              "description": "used on outlined-pill and secondary-button hover states"
+            },
+            "hoverAlt2": {
+              "value": "{base.color.interactive.danger.standard.defaultAlt}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "used on link hover state"
             },
             "withActive": {
               "value": "{base.color.generic.content.inverse.extreme}",
@@ -716,7 +753,7 @@
               }
             },
             "hover": {
-              "value": "{base.color.interactive.monochrome.standard.active}",
+              "value": "{origin.colors.black}",
               "type": "color",
               "description": "Secondary button border on hover"
             },
@@ -781,7 +818,7 @@
               }
             },
             "hover": {
-              "value": "{base.color.interactive.monochrome.inverse.active}",
+              "value": "{origin.colors.white}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -866,6 +903,21 @@
                   }
                 }
               }
+            },
+            "hoverAlt": {
+              "value": "{base.color.interactive.primary.standard.defaultAlt}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "for link hover"
             },
             "withActive": {
               "value": "{base.color.generic.content.inverse.extreme}",

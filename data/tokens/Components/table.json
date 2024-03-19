@@ -1,5 +1,5 @@
 {
-  "datatable": {
+  "table": {
     "color": {
       "header": {
         "subtle": {
@@ -100,18 +100,8 @@
           "description": "Zebra stripes + child items"
         },
         "bg-hover": {
-          "value": "{datatable.color.row.bg-default}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.12",
-                "space": "lch",
-                "color": "{base.color.generic.bg.inverse.nought} "
-              }
-            }
-          }
+          "value": "{base.color.generic.bg.standard.soft}",
+          "type": "color"
         },
         "border-default": {
           "value": "{base.color.generic.fg.standard.delicate}",
@@ -150,77 +140,167 @@
         }
       }
     },
+    "borderradius": {
+      "container": {
+        "value": "{global.borderradius.container.M}",
+        "type": "borderRadius",
+        "description": "Table (parent container)"
+      }
+    },
+    "boxshadow": {
+      "parentrow": {
+        "value": "{global.box-shadow.container.far}",
+        "type": "boxShadow"
+      }
+    },
+    "borderwidth": {
+      "thin": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Table border"
+      }
+    },
+    "space": {
+      "none": {
+        "value": "0",
+        "type": "spacing"
+      },
+      "row": {
+        "x": {
+          "XS": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Left and right padding inside XS row cells"
+          },
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding inside S row cells"
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding inside M row cells"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding inside L row cells"
+          },
+          "XL": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding inside XL row cells"
+          }
+        },
+        "xg": {
+          "XS": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "internal spacing between text, checkboxes, icons etc"
+          },
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "internal spacing between text, checkboxes, icons etc"
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "internal spacing between text, checkboxes, icons etc"
+          },
+          "L": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "internal spacing between text, checkboxes, icons etc"
+          },
+          "XL": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "internal spacing between text, checkboxes, icons etc"
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "top and bottom adding inside pagination"
+          }
+        }
+      },
+      "rowchild": {
+        "x": {
+          "XS": {
+            "value": "{global.space.macro.L} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside XS child row cells"
+          },
+          "S": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside S child row cells"
+          },
+          "M": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside M child row cells"
+          },
+          "L": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside L child row cells"
+          },
+          "XL": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside XL child row cells"
+          }
+        }
+      }
+    },
     "size": {
       "row": {
-        "XS": {
-          "value": "{global.size.component.XS}",
-          "type": "sizing"
-        },
-        "S": {
-          "value": "{global.size.component.S}",
-          "type": "sizing"
-        },
-        "M": {
-          "value": "{global.size.component.M}",
-          "type": "sizing"
-        },
-        "L": {
-          "value": "{global.size.component.L}",
-          "type": "sizing"
-        },
-        "XL": {
-          "value": "{global.size.component.XL} + {origin.dimension.100}",
-          "type": "sizing"
-        }
-      },
-      "pagination": {
-        "M": {
-          "value": "{global.size.component.M}",
-          "type": "sizing"
-        }
-      },
-      "header": {
         "standard": {
           "XS": {
-            "value": "{global.size.component.XS}",
+            "value": "{global.size.macro.XS}",
             "type": "sizing"
           },
           "S": {
-            "value": "{global.size.component.S}",
+            "value": "{global.size.macro.S}",
             "type": "sizing"
           },
           "M": {
-            "value": "{global.size.component.M}",
+            "value": "{global.size.macro.M}",
             "type": "sizing"
           },
           "L": {
-            "value": "{global.size.component.L}",
+            "value": "{global.size.macro.L}",
             "type": "sizing"
           },
           "XL": {
-            "value": "{global.size.component.XL} + {origin.dimension.100}",
+            "value": "{global.size.macro.XL} + {global.size.micro.M}",
             "type": "sizing"
           }
         },
-        "double": {
+        "doubleheight": {
           "XS": {
-            "value": "{global.size.component.XS} * 2",
+            "value": "{table.size.row.standard.XS} * 2",
             "type": "sizing"
           },
           "S": {
-            "value": "{global.size.component.S} * 2",
+            "value": "{table.size.row.standard.S} * 2",
             "type": "sizing"
           },
           "M": {
-            "value": "{global.size.component.M} * 2",
+            "value": "{table.size.row.standard.M} * 2",
             "type": "sizing"
           },
           "L": {
-            "value": "{global.size.component.L} * 2",
+            "value": "{table.size.row.standard.L} * 2",
             "type": "sizing"
           },
           "XL": {
-            "value": "({global.size.component.XL} + {origin.dimension.100}) * 2",
+            "value": "{table.size.row.standard.XL} * 2",
             "type": "sizing"
           }
         }

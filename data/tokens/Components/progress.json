@@ -3,81 +3,81 @@
     "size": {
       "bar": {
         "XS": {
-          "value": "{global.size.decorative.XS}",
+          "value": "{global.size.micro.XS}",
           "type": "sizing",
           "description": "S progress tracker bar"
         },
         "S": {
-          "value": "{global.size.decorative.S}",
+          "value": "{global.size.micro.S}",
           "type": "sizing",
           "description": "S loader bar"
         },
         "M": {
-          "value": "{global.size.decorative.M}",
+          "value": "{global.size.micro.M}",
           "type": "sizing",
           "description": "M progress tracker bar, M loader bar"
         },
         "L": {
-          "value": "{global.size.decorative.XL}",
+          "value": "{global.size.micro.XL}",
           "type": "sizing",
           "description": "L loader bar"
         },
         "XL": {
-          "value": "{global.size.decorative.XXL}",
+          "value": "{global.size.micro.XXL}",
           "type": "sizing",
           "description": "XL loader bar, L progress tracker bar"
         }
       },
       "spinner": {
         "XS": {
-          "value": "{origin.dimension.300}",
+          "value": "{global.size.macro.XS}",
           "type": "sizing",
           "description": "XS Portraits, XS spinners"
         },
         "S": {
-          "value": "{origin.dimension.400}",
+          "value": "{global.size.macro.S}",
           "type": "sizing",
           "description": "S Portraits, S Spinners"
         },
         "M": {
-          "value": "{origin.dimension.500}",
+          "value": "{global.size.macro.M}",
           "type": "sizing",
           "description": "M Portraits, M Spinners"
         },
         "L": {
-          "value": "{origin.dimension.900}",
+          "value": "{global.size.macro.XS} * 3",
           "type": "sizing",
           "description": "L Portraits, L Spinners"
         },
         "XL": {
-          "value": "{origin.dimension.1300}",
+          "value": "{global.size.micro.M} * 13",
           "type": "sizing",
           "description": "XL spinners"
         }
       },
       "skeleton": {
         "XS": {
-          "value": "{origin.dimension.200}",
+          "value": "{global.size.macro.XXS}",
           "type": "sizing",
           "description": "Skeleton paragraph and H5"
         },
         "S": {
-          "value": "{origin.dimension.200} + {origin.dimension.25}",
+          "value": "{global.size.macro.XXS} + {global.size.micro.XXS}",
           "type": "sizing",
           "description": "H3 Skeletons"
         },
         "M": {
-          "value": "{origin.dimension.250}",
+          "value": "{global.size.macro.XS} - {global.size.micro.XS}",
           "type": "sizing",
           "description": "H3 Skeletons"
         },
         "L": {
-          "value": "{origin.dimension.250} + {origin.dimension.25}",
+          "value": "{global.size.macro.XS} - {global.size.micro.XXS}",
           "type": "sizing",
           "description": "H2 Skeletons"
         },
         "XL": {
-          "value": "{origin.dimension.300}",
+          "value": "{global.size.macro.XS}",
           "type": "sizing",
           "description": "H1 Skeletons"
         }
@@ -97,6 +97,11 @@
               }
             }
           }
+        },
+        "fg-ai": {
+          "value": "{base.color.interactive.ai.inverse.default}",
+          "type": "color",
+          "description": "For progress ring in ai buttons"
         },
         "fg-default": {
           "value": "{base.color.generic.fg.standard.nought}",
@@ -125,12 +130,25 @@
             }
           }
         },
+        "bg-skeleton": {
+          "value": "linear-gradient(135deg, rgba(#6F6F6F,0.36) 0%, rgba(#6F6F6F, 0.04) 100%)",
+          "type": "color"
+        },
         "border-default": {
           "value": "{base.color.generic.fg.standard.soft}",
           "type": "color"
         },
+        "fg-ai": {
+          "value": "{base.color.interactive.ai.standard.default}",
+          "type": "color",
+          "description": "For progress ring in ai buttons"
+        },
         "fg-alt": {
           "value": "{base.color.status.success.standard.default}",
+          "type": "color"
+        },
+        "fg-alt2": {
+          "value": "{base.color.generic.content.standard.firm}",
           "type": "color"
         },
         "fg-default": {
@@ -148,6 +166,165 @@
         "label-default": {
           "value": "{base.color.generic.content.standard.harsh}",
           "type": "color"
+        }
+      }
+    },
+    "borderradius": {
+      "none": {
+        "value": "{global.borderradius.none}",
+        "type": "borderRadius",
+        "description": "File input (top corners of integrated progress bar),"
+      },
+      "carouselselector": {
+        "value": "{global.borderradius.circle}",
+        "type": "borderRadius",
+        "description": "Carousel (selector dot)"
+      },
+      "integrated": {
+        "value": "{global.borderradius.container.S}",
+        "type": "borderRadius",
+        "description": "File input (bottom corners of integrated status bar)"
+      },
+      "skeletonbar": {
+        "value": "{global.borderradius.container.M}",
+        "type": "borderRadius"
+      },
+      "stepflow": {
+        "value": "{global.borderradius.circle}",
+        "type": "borderRadius",
+        "description": "Step flow (step indicators)"
+      },
+      "bar": {
+        "S": {
+          "value": "{global.borderradius.container.XS}",
+          "type": "borderRadius",
+          "description": "Progress tracker S"
+        },
+        "M": {
+          "value": "{global.borderradius.container.S}",
+          "type": "borderRadius",
+          "description": "File input (bottom corners of integrated status bar), Progress tracker M, "
+        },
+        "L": {
+          "value": "{global.borderradius.container.M}",
+          "type": "borderRadius",
+          "description": "Progress tracker L"
+        }
+      }
+    },
+    "borderwidth": {
+      "bar": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Progress bar (all sizes)\n"
+      },
+      "carouselector": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Carousel slide selector dots\n"
+      },
+      "integrated": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Progress bar in File upload\n"
+      },
+      "stepflow": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Step flow (step)"
+      },
+      "stepsequence": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Step sequence line\n"
+      }
+    },
+    "space": {
+      "tracker": {
+        "yg": {
+          "S": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing"
+          }
+        }
+      },
+      "stepsequence": {
+        "xg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "gap between step number and step text"
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "gap between progress lines and steps"
+          }
+        }
+      },
+      "loader": {
+        "yg": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "gap between loader visual and loading text"
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "gap between loader visual and loading text"
+          },
+          "L": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "gap between loader visual and loading text"
+          }
+        },
+        "xg": {
+          "XS": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "gap between horizontal spinner visual and loading text"
+          }
+        }
+      },
+      "skeleton": {
+        "yg": {
+          "XS": {
+            "value": "{global.space.micro.XS}",
+            "type": "spacing",
+            "description": "vertical gap between skeleton bars"
+          },
+          "S": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "vertical gap between skeleton bars"
+          },
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "vertical gap between skeleton bars"
+          },
+          "L": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "vertical gap between skeleton bars"
+          },
+          "XL": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "vertical gap between skeleton bars"
+          }
         }
       }
     }

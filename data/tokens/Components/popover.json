@@ -6,6 +6,11 @@
         "type": "color",
         "description": "previously action minor 850"
       },
+      "bg-default": {
+        "value": "{base.color.generic.bg.standard.nought}",
+        "type": "color",
+        "description": "popover container bg"
+      },
       "bg-hover": {
         "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
         "type": "color",
@@ -31,19 +36,69 @@
     "size": {
       "item": {
         "S": {
-          "value": "{global.size.component.S}",
+          "value": "{global.size.macro.S}",
           "type": "sizing",
           "description": "small popover menu items"
         },
         "M": {
-          "value": "{global.size.component.M}",
+          "value": "{global.size.macro.M}",
           "type": "sizing",
           "description": "medium popover menu items"
         },
         "L": {
-          "value": "{global.size.component.L}",
+          "value": "{global.size.macro.L}",
           "type": "sizing",
           "description": "Large popover menu items"
+        }
+      }
+    },
+    "borderradius": {
+      "container": {
+        "value": "{global.borderradius.container.M}",
+        "type": "borderRadius",
+        "description": "Popover (menu container in Action popovers)"
+      }
+    },
+    "boxshadow": {
+      "popover": {
+        "value": "{global.box-shadow.container.near}",
+        "type": "boxShadow",
+        "description": "popover container for Action popover, Button (multi action and split), Dropdown"
+      }
+    },
+    "borderwidth": {
+      "divider": {
+        "item": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth",
+          "description": "Dropdown (menu item divider)"
+        }
+      }
+    },
+    "space": {
+      "menu": {
+        "y": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top and bottom padding on popover menu container"
+          }
+        }
+      },
+      "option": {
+        "x": {
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Right left padding on popover option."
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top and bottom padding on popover option."
+          }
         }
       }
     }

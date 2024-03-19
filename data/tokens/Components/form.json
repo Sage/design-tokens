@@ -1,39 +1,227 @@
 {
   "form": {
     "space": {
-      "inside": {
-        "S": {
-          "value": "{origin.dimension.50}",
-          "type": "spacing"
+      "none": {
+        "value": "0",
+        "type": "spacing"
+      },
+      "calendar": {
+        "largevp": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Horizontal padding on calendar, for large viewports."
+          }
         },
-        "M": {
-          "value": "{origin.dimension.100}",
-          "type": "spacing"
-        },
-        "L": {
-          "value": "{origin.dimension.150}",
-          "type": "spacing"
-        },
-        "XL": {
-          "value": "{origin.dimension.200}",
-          "type": "spacing"
+        "smallvp": {
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Horizontal padding on calendar, for small viewports."
+          }
         }
       },
-      "stack": {
-        "S": {
-          "value": "{origin.dimension.200}",
-          "type": "spacing",
-          "description": "Stacked S inputs"
+      "fileinput": {
+        "status": {
+          "M": {
+            "value": "{global.space.macro.ML}",
+            "type": "spacing",
+            "description": "Left padding in File input (no-thumbnail variant, status text."
+          }
         },
-        "M": {
-          "value": "{origin.dimension.300}",
-          "type": "spacing",
-          "description": "Stacked M inputs"
+        "thumbnail": {
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "All padding in File input (thumbnail container)."
+          }
         },
-        "L": {
-          "value": "{origin.dimension.400}",
+        "x": {
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Right left padding in File input (preview container), the input container uses Input tokens."
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top padding in file input (preview container)."
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Vertical gap in file input (input container)."
+          }
+        }
+      },
+      "integral": {
+        "numdate": {
+          "value": "{global.space.micro.S}",
           "type": "spacing",
-          "description": "Stacked L inputs"
+          "description": "Space between secondarylabel&input in Numeral date."
+        },
+        "popover": {
+          "value": "{global.space.micro.M}",
+          "type": "spacing",
+          "description": "Space between input and popover"
+        },
+        "stack": {
+          "value": "{global.space.micro.L}",
+          "type": "spacing",
+          "description": "Space below labelset, before the input. Space between input and preview containers in File input. Space between input and character count."
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button)"
+          },
+          "M": {
+            "value": "{global.space.micro.M}",
+            "type": "spacing",
+            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button, dropdown option icon and label), Switch and processing text."
+          },
+          "L": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button)"
+          }
+        }
+      },
+      "input": {
+        "stack": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Vertical gap on custom date range between the 2 inputs."
+          },
+          "M": {
+            "value": "{global.space.macro.S}",
+            "type": "spacing",
+            "description": "Vertical gap on custom date range between the 2 inputs. Horizontal gap between start and end date inputs in Date range."
+          },
+          "L": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Vertical gap on custom date range between the 2 inputs."
+          }
+        },
+        "x": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Left right padding on input."
+          },
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Left right padding on input. Right padding on dropdown option."
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left right padding on input."
+          }
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Horizontal gap between checkboxes and radios within a group, and between date or time inputs within a group."
+          },
+          "M": {
+            "value": "{global.space.macro.S}",
+            "type": "spacing",
+            "description": "Horizontal gap between checkboxes and radios within a group, and between date or time inputs within a group, and between elements in Pagination."
+          },
+          "L": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Horizontal gap between checkboxes and radios within a group, and between date or time inputs within a group."
+          }
+        },
+        "y": {
+          "S": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Top bottom padding on input."
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top bottom padding on input."
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Top bottom padding on input."
+          }
+        },
+        "yg": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between rows of checkboxes or radios within a group."
+          },
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Gap between rows of checkboxes or radios within a group. Gap betwen input text and file preview in Text editor.\n"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Gap between rows of checkboxes or radios within a group."
+          }
+        }
+      },
+      "layout": {
+        "stack": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Spacing between horizontal and vertical S form components"
+          },
+          "M": {
+            "value": "{global.space.macro.S}",
+            "type": "spacing",
+            "description": "Spacing between horizontal and vertical M form components"
+          },
+          "L": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Spacing between horizontal and vertical L form components"
+          }
+        }
+      },
+      "switch": {
+        "handleside": {
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Padding on handle side."
+          },
+          "L": {
+            "value": "{global.space.micro.M}",
+            "type": "spacing",
+            "description": "Padding on handle side."
+          }
+        },
+        "labelside": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Padding on label side."
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Padding on label side."
+          }
         }
       }
     },
@@ -42,122 +230,141 @@
         "value": "{origin.dimension.0}",
         "type": "sizing"
       },
-      "input": {
-        "XS": {
-          "value": "{global.size.component.XS}",
-          "type": "sizing",
-          "description": "min-height on XS inputs"
-        },
-        "S": {
-          "value": "{global.size.component.S}",
-          "type": "sizing",
-          "description": "min-height on S inputs"
-        },
-        "M": {
-          "value": "{global.size.component.M}",
-          "type": "sizing",
-          "description": "Min height on M Inputs and M Dropdowns. Fixed height on Calendar days"
-        },
-        "L": {
-          "value": "{global.size.component.L}",
-          "type": "sizing",
-          "description": "L Inputs, Color picker square"
-        }
+      "icon": {
+        "value": "{global.size.icon.M}",
+        "type": "sizing",
+        "description": "icon"
       },
-      "switch": {
-        "inside": {
-          "M": {
-            "value": "{origin.dimension.200}",
-            "type": "sizing",
-            "description": "S switch knob"
-          },
-          "L": {
-            "value": "{origin.dimension.350}",
-            "type": "sizing",
-            "description": "L switch knob"
-          }
+      "calendar": {
+        "date": {
+          "value": "{global.size.macro.M}",
+          "type": "sizing",
+          "description": "date buttons\n"
         },
-        "outside": {
-          "M": {
-            "value": "{origin.dimension.400}",
-            "type": "sizing",
-            "description": "S switch container"
-          },
-          "L": {
-            "value": "{origin.dimension.600}",
-            "type": "sizing",
-            "description": "L switch container"
-          }
+        "day": {
+          "value": "{global.size.macro.M}",
+          "type": "sizing",
+          "description": "Calendar day of the week HEIGHT\n"
+        },
+        "today": {
+          "value": "{global.size.micro.XS}",
+          "type": "sizing",
+          "description": "today underline"
         }
       },
       "checkbox": {
         "S": {
-          "value": "{global.size.component.XXS}",
+          "value": "{global.size.macro.XXS}",
           "type": "sizing",
           "description": "S checkboxes"
         },
         "M": {
-          "value": "{global.size.component.XS}",
+          "value": "{global.size.macro.XS}",
           "type": "sizing",
           "description": "M checkboxes"
         },
         "L": {
-          "value": "{global.size.component.S}",
+          "value": "{global.size.macro.S}",
           "type": "sizing",
           "description": "L checkboxes"
         }
       },
+      "fileinput": {
+        "preview": {
+          "value": "{global.size.macro.XXXL}",
+          "type": "sizing",
+          "description": "File input container for thumbnail, progress, or icon."
+        }
+      },
+      "filepreview": {
+        "thumbnail": {
+          "value": "{global.size.mega.XS}",
+          "type": "sizing",
+          "description": "Thumbnail width on file preview component"
+        }
+      },
+      "input": {
+        "S": {
+          "value": "{global.size.macro.S}",
+          "type": "sizing",
+          "description": "min-height on S inputs"
+        },
+        "M": {
+          "value": "{global.size.macro.M}",
+          "type": "sizing",
+          "description": "Min height on M Inputs and M Dropdowns. Fixed height on Calendar days"
+        },
+        "L": {
+          "value": "{global.size.macro.L}",
+          "type": "sizing",
+          "description": "L Inputs, Color picker square"
+        }
+      },
       "radio": {
-        "outside": {
+        "circle": {
           "S": {
-            "value": "{global.size.component.XXS}",
+            "value": "{global.size.macro.XXS}",
             "type": "sizing",
             "description": "S radios"
           },
           "M": {
-            "value": "{global.size.component.XS}",
+            "value": "{global.size.macro.XS}",
             "type": "sizing",
             "description": "M radios"
           },
           "L": {
-            "value": "{global.size.component.S}",
+            "value": "{global.size.macro.S}",
             "type": "sizing",
             "description": "L radios"
           }
         },
-        "inside": {
+        "dot": {
           "S": {
-            "value": "{global.size.decorative.M}",
+            "value": "{global.size.micro.M}",
             "type": "sizing",
             "description": "S radio dot"
           },
           "M": {
-            "value": "{global.size.decorative.XL}",
+            "value": "{global.size.micro.XL}",
             "type": "sizing",
             "description": "M radio dot"
           },
           "L": {
-            "value": "{global.size.decorative.XXL}",
+            "value": "{global.size.micro.XXL}",
             "type": "sizing",
             "description": "L radio dot"
           }
         }
       },
-      "calendar": {
-        "M": {
-          "value": "{global.size.component.M}",
-          "type": "sizing",
-          "description": "day buttons"
+      "switch": {
+        "container": {
+          "M": {
+            "value": "{global.size.macro.XS}",
+            "type": "sizing",
+            "description": "Switch container"
+          },
+          "L": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "Switch container"
+          }
         },
-        "underline": {
-          "value": "{global.size.decorative.XS}",
-          "type": "sizing",
-          "description": "day underline"
+        "handle": {
+          "M": {
+            "value": "{global.size.macro.XXS}",
+            "type": "sizing",
+            "description": "S switch knob"
+          },
+          "L": {
+            "value": "{global.size.macro.XS} + {global.size.micro.XS}",
+            "type": "sizing",
+            "description": "L switch knob"
+          }
         }
       },
       "validation": {
         "bar": {
-          "value": "{global.size.decorative.XXS}",
+          "value": "{global.size.micro.XXS}",
           "type": "sizing",
           "description": "2px validation bar used on errors and warnings"
         }
@@ -169,16 +376,16 @@
           "value": "{base.color.interactive.monochrome.standard.active}",
           "type": "color"
         },
-        "bg-default": {
-          "value": "{base.color.interactive.monochrome.standard.withActive}",
-          "type": "color"
-        },
         "bg-disabled": {
           "value": "{base.color.interactive.inactive.standard.defaultAlt}",
           "type": "color"
         },
+        "bg-duration": {
+          "value": "{base.color.interactive.dataEntry.hoverAlt}",
+          "type": "color"
+        },
         "bg-hover": {
-          "value": "{base.color.interactive.monochrome.inverse.hoverAlt}",
+          "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
           "type": "color"
         },
         "border-duration": {
@@ -373,7 +580,7 @@
           "type": "color"
         },
         "border-enabled": {
-          "value": "{base.color.interactive.dataEntry.withDefault}",
+          "value": "{base.color.interactive.monochrome.standard.default}",
           "type": "color"
         },
         "fg-active": {
@@ -389,7 +596,7 @@
           "type": "color"
         },
         "fg-enabled": {
-          "value": "{base.color.interactive.dataEntry.contentAlt}",
+          "value": "{base.color.interactive.dataEntry.content}",
           "type": "color"
         },
         "label-active": {
@@ -431,6 +638,128 @@
         "label-warning": {
           "value": "{base.color.status.caution.standard.default}",
           "type": "color"
+        }
+      }
+    },
+    "borderradius": {
+      "none": {
+        "value": "{global.borderradius.none}",
+        "type": "borderRadius",
+        "description": "Text editor (internal corners)"
+      },
+      "fileupload": {
+        "value": "{global.borderradius.container.S}",
+        "type": "borderRadius",
+        "description": "File input (file uploads)"
+      },
+      "fileselector": {
+        "value": "{global.borderradius.container.S}",
+        "type": "borderRadius",
+        "description": "File preview (file selector asset)"
+      },
+      "input": {
+        "value": "{global.borderradius.interactive.S}",
+        "type": "borderRadius",
+        "description": "Checkbox, Date picker input, Date range input, Dropdown select (trigger), Search, File input (draggable area), Text area, Text input"
+      },
+      "radio": {
+        "value": "{global.borderradius.circle}",
+        "type": "borderRadius",
+        "description": "Radio button"
+      },
+      "switch": {
+        "value": "{global.borderradius.circle}",
+        "type": "borderRadius",
+        "description": "Switch container and handle"
+      },
+      "validationbar": {
+        "value": "{global.borderradius.interactive.XS}",
+        "type": "borderRadius",
+        "description": "Validation bar"
+      },
+      "calendar": {
+        "none": {
+          "value": "{global.borderradius.none}",
+          "type": "borderRadius",
+          "description": "Calendar (start and end duration)"
+        },
+        "date": {
+          "value": "{global.borderradius.circle}",
+          "type": "borderRadius",
+          "description": "Calendar date (hover & selected), "
+        },
+        "today": {
+          "value": "{global.borderradius.container.XS}",
+          "type": "borderRadius",
+          "description": "Calendar (today indicator)"
+        }
+      },
+      "colorpicker": {
+        "inner": {
+          "value": "{global.borderradius.interactive.S}",
+          "type": "borderRadius",
+          "description": "Color picker (swatch container), \n"
+        },
+        "outer": {
+          "value": "{global.borderradius.container.L}",
+          "type": "borderRadius",
+          "description": "Color picker advanced (parent container), \n"
+        }
+      }
+    },
+    "borderwidth": {
+      "caution": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Caution border"
+      },
+      "dragover": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "File upload (drag over state)"
+      },
+      "error": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "Error border"
+      },
+      "fileupload": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "File input (file uploads)"
+      },
+      "input": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Input border"
+      },
+      "searchunderline": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "Search (without button variant)"
+      },
+      "switch": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "Switch"
+      },
+      "tile": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Tile border"
+      },
+      "divider": {
+        "item": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth",
+          "description": "Dropdown menu (item divider)"
+        }
+      },
+      "calendar": {
+        "duration": {
+          "value": "{global.borderwidth.S}",
+          "type": "borderWidth",
+          "description": "Calendar (duration date top and bottom borders)"
         }
       }
     }

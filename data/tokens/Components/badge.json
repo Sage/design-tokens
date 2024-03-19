@@ -35,20 +35,47 @@
       }
     },
     "size": {
-      "S": {
-        "value": "{global.size.decorative.M}",
-        "type": "sizing",
-        "description": "Micro dot badge size"
+      "micro": {
+        "M": {
+          "value": "{global.size.micro.M}",
+          "type": "sizing",
+          "description": "Micro dot badge size"
+        }
       },
-      "M": {
-        "value": "{global.size.component.XS}",
-        "type": "sizing",
-        "description": "standard badge size"
-      },
-      "L": {
-        "value": "{global.size.component.S} + {origin.dimension.50}",
-        "type": "sizing",
-        "description": "Standard badge max-width"
+      "standard": {
+        "min": {
+          "value": "{global.size.macro.XS}",
+          "type": "sizing",
+          "description": "standard badge size"
+        },
+        "max": {
+          "value": "{global.size.macro.S} + {global.size.micro.XS}",
+          "type": "sizing",
+          "description": "Standard badge max-width"
+        }
+      }
+    },
+    "borderradius": {
+      "badge": {
+        "value": "{global.borderradius.circle}",
+        "type": "borderRadius",
+        "description": "Badge"
+      }
+    },
+    "space": {
+      "x": {
+        "M": {
+          "value": "{global.space.micro.S}",
+          "type": "spacing",
+          "description": "used on standard badges for left and right padding"
+        }
+      }
+    },
+    "borderwidth": {
+      "badge": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "Badge"
       }
     }
   }

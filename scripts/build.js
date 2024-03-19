@@ -38,8 +38,8 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
   }
 
   const path = getPath(componentName)
-  
-  const selector = outputReferences ? `[class^="sds-mode-"]` : modeName ? `.sds-mode-${modeName}` : undefined
+
+  const selector = outputReferences ? '[class^="sds-mode-"]' : modeName ? `.sds-mode-${modeName}` : undefined
 
   return [
     {
@@ -121,7 +121,7 @@ const getGlobalConfig = () => {
   return {
     source: [
       './data/tokens/origin.json',
-      './data/tokens/global.json'
+      './data/tokens/global/*.json'
     ],
     platforms: {
       css: {
@@ -188,7 +188,7 @@ const getModeConfig = (mode) => {
   return {
     source: [
       './data/tokens/origin.json',
-      './data/tokens/global.json',
+      './data/tokens/global/*.json',
       `./data/tokens/Modes/${mode}`,
       './data/tokens/Components/*.json'
       // `./data/tokens/Platforms/${platform}/*.json`

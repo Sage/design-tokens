@@ -52,10 +52,6 @@
           "bg-default": {
             "value": "{base.color.generic.bg.inverse.soft}",
             "type": "color"
-          },
-          "bg-alt": {
-            "value": "{base.color.generic.bg.inverse.delicate}",
-            "type": "color"
           }
         }
       },
@@ -110,10 +106,6 @@
           "bg-default": {
             "value": "{base.color.generic.bg.standard.soft}",
             "type": "color"
-          },
-          "bg-alt": {
-            "value": "{base.color.generic.bg.standard.delicate}",
-            "type": "color"
           }
         }
       }
@@ -121,12 +113,12 @@
     "size": {
       "horizontal": {
         "S": {
-          "value": "{global.size.component.S}",
+          "value": "{global.size.macro.S}",
           "type": "sizing",
           "description": "Top nav child menu item min-height"
         },
         "M": {
-          "value": "{global.size.component.M}",
+          "value": "{global.size.macro.M}",
           "type": "sizing",
           "description": "global nav and horizontal nav container height"
         }
@@ -134,21 +126,184 @@
       "vertical": {
         "inside": {
           "M": {
-            "value": "{global.size.component.M}",
+            "value": "{global.size.macro.M}",
             "type": "sizing",
             "description": "Left nav child menu item min-height"
           },
           "L": {
-            "value": "{global.size.component.L}",
+            "value": "{global.size.macro.L}",
             "type": "sizing",
             "description": "Left nav collapsed item min-height"
           }
         },
         "outside": {
           "M": {
-            "value": "{global.size.component.XL} + {origin.dimension.550}",
+            "value": "{global.size.micro.L} * 10",
             "type": "sizing",
-            "description": "Left nav parent container"
+            "description": "Left nav collapsed parent container"
+          }
+        }
+      }
+    },
+    "borderradius": {
+      "menu": {
+        "value": "{global.borderradius.interactive.M}",
+        "type": "borderRadius",
+        "description": "Menu (bottom corners), "
+      },
+      "menuitem": {
+        "value": "{global.borderradius.interactive.S}",
+        "type": "borderRadius",
+        "description": "Menu (menu item state bg shape), "
+      },
+      "navigationleft": {
+        "value": "{global.borderradius.interactive.L}",
+        "type": "borderRadius",
+        "description": "Navigation left (collapsible Assets/Menu select top-right and bottom-right corners)"
+      }
+    },
+    "boxshadow": {
+      "menu": {
+        "value": "{global.box-shadow.container.distant}",
+        "type": "boxShadow",
+        "description": "Menu"
+      }
+    },
+    "borderwidth": {
+      "divider": {
+        "item": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth",
+          "description": "Menu (option divider)"
+        },
+        "segment": {
+          "value": "{global.borderwidth.L}",
+          "type": "borderWidth",
+          "description": "Menu (segment divider)"
+        }
+      }
+    },
+    "space": {
+      "menu": {
+        "child": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Left right padding."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top bottom padding."
+            }
+          }
+        },
+        "list": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Left right padding on menu list."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Top bottom padding on menu list."
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Space between menu items in list."
+            }
+          }
+        },
+        "parent": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Left right padding."
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Gap spacing between elements."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top bottom padding."
+            }
+          }
+        },
+        "segment": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Left right padding on segment title."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Top padding on segment title."
+            }
+          }
+        }
+      },
+      "navleft": {
+        "collapsed": {
+          "button": {
+            "x": {
+              "M": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "Left right spacing on left nav collapsed menu item."
+              }
+            },
+            "y": {
+              "M": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "Top bottom spacing on left nav collapsed menu item."
+              }
+            },
+            "yg": {
+              "M": {
+                "value": "{global.space.micro.XS}",
+                "type": "spacing",
+                "description": "Spacing gap inside collapsible menu buttons."
+              }
+            }
+          },
+          "container": {
+            "y": {
+              "M": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "Top bottom padding in collapsible left nav."
+              }
+            },
+            "yg": {
+              "M": {
+                "value": "{global.space.micro.XXL}",
+                "type": "spacing",
+                "description": "Space between menu items in collapsible left nav."
+              }
+            }
           }
         }
       }

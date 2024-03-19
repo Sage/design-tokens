@@ -1,0 +1,85 @@
+{
+  "global": {
+    "borderradius": {
+      "scale": {
+        "value": "1",
+        "type": "borderRadius",
+        "description": "We can override this to locally change the size of radius in the future if required."
+      },
+      "none": {
+        "value": "0",
+        "type": "borderRadius",
+        "description": "Button groups (internal/adjacent corners), Card select group (internal/adjacent corners), File input (integrated base bar top corners)."
+      },
+      "circle": {
+        "value": "999",
+        "type": "borderRadius",
+        "description": "CIRCLE. Badge, Calendar date (today indicator and selected), Carousel selector dots, Loader bar, Portrait, Progress tracker, Radio button, Step flow (step indicators), Switch, "
+      },
+      "container": {
+        "XXS": {
+          "value": "{origin.dimension.12} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "SHARP. Validation bar on input components"
+        },
+        "XS": {
+          "value": "{origin.dimension.25} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "POINTED. Pill"
+        },
+        "S": {
+          "value": "{origin.dimension.50} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "SUBTLE. Color picker advanced (inner swatch container), File input (file uploads & integrated progress bar (bottom corners), Link preview, Tooltip."
+        },
+        "M": {
+          "value": "{origin.dimension.100} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "MODERATE. Card select (single), Card select group (outer corners), Carousel (slides), File preview (File selector assets on left), Message, Note, Popover (menu container in Action popover, Button-split, Button-multi-action, Calendar, Dropdown), Subscription tile (currently a pattern), Table (parent container), Tile & Tile flexbox (less rounded), Toast"
+        },
+        "L": {
+          "value": "{origin.dimension.200} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "CURVED. Carousel (parent container), Color picker advanced (parent container), Dialog (not full screen), File preview (parent container), Tile & Tile flexbox (more rounded)."
+        },
+        "XL": {
+          "value": "{origin.dimension.300} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "Copilot container"
+        }
+      },
+      "interactive": {
+        "XS": {
+          "value": "{origin.dimension.25} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "POINTED. Checkbox (S, M), Link (focus background and underline)"
+        },
+        "S": {
+          "value": "{origin.dimension.50} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "SUBTLE. Checkbox L, Date picker input, Date range input, Dropdown select (trigger), File input (draggable area), Link (focus bg and underline bottom-right and bottom-left), Menu (state bg shape), Search, Text area, Text editor, Text input"
+        },
+        "M": {
+          "value": "{origin.dimension.100} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "MODERATE. Button subtle, Card (less rounded), Menu (bottom corners), Navigation: left (state bg shape), Skip focus, Tab, "
+        },
+        "L": {
+          "value": "{origin.dimension.200} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "CURVED. Buttons S (typical and destructive, and inc bar, split and multi), Card (more rounded), Navigation left (collapsible Assets/Menu select top-right and bottom-right corners), "
+        },
+        "XL": {
+          "value": "{origin.dimension.250} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "ROUNDED. Buttons M (typical and destructive and inc bar split and multi), Button toggle M (parent container), "
+        },
+        "XXL": {
+          "value": "{origin.dimension.300} * {global.borderradius.scale}",
+          "type": "borderRadius",
+          "description": "SWEEPING. Buttons L (typical and destructive and inc bar split and multi), Button toggle L (parent container), "
+        }
+      }
+    }
+  }
+}
