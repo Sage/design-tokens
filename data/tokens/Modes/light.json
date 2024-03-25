@@ -1,6 +1,18 @@
 {
   "base": {
     "color": {
+      "brandreference": {
+        "custom1": {
+          "value": "{origin.colors.jade}",
+          "type": "color",
+          "description": "This is the color to replace in white label products. \nEnsure luminousity of custom color = 46.8 (see hsluv.org). \nAAA against FFFFFF bg."
+        },
+        "custom2": {
+          "value": "{origin.colors.brilliantGreen}",
+          "type": "color",
+          "description": "This is the color to replace in white label products. Ensure luminousity of custom color is >=52.1 (see hsluv.org) to be AAA text on 000000 bgs."
+        }
+      },
       "generic": {
         "bg": {
           "standard": {
@@ -872,7 +884,7 @@
               }
             },
             "default": {
-              "value": "{origin.colors.jade}",
+              "value": "{base.color.brandreference.custom1}",
               "type": "color"
             },
             "defaultAlt": {
@@ -934,7 +946,7 @@
           },
           "inverse": {
             "default": {
-              "value": "{origin.colors.brilliantGreen}",
+              "value": "{base.color.brandreference.custom2}",
               "type": "color"
             },
             "defaultAlt": {
