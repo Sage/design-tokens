@@ -1016,14 +1016,15 @@
               "type": "color"
             },
             "defaultAlt": {
-              "value": "{origin.colors.brightOrange}",
+              "value": "{origin.colors.white}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "alpha",
-                    "value": "0.04",
-                    "space": "lch"
+                    "type": "mix",
+                    "value": "0.1",
+                    "space": "lch",
+                    "color": "{origin.colors.brightOrange}"
                   }
                 }
               },
@@ -1131,14 +1132,15 @@
               "type": "color"
             },
             "defaultAlt": {
-              "value": "{origin.colors.brightBlue}",
+              "value": "{origin.colors.white}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "alpha",
-                    "value": "0.04",
-                    "space": "lch"
+                    "type": "mix",
+                    "value": "0.1",
+                    "space": "lch",
+                    "color": "{origin.colors.brightBlue} "
                   }
                 }
               },
@@ -1204,14 +1206,15 @@
               "type": "color"
             },
             "defaultAlt": {
-              "value": "{origin.colors.red}",
+              "value": "{origin.colors.white}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "alpha",
-                    "value": "0.04",
-                    "space": "lch"
+                    "type": "mix",
+                    "value": "0.1",
+                    "space": "lch",
+                    "color": "{origin.colors.red}"
                   }
                 }
               },
@@ -1281,14 +1284,15 @@
               "type": "color"
             },
             "defaultAlt": {
-              "value": "{origin.colors.brightStorm}",
+              "value": "{origin.colors.white}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "alpha",
-                    "value": "0.04",
-                    "space": "lch"
+                    "type": "mix",
+                    "value": "0.1",
+                    "space": "lch",
+                    "color": "{origin.colors.brightStorm}"
                   }
                 }
               },
@@ -1354,15 +1358,15 @@
               "type": "color"
             },
             "defaultAlt": {
-              "value": "{base.color.status.success.standard.default}",
+              "value": "{origin.colors.white}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "alpha",
-                    "value": "0.04",
+                    "type": "mix",
+                    "value": "0.1",
                     "space": "lch",
-                    "color": "{base.color.modifier.contrastMore}"
+                    "color": "{base.color.status.success.standard.default} "
                   }
                 }
               },
