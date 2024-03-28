@@ -6,18 +6,48 @@
         "type": "spacing"
       },
       "calendar": {
-        "largevp": {
+        "x": {
           "M": {
             "value": "{global.space.macro.M}",
             "type": "spacing",
             "description": "Horizontal padding on calendar, for large viewports."
           }
         },
-        "smallvp": {
+        "y": {
           "M": {
-            "value": "{global.space.micro.S}",
+            "value": "{global.space.macro.M}",
             "type": "spacing",
-            "description": "Horizontal padding on calendar, for small viewports."
+            "description": "vertical padding on calendar"
+          }
+        }
+      },
+      "colorpicker": {
+        "x": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Horizontal padding on color picker"
+          }
+        },
+        "xg": {
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "horizontal gap between swatches"
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Vertical gap between swatches"
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "vertical padding on color picker"
           }
         }
       },
@@ -293,6 +323,18 @@
           "value": "{global.size.macro.L}",
           "type": "sizing",
           "description": "L Inputs, Color picker square"
+        }
+      },
+      "colorpicker": {
+        "swatch": {
+          "value": "{global.size.macro.M}",
+          "type": "sizing",
+          "description": "width and height of color picker swatch\n"
+        },
+        "swatchcontainer": {
+          "value": "{global.size.macro.XXXL} + {global.size.micro.M}",
+          "type": "sizing",
+          "description": "width of swatch parent container"
         }
       },
       "radio": {
