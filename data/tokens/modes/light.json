@@ -1424,6 +1424,25 @@
               "description": "used on pill hover states"
             }
           }
+        },
+        "callout": {
+          "standard": {
+            "default": {
+              "value": "{base.color.modifier.contrastLess}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.15",
+                    "space": "lch",
+                    "color": "{origin.colors.brilliantGreen}"
+                  }
+                }
+              },
+              "description": "used for marketing banners"
+            }
+          }
         }
       },
       "modifiers": {
