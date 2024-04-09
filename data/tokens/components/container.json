@@ -631,10 +631,15 @@
       },
       "scrollbar": {
         "y": {
-          "M": {
+          "inner": {
             "value": "{global.space.micro.XXS}",
             "type": "spacing",
-            "description": "top and bottom padding inside scrollbar"
+            "description": "top and bottom padding around scrollbar handle."
+          },
+          "outer": {
+            "value": "{global.space.micro.XS}",
+            "type": "spacing",
+            "description": "top and bottom padding inside scrollbar outer container"
           }
         }
       },
