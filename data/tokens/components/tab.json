@@ -74,6 +74,20 @@
           "value": "{base.color.generic.fg.standard.delicate}",
           "type": "color"
         },
+        "border-hover": {
+          "value": "{base.color.generic.fg.standard.delicate}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{base.color.modifiers.button.hover}",
+                "space": "lch",
+                "color": "{base.color.modifier.contrastMore}"
+              }
+            }
+          }
+        },
         "icon-enabled": {
           "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
           "type": "color"
