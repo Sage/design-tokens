@@ -231,7 +231,7 @@ const getModeConfig = (platform, mode) => {
 
 platforms.forEach((platform) => {
   const platformName = platform.split('.json')[0]
-  
+
   console.log(`\r\nStart building platform: ${platformName}\r\n`)
 
   console.log('\r\nStart building global\r\n')
@@ -264,4 +264,3 @@ platforms.forEach((platform) => {
 
   console.log(`\r\nDone building platform: ${platformName}\r\n`)
 })
-

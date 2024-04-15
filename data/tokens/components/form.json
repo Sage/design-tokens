@@ -5,22 +5,6 @@
         "value": "0",
         "type": "spacing"
       },
-      "calendar": {
-        "largevp": {
-          "M": {
-            "value": "{global.space.macro.M}",
-            "type": "spacing",
-            "description": "Horizontal padding on calendar, for large viewports."
-          }
-        },
-        "smallvp": {
-          "M": {
-            "value": "{global.space.micro.S}",
-            "type": "spacing",
-            "description": "Horizontal padding on calendar, for small viewports."
-          }
-        }
-      },
       "fileinput": {
         "status": {
           "M": {
@@ -36,25 +20,43 @@
             "description": "All padding in File input (thumbnail container)."
           }
         },
-        "x": {
-          "M": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "Right left padding in File input (preview container), the input container uses Input tokens."
+        "preview": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "Right left padding in File input (preview container)."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Top padding in file input (preview container)."
+            }
           }
         },
-        "y": {
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Top padding in file input (preview container)."
-          }
-        },
-        "yg": {
-          "M": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "Vertical gap in file input (input container)."
+        "dropzone": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Right left padding in File input (preview container)."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Top padding in file input (preview container)."
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "Vertical gap in file input (input container)."
+            }
           }
         }
       },
@@ -230,11 +232,6 @@
         "value": "{origin.dimension.0}",
         "type": "sizing"
       },
-      "icon": {
-        "value": "{global.size.icon.M}",
-        "type": "sizing",
-        "description": "icon"
-      },
       "calendar": {
         "date": {
           "value": "{global.size.macro.M}",
@@ -298,6 +295,18 @@
           "value": "{global.size.macro.L}",
           "type": "sizing",
           "description": "L Inputs, Color picker square"
+        }
+      },
+      "colorpicker": {
+        "swatch": {
+          "value": "{global.size.macro.M}",
+          "type": "sizing",
+          "description": "width and height of color picker swatch\n"
+        },
+        "swatchcontainer": {
+          "value": "{global.size.macro.XXXL} + {global.size.micro.M}",
+          "type": "sizing",
+          "description": "width of swatch parent container"
         }
       },
       "radio": {
@@ -367,6 +376,12 @@
           "value": "{global.size.micro.XXS}",
           "type": "sizing",
           "description": "2px validation bar used on errors and warnings"
+        }
+      },
+      "icon": {
+        "M": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
         }
       }
     },
@@ -632,78 +647,76 @@
           "description": "warning bar to left of inputs"
         },
         "label-error": {
-          "value": "{base.color.status.negative.standard.default}",
+          "value": "{base.color.status.negative.standard.text}",
           "type": "color"
         },
         "label-warning": {
-          "value": "{base.color.status.caution.standard.default}",
+          "value": "{base.color.status.caution.standard.text}",
           "type": "color"
         }
       }
     },
-    "borderradius": {
+    "radius": {
       "none": {
-        "value": "{global.borderradius.none}",
+        "value": "{global.radius.none}",
         "type": "borderRadius",
         "description": "Text editor (internal corners)"
       },
+      "checkbox": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "S and M checkbox"
+      },
+      "colorswatch": {
+        "value": "{global.radius.interactive.XXL}",
+        "type": "borderRadius",
+        "description": "Color picker (swatch container), \n"
+      },
       "fileupload": {
-        "value": "{global.borderradius.container.S}",
+        "value": "{global.radius.container.M}",
         "type": "borderRadius",
         "description": "File input (file uploads)"
       },
       "fileselector": {
-        "value": "{global.borderradius.container.S}",
+        "value": "{global.radius.container.M}",
         "type": "borderRadius",
         "description": "File preview (file selector asset)"
       },
       "input": {
-        "value": "{global.borderradius.interactive.S}",
+        "value": "{global.radius.interactive.M}",
         "type": "borderRadius",
-        "description": "Checkbox, Date picker input, Date range input, Dropdown select (trigger), Search, File input (draggable area), Text area, Text input"
+        "description": "Date picker input, Date range input, Dropdown select (trigger), Search, File input (draggable area), Text area, Text input"
       },
       "radio": {
-        "value": "{global.borderradius.circle}",
+        "value": "{global.radius.circle}",
         "type": "borderRadius",
         "description": "Radio button"
       },
       "switch": {
-        "value": "{global.borderradius.circle}",
+        "value": "{global.radius.circle}",
         "type": "borderRadius",
         "description": "Switch container and handle"
       },
       "validationbar": {
-        "value": "{global.borderradius.interactive.XS}",
+        "value": "{global.radius.interactive.XS}",
         "type": "borderRadius",
         "description": "Validation bar"
       },
       "calendar": {
         "none": {
-          "value": "{global.borderradius.none}",
+          "value": "{global.radius.none}",
           "type": "borderRadius",
           "description": "Calendar (start and end duration)"
         },
         "date": {
-          "value": "{global.borderradius.circle}",
+          "value": "{global.radius.circle}",
           "type": "borderRadius",
           "description": "Calendar date (hover & selected), "
         },
         "today": {
-          "value": "{global.borderradius.container.XS}",
+          "value": "{global.radius.container.XS}",
           "type": "borderRadius",
           "description": "Calendar (today indicator)"
-        }
-      },
-      "colorpicker": {
-        "inner": {
-          "value": "{global.borderradius.interactive.S}",
-          "type": "borderRadius",
-          "description": "Color picker (swatch container), \n"
-        },
-        "outer": {
-          "value": "{global.borderradius.container.L}",
-          "type": "borderRadius",
-          "description": "Color picker advanced (parent container), \n"
         }
       }
     },

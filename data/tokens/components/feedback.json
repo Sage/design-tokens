@@ -6,24 +6,29 @@
           "value": "{base.color.generic.bg.inverse.nought}",
           "type": "color"
         },
-        "bg-disabled": {
+        "bg-readonly": {
           "value": "{base.color.interactive.inactive.inverse.default}",
           "type": "color",
-          "description": "Pill (all types, disabled)"
+          "description": "Pill (all types, readonly, when nested in disabled parent components)"
         },
-        "border-disabled": {
+        "border-readonly": {
           "value": "{base.color.interactive.inactive.inverse.default}",
           "type": "color",
-          "description": "Pill (all types, disabled)"
+          "description": "Pill (all types, readonly, when nested in disabled parent components)"
+        },
+        "icon-default": {
+          "value": "{base.color.generic.bg.standard.nought}",
+          "type": "color",
+          "description": "Decorative message icons"
         },
         "label-default": {
           "value": "{base.color.status.content.inverse.withDefault}",
           "type": "color"
         },
-        "label-disabled": {
-          "value": "{base.color.status.content.inverse.withDefault}",
+        "label-readonly": {
+          "value": "{base.color.generic.content.inverse.extreme}",
           "type": "color",
-          "description": "Pill (all types, disabled)"
+          "description": "Pill (all types, readonly, when nested in disabled parent components)"
         },
         "label-hover": {
           "value": "{base.color.status.content.inverse.withHover}",
@@ -33,10 +38,10 @@
           "value": "{base.color.status.content.inverse.withDefaultAlt}",
           "type": "color"
         },
-        "labelAlt-disabled": {
-          "value": "{base.color.interactive.inactive.inverse.content}",
+        "labelAlt-readonly": {
+          "value": "{base.color.generic.content.inverse.firm}",
           "type": "color",
-          "description": "Pill (all types, disabled)"
+          "description": "Pill (all types, readonly, when nested in disabled parent components)"
         },
         "labelAlt-hover": {
           "value": "{base.color.status.content.inverse.withHoverAlt}",
@@ -138,24 +143,29 @@
           "value": "{base.color.generic.bg.standard.nought}",
           "type": "color"
         },
-        "bg-disabled": {
+        "bg-readonly": {
           "value": "{base.color.interactive.inactive.standard.default}",
           "type": "color",
-          "description": "Pill (all types, disabled)"
+          "description": "Pill (all types, readonly, when nested in disabled parent components)"
         },
-        "border-disabled": {
+        "border-readonly": {
           "value": "{base.color.interactive.inactive.standard.default}",
           "type": "color",
-          "description": "Pill (all types, disabled)"
+          "description": "Pill (all types, readonly, when nested in disabled parent components)"
+        },
+        "icon-default": {
+          "value": "{base.color.generic.bg.standard.nought}",
+          "type": "color",
+          "description": "Decorative message icons"
         },
         "label-default": {
-          "value": "{base.color.status.content.standard.withDefault}",
+          "value": "{base.color.status.content.inverse.withDefaultAlt}",
           "type": "color"
         },
-        "label-disabled": {
-          "value": "{base.color.status.content.standard.withDefault}",
+        "label-readonly": {
+          "value": "{base.color.generic.content.standard.extreme}",
           "type": "color",
-          "description": "Pill (all types, disabled)"
+          "description": "Pill (all types, readonly, when nested in disabled parent components)"
         },
         "label-hover": {
           "value": "{base.color.status.content.standard.withHover}",
@@ -165,10 +175,10 @@
           "value": "{base.color.status.content.standard.withDefaultAlt}",
           "type": "color"
         },
-        "labelAlt-disabled": {
-          "value": "{base.color.interactive.inactive.standard.content}",
+        "labelAlt-readonly": {
+          "value": "{base.color.generic.content.standard.firm}",
           "type": "color",
-          "description": "Pill (all types, disabled)"
+          "description": "Pill (all types, readonly, when nested in disabled parent components)"
         },
         "labelAlt-hover": {
           "value": "{base.color.status.content.standard.withHoverAlt}",
@@ -178,6 +188,11 @@
           "bg-default": {
             "value": "{base.color.status.negative.standard.default}",
             "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{base.color.status.negative.standard.defaultAlt}",
+            "type": "color",
+            "description": "Subtle message bg"
           },
           "bgAlt-hover": {
             "value": "{base.color.status.negative.standard.hoverAlt}",
@@ -197,6 +212,11 @@
             "value": "{base.color.status.info.standard.default}",
             "type": "color"
           },
+          "bgAlt-default": {
+            "value": "{base.color.status.info.standard.defaultAlt}",
+            "type": "color",
+            "description": "Subtle message bg"
+          },
           "bgAlt-hover": {
             "value": "{base.color.status.info.standard.hoverAlt}",
             "type": "color"
@@ -214,6 +234,11 @@
           "bg-default": {
             "value": "{base.color.status.neutral.standard.default}",
             "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{base.color.status.neutral.standard.defaultAlt}",
+            "type": "color",
+            "description": "Subtle message bg"
           },
           "bgAlt-hover": {
             "value": "{base.color.status.neutral.standard.hoverAlt}",
@@ -233,6 +258,11 @@
             "value": "{base.color.status.success.standard.default}",
             "type": "color"
           },
+          "bgAlt-default": {
+            "value": "{base.color.status.success.standard.defaultAlt}",
+            "type": "color",
+            "description": "Subtle message bg"
+          },
           "bgAlt-hover": {
             "value": "{base.color.status.success.standard.hoverAlt}",
             "type": "color"
@@ -250,6 +280,11 @@
           "bg-default": {
             "value": "{base.color.status.caution.standard.default}",
             "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{base.color.status.caution.standard.defaultAlt}",
+            "type": "color",
+            "description": "Subtle message bg"
           },
           "bgAlt-hover": {
             "value": "{base.color.status.caution.standard.hoverAlt}",
@@ -297,43 +332,49 @@
             "description": "message and toast icon container width"
           }
         }
+      },
+      "icon": {
+        "M": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
+        }
       }
     },
-    "borderradius": {
+    "radius": {
       "none": {
-        "value": "{global.borderradius.none}",
+        "value": "{global.radius.none}",
         "type": "borderRadius",
         "description": "Pill (embedded element inner corners)"
       },
       "message": {
-        "value": "{global.borderradius.container.M}",
+        "value": "{global.radius.container.M}",
         "type": "borderRadius",
         "description": "Message"
       },
       "pill": {
-        "value": "{global.borderradius.container.XS}",
+        "value": "{global.radius.container.S}",
         "type": "borderRadius",
         "description": "Pill (outer corners)"
       },
       "toast": {
-        "value": "{global.borderradius.container.M}",
+        "value": "{global.radius.container.M}",
         "type": "borderRadius",
         "description": "Toast"
       },
       "tooltip": {
-        "value": "{global.borderradius.container.S}",
+        "value": "{global.radius.container.S}",
         "type": "borderRadius",
         "description": "Tooltip\n"
       }
     },
     "boxshadow": {
       "toast": {
-        "value": "{global.box-shadow.container.far}",
+        "value": "{global.boxshadow.container.far}",
         "type": "boxShadow",
         "description": "Toast\n"
       },
       "tooltip": {
-        "value": "{global.box-shadow.container.far}",
+        "value": "{global.boxshadow.container.far}",
         "type": "boxShadow",
         "description": "Tooltip\n"
       }
@@ -359,6 +400,13 @@
       "none": {
         "value": "0",
         "type": "spacing"
+      },
+      "integral": {
+        "x": {
+          "value": "{global.space.micro.S}",
+          "type": "spacing",
+          "description": "Space between pill label and icon."
+        }
       },
       "pill": {
         "x": {
@@ -391,31 +439,31 @@
       "message": {
         "x": {
           "M": {
-            "value": "{global.space.macro.XS}",
+            "value": "{global.space.micro.XXL}",
             "type": "spacing",
             "description": "Left and right padding on Medium message"
           },
           "L": {
-            "value": "{global.space.macro.M}",
+            "value": "{global.space.macro.S}",
             "type": "spacing",
             "description": "Left and right paddding on Large Message"
           }
         },
         "y": {
           "M": {
-            "value": "{global.space.micro.L}",
+            "value": "{global.space.micro.XXL}",
             "type": "spacing",
             "description": "Top and bottom padding on Medium message"
           },
           "L": {
-            "value": "{global.space.macro.XS}",
+            "value": "{global.space.macro.S}",
             "type": "spacing",
             "description": "Top and bottom paddding on Large Message"
           }
         },
         "xg": {
           "M": {
-            "value": "{global.space.macro.XS}",
+            "value": "{global.space.micro.L}",
             "type": "spacing",
             "description": "gap between text and optional subtle button"
           },

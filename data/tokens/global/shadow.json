@@ -1,41 +1,48 @@
 {
   "global": {
-    "box-shadow": {
+    "boxshadow": {
       "container": {
         "near": {
-          "value": "{origin.box-shadow.downward.3}",
+          "value": "{origin.box-shadow.downward.1}",
           "type": "boxShadow",
           "description": "Popover menus used on split, multiaction, dropdown and action popovers"
         },
         "far": {
-          "value": "{origin.box-shadow.downward.4}",
+          "value": "{origin.box-shadow.downward.2}",
           "type": "boxShadow",
           "description": "Toasts"
         },
         "distant": {
-          "value": "{origin.box-shadow.downward.5}",
+          "value": "{origin.box-shadow.downward.3}",
           "type": "boxShadow",
           "description": "Dialog, Menu, Sidebar\n"
         },
         "sticky-footer": {
-          "value": "{origin.box-shadow.upward.4}",
-          "type": "boxShadow"
+          "value": "{origin.box-shadow.upward.3}",
+          "type": "boxShadow",
+          "description": "Sticky footer on dialogs, drawer and sidebar"
         },
         "solid-border": {
           "value": "{origin.box-shadow.solid.border}",
-          "type": "boxShadow"
+          "type": "boxShadow",
+          "description": "Solid border using box shadow tokens when using the border property is not possible. "
         }
       },
       "interactive": {
         "enabled": {
-          "value": "{origin.box-shadow.downward.3}",
+          "value": "{origin.box-shadow.downward.1}",
           "type": "boxShadow",
           "description": "Default card state"
         },
         "hover": {
-          "value": "{origin.box-shadow.downward.5}",
+          "value": "{origin.box-shadow.downward.2}",
           "type": "boxShadow",
           "description": "Card hover state"
+        },
+        "drag": {
+          "value": "{origin.box-shadow.downward.3}",
+          "type": "boxShadow",
+          "description": "Card drag state"
         }
       }
     }

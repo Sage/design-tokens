@@ -4,47 +4,52 @@
       "black": {
         "value": "#000000",
         "type": "color",
-        "description": "Reference only. Do not use in components."
+        "description": "Base color for different text opacities.\nUsed as a mixer in the mid theming layer for hover states, active states etc.\nDividers and table headers.\nBase color for secondary, Tertiary and Subtle buttons.\nBase color for Input borders.\nFocus internal border."
       },
       "blue": {
         "value": "#0072c4",
-        "type": "color"
+        "type": "color",
+        "description": "Base information status color for on light surface information messages, toasts and pills."
       },
       "brightBlue": {
         "value": "#008AEB",
-        "type": "color"
+        "type": "color",
+        "description": "Base information status color for on dark surface information messages, toasts and pills."
       },
       "green": {
         "value": "#00821e",
-        "type": "color"
+        "type": "color",
+        "description": "Base success status color for on light surface  messages, toasts and pills."
       },
       "brilliantGreen": {
         "value": "#00D639",
         "type": "color",
-        "description": "Reference only. Do not use in components."
+        "description": "Sage Logo color\nPrimary buttons on dark backgrounds"
       },
       "brightGreen": {
         "value": "#009C26",
-        "type": "color"
+        "type": "color",
+        "description": "Base success status color for on dark surface  messages, toasts and pills."
       },
       "orange": {
         "value": "#BA4E00",
         "type": "color",
-        "description": "was #E96400"
+        "description": "Base warning status color for on light surface  messages, toasts and pills.\nWarning text on text inputs."
       },
       "brightOrange": {
         "value": "#DF6000",
         "type": "color",
-        "description": "Reference only. Do not use in components."
+        "description": "Base warning status color for on dark surface  messages, toasts and pills.\nWarning text in inputs on dark surfaces."
       },
       "gold": {
         "value": "#FFB500",
-        "type": "color"
+        "type": "color",
+        "description": "Outer focus border."
       },
       "jade": {
         "value": "#008047",
         "type": "color",
-        "description": "origin BASE (was originally #008146, darkened by 2% black, then changed from 008147 to 008047 to be AAA against FFFFFF bg)"
+        "description": "Primary buttons on light backgrounds."
       },
       "lightJade": {
         "value": "#008F4F",
@@ -53,44 +58,48 @@
       },
       "storm": {
         "value": "#6f6f6f",
-        "type": "color"
+        "type": "color",
+        "description": "Base neutral status color for on light surface  messages, toasts and pills."
       },
       "brightStorm": {
         "value": "#868686",
-        "type": "color"
+        "type": "color",
+        "description": "Base neutral status color for on dark surface  messages, toasts and pills."
       },
       "red": {
         "value": "#CB374B",
         "type": "color",
-        "description": "AAA against FFFFFF bg"
+        "description": "Base error status color for on light surface  messages, toasts and pills.\nError text in inputs on dark surfaces.\nAAA against FFFFFF bg. Used in most components, on light bgs.\n"
       },
       "brightRed": {
-        "value": "#FF3053",
-        "type": "color"
+        "value": "#e95063",
+        "type": "color",
+        "description": "Base error status color for on dark surface  messages, toasts and pills.\nUsed in feedback components, on dark bg (meets SHAPE accessibility reqs).\n"
       },
       "lightRed": {
         "value": "#E13E54",
-        "type": "color"
+        "type": "color",
+        "description": "Base error status color for on light surface  messages, toasts and pills.\nError text in inputs on dark surfaces.\nUsed in Buttons on dark bg (meets text accessibility reqs).\n"
       },
       "transparent": {
         "value": "rgba(0,0,0,0)",
         "type": "color",
-        "description": "Reference only. Do not use in components."
+        "description": "For transparent backgrounds and borders."
       },
       "white": {
         "value": "#FFFFFF",
         "type": "color",
-        "description": "Reference only. Do not use in components."
+        "description": "Surface backgrounds.\nText colors on buttons and on dark backgrounds.\nUsed as a mixer in the mid theming layer for hover states, active states etc."
       },
       "aiH": {
         "value": "linear-gradient(90deg, #13A038 0%, #0092DB 50%, #8F49FE 100%)",
         "type": "color",
-        "description": "Ai gradient horizontal - on light. H in the token name means horizontal"
+        "description": "AI buttons on light backgrounds."
       },
       "lightAiH": {
         "value": "linear-gradient(90deg, #00D639 0%, #11AFFF 50%, #8F49FE 100%)",
         "type": "color",
-        "description": "Ai gradient horizontal - on dark. H in the token name means horizontal"
+        "description": "AI buttons on dark backgrounds."
       }
     },
     "size": {
@@ -98,16 +107,6 @@
         "value": "8",
         "type": "sizing",
         "description": "SCALE is the base-scale of all size-related tokens (size, space, dimension). It's set to 8px as this is our default multiplier used across the majority of components. If you change it, it will change all size-related tokens."
-      },
-      "viewport": {
-        "min": {
-          "value": "320",
-          "type": "sizing"
-        },
-        "max": {
-          "value": "1920",
-          "type": "sizing"
-        }
       }
     },
     "dimension": {
@@ -227,6 +226,10 @@
         "value": "{origin.dimension.base} * 1300",
         "type": "dimension"
       },
+      "1500": {
+        "value": "{origin.dimension.base} * 1500",
+        "type": "dimension"
+      },
       "1600": {
         "value": "{origin.dimension.base} * 1600",
         "type": "dimension"
@@ -302,27 +305,23 @@
     "fontFamilies": {
       "sage-ui": {
         "value": "Sage UI",
-        "type": "fontFamilies"
+        "type": "fontFamilies",
+        "description": "Used in componentry such as tables, buttons, inputs etc."
       },
       "sage-headline": {
         "value": "Sage Headline",
-        "type": "fontFamilies"
+        "type": "fontFamilies",
+        "description": "Used in only in marketing contexts for some headings."
       },
       "sage-text": {
         "value": "Sage Text",
-        "type": "fontFamilies"
-      },
-      "ios": {
-        "value": "San Francisco",
-        "type": "fontFamilies"
-      },
-      "android": {
-        "value": "Roboto",
-        "type": "fontFamilies"
+        "type": "fontFamilies",
+        "description": "Used for Headings in product and in marketing contexts. Marketing also use it for their body copy."
       },
       "other": {
         "value": "Open Sans",
-        "type": "fontFamilies"
+        "type": "fontFamilies",
+        "description": "Fallback for when Sage fonts cannot load."
       }
     },
     "box-shadow": {
@@ -334,15 +333,15 @@
               "y": "1",
               "blur": "2",
               "spread": "0",
-              "color": "rgba( {origin.colors.storm} , 0.6)",
+              "color": "rgba( {origin.colors.black} , 0.10)",
               "type": "dropShadow"
             },
             {
-              "x": "0",
-              "y": "1",
-              "blur": "3",
+              "x": "2",
+              "y": "2",
+              "blur": "10",
               "spread": "0",
-              "color": "rgba( {origin.colors.storm} , 0.2)",
+              "color": "rgba( {origin.colors.black} , 0.2)",
               "type": "dropShadow"
             }
           ],
@@ -352,18 +351,18 @@
           "value": [
             {
               "x": "0",
-              "y": "1",
-              "blur": "2",
+              "y": "2",
+              "blur": "3",
               "spread": "0",
-              "color": "rgba( {origin.colors.storm} , 0.6)",
+              "color": "rgba( {origin.colors.black} , 0.1)",
               "type": "dropShadow"
             },
             {
-              "x": "0",
-              "y": "2",
-              "blur": "6",
-              "spread": "2",
-              "color": "rgba( {origin.colors.storm} , 0.2)",
+              "x": "6",
+              "y": "6",
+              "blur": "30",
+              "spread": "0",
+              "color": "rgba( {origin.colors.black} , 0.15)",
               "type": "dropShadow"
             }
           ],
@@ -373,60 +372,18 @@
           "value": [
             {
               "x": "0",
-              "y": "4",
-              "blur": "8",
-              "spread": "3",
-              "color": "rgba( {origin.colors.storm} , 0.2)",
-              "type": "dropShadow"
-            },
-            {
-              "x": "0",
-              "y": "1",
-              "blur": "3",
-              "spread": "0",
-              "color": "rgba( {origin.colors.storm} , 0.60)",
-              "type": "dropShadow"
-            }
-          ],
-          "type": "boxShadow"
-        },
-        "4": {
-          "value": [
-            {
-              "x": "0",
-              "y": "6",
-              "blur": "10",
-              "spread": "4",
-              "color": "rgba( {origin.colors.storm} , 0.2)",
-              "type": "dropShadow"
-            },
-            {
-              "x": "0",
-              "y": "2",
-              "blur": "3",
-              "spread": "0",
-              "color": "rgba( {origin.colors.storm} , 0.6)",
-              "type": "dropShadow"
-            }
-          ],
-          "type": "boxShadow"
-        },
-        "5": {
-          "value": [
-            {
-              "x": "0",
-              "y": "8",
-              "blur": "12",
-              "spread": "6",
-              "color": "rgba( {origin.colors.storm} , 0.2)",
-              "type": "dropShadow"
-            },
-            {
-              "x": "0",
-              "y": "4",
+              "y": "3",
               "blur": "4",
               "spread": "0",
-              "color": "rgba( {origin.colors.storm} , 0.6)",
+              "color": "rgba( {origin.colors.black} , 0.1)",
+              "type": "dropShadow"
+            },
+            {
+              "x": "10",
+              "y": "10",
+              "blur": "60",
+              "spread": "0",
+              "color": "rgba( {origin.colors.black} , 0.1)",
               "type": "dropShadow"
             }
           ],
@@ -434,14 +391,22 @@
         }
       },
       "upward": {
-        "4": {
+        "3": {
           "value": [
             {
               "x": "0",
-              "y": "-6",
-              "blur": "10",
-              "spread": "4",
-              "color": "rgba( {origin.colors.storm} , 0.15)",
+              "y": "-3",
+              "blur": "4",
+              "spread": "0",
+              "color": "rgba( {origin.colors.black} , 0.1)",
+              "type": "dropShadow"
+            },
+            {
+              "x": "10",
+              "y": "-10",
+              "blur": "60",
+              "spread": "0",
+              "color": "rgba( {origin.colors.black} , 0.1)",
               "type": "dropShadow"
             }
           ],
@@ -460,8 +425,7 @@
               "type": "innerShadow"
             }
           ],
-          "type": "boxShadow",
-          "description": "sticky footers"
+          "type": "boxShadow"
         }
       }
     },
@@ -542,6 +506,39 @@
           "type": "fontSizes",
           "description": "Small Viewports: 40.30, Large Viewports: 94.96"
         }
+      }
+    },
+    "textDecoration": {
+      "underline": {
+        "value": "underline",
+        "type": "textDecoration",
+        "description": "used for links"
+      }
+    },
+    "paragraphSpacing": {
+      "0": {
+        "value": "0",
+        "type": "paragraphSpacing"
+      },
+      "150": {
+        "value": "{origin.dimension.150}",
+        "type": "paragraphSpacing"
+      },
+      "200": {
+        "value": "{origin.dimension.200}",
+        "type": "paragraphSpacing"
+      },
+      "250": {
+        "value": "{origin.dimension.250}",
+        "type": "paragraphSpacing"
+      },
+      "300": {
+        "value": "{origin.dimension.300}",
+        "type": "paragraphSpacing"
+      },
+      "400": {
+        "value": "{origin.dimension.400}",
+        "type": "paragraphSpacing"
       }
     }
   }

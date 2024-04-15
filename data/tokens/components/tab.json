@@ -10,6 +10,12 @@
         "value": "{global.size.macro.L}",
         "type": "sizing",
         "description": "L tab"
+      },
+      "icon": {
+        "M": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
+        }
       }
     },
     "space": {
@@ -53,11 +59,11 @@
     "color": {
       "typical": {
         "bg-active": {
-          "value": "{base.color.generic.bg.standard.nought}",
+          "value": "{base.color.interactive.monochrome.standard.withActive}",
           "type": "color"
         },
         "bg-hover": {
-          "value": "{base.color.interactive.monochrome.inverse.hoverAlt}",
+          "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
           "type": "color"
         },
         "border-active": {
@@ -67,6 +73,20 @@
         "border-enabled": {
           "value": "{base.color.generic.fg.standard.delicate}",
           "type": "color"
+        },
+        "border-hover": {
+          "value": "{base.color.generic.fg.standard.delicate}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{base.color.modifiers.button.hover}",
+                "space": "lch",
+                "color": "{base.color.modifier.contrastMore}"
+              }
+            }
+          }
         },
         "icon-enabled": {
           "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
@@ -120,11 +140,16 @@
         }
       }
     },
-    "borderradius": {
+    "radius": {
       "M": {
-        "value": "{global.borderradius.interactive.M}",
+        "value": "{global.radius.interactive.M}",
         "type": "borderRadius",
-        "description": "Tab (top corners)"
+        "description": "Tab horizontal - top corners. Tab vertical - left corners."
+      },
+      "L": {
+        "value": "{global.radius.interactive.M}",
+        "type": "borderRadius",
+        "description": "Tab horizontal - top corners. Tab vertical - left corners."
       }
     },
     "borderwidth": {

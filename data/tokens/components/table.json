@@ -97,7 +97,12 @@
         "bg-alt2": {
           "value": "{base.color.generic.bg.standard.soft}",
           "type": "color",
-          "description": "Zebra stripes + child items"
+          "description": "Zebra stripes combined with child rows."
+        },
+        "bg-alt3": {
+          "value": "{base.color.generic.bg.standard.faint}",
+          "type": "color",
+          "description": "Child rows."
         },
         "bg-hover": {
           "value": "{base.color.generic.bg.standard.soft}",
@@ -140,16 +145,16 @@
         }
       }
     },
-    "borderradius": {
+    "radius": {
       "container": {
-        "value": "{global.borderradius.container.M}",
+        "value": "{global.radius.container.M}",
         "type": "borderRadius",
         "description": "Table (parent container)"
       }
     },
     "boxshadow": {
       "parentrow": {
-        "value": "{global.box-shadow.container.far}",
+        "value": "{global.boxshadow.container.far}",
         "type": "boxShadow"
       }
     },
@@ -303,6 +308,12 @@
             "value": "{table.size.row.standard.XL} * 2",
             "type": "sizing"
           }
+        }
+      },
+      "icon": {
+        "M": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
         }
       }
     }

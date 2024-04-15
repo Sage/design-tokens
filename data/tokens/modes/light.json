@@ -1,6 +1,18 @@
 {
   "base": {
     "color": {
+      "brandreference": {
+        "custom1": {
+          "value": "{origin.colors.jade}",
+          "type": "color",
+          "description": "This is the color to replace in white label products. \nEnsure luminousity of custom color = 46.8 (see hsluv.org). \nAAA against FFFFFF bg."
+        },
+        "custom2": {
+          "value": "{origin.colors.brilliantGreen}",
+          "type": "color",
+          "description": "This is the color to replace in white label products. Ensure luminousity of custom color is >=52.1 (see hsluv.org) to be AAA text on 000000 bgs."
+        }
+      },
       "generic": {
         "bg": {
           "standard": {
@@ -444,7 +456,7 @@
               "type": "color"
             },
             "defaultAlt": {
-              "value": "{origin.colors.red}",
+              "value": "{base.color.interactive.danger.standard.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -459,7 +471,7 @@
               "description": "For links in datatables"
             },
             "hover": {
-              "value": "{base.color.status.negative.standard.default}",
+              "value": "{base.color.interactive.danger.standard.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -548,7 +560,7 @@
               "description": "for links in datatables\n"
             },
             "hover": {
-              "value": "{base.color.status.negative.inverse.default}",
+              "value": "{base.color.interactive.danger.inverse.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -872,7 +884,7 @@
               }
             },
             "default": {
-              "value": "{origin.colors.jade}",
+              "value": "{base.color.brandreference.custom1}",
               "type": "color"
             },
             "defaultAlt": {
@@ -934,7 +946,7 @@
           },
           "inverse": {
             "default": {
-              "value": "{origin.colors.brilliantGreen}",
+              "value": "{base.color.brandreference.custom2}",
               "type": "color"
             },
             "defaultAlt": {
@@ -1003,6 +1015,21 @@
               "value": "{origin.colors.orange}",
               "type": "color"
             },
+            "defaultAlt": {
+              "value": "{base.color.modifier.contrastLess}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.1",
+                    "space": "lch",
+                    "color": "{origin.colors.brightOrange}"
+                  }
+                }
+              },
+              "description": "Subtle message bg"
+            },
             "hover": {
               "value": "{base.color.status.caution.standard.default}",
               "type": "color",
@@ -1031,7 +1058,11 @@
                   }
                 }
               },
-              "description": "used on pill hover states"
+              "description": "used on pill hover states and message bg"
+            },
+            "text": {
+              "value": "{origin.colors.orange}",
+              "type": "color"
             }
           },
           "inverse": {
@@ -1063,7 +1094,7 @@
               "type": "color"
             },
             "withDefaultAlt": {
-              "value": "{base.color.generic.content.standard.harsh}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "withHover": {
@@ -1081,7 +1112,7 @@
               "type": "color"
             },
             "withDefaultAlt": {
-              "value": "{base.color.generic.content.inverse.harsh}",
+              "value": "{base.color.generic.content.inverse.extreme}",
               "type": "color"
             },
             "withHover": {
@@ -1099,6 +1130,21 @@
             "default": {
               "value": "{origin.colors.blue}",
               "type": "color"
+            },
+            "defaultAlt": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.1",
+                    "space": "lch",
+                    "color": "{origin.colors.brightBlue} "
+                  }
+                }
+              },
+              "description": "Subtle message bg"
             },
             "hover": {
               "value": "{base.color.status.info.standard.default}",
@@ -1128,7 +1174,7 @@
                   }
                 }
               },
-              "description": "used on pill hover states"
+              "description": "used on pill hover states and message bg"
             }
           },
           "inverse": {
@@ -1159,6 +1205,21 @@
               "value": "{origin.colors.red}",
               "type": "color"
             },
+            "defaultAlt": {
+              "value": "{base.color.modifier.contrastLess}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.1",
+                    "space": "lch",
+                    "color": "{origin.colors.brightRed}"
+                  }
+                }
+              },
+              "description": "Subtle message bg"
+            },
             "hover": {
               "value": "{base.color.status.negative.standard.default}",
               "type": "color",
@@ -1187,7 +1248,11 @@
                   }
                 }
               },
-              "description": "used on pill hover states"
+              "description": "used on pill hover states and message bg"
+            },
+            "text": {
+              "value": "{origin.colors.red}",
+              "type": "color"
             }
           },
           "inverse": {
@@ -1218,6 +1283,21 @@
               "value": "{origin.colors.storm}",
               "type": "color"
             },
+            "defaultAlt": {
+              "value": "{base.color.modifier.contrastLess}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.1",
+                    "space": "lch",
+                    "color": "{origin.colors.brightStorm}"
+                  }
+                }
+              },
+              "description": "Subtle message bg"
+            },
             "hover": {
               "value": "{base.color.status.neutral.standard.default}",
               "type": "color",
@@ -1246,7 +1326,7 @@
                   }
                 }
               },
-              "description": "used on pill hover states"
+              "description": "used on pill hover states and message bg"
             }
           },
           "inverse": {
@@ -1277,6 +1357,21 @@
               "value": "{origin.colors.green}",
               "type": "color"
             },
+            "defaultAlt": {
+              "value": "{base.color.modifier.contrastLess}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.1",
+                    "space": "lch",
+                    "color": "{base.color.status.success.standard.default} "
+                  }
+                }
+              },
+              "description": "Subtle message bg"
+            },
             "hover": {
               "value": "{base.color.status.success.standard.default}",
               "type": "color",
@@ -1305,7 +1400,7 @@
                   }
                 }
               },
-              "description": "used on pill hover states"
+              "description": "used on pill hover states and message bg"
             }
           },
           "inverse": {
@@ -1327,6 +1422,25 @@
                 }
               },
               "description": "used on pill hover states"
+            }
+          }
+        },
+        "callout": {
+          "standard": {
+            "default": {
+              "value": "{base.color.modifier.contrastLess}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.15",
+                    "space": "lch",
+                    "color": "{origin.colors.brilliantGreen}"
+                  }
+                }
+              },
+              "description": "used for marketing banners"
             }
           }
         }
