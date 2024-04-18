@@ -894,13 +894,13 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "0.12",
+                    "value": "{base.color.modifiers.link.default}",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastMore}"
                   }
                 }
               },
-              "description": "for links in datatables\n"
+              "description": "for links"
             },
             "hover": {
               "value": "{base.color.interactive.primary.standard.default}",
@@ -923,7 +923,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "value": "{base.color.modifiers.link.hover}",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastMore}"
                   }
@@ -956,13 +956,13 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "0.12",
+                    "value": "{base.color.modifiers.link.default}",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastLess} "
                   }
                 }
               },
-              "description": "for links in datatables\n"
+              "description": "for links"
             },
             "hover": {
               "value": "{base.color.interactive.primary.inverse.default}",
@@ -985,13 +985,13 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "value": "{base.color.modifiers.link.hover}",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastLess} "
                   }
                 }
               },
-              "description": "for links in datatables"
+              "description": "for link hover\n"
             },
             "withActive": {
               "value": "{base.color.generic.content.standard.extreme}",
@@ -1473,6 +1473,17 @@
             "value": "0.30",
             "type": "other",
             "description": "less contrast"
+          }
+        },
+        "link": {
+          "default": {
+            "value": "0.12",
+            "type": "other",
+            "description": "for links - these need to be slightly darker than buttons for accessible contrast ratio in tables."
+          },
+          "hover": {
+            "value": "{base.color.modifiers.button.hoverAlt}",
+            "type": "other"
           }
         },
         "shadow": {
