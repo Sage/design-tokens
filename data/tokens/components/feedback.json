@@ -331,6 +331,13 @@
             "type": "sizing",
             "description": "message and toast icon container width"
           }
+        },
+        "global": {
+          "M": {
+            "value": "{global.size.macro.M}",
+            "type": "sizing",
+            "description": "Global message minheight"
+          }
         }
       },
       "icon": {
@@ -437,52 +444,77 @@
         }
       },
       "message": {
-        "x": {
-          "M": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "Left and right padding on Medium message"
+        "contextual": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "Left and right padding on Medium message"
+            },
+            "L": {
+              "value": "{global.space.macro.S}",
+              "type": "spacing",
+              "description": "Left and right paddding on Large Message"
+            }
           },
-          "L": {
-            "value": "{global.space.macro.S}",
-            "type": "spacing",
-            "description": "Left and right paddding on Large Message"
+          "y": {
+            "M": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "Top and bottom padding on Medium message"
+            },
+            "L": {
+              "value": "{global.space.macro.S}",
+              "type": "spacing",
+              "description": "Top and bottom paddding on Large Message"
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "gap between text and optional subtle button"
+            },
+            "L": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "gap between text and optional subtle button"
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{feedback.space.none}",
+              "type": "spacing",
+              "description": "gap between header and body copy"
+            },
+            "L": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Gap between text and subtle button"
+            }
           }
         },
-        "y": {
-          "M": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "Top and bottom padding on Medium message"
+        "global": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.XL}",
+              "type": "spacing",
+              "description": "Left and right padding on global message for large screen."
+            }
           },
-          "L": {
-            "value": "{global.space.macro.S}",
-            "type": "spacing",
-            "description": "Top and bottom paddding on Large Message"
-          }
-        },
-        "xg": {
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "gap between text and optional subtle button"
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Top and bottom padding on global message."
+            }
           },
-          "L": {
-            "value": "{global.space.macro.XS}",
-            "type": "spacing",
-            "description": "gap between text and optional subtle button"
-          }
-        },
-        "yg": {
-          "M": {
-            "value": "{feedback.space.none}",
-            "type": "spacing",
-            "description": "gap between header and body copy"
-          },
-          "L": {
-            "value": "{global.space.micro.S}",
-            "type": "spacing",
-            "description": "Gap between text and subtle button"
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Space between icon wrapper and text wrapper"
+            }
           }
         }
       }
