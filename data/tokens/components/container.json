@@ -39,23 +39,10 @@
           "value": "{base.color.generic.bg.standard.nought}",
           "type": "color"
         },
-        "bgFooter-activated": {
-          "value": "{base.color.status.success.standard.default}",
-          "type": "color",
-          "description": "\n"
-        },
-        "bgFooter-active": {
-          "value": "{base.color.interactive.monochrome.standard.active}",
-          "type": "color"
-        },
         "bgFooter-default": {
           "value": "{base.color.generic.bg.standard.faint}",
           "type": "color",
           "description": "tile footer bg color\n"
-        },
-        "border-activated": {
-          "value": "{base.color.status.success.standard.default}",
-          "type": "color"
         },
         "border-active": {
           "value": "{base.color.interactive.monochrome.standard.active}",
@@ -98,7 +85,39 @@
           "type": "color",
           "description": "for headings, paragraph text etc "
         },
+        "scroll": {
+          "bg-default": {
+            "value": "{base.color.generic.bg.inverse.nought}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.12",
+                  "space": "lch"
+                }
+              }
+            }
+          },
+          "fg-default": {
+            "value": "{base.color.generic.fg.standard.moderate}",
+            "type": "color"
+          }
+        },
         "interactive": {
+          "bgFooter-activated": {
+            "value": "{base.color.status.success.standard.default}",
+            "type": "color",
+            "description": "\n"
+          },
+          "bgFooter-active": {
+            "value": "{base.color.interactive.monochrome.standard.active}",
+            "type": "color"
+          },
+          "border-activated": {
+            "value": "{base.color.status.success.standard.default}",
+            "type": "color"
+          },
           "bgFooter-default": {
             "value": "{base.color.generic.bg.standard.nought}",
             "type": "color",
@@ -200,25 +219,6 @@
             "value": "{base.color.interactive.monochrome.standard.hover}",
             "type": "color",
             "description": "Hover label for any accordion."
-          }
-        },
-        "scroll": {
-          "bg-default": {
-            "value": "{base.color.generic.bg.inverse.nought}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.12",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "fg-default": {
-            "value": "{base.color.generic.fg.standard.moderate}",
-            "type": "color"
           }
         }
       }
