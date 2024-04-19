@@ -9,25 +9,25 @@
         "border-default": {
           "value": "{base.color.generic.fg.inverse.delicate}",
           "type": "color"
-        }
-      },
-      "scroll": {
-        "bg-default": {
-          "value": "{base.color.generic.bg.inverse.nought}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "alpha",
-                "value": "0.12",
-                "space": "lch"
+        },
+        "scroll": {
+          "bg-default": {
+            "value": "{base.color.generic.bg.standard.nought}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.12",
+                  "space": "lch"
+                }
               }
             }
+          },
+          "fg-default": {
+            "value": "{base.color.generic.fg.inverse.moderate}",
+            "type": "color"
           }
-        },
-        "fg-default": {
-          "value": "{base.color.generic.fg.standard.moderate}",
-          "type": "color"
         }
       },
       "standard": {
@@ -200,6 +200,25 @@
             "value": "{base.color.interactive.monochrome.standard.hover}",
             "type": "color",
             "description": "Hover label for any accordion."
+          }
+        },
+        "scroll": {
+          "bg-default": {
+            "value": "{base.color.generic.bg.inverse.nought}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.12",
+                  "space": "lch"
+                }
+              }
+            }
+          },
+          "fg-default": {
+            "value": "{base.color.generic.fg.standard.moderate}",
+            "type": "color"
           }
         }
       }
