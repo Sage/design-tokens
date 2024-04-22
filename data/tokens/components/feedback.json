@@ -368,10 +368,10 @@
         "type": "borderRadius",
         "description": "Pill (outer corners)"
       },
-      "toast": {
-        "value": "{global.radius.container.M}",
+      "nudge": {
+        "value": "{global.radius.container.L}",
         "type": "borderRadius",
-        "description": "Toast"
+        "description": "nudge radius"
       },
       "tooltip": {
         "value": "{global.radius.container.S}",
@@ -380,15 +380,10 @@
       }
     },
     "boxshadow": {
-      "toast": {
+      "nudge": {
         "value": "{global.boxshadow.container.far}",
         "type": "boxShadow",
-        "description": "Toast\n"
-      },
-      "tooltip": {
-        "value": "{global.boxshadow.container.far}",
-        "type": "boxShadow",
-        "description": "Tooltip\n"
+        "description": "nudge shadow"
       }
     },
     "borderwidth": {
@@ -507,6 +502,46 @@
               "value": "{global.space.micro.L}",
               "type": "spacing",
               "description": "Space between icon wrapper and text wrapper"
+            }
+          }
+        },
+        "nudge": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Left and right padding on medium nudge"
+            },
+            "L": {
+              "value": "{global.space.macro.L}",
+              "type": "spacing",
+              "description": "left and right padding on large nudge "
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Top and bottom padding on medium nudge"
+            },
+            "L": {
+              "value": "{global.space.macro.L}",
+              "type": "spacing",
+              "description": "Top and bottom paddding on large nudge"
+            }
+          },
+          "header": {
+            "xg": {
+              "M": {
+                "value": "{global.space.macro.XS}",
+                "type": "spacing",
+                "description": "gap between header and ai logo"
+              },
+              "L": {
+                "value": "{global.space.macro.XS}",
+                "type": "spacing",
+                "description": "gap between header and ai logo"
+              }
             }
           }
         }
