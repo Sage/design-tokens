@@ -189,16 +189,16 @@
           "type": "color",
           "description": "Message text."
         },
-        "AI": {
-          "border-default": {
-            "value": "{base.color.generic.fg.standard.delicate}",
+        "nudge": {
+          "borderAi-horizontal": {
+            "value": "{base.color.status.ai.standard.default-horizontal}",
             "type": "color",
-            "description": "border for inline ai message on light bg"
+            "description": "top and bottom border for AI nudge message component"
           },
-          "borderAi-default": {
+          "borderAi-vertical": {
             "value": "{base.color.status.ai.standard.default-vertical}",
             "type": "color",
-            "description": "left border for AI inline message component"
+            "description": "left and right border for AI nudge message component"
           }
         },
         "error": {
@@ -392,7 +392,7 @@
       }
     },
     "boxshadow": {
-      "AInudge": {
+      "nudge": {
         "value": "{global.boxshadow.container.far}",
         "type": "boxShadow",
         "description": "nudge shadow"
@@ -409,10 +409,10 @@
         "type": "borderWidth",
         "description": "Contextual message and AI inline border"
       },
-      "AIgradient": {
+      "nudge": {
         "value": "{global.borderwidth.XL}",
         "type": "borderWidth",
-        "description": "inline AI message left border\n"
+        "description": "nudge AI message borders\n"
       }
     },
     "space": {
