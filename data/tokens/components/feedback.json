@@ -148,6 +148,18 @@
           "type": "color",
           "description": "Pill (all types, readonly, when nested in disabled parent components)"
         },
+        "AI": {
+          "border-default": {
+            "value": "{base.color.generic.fg.standard.delicate}",
+            "type": "color",
+            "description": "border for inline ai message on light bg"
+          },
+          "borderAi-default": {
+            "value": "{base.color.status.ai.standard.default-vertical}",
+            "type": "color",
+            "description": "left border for AI inline message component"
+          }
+        },
         "border-readonly": {
           "value": "{base.color.interactive.inactive.standard.default}",
           "type": "color",
@@ -380,7 +392,7 @@
       }
     },
     "boxshadow": {
-      "nudge": {
+      "AInudge": {
         "value": "{global.boxshadow.container.far}",
         "type": "boxShadow",
         "description": "nudge shadow"
@@ -395,12 +407,12 @@
       "message": {
         "value": "{global.borderwidth.XS}",
         "type": "borderWidth",
-        "description": "Message border"
+        "description": "Contextual message and AI inline border"
       },
-      "toast": {
-        "value": "{global.borderwidth.XS}",
+      "AIgradient": {
+        "value": "{global.borderwidth.XL}",
         "type": "borderWidth",
-        "description": "Message border"
+        "description": "inline AI message left border\n"
       }
     },
     "space": {
