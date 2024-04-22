@@ -75,6 +75,20 @@
                   }
                 }
               }
+            },
+            "intense": {
+              "value": "{base.color.generic.bg.standard.nought}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.48",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore} "
+                  }
+                }
+              }
             }
           },
           "inverse": {
@@ -174,6 +188,20 @@
                   "modify": {
                     "type": "mix",
                     "value": "0.40",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            },
+            "intense": {
+              "value": "{base.color.generic.bg.inverse.nought}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.48",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastLess} "
                   }
@@ -1134,6 +1162,22 @@
             "withHoverAlt": {
               "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
+            }
+          }
+        },
+        "inactive": {
+          "standard": {
+            "default": {
+              "value": "{base.color.generic.bg.standard.intense}",
+              "type": "color",
+              "description": "For readonly pill bg and border"
+            }
+          },
+          "inverse": {
+            "default": {
+              "value": "{base.color.generic.bg.inverse.intense}",
+              "type": "color",
+              "description": "For readonly pill bg and border"
             }
           }
         },
