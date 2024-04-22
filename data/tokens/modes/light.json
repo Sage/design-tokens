@@ -76,14 +76,14 @@
                 }
               }
             },
-            "intense": {
+            "severe": {
               "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "0.48",
+                    "value": "0.40",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastMore} "
                   }
@@ -188,20 +188,6 @@
                   "modify": {
                     "type": "mix",
                     "value": "0.40",
-                    "space": "lch",
-                    "color": "{base.color.modifier.contrastLess} "
-                  }
-                }
-              }
-            },
-            "intense": {
-              "value": "{base.color.generic.bg.inverse.nought}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.48",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastLess} "
                   }
@@ -1168,16 +1154,26 @@
         "inactive": {
           "standard": {
             "default": {
-              "value": "{base.color.generic.bg.standard.intense}",
+              "value": "{base.color.generic.fg.standard.soft}",
               "type": "color",
               "description": "For readonly pill bg and border"
+            },
+            "withDefault": {
+              "value": "{base.color.generic.content.standard.firm}",
+              "type": "color",
+              "description": "For readonly filled pill text"
             }
           },
           "inverse": {
             "default": {
-              "value": "{base.color.generic.bg.inverse.intense}",
+              "value": "{base.color.generic.fg.inverse.soft}",
               "type": "color",
               "description": "For readonly pill bg and border"
+            },
+            "withDefault": {
+              "value": "{base.color.generic.content.inverse.firm}",
+              "type": "color",
+              "description": "For readonly filled pill text"
             }
           }
         },
