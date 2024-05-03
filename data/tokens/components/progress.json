@@ -18,6 +18,20 @@
           "description": "L loader bar"
         }
       },
+      "carouselselector": {
+        "dot": {
+          "value": "{global.size.micro.L}",
+          "type": "sizing"
+        },
+        "activedot": {
+          "value": "{global.size.macro.XXS}",
+          "type": "sizing"
+        },
+        "hitarea": {
+          "value": "{global.size.macro.M}",
+          "type": "sizing"
+        }
+      },
       "ring": {
         "S": {
           "value": "{global.size.macro.S}",
@@ -250,6 +264,13 @@
           }
         }
       },
+      "carouselslide": {
+        "x": {
+          "value": "{global.space.micro.L}",
+          "type": "spacing",
+          "description": "Inactive slide padding"
+        }
+      },
       "integral": {
         "x": {
           "value": "{global.space.micro.S}",
@@ -336,6 +357,15 @@
             "type": "spacing",
             "description": "vertical gap between skeleton bars"
           }
+        }
+      }
+    },
+    "opacity": {
+      "carousel": {
+        "inactive": {
+          "value": "0.3",
+          "type": "opacity",
+          "description": "Inactive slide IMAGE layer."
         }
       }
     }
