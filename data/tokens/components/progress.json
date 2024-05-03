@@ -18,18 +18,20 @@
           "description": "L loader bar"
         }
       },
-      "carouselselector": {
-        "dot": {
-          "value": "{global.size.micro.L}",
-          "type": "sizing"
-        },
-        "activedot": {
-          "value": "{global.size.macro.XXS}",
-          "type": "sizing"
-        },
-        "hitarea": {
-          "value": "{global.size.macro.M}",
-          "type": "sizing"
+      "carousel": {
+        "selector": {
+          "dot": {
+            "value": "{global.size.micro.L}",
+            "type": "sizing"
+          },
+          "activedot": {
+            "value": "{global.size.macro.XXS}",
+            "type": "sizing"
+          },
+          "hitarea": {
+            "value": "{global.size.macro.M}",
+            "type": "sizing"
+          }
         }
       },
       "ring": {
@@ -238,37 +240,20 @@
       }
     },
     "space": {
-      "tracker": {
-        "yg": {
-          "S": {
-            "value": "{global.space.micro.M}",
-            "type": "spacing",
-            "description": "Space between bar and label"
-          },
-          "M": {
+      "carousel": {
+        "slide": {
+          "x": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
-            "description": "Space between bar and label"
-          },
-          "L": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "Space between bar and label"
+            "description": "Inactive slide padding"
           }
         },
-        "xg": {
-          "M": {
-            "value": "{global.space.micro.L}",
+        "selector": {
+          "y": {
+            "value": "{global.space.macro.XS}",
             "type": "spacing",
-            "description": "Gap between tracker value text and description"
+            "description": "Vertical padding on selector group."
           }
-        }
-      },
-      "carouselslide": {
-        "x": {
-          "value": "{global.space.micro.L}",
-          "type": "spacing",
-          "description": "Inactive slide padding"
         }
       },
       "integral": {
@@ -276,22 +261,6 @@
           "value": "{global.space.micro.S}",
           "type": "spacing",
           "description": "Little space between words in progress components"
-        }
-      },
-      "stepsequence": {
-        "xg": {
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "gap between step number and step text"
-          }
-        },
-        "yg": {
-          "M": {
-            "value": "{global.space.macro.XS}",
-            "type": "spacing",
-            "description": "gap between progress lines and steps"
-          }
         }
       },
       "loader": {
@@ -356,6 +325,48 @@
             "value": "{global.space.micro.L}",
             "type": "spacing",
             "description": "vertical gap between skeleton bars"
+          }
+        }
+      },
+      "stepsequence": {
+        "xg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "gap between step number and step text"
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "gap between progress lines and steps"
+          }
+        }
+      },
+      "tracker": {
+        "yg": {
+          "S": {
+            "value": "{global.space.micro.M}",
+            "type": "spacing",
+            "description": "Space between bar and label"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Space between bar and label"
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Space between bar and label"
+          }
+        },
+        "xg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between tracker value text and description"
           }
         }
       }
