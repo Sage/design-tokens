@@ -18,17 +18,21 @@
           "description": "L loader bar"
         }
       },
-      "carousel": {
-        "selector": {
-          "dot": {
+      "carouselselector": {
+        "dot": {
+          "M": {
             "value": "{global.size.micro.L}",
             "type": "sizing"
-          },
-          "activedot": {
+          }
+        },
+        "activedot": {
+          "M": {
             "value": "{global.size.macro.XXS}",
             "type": "sizing"
-          },
-          "hitarea": {
+          }
+        },
+        "hitarea": {
+          "M": {
             "value": "{global.size.macro.M}",
             "type": "sizing"
           }
@@ -240,16 +244,25 @@
       }
     },
     "space": {
-      "carousel": {
-        "slide": {
-          "x": {
+      "carouselslide": {
+        "x": {
+          "M": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
             "description": "Inactive slide padding"
           }
+        }
+      },
+      "carouselselector": {
+        "xg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between selectors."
+          }
         },
-        "selector": {
-          "y": {
+        "y": {
+          "M": {
             "value": "{global.space.macro.XS}",
             "type": "spacing",
             "description": "Vertical padding on selector group."
