@@ -73,35 +73,6 @@
       }
     },
     "space": {
-      "generic": {
-        "content": {
-          "x": {
-            "M": {
-              "value": "{global.space.macro.M}",
-              "type": "spacing"
-            }
-          },
-          "y": {
-            "M": {
-              "value": "{global.space.macro.M}",
-              "type": "spacing",
-              "description": "Vertical padding on content in dialog, drawer, sidebar card and tile"
-            }
-          },
-          "yg": {
-            "M": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing"
-            }
-          },
-          "xg": {
-            "M": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing"
-            }
-          }
-        }
-      },
       "menu": {
         "y": {
           "S": {
@@ -120,13 +91,11 @@
             "description": "Top and bottom padding on popover menu container"
           }
         },
-        "above": {
-          "y": {
-            "M": {
-              "value": "{global.space.micro.M}",
-              "type": "spacing",
-              "description": "Space above popover menu card."
-            }
+        "yg": {
+          "M": {
+            "value": "{global.space.micro.M}",
+            "type": "spacing",
+            "description": "Space above popover menu card."
           }
         }
       },
@@ -180,6 +149,25 @@
             "value": "{global.space.micro.L}",
             "type": "spacing",
             "description": "Top and bottom padding on popover option."
+          }
+        }
+      },
+      "submenu": {
+        "x": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Right left padding on small screen submenu popover container."
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Right left padding on small screen submenu popover container."
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Right left padding on small screen submenu popover container."
           }
         }
       }
