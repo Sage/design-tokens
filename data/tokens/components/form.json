@@ -5,6 +5,20 @@
         "value": "0",
         "type": "spacing"
       },
+      "calendar": {
+        "x": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing"
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing"
+          }
+        }
+      },
       "checkradio": {
         "y": {
           "S": {
@@ -100,52 +114,6 @@
           }
         }
       },
-      "integral": {
-        "numdate": {
-          "value": "{global.space.micro.S}",
-          "type": "spacing",
-          "description": "Space between secondarylabel&input in Numeral date."
-        },
-        "popover": {
-          "value": "{global.space.micro.M}",
-          "type": "spacing",
-          "description": "Space between input and popover"
-        },
-        "xg": {
-          "S": {
-            "value": "{global.space.micro.M}",
-            "type": "spacing",
-            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button)"
-          },
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button, dropdown option icon and label), Switch and processing text."
-          },
-          "L": {
-            "value": "{global.space.micro.XL}",
-            "type": "spacing",
-            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button)"
-          }
-        },
-        "yg": {
-          "S": {
-            "value": "{global.space.micro.M}",
-            "type": "spacing",
-            "description": "Space below labelset or error validation in form components"
-          },
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Space below labelset or error validation in form components"
-          },
-          "L": {
-            "value": "{global.space.micro.XL}",
-            "type": "spacing",
-            "description": "Space below labelset or error validation in form components"
-          }
-        }
-      },
       "input": {
         "stack": {
           "S": {
@@ -233,6 +201,52 @@
           }
         }
       },
+      "integral": {
+        "numdate": {
+          "value": "{global.space.micro.S}",
+          "type": "spacing",
+          "description": "Space between secondarylabel&input in Numeral date."
+        },
+        "popover": {
+          "value": "{global.space.micro.M}",
+          "type": "spacing",
+          "description": "Space between input and popover"
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.micro.M}",
+            "type": "spacing",
+            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button)"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button, dropdown option icon and label), Switch and processing text."
+          },
+          "L": {
+            "value": "{global.space.micro.XL}",
+            "type": "spacing",
+            "description": "Space between integral elements (ie checkbox&label, inputtext&icon,inputtext&button)"
+          }
+        },
+        "yg": {
+          "S": {
+            "value": "{global.space.micro.M}",
+            "type": "spacing",
+            "description": "Space below labelset or error validation in form components"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Space below labelset or error validation in form components"
+          },
+          "L": {
+            "value": "{global.space.micro.XL}",
+            "type": "spacing",
+            "description": "Space below labelset or error validation in form components"
+          }
+        }
+      },
       "layout": {
         "stack": {
           "S": {
@@ -301,6 +315,18 @@
           "description": "L checkboxes"
         }
       },
+      "colorpicker": {
+        "swatch": {
+          "value": "{global.size.macro.M}",
+          "type": "sizing",
+          "description": "width and height of color picker swatch\n"
+        },
+        "swatchcontainer": {
+          "value": "{global.size.macro.XXXL} + {global.size.micro.M}",
+          "type": "sizing",
+          "description": "width of swatch parent container"
+        }
+      },
       "fileinput": {
         "preview": {
           "value": "{global.size.macro.XXXL}",
@@ -313,6 +339,22 @@
           "value": "{global.size.flex.XS}",
           "type": "sizing",
           "description": "Thumbnail width on file preview component"
+        }
+      },
+      "icon": {
+        "S": {
+          "value": "{global.size.icon.S}",
+          "type": "sizing",
+          "description": "Currently for checkbox only."
+        },
+        "M": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
+        },
+        "L": {
+          "value": "{global.size.icon.L}",
+          "type": "sizing",
+          "description": "Currently for checkbox only."
         }
       },
       "input": {
@@ -330,18 +372,6 @@
           "value": "{global.size.macro.L}",
           "type": "sizing",
           "description": "L Inputs, Color picker square"
-        }
-      },
-      "colorpicker": {
-        "swatch": {
-          "value": "{global.size.macro.M}",
-          "type": "sizing",
-          "description": "width and height of color picker swatch\n"
-        },
-        "swatchcontainer": {
-          "value": "{global.size.macro.XXXL} + {global.size.micro.M}",
-          "type": "sizing",
-          "description": "width of swatch parent container"
         }
       },
       "radio": {
@@ -411,22 +441,6 @@
           "value": "{global.size.micro.XXS}",
           "type": "sizing",
           "description": "2px validation bar used on errors and warnings"
-        }
-      },
-      "icon": {
-        "S": {
-          "value": "{global.size.icon.S}",
-          "type": "sizing",
-          "description": "Currently for checkbox only."
-        },
-        "M": {
-          "value": "{global.size.icon.M}",
-          "type": "sizing"
-        },
-        "L": {
-          "value": "{global.size.icon.L}",
-          "type": "sizing",
-          "description": "Currently for checkbox only."
         }
       }
     },
@@ -712,12 +726,29 @@
         "type": "borderRadius",
         "description": "Text editor (internal corners)"
       },
+      "calendar": {
+        "none": {
+          "value": "{global.radius.none}",
+          "type": "borderRadius",
+          "description": "Calendar (start and end duration)"
+        },
+        "date": {
+          "value": "{global.radius.circle}",
+          "type": "borderRadius",
+          "description": "Calendar date (hover & selected), "
+        },
+        "today": {
+          "value": "{global.radius.container.XS}",
+          "type": "borderRadius",
+          "description": "Calendar (today indicator)"
+        }
+      },
       "checkbox": {
         "value": "{global.radius.interactive.S}",
         "type": "borderRadius",
         "description": "S and M checkbox"
       },
-      "colorswatch": {
+      "colorpicker": {
         "value": "{global.radius.interactive.XXL}",
         "type": "borderRadius",
         "description": "Color picker (swatch container), \n"
@@ -751,30 +782,27 @@
         "value": "{global.radius.interactive.XS}",
         "type": "borderRadius",
         "description": "Validation bar"
-      },
-      "calendar": {
-        "none": {
-          "value": "{global.radius.none}",
-          "type": "borderRadius",
-          "description": "Calendar (start and end duration)"
-        },
-        "date": {
-          "value": "{global.radius.circle}",
-          "type": "borderRadius",
-          "description": "Calendar date (hover & selected), "
-        },
-        "today": {
-          "value": "{global.radius.container.XS}",
-          "type": "borderRadius",
-          "description": "Calendar (today indicator)"
-        }
       }
     },
     "borderwidth": {
+      "calendar": {
+        "duration": {
+          "value": "{global.borderwidth.S}",
+          "type": "borderWidth",
+          "description": "Calendar (duration date top and bottom borders)"
+        }
+      },
       "caution": {
         "value": "{global.borderwidth.XS}",
         "type": "borderWidth",
         "description": "Caution border"
+      },
+      "divider": {
+        "item": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth",
+          "description": "Dropdown menu (item divider)"
+        }
       },
       "dragover": {
         "value": "{global.borderwidth.S}",
@@ -810,20 +838,6 @@
         "value": "{global.borderwidth.XS}",
         "type": "borderWidth",
         "description": "Tile border"
-      },
-      "divider": {
-        "item": {
-          "value": "{global.borderwidth.XS}",
-          "type": "borderWidth",
-          "description": "Dropdown menu (item divider)"
-        }
-      },
-      "calendar": {
-        "duration": {
-          "value": "{global.borderwidth.S}",
-          "type": "borderWidth",
-          "description": "Calendar (duration date top and bottom borders)"
-        }
       }
     }
   }
