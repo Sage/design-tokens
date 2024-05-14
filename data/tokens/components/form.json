@@ -757,30 +757,13 @@
         "type": "borderRadius",
         "description": "Text editor (internal corners)"
       },
-      "calendar": {
-        "none": {
-          "value": "{global.radius.none}",
-          "type": "borderRadius",
-          "description": "Calendar (start and end duration)"
-        },
-        "date": {
-          "value": "{global.radius.circle}",
-          "type": "borderRadius",
-          "description": "Calendar date (hover & selected), "
-        },
-        "today": {
-          "value": "{global.radius.container.XS}",
-          "type": "borderRadius",
-          "description": "Calendar (today indicator)"
-        }
-      },
       "checkbox": {
         "value": "{global.radius.interactive.S}",
         "type": "borderRadius",
         "description": "S and M checkbox"
       },
       "colorpicker": {
-        "value": "{global.radius.interactive.XXL}",
+        "value": "{global.radius.circle}",
         "type": "borderRadius",
         "description": "Color picker (swatch container), \n"
       },
@@ -813,27 +796,35 @@
         "value": "{global.radius.interactive.XS}",
         "type": "borderRadius",
         "description": "Validation bar"
+      },
+      "calendar": {
+        "none": {
+          "value": "{global.radius.none}",
+          "type": "borderRadius",
+          "description": "Calendar (start and end duration)"
+        },
+        "date": {
+          "value": "{global.radius.circle}",
+          "type": "borderRadius",
+          "description": "Calendar date (hover & selected), "
+        },
+        "today": {
+          "value": "{global.radius.container.XS}",
+          "type": "borderRadius",
+          "description": "Calendar (today indicator)"
+        }
       }
     },
     "borderwidth": {
-      "calendar": {
-        "duration": {
-          "value": "{global.borderwidth.S}",
-          "type": "borderWidth",
-          "description": "Calendar (duration date top and bottom borders)"
-        }
+      "colorpicker": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "swatch border"
       },
       "caution": {
         "value": "{global.borderwidth.XS}",
         "type": "borderWidth",
         "description": "Caution border"
-      },
-      "divider": {
-        "item": {
-          "value": "{global.borderwidth.XS}",
-          "type": "borderWidth",
-          "description": "Dropdown menu (item divider)"
-        }
       },
       "dragover": {
         "value": "{global.borderwidth.S}",
@@ -869,6 +860,20 @@
         "value": "{global.borderwidth.XS}",
         "type": "borderWidth",
         "description": "Tile border"
+      },
+      "calendar": {
+        "duration": {
+          "value": "{global.borderwidth.S}",
+          "type": "borderWidth",
+          "description": "Calendar (duration date top and bottom borders)"
+        }
+      },
+      "divider": {
+        "item": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth",
+          "description": "Dropdown menu (item divider)"
+        }
       }
     }
   }
