@@ -214,7 +214,7 @@
           "type": "spacing",
           "description": "Space between secondarylabel&input in Numeral date."
         },
-        "popover": {
+        "pop": {
           "value": "{global.space.micro.M}",
           "type": "spacing",
           "description": "Space between input and popover"
@@ -270,6 +270,80 @@
             "value": "{global.space.macro.M}",
             "type": "spacing",
             "description": "Spacing between horizontal and vertical L form components"
+          }
+        }
+      },
+      "pop": {
+        "menu": {
+          "y": {
+            "S": {
+              "value": "{popover.space.menu.y.S}",
+              "type": "spacing",
+              "description": "REF POPOVER. Top and bottom padding on container"
+            },
+            "M": {
+              "value": "{popover.space.menu.y.M}",
+              "type": "spacing",
+              "description": "REF POPOVER. Top and bottom padding on container"
+            },
+            "L": {
+              "value": "{popover.space.menu.y.L}",
+              "type": "spacing",
+              "description": "REF POPOVER. Top and bottom padding on container"
+            }
+          }
+        },
+        "option": {
+          "x": {
+            "S": {
+              "value": "{popover.space.option.x.S}",
+              "type": "spacing",
+              "description": "REF POPOVER. Right padding on option."
+            },
+            "M": {
+              "value": "{popover.space.option.x.M}",
+              "type": "spacing",
+              "description": "REF POPOVER. Right padding on option."
+            },
+            "L": {
+              "value": "{popover.space.option.x.L}",
+              "type": "spacing",
+              "description": "REF POPOVER. Right padding on option."
+            }
+          },
+          "xg": {
+            "S": {
+              "value": "{global.space.micro.XS}",
+              "type": "spacing",
+              "description": "DD only. Space between optional icon and option label."
+            },
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "DD only. Space between optional icon and option label."
+            },
+            "L": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "DD only. Space between optional icon and option label."
+            }
+          },
+          "y": {
+            "S": {
+              "value": "{popover.space.option.y.S}",
+              "type": "spacing",
+              "description": "REF POPOVER. Vertical padding on option."
+            },
+            "M": {
+              "value": "{popover.space.option.y.M}",
+              "type": "spacing",
+              "description": "REF POPOVER. Vertical padding on option."
+            },
+            "L": {
+              "value": "{popover.space.option.y.L}",
+              "type": "spacing",
+              "description": "REF POPOVER. Vertical padding on option."
+            }
           }
         }
       },
@@ -403,6 +477,25 @@
           "value": "{global.size.macro.L}",
           "type": "sizing",
           "description": "L Inputs, Color picker square"
+        }
+      },
+      "pop": {
+        "item": {
+          "S": {
+            "value": "{popover.size.item.S}",
+            "type": "sizing",
+            "description": "REF POPOVER. Menu item min height."
+          },
+          "M": {
+            "value": "{popover.size.item.M}",
+            "type": "sizing",
+            "description": "REF POPOVER. Menu item min height."
+          },
+          "L": {
+            "value": "{popover.size.item.L}",
+            "type": "sizing",
+            "description": "REF POPOVER. Menu item min height."
+          }
         }
       },
       "radio": {
@@ -749,6 +842,18 @@
           "value": "{base.color.status.caution.standard.text}",
           "type": "color"
         }
+      },
+      "pop": {
+        "bg-default": {
+          "value": "{popover.color.bg-default}",
+          "type": "color",
+          "description": "REF POPOVER. Popover container bg"
+        },
+        "bg-hover": {
+          "value": "{popover.color.bg-hover}",
+          "type": "color",
+          "description": "REF POPOVER\n"
+        }
       }
     },
     "radius": {
@@ -781,6 +886,11 @@
         "value": "{global.radius.interactive.M}",
         "type": "borderRadius",
         "description": "Date picker input, Date range input, Dropdown select (trigger), Search, File input (draggable area), Text area, Text input"
+      },
+      "pop": {
+        "value": "{popover.radius.container}",
+        "type": "borderRadius",
+        "description": "REF POPOVER. Popover container."
       },
       "radio": {
         "value": "{global.radius.circle}",
@@ -874,6 +984,13 @@
           "type": "borderWidth",
           "description": "Dropdown menu (item divider)"
         }
+      }
+    },
+    "boxshadow": {
+      "pop": {
+        "value": "{popover.boxshadow.container}",
+        "type": "boxShadow",
+        "description": "REF POPOVER. popover container"
       }
     }
   }
