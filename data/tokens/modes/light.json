@@ -229,6 +229,19 @@
                 }
               }
             },
+            "moderate": {
+              "value": "{base.color.generic.content.standard.extreme}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.50",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
             "soft": {
               "value": "{base.color.generic.content.standard.extreme}",
               "type": "color",
@@ -734,7 +747,7 @@
               "description": "Disabled icon inside buttons and form inputs."
             },
             "iconAlt": {
-              "value": "{base.color.generic.fg.standard.moderate}",
+              "value": "{base.color.generic.content.standard.moderate}",
               "type": "color",
               "description": "Readonly icon inside form inputs. "
             }
