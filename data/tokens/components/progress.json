@@ -180,6 +180,52 @@
           "value": "{base.color.generic.content.standard.harsh}",
           "type": "color"
         }
+      },
+      "stepsequence": {
+        "bg-active": {
+          "value": "{base.color.generic.fg.inverse.nought}",
+          "type": "color"
+        },
+        "border-ai": {
+          "value": "{base.color.interactive.ai.standard.default}",
+          "type": "color"
+        },
+        "bg-complete": {
+          "value": "{base.color.status.success.standard.default}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{base.color.generic.fg.standard.soft}",
+          "type": "color"
+        },
+        "fg-active": {
+          "value": "{base.color.generic.fg.standard.nought}",
+          "type": "color"
+        },
+        "fg-ai": {
+          "value": "{base.color.interactive.ai.standard.default}",
+          "type": "color"
+        },
+        "fg-complete": {
+          "value": "{base.color.generic.fg.standard.nought}",
+          "type": "color"
+        },
+        "fg-default": {
+          "value": "{base.color.generic.content.standard.firm}",
+          "type": "color"
+        },
+        "label-active": {
+          "value": "{base.color.generic.content.standard.harsh}",
+          "type": "color"
+        },
+        "label-complete": {
+          "value": "{base.color.status.success.standard.default}",
+          "type": "color"
+        },
+        "label-default": {
+          "value": "{base.color.generic.content.standard.firm}",
+          "type": "color"
+        }
       }
     },
     "radius": {
@@ -346,14 +392,28 @@
           "M": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
-            "description": "gap between step number and step text"
+            "description": "Vertical variant gap between step indicator and label"
+          }
+        },
+        "x": {
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Horizontal variant horizontal padding on label."
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Vertical variant vertical padding on label."
           }
         },
         "yg": {
           "M": {
-            "value": "{global.space.macro.XS}",
+            "value": "{global.space.micro.S}",
             "type": "spacing",
-            "description": "gap between progress lines and steps"
+            "description": "Horizontal variant gap between step indicator and label"
           }
         }
       },
