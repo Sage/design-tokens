@@ -90,6 +90,13 @@
           "type": "sizing",
           "description": "H1 Skeletons"
         }
+      },
+      "stepflow": {
+        "M": {
+          "value": "{global.size.micro.S}",
+          "type": "sizing",
+          "description": "Step height"
+        }
       }
     },
     "color": {
@@ -387,6 +394,57 @@
           }
         }
       },
+      "stepflow": {
+        "yg": {
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Gap between heading wrapper and step indicator"
+          }
+        },
+        "steps": {
+          "xg": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Gap between step indicators"
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Gap between label and step indicators"
+            }
+          }
+        }
+      },
+      "tracker": {
+        "yg": {
+          "S": {
+            "value": "{global.space.micro.M}",
+            "type": "spacing",
+            "description": "Space between bar and label"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Space between bar and label"
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Space between bar and label"
+          }
+        },
+        "xg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between tracker value text and description"
+          }
+        }
+      },
       "stepsequence": {
         "xg": {
           "M": {
@@ -414,32 +472,6 @@
             "value": "{global.space.micro.S}",
             "type": "spacing",
             "description": "Horizontal variant gap between step indicator and label"
-          }
-        }
-      },
-      "tracker": {
-        "yg": {
-          "S": {
-            "value": "{global.space.micro.M}",
-            "type": "spacing",
-            "description": "Space between bar and label"
-          },
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Space between bar and label"
-          },
-          "L": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "Space between bar and label"
-          }
-        },
-        "xg": {
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Gap between tracker value text and description"
           }
         }
       }
