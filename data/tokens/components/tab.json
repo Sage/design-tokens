@@ -11,10 +11,38 @@
         "type": "sizing",
         "description": "L tab"
       },
+      "baseline": {
+        "M": {
+          "value": "{global.size.micro.XXS}",
+          "type": "sizing",
+          "description": "Thickness of baseline."
+        },
+        "L": {
+          "value": "{global.size.micro.XXS}",
+          "type": "sizing",
+          "description": "Thickness of baseline."
+        }
+      },
       "icon": {
         "M": {
           "value": "{global.size.icon.M}",
           "type": "sizing"
+        },
+        "L": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
+        }
+      },
+      "indicator": {
+        "M": {
+          "value": "{global.size.micro.XS}",
+          "type": "sizing",
+          "description": "Thickness of indicator for active and hover."
+        },
+        "L": {
+          "value": "{global.size.micro.XS}",
+          "type": "sizing",
+          "description": "Thickness of indicator for active and hover."
         }
       }
     },
@@ -58,14 +86,6 @@
     },
     "color": {
       "typical": {
-        "bg-active": {
-          "value": "{base.color.interactive.monochrome.standard.withActive}",
-          "type": "color"
-        },
-        "bg-hover": {
-          "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
-          "type": "color"
-        },
         "border-active": {
           "value": "{base.color.interactive.monochrome.standard.active}",
           "type": "color"
@@ -75,18 +95,9 @@
           "type": "color"
         },
         "border-hover": {
-          "value": "{base.color.generic.fg.standard.delicate}",
+          "value": "{base.color.generic.fg.standard.moderate}",
           "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "{base.logo.color.modifiers.button.hover}",
-                "space": "lch",
-                "color": "{base.color.modifier.contrastMore}"
-              }
-            }
-          }
+          "$extensions": {}
         },
         "icon-enabled": {
           "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
@@ -111,6 +122,13 @@
         "label-hover": {
           "value": "{base.color.interactive.monochrome.standard.withHover}",
           "type": "color"
+        },
+        "navigation": {
+          "bg-default": {
+            "value": "{base.color.interactive.monochrome.standard.withActive}",
+            "type": "color",
+            "description": "Navigation button in responsive tab."
+          }
         }
       },
       "validation": {
@@ -151,34 +169,34 @@
         "type": "borderRadius",
         "description": "Tab horizontal - top corners. Tab vertical - left corners."
       },
-      "active": {
+      "baseline": {
+        "M": {
+          "value": "{global.radius.interactive.XXS}",
+          "type": "borderRadius"
+        },
+        "L": {
+          "value": "{global.radius.interactive.XXS}",
+          "type": "borderRadius"
+        }
+      },
+      "indicator": {
         "M": {
           "value": "{global.radius.interactive.XS}",
           "type": "borderRadius",
-          "description": "Active bar"
+          "description": "Indicator for hover and active."
+        },
+        "L": {
+          "value": "{global.radius.interactive.XS}",
+          "type": "borderRadius",
+          "description": "Indicator for hover and active."
         }
       }
     },
     "borderwidth": {
-      "active": {
-        "value": "{global.borderwidth.L}",
-        "type": "borderWidth",
-        "description": "Tab (active, active error, active caution bottom border)"
-      },
-      "caution": {
-        "value": "{global.borderwidth.XS}",
-        "type": "borderWidth",
-        "description": "Tab (caution: top, right, left borders)"
-      },
-      "enabled": {
+      "navigation": {
         "value": "{global.borderwidth.S}",
         "type": "borderWidth",
         "description": "Tab (enabled and hover bottom border)"
-      },
-      "error": {
-        "value": "{global.borderwidth.S}",
-        "type": "borderWidth",
-        "description": "Tab (error: top, right, left borders)"
       }
     }
   }
