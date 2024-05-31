@@ -517,6 +517,59 @@
           }
         }
       },
+      "chatbubble": {
+        "outer": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Left margin on AI response bubbles and right margin on user prompt bubbles."
+            },
+            "L": {
+              "value": "{global.space.macro.XL} * 2",
+              "type": "spacing",
+              "description": "Right margin on AI response bubbles and left margin on user prompt bubbles."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Top and bottom margin on all chat bubbles."
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Gap between timestamp and chat bubble container. Also gap between give feedback button and container."
+            }
+          }
+        },
+        "inner": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Left and right padding inside chat bubbles."
+            }
+          },
+          "Y": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Top and bottom padding inside chat bubbles."
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Vertical gap between inner blocks within a chat or insight bubble."
+            }
+          }
+        }
+      },
       "generic": {
         "content": {
           "x": {
