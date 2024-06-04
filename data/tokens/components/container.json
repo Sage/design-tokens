@@ -391,6 +391,42 @@
           "type": "sizing",
           "description": "Deliberately referencing global M (20px). Accordion chevron."
         }
+      },
+      "note": {
+        "headertext": {
+          "S": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "fixed text layer size for small header"
+          },
+          "M": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "fixed text layer size for large header"
+          },
+          "L": {
+            "value": "{global.size.macro.L}",
+            "type": "sizing",
+            "description": "fixed text layer size for small header"
+          }
+        },
+        "descriptiontext": {
+          "S": {
+            "value": "{global.size.macro.M} + {global.size.micro.XS}",
+            "type": "sizing",
+            "description": "Fixed height for small note description text string"
+          },
+          "M": {
+            "value": "{global.size.macro.L}",
+            "type": "sizing",
+            "description": "Fixed height for medium note description text string"
+          },
+          "L": {
+            "value": "{global.size.macro.XL}",
+            "type": "sizing",
+            "description": "Fixed height for large note description text string"
+          }
+        }
       }
     },
     "radius": {
