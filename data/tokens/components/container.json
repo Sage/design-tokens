@@ -326,10 +326,54 @@
         }
       },
       "linkpreview": {
+        "S": {
+          "value": "{global.size.macro.XXXXL}",
+          "type": "sizing",
+          "description": "Thumbnail height and width for small variant"
+        },
         "M": {
           "value": "{global.size.macro.XXXXL}",
           "type": "sizing",
-          "description": "Thumbnail container"
+          "description": "Thumbnail height and width for medium variant"
+        },
+        "L": {
+          "value": "{global.size.macro.XXXXL}",
+          "type": "sizing",
+          "description": "Thumbnail height and width for large variant"
+        },
+        "headertext": {
+          "S": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "fixed text layer size for small header"
+          },
+          "M": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "fixed text layer size for large header"
+          },
+          "L": {
+            "value": "{global.size.macro.L}",
+            "type": "sizing",
+            "description": "fixed text layer size for small header"
+          }
+        },
+        "descriptiontext": {
+          "S": {
+            "value": "{global.size.macro.M} + {global.size.micro.XS}",
+            "type": "sizing",
+            "description": "Fixed height for small note description text string"
+          },
+          "M": {
+            "value": "{global.size.macro.L}",
+            "type": "sizing",
+            "description": "Fixed height for medium note description text string"
+          },
+          "L": {
+            "value": "{global.size.macro.XL}",
+            "type": "sizing",
+            "description": "Fixed height for large note description text string"
+          }
         }
       },
       "uploadpreview": {
@@ -390,42 +434,6 @@
           "value": "{global.size.icon.M}",
           "type": "sizing",
           "description": "Deliberately referencing global M (20px). Accordion chevron."
-        }
-      },
-      "note": {
-        "headertext": {
-          "S": {
-            "value": "{global.size.macro.S}",
-            "type": "sizing",
-            "description": "fixed text layer size for small header"
-          },
-          "M": {
-            "value": "{global.size.macro.S}",
-            "type": "sizing",
-            "description": "fixed text layer size for large header"
-          },
-          "L": {
-            "value": "{global.size.macro.L}",
-            "type": "sizing",
-            "description": "fixed text layer size for small header"
-          }
-        },
-        "descriptiontext": {
-          "S": {
-            "value": "{global.size.macro.M} + {global.size.micro.XS}",
-            "type": "sizing",
-            "description": "Fixed height for small note description text string"
-          },
-          "M": {
-            "value": "{global.size.macro.L}",
-            "type": "sizing",
-            "description": "Fixed height for medium note description text string"
-          },
-          "L": {
-            "value": "{global.size.macro.XL}",
-            "type": "sizing",
-            "description": "Fixed height for large note description text string"
-          }
         }
       }
     },
@@ -808,31 +816,54 @@
       },
       "linkpreview": {
         "x": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Content horizontal padding for small variant"
+          },
           "M": {
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
-            "description": "Content horizontal padding\n"
-          }
-        },
-        "xg": {
-          "M": {
-            "value": "{global.space.micro.L}",
+            "description": "Content horizontal padding for medium variant"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
             "type": "spacing",
-            "description": "Space between heading and close button"
+            "description": "Content horizontal padding for large variant"
           }
         },
         "y": {
           "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Content horizontal padding for medium variant"
+          },
+          "S": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
-            "description": "Content vertical padding"
-          }
-        },
-        "yg": {
-          "M": {
+            "description": "Content horizontal padding for small variant"
+          },
+          "L": {
             "value": "{global.space.macro.XS}",
             "type": "spacing",
-            "description": "DELETE?"
+            "description": "Content horizontal padding for large variant"
+          }
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Content horizontal padding for small variant"
+          },
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Content horizontal padding for medium variant"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Content horizontal padding for large variant"
           }
         }
       },
