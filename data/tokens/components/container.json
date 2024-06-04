@@ -328,17 +328,17 @@
       "linkpreview": {
         "thumbnail": {
           "S": {
-            "value": "{global.size.macro.XXXXL}",
+            "value": "{global.size.macro.XXXXL} - 3",
             "type": "sizing",
             "description": "Thumbnail height and width for small variant"
           },
           "M": {
-            "value": "{global.size.macro.XXXXL}",
+            "value": "{global.size.macro.XXXXL} + {global.size.macro.XXS}",
             "type": "sizing",
             "description": "Thumbnail height and width for medium variant"
           },
           "L": {
-            "value": "{global.size.macro.XXXXL}",
+            "value": "{global.size.macro.XXXXL} + {global.size.macro.L}",
             "type": "sizing",
             "description": "Thumbnail height and width for large variant"
           }
@@ -355,7 +355,7 @@
             "description": "fixed text layer size for large header"
           },
           "L": {
-            "value": "{global.size.macro.L}",
+            "value": "{global.size.macro.M}",
             "type": "sizing",
             "description": "fixed text layer size for small header"
           }
@@ -834,7 +834,7 @@
             "description": "Content horizontal padding for large variant"
           }
         },
-        "y": {
+        "xg": {
           "S": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
@@ -851,7 +851,7 @@
             "description": "Content horizontal padding for large variant"
           }
         },
-        "xg": {
+        "y": {
           "S": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
