@@ -746,15 +746,29 @@
       },
       "switch": {
         "container": {
-          "M": {
-            "value": "{global.size.macro.XS}",
-            "type": "sizing",
-            "description": "Switch container"
+          "height": {
+            "M": {
+              "value": "{global.size.macro.XS}",
+              "type": "sizing",
+              "description": "Switch container height for medium"
+            },
+            "L": {
+              "value": "{global.size.macro.S}",
+              "type": "sizing",
+              "description": "Switch container height for large"
+            }
           },
-          "L": {
-            "value": "{global.size.macro.S}",
-            "type": "sizing",
-            "description": "Switch container"
+          "width": {
+            "M": {
+              "value": "{global.size.macro.M}",
+              "type": "sizing",
+              "description": "Switch container width for medium"
+            },
+            "L": {
+              "value": "{global.size.macro.XXXL}",
+              "type": "sizing",
+              "description": "Switch container width for large"
+            }
           }
         },
         "handle": {
