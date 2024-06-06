@@ -36,10 +36,22 @@
     },
     "size": {
       "micro": {
-        "M": {
+        "dot": {
           "value": "{global.size.micro.M}",
           "type": "sizing",
           "description": "Micro dot badge size"
+        },
+        "numbered": {
+          "min": {
+            "value": "{global.size.macro.XXS}",
+            "type": "sizing",
+            "description": "Micro dot badge size with numbering"
+          },
+          "max": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "Micro dot badge size max width"
+          }
         }
       },
       "standard": {
@@ -64,6 +76,11 @@
     },
     "space": {
       "x": {
+        "S": {
+          "value": "{global.space.micro.XS}",
+          "type": "spacing",
+          "description": "used on micro badges with numbering for left and right padding"
+        },
         "M": {
           "value": "{global.space.micro.S}",
           "type": "spacing",
