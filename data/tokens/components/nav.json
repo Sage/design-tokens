@@ -114,47 +114,6 @@
         }
       }
     },
-    "size": {
-      "horizontal": {
-        "S": {
-          "value": "{global.size.macro.S}",
-          "type": "sizing",
-          "description": "Top nav child menu item min-height"
-        },
-        "M": {
-          "value": "{global.size.macro.M}",
-          "type": "sizing",
-          "description": "global nav and horizontal nav container height"
-        }
-      },
-      "vertical": {
-        "inside": {
-          "M": {
-            "value": "{global.size.macro.M}",
-            "type": "sizing",
-            "description": "Left nav child menu item min-height"
-          },
-          "L": {
-            "value": "{global.size.macro.L}",
-            "type": "sizing",
-            "description": "Left nav collapsed item min-height"
-          }
-        },
-        "outside": {
-          "M": {
-            "value": "{global.size.micro.L} * 10",
-            "type": "sizing",
-            "description": "Left nav collapsed parent container"
-          }
-        }
-      },
-      "icon": {
-        "M": {
-          "value": "{global.size.icon.M}",
-          "type": "sizing"
-        }
-      }
-    },
     "radius": {
       "menu": {
         "value": "{global.radius.interactive.M}",
@@ -313,6 +272,60 @@
                 "type": "spacing",
                 "description": "Space between menu items in collapsible left nav."
               }
+            }
+          }
+        }
+      }
+    },
+    "size": {
+      "horizontal": {
+        "menucontent": {
+          "y": {
+            "M": {
+              "value": "{global.size.macro.S}",
+              "type": "sizing",
+              "description": "Min height of menu content"
+            }
+          }
+        },
+        "menuoption": {
+          "y": {
+            "M": {
+              "value": "{global.size.macro.M}",
+              "type": "sizing",
+              "description": "Min height of menu option"
+            }
+          }
+        },
+        "navcontent": {
+          "y": {
+            "M": {
+              "value": "{global.size.macro.S}",
+              "type": "sizing",
+              "description": "Min height of nav content"
+            }
+          },
+          "icon": {
+            "M": {
+              "value": "{global.size.icon.M}",
+              "type": "sizing",
+              "description": "Icon size"
+            }
+          }
+        },
+        "navitem": {
+          "x": {
+            "M": {
+              "value": "{global.size.flex.M}",
+              "type": "sizing",
+              "description": "Max width of nav item"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.size.macro.M}",
+              "type": "sizing",
+              "description": "Min height of nav item"
             }
           }
         }
