@@ -115,7 +115,7 @@
           }
         },
         "bg-skeleton": {
-          "value": "linear-gradient(135deg, rgba(#FFF,0.36) 0%, rgba(#FFF, 0.04) 100%)",
+          "value": "{base.color.status.content.inverse.loading}",
           "type": "color"
         },
         "fg-ai": {
@@ -137,6 +137,10 @@
         }
       },
       "standard": {
+        "bg-skeleton": {
+          "value": "{base.color.status.content.standard.loading}",
+          "type": "color"
+        },
         "bg-default": {
           "value": "{base.color.generic.bg.inverse.nought}",
           "type": "color",
