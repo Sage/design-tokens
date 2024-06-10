@@ -241,6 +241,11 @@
         "type": "borderRadius",
         "description": "File input (top corners of integrated progress bar),"
       },
+      "stepflow": {
+        "value": "{global.radius.circle}",
+        "type": "borderRadius",
+        "description": "Step flow (step indicators)"
+      },
       "carouselselector": {
         "value": "{global.radius.circle}",
         "type": "borderRadius",
@@ -251,14 +256,27 @@
         "type": "borderRadius",
         "description": "File input (bottom corners of integrated status bar)"
       },
-      "skeletonbar": {
-        "value": "{global.radius.container.M}",
-        "type": "borderRadius"
-      },
-      "stepflow": {
-        "value": "{global.radius.circle}",
-        "type": "borderRadius",
-        "description": "Step flow (step indicators)"
+      "skeleton": {
+        "moderate": {
+          "value": "{global.radius.container.M}",
+          "type": "borderRadius",
+          "description": "used to represent headings, inputs and text"
+        },
+        "curved": {
+          "value": "{global.radius.container.L}",
+          "type": "borderRadius",
+          "description": "used to represent elements such as icons"
+        },
+        "sweeping": {
+          "value": "{global.radius.container.XXL}",
+          "type": "borderRadius",
+          "description": "used to represent buttons"
+        },
+        "circle": {
+          "value": "{global.radius.container.XXL}",
+          "type": "borderRadius",
+          "description": "Used to represent circular elements such as profiles, badges etc"
+        }
       },
       "bar": {
         "S": {
