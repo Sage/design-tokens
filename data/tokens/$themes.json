@@ -503,7 +503,9 @@
       "components/tab": "enabled",
       "components/table": "enabled",
       "modes/light": "source",
-      "components/logo": "enabled"
+      "components/logo": "enabled",
+      "devicesize/small": "disabled",
+      "devicesize/large": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:859:2624",
     "$figmaModeId": "859:0",
@@ -1589,7 +1591,8 @@
     "name": "Large Screen",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "platforms/largescreen": "enabled"
+      "devicesize/small": "disabled",
+      "devicesize/large": "enabled"
     },
     "group": "Platforms"
   },
@@ -1598,7 +1601,8 @@
     "name": "Small Screen",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "platforms/smallscreen": "enabled"
+      "devicesize/small": "enabled",
+      "devicesize/large": "disabled"
     },
     "group": "Platforms"
   }
