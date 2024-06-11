@@ -65,30 +65,32 @@
         }
       },
       "skeleton": {
-        "XS": {
-          "value": "{global.size.macro.XXS}",
-          "type": "sizing",
-          "description": "Skeleton paragraph and H5"
-        },
-        "S": {
-          "value": "{global.size.macro.XXS} + {global.size.micro.XXS}",
-          "type": "sizing",
-          "description": "H4 Skeletons"
-        },
-        "M": {
-          "value": "{global.size.macro.XS} - {global.size.micro.XXS}",
-          "type": "sizing",
-          "description": "H3 Skeletons"
-        },
-        "L": {
-          "value": "{global.size.macro.XS}",
-          "type": "sizing",
-          "description": "H2 Skeletons"
-        },
-        "XL": {
-          "value": "{global.size.macro.S}",
-          "type": "sizing",
-          "description": "H1 Skeletons"
+        "text": {
+          "XS": {
+            "value": "{origin.fontSize.web.step0}",
+            "type": "sizing",
+            "description": "Skeleton paragraph and H5"
+          },
+          "S": {
+            "value": "{global.typography.subheading.M}",
+            "type": "sizing",
+            "description": "H4 Skeletons"
+          },
+          "M": {
+            "value": "{global.typography.heading.XS}",
+            "type": "sizing",
+            "description": "H3 Skeletons"
+          },
+          "L": {
+            "value": "{global.typography.heading.S}",
+            "type": "sizing",
+            "description": "H2 Skeletons"
+          },
+          "XL": {
+            "value": "{global.typography.heading.M}",
+            "type": "sizing",
+            "description": "H1 Skeletons"
+          }
         }
       },
       "stepflow": {
@@ -423,7 +425,7 @@
               "description": "vertical gap between skeleton bars"
             },
             "S": {
-              "value": "{global.space.micro.S}",
+              "value": "{global.space.micro.M}",
               "type": "spacing",
               "description": "vertical gap between skeleton bars"
             },
