@@ -277,7 +277,7 @@
           "description": "used to represent buttons"
         },
         "circle": {
-          "value": "{global.radius.container.XXL}",
+          "value": "{global.radius.circle}",
           "type": "borderRadius",
           "description": "Used to represent circular elements such as profiles, badges etc"
         }
@@ -388,58 +388,89 @@
         }
       },
       "skeleton": {
-        "yg": {
-          "XS": {
-            "value": "{global.space.micro.M}",
-            "type": "spacing",
-            "description": "vertical gap between skeleton bars"
+        "multiline": {
+          "yg": {
+            "XS": {
+              "value": "{global.space.micro.M}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "S": {
+              "value": "{global.space.micro.M}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "M": {
+              "value": "{global.space.micro.M}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "L": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "XL": {
+              "value": "{global.space.micro.XL}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            }
           },
-          "S": {
-            "value": "{global.space.micro.M}",
-            "type": "spacing",
-            "description": "vertical gap between skeleton bars"
-          },
-          "M": {
-            "value": "{global.space.micro.M}",
-            "type": "spacing",
-            "description": "vertical gap between skeleton bars"
-          },
-          "L": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "vertical gap between skeleton bars"
-          },
-          "XL": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "vertical gap between skeleton bars"
+          "y": {
+            "XS": {
+              "value": "{global.space.micro.M}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "S": {
+              "value": "{global.space.micro.XS}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "M": {
+              "value": "{global.space.micro.XS}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "L": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "XL": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            }
           }
         },
-        "xg": {
-          "XS": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "vertical gap between skeleton bars"
-          },
-          "S": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "vertical gap between skeleton bars"
-          },
-          "M": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "vertical gap between skeleton bars"
-          },
-          "L": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "vertical gap between skeleton bars"
-          },
-          "XL": {
-            "value": "{global.space.macro.XS}",
-            "type": "spacing",
-            "description": "vertical gap between skeleton bars"
+        "singleline": {
+          "xg": {
+            "XS": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "S": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "M": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "L": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "XL": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            }
           }
         }
       },
