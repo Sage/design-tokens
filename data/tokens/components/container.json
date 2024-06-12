@@ -2,12 +2,24 @@
   "container": {
     "color": {
       "inverse": {
+        "bg-alt": {
+          "value": "{base.color.generic.bg.inverse.faint}",
+          "type": "color"
+        },
+        "bg-default": {
+          "value": "{base.color.generic.bg.inverse.nought}",
+          "type": "color"
+        },
         "border-alt": {
           "value": "{base.color.generic.fg.inverse.moderate}",
           "type": "color"
         },
         "border-default": {
           "value": "{base.color.generic.fg.inverse.soft}",
+          "type": "color"
+        },
+        "text-default": {
+          "value": "{base.color.generic.content.inverse.harsh}",
           "type": "color"
         },
         "scrollbar": {
@@ -452,6 +464,10 @@
       },
       "chatbubble": {
         "value": "{global.radius.container.L}",
+        "type": "borderRadius"
+      },
+      "contacttile": {
+        "value": "{global.radius.container.M}",
         "type": "borderRadius"
       },
       "dialog": {
