@@ -255,15 +255,6 @@
           "description": "Accordion chevron container"
         }
       },
-      "drawer": {
-        "closed": {
-          "M": {
-            "value": "{global.size.macro.M}",
-            "type": "sizing",
-            "description": "width for the closed drawer state"
-          }
-        }
-      },
       "chatbubble": {
         "width": {
           "max": {
@@ -273,17 +264,12 @@
           }
         }
       },
-      "sidebar": {
-        "responsive": {
-          "min": {
-            "value": "{global.size.flex.XL}",
+      "drawer": {
+        "closed": {
+          "M": {
+            "value": "{global.size.macro.M}",
             "type": "sizing",
-            "description": "min-width for sidebar"
-          },
-          "max": {
-            "value": "{global.size.flex.XXXXL}",
-            "type": "sizing",
-            "description": "max-width for sidebar"
+            "description": "width for the closed drawer state"
           }
         }
       },
@@ -299,51 +285,19 @@
           "description": "Dialog, sidebar and drawer footer max-height"
         }
       },
-      "responsive": {
-        "XXS": {
-          "value": "{global.size.flex.XXS}",
-          "type": "sizing",
-          "description": "min and max widths for responsive tile items"
-        },
-        "XS": {
-          "value": "{global.size.flex.XS}",
-          "type": "sizing",
-          "description": "min and max widths for responsive tile items"
-        },
+      "icon": {
         "S": {
-          "value": "{global.size.flex.S}",
-          "type": "sizing",
-          "description": "min and max widths for responsive tile items. Min width for Tile select content wrapper."
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
         },
         "M": {
-          "value": "{global.size.flex.M}",
-          "type": "sizing",
-          "description": "min and max widths for responsive tile items"
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
         },
         "L": {
-          "value": "{global.size.flex.L}",
+          "value": "{global.size.icon.M}",
           "type": "sizing",
-          "description": "min and max widths for responsive tile items"
-        },
-        "XL": {
-          "value": "{global.size.flex.XL}",
-          "type": "sizing",
-          "description": "Small screen mid width inside page margins."
-        },
-        "XXL": {
-          "value": "{global.size.flex.XXL}",
-          "type": "sizing",
-          "description": "Small screen full page width."
-        },
-        "XXXL": {
-          "value": "{global.size.flex.XXXL}",
-          "type": "sizing",
-          "description": "min and max widths for responsive tile items"
-        },
-        "XXXXL": {
-          "value": "{global.size.flex.XXXXL}",
-          "type": "sizing",
-          "description": "Max width for single line of text."
+          "description": "Deliberately referencing global M (20px). Accordion chevron."
         }
       },
       "linkpreview": {
@@ -399,11 +353,51 @@
           }
         }
       },
-      "uploadpreview": {
-        "M": {
-          "value": "{global.size.macro.XXXL}",
+      "responsive": {
+        "XXS": {
+          "value": "{global.size.flex.XXS}",
           "type": "sizing",
-          "description": "Thumbnail container"
+          "description": "min and max widths for responsive tile items"
+        },
+        "XS": {
+          "value": "{global.size.flex.XS}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "S": {
+          "value": "{global.size.flex.S}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items. Min width for Tile select content wrapper."
+        },
+        "M": {
+          "value": "{global.size.flex.M}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "L": {
+          "value": "{global.size.flex.L}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "XL": {
+          "value": "{global.size.flex.XL}",
+          "type": "sizing",
+          "description": "Small screen mid width inside page margins."
+        },
+        "XXL": {
+          "value": "{global.size.flex.XXL}",
+          "type": "sizing",
+          "description": "Small screen full page width."
+        },
+        "XXXL": {
+          "value": "{global.size.flex.XXXL}",
+          "type": "sizing",
+          "description": "min and max widths for responsive tile items"
+        },
+        "XXXXL": {
+          "value": "{global.size.flex.XXXXL}",
+          "type": "sizing",
+          "description": "Max width for single line of text."
         }
       },
       "scrollbar": {
@@ -411,6 +405,20 @@
           "value": "{global.size.micro.XL}",
           "type": "sizing",
           "description": "Container that the scrollbar sits within\n"
+        }
+      },
+      "sidebar": {
+        "responsive": {
+          "min": {
+            "value": "{global.size.flex.XL}",
+            "type": "sizing",
+            "description": "min-width for sidebar"
+          },
+          "max": {
+            "value": "{global.size.flex.XXXXL}",
+            "type": "sizing",
+            "description": "max-width for sidebar"
+          }
         }
       },
       "tileselect": {
@@ -444,19 +452,11 @@
           "description": "tooltip arrow height"
         }
       },
-      "icon": {
-        "S": {
-          "value": "{global.size.icon.M}",
-          "type": "sizing"
-        },
+      "uploadpreview": {
         "M": {
-          "value": "{global.size.icon.M}",
-          "type": "sizing"
-        },
-        "L": {
-          "value": "{global.size.icon.M}",
+          "value": "{global.size.macro.XXXL}",
           "type": "sizing",
-          "description": "Deliberately referencing global M (20px). Accordion chevron."
+          "description": "Thumbnail container"
         }
       }
     },
@@ -465,54 +465,6 @@
         "value": "{global.radius.none}",
         "type": "borderRadius",
         "description": "Card select (inner adjacent corners), Subscription tile footer top corners"
-      },
-      "carouselslide": {
-        "value": "{global.radius.container.L}",
-        "type": "borderRadius",
-        "description": "Carousel slides"
-      },
-      "chatbubble": {
-        "value": "{global.radius.container.L}",
-        "type": "borderRadius"
-      },
-      "contacttile": {
-        "value": "{global.radius.container.M}",
-        "type": "borderRadius"
-      },
-      "dialog": {
-        "value": "{global.radius.container.XL}",
-        "type": "borderRadius",
-        "description": "Dialog"
-      },
-      "colorpicker": {
-        "value": "{global.radius.container.L}",
-        "type": "borderRadius",
-        "description": "Color picker container radius"
-      },
-      "filepreview": {
-        "value": "{global.radius.container.M}",
-        "type": "borderRadius",
-        "description": "File preview (parent container), "
-      },
-      "note": {
-        "value": "{global.radius.container.M}",
-        "type": "borderRadius",
-        "description": "Note"
-      },
-      "linkpreview": {
-        "value": "{global.radius.interactive.S}",
-        "type": "borderRadius",
-        "description": "Link preview (outer corners)"
-      },
-      "scrollbar": {
-        "value": "{global.radius.circle}",
-        "type": "borderRadius",
-        "description": "Scrollbar"
-      },
-      "texteditor": {
-        "value": "{global.radius.container.M}",
-        "type": "borderRadius",
-        "description": "Text editor (footer bottom corners)\n"
       },
       "card": {
         "moderate": {
@@ -530,6 +482,54 @@
           "type": "borderRadius",
           "description": "Card largest rounded type"
         }
+      },
+      "carouselslide": {
+        "value": "{global.radius.container.L}",
+        "type": "borderRadius",
+        "description": "Carousel slides"
+      },
+      "chatbubble": {
+        "value": "{global.radius.container.L}",
+        "type": "borderRadius"
+      },
+      "colorpicker": {
+        "value": "{global.radius.container.L}",
+        "type": "borderRadius",
+        "description": "Color picker container radius"
+      },
+      "contacttile": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius"
+      },
+      "dialog": {
+        "value": "{global.radius.container.XL}",
+        "type": "borderRadius",
+        "description": "Dialog"
+      },
+      "filepreview": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius",
+        "description": "File preview (parent container), "
+      },
+      "linkpreview": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "Link preview (outer corners)"
+      },
+      "note": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius",
+        "description": "Note"
+      },
+      "scrollbar": {
+        "value": "{global.radius.circle}",
+        "type": "borderRadius",
+        "description": "Scrollbar"
+      },
+      "texteditor": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius",
+        "description": "Text editor (footer bottom corners)\n"
       },
       "tile": {
         "moderate": {
@@ -651,6 +651,96 @@
               "value": "{global.space.macro.M}",
               "type": "spacing",
               "description": "Vertical gap between inner blocks within a chat or insight bubble."
+            }
+          }
+        }
+      },
+      "filepreview": {
+        "thumbnail": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Horizontal padding on large thumbnail image."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical padding on large thumbnail image."
+            }
+          }
+        }
+      },
+      "flex": {
+        "xg": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Small horizontal item spacing"
+          },
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Medium horizontal item spacing"
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Large horizontal item spacing"
+          }
+        },
+        "yg": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Small row gap"
+          },
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Medium row gap"
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Large row gap"
+          }
+        },
+        "item": {
+          "x": {
+            "S": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Small left and right padding on flex items"
+            },
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Medium left and right padding on flex items"
+            },
+            "L": {
+              "value": "{global.space.macro.L}",
+              "type": "spacing",
+              "description": "Large left and right padding on flex items"
+            }
+          },
+          "y": {
+            "S": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Small top bottom padding on flex items"
+            },
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Medium top bottom padding on flex items"
+            },
+            "L": {
+              "value": "{global.space.macro.L}",
+              "type": "spacing",
+              "description": "Large top bottom padding on flex items"
             }
           }
         }
@@ -1005,85 +1095,6 @@
           }
         }
       },
-      "tileselect": {
-        "x": {
-          "M": {
-            "value": "{global.space.macro.M}",
-            "type": "spacing",
-            "description": "Left and right padding on tile select container"
-          }
-        },
-        "y": {
-          "M": {
-            "value": "{global.space.macro.M}",
-            "type": "spacing",
-            "description": "Top bottom padding on tile select container"
-          }
-        },
-        "yg": {
-          "S": {
-            "value": "{global.space.macro.XS}",
-            "type": "spacing",
-            "description": "Vertical gap between content blocks in Subscription tile."
-          },
-          "M": {
-            "value": "{global.space.macro.M}",
-            "type": "spacing",
-            "description": "Vertical gap between content blocks in Subscription tile."
-          },
-          "L": {
-            "value": "{global.space.macro.L}",
-            "type": "spacing",
-            "description": "Vertical gap between content blocks in Subscription tile."
-          }
-        },
-        "content": {
-          "yg": {
-            "M": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Vertical gap between strings of text"
-            }
-          }
-        },
-        "header": {
-          "xg": {
-            "M": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing",
-              "description": "gap between identifier and header content"
-            }
-          },
-          "yg": {
-            "S": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Vertical gap between header content wrapper items"
-            }
-          }
-        },
-        "footer": {
-          "y": {
-            "M": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Top bottom padding in footer."
-            },
-            "L": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing",
-              "description": "Top bottom margins on carousel dots"
-            }
-          },
-          "xg": {
-            "S": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Gap between carousel dots"
-            }
-          }
-        }
-      },
       "summarylist": {
         "item": {
           "xg": {
@@ -1182,80 +1193,104 @@
           }
         }
       },
-      "flex": {
-        "xg": {
-          "S": {
-            "value": "{global.space.macro.XS}",
-            "type": "spacing",
-            "description": "Small horizontal item spacing"
-          },
+      "tileselect": {
+        "x": {
           "M": {
             "value": "{global.space.macro.M}",
             "type": "spacing",
-            "description": "Medium horizontal item spacing"
-          },
-          "L": {
-            "value": "{global.space.macro.L}",
+            "description": "Left and right padding on tile select container"
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.macro.M}",
             "type": "spacing",
-            "description": "Large horizontal item spacing"
+            "description": "Top bottom padding on tile select container"
           }
         },
         "yg": {
           "S": {
             "value": "{global.space.macro.XS}",
             "type": "spacing",
-            "description": "Small row gap"
+            "description": "Vertical gap between content blocks in Subscription tile."
           },
           "M": {
             "value": "{global.space.macro.M}",
             "type": "spacing",
-            "description": "Medium row gap"
+            "description": "Vertical gap between content blocks in Subscription tile."
           },
           "L": {
             "value": "{global.space.macro.L}",
             "type": "spacing",
-            "description": "Large row gap"
+            "description": "Vertical gap between content blocks in Subscription tile."
           }
         },
-        "item": {
-          "x": {
-            "S": {
+        "content": {
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical gap between strings of text"
+            }
+          }
+        },
+        "header": {
+          "xg": {
+            "M": {
               "value": "{global.space.macro.XS}",
               "type": "spacing",
-              "description": "Small left and right padding on flex items"
-            },
-            "M": {
-              "value": "{global.space.macro.M}",
-              "type": "spacing",
-              "description": "Medium left and right padding on flex items"
-            },
-            "L": {
-              "value": "{global.space.macro.L}",
-              "type": "spacing",
-              "description": "Large left and right padding on flex items"
+              "description": "gap between identifier and header content"
             }
           },
-          "y": {
+          "yg": {
             "S": {
-              "value": "{global.space.macro.XS}",
+              "value": "{global.space.micro.L}",
               "type": "spacing",
-              "description": "Small top bottom padding on flex items"
-            },
+              "description": "Vertical gap between header content wrapper items"
+            }
+          }
+        },
+        "footer": {
+          "y": {
             "M": {
-              "value": "{global.space.macro.M}",
+              "value": "{global.space.micro.L}",
               "type": "spacing",
-              "description": "Medium top bottom padding on flex items"
+              "description": "Top bottom padding in footer."
             },
             "L": {
-              "value": "{global.space.macro.L}",
+              "value": "{global.space.macro.XS}",
               "type": "spacing",
-              "description": "Large top bottom padding on flex items"
+              "description": "Top bottom margins on carousel dots"
+            }
+          },
+          "xg": {
+            "S": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Gap between carousel dots"
             }
           }
         }
       }
     },
     "boxshadow": {
+      "card": {
+        "enabled": {
+          "value": "{global.boxshadow.interactive.enabled}",
+          "type": "boxShadow",
+          "description": "Card (enabled)"
+        },
+        "hover": {
+          "value": "{global.boxshadow.interactive.hover}",
+          "type": "boxShadow",
+          "description": "Card (hover state)"
+        },
+        "drag": {
+          "value": "{global.boxshadow.interactive.drag}",
+          "type": "boxShadow",
+          "description": "Card (drag state)"
+        }
+      },
       "carousel": {
         "value": "{global.boxshadow.container.distant}",
         "type": "boxShadow",
@@ -1285,23 +1320,6 @@
         "value": "{global.boxshadow.container.sticky-footer}",
         "type": "boxShadow",
         "description": "Sticky footer in Dialog, Drawer, Sidebar."
-      },
-      "card": {
-        "enabled": {
-          "value": "{global.boxshadow.interactive.enabled}",
-          "type": "boxShadow",
-          "description": "Card (enabled)"
-        },
-        "hover": {
-          "value": "{global.boxshadow.interactive.hover}",
-          "type": "boxShadow",
-          "description": "Card (hover state)"
-        },
-        "drag": {
-          "value": "{global.boxshadow.interactive.drag}",
-          "type": "boxShadow",
-          "description": "Card (drag state)"
-        }
       }
     },
     "borderwidth": {
