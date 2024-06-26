@@ -272,11 +272,18 @@
             "description": "Illustration size"
           },
           "content": {
-            "max": {
+            "maxwidth": {
               "value": "{global.size.macro.XXXXL} * 5",
               "type": "sizing",
               "description": "max-width of the insight empty state content area"
             }
+          }
+        },
+        "overlay": {
+          "maxheight": {
+            "value": "{global.size.macro.XXXXL} * 8",
+            "type": "sizing",
+            "description": "max-height of the copilot container overlay "
           }
         }
       },
