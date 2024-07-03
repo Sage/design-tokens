@@ -194,49 +194,37 @@
           "type": "color"
         }
       },
-      "stepsequence": {
+      "stepflow": {
         "bg-active": {
           "value": "{base.color.generic.fg.inverse.nought}",
-          "type": "color"
-        },
-        "border-ai": {
-          "value": "{base.color.interactive.ai.standard.default}",
           "type": "color"
         },
         "bg-complete": {
           "value": "{base.color.status.success.standard.default}",
           "type": "color"
         },
+        "bg-default": {
+          "value": "{base.color.generic.fg.standard.nought}",
+          "type": "color"
+        },
+        "border-active1": {
+          "value": "{base.color.generic.fg.standard.nought}",
+          "type": "color"
+        },
+        "border-active2": {
+          "value": "{base.color.generic.fg.inverse.nought}",
+          "type": "color"
+        },
         "border-default": {
           "value": "{base.color.generic.fg.standard.soft}",
           "type": "color"
         },
-        "fg-active": {
-          "value": "{base.color.generic.fg.standard.nought}",
-          "type": "color"
-        },
-        "fg-ai": {
-          "value": "{base.color.interactive.ai.standard.default}",
-          "type": "color"
-        },
-        "fg-complete": {
-          "value": "{base.color.generic.fg.standard.nought}",
-          "type": "color"
-        },
-        "fg-default": {
+        "label-alt": {
           "value": "{base.color.generic.content.standard.firm}",
-          "type": "color"
-        },
-        "label-active": {
-          "value": "{base.color.generic.content.standard.harsh}",
-          "type": "color"
-        },
-        "label-complete": {
-          "value": "{base.color.status.success.standard.default}",
           "type": "color"
         },
         "label-default": {
-          "value": "{base.color.generic.content.standard.firm}",
+          "value": "{base.color.generic.content.standard.harsh}",
           "type": "color"
         }
       }
@@ -319,14 +307,21 @@
         "description": "Progress bar in File upload\n"
       },
       "stepflow": {
-        "value": "{global.borderwidth.XS}",
-        "type": "borderWidth",
-        "description": "Step flow (step)"
-      },
-      "stepsequence": {
-        "value": "{global.borderwidth.XS}",
-        "type": "borderWidth",
-        "description": "Step sequence line\n"
+        "inner": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth",
+          "description": "Step flow default (not started)"
+        },
+        "active1": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth",
+          "description": "Step flow active step border outer"
+        },
+        "active2": {
+          "value": "{global.borderwidth.S}",
+          "type": "borderWidth",
+          "description": "Step flow active step border outermost"
+        }
       }
     },
     "space": {
