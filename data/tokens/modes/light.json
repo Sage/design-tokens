@@ -446,8 +446,12 @@
       "interactive": {
         "ai": {
           "standard": {
+            "active": {
+              "value": "linear-gradient(90deg, rgba(#13A038,0.15) 0%, rgba(#149197,0.15) 40%, rgba(#a87cfb,0.15) 90%)",
+              "type": "color"
+            },
             "hover": {
-              "value": "linear-gradient(90deg, rgba(#13A038,0.16) 0%, rgba(#149197,0.16) 40%, rgba(#a87cfb,0.16) 90%)",
+              "value": "linear-gradient(90deg, rgba(#13A038,0.08) 0%, rgba(#149197,0.08) 40%, rgba(#a87cfb,0.08) 90%)",
               "type": "color"
             },
             "default": {
@@ -456,8 +460,12 @@
             }
           },
           "inverse": {
+            "active": {
+              "value": "linear-gradient(90deg, rgba(#00D639,0.15) 0%, rgba(#00d6de,0.15) 40%, rgba(#9d60ff,0.15) 90%)",
+              "type": "color"
+            },
             "hover": {
-              "value": "linear-gradient(90deg, rgba(#00D639,0.16) 0%, rgba(#00d6de,0.16) 40%, rgba(#9d60ff,0.16) 90%)",
+              "value": "linear-gradient(90deg, rgba(#00D639,0.08) 0%, rgba(#00d6de,0.08) 40%, rgba(#9d60ff,0.08) 90%)",
               "type": "color"
             },
             "default": {
@@ -826,7 +834,7 @@
               "description": "border color for off switches"
             },
             "hover": {
-              "value": "{origin.colors.black}",
+              "value": "{base.color.interactive.monochrome.standard.default}",
               "type": "color",
               "description": "Secondary button border on hover"
             },
