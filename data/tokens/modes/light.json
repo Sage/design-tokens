@@ -782,24 +782,25 @@
         "monochrome": {
           "standard": {
             "active": {
-              "value": "{origin.colors.black}",
-              "type": "color"
-            },
-            "default": {
-              "value": "{base.color.interactive.monochrome.standard.active}",
+              "value": "{base.color.interactive.monochrome.standard.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "0.9",
+                    "value": "{base.color.modifiers.button.active}",
                     "space": "lch"
                   }
                 }
               }
             },
+            "default": {
+              "value": "{origin.colors.black}",
+              "type": "color",
+              "$extensions": {}
+            },
             "defaultAlt": {
-              "value": "{base.color.interactive.monochrome.standard.active}",
+              "value": "{base.color.interactive.monochrome.standard.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -846,7 +847,7 @@
               "description": "Accordion and menu bg on hover\n"
             },
             "withActive": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.interactive.monochrome.standard.default}",
               "type": "color"
             },
             "withDefault": {
@@ -854,31 +855,32 @@
               "type": "color"
             },
             "withHover": {
-              "value": "{base.color.interactive.monochrome.standard.active}",
+              "value": "{base.color.interactive.monochrome.standard.default}",
               "type": "color",
               "description": "maybe should be white to align with primary group logic\n"
             }
           },
           "inverse": {
             "active": {
-              "value": "{origin.colors.white}",
-              "type": "color"
-            },
-            "default": {
-              "value": "{base.color.interactive.monochrome.inverse.active}",
+              "value": "{base.color.interactive.monochrome.inverse.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "0.9",
+                    "value": "{base.color.modifiers.button.active}",
                     "space": "lch"
                   }
                 }
               }
             },
+            "default": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {}
+            },
             "defaultAlt": {
-              "value": "{base.color.interactive.monochrome.inverse.active}",
+              "value": "{base.color.interactive.monochrome.inverse.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -891,7 +893,7 @@
               }
             },
             "hover": {
-              "value": "{origin.colors.white}",
+              "value": "{base.color.interactive.monochrome.inverse.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -919,11 +921,11 @@
               "description": "Accordion and menu bg on hover\n"
             },
             "withActive": {
-              "value": "{base.color.generic.content.standard.extreme}",
+              "value": "base.color.interactive.monochrome.inverse.default",
               "type": "color"
             },
             "withHover": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.interactive.monochrome.inverse.default}",
               "type": "color"
             }
           }
@@ -1006,6 +1008,20 @@
             }
           },
           "inverse": {
+            "active": {
+              "value": "{base.color.interactive.primary.inverse.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.active} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            },
             "default": {
               "value": "{base.color.brandreference.custom2}",
               "type": "color"
@@ -1571,7 +1587,7 @@
       "modifiers": {
         "button": {
           "active": {
-            "value": "0.48",
+            "value": "0.15",
             "type": "other",
             "description": "more contrast"
           },
