@@ -213,26 +213,19 @@
     "space": {
       "horizontal": {
         "menu": {
-          "item": {
+          "container": {
             "x": {
               "M": {
-                "value": "{global.space.micro.L}",
+                "value": "{global.space.micro.S}",
                 "type": "spacing",
-                "description": "Horizontal space on nav menu item"
+                "description": "Horizontal space on menu complex and menu items wrapper in sidebar menu"
               }
             },
             "y": {
               "M": {
                 "value": "{global.space.micro.S}",
                 "type": "spacing",
-                "description": "Vertical space on nav menu item"
-              }
-            },
-            "yg": {
-              "M": {
-                "value": "{global.space.micro.S}",
-                "type": "spacing",
-                "description": "Space between menu item and submenu"
+                "description": "Vertical space on mobile menu items"
               }
             }
           },
@@ -258,6 +251,34 @@
                 "description": "Vertical space on content within menu item"
               }
             }
+          },
+          "item": {
+            "x": {
+              "S": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "Horizontal space on menu option complex, small screen option"
+              },
+              "M": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "Horizontal space on nav menu item"
+              }
+            },
+            "y": {
+              "M": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "Vertical space on nav menu item"
+              }
+            },
+            "yg": {
+              "M": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "Space between menu item and submenu"
+              }
+            }
           }
         },
         "navbar": {
@@ -272,22 +293,6 @@
               "value": "{global.space.micro.XS}",
               "type": "spacing",
               "description": "Vertical padding on nav bar"
-            }
-          },
-          "item": {
-            "x": {
-              "M": {
-                "value": "{global.space.micro.L}",
-                "type": "spacing",
-                "description": "Horizontal space in nav item"
-              }
-            },
-            "y": {
-              "M": {
-                "value": "{global.space.micro.S}",
-                "type": "spacing",
-                "description": "Vertical space in nav item"
-              }
             }
           },
           "content": {
@@ -310,6 +315,22 @@
                 "value": "{global.space.micro.S}",
                 "type": "spacing",
                 "description": "Vertical space in content within nav item"
+              }
+            }
+          },
+          "item": {
+            "x": {
+              "M": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "Horizontal space in nav item"
+              }
+            },
+            "y": {
+              "M": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "Vertical space in nav item"
               }
             }
           },
