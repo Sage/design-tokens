@@ -80,6 +80,20 @@
                 }
               }
             },
+            "firm": {
+              "value": "{base.color.generic.bg.standard.nought}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.24",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore} "
+                  }
+                }
+              }
+            },
             "severe": {
               "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
@@ -88,6 +102,20 @@
                   "modify": {
                     "type": "mix",
                     "value": "0.40",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore} "
+                  }
+                }
+              }
+            },
+            "harsh": {
+              "value": "{base.color.generic.bg.standard.nought}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.32",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastMore} "
                   }
