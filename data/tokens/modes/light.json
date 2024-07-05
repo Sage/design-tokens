@@ -818,24 +818,24 @@
         "monochrome": {
           "standard": {
             "active": {
-              "value": "{base.color.interactive.monochrome.standard.default}",
+              "value": "{origin.colors.black}",
+              "type": "color"
+            },
+            "default": {
+              "value": "{base.color.interactive.monochrome.standard.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "{base.color.modifiers.button.active}",
+                    "value": "0.9",
                     "space": "lch"
                   }
                 }
               }
             },
-            "default": {
-              "value": "{origin.colors.black}",
-              "type": "color"
-            },
             "defaultAlt": {
-              "value": "{base.color.interactive.monochrome.standard.default}",
+              "value": "{base.color.interactive.monochrome.standard.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -862,7 +862,7 @@
               "description": "border color for off switches"
             },
             "hover": {
-              "value": "{base.color.interactive.monochrome.standard.default}",
+              "value": "{origin.colors.black}",
               "type": "color",
               "description": "Secondary button border on hover"
             },
@@ -882,7 +882,7 @@
               "description": "Accordion and menu bg on hover\n"
             },
             "withActive": {
-              "value": "{base.color.interactive.monochrome.standard.default}",
+              "value": "{base.color.generic.content.inverse.extreme}",
               "type": "color"
             },
             "withDefault": {
@@ -890,31 +890,31 @@
               "type": "color"
             },
             "withHover": {
-              "value": "{base.color.interactive.monochrome.standard.default}",
+              "value": "{base.color.interactive.monochrome.standard.active}",
               "type": "color",
               "description": "maybe should be white to align with primary group logic\n"
             }
           },
           "inverse": {
             "active": {
-              "value": "{base.color.interactive.monochrome.inverse.default}",
+              "value": "{origin.colors.white}",
+              "type": "color"
+            },
+            "default": {
+              "value": "{base.color.interactive.monochrome.inverse.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "{base.color.modifiers.button.active}",
+                    "value": "0.9",
                     "space": "lch"
                   }
                 }
               }
             },
-            "default": {
-              "value": "{origin.colors.white}",
-              "type": "color"
-            },
             "defaultAlt": {
-              "value": "{base.color.interactive.monochrome.inverse.default}",
+              "value": "{base.color.interactive.monochrome.inverse.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -927,7 +927,7 @@
               }
             },
             "hover": {
-              "value": "{base.color.interactive.monochrome.inverse.default}",
+              "value": "{origin.colors.white}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -955,11 +955,11 @@
               "description": "Accordion and menu bg on hover\n"
             },
             "withActive": {
-              "value": "{base.color.interactive.monochrome.inverse.default}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "withHover": {
-              "value": "{base.color.interactive.monochrome.inverse.default}",
+              "value": "{base.color.generic.content.inverse.extreme}",
               "type": "color"
             }
           }
