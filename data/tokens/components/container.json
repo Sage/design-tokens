@@ -290,20 +290,27 @@
       "generic": {
         "emptystate": {
           "illustration": {
-            "S": {
-              "value": "{global.size.macro.M} * 5",
-              "type": "sizing",
-              "description": "Illustration size for small error and empty states"
+            "primary": {
+              "S": {
+                "value": "{global.size.macro.M} * 5",
+                "type": "sizing",
+                "description": "Illustration size for small error and empty states"
+              },
+              "M": {
+                "value": "{global.size.macro.M} * 6",
+                "type": "sizing",
+                "description": "Illustration size for medium error and empty states"
+              },
+              "L": {
+                "value": "{global.size.macro.M} * 8",
+                "type": "sizing",
+                "description": "Illustration size for large error and empty states"
+              }
             },
-            "M": {
-              "value": "{global.size.macro.M} * 6",
+            "secondary": {
+              "value": "{global.size.macro.M} + {button.size.icon.M}",
               "type": "sizing",
-              "description": "Illustration size for medium error and empty states"
-            },
-            "L": {
-              "value": "{global.size.macro.M} * 8",
-              "type": "sizing",
-              "description": "Illustration size for large error and empty states"
+              "description": "Illustration size for secondary empty states"
             }
           }
         }
