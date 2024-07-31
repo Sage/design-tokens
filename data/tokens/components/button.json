@@ -586,6 +586,19 @@
               "value": "{base.color.interactive.inactive.standard.default}",
               "type": "color"
             },
+            "bg-enabled": {
+              "value": "{base.color.interactive.monochrome.inverse.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.04",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
             "bg-hover": {
               "value": "{base.color.interactive.monochrome.inverse.hoverAlt}",
               "type": "color"
@@ -881,6 +894,19 @@
               "value": "{base.color.interactive.inactive.standard.default}",
               "type": "color"
             },
+            "bg-enabled": {
+              "value": "{base.color.interactive.monochrome.standard.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.04",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
             "bg-hover": {
               "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
               "type": "color"
@@ -910,7 +936,7 @@
               "type": "color"
             },
             "label-enabled": {
-              "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
+              "value": "{base.color.interactive.monochrome.standard.default}",
               "type": "color"
             },
             "label-hover": {
@@ -965,14 +991,9 @@
         "description": "chip button border width"
       },
       "secondary": {
-        "value": "{global.borderwidth.S}",
-        "type": "borderWidth",
-        "description": "Secondary button.\n"
-      },
-      "tertiary": {
         "value": "{global.borderwidth.XS}",
         "type": "borderWidth",
-        "description": "Tertiary button.\n"
+        "description": "Secondary button.\n"
       },
       "togglecontainer": {
         "value": "{global.borderwidth.XS}",
