@@ -905,7 +905,16 @@
             "hover": {
               "value": "{origin.colors.black}",
               "type": "color",
-              "description": "Secondary button border on hover"
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{base.color.modifiers.button.hover}",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "Tertiary button bg on hover"
             },
             "hoverAlt": {
               "value": "{base.color.interactive.monochrome.standard.active}",
