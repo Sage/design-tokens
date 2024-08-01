@@ -337,6 +337,20 @@
                 }
               }
             },
+            "moderate": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.55",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "was 0.5. Increased to 0.55 so that we can use this for hint text etc too, and still be accessible."
+            },
             "soft": {
               "value": "{base.color.generic.content.inverse.extreme}",
               "type": "color",
