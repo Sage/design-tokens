@@ -1055,6 +1055,10 @@
               "value": "{base.color.brandreference.custom1}",
               "type": "color"
             },
+            "default1": {
+              "value": "{origin.colors.jade}",
+              "type": "color"
+            },
             "defaultAlt": {
               "value": "{base.color.interactive.primary.standard.default}",
               "type": "color",
@@ -1185,6 +1189,198 @@
             },
             "withHover": {
               "value": "{base.color.generic.content.standard.extreme}",
+              "type": "color"
+            }
+          }
+        },
+        "monochromecopy": {
+          "standard": {
+            "active": {
+              "value": "{origin.colors.black}",
+              "type": "color"
+            },
+            "activeAlt": {
+              "value": "{base.color.interactive.monochrome.standard.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{base.color.modifiers.button.activeAlt} ",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "default": {
+              "value": "{base.color.interactive.monochrome.standard.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.9",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "defaultAlt": {
+              "value": "{base.color.interactive.monochrome.standard.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "defaultAlt2": {
+              "value": "{base.color.interactive.monochrome.standard.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.50",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "border color for off switches"
+            },
+            "hover": {
+              "value": "{origin.colors.black}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{base.color.modifiers.button.hover}",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "Tertiary button bg on hover"
+            },
+            "hoverAlt": {
+              "value": "{base.color.interactive.monochrome.standard.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "Accordion and menu bg on hover\n"
+            },
+            "withActive": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color"
+            },
+            "withActiveAlt": {
+              "value": "{base.color.interactive.monochrome.standard.default}",
+              "type": "color"
+            },
+            "withDefault": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color"
+            },
+            "withHover": {
+              "value": "{base.color.interactive.monochrome.standard.active}",
+              "type": "color",
+              "description": "maybe should be white to align with primary group logic\n"
+            }
+          },
+          "inverse": {
+            "active": {
+              "value": "{origin.colors.white}",
+              "type": "color"
+            },
+            "activeAlt": {
+              "value": "{base.color.interactive.monochrome.inverse.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{base.color.modifiers.button.activeAlt}",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "default": {
+              "value": "{base.color.interactive.monochrome.inverse.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.9",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "defaultAlt": {
+              "value": "{base.color.interactive.monochrome.inverse.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "hover": {
+              "value": "{origin.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{base.color.modifiers.button.hover}",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "hoverAlt": {
+              "value": "{base.color.interactive.monochrome.inverse.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "Accordion and menu bg on hover\n"
+            },
+            "withActive": {
+              "value": "{base.color.generic.content.standard.extreme}",
+              "type": "color"
+            },
+            "withActiveAlt": {
+              "value": "{base.color.interactive.monochrome.inverse.default}",
+              "type": "color"
+            },
+            "withHover": {
+              "value": "{base.color.generic.content.inverse.extreme}",
               "type": "color"
             }
           }

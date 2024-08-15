@@ -578,7 +578,10 @@
       "components/table": "enabled",
       "modes/light": "source",
       "components/logo": "enabled",
-      "components/page": "enabled"
+      "components/page": "enabled",
+      "context/marketing": "disabled",
+      "context/product": "disabled",
+      "context/product-old": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:859:2624",
     "$figmaModeId": "859:0",
@@ -1651,7 +1654,10 @@
     "name": "Large Screen",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "devicesize/large": "enabled"
+      "devicesize/large": "enabled",
+      "context/marketing": "disabled",
+      "context/product": "disabled",
+      "context/product-old": "disabled"
     },
     "group": "Platforms"
   },
@@ -1660,8 +1666,38 @@
     "name": "Small Screen",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "devicesize/small": "enabled"
+      "devicesize/small": "enabled",
+      "context/marketing": "disabled",
+      "context/product": "disabled",
+      "context/product-old": "disabled"
     },
     "group": "Platforms"
+  },
+  {
+    "id": "61a2f7f63942025b4d6d92fe8ee80fc6d42fbcc2",
+    "name": "old product",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "context/product-old": "enabled"
+    },
+    "group": "context"
+  },
+  {
+    "id": "849a545731d09299ad84fa49d27a3eba853ef3ef",
+    "name": "product",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "context/product": "enabled"
+    },
+    "group": "context"
+  },
+  {
+    "id": "fccd50425902437f21175e4778be056261b6ae3f",
+    "name": "marketing",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "context/marketing": "enabled"
+    },
+    "group": "context"
   }
 ]
