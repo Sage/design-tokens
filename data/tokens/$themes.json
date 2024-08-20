@@ -567,7 +567,9 @@
       "components/profile": "enabled",
       "components/tab": "enabled",
       "components/table": "enabled",
-      "context/product": "enabled"
+      "context/product": "enabled",
+      "screensize/small": "disabled",
+      "screensize/large": "disabled"
     },
     "$figmaVariableReferences": {
       "button.color.standard.typical.primary.bg-active": "9200426f09a1c957b75679640ab3b8a00f042e34",
@@ -2379,7 +2381,9 @@
       "global/borderwidth": "source",
       "origin": "source",
       "modes/light": "source",
-      "context/frozen product": "enabled"
+      "context/frozen product": "enabled",
+      "screensize/small": "disabled",
+      "screensize/large": "disabled"
     },
     "$figmaVariableReferences": {
       "base.color.interactive.primary.standard.default": "10e04393ee668a6aaacab01e2c0dddc866374548",
@@ -3629,7 +3633,9 @@
     "name": "Marketing",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "context/marketing": "enabled"
+      "context/marketing": "enabled",
+      "screensize/small": "disabled",
+      "screensize/large": "disabled"
     },
     "group": "Context"
   },
@@ -4192,7 +4198,9 @@
     "selectedTokenSets": {
       "origin": "source",
       "modes/light": "enabled",
-      "global/shadow": "source"
+      "global/shadow": "source",
+      "screensize/small": "disabled",
+      "screensize/large": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:2509:654",
     "$figmaModeId": "2509:2",
@@ -4387,10 +4395,9 @@
   },
   {
     "id": "04b1f962c548eabba1edc1c08f21bcca789369da",
-    "name": "Large Screen",
+    "name": "Large",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "devicesize/large": "enabled",
       "global/space": "source",
       "global/size": "source",
       "global/radius": "source",
@@ -4410,7 +4417,9 @@
       "components/profile": "enabled",
       "components/tab": "enabled",
       "components/table": "enabled",
-      "origin": "source"
+      "origin": "source",
+      "screensize/small": "disabled",
+      "screensize/large": "enabled"
     },
     "$figmaVariableReferences": {
       "global.space.macroScale": "cd5738ddf68dfd55da180d60e042924c01f4561b",
@@ -5672,14 +5681,13 @@
     },
     "$figmaCollectionId": "VariableCollectionId:2509:655",
     "$figmaModeId": "2509:3",
-    "group": "Device size"
+    "group": "Screen size"
   },
   {
     "id": "fcc1a896e8f8650f22a36c4f41576a858b708ff4",
-    "name": "Small Screen",
+    "name": "Small",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "devicesize/small": "enabled",
       "global/borderwidth": "source",
       "global/radius": "source",
       "global/size": "source",
@@ -5701,7 +5709,9 @@
       "components/tab": "enabled",
       "components/table": "enabled",
       "modes/light": "source",
-      "global/shadow": "source"
+      "global/shadow": "source",
+      "screensize/small": "enabled",
+      "screensize/large": "disabled"
     },
     "$figmaVariableReferences": {
       "global.space.macroScale": "cd5738ddf68dfd55da180d60e042924c01f4561b",
@@ -6963,7 +6973,7 @@
     },
     "$figmaCollectionId": "VariableCollectionId:2509:655",
     "$figmaModeId": "2509:4",
-    "group": "Device size"
+    "group": "Screen size"
   },
   {
     "id": "07891e7130a78045358223c4ec2c620fe164d5d6",
@@ -6973,7 +6983,9 @@
       "origin": "source",
       "global/shadow": "source",
       "modes/light": "enabled",
-      "modes/dark": "enabled"
+      "modes/dark": "enabled",
+      "screensize/small": "disabled",
+      "screensize/large": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:2509:654",
     "$figmaModeId": "2515:0",
