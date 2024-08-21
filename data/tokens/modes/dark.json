@@ -3,13 +3,13 @@
     "color": {
       "generic": {
         "bg": {
-          "inverse": {
+          "standard": {
             "nought": {
               "value": "{origin.colors.black}",
               "type": "color"
             },
             "faint": {
-              "value": "{base.color.generic.bg.inverse.nought}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -23,7 +23,7 @@
               }
             },
             "delicate": {
-              "value": "{base.color.generic.bg.inverse.nought}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -37,7 +37,7 @@
               }
             },
             "soft": {
-              "value": "{base.color.generic.bg.inverse.nought}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -51,7 +51,7 @@
               }
             },
             "moderate": {
-              "value": "{base.color.generic.bg.inverse.nought}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -65,7 +65,7 @@
               }
             },
             "firm": {
-              "value": "{base.color.generic.bg.inverse.nought}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -79,7 +79,7 @@
               }
             },
             "harsh": {
-              "value": "{base.color.generic.bg.inverse.nought}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -93,13 +93,79 @@
               }
             },
             "severe": {
-              "value": "{base.color.generic.bg.inverse.nought}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
                     "value": "0.40",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fg": {
+          "standard": {
+            "nought": {
+              "value": "{origin.colors.black}",
+              "type": "color"
+            },
+            "faint": {
+              "value": "{base.color.generic.fg.standard.nought}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.08",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "description": "table dividers and borders"
+            },
+            "delicate": {
+              "value": "{base.color.generic.fg.standard.nought}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.16",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "description": "table dividers and borders"
+            },
+            "soft": {
+              "value": "{base.color.generic.fg.standard.nought}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.32",
+                    "space": "lch",
+                    "color": "{base.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            },
+            "moderate": {
+              "value": "{base.color.generic.fg.standard.nought}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.50",
                     "space": "lch",
                     "color": "{base.color.modifier.contrastLess} "
                   }
@@ -155,6 +221,20 @@
               },
               "description": "was 0.5. Increased to 0.55 so that we can use this for hint text etc too, and still be accessible."
             },
+            "muted": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.42",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "accessible OBJECT against white."
+            },
             "soft": {
               "value": "{base.color.generic.content.inverse.extreme}",
               "type": "color",
@@ -171,77 +251,11 @@
               "description": "Used for disabled text"
             }
           }
-        },
-        "fg": {
-          "inverse": {
-            "nought": {
-              "value": "{origin.colors.black}",
-              "type": "color"
-            },
-            "faint": {
-              "value": "{base.color.generic.fg.inverse.nought}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.08",
-                    "space": "lch",
-                    "color": "{base.color.modifier.contrastLess} "
-                  }
-                }
-              },
-              "description": "table dividers and borders"
-            },
-            "delicate": {
-              "value": "{base.color.generic.fg.inverse.nought}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.16",
-                    "space": "lch",
-                    "color": "{base.color.modifier.contrastLess} "
-                  }
-                }
-              },
-              "description": "table dividers and borders"
-            },
-            "soft": {
-              "value": "{base.color.generic.fg.inverse.nought}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.32",
-                    "space": "lch",
-                    "color": "{base.color.modifier.contrastLess} "
-                  }
-                }
-              }
-            },
-            "moderate": {
-              "value": "{base.color.generic.fg.inverse.nought}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.50",
-                    "space": "lch",
-                    "color": "{base.color.modifier.contrastLess} "
-                  }
-                }
-              }
-            }
-          }
         }
       },
       "interactive": {
         "ai": {
-          "inverse": {
+          "standard": {
             "active": {
               "value": "linear-gradient(90deg, rgba(#00D639,0.15) 0%, rgba(#00d6de,0.15) 40%, rgba(#9d60ff,0.15) 90%)",
               "type": "color"
@@ -353,7 +367,7 @@
             "description": "Input backgrounds."
           },
           "withActive": {
-            "value": "{base.color.generic.fg.inverse.nought}",
+            "value": "{base.color.generic.fg.standard.nought}",
             "type": "color"
           },
           "withActiveAlt": {
@@ -361,7 +375,7 @@
             "type": "color"
           },
           "withHover": {
-            "value": "{base.color.generic.fg.inverse.nought}",
+            "value": "{base.color.generic.fg.standard.nought}",
             "type": "color",
             "description": "hover for draggable area on file input"
           },
@@ -428,17 +442,17 @@
         "inactive": {
           "standard": {
             "default": {
-              "value": "{base.color.generic.fg.inverse.soft}",
+              "value": "{base.color.generic.fg.standard.soft}",
               "type": "color",
               "description": "disabled buttons on dark"
             },
             "defaultAlt": {
-              "value": "{base.color.generic.bg.inverse.faint}",
+              "value": "{base.color.generic.bg.standard.faint}",
               "type": "color",
               "description": "Disabled button backgrounds and borders ON DARK"
             },
             "content": {
-              "value": "{base.color.generic.content.inverse.soft}",
+              "value": "{base.color.generic.content.standard.soft}",
               "type": "color",
               "description": "Disabled text inside buttons"
             },
@@ -530,7 +544,7 @@
               "type": "color"
             },
             "withHover": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             }
           }

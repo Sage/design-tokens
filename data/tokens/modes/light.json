@@ -351,6 +351,20 @@
               },
               "description": "was 0.5. Increased to 0.55 so that we can use this for hint text etc too, and still be accessible."
             },
+            "muted": {
+              "value": "{base.color.generic.content.inverse.extreme}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.42",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "accessible OBJECT against white."
+            },
             "soft": {
               "value": "{base.color.generic.content.inverse.extreme}",
               "type": "color",
@@ -439,7 +453,7 @@
               "type": "color"
             },
             "faint": {
-              "value": "{base.color.generic.fg.inverse.nought}",
+              "value": "{base.color.generic.fg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -454,7 +468,7 @@
               "description": "table dividers and borders"
             },
             "delicate": {
-              "value": "{base.color.generic.fg.inverse.nought}",
+              "value": "{base.color.generic.fg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -469,7 +483,7 @@
               "description": "table dividers and borders"
             },
             "soft": {
-              "value": "{base.color.generic.fg.inverse.nought}",
+              "value": "{base.color.generic.fg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -483,7 +497,7 @@
               }
             },
             "moderate": {
-              "value": "{base.color.generic.fg.inverse.nought}",
+              "value": "{base.color.generic.fg.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -612,17 +626,17 @@
               "description": "used on link hover state"
             },
             "withActive": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "withDefault": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             }
           },
           "inverse": {
             "active": {
-              "value": "{base.color.interactive.danger.standard.default}",
+              "value": "{base.color.interactive.danger.inverse.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -641,7 +655,7 @@
               "type": "color"
             },
             "defaultAlt": {
-              "value": "{base.color.interactive.danger.standard.default}",
+              "value": "{base.color.interactive.danger.inverse.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -656,7 +670,7 @@
               "description": "for links in datatables\n"
             },
             "hover": {
-              "value": "{base.color.interactive.danger.standard.default}",
+              "value": "{base.color.interactive.danger.inverse.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -670,7 +684,7 @@
               }
             },
             "hoverAlt": {
-              "value": "{base.color.interactive.danger.standard.default}",
+              "value": "{base.color.interactive.danger.inverse.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -685,7 +699,7 @@
               "description": "button hover on dark"
             },
             "hoverAlt2": {
-              "value": "{base.color.interactive.danger.standard.defaultAlt}",
+              "value": "{base.color.interactive.danger.inverse.defaultAlt}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -716,7 +730,7 @@
             "description": "Input backgrounds."
           },
           "withActive": {
-            "value": "{base.color.generic.fg.inverse.nought}",
+            "value": "{base.color.generic.fg.standard.nought}",
             "type": "color"
           },
           "withActiveAlt": {
@@ -724,7 +738,7 @@
             "type": "color"
           },
           "withHover": {
-            "value": "{base.color.generic.fg.inverse.nought}",
+            "value": "{base.color.generic.fg.standard.nought}",
             "type": "color",
             "description": "hover for draggable area on file input"
           },
@@ -806,7 +820,7 @@
               "description": "Disabled text inside buttons and form inputs."
             },
             "contentAlt": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color",
               "description": "\nDisabled labels inside buttons and Switch."
             },
@@ -823,17 +837,17 @@
           },
           "inverse": {
             "default": {
-              "value": "{base.color.generic.fg.inverse.soft}",
+              "value": "{base.color.generic.fg.standard.soft}",
               "type": "color",
               "description": "disabled buttons on dark"
             },
             "defaultAlt": {
-              "value": "{base.color.generic.bg.inverse.faint}",
+              "value": "{base.color.generic.bg.standard.faint}",
               "type": "color",
               "description": "Disabled button backgrounds and borders ON DARK"
             },
             "content": {
-              "value": "{base.color.generic.content.inverse.soft}",
+              "value": "{base.color.generic.content.standard.soft}",
               "type": "color",
               "description": "Disabled text inside buttons"
             },
@@ -936,7 +950,7 @@
               "description": "Accordion and menu bg on hover\n"
             },
             "withActive": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "withActiveAlt": {
@@ -944,7 +958,7 @@
               "type": "color"
             },
             "withDefault": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "withHover": {
@@ -1026,7 +1040,7 @@
               "description": "Accordion and menu bg on hover\n"
             },
             "withActive": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "withActiveAlt": {
@@ -1034,7 +1048,7 @@
               "type": "color"
             },
             "withHover": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             }
           }
@@ -1108,15 +1122,15 @@
               "description": "for link hover"
             },
             "withActive": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "withDefault": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "withHover": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             }
           },
@@ -1202,7 +1216,7 @@
         "ai": {
           "standard": {
             "default": {
-              "value": "{base.color.generic.bg.inverse.nought}",
+              "value": "{base.color.generic.bg.standard.nought}",
               "type": "color"
             },
             "default-horizontal": {
@@ -1314,7 +1328,7 @@
         "content": {
           "standard": {
             "withDefault": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "withDefaultAlt": {
@@ -1322,7 +1336,7 @@
               "type": "color"
             },
             "withHover": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "withHoverAlt": {
@@ -1341,7 +1355,7 @@
               "type": "color"
             },
             "withDefaultAlt": {
-              "value": "{base.color.generic.content.inverse.harsh}",
+              "value": "{base.color.generic.content.standard.harsh}",
               "type": "color"
             },
             "withHover": {
@@ -1349,7 +1363,7 @@
               "type": "color"
             },
             "withHoverAlt": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
             },
             "loading": {
@@ -1374,12 +1388,12 @@
           },
           "inverse": {
             "default": {
-              "value": "{base.color.generic.fg.inverse.soft}",
+              "value": "{base.color.generic.fg.standard.soft}",
               "type": "color",
               "description": "For readonly pill bg and border"
             },
             "withDefault": {
-              "value": "{base.color.generic.content.inverse.firm}",
+              "value": "{base.color.generic.content.standard.firm}",
               "type": "color",
               "description": "For readonly filled pill text"
             }
