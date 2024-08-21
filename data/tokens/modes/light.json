@@ -311,7 +311,7 @@
               "type": "color"
             },
             "harsh": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -325,7 +325,7 @@
               }
             },
             "firm": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -338,7 +338,7 @@
               }
             },
             "moderate": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -352,7 +352,7 @@
               "description": "was 0.5. Increased to 0.55 so that we can use this for hint text etc too, and still be accessible."
             },
             "muted": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -366,7 +366,7 @@
               "description": "accessible OBJECT against white."
             },
             "soft": {
-              "value": "{base.color.generic.content.inverse.extreme}",
+              "value": "{base.color.generic.content.standard.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -837,23 +837,33 @@
           },
           "inverse": {
             "default": {
-              "value": "{base.color.generic.fg.standard.soft}",
+              "value": "{base.color.generic.fg.inverse.soft}",
               "type": "color",
               "description": "disabled buttons on dark"
             },
             "defaultAlt": {
-              "value": "{base.color.generic.bg.standard.faint}",
+              "value": "{base.color.generic.bg.inverse.faint}",
               "type": "color",
               "description": "Disabled button backgrounds and borders ON DARK"
             },
             "content": {
-              "value": "{base.color.generic.content.standard.soft}",
+              "value": "{base.color.generic.content.inverse.soft}",
               "type": "color",
               "description": "Disabled text inside buttons"
             },
             "contentAlt": {
-              "value": "{base.color.generic.content.standard.extreme}",
+              "value": "{base.color.generic.content.inverse.extreme}",
               "type": "color"
+            },
+            "icon": {
+              "value": "{base.color.generic.content.inverse.soft}",
+              "type": "color",
+              "description": "Disabled icon inside buttons and form inputs."
+            },
+            "iconAlt": {
+              "value": "{base.color.generic.content.inverse.moderate}",
+              "type": "color",
+              "description": "Readonly icon inside form inputs. "
             }
           }
         },
@@ -861,10 +871,6 @@
           "standard": {
             "active": {
               "value": "{origin.colors.black}",
-              "type": "color"
-            },
-            "active2": {
-              "value": "{origin.colors.navy}",
               "type": "color"
             },
             "activeAlt": {
@@ -1011,6 +1017,20 @@
                 }
               }
             },
+            "defaultAlt2": {
+              "value": "{base.color.interactive.monochrome.inverse.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.50",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "border color for off switches"
+            },
             "hover": {
               "value": "{origin.colors.white}",
               "type": "color",
@@ -1047,6 +1067,10 @@
               "value": "{base.color.interactive.monochrome.inverse.default}",
               "type": "color"
             },
+            "withDefault": {
+              "value": "{base.color.generic.content.standard.extreme}",
+              "type": "color"
+            },
             "withHover": {
               "value": "{base.color.generic.content.standard.extreme}",
               "type": "color"
@@ -1071,10 +1095,6 @@
             },
             "default": {
               "value": "{base.color.brandreference.custom1}",
-              "type": "color"
-            },
-            "default1": {
-              "value": "{origin.colors.jade}",
               "type": "color"
             },
             "defaultAlt": {
@@ -1229,6 +1249,10 @@
             }
           },
           "inverse": {
+            "default": {
+              "value": "{base.color.generic.bg.inverse.nought}",
+              "type": "color"
+            },
             "default-horizontal": {
               "value": "{origin.colors.lightAiH}",
               "type": "color"
