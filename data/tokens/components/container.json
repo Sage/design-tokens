@@ -338,6 +338,13 @@
           "description": "Accordion chevron container"
         }
       },
+      "quotebar": {
+        "width": {
+          "value": "{global.size.micro.M}",
+          "type": "sizing",
+          "description": "block quote bar width"
+        }
+      },
       "chatbubble": {
         "maxwidth": {
           "value": "{global.size.macro.XXXXL}* 5",
@@ -640,9 +647,9 @@
       },
       "blockquote": {
         "bar": {
-          "value": "{global.radius.container.S}",
+          "value": "{global.radius.circle}",
           "type": "borderRadius",
-          "description": "Color picker container radius"
+          "description": "radius for blockquote bar"
         }
       },
       "contacttile": {
@@ -958,6 +965,11 @@
               "value": "{global.space.macro.XS}",
               "type": "spacing",
               "description": "Vertical gap between content items in copilot content, dialog, drawer, sidebar, M card and M tile. "
+            },
+            "L": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "vertical gap between block quote text and avatar"
             }
           }
         },
