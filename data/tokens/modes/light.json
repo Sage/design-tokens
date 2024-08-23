@@ -926,6 +926,20 @@
               },
               "description": "border color for off switches"
             },
+            "defaultAlt3": {
+              "value": "{modes.color.interactive.monochrome.standard.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.04",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "bg color for tertiary buttons"
+            },
             "hover": {
               "value": "{origin.colors.black}",
               "type": "color",
@@ -1030,6 +1044,20 @@
                 }
               },
               "description": "border color for off switches"
+            },
+            "defaultAlt3": {
+              "value": "{modes.color.interactive.monochrome.inverse.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.04",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "default bg color for tertiary button"
             },
             "hover": {
               "value": "{origin.colors.white}",
