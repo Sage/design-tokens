@@ -724,58 +724,115 @@
           }
         },
         "dataEntry": {
-          "default": {
-            "value": "{modes.color.generic.bg.standard.nought}",
-            "type": "color",
-            "description": "Input backgrounds."
-          },
-          "withActive": {
-            "value": "{modes.color.generic.fg.standard.nought}",
-            "type": "color"
-          },
-          "withActiveAlt": {
-            "value": "{modes.color.generic.fg.standard.nought}",
-            "type": "color"
-          },
-          "withHover": {
-            "value": "{modes.color.generic.fg.standard.nought}",
-            "type": "color",
-            "description": "hover for draggable area on file input"
-          },
-          "hoverAlt": {
-            "value": "{modes.color.interactive.dataEntry.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{base.color.modifiers.button.hoverAlt} ",
-                  "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore}"
-                }
-              }
+          "standard": {
+            "default": {
+              "value": "{modes.color.generic.bg.standard.nought}",
+              "type": "color",
+              "description": "Input backgrounds."
             },
-            "description": "bg hover for draggable area on file input"
+            "withActive": {
+              "value": "{modes.color.generic.fg.standard.nought}",
+              "type": "color"
+            },
+            "withActiveAlt": {
+              "value": "{modes.color.generic.fg.standard.nought}",
+              "type": "color"
+            },
+            "withHover": {
+              "value": "{modes.color.generic.fg.standard.nought}",
+              "type": "color",
+              "description": "hover for draggable area on file input"
+            },
+            "hoverAlt": {
+              "value": "{modes.color.interactive.dataEntry.inverse.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "bg hover for draggable area on file input"
+            },
+            "withDefault": {
+              "value": "{modes.color.generic.fg.standard.moderate}",
+              "type": "color",
+              "description": "Input borders."
+            },
+            "defaultAlt": {
+              "value": "{modes.color.generic.bg.standard.faint}",
+              "type": "color",
+              "description": "Input footer bgs (e.g text editor)."
+            },
+            "content": {
+              "value": "{modes.color.generic.content.standard.harsh}",
+              "type": "color",
+              "description": "Input Text"
+            },
+            "contentAlt": {
+              "value": "{modes.color.generic.content.standard.moderate}",
+              "type": "color",
+              "description": "Hint text, placeholder text, character count etc"
+            }
           },
-          "withDefault": {
-            "value": "{modes.color.generic.fg.standard.moderate}",
-            "type": "color",
-            "description": "Input borders."
-          },
-          "defaultAlt": {
-            "value": "{modes.color.generic.bg.standard.faint}",
-            "type": "color",
-            "description": "Input footer bgs (e.g text editor)."
-          },
-          "content": {
-            "value": "{modes.color.generic.content.standard.harsh}",
-            "type": "color",
-            "description": "Input Text"
-          },
-          "contentAlt": {
-            "value": "{modes.color.generic.content.standard.moderate}",
-            "type": "color",
-            "description": "Hint text, placeholder text, character count etc"
+          "inverse": {
+            "default": {
+              "value": "{modes.color.generic.bg.inverse.nought}",
+              "type": "color",
+              "description": "Input backgrounds."
+            },
+            "withActive": {
+              "value": "{modes.color.generic.fg.inverse.nought}",
+              "type": "color"
+            },
+            "withActiveAlt": {
+              "value": "{modes.color.generic.fg.inverse.nought}",
+              "type": "color"
+            },
+            "withHover": {
+              "value": "{modes.color.generic.fg.inverse.nought}",
+              "type": "color",
+              "description": "hover for draggable area on file input"
+            },
+            "hoverAlt": {
+              "value": "{modes.color.interactive.dataEntry.standard.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{base.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "description": "bg hover for draggable area on file input"
+            },
+            "withDefault": {
+              "value": "{modes.color.generic.fg.standard.moderate}",
+              "type": "color",
+              "description": "Input borders."
+            },
+            "defaultAlt": {
+              "value": "{modes.color.generic.bg.inverse.faint}",
+              "type": "color",
+              "description": "Input footer bgs (e.g text editor)."
+            },
+            "content": {
+              "value": "{modes.color.generic.content.inverse.harsh}",
+              "type": "color",
+              "description": "Input Text"
+            },
+            "contentAlt": {
+              "value": "{modes.color.generic.content.inverse.moderate}",
+              "type": "color",
+              "description": "Hint text, placeholder text, character count etc"
+            }
           }
         },
         "focus": {
