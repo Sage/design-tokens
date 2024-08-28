@@ -2,8 +2,17 @@
   "modes": {
     "color": {
       "none": {
-        "value": "origin.colors.transparent",
-        "type": "color"
+        "value": "{origin.colors.white}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0",
+              "space": "lch"
+            }
+          }
+        }
       },
       "brandreference": {
         "custom1": {
