@@ -29,3 +29,9 @@ jobs:
           auto_fix: true
           git_name: github-actions[bot]
           git_email: github-actions[bot]@users.noreply.github.com
+
+      - name: Build project
+        run: npm run build
+
+      - name: Run stylelint
+        run: npx stylelint 'dist/**/*.{css,scss}' --report-needless-disables --report-descriptionless-disables --report-invalid-scope-disables
