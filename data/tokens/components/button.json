@@ -128,78 +128,6 @@
           }
         }
       },
-      "generic": {
-        "x": {
-          "S": {
-            "value": "{global.space.micro.XXL}",
-            "type": "spacing",
-            "description": "Left and right padding on small buttons"
-          },
-          "M": {
-            "value": "{global.space.macro.XS}",
-            "type": "spacing",
-            "description": "Left and right padding on medium buttons"
-          },
-          "L": {
-            "value": "{global.space.macro.S}",
-            "type": "spacing",
-            "description": "Left and right padding on large buttons"
-          }
-        },
-        "xg": {
-          "S": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Item spacing inside buttons"
-          },
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Item spacing inside buttons"
-          },
-          "L": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Item spacing inside buttons"
-          }
-        },
-        "y": {
-          "S": {
-            "value": "{origin.dimension.50}",
-            "type": "spacing",
-            "description": "Bottom and top padding on small buttons."
-          },
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Top and bottom padding on medium buttons\n"
-          },
-          "L": {
-            "value": "{global.space.micro.XL}",
-            "type": "spacing",
-            "description": "Top and bottom padding on Large buttons\n"
-          }
-        },
-        "icononly": {
-          "x": {
-            "S": {
-              "value": "{global.space.micro.S}",
-              "type": "spacing",
-              "description": "Left and right padding on icon-only processing button\n"
-            },
-            "M": {
-              "value": "{global.space.micro.S}",
-              "type": "spacing",
-              "description": "Left and right padding on icon-only processing button\n"
-            },
-            "L": {
-              "value": "{global.space.micro.S}",
-              "type": "spacing",
-              "description": "Left and right padding on icon-only processing button\n"
-            }
-          }
-        }
-      },
       "bar": {
         "iconbutton": {
           "x": {
@@ -943,6 +871,48 @@
               "type": "color"
             }
           }
+        },
+        "video": {
+          "primary": {
+            "bg-enabled": {
+              "value": "{modes.color.interactive.monochrome.inverse.default}",
+              "type": "color"
+            },
+            "bg-hover": {
+              "value": "{modes.color.interactive.monochrome.inverse.active}",
+              "type": "color"
+            },
+            "label-enabled": {
+              "value": "{modes.color.interactive.monochrome.inverse.withDefault}",
+              "type": "color"
+            },
+            "label-hover": {
+              "value": "{modes.color.interactive.monochrome.inverse.withActive}",
+              "type": "color"
+            }
+          },
+          "secondary": {
+            "bg-hover": {
+              "value": "{modes.color.interactive.monochrome.inverse.hover}",
+              "type": "color"
+            },
+            "border-enabled": {
+              "value": "{modes.color.interactive.monochrome.inverse.default}",
+              "type": "color"
+            },
+            "border-hover": {
+              "value": "{modes.color.interactive.monochrome.inverse.withHover}",
+              "type": "color"
+            },
+            "label-enabled": {
+              "value": "{modes.color.interactive.monochrome.inverse.default}",
+              "type": "color"
+            },
+            "label-hover": {
+              "value": "{modes.color.interactive.monochrome.inverse.withHover}",
+              "type": "color"
+            }
+          }
         }
       },
       "standard": {
@@ -1231,6 +1201,48 @@
             },
             "label-disabled": {
               "value": "{modes.color.interactive.inactive.standard.content}",
+              "type": "color"
+            },
+            "label-enabled": {
+              "value": "{modes.color.interactive.monochrome.standard.default}",
+              "type": "color"
+            },
+            "label-hover": {
+              "value": "{modes.color.interactive.monochrome.standard.withHover}",
+              "type": "color"
+            }
+          }
+        },
+        "video": {
+          "primary": {
+            "bg-enabled": {
+              "value": "{modes.color.interactive.monochrome.standard.default}",
+              "type": "color"
+            },
+            "bg-hover": {
+              "value": "{modes.color.interactive.monochrome.standard.active}",
+              "type": "color"
+            },
+            "label-enabled": {
+              "value": "{modes.color.interactive.monochrome.standard.withDefault}",
+              "type": "color"
+            },
+            "label-hover": {
+              "value": "{modes.color.interactive.monochrome.standard.withActive}",
+              "type": "color"
+            }
+          },
+          "secondary": {
+            "bg-hover": {
+              "value": "{modes.color.interactive.monochrome.standard.hover}",
+              "type": "color"
+            },
+            "border-enabled": {
+              "value": "{modes.color.interactive.monochrome.standard.default}",
+              "type": "color"
+            },
+            "border-hover": {
+              "value": "{modes.color.interactive.monochrome.standard.withHover}",
               "type": "color"
             },
             "label-enabled": {
