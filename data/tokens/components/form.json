@@ -1024,13 +1024,11 @@
           },
           "label-active": {
             "value": "{modes.color.interactive.dataEntry.inverse.content}",
-            "type": "color",
-            "description": "{base.color.interactive.monochrome.standard.withActive}"
+            "type": "color"
           },
           "label-activedisabled": {
             "value": "{modes.color.interactive.inactive.inverse.default}",
-            "type": "color",
-            "description": "{base.color.interactive.inactive.standard.contentAlt}"
+            "type": "color"
           },
           "label-disabled": {
             "value": "{modes.color.interactive.inactive.inverse.default}",
@@ -1038,8 +1036,7 @@
           },
           "label-enabled": {
             "value": "{modes.color.interactive.dataEntry.inverse.contentAlt}",
-            "type": "color",
-            "description": "{base.color.interactive.dataEntry.contentAlt}"
+            "type": "color"
           },
           "icon-enabled": {
             "value": "{modes.color.interactive.dataEntry.inverse.contentAlt}",
@@ -1047,312 +1044,311 @@
           }
         }
       },
-      "calendar": {
-        "bg-active": {
-          "value": "{modes.color.interactive.monochrome.standard.active}",
-          "type": "color"
-        },
-        "bg-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.defaultAlt}",
-          "type": "color"
-        },
-        "bg-duration": {
-          "value": "{modes.color.interactive.dataEntry.standard.hoverAlt}",
-          "type": "color"
-        },
-        "bg-hover": {
-          "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
-          "type": "color"
-        },
-        "border-duration": {
-          "value": "{modes.color.interactive.monochrome.standard.active}",
-          "type": "color"
-        },
-        "text-active": {
-          "value": "{modes.color.interactive.monochrome.standard.withActive}",
-          "type": "color"
-        },
-        "text-alt": {
-          "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
-          "type": "color",
-          "description": "Days of the week subheaders"
-        },
-        "text-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.content}",
-          "type": "color"
-        },
-        "text-duration": {
-          "value": "{modes.color.interactive.dataEntry.standard.content}",
-          "type": "color"
-        },
-        "text-enabled": {
-          "value": "{modes.color.interactive.dataEntry.standard.content}",
-          "type": "color"
-        },
-        "text-hover": {
-          "value": "{modes.color.interactive.monochrome.standard.hover}",
-          "type": "color"
-        },
-        "textAlt-enabled": {
-          "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
-          "type": "color"
-        }
-      },
-      "dropdown": {
-        "bg-hover": {
-          "value": "{popover.color.standard.bg-hover}",
-          "type": "color",
-          "description": "REF POPOVER\n"
-        },
-        "label-active": {
-          "value": "{modes.color.interactive.monochrome.standard.withActive}",
-          "type": "color"
-        },
-        "label-alt": {
-          "value": "{modes.color.interactive.monochrome.standard.default}",
-          "type": "color"
-        },
-        "label-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.content}",
-          "type": "color"
-        },
-        "label-enabled": {
-          "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
-          "type": "color"
-        },
-        "label-hover": {
-          "value": "{modes.color.interactive.monochrome.standard.withHover}",
-          "type": "color"
-        }
-      },
-      "labelset": {
-        "label-required": {
-          "value": "{modes.color.interactive.danger.standard.default}",
-          "type": "color"
-        },
-        "label-default": {
-          "value": "{modes.color.interactive.dataEntry.standard.content}",
-          "type": "color"
-        },
-        "label-alt": {
-          "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
-          "type": "color",
-          "description": "used for '(optional)' text and hint text."
-        },
-        "label-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.content}",
-          "type": "color"
-        },
-        "label-readOnly": {
-          "value": "{modes.color.interactive.dataEntry.standard.content}",
-          "type": "color"
-        }
-      },
-      "typical": {
-        "bg-alt": {
-          "value": "{modes.color.interactive.dataEntry.standard.defaultAlt}",
-          "type": "color",
-          "description": "progress bar bg, text editor preview and text editor footer"
-        },
-        "bg-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.defaultAlt}",
-          "type": "color"
-        },
-        "bg-default": {
-          "value": "{modes.color.interactive.dataEntry.standard.default}",
-          "type": "color"
-        },
-        "bg-enabled": {
-          "value": "{modes.color.interactive.dataEntry.standard.default}",
-          "type": "color"
-        },
-        "bg-hover": {
-          "value": "{modes.color.interactive.dataEntry.standard.hoverAlt}",
-          "type": "color"
-        },
-        "bg-readOnly": {
-          "value": "{modes.color.interactive.inactive.standard.defaultAlt}",
-          "type": "color"
-        },
-        "border-alt": {
-          "value": "{modes.color.interactive.inactive.standard.default}",
-          "type": "color"
-        },
-        "border-enabled": {
-          "value": "{modes.color.interactive.dataEntry.standard.withDefault}",
-          "type": "color"
-        },
-        "border-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.default}",
-          "type": "color"
-        },
-        "border-hover": {
-          "value": "{modes.color.interactive.dataEntry.standard.withHover}",
-          "type": "color",
-          "description": "File input draggable border state"
-        },
-        "border-readOnly": {
-          "value": "{modes.color.interactive.inactive.standard.default}",
-          "type": "color"
-        },
-        "icon-active": {
-          "value": "{modes.color.interactive.dataEntry.standard.withActive}",
-          "type": "color",
-          "description": "used on tick in color picker and selected tick on dropdowns"
-        },
-        "icon-default": {
-          "value": "{modes.color.interactive.dataEntry.standard.content}",
-          "type": "color"
-        },
-        "icon-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.icon}",
-          "type": "color"
-        },
-        "icon-enabled": {
-          "value": "{modes.color.interactive.dataEntry.standard.content}",
-          "type": "color"
-        },
-        "icon-hover": {
-          "value": "{modes.color.interactive.dataEntry.standard.withHover}",
-          "type": "color"
-        },
-        "icon-readOnly": {
-          "value": "{modes.color.interactive.inactive.standard.iconAlt}",
-          "type": "color"
-        },
-        "iconAlt-active": {
-          "value": "{modes.color.interactive.dataEntry.standard.withActiveAlt}",
-          "type": "color",
-          "description": "used on tick in color picker"
-        },
-        "text-active": {
-          "value": "{modes.color.interactive.dataEntry.standard.content}",
-          "type": "color"
-        },
-        "text-alt": {
-          "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
-          "type": "color"
-        },
-        "text-default": {
-          "value": "{modes.color.interactive.dataEntry.standard.content}",
-          "type": "color"
-        },
-        "text-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.content}",
-          "type": "color"
-        },
-        "text-enabled": {
-          "value": "{modes.color.interactive.dataEntry.standard.content}",
-          "type": "color",
-          "description": "Dropdown text (subtle dropdown)."
-        },
-        "text-hover": {
-          "value": "{modes.color.interactive.dataEntry.standard.withHover}",
-          "type": "color",
-          "description": "text hover state when dragging a file over file input"
-        },
-        "text-readOnly": {
-          "value": "{modes.color.generic.content.standard.harsh}",
-          "type": "color"
-        }
-      },
-      "switch": {
-        "bg-active": {
-          "value": "{modes.color.interactive.monochrome.standard.active}",
-          "type": "color"
-        },
-        "bg-activedisabled": {
-          "value": "{modes.color.interactive.inactive.standard.default}",
-          "type": "color"
-        },
-        "bg-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.defaultAlt}",
-          "type": "color",
-          "description": "for switch"
-        },
-        "bg-enabled": {
-          "value": "{modes.color.interactive.dataEntry.standard.default}",
-          "type": "color",
-          "description": "for switch"
-        },
-        "border-active": {
-          "value": "transparent",
-          "type": "color"
-        },
-        "border-activedisabled": {
-          "value": "transparent",
-          "type": "color"
-        },
-        "border-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.default}",
-          "type": "color"
-        },
-        "border-enabled": {
-          "value": "{modes.color.interactive.monochrome.standard.defaultAlt2}",
-          "type": "color"
-        },
-        "fg-active": {
-          "value": "{modes.color.interactive.monochrome.standard.withActive}",
-          "type": "color"
-        },
-        "fg-activedisabled": {
-          "value": "{modes.color.interactive.inactive.standard.contentAlt}",
-          "type": "color"
-        },
-        "fg-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.default}",
-          "type": "color"
-        },
-        "fg-enabled": {
-          "value": "{modes.color.interactive.monochrome.standard.defaultAlt2}",
-          "type": "color"
-        },
-        "label-active": {
-          "value": "{modes.color.interactive.dataEntry.standard.content}",
-          "type": "color",
-          "description": "{base.color.interactive.monochrome.standard.withActive}"
-        },
-        "label-activedisabled": {
-          "value": "{modes.color.interactive.inactive.standard.default}",
-          "type": "color",
-          "description": "{base.color.interactive.inactive.standard.contentAlt}"
-        },
-        "label-disabled": {
-          "value": "{modes.color.interactive.inactive.standard.default}",
-          "type": "color"
-        },
-        "label-enabled": {
-          "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
-          "type": "color",
-          "description": "{base.color.interactive.dataEntry.contentAlt}"
-        },
-        "icon-enabled": {
-          "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
-          "type": "color"
-        }
-      },
-      "validation": {
-        "border-error": {
-          "value": "{modes.color.status.negative.standard.default}",
-          "type": "color"
-        },
-        "bar-error": {
-          "value": "{modes.color.status.negative.standard.default}",
-          "type": "color",
-          "description": "error bar to left of inputs"
-        },
-        "bar-warning": {
-          "value": "{modes.color.status.caution.standard.default}",
-          "type": "color",
-          "description": "warning bar to left of inputs"
-        },
-        "label-error": {
-          "value": "{modes.color.status.negative.standard.text}",
-          "type": "color"
-        },
-        "label-warning": {
-          "value": "{modes.color.status.caution.standard.text}",
-          "type": "color"
+      "standard": {
+        "calendar": {
+          "bg-active": {
+            "value": "{modes.color.interactive.monochrome.standard.active}",
+            "type": "color"
+          },
+          "bg-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.defaultAlt}",
+            "type": "color"
+          },
+          "bg-duration": {
+            "value": "{modes.color.interactive.dataEntry.standard.hoverAlt}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
+            "type": "color"
+          },
+          "border-duration": {
+            "value": "{modes.color.interactive.monochrome.standard.active}",
+            "type": "color"
+          },
+          "text-active": {
+            "value": "{modes.color.interactive.monochrome.standard.withActive}",
+            "type": "color"
+          },
+          "text-alt": {
+            "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
+            "type": "color",
+            "description": "Days of the week subheaders"
+          },
+          "text-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.content}",
+            "type": "color"
+          },
+          "text-duration": {
+            "value": "{modes.color.interactive.dataEntry.standard.content}",
+            "type": "color"
+          },
+          "text-enabled": {
+            "value": "{modes.color.interactive.dataEntry.standard.content}",
+            "type": "color"
+          },
+          "text-hover": {
+            "value": "{modes.color.interactive.monochrome.standard.withHover}",
+            "type": "color"
+          },
+          "textAlt-enabled": {
+            "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
+            "type": "color"
+          }
+        },
+        "dropdown": {
+          "bg-hover": {
+            "value": "{popover.color.standard.bg-hover}",
+            "type": "color",
+            "description": "REF POPOVER\n"
+          },
+          "label-active": {
+            "value": "{modes.color.interactive.monochrome.standard.withActive}",
+            "type": "color"
+          },
+          "label-alt": {
+            "value": "{modes.color.interactive.monochrome.standard.default}",
+            "type": "color"
+          },
+          "label-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.content}",
+            "type": "color"
+          },
+          "label-enabled": {
+            "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
+            "type": "color"
+          },
+          "label-hover": {
+            "value": "{modes.color.interactive.monochrome.standard.withHover}",
+            "type": "color"
+          }
+        },
+        "labelset": {
+          "label-required": {
+            "value": "{modes.color.interactive.danger.standard.default}",
+            "type": "color"
+          },
+          "label-default": {
+            "value": "{modes.color.interactive.dataEntry.standard.content}",
+            "type": "color"
+          },
+          "label-alt": {
+            "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
+            "type": "color",
+            "description": "used for '(optional)' text and hint text."
+          },
+          "label-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.content}",
+            "type": "color"
+          },
+          "label-readOnly": {
+            "value": "{modes.color.interactive.dataEntry.standard.content}",
+            "type": "color"
+          }
+        },
+        "typical": {
+          "bg-alt": {
+            "value": "{modes.color.interactive.dataEntry.standard.defaultAlt}",
+            "type": "color",
+            "description": "progress bar bg, text editor preview and text editor footer"
+          },
+          "bg-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.defaultAlt}",
+            "type": "color"
+          },
+          "bg-default": {
+            "value": "{modes.color.interactive.dataEntry.standard.default}",
+            "type": "color"
+          },
+          "bg-enabled": {
+            "value": "{modes.color.interactive.dataEntry.standard.default}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.interactive.dataEntry.standard.hoverAlt}",
+            "type": "color"
+          },
+          "bg-readOnly": {
+            "value": "{modes.color.interactive.inactive.standard.defaultAlt}",
+            "type": "color"
+          },
+          "border-alt": {
+            "value": "{modes.color.interactive.inactive.standard.default}",
+            "type": "color"
+          },
+          "border-enabled": {
+            "value": "{modes.color.interactive.dataEntry.standard.withDefault}",
+            "type": "color"
+          },
+          "border-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.default}",
+            "type": "color"
+          },
+          "border-hover": {
+            "value": "{modes.color.interactive.dataEntry.standard.withHover}",
+            "type": "color",
+            "description": "File input draggable border state"
+          },
+          "border-readOnly": {
+            "value": "{modes.color.interactive.inactive.standard.default}",
+            "type": "color"
+          },
+          "icon-active": {
+            "value": "{modes.color.interactive.dataEntry.standard.withActive}",
+            "type": "color",
+            "description": "used on tick in color picker and selected tick on dropdowns"
+          },
+          "icon-default": {
+            "value": "{modes.color.interactive.dataEntry.standard.content}",
+            "type": "color"
+          },
+          "icon-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.icon}",
+            "type": "color"
+          },
+          "icon-enabled": {
+            "value": "{modes.color.interactive.dataEntry.standard.content}",
+            "type": "color"
+          },
+          "icon-hover": {
+            "value": "{modes.color.interactive.dataEntry.standard.withHover}",
+            "type": "color"
+          },
+          "icon-readOnly": {
+            "value": "{modes.color.interactive.inactive.standard.iconAlt}",
+            "type": "color"
+          },
+          "iconAlt-active": {
+            "value": "{modes.color.interactive.dataEntry.standard.withActiveAlt}",
+            "type": "color",
+            "description": "used on tick in color picker"
+          },
+          "text-active": {
+            "value": "{modes.color.interactive.dataEntry.standard.content}",
+            "type": "color"
+          },
+          "text-alt": {
+            "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
+            "type": "color"
+          },
+          "text-default": {
+            "value": "{modes.color.interactive.dataEntry.standard.content}",
+            "type": "color"
+          },
+          "text-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.content}",
+            "type": "color"
+          },
+          "text-enabled": {
+            "value": "{modes.color.interactive.dataEntry.standard.content}",
+            "type": "color",
+            "description": "Dropdown text (subtle dropdown)."
+          },
+          "text-hover": {
+            "value": "{modes.color.interactive.dataEntry.standard.withHover}",
+            "type": "color",
+            "description": "text hover state when dragging a file over file input"
+          },
+          "text-readOnly": {
+            "value": "{modes.color.generic.content.standard.harsh}",
+            "type": "color"
+          }
+        },
+        "switch": {
+          "bg-active": {
+            "value": "{modes.color.interactive.monochrome.standard.active}",
+            "type": "color"
+          },
+          "bg-activedisabled": {
+            "value": "{modes.color.interactive.inactive.standard.default}",
+            "type": "color"
+          },
+          "bg-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.defaultAlt}",
+            "type": "color",
+            "description": "for switch"
+          },
+          "bg-enabled": {
+            "value": "{modes.color.interactive.dataEntry.standard.default}",
+            "type": "color",
+            "description": "for switch"
+          },
+          "border-active": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "border-activedisabled": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "border-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.default}",
+            "type": "color"
+          },
+          "border-enabled": {
+            "value": "{modes.color.interactive.monochrome.standard.defaultAlt2}",
+            "type": "color"
+          },
+          "fg-active": {
+            "value": "{modes.color.interactive.monochrome.standard.withActive}",
+            "type": "color"
+          },
+          "fg-activedisabled": {
+            "value": "{modes.color.interactive.inactive.standard.contentAlt}",
+            "type": "color"
+          },
+          "fg-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.default}",
+            "type": "color"
+          },
+          "fg-enabled": {
+            "value": "{modes.color.interactive.monochrome.standard.defaultAlt2}",
+            "type": "color"
+          },
+          "label-active": {
+            "value": "{modes.color.interactive.dataEntry.standard.content}",
+            "type": "color"
+          },
+          "label-activedisabled": {
+            "value": "{modes.color.interactive.inactive.standard.default}",
+            "type": "color"
+          },
+          "label-disabled": {
+            "value": "{modes.color.interactive.inactive.standard.default}",
+            "type": "color"
+          },
+          "label-enabled": {
+            "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
+            "type": "color"
+          },
+          "icon-enabled": {
+            "value": "{modes.color.interactive.dataEntry.standard.contentAlt}",
+            "type": "color"
+          }
+        },
+        "validation": {
+          "border-error": {
+            "value": "{modes.color.status.negative.standard.default}",
+            "type": "color"
+          },
+          "bar-error": {
+            "value": "{modes.color.status.negative.standard.default}",
+            "type": "color",
+            "description": "error bar to left of inputs"
+          },
+          "bar-warning": {
+            "value": "{modes.color.status.caution.standard.default}",
+            "type": "color",
+            "description": "warning bar to left of inputs"
+          },
+          "label-error": {
+            "value": "{modes.color.status.negative.standard.text}",
+            "type": "color"
+          },
+          "label-warning": {
+            "value": "{modes.color.status.caution.standard.text}",
+            "type": "color"
+          }
         }
       }
     },

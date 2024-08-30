@@ -26,6 +26,20 @@
           "value": "{global.size.icon.M}",
           "type": "sizing"
         }
+      },
+      "video": {
+        "S": {
+          "value": "{global.size.macro.S}",
+          "type": "sizing"
+        },
+        "M": {
+          "value": "{global.size.macro.L}",
+          "type": "sizing"
+        },
+        "L": {
+          "value": "{global.size.macro.XXL}",
+          "type": "sizing"
+        }
       }
     },
     "space": {
@@ -33,6 +47,75 @@
         "value": "0",
         "type": "spacing",
         "description": "top and bottom padding on small buttons"
+      },
+      "bar": {
+        "iconbutton": {
+          "x": {
+            "inner": {
+              "M": {
+                "value": "{global.space.micro.XL}",
+                "type": "spacing",
+                "description": "Inner sides of all buttons.\n"
+              },
+              "L": {
+                "value": "14px",
+                "type": "spacing",
+                "description": "Inner sides of all buttons.\n"
+              }
+            },
+            "outer": {
+              "M": {
+                "value": "14px",
+                "type": "spacing",
+                "description": "Outer buttons, outer sides.\n"
+              },
+              "L": {
+                "value": "{global.space.macro.S}",
+                "type": "spacing",
+                "description": "Outer buttons, outer sides.\n"
+              }
+            }
+          }
+        }
+      },
+      "FAB": {
+        "child": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.XS} / 2",
+              "type": "spacing",
+              "description": "Left padding on FAB child container and text within FAB single\n"
+            },
+            "L": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Right padding on FAB child container\n"
+            }
+          }
+        },
+        "parent": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Left and right padding on FAB parent container\n"
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "Item spacing inside buttons"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Top and bottom padding on FAB parent container\n"
+            }
+          }
+        }
       },
       "layout": {
         "x": {
@@ -114,7 +197,7 @@
           }
         }
       },
-      "generic": {
+      "primary": {
         "x": {
           "S": {
             "value": "{global.space.micro.XXL}",
@@ -186,32 +269,74 @@
           }
         }
       },
-      "bar": {
-        "iconbutton": {
+      "secondary": {
+        "x": {
+          "S": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Left and right padding on small buttons"
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding on medium buttons"
+          },
+          "L": {
+            "value": "{global.space.macro.S}",
+            "type": "spacing",
+            "description": "Left and right padding on large buttons"
+          }
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Item spacing inside buttons"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Item spacing inside buttons"
+          },
+          "L": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Item spacing inside buttons"
+          }
+        },
+        "y": {
+          "S": {
+            "value": "{origin.dimension.50}",
+            "type": "spacing",
+            "description": "Bottom and top padding on small buttons."
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top and bottom padding on medium buttons\n"
+          },
+          "L": {
+            "value": "{global.space.micro.XL}",
+            "type": "spacing",
+            "description": "Top and bottom padding on Large buttons\n"
+          }
+        },
+        "icononly": {
           "x": {
-            "inner": {
-              "M": {
-                "value": "{global.space.micro.XL}",
-                "type": "spacing",
-                "description": "Inner sides of all buttons.\n"
-              },
-              "L": {
-                "value": "14px",
-                "type": "spacing",
-                "description": "Inner sides of all buttons.\n"
-              }
+            "S": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Left and right padding on icon-only processing button\n"
             },
-            "outer": {
-              "M": {
-                "value": "14px",
-                "type": "spacing",
-                "description": "Outer buttons, outer sides.\n"
-              },
-              "L": {
-                "value": "{global.space.macro.S}",
-                "type": "spacing",
-                "description": "Outer buttons, outer sides.\n"
-              }
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Left and right padding on icon-only processing button\n"
+            },
+            "L": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Left and right padding on icon-only processing button\n"
             }
           }
         }
@@ -266,6 +391,78 @@
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
             "description": "Top and bottom padding on Large buttons\n"
+          }
+        }
+      },
+      "tertiary": {
+        "x": {
+          "S": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Left and right padding on small buttons"
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding on medium buttons"
+          },
+          "L": {
+            "value": "{global.space.macro.S}",
+            "type": "spacing",
+            "description": "Left and right padding on large buttons"
+          }
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Item spacing inside buttons"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Item spacing inside buttons"
+          },
+          "L": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Item spacing inside buttons"
+          }
+        },
+        "y": {
+          "S": {
+            "value": "{origin.dimension.50}",
+            "type": "spacing",
+            "description": "Bottom and top padding on small buttons."
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Top and bottom padding on medium buttons\n"
+          },
+          "L": {
+            "value": "{global.space.micro.XL}",
+            "type": "spacing",
+            "description": "Top and bottom padding on Large buttons\n"
+          }
+        },
+        "icononly": {
+          "x": {
+            "S": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Left and right padding on icon-only processing button\n"
+            },
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Left and right padding on icon-only processing button\n"
+            },
+            "L": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Left and right padding on icon-only processing button\n"
+            }
           }
         }
       },
@@ -347,114 +544,22 @@
           }
         }
       },
-      "FAB": {
-        "parent": {
-          "x": {
-            "M": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing",
-              "description": "Left and right padding on FAB parent container\n"
-            }
-          },
-          "xg": {
-            "M": {
-              "value": "{global.space.micro.XXL}",
-              "type": "spacing",
-              "description": "Item spacing inside buttons"
-            }
-          },
-          "y": {
-            "M": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing",
-              "description": "Top and bottom padding on FAB parent container\n"
-            }
-          }
-        },
-        "child": {
-          "x": {
-            "M": {
-              "value": "{global.space.macro.XS} / 2",
-              "type": "spacing",
-              "description": "Left padding on FAB child container and text within FAB single\n"
-            },
-            "L": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing",
-              "description": "Right padding on FAB child container\n"
-            }
-          }
-        }
-      },
-      "tertiary": {
+      "video": {
         "x": {
           "S": {
-            "value": "{global.space.micro.XXL}",
+            "value": "{global.space.micro.XS}",
             "type": "spacing",
-            "description": "Left and right padding on small buttons"
+            "description": "Left padding on play icon in video button"
           },
           "M": {
-            "value": "{global.space.macro.XS}",
+            "value": "{global.space.micro.XS}",
             "type": "spacing",
-            "description": "Left and right padding on medium buttons"
+            "description": "Left padding on play icon in video button"
           },
           "L": {
-            "value": "{global.space.macro.S}",
+            "value": "{global.space.micro.XS}",
             "type": "spacing",
-            "description": "Left and right padding on large buttons"
-          }
-        },
-        "xg": {
-          "S": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Item spacing inside buttons"
-          },
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Item spacing inside buttons"
-          },
-          "L": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Item spacing inside buttons"
-          }
-        },
-        "y": {
-          "S": {
-            "value": "{origin.dimension.50}",
-            "type": "spacing",
-            "description": "Bottom and top padding on small buttons."
-          },
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Top and bottom padding on medium buttons\n"
-          },
-          "L": {
-            "value": "{global.space.micro.XL}",
-            "type": "spacing",
-            "description": "Top and bottom padding on Large buttons\n"
-          }
-        },
-        "icononly": {
-          "x": {
-            "S": {
-              "value": "{global.space.micro.S}",
-              "type": "spacing",
-              "description": "Left and right padding on icon-only processing button\n"
-            },
-            "M": {
-              "value": "{global.space.micro.S}",
-              "type": "spacing",
-              "description": "Left and right padding on icon-only processing button\n"
-            },
-            "L": {
-              "value": "{global.space.micro.S}",
-              "type": "spacing",
-              "description": "Left and right padding on icon-only processing button\n"
-            }
+            "description": "Left padding on play icon in video button"
           }
         }
       }
@@ -766,6 +871,52 @@
               "type": "color"
             }
           }
+        },
+        "video": {
+          "bg-blur": {
+            "value": "{modes.color.interactive.monochrome.inverse.hover}",
+            "type": "color"
+          },
+          "primary": {
+            "bg-enabled": {
+              "value": "{modes.color.interactive.monochrome.inverse.default}",
+              "type": "color"
+            },
+            "bg-hover": {
+              "value": "{modes.color.interactive.monochrome.inverse.active}",
+              "type": "color"
+            },
+            "label-enabled": {
+              "value": "{modes.color.interactive.monochrome.inverse.withDefault}",
+              "type": "color"
+            },
+            "label-hover": {
+              "value": "{modes.color.interactive.monochrome.inverse.withActive}",
+              "type": "color"
+            }
+          },
+          "secondary": {
+            "bg-hover": {
+              "value": "{modes.color.interactive.monochrome.inverse.hover}",
+              "type": "color"
+            },
+            "border-enabled": {
+              "value": "{modes.color.interactive.monochrome.inverse.default}",
+              "type": "color"
+            },
+            "border-hover": {
+              "value": "{modes.color.interactive.monochrome.inverse.withHover}",
+              "type": "color"
+            },
+            "label-enabled": {
+              "value": "{modes.color.interactive.monochrome.inverse.default}",
+              "type": "color"
+            },
+            "label-hover": {
+              "value": "{modes.color.interactive.monochrome.inverse.withHover}",
+              "type": "color"
+            }
+          }
         }
       },
       "standard": {
@@ -1065,6 +1216,52 @@
               "type": "color"
             }
           }
+        },
+        "video": {
+          "bg-blur": {
+            "value": "{modes.color.interactive.monochrome.standard.hover}",
+            "type": "color"
+          },
+          "primary": {
+            "bg-enabled": {
+              "value": "{modes.color.interactive.monochrome.standard.default}",
+              "type": "color"
+            },
+            "bg-hover": {
+              "value": "{modes.color.interactive.monochrome.standard.active}",
+              "type": "color"
+            },
+            "label-enabled": {
+              "value": "{modes.color.interactive.monochrome.standard.withDefault}",
+              "type": "color"
+            },
+            "label-hover": {
+              "value": "{modes.color.interactive.monochrome.standard.withActive}",
+              "type": "color"
+            }
+          },
+          "secondary": {
+            "bg-hover": {
+              "value": "{modes.color.interactive.monochrome.standard.hover}",
+              "type": "color"
+            },
+            "border-enabled": {
+              "value": "{modes.color.interactive.monochrome.standard.default}",
+              "type": "color"
+            },
+            "border-hover": {
+              "value": "{modes.color.interactive.monochrome.standard.withHover}",
+              "type": "color"
+            },
+            "label-enabled": {
+              "value": "{modes.color.interactive.monochrome.standard.default}",
+              "type": "color"
+            },
+            "label-hover": {
+              "value": "{modes.color.interactive.monochrome.standard.withHover}",
+              "type": "color"
+            }
+          }
         }
       }
     },
@@ -1089,11 +1286,6 @@
         "type": "borderRadius",
         "description": "Buttons L (typical and destructive, and inc bar, split and multi), Button toggle L (parent container)"
       },
-      "tertiary": {
-        "value": "{global.radius.interactive.XXL}",
-        "type": "borderRadius",
-        "description": "tertiary button"
-      },
       "subtle": {
         "value": "{global.radius.interactive.M}",
         "type": "borderRadius",
@@ -1105,9 +1297,60 @@
         "description": "Buttons chip"
       },
       "FAB": {
-        "value": "{global.radius.container.L}",
+        "value": "{global.radius.circle}",
         "type": "borderRadius",
         "description": "FAB Button radius"
+      },
+      "primary": {
+        "S": {
+          "value": "{global.radius.interactive.L}",
+          "type": "borderRadius",
+          "description": "Buttons S (typical and destructive, and inc bar, split and multi), \nButton toggle M (parent container)"
+        },
+        "M": {
+          "value": "{global.radius.interactive.XL}",
+          "type": "borderRadius",
+          "description": "Buttons  M (typical and destructive, and inc bar, split and multi), \nButton toggle L (parent container), Button toggle M (parent container)"
+        },
+        "L": {
+          "value": "{global.radius.interactive.XXL}",
+          "type": "borderRadius",
+          "description": "large tertiary button"
+        }
+      },
+      "secondary": {
+        "S": {
+          "value": "{global.radius.interactive.L}",
+          "type": "borderRadius",
+          "description": "Buttons S (typical and destructive, and inc bar, split and multi), \nButton toggle M (parent container)"
+        },
+        "M": {
+          "value": "{global.radius.interactive.XL}",
+          "type": "borderRadius",
+          "description": "Buttons  M (typical and destructive, and inc bar, split and multi), \nButton toggle L (parent container), Button toggle M (parent container)"
+        },
+        "L": {
+          "value": "{global.radius.interactive.XXL}",
+          "type": "borderRadius",
+          "description": "large tertiary button"
+        }
+      },
+      "tertiary": {
+        "S": {
+          "value": "{global.radius.interactive.L}",
+          "type": "borderRadius",
+          "description": "Buttons S (typical and destructive, and inc bar, split and multi), \nButton toggle M (parent container)"
+        },
+        "M": {
+          "value": "{global.radius.interactive.XL}",
+          "type": "borderRadius",
+          "description": "Buttons  M (typical and destructive, and inc bar, split and multi), \nButton toggle L (parent container), Button toggle M (parent container)"
+        },
+        "L": {
+          "value": "{global.radius.interactive.XXL}",
+          "type": "borderRadius",
+          "description": "large tertiary button"
+        }
       }
     },
     "borderwidth": {
@@ -1131,10 +1374,22 @@
         "type": "borderWidth",
         "description": "tertiary button border\n"
       },
+      "primary": {
+        "value": "{global.borderwidth.none}",
+        "type": "borderWidth",
+        "description": "primary button border\n"
+      },
       "togglecontainer": {
         "value": "{global.borderwidth.XS}",
         "type": "borderWidth",
         "description": "Toggle container"
+      }
+    },
+    "dimension": {
+      "video": {
+        "value": "40px",
+        "type": "dimension",
+        "description": "background blur on video"
       }
     }
   }
