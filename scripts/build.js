@@ -12,7 +12,7 @@ const modes = readdirSync('./data/tokens/modes/')
 const getFiles = (modeName, format, subType, suffix) => {
   const mode = format.includes('variables') ? '' : modeName
   return [
-    ...getSplit('base', modeName, format, subType, suffix, false),
+    ...getSplit('modes', modeName, format, subType, suffix, false),
     ...getComponents(mode, format, subType, suffix)
   ]
 }
@@ -30,7 +30,7 @@ const getComponents = (modeName, format, subType, suffix) => {
 const getSplit = (componentName, modeName, format, subType, suffix, outputReferences) => {
   const getPath = (componentName) => {
     const path = {
-      base: suffix === 'css' || suffix === 'scss' ? ' ' : '/base',
+      modes: suffix === 'css' || suffix === 'scss' ? ' ' : '/modes',
       global: '/global'
     }
     return path[componentName] || '/components/' + componentName
@@ -42,7 +42,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
 
   return [
     {
-      destination: `${subType}/${modeName}${path}/all.${suffix}`,
+      destination: `${subType}${modeName}${path}/all.${suffix}`,
       filter: (token) => filterComponent(token, componentName),
       format,
       options: {
@@ -51,7 +51,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       }
     },
     {
-      destination: `${subType}/${modeName}${path}/color.${suffix}`,
+      destination: `${subType}${modeName}${path}/color.${suffix}`,
       filter: (token) => token.type === 'color' && filterComponent(token, componentName),
       format,
       options: {
@@ -60,7 +60,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       }
     },
     {
-      destination: `${subType}/${modeName}${path}/borderRadius.${suffix}`,
+      destination: `${subType}${modeName}${path}/borderRadius.${suffix}`,
       filter: (token) => token.type === 'borderRadius' && filterComponent(token, componentName),
       format,
       options: {
@@ -69,7 +69,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       }
     },
     {
-      destination: `${subType}/${modeName}${path}/borderWidth.${suffix}`,
+      destination: `${subType}${modeName}${path}/borderWidth.${suffix}`,
       filter: (token) => token.type === 'borderWidth' && filterComponent(token, componentName),
       format,
       options: {
@@ -78,7 +78,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       }
     },
     {
-      destination: `${subType}/${modeName}${path}/shadow.${suffix}`,
+      destination: `${subType}${modeName}${path}/shadow.${suffix}`,
       filter: (token) => token.type === 'boxShadow' && filterComponent(token, componentName),
       format,
       options: {
@@ -87,7 +87,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       }
     },
     {
-      destination: `${subType}/${modeName}${path}/sizing.${suffix}`,
+      destination: `${subType}${modeName}${path}/sizing.${suffix}`,
       filter: (token) => token.type === 'sizing' && filterComponent(token, componentName),
       format,
       options: {
@@ -96,7 +96,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       }
     },
     {
-      destination: `${subType}/${modeName}${path}/spacing.${suffix}`,
+      destination: `${subType}${modeName}${path}/spacing.${suffix}`,
       filter: (token) => token.type === 'spacing' && filterComponent(token, componentName),
       format,
       options: {
@@ -105,7 +105,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
       }
     },
     {
-      destination: `${subType}/${modeName}${path}/typography.${suffix}`,
+      destination: `${subType}${modeName}${path}/typography.${suffix}`,
       filter: (token) => token.type === 'typography' && filterComponent(token, componentName),
       format,
       options: {
@@ -117,7 +117,6 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
 }
 
 const getGlobalConfig = () => {
-
   return {
     source: [
       './data/tokens/origin.json',
@@ -146,8 +145,15 @@ const getGlobalConfig = () => {
           ...getSplit('global', '', 'typescript/module-declarations', 'common/', 'd.ts', false),
           ...getSplit('global', '', 'javascript/es6', 'es6/', 'js', false),
           ...getSplit('global', '', 'typescript/es6-declarations', 'es6/', 'd.ts', false),
-          ...getSplit('global', '', 'javascript/umd', 'umd/', 'js', false),
-          ...getSplit('global', '', 'json', 'json/', 'json', false)
+          ...getSplit('global', '', 'javascript/umd', 'umd/', 'js', false)
+        ]
+      },
+      json: {
+        buildPath: 'dist/json/',
+        transforms: groups.json,
+        files: [
+          ...getSplit('global', '', 'json/nested', 'nested/', 'json', false),
+          ...getSplit('global', '', 'json/flat', 'flat/', 'json', false)
         ]
       },
       android: {
@@ -167,6 +173,21 @@ const getGlobalConfig = () => {
     }
   }
 }
+
+(() => {
+  console.log('\r\n\r\nBuilding global')
+
+  const StyleDictionary = dictionary.extend(getGlobalConfig())
+
+  StyleDictionary.buildPlatform('css')
+  StyleDictionary.buildPlatform('scss')
+  StyleDictionary.buildPlatform('js')
+  StyleDictionary.buildPlatform('json')
+  StyleDictionary.buildPlatform('ios')
+  StyleDictionary.buildPlatform('android')
+
+  console.log('\r\nDone.\r\n')
+})()
 
 const getModeConfig = (modeName) => {
 
@@ -201,7 +222,14 @@ const getModeConfig = (modeName) => {
           ...getFiles(modeName, 'javascript/es6', 'es6/', 'js'),
           ...getFiles(modeName, 'typescript/es6-declarations', 'es6/', 'd.ts'),
           ...getFiles(modeName, 'javascript/umd', 'umd/', 'js'),
-          ...getFiles(modeName, 'json', 'json/', 'json')
+        ]
+      },
+      json: {
+        buildPath: 'dist/json/',
+        transforms: groups.json,
+        files: [
+          ...getFiles(modeName, 'json/nested', 'nested/', 'json'),
+          ...getFiles(modeName, 'json/flat', 'flat/', 'json')
         ]
       },
       android: {
@@ -249,6 +277,7 @@ const getModeConfig = (modeName) => {
     StyleDictionary.buildPlatform('css')
     StyleDictionary.buildPlatform('scss')
     StyleDictionary.buildPlatform('js')
+    StyleDictionary.buildPlatform('json')
     StyleDictionary.buildPlatform('ios')
     StyleDictionary.buildPlatform('android')
 
