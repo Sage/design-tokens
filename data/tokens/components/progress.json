@@ -99,6 +99,25 @@
           "type": "sizing",
           "description": "Step height"
         }
+      },
+      "stepindicator": {
+        "bar": {
+          "value": "{global.size.micro.XXS}",
+          "type": "sizing",
+          "description": "step indicator bar"
+        },
+        "stepcircle": {
+          "S": {
+            "value": "{global.size.macro.XS}",
+            "type": "sizing",
+            "description": "M size step indicator"
+          },
+          "M": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "M size step indicator"
+          }
+        }
       }
     },
     "color": {
@@ -143,7 +162,7 @@
             "type": "color"
           },
           "bg-complete": {
-            "value": "{modes.color.status.success.inverse.default}",
+            "value": "{modes.color.interactive.primary.inverse.default}",
             "type": "color"
           },
           "border-active-outer": {
@@ -151,19 +170,19 @@
             "type": "color"
           },
           "border-default": {
-            "value": "{modes.color.generic.fg.inverse.soft}",
+            "value": "{modes.color.generic.fg.inverse.moderate}",
             "type": "color"
           },
           "border-success": {
-            "value": "{modes.color.status.success.standard.default}",
+            "value": "{modes.color.interactive.primary.inverse.default}",
             "type": "color"
           },
           "label-active": {
-            "value": "{modes.color.generic.content.standard.firm}",
+            "value": "{modes.color.generic.content.standard.extreme}",
             "type": "color"
           },
           "label-complete": {
-            "value": "{modes.color.generic.content.standard.firm}",
+            "value": "{modes.color.generic.content.standard.extreme}",
             "type": "color"
           },
           "label-default": {
@@ -293,11 +312,11 @@
             "type": "color"
           },
           "label-active": {
-            "value": "{modes.color.generic.content.inverse.firm}",
+            "value": "{modes.color.generic.content.inverse.extreme}",
             "type": "color"
           },
           "label-complete": {
-            "value": "{modes.color.generic.content.inverse.firm}",
+            "value": "{modes.color.generic.content.inverse.extreme}",
             "type": "color"
           },
           "label-default": {
@@ -404,6 +423,28 @@
           "value": "{global.borderwidth.S}",
           "type": "borderWidth",
           "description": "Step flow active step border outermost"
+        }
+      },
+      "stepindicator": {
+        "S": {
+          "active": {
+            "value": "{global.borderwidth.S}",
+            "type": "borderWidth"
+          },
+          "default": {
+            "value": "{global.borderwidth.S}",
+            "type": "borderWidth"
+          }
+        },
+        "M": {
+          "active": {
+            "value": "{global.borderwidth.M}",
+            "type": "borderWidth"
+          },
+          "default": {
+            "value": "{global.borderwidth.M}",
+            "type": "borderWidth"
+          }
         }
       }
     },
