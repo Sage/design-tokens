@@ -653,33 +653,70 @@
           }
         }
       },
-      "stepsequence": {
-        "xg": {
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Vertical variant gap between step indicator and label"
+      "stepindicator": {
+        "generic": {
+          "g": {
+            "S": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "gap between timeline visual and text"
+            },
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "gap between timeline visual and text"
+            }
+          },
+          "text": {
+            "yg": {
+              "S": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "gap between label and subtext"
+              },
+              "M": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "gap between label and subtext"
+              }
+            }
+          },
+          "visual": {
+            "g": {
+              "S": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "gap between step number and line"
+              },
+              "M": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "gap between step number and line"
+              }
+            }
           }
         },
-        "x": {
-          "M": {
-            "value": "{global.space.micro.S}",
-            "type": "spacing",
-            "description": "Horizontal variant horizontal padding on label."
-          }
-        },
-        "y": {
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Vertical variant vertical padding on label."
-          }
-        },
-        "yg": {
-          "M": {
-            "value": "{global.space.micro.S}",
-            "type": "spacing",
-            "description": "Horizontal variant gap between step indicator and label"
+        "vertical": {
+          "y": {
+            "S": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical variant top padding on parent container"
+            },
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical variant top padding on parent container"
+            }
+          },
+          "text": {
+            "y": {
+              "S": {
+                "value": "{global.space.micro.XS}",
+                "type": "spacing",
+                "description": "space above text and parent container on vertical variant"
+              }
+            }
           }
         }
       }
