@@ -108,18 +108,28 @@
       }
     },
     "typography": {
+      "responsive": {
+        "M": {
+          "value": {
+            "fontFamily": "{primitives.fontFamilies.sage-ui}",
+            "fontWeight": "{primitives.fontWeights.medium}",
+            "lineHeight": "{primitives.lineHeights.300}",
+            "fontSize": "{primitives.fontSize.responsive.step-2}",
+            "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+          },
+          "type": "typography"
+        }
+      },
       "adaptive": {
-        "badge": {
-          "M": {
-            "value": {
-              "fontFamily": "{primitives.fontFamilies.sage-ui}",
-              "fontWeight": "{primitives.fontWeights.medium}",
-              "lineHeight": "{primitives.lineHeights.300}",
-              "fontSize": "{primitives.fontSize.responsive.step-2}",
-              "paragraphSpacing": "{primitives.paragraphSpacing.0}"
-            },
-            "type": "typography"
-          }
+        "M": {
+          "value": {
+            "fontFamily": "{primitives.fontFamilies.sage-ui}",
+            "fontWeight": "{primitives.fontWeights.medium}",
+            "lineHeight": "{primitives.lineHeights.300}",
+            "fontSize": "{primitives.fontSize.adaptive.step-2}",
+            "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+          },
+          "type": "typography"
         }
       }
     }
