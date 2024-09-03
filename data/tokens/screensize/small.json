@@ -6,6 +6,388 @@
         "type": "spacing",
         "description": "Spacing scale for small screens."
       }
+    },
+    "typography": {
+      "adaptive": {
+        "display": {
+          "M": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.black}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.adaptive.small.step10}"
+            },
+            "type": "typography"
+          },
+          "L": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.black}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.adaptive.small.step12}"
+            },
+            "type": "typography"
+          }
+        },
+        "heading": {
+          "XS": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.adaptive.small.step2}"
+            },
+            "type": "typography"
+          },
+          "S": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.adaptive.small.step3}"
+            },
+            "type": "typography"
+          },
+          "M": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.adaptive.small.step5}"
+            },
+            "type": "typography"
+          },
+          "L": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.black}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.adaptive.small.step7}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 27.42, Large Viewports: 45.22"
+          },
+          "XL": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.black}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.adaptive.small.step8}"
+            },
+            "type": "typography"
+          }
+        },
+        "subheading": {
+          "S": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.medium}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.responsive.step1}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+          },
+          "M": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.medium}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.responsive.step2}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 18.66, Large Viewports: 21.53"
+          }
+        },
+        "body": {
+          "S": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.regular}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.step0}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.200}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 16, Large Viewports: 16"
+          },
+          "M": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.regular}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.step2}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.300}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+          },
+          "L": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.regular}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.step3}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.400}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 20.16, Large Viewports: 24.97"
+          }
+        },
+        "generic": {
+          "firm": {
+            "XS": {
+              "value": {
+                "fontFamily": "{primitives.fontFamilies.sage-ui}",
+                "fontWeight": "{primitives.fontWeights.medium}",
+                "lineHeight": "{primitives.lineHeights.500}",
+                "fontSize": "{primitives.fontSize.responsive.step-2}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 13.72, Large Viewports: 11.89. Match token size to component size."
+            },
+            "S": {
+              "value": {
+                "fontFamily": "{primitives.fontFamilies.sage-ui}",
+                "fontWeight": "{primitives.fontWeights.medium}",
+                "lineHeight": "{primitives.lineHeights.500}",
+                "fontSize": "{primitives.fontSize.responsive.step-1}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 14.81, Large Viewports: 13.79. Match token size to component size."
+            },
+            "M": {
+              "value": {
+                "fontFamily": "{primitives.fontFamilies.sage-ui}",
+                "fontWeight": "{primitives.fontWeights.medium}",
+                "lineHeight": "{primitives.lineHeights.500}",
+                "fontSize": "{primitives.fontSize.responsive.step0}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 16, Large Viewports: 16. Match token size to component size."
+            },
+            "L": {
+              "value": {
+                "fontFamily": "{primitives.fontFamilies.sage-ui}",
+                "fontWeight": "{primitives.fontWeights.medium}",
+                "lineHeight": "{primitives.lineHeights.500}",
+                "fontSize": "{primitives.fontSize.responsive.step1}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 17.28, Large Viewports: 18.56. Match token size to component size."
+            }
+          },
+          "moderate": {
+            "XS": {
+              "value": {
+                "fontFamily": "{primitives.fontFamilies.sage-ui}",
+                "fontWeight": "{primitives.fontWeights.regular}",
+                "lineHeight": "{primitives.lineHeights.500}",
+                "fontSize": "{primitives.fontSize.responsive.step-2}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 13.72, Large Viewports: 11.89. Match token size to component size."
+            },
+            "S": {
+              "value": {
+                "fontFamily": "{primitives.fontFamilies.sage-ui}",
+                "fontWeight": "{primitives.fontWeights.regular}",
+                "lineHeight": "{primitives.lineHeights.500}",
+                "fontSize": "{primitives.fontSize.responsive.step-1}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 14.81, Large Viewports: 13.79. Match token size to component size."
+            },
+            "M": {
+              "value": {
+                "fontFamily": "{primitives.fontFamilies.sage-ui}",
+                "fontWeight": "{primitives.fontWeights.regular}",
+                "lineHeight": "{primitives.lineHeights.500}",
+                "fontSize": "{primitives.fontSize.responsive.step0}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 16, Large Viewports: 16. Match token size to component size."
+            },
+            "L": {
+              "value": {
+                "fontFamily": "{primitives.fontFamilies.sage-ui}",
+                "fontWeight": "{primitives.fontWeights.regular}",
+                "lineHeight": "{primitives.lineHeights.500}",
+                "fontSize": "{primitives.fontSize.responsive.step1}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 17.28, Large Viewports: 18.56. Match token size to component size."
+            }
+          },
+          "icon": {
+            "S": {
+              "value": {
+                "fontSize": "{primitives.fontSize.icon.step0}",
+                "fontFamily": "{primitives.fontFamilies.sage-icons}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 20, Large Viewports: 20. "
+            },
+            "M": {
+              "value": {
+                "fontSize": "{primitives.fontSize.icon.step0}",
+                "fontFamily": "{primitives.fontFamilies.sage-icons}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 20, Large Viewports: 20. "
+            },
+            "L": {
+              "value": {
+                "fontSize": "{primitives.fontSize.icon.step0}",
+                "fontFamily": "{primitives.fontFamilies.sage-icons}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 20, Large Viewports: 20. "
+            }
+          },
+          "underlined": {
+            "S": {
+              "value": {
+                "fontFamily": "{primitives.fontFamilies.sage-ui}",
+                "fontWeight": "{primitives.fontWeights.regular}",
+                "lineHeight": "{primitives.lineHeights.500}",
+                "fontSize": "{primitives.fontSize.responsive.step-1}",
+                "textDecoration": "{primitives.textDecoration.underline}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 14.81, Large Viewports: 13.79. Match token size to component size."
+            },
+            "M": {
+              "value": {
+                "fontFamily": "{primitives.fontFamilies.sage-ui}",
+                "fontWeight": "{primitives.fontWeights.regular}",
+                "lineHeight": "{primitives.lineHeights.500}",
+                "fontSize": "{primitives.fontSize.responsive.step0}",
+                "textDecoration": "{primitives.textDecoration.underline}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 16, Large Viewports: 16. Match token size to component size."
+            },
+            "L": {
+              "value": {
+                "fontFamily": "{primitives.fontFamilies.sage-ui}",
+                "fontWeight": "{primitives.fontWeights.regular}",
+                "lineHeight": "{primitives.lineHeights.500}",
+                "fontSize": "{primitives.fontSize.responsive.step1}",
+                "textDecoration": "{primitives.textDecoration.underline}",
+                "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+              },
+              "type": "typography",
+              "description": "Small Viewports: 17.28, Large Viewports: 18.56. Match token size to component size."
+            }
+          }
+        },
+        "placeholdertext": {
+          "XS": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-ui}",
+              "fontWeight": "{primitives.fontWeights.medium}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.step-2}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 13.72, Large Viewports: 11.89"
+          },
+          "S": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-ui}",
+              "fontWeight": "{primitives.fontWeights.medium}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.step0}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 16, Large Viewports: 16"
+          },
+          "M": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-ui}",
+              "fontWeight": "{primitives.fontWeights.medium}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.step2}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 18.66, Large Viewports: 21.53"
+          },
+          "ML": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-ui}",
+              "fontWeight": "{primitives.fontWeights.medium}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.step4}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 21.77, Large Viewports: 28.97"
+          },
+          "L": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-ui}",
+              "fontWeight": "{primitives.fontWeights.medium}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.step6}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 25.39, Large Viewports: 38.98"
+          },
+          "XL": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-ui}",
+              "fontWeight": "{primitives.fontWeights.medium}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.step8}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 29.61, Large Viewports: 52.45"
+          },
+          "XXL": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-ui}",
+              "fontWeight": "{primitives.fontWeights.medium}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.step10}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 34.54, Large Viewports: 70.58"
+          }
+        },
+        "notification": {
+          "M": {
+            "value": {
+              "fontFamily": "{primitives.fontFamilies.sage-ui}",
+              "fontWeight": "{primitives.fontWeights.medium}",
+              "lineHeight": "{primitives.lineHeights.300}",
+              "fontSize": "{primitives.fontSize.adaptive.small.step-2}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.0}"
+            },
+            "type": "typography",
+            "description": "used for badge text - notifications on buttons and in global nav"
+          }
+        }
+      }
     }
   },
   "page": {
