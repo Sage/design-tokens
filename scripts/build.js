@@ -58,7 +58,7 @@ const getSplit = (componentName, modeName, format, subType, suffix, outputRefere
 const getGlobalConfig = (contextName, sizeName) => {
   return {
     source: [
-      './data/tokens/origin.json',
+      './data/tokens/primitives.json',
       './data/tokens/global/*.json',
       `./data/tokens/screensize/${contextName}.json`,
       `./data/tokens/screensize/${sizeName}.json`
@@ -119,7 +119,7 @@ const getModeConfig = (contextName, modeName, sizeName) => {
 
   return {
     source: [
-      './data/tokens/origin.json',
+      './data/tokens/primitives.json',
       './data/tokens/global/*.json',
       `./data/tokens/screensize/${contextName}.json`,
       `./data/tokens/modes/${modeName}.json`,
@@ -177,23 +177,6 @@ const getModeConfig = (contextName, modeName, sizeName) => {
   }
 }
 
-// platforms.forEach((platform) => {
-//   const platformName = platform.split('.json')[0]
-
-//   console.log(`\r\nStart building platform: ${platformName}\r\n`)
-
-//   console.log('\r\nStart building global\r\n')
-
-//   const StyleDictionary = dictionary.extend(getGlobalConfig(platform))
-
-//   StyleDictionary.buildPlatform('css')
-//   StyleDictionary.buildPlatform('scss')
-//   StyleDictionary.buildPlatform('js')
-//   StyleDictionary.buildPlatform('ios')
-//   StyleDictionary.buildPlatform('android')
-
-//   console.log('\r\nDone building global\r\n')
-
 context.forEach((context) => {
   const contextName = context.split('.json')[0]
 
@@ -235,8 +218,3 @@ context.forEach((context) => {
 
   console.log(`\r\nDone building context: ${contextName}\r\n`)
 })
-
-  
-
-//   console.log(`\r\nDone building platform: ${platformName}\r\n`)
-// })
