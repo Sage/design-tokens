@@ -483,6 +483,20 @@
           }
         }
       },
+      "rating": {
+        "xg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "small gap between rating stars"
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "medium gap between rating stars"
+          }
+        }
+      },
       "layout": {
         "stack": {
           "S": {
@@ -914,6 +928,18 @@
           "value": "{global.size.micro.XXS}",
           "type": "sizing",
           "description": "2px validation bar used on errors and warnings"
+        }
+      },
+      "rating": {
+        "M": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing",
+          "description": "medium rating stars"
+        },
+        "L": {
+          "value": "{global.size.icon.XL}",
+          "type": "sizing",
+          "description": "large rating stars"
         }
       }
     },
@@ -1443,6 +1469,11 @@
         "value": "{global.borderwidth.S}",
         "type": "borderWidth",
         "description": "File upload (drag over state)"
+      },
+      "ratingstar": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "empty rating star border width"
       },
       "error": {
         "value": "{global.borderwidth.S}",
