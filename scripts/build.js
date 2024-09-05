@@ -118,7 +118,6 @@ const getGlobalConfig = (contextName, sizeName) => {
 }
 
 const getModeConfig = (contextName, modeName, sizeName) => {
-
   return {
     source: [
       './data/tokens/primitives.json',
@@ -150,7 +149,7 @@ const getModeConfig = (contextName, modeName, sizeName) => {
           ...getFiles(contextName, modeName, 'typescript/module-declarations', `common/${contextName}/${sizeName}`, 'd.ts'),
           ...getFiles(contextName, modeName, 'javascript/es6', `es6/${contextName}/${sizeName}`, 'js'),
           ...getFiles(contextName, modeName, 'typescript/es6-declarations', `es6/${contextName}/${sizeName}`, 'd.ts'),
-          ...getFiles(contextName, modeName, 'javascript/umd', `umd/${contextName}/${sizeName}`, 'js'),
+          ...getFiles(contextName, modeName, 'javascript/umd', `umd/${contextName}/${sizeName}`, 'js')
         ]
       },
       json: {
