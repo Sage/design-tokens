@@ -11,40 +11,42 @@ const context = readdirSync('./data/tokens/context/')
 const modes = readdirSync('./data/tokens/modes/')
 const screensize = readdirSync('./data/tokens/screensize/')
 
-const getFiles = (modeName, format, subType, suffix) => {
+const getFiles = (contextName, modeName, format, subType, suffix) => {
   const mode = format.includes('variables') ? '' : modeName
   return [
-    ...getSplit('modes', modeName, format, subType, suffix, false),
-    ...getComponents(mode, format, subType, suffix)
+    ...getSplit(contextName, 'modes', modeName, format, subType, suffix, false),
+    ...getComponents(contextName, mode, format, subType, suffix)
   ]
 }
 
-const getComponents = (modeName, format, subType, suffix) => {
+const getComponents = (contextName, modeName, format, subType, suffix) => {
   const componentArray = []
 
   components.forEach((component) => {
-    componentArray.push(...getSplit(component.split('.')[0], modeName, format, subType, suffix, true))
+    componentArray.push(...getSplit(contextName, component.split('.')[0], modeName, format, subType, suffix, true))
   })
 
   return componentArray
 }
 
-const getSplit = (componentName, modeName, format, subType, suffix, outputReferences) => {
+const getSplit = (contextName, componentName, modeName, format, subType, suffix, outputReferences) => {
+  const hasRefs = suffix === 'css' || suffix === 'scss'
+
   const getPath = (componentName) => {
     const path = {
-      modes: '/mode',
+      modes: hasRefs ? modeName : `${modeName}/mode`,
       global: '/global'
     }
-    return path[componentName] || '/components/' + componentName
+    return path[componentName] || (hasRefs ? `/components/${componentName}` : `${modeName}/components/${componentName}`)
   }
 
   const path = getPath(componentName).trim()
 
-  const selector = outputReferences ? '[class^="sds-mode-"]' : modeName ? `.sds-mode-${modeName}` : `:root`
+  const selector = outputReferences ? `.sds-context-${contextName}[class^="sds-mode-"]` : modeName ? `.sds-context-${contextName}.sds-mode-${modeName}` : `.sds-context-${contextName}`
 
   return [
     {
-      destination: `${subType}/${modeName}${path}.${suffix}`,
+      destination: `${subType}/${path}.${suffix}`,
       filter: (token) => filterComponent(token, componentName),
       format,
       options: {
@@ -68,47 +70,47 @@ const getGlobalConfig = (contextName, sizeName) => {
         buildPath: 'dist/css/',
         transforms: groups.css,
         files: [
-          ...getSplit('global', '', sizeName, `${contextName}/${sizeName}`, 'css', false)
+          ...getSplit(contextName, 'global', '', sizeName, `${contextName}/${sizeName}`, 'css', false)
         ]
       },
       scss: {
         buildPath: 'dist/scss/',
         transforms: groups.scss,
         files: [
-          ...getSplit('global', '', 'scss/variables', `${contextName}/${sizeName}`, 'scss', false)
+          ...getSplit(contextName, 'global', '', 'scss/variables', `${contextName}/${sizeName}`, 'scss', false)
         ]
       },
       js: {
         buildPath: 'dist/js/',
         transforms: groups.js,
         files: [
-          ...getSplit('global', '', 'javascript/module', `common/${contextName}/${sizeName}`, 'js', false),
-          ...getSplit('global', '', 'typescript/module-declarations', `common/${contextName}/${sizeName}`, 'd.ts', false),
-          ...getSplit('global', '', 'javascript/es6', `es6/${contextName}/${sizeName}`, 'js', false),
-          ...getSplit('global', '', 'typescript/es6-declarations', `es6/${contextName}/${sizeName}`, 'd.ts', false),
-          ...getSplit('global', '', 'javascript/umd', `umd/${contextName}/${sizeName}`, 'js', false)
+          ...getSplit(contextName, 'global', '', 'javascript/module', `common/${contextName}/${sizeName}`, 'js', false),
+          ...getSplit(contextName, 'global', '', 'typescript/module-declarations', `common/${contextName}/${sizeName}`, 'd.ts', false),
+          ...getSplit(contextName, 'global', '', 'javascript/es6', `es6/${contextName}/${sizeName}`, 'js', false),
+          ...getSplit(contextName, 'global', '', 'typescript/es6-declarations', `es6/${contextName}/${sizeName}`, 'd.ts', false),
+          ...getSplit(contextName, 'global', '', 'javascript/umd', `umd/${contextName}/${sizeName}`, 'js', false)
         ]
       },
       json: {
         buildPath: 'dist/json/',
         transforms: groups.json,
         files: [
-          ...getSplit('global', '', 'json/nested', `nested/${contextName}/${sizeName}`, 'json', false),
-          ...getSplit('global', '', 'json/flat', `flat/${contextName}/${sizeName}`, 'json', false)
+          ...getSplit(contextName, 'global', '', 'json/nested', `nested/${contextName}/${sizeName}`, 'json', false),
+          ...getSplit(contextName, 'global', '', 'json/flat', `flat/${contextName}/${sizeName}`, 'json', false)
         ]
       },
       android: {
         buildPath: 'dist/android/',
         transforms: groups.mobile,
         files: [
-          ...getSplit('global', '', 'android/resources', `${contextName}/${sizeName}`, 'xml', false)
+          ...getSplit(contextName, 'global', '', 'android/resources', `${contextName}/${sizeName}`, 'xml', false)
         ]
       },
       ios: {
         buildPath: 'dist/ios/',
         transforms: groups.mobile,
         files: [
-          ...getSplit('global', '', 'ios/macros', `${contextName}/${sizeName}`, 'h', false)
+          ...getSplit(contextName, 'global', '', 'ios/macros', `${contextName}/${sizeName}`, 'h', false)
         ]
       }
     }
@@ -130,47 +132,47 @@ const getModeConfig = (contextName, modeName, sizeName) => {
         buildPath: 'dist/css/',
         transforms: groups.css,
         files: [
-          ...getFiles(modeName, sizeName, `${contextName}/${sizeName}`, 'css')
+          ...getFiles(contextName, modeName, sizeName, `${contextName}/${sizeName}`, 'css')
         ]
       },
       scss: {
         buildPath: 'dist/scss/',
         transforms: groups.scss,
         files: [
-          ...getFiles(modeName, 'scss/variables', `${contextName}/${sizeName}`, 'scss')
+          ...getFiles(contextName, modeName, 'scss/variables', `${contextName}/${sizeName}`, 'scss')
         ]
       },
       js: {
         buildPath: 'dist/js/',
         transforms: groups.js,
         files: [
-          ...getFiles(modeName, 'javascript/module', `common/${contextName}/${sizeName}`, 'js'),
-          ...getFiles(modeName, 'typescript/module-declarations', `common/${contextName}/${sizeName}`, 'd.ts'),
-          ...getFiles(modeName, 'javascript/es6', `es6/${contextName}/${sizeName}`, 'js'),
-          ...getFiles(modeName, 'typescript/es6-declarations', `es6/${contextName}/${sizeName}`, 'd.ts'),
-          ...getFiles(modeName, 'javascript/umd', `umd/${contextName}/${sizeName}`, 'js'),
+          ...getFiles(contextName, modeName, 'javascript/module', `common/${contextName}/${sizeName}`, 'js'),
+          ...getFiles(contextName, modeName, 'typescript/module-declarations', `common/${contextName}/${sizeName}`, 'd.ts'),
+          ...getFiles(contextName, modeName, 'javascript/es6', `es6/${contextName}/${sizeName}`, 'js'),
+          ...getFiles(contextName, modeName, 'typescript/es6-declarations', `es6/${contextName}/${sizeName}`, 'd.ts'),
+          ...getFiles(contextName, modeName, 'javascript/umd', `umd/${contextName}/${sizeName}`, 'js'),
         ]
       },
       json: {
         buildPath: 'dist/json/',
         transforms: groups.json,
         files: [
-          ...getFiles(modeName, 'json/nested', `nested/${contextName}/${sizeName}`, 'json'),
-          ...getFiles(modeName, 'json/flat', `flat/${contextName}/${sizeName}`, 'json')
+          ...getFiles(contextName, modeName, 'json/nested', `nested/${contextName}/${sizeName}`, 'json'),
+          ...getFiles(contextName, modeName, 'json/flat', `flat/${contextName}/${sizeName}`, 'json')
         ]
       },
       android: {
         buildPath: 'dist/android/',
         transforms: groups.mobile,
         files: [
-          ...getFiles(modeName, 'android/resources', `${contextName}/${sizeName}`, 'xml')
+          ...getFiles(contextName, modeName, 'android/resources', `${contextName}/${sizeName}`, 'xml')
         ]
       },
       ios: {
         buildPath: 'dist/ios/',
         transforms: groups.mobile,
         files: [
-          ...getFiles(modeName, 'ios/macros', `${contextName}/${sizeName}`, 'h')
+          ...getFiles(contextName, modeName, 'ios/macros', `${contextName}/${sizeName}`, 'h')
         ]
       }
     }
