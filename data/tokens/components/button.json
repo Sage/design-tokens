@@ -234,7 +234,7 @@
         },
         "y": {
           "S": {
-            "value": "{origin.dimension.50}",
+            "value": "{global.space.micro.S}",
             "type": "spacing",
             "description": "Bottom and top padding on small buttons."
           },
@@ -306,7 +306,7 @@
         },
         "y": {
           "S": {
-            "value": "{origin.dimension.50}",
+            "value": "{global.space.micro.S}",
             "type": "spacing",
             "description": "Bottom and top padding on small buttons."
           },
@@ -378,7 +378,7 @@
         },
         "y": {
           "S": {
-            "value": "{origin.dimension.50}",
+            "value": "{global.space.micro.S}",
             "type": "spacing",
             "description": "Bottom and top padding on small buttons."
           },
@@ -431,7 +431,7 @@
         },
         "y": {
           "S": {
-            "value": "{origin.dimension.50}",
+            "value": "{global.space.micro.S}",
             "type": "spacing",
             "description": "Bottom and top padding on small buttons."
           },
@@ -822,17 +822,8 @@
               "type": "color"
             },
             "bg-enabled": {
-              "value": "{modes.color.interactive.monochrome.inverse.default}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.12",
-                    "space": "lch"
-                  }
-                }
-              }
+              "value": "{modes.color.interactive.monochrome.inverse.defaultAlt3}",
+              "type": "color"
             },
             "bg-hover": {
               "value": "{modes.color.interactive.monochrome.inverse.hover}",
@@ -1390,6 +1381,124 @@
         "value": "40px",
         "type": "dimension",
         "description": "background blur on video"
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "primary": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "secondary": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "tertiary": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "subtle": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        }
+      },
+      "responsive": {
+        "primary": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
+        },
+        "secondary": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
+        },
+        "tertiary": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
+        },
+        "subtle": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
+        }
       }
     }
   }

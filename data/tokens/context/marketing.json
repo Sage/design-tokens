@@ -1,4 +1,48 @@
 {
+  "page": {
+    "typography": {
+      "hero": {
+        "h1": {
+          "value": "{global.typography.responsive.display.L}",
+          "type": "typography"
+        },
+        "h2": {
+          "value": "{global.typography.responsive.display.M}",
+          "type": "typography"
+        }
+      },
+      "H1": {
+        "value": "{global.typography.responsive.heading.XL}",
+        "type": "typography"
+      },
+      "H2": {
+        "value": "{global.typography.responsive.heading.L}",
+        "type": "typography"
+      },
+      "H3": {
+        "value": "{global.typography.responsive.heading.M}",
+        "type": "typography"
+      },
+      "H4": {
+        "value": "{global.typography.responsive.heading.S}",
+        "type": "typography"
+      },
+      "H5": {
+        "value": "{global.typography.responsive.subheading.M}",
+        "type": "typography"
+      },
+      "p": {
+        "standard": {
+          "value": "{global.typography.responsive.body.M}",
+          "type": "typography"
+        },
+        "large": {
+          "value": "{global.typography.responsive.body.L}",
+          "type": "typography"
+        }
+      }
+    }
+  },
   "button": {
     "color": {
       "standard": {
@@ -12,6 +56,14 @@
           "tertiary": {
             "bg-enabled": {
               "value": "{modes.color.none}",
+              "type": "color"
+            }
+          }
+        },
+        "video": {
+          "primary": {
+            "label-enabled": {
+              "value": "{modes.color.interactive.primary.inverse.default}",
               "type": "color"
             }
           }
@@ -103,25 +155,9 @@
   },
   "form": {
     "color": {
-      "switch": {
-        "fg-active": {
-          "value": "{modes.color.interactive.primary.inverse.default}",
-          "type": "color"
-        }
-      }
-    }
-  },
-  "container": {
-    "color": {
-      "blockquote": {
-        "standard": {
-          "border": {
-            "value": "{modes.color.interactive.primary.standard.default}",
-            "type": "color"
-          }
-        },
-        "inverse": {
-          "border": {
+      "standard": {
+        "switch": {
+          "fg-active": {
             "value": "{modes.color.interactive.primary.inverse.default}",
             "type": "color"
           }

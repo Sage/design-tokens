@@ -67,27 +67,27 @@
       "skeleton": {
         "text": {
           "XS": {
-            "value": "{origin.fontSize.web.step0}",
+            "value": "{global.typography.adaptive.subheading.M}",
             "type": "sizing",
             "description": "Skeleton paragraph and H5"
           },
           "S": {
-            "value": "{global.typography.subheading.M}",
+            "value": "{global.typography.adaptive.subheading.M}",
             "type": "sizing",
             "description": "H4 Skeletons"
           },
           "M": {
-            "value": "{global.typography.heading.XS}",
+            "value": "{global.typography.adaptive.heading.XS}",
             "type": "sizing",
             "description": "H3 Skeletons"
           },
           "L": {
-            "value": "{global.typography.heading.S}",
+            "value": "{global.typography.adaptive.heading.S}",
             "type": "sizing",
             "description": "H2 Skeletons"
           },
           "XL": {
-            "value": "{global.typography.heading.M}",
+            "value": "{global.typography.adaptive.heading.M}",
             "type": "sizing",
             "description": "H1 Skeletons"
           }
@@ -98,6 +98,25 @@
           "value": "{global.size.micro.M}",
           "type": "sizing",
           "description": "Step height"
+        }
+      },
+      "stepindicator": {
+        "bar": {
+          "value": "{global.size.micro.XXS}",
+          "type": "sizing",
+          "description": "step indicator bar"
+        },
+        "stepcircle": {
+          "S": {
+            "value": "{global.size.macro.XS}",
+            "type": "sizing",
+            "description": "M size step indicator"
+          },
+          "M": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "M size step indicator"
+          }
         }
       }
     },
@@ -136,6 +155,40 @@
         "label-default": {
           "value": "{modes.color.generic.content.inverse.harsh}",
           "type": "color"
+        },
+        "stepindicator": {
+          "bg-active": {
+            "value": "{modes.color.generic.fg.standard.nought}",
+            "type": "color"
+          },
+          "bg-complete": {
+            "value": "{modes.color.interactive.primary.inverse.default}",
+            "type": "color"
+          },
+          "border-active-outer": {
+            "value": "{modes.color.generic.fg.standard.nought}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.generic.fg.inverse.moderate}",
+            "type": "color"
+          },
+          "border-success": {
+            "value": "{modes.color.interactive.primary.inverse.default}",
+            "type": "color"
+          },
+          "label-active": {
+            "value": "{modes.color.generic.content.standard.extreme}",
+            "type": "color"
+          },
+          "label-complete": {
+            "value": "{modes.color.generic.content.standard.extreme}",
+            "type": "color"
+          },
+          "label-default": {
+            "value": "{modes.color.generic.content.inverse.harsh}",
+            "type": "color"
+          }
         }
       },
       "standard": {
@@ -202,40 +255,74 @@
             "value": "{modes.color.status.generic.standard.default}",
             "type": "color"
           }
-        }
-      },
-      "stepflow": {
-        "bg-active": {
-          "value": "{modes.color.generic.fg.inverse.nought}",
-          "type": "color"
         },
-        "bg-complete": {
-          "value": "{modes.color.status.success.standard.default}",
-          "type": "color"
+        "stepflow": {
+          "bg-active": {
+            "value": "{modes.color.generic.fg.inverse.nought}",
+            "type": "color"
+          },
+          "bg-complete": {
+            "value": "{modes.color.status.success.standard.default}",
+            "type": "color"
+          },
+          "bg-default": {
+            "value": "{modes.color.generic.fg.standard.nought}",
+            "type": "color"
+          },
+          "border-active-inner": {
+            "value": "{modes.color.generic.fg.standard.nought}",
+            "type": "color"
+          },
+          "border-active-outer": {
+            "value": "{modes.color.generic.fg.inverse.nought}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.generic.fg.standard.soft}",
+            "type": "color"
+          },
+          "label-alt": {
+            "value": "{modes.color.generic.content.standard.firm}",
+            "type": "color"
+          },
+          "label-default": {
+            "value": "{modes.color.generic.content.standard.harsh}",
+            "type": "color"
+          }
         },
-        "bg-default": {
-          "value": "{modes.color.generic.fg.standard.nought}",
-          "type": "color"
-        },
-        "border-active-inner": {
-          "value": "{modes.color.generic.fg.standard.nought}",
-          "type": "color"
-        },
-        "border-active-outer": {
-          "value": "{modes.color.generic.fg.inverse.nought}",
-          "type": "color"
-        },
-        "border-default": {
-          "value": "{modes.color.generic.fg.standard.soft}",
-          "type": "color"
-        },
-        "label-alt": {
-          "value": "{modes.color.generic.content.standard.firm}",
-          "type": "color"
-        },
-        "label-default": {
-          "value": "{modes.color.generic.content.standard.harsh}",
-          "type": "color"
+        "stepindicator": {
+          "bg-active": {
+            "value": "{modes.color.generic.fg.inverse.nought}",
+            "type": "color"
+          },
+          "bg-complete": {
+            "value": "{modes.color.status.success.standard.default}",
+            "type": "color"
+          },
+          "border-active-outer": {
+            "value": "{modes.color.generic.fg.inverse.nought}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.generic.fg.standard.soft}",
+            "type": "color"
+          },
+          "border-success": {
+            "value": "{modes.color.status.success.standard.default}",
+            "type": "color"
+          },
+          "label-active": {
+            "value": "{modes.color.generic.content.inverse.extreme}",
+            "type": "color"
+          },
+          "label-complete": {
+            "value": "{modes.color.generic.content.inverse.extreme}",
+            "type": "color"
+          },
+          "label-default": {
+            "value": "{modes.color.generic.content.standard.harsh}",
+            "type": "color"
+          }
         }
       }
     },
@@ -249,6 +336,11 @@
         "value": "{global.radius.circle}",
         "type": "borderRadius",
         "description": "Step flow (step indicators)"
+      },
+      "stepindicator": {
+        "value": "{global.radius.circle}",
+        "type": "borderRadius",
+        "description": "step indicator circles"
       },
       "carouselselector": {
         "value": "{global.radius.circle}",
@@ -331,6 +423,28 @@
           "value": "{global.borderwidth.S}",
           "type": "borderWidth",
           "description": "Step flow active step border outermost"
+        }
+      },
+      "stepindicator": {
+        "S": {
+          "active": {
+            "value": "{global.borderwidth.S}",
+            "type": "borderWidth"
+          },
+          "default": {
+            "value": "{global.borderwidth.S}",
+            "type": "borderWidth"
+          }
+        },
+        "M": {
+          "active": {
+            "value": "{global.borderwidth.M}",
+            "type": "borderWidth"
+          },
+          "default": {
+            "value": "{global.borderwidth.M}",
+            "type": "borderWidth"
+          }
         }
       }
     },
@@ -539,33 +653,86 @@
           }
         }
       },
-      "stepsequence": {
-        "xg": {
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Vertical variant gap between step indicator and label"
+      "stepindicator": {
+        "generic": {
+          "g": {
+            "S": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "gap between timeline visual and text"
+            },
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "gap between timeline visual and text"
+            }
+          },
+          "text": {
+            "yg": {
+              "S": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "gap between label and subtext"
+              },
+              "M": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "gap between label and subtext"
+              }
+            }
+          },
+          "visual": {
+            "g": {
+              "S": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "gap between step number and line"
+              },
+              "M": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "gap between step number and line"
+              }
+            }
           }
         },
-        "x": {
-          "M": {
-            "value": "{global.space.micro.S}",
-            "type": "spacing",
-            "description": "Horizontal variant horizontal padding on label."
+        "vertical": {
+          "y": {
+            "S": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical variant top padding on parent container"
+            },
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical variant top padding on parent container"
+            }
+          },
+          "text": {
+            "y": {
+              "S": {
+                "value": "{global.space.micro.XS}",
+                "type": "spacing",
+                "description": "space above text and parent container on vertical variant"
+              }
+            }
           }
         },
-        "y": {
-          "M": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Vertical variant vertical padding on label."
-          }
-        },
-        "yg": {
-          "M": {
-            "value": "{global.space.micro.S}",
-            "type": "spacing",
-            "description": "Horizontal variant gap between step indicator and label"
+        "horizontal": {
+          "text": {
+            "x": {
+              "S": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "horizontal variant left and right padding on text container"
+              },
+              "M": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "horizontal variant left and right padding on text container"
+              }
+            }
           }
         }
       }
@@ -576,6 +743,68 @@
           "value": "0.3",
           "type": "opacity",
           "description": "Inactive slide IMAGE layer."
+        }
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.adaptive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.moderate.L}",
+            "type": "typography"
+          }
+        }
+      },
+      "responsive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          }
         }
       }
     }

@@ -2,7 +2,7 @@
   "form": {
     "space": {
       "none": {
-        "value": "0",
+        "value": "{global.space.none}",
         "type": "spacing"
       },
       "calendar": {
@@ -649,7 +649,7 @@
     },
     "size": {
       "none": {
-        "value": "{origin.dimension.0}",
+        "value": "{global.size.none}",
         "type": "sizing"
       },
       "calendar": {
@@ -919,10 +919,12 @@
     },
     "color": {
       "inverse": {
-        "text-default": {
-          "value": "{modes.color.interactive.monochrome.standard.default}",
-          "type": "color",
-          "description": "Used in Pagination simple inverse."
+        "typical": {
+          "text-default": {
+            "value": "{modes.color.interactive.monochrome.inverse.default}",
+            "type": "color",
+            "description": "Used in Pagination simple inverse."
+          }
         },
         "validation": {
           "border-error": {
@@ -1492,6 +1494,68 @@
         "value": "{popover.boxshadow.container}",
         "type": "boxShadow",
         "description": "REF POPOVER. popover container"
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.adaptive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.moderate.L}",
+            "type": "typography"
+          }
+        }
+      },
+      "responsive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          }
+        }
       }
     }
   }
