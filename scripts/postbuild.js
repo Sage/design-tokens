@@ -53,7 +53,7 @@ function copyReadme () {
 }
 
 function addEntryFile () {
-  const jsFilePaths = glob('./dist/js/*/{base,global}/*.js')
+  const jsFilePaths = glob('./dist/js/*/*/{base,global}/*.js')
   const jsComponentPaths = glob('./dist/js/*/*/components/*/*.js')
   const entryFilePath = resolve(__dirname, '../dist/index.js')
 
