@@ -6,182 +6,124 @@ const { readdirSync } = require('fs-extra')
 const { dictionary, groups } = require('./style-dictionary')
 const filterComponent = require('./utils/filter-component')
 
-const platforms = readdirSync('./data/tokens/platforms/')
 const components = readdirSync('./data/tokens/components/')
+const context = readdirSync('./data/tokens/context/')
 const modes = readdirSync('./data/tokens/modes/')
+const screensize = readdirSync('./data/tokens/screensize/')
 
-const getFiles = (platformName, modeName, format, subType, suffix) => {
-  const platform = format.includes('variables') ? '' : platformName
+const getFiles = (contextName, modeName, format, subType, suffix) => {
   const mode = format.includes('variables') ? '' : modeName
   return [
-    ...getSplit('base', platformName, modeName, format, subType, suffix, false),
-    ...getComponents(platform, mode, format, subType, suffix)
+    ...getSplit(contextName, 'modes', modeName, format, subType, suffix, false),
+    ...getComponents(contextName, mode, format, subType, suffix)
   ]
 }
 
-const getComponents = (platformName, modeName, format, subType, suffix) => {
+const getComponents = (contextName, modeName, format, subType, suffix) => {
   const componentArray = []
 
   components.forEach((component) => {
-    componentArray.push(...getSplit(component.split('.')[0], platformName, modeName, format, subType, suffix, true))
+    componentArray.push(...getSplit(contextName, component.split('.')[0], modeName, format, subType, suffix, true))
   })
 
   return componentArray
 }
 
-const getSplit = (componentName, platformName, modeName, format, subType, suffix, outputReferences) => {
+const getSplit = (contextName, componentName, modeName, format, subType, suffix, outputReferences) => {
+  const hasRefs = suffix === 'css' || suffix === 'scss'
+
   const getPath = (componentName) => {
     const path = {
-      base: suffix === 'css' || suffix === 'scss' ? ' ' : '/base',
+      modes: hasRefs ? modeName : `${modeName}/mode`,
       global: '/global'
     }
-    return path[componentName] || '/components/' + componentName
+    return path[componentName] || (hasRefs ? `/components/${componentName}` : `${modeName}/components/${componentName}`)
   }
 
   const path = getPath(componentName).trim()
 
-  const selector = outputReferences ? '[class^="sds-mode-"]' : modeName ? `.sds-mode-${modeName}` : undefined
+  const selector = outputReferences ? `.sds-context-${contextName}[class^="sds-mode-"]` : modeName ? `.sds-context-${contextName}.sds-mode-${modeName}` : `.sds-context-${contextName}`
 
   return [
     {
-      destination: `${subType}${platformName}/${modeName}${path}/all.${suffix}`,
+      destination: `${subType}/${path}.${suffix}`,
       filter: (token) => filterComponent(token, componentName),
       format,
       options: {
         outputReferences,
         selector
       }
-    },
-    {
-      destination: `${subType}${platformName}/${modeName}${path}/color.${suffix}`,
-      filter: (token) => token.type === 'color' && filterComponent(token, componentName),
-      format,
-      options: {
-        outputReferences,
-        selector
-      }
-    },
-    {
-      destination: `${subType}${platformName}/${modeName}${path}/borderRadius.${suffix}`,
-      filter: (token) => token.type === 'borderRadius' && filterComponent(token, componentName),
-      format,
-      options: {
-        outputReferences,
-        selector
-      }
-    },
-    {
-      destination: `${subType}${platformName}/${modeName}${path}/borderWidth.${suffix}`,
-      filter: (token) => token.type === 'borderWidth' && filterComponent(token, componentName),
-      format,
-      options: {
-        outputReferences,
-        selector
-      }
-    },
-    {
-      destination: `${subType}${platformName}/${modeName}${path}/shadow.${suffix}`,
-      filter: (token) => token.type === 'boxShadow' && filterComponent(token, componentName),
-      format,
-      options: {
-        outputReferences,
-        selector
-      }
-    },
-    {
-      destination: `${subType}${platformName}/${modeName}${path}/sizing.${suffix}`,
-      filter: (token) => token.type === 'sizing' && filterComponent(token, componentName),
-      format,
-      options: {
-        outputReferences,
-        selector
-      }
-    },
-    {
-      destination: `${subType}${platformName}/${modeName}${path}/spacing.${suffix}`,
-      filter: (token) => token.type === 'spacing' && filterComponent(token, componentName),
-      format,
-      options: {
-        outputReferences,
-        selector
-      }
-    },
-    {
-      destination: `${subType}${platformName}/${modeName}${path}/typography.${suffix}`,
-      filter: (token) => token.type === 'typography' && filterComponent(token, componentName),
-      format,
-      options: {
-        outputReferences,
-        selector
-      }
     }
   ]
 }
 
-const getGlobalConfig = (platform) => {
-  const platformName = platform.split('.json')[0]
-
+const getGlobalConfig = (contextName, sizeName) => {
   return {
     source: [
-      './data/tokens/origin.json',
+      './data/tokens/primitives.json',
       './data/tokens/global/*.json',
-      `./data/tokens/platforms/${platform}`
+      `./data/tokens/screensize/${contextName}.json`,
+      `./data/tokens/screensize/${sizeName}.json`
     ],
     platforms: {
       css: {
         buildPath: 'dist/css/',
         transforms: groups.css,
         files: [
-          ...getSplit('global', platformName, '', 'css/variables', '', 'css', false)
+          ...getSplit(contextName, 'global', '', sizeName, `${contextName}/${sizeName}`, 'css', false)
         ]
       },
       scss: {
         buildPath: 'dist/scss/',
         transforms: groups.scss,
         files: [
-          ...getSplit('global', platformName, '', 'scss/variables', '', 'scss', false)
+          ...getSplit(contextName, 'global', '', 'scss/variables', `${contextName}/${sizeName}`, 'scss', false)
         ]
       },
       js: {
         buildPath: 'dist/js/',
         transforms: groups.js,
         files: [
-          ...getSplit('global', platformName, '', 'javascript/module', 'common/', 'js', false),
-          ...getSplit('global', platformName, '', 'typescript/module-declarations', 'common/', 'd.ts', false),
-          ...getSplit('global', platformName, '', 'javascript/es6', 'es6/', 'js', false),
-          ...getSplit('global', platformName, '', 'typescript/es6-declarations', 'es6/', 'd.ts', false),
-          ...getSplit('global', platformName, '', 'javascript/umd', 'umd/', 'js', false),
-          ...getSplit('global', platformName, '', 'json', 'json/', 'json', false)
+          ...getSplit(contextName, 'global', '', 'javascript/module', `common/${contextName}/${sizeName}`, 'js', false),
+          ...getSplit(contextName, 'global', '', 'typescript/module-declarations', `common/${contextName}/${sizeName}`, 'd.ts', false),
+          ...getSplit(contextName, 'global', '', 'javascript/es6', `es6/${contextName}/${sizeName}`, 'js', false),
+          ...getSplit(contextName, 'global', '', 'typescript/es6-declarations', `es6/${contextName}/${sizeName}`, 'd.ts', false),
+          ...getSplit(contextName, 'global', '', 'javascript/umd', `umd/${contextName}/${sizeName}`, 'js', false)
+        ]
+      },
+      json: {
+        buildPath: 'dist/json/',
+        transforms: groups.json,
+        files: [
+          ...getSplit(contextName, 'global', '', 'json/nested', `nested/${contextName}/${sizeName}`, 'json', false),
+          ...getSplit(contextName, 'global', '', 'json/flat', `flat/${contextName}/${sizeName}`, 'json', false)
         ]
       },
       android: {
         buildPath: 'dist/android/',
         transforms: groups.mobile,
         files: [
-          ...getSplit('global', platformName, '', 'android/resources', '', 'xml', false)
+          ...getSplit(contextName, 'global', '', 'android/resources', `${contextName}/${sizeName}`, 'xml', false)
         ]
       },
       ios: {
         buildPath: 'dist/ios/',
         transforms: groups.mobile,
         files: [
-          ...getSplit('global', platformName, '', 'ios/macros', '', 'h', false)
+          ...getSplit(contextName, 'global', '', 'ios/macros', `${contextName}/${sizeName}`, 'h', false)
         ]
       }
     }
   }
 }
 
-const getModeConfig = (platform, mode) => {
-  const platformName = platform.split('.json')[0]
-  const modeName = `modes/${mode.split('.json')[0]}`
-
+const getModeConfig = (contextName, modeName, sizeName) => {
   return {
     source: [
-      './data/tokens/origin.json',
+      './data/tokens/primitives.json',
       './data/tokens/global/*.json',
-      `./data/tokens/platforms/${platform}`,
-      `./data/tokens/modes/${mode}`,
+      `./data/tokens/screensize/${contextName}.json`,
+      `./data/tokens/modes/${modeName}.json`,
       './data/tokens/components/*.json'
     ],
     platforms: {
@@ -189,78 +131,91 @@ const getModeConfig = (platform, mode) => {
         buildPath: 'dist/css/',
         transforms: groups.css,
         files: [
-          ...getFiles(platformName, modeName, 'css/variables', '', 'css')
+          ...getFiles(contextName, modeName, sizeName, `${contextName}/${sizeName}`, 'css')
         ]
       },
       scss: {
         buildPath: 'dist/scss/',
         transforms: groups.scss,
         files: [
-          ...getFiles(platformName, modeName, 'scss/variables', '', 'scss')
+          ...getFiles(contextName, modeName, 'scss/variables', `${contextName}/${sizeName}`, 'scss')
         ]
       },
       js: {
         buildPath: 'dist/js/',
         transforms: groups.js,
         files: [
-          ...getFiles(platformName, modeName, 'javascript/module', 'common/', 'js'),
-          ...getFiles(platformName, modeName, 'typescript/module-declarations', 'common/', 'd.ts'),
-          ...getFiles(platformName, modeName, 'javascript/es6', 'es6/', 'js'),
-          ...getFiles(platformName, modeName, 'typescript/es6-declarations', 'es6/', 'd.ts'),
-          ...getFiles(platformName, modeName, 'javascript/umd', 'umd/', 'js'),
-          ...getFiles(platformName, modeName, 'json', 'json/', 'json')
+          ...getFiles(contextName, modeName, 'javascript/module', `common/${contextName}/${sizeName}`, 'js'),
+          ...getFiles(contextName, modeName, 'typescript/module-declarations', `common/${contextName}/${sizeName}`, 'd.ts'),
+          ...getFiles(contextName, modeName, 'javascript/es6', `es6/${contextName}/${sizeName}`, 'js'),
+          ...getFiles(contextName, modeName, 'typescript/es6-declarations', `es6/${contextName}/${sizeName}`, 'd.ts'),
+          ...getFiles(contextName, modeName, 'javascript/umd', `umd/${contextName}/${sizeName}`, 'js')
+        ]
+      },
+      json: {
+        buildPath: 'dist/json/',
+        transforms: groups.json,
+        files: [
+          ...getFiles(contextName, modeName, 'json/nested', `nested/${contextName}/${sizeName}`, 'json'),
+          ...getFiles(contextName, modeName, 'json/flat', `flat/${contextName}/${sizeName}`, 'json')
         ]
       },
       android: {
         buildPath: 'dist/android/',
         transforms: groups.mobile,
         files: [
-          ...getFiles(platformName, modeName, 'android/resources', '', 'xml')
+          ...getFiles(contextName, modeName, 'android/resources', `${contextName}/${sizeName}`, 'xml')
         ]
       },
       ios: {
         buildPath: 'dist/ios/',
         transforms: groups.mobile,
         files: [
-          ...getFiles(platformName, modeName, 'ios/macros', '', 'h')
+          ...getFiles(contextName, modeName, 'ios/macros', `${contextName}/${sizeName}`, 'h')
         ]
       }
     }
   }
 }
 
-platforms.forEach((platform) => {
-  const platformName = platform.split('.json')[0]
+context.forEach((context) => {
+  const contextName = context.split('.json')[0]
 
-  console.log(`\r\nStart building platform: ${platformName}\r\n`)
+  console.log(`\r\nStart building context: ${contextName}\r\n`)
 
-  console.log('\r\nStart building global\r\n')
+  screensize.forEach((size) => {
+    const sizeName = size.split('.json')[0]
 
-  const StyleDictionary = dictionary.extend(getGlobalConfig(platform))
+    console.log(`\r\nStart building size: ${sizeName}\r\n`)
 
-  StyleDictionary.buildPlatform('css')
-  StyleDictionary.buildPlatform('scss')
-  StyleDictionary.buildPlatform('js')
-  StyleDictionary.buildPlatform('ios')
-  StyleDictionary.buildPlatform('android')
-
-  console.log('\r\nDone building global\r\n')
-
-  modes.forEach((mode) => {
-    const modeName = mode.split('.json')[0]
-
-    console.log(`\r\nStart building mode: ${modeName}\r\n`)
-
-    const StyleDictionary = dictionary.extend(getModeConfig(platform, mode))
+    const StyleDictionary = dictionary.extend(getGlobalConfig(contextName, sizeName))
 
     StyleDictionary.buildPlatform('css')
     StyleDictionary.buildPlatform('scss')
     StyleDictionary.buildPlatform('js')
+    StyleDictionary.buildPlatform('json')
     StyleDictionary.buildPlatform('ios')
     StyleDictionary.buildPlatform('android')
 
-    console.log(`\r\nDone building mode: ${modeName}\r\n`)
+    modes.forEach((mode) => {
+      const modeName = mode.split('.json')[0]
+
+      console.log(`\r\nStart building mode: ${modeName}\r\n`)
+
+      const StyleDictionary = dictionary.extend(getModeConfig(contextName, modeName, sizeName))
+
+      StyleDictionary.buildPlatform('css')
+      StyleDictionary.buildPlatform('scss')
+      StyleDictionary.buildPlatform('js')
+      StyleDictionary.buildPlatform('json')
+      StyleDictionary.buildPlatform('ios')
+      StyleDictionary.buildPlatform('android')
+
+      console.log(`\r\nDone building mode: ${modeName}\r\n`)
+    })
+
+    console.log(`\r\nDone building size: ${sizeName}\r\n`)
   })
 
-  console.log(`\r\nDone building platform: ${platformName}\r\n`)
+  console.log(`\r\nDone building context: ${contextName}\r\n`)
 })

@@ -4,7 +4,7 @@
       "header": {
         "subtle": {
           "bg-alt": {
-            "value": "{base.color.generic.content.standard.extreme}",
+            "value": "{modes.color.generic.content.standard.extreme}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -18,11 +18,11 @@
             "description": "header alt"
           },
           "bg-default": {
-            "value": "{origin.colors.transparent}",
+            "value": "{modes.color.none}",
             "type": "color"
           },
           "bg-hover": {
-            "value": "{base.color.generic.content.standard.extreme}",
+            "value": "{modes.color.generic.content.standard.extreme}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -35,112 +35,112 @@
             }
           },
           "border-default": {
-            "value": "{base.color.generic.fg.standard.delicate}",
+            "value": "{modes.color.generic.fg.standard.delicate}",
             "type": "color",
             "description": "Header borders"
           },
           "label-default": {
-            "value": "{base.color.generic.content.standard.harsh}",
+            "value": "{modes.color.generic.content.standard.harsh}",
             "type": "color"
           },
           "label-hover": {
-            "value": "{base.color.generic.content.standard.extreme}",
+            "value": "{modes.color.generic.content.standard.extreme}",
             "type": "color"
           }
         },
         "harsh": {
           "bg-alt": {
-            "value": "{base.color.generic.bg.inverse.harsh}",
+            "value": "{modes.color.generic.bg.standard.harsh}",
             "type": "color",
             "description": "Zebra stripes"
           },
           "bg-default": {
-            "value": "{base.color.generic.bg.inverse.firm}",
+            "value": "{modes.color.generic.bg.standard.firm}",
             "type": "color"
           },
           "bg-hover": {
-            "value": "{base.color.generic.bg.inverse.moderate}",
+            "value": "{modes.color.generic.bg.standard.moderate}",
             "type": "color"
           },
           "border-default": {
-            "value": "{base.color.generic.fg.inverse.moderate}",
+            "value": "{modes.color.generic.fg.standard.moderate}",
             "type": "color"
           },
           "label-default": {
-            "value": "{base.color.generic.content.inverse.harsh}",
+            "value": "{modes.color.generic.content.standard.harsh}",
             "type": "color"
           },
           "label-hover": {
-            "value": "{base.color.generic.content.inverse.extreme}",
+            "value": "{modes.color.generic.content.standard.extreme}",
             "type": "color"
           }
         }
       },
       "row": {
         "bg-activated": {
-          "value": "{base.color.interactive.primary.standard.default}",
+          "value": "{modes.color.interactive.primary.standard.default}",
           "type": "color"
         },
         "bg-active": {
-          "value": "{base.color.interactive.monochrome.standard.active}",
+          "value": "{modes.color.interactive.monochrome.standard.active}",
           "type": "color"
         },
         "bg-default": {
-          "value": "{base.color.generic.bg.standard.nought}",
+          "value": "{modes.color.generic.bg.standard.nought}",
           "type": "color"
         },
         "bg-alt": {
-          "value": "{base.color.generic.bg.standard.delicate}",
+          "value": "{modes.color.generic.bg.standard.delicate}",
           "type": "color",
           "description": "Zebra stripes"
         },
         "bg-alt2": {
-          "value": "{base.color.generic.bg.standard.soft}",
+          "value": "{modes.color.generic.bg.standard.soft}",
           "type": "color",
           "description": "Zebra stripes combined with child rows."
         },
         "bg-alt3": {
-          "value": "{base.color.generic.bg.standard.faint}",
+          "value": "{modes.color.generic.bg.standard.faint}",
           "type": "color",
           "description": "Child rows."
         },
         "bg-hover": {
-          "value": "{base.color.generic.bg.standard.soft}",
+          "value": "{modes.color.generic.bg.standard.soft}",
           "type": "color"
         },
         "border-default": {
-          "value": "{base.color.generic.fg.standard.delicate}",
+          "value": "{modes.color.generic.fg.standard.delicate}",
           "type": "color"
         },
         "label-activated": {
-          "value": "{base.color.generic.content.inverse.extreme}",
+          "value": "{modes.color.generic.content.standard.extreme}",
           "type": "color"
         },
         "label-active": {
-          "value": "{base.color.generic.content.inverse.extreme}",
+          "value": "{modes.color.generic.content.standard.extreme}",
           "type": "color"
         },
         "label-default": {
-          "value": "{base.color.generic.content.standard.harsh}",
+          "value": "{modes.color.generic.content.standard.harsh}",
           "type": "color"
         },
         "label-hover": {
-          "value": "{base.color.generic.content.standard.extreme}",
+          "value": "{modes.color.generic.content.standard.extreme}",
           "type": "color"
         }
       },
       "footer": {
         "bg-default": {
-          "value": "{base.color.generic.bg.standard.soft}",
+          "value": "{modes.color.generic.bg.standard.soft}",
           "type": "color"
         },
         "border-default": {
-          "value": "{base.color.generic.fg.standard.delicate}",
+          "value": "{modes.color.generic.fg.standard.delicate}",
           "type": "color",
           "description": "Header borders"
         },
         "label-default": {
-          "value": "{base.color.interactive.monochrome.standard.default}",
+          "value": "{modes.color.interactive.monochrome.standard.default}",
           "type": "color"
         }
       }
@@ -163,11 +163,16 @@
         "value": "{global.borderwidth.XS}",
         "type": "borderWidth",
         "description": "Table border"
+      },
+      "thick": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "header border for subtle"
       }
     },
     "space": {
       "none": {
-        "value": "0",
+        "value": "{global.space.none}",
         "type": "spacing"
       },
       "row": {
@@ -230,6 +235,13 @@
             "value": "{global.space.micro.L}",
             "type": "spacing",
             "description": "top and bottom adding inside pagination"
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "gap between table and pagination"
           }
         }
       },
@@ -314,6 +326,96 @@
         "M": {
           "value": "{global.size.icon.M}",
           "type": "sizing"
+        }
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "heading": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.adaptive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.moderate.L}",
+            "type": "typography"
+          }
+        },
+        "label": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        }
+      },
+      "responsive": {
+        "heading": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          }
+        },
+        "label": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
         }
       }
     }
