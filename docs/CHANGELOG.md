@@ -1,3 +1,10 @@
+# [5.0.0-beta.21](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.20...v5.0.0-beta.21) (2024-09-06)
+
+
+### Features
+
+* convert media-feature-range-notation to context ([99e93d6](https://github.com/Sage/design-tokens/commit/99e93d6d4e14d5abd7ae87adb09033dcb96a36fa))
+
 # [5.0.0-beta.20](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.19...v5.0.0-beta.20) (2024-09-06)
 
 
