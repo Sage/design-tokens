@@ -1,6 +1,7 @@
 /*
 Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
+
 const styleDictionary = require('style-dictionary')
 const { fileHeader, formattedVariables } = styleDictionary.formatHelpers
 const { registerTransforms } = require('@tokens-studio/sd-transforms')
