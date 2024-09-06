@@ -92,7 +92,7 @@ styleDictionary.registerFormat({
     return (
       fileHeader({ file }) +
       `${selector} {\n` +
-      '  @media (min-width: 1200px) {\n' +
+      '  @media (width >= 1200px) {\n' +
       formattedVariables({ format: 'css', dictionary, outputReferences }) +
       '\n  }\n}\n'
     )
