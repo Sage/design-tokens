@@ -11,10 +11,45 @@
         "type": "sizing",
         "description": "L tab"
       },
+      "shadow": {
+        "arrow": {
+          "value": "{global.size.micro.M}",
+          "type": "sizing",
+          "description": "Shadow width for linear gradient shadow on repsonsive tab arrows."
+        }
+      },
+      "baseline": {
+        "M": {
+          "value": "{global.size.micro.XXS}",
+          "type": "sizing",
+          "description": "Thickness of baseline."
+        },
+        "L": {
+          "value": "{global.size.micro.XXS}",
+          "type": "sizing",
+          "description": "Thickness of baseline."
+        }
+      },
       "icon": {
         "M": {
           "value": "{global.size.icon.M}",
           "type": "sizing"
+        },
+        "L": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
+        }
+      },
+      "indicator": {
+        "M": {
+          "value": "{global.size.micro.XS}",
+          "type": "sizing",
+          "description": "Thickness of indicator for active and hover."
+        },
+        "L": {
+          "value": "{global.size.micro.XS}",
+          "type": "sizing",
+          "description": "Thickness of indicator for active and hover."
         }
       }
     },
@@ -57,86 +92,156 @@
       }
     },
     "color": {
-      "typical": {
-        "bg-active": {
-          "value": "{base.color.interactive.monochrome.standard.withActive}",
-          "type": "color"
-        },
+      "inverse": {
         "bg-hover": {
-          "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
-          "type": "color"
+          "value": "{modes.color.interactive.monochrome.inverse.hoverAlt}",
+          "type": "color",
+          "description": "For anchor nav, not tab."
         },
         "border-active": {
-          "value": "{base.color.interactive.monochrome.standard.active}",
+          "value": "{modes.color.interactive.monochrome.inverse.active}",
           "type": "color"
         },
         "border-enabled": {
-          "value": "{base.color.generic.fg.standard.delicate}",
+          "value": "{modes.color.generic.fg.inverse.delicate}",
           "type": "color"
         },
         "border-hover": {
-          "value": "{base.color.generic.fg.standard.delicate}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "{base.color.modifiers.button.hover}",
-                "space": "lch",
-                "color": "{base.color.modifier.contrastMore}"
-              }
-            }
-          }
+          "value": "{modes.color.generic.fg.inverse.moderate}",
+          "type": "color"
         },
         "icon-enabled": {
-          "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
+          "value": "{modes.color.interactive.monochrome.inverse.defaultAlt}",
           "type": "color"
         },
         "icon-hover": {
-          "value": "{base.color.interactive.monochrome.standard.withHover}",
+          "value": "{modes.color.interactive.monochrome.inverse.withHover}",
           "type": "color"
         },
         "label-active": {
-          "value": "{base.color.interactive.monochrome.standard.active}",
+          "value": "{modes.color.interactive.monochrome.inverse.active}",
           "type": "color"
         },
         "icon-active": {
-          "value": "{base.color.interactive.monochrome.standard.active}",
+          "value": "{modes.color.interactive.monochrome.inverse.active}",
           "type": "color"
         },
         "label-enabled": {
-          "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
+          "value": "{modes.color.interactive.monochrome.inverse.defaultAlt}",
           "type": "color"
         },
         "label-hover": {
-          "value": "{base.color.interactive.monochrome.standard.withHover}",
+          "value": "{modes.color.interactive.monochrome.inverse.withHover}",
           "type": "color"
+        },
+        "navigation": {
+          "bg-default": {
+            "value": "{modes.color.generic.bg.inverse.nought}",
+            "type": "color",
+            "description": "For previous/next buttons on responsive tabs"
+          }
+        },
+        "validation": {
+          "border-warning": {
+            "value": "{modes.color.status.caution.inverse.default}",
+            "type": "color"
+          },
+          "border-error": {
+            "value": "{modes.color.status.negative.inverse.default}",
+            "type": "color"
+          },
+          "icon-error": {
+            "value": "{modes.color.status.negative.inverse.default}",
+            "type": "color"
+          },
+          "icon-warning": {
+            "value": "{modes.color.status.caution.inverse.default}",
+            "type": "color"
+          },
+          "label-error": {
+            "value": "{modes.color.interactive.monochrome.inverse.defaultAlt}",
+            "type": "color"
+          },
+          "label-warning": {
+            "value": "{modes.color.interactive.monochrome.inverse.defaultAlt}",
+            "type": "color"
+          }
         }
       },
-      "validation": {
-        "border-warning": {
-          "value": "{base.color.status.caution.standard.default}",
+      "standard": {
+        "bg-hover": {
+          "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
+          "type": "color",
+          "description": "For anchor nav, not tab."
+        },
+        "border-active": {
+          "value": "{modes.color.interactive.monochrome.standard.active}",
           "type": "color"
         },
-        "border-error": {
-          "value": "{base.color.status.negative.standard.default}",
+        "border-enabled": {
+          "value": "{modes.color.generic.fg.standard.delicate}",
           "type": "color"
         },
-        "icon-error": {
-          "value": "{base.color.status.negative.standard.default}",
+        "border-hover": {
+          "value": "{modes.color.generic.fg.standard.moderate}",
           "type": "color"
         },
-        "icon-warning": {
-          "value": "{base.color.status.caution.standard.default}",
+        "icon-enabled": {
+          "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
           "type": "color"
         },
-        "label-error": {
-          "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
+        "icon-hover": {
+          "value": "{modes.color.interactive.monochrome.standard.withHover}",
           "type": "color"
         },
-        "label-warning": {
-          "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
+        "label-active": {
+          "value": "{modes.color.interactive.monochrome.standard.active}",
           "type": "color"
+        },
+        "icon-active": {
+          "value": "{modes.color.interactive.monochrome.standard.active}",
+          "type": "color"
+        },
+        "label-enabled": {
+          "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
+          "type": "color"
+        },
+        "label-hover": {
+          "value": "{modes.color.interactive.monochrome.standard.withHover}",
+          "type": "color"
+        },
+        "navigation": {
+          "bg-default": {
+            "value": "{modes.color.generic.bg.standard.nought}",
+            "type": "color",
+            "description": "For previous/next buttons on responsive tabs"
+          }
+        },
+        "validation": {
+          "border-warning": {
+            "value": "{modes.color.status.caution.standard.default}",
+            "type": "color"
+          },
+          "border-error": {
+            "value": "{modes.color.status.negative.standard.default}",
+            "type": "color"
+          },
+          "icon-error": {
+            "value": "{modes.color.status.negative.standard.default}",
+            "type": "color"
+          },
+          "icon-warning": {
+            "value": "{modes.color.status.caution.standard.default}",
+            "type": "color"
+          },
+          "label-error": {
+            "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
+            "type": "color"
+          },
+          "label-warning": {
+            "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
+            "type": "color"
+          }
         }
       }
     },
@@ -150,28 +255,74 @@
         "value": "{global.radius.interactive.M}",
         "type": "borderRadius",
         "description": "Tab horizontal - top corners. Tab vertical - left corners."
+      },
+      "baseline": {
+        "M": {
+          "value": "{global.radius.interactive.XXS}",
+          "type": "borderRadius"
+        },
+        "L": {
+          "value": "{global.radius.interactive.XXS}",
+          "type": "borderRadius"
+        }
+      },
+      "indicator": {
+        "M": {
+          "value": "{global.radius.interactive.XS}",
+          "type": "borderRadius",
+          "description": "Indicator for hover and active."
+        },
+        "L": {
+          "value": "{global.radius.interactive.XS}",
+          "type": "borderRadius",
+          "description": "Indicator for hover and active."
+        }
+      },
+      "none": {
+        "value": "{button.radius.none}",
+        "type": "borderRadius",
+        "description": "For previous/next buttons"
       }
     },
     "borderwidth": {
-      "active": {
-        "value": "{global.borderwidth.L}",
-        "type": "borderWidth",
-        "description": "Tab (active, active error, active caution bottom border)"
-      },
-      "caution": {
-        "value": "{global.borderwidth.XS}",
-        "type": "borderWidth",
-        "description": "Tab (caution: top, right, left borders)"
-      },
-      "enabled": {
+      "navigation": {
         "value": "{global.borderwidth.S}",
         "type": "borderWidth",
         "description": "Tab (enabled and hover bottom border)"
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        }
       },
-      "error": {
-        "value": "{global.borderwidth.S}",
-        "type": "borderWidth",
-        "description": "Tab (error: top, right, left borders)"
+      "responsive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
+        }
       }
     }
   }

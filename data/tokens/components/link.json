@@ -2,82 +2,66 @@
   "link": {
     "color": {
       "inverse": {
-        "label-disabled": {
-          "value": "{base.color.interactive.inactive.inverse.content}",
-          "type": "color"
-        },
-        "label-readonly": {
-          "value": "{base.color.generic.content.inverse.extreme}",
-          "type": "color"
-        },
         "typical": {
           "label-default": {
-            "value": "{base.color.interactive.primary.inverse.defaultAlt}",
+            "value": "{modes.color.interactive.primary.inverse.defaultAlt}",
             "type": "color"
           },
           "label-hover": {
-            "value": "{base.color.interactive.primary.inverse.hoverAlt}",
+            "value": "{modes.color.interactive.primary.inverse.hoverAlt}",
             "type": "color"
           }
         },
         "subtle": {
           "label-default": {
-            "value": "{base.color.interactive.monochrome.inverse.default}",
+            "value": "{modes.color.interactive.monochrome.inverse.default}",
             "type": "color"
           },
           "label-hover": {
-            "value": "{base.color.interactive.monochrome.inverse.active}",
+            "value": "{modes.color.interactive.monochrome.inverse.active}",
             "type": "color"
           }
         },
         "destructive": {
           "label-default": {
-            "value": "{base.color.interactive.danger.inverse.defaultAlt}",
+            "value": "{modes.color.interactive.danger.inverse.defaultAlt}",
             "type": "color"
           },
           "label-hover": {
-            "value": "{base.color.interactive.danger.inverse.hoverAlt2}",
+            "value": "{modes.color.interactive.danger.inverse.hoverAlt2}",
             "type": "color"
           }
         }
       },
       "standard": {
-        "label-disabled": {
-          "value": "{base.color.interactive.inactive.standard.content}",
-          "type": "color"
-        },
-        "label-readonly": {
-          "value": "{base.color.generic.content.standard.harsh}",
-          "type": "color"
-        },
         "destructive": {
           "label-default": {
-            "value": "{base.color.interactive.danger.standard.defaultAlt}",
+            "value": "{modes.color.interactive.danger.standard.defaultAlt}",
             "type": "color",
             "description": "."
           },
           "label-hover": {
-            "value": "{base.color.interactive.danger.standard.hoverAlt2}",
+            "value": "{modes.color.interactive.danger.standard.hoverAlt2}",
             "type": "color"
           }
         },
         "typical": {
           "label-default": {
-            "value": "{base.color.interactive.primary.standard.defaultAlt}",
+            "value": "{modes.color.interactive.primary.standard.defaultAlt}",
             "type": "color"
           },
           "label-hover": {
-            "value": "{base.color.interactive.primary.standard.hoverAlt}",
+            "value": "{modes.color.interactive.primary.standard.hoverAlt}",
             "type": "color"
           }
         },
         "subtle": {
           "label-default": {
-            "value": "{base.color.interactive.monochrome.standard.default}",
+            "value": "{modes.color.interactive.monochrome.standard.default}",
             "type": "color"
           },
           "label-hover": {
-            "value": "{base.color.interactive.monochrome.standard.active}",
+            "value": "{modes.color.interactive.monochrome.standard.active}",
             "type": "color"
           }
         }
@@ -122,6 +106,57 @@
             "type": "spacing",
             "description": "Space between icon and link text."
           }
+        }
+      },
+      "skiplink": {
+        "x": {
+          "value": "{global.space.macro.M}",
+          "type": "spacing",
+          "description": "Skiplink container"
+        },
+        "y": {
+          "value": "{global.space.micro.XXL}",
+          "type": "spacing",
+          "description": "Skiplink container"
+        }
+      }
+    },
+    "boxshadow": {
+      "skiplink": {
+        "value": "{global.boxshadow.container.near}",
+        "type": "boxShadow"
+      }
+    },
+    "typography": {
+      "responsive": {
+        "S": {
+          "value": "{global.typography.responsive.component.underlined.S}",
+          "type": "typography",
+          "description": "Small Viewports: 14.81, Large Viewports: 13.79. Match token size to component size."
+        },
+        "M": {
+          "value": "{global.typography.responsive.component.underlined.M}",
+          "type": "typography",
+          "description": "Small Viewports: 16, Large Viewports: 16. Match token size to component size."
+        },
+        "L": {
+          "value": "{global.typography.responsive.component.underlined.L}",
+          "type": "typography",
+          "description": "Small Viewports: 17.28, Large Viewports: 18.56. Match token size to component size."
+        }
+      },
+      "adaptive": {
+        "S": {
+          "value": "{global.typography.adaptive.component.underlined.S}",
+          "type": "typography"
+        },
+        "M": {
+          "value": "{global.typography.adaptive.component.underlined.M}",
+          "type": "typography"
+        },
+        "L": {
+          "value": "{global.typography.adaptive.component.underlined.L}",
+          "type": "typography"
         }
       }
     }

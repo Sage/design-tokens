@@ -2,33 +2,33 @@
   "badge": {
     "color": {
       "inverse": {
-        "warning": {
+        "notification": {
           "border-default": {
-            "value": "{base.color.status.content.inverse.withDefault}",
+            "value": "{modes.color.status.content.standard.withDefault}",
             "type": "color"
           },
           "bg-default": {
-            "value": "{base.color.status.caution.inverse.default}",
+            "value": "{modes.color.status.negative.inverse.default}",
             "type": "color"
           },
           "label-default": {
-            "value": "{base.color.status.content.inverse.withDefault}",
+            "value": "{modes.color.status.content.standard.withDefault}",
             "type": "color"
           }
         }
       },
       "standard": {
-        "warning": {
+        "notification": {
           "border-default": {
-            "value": "{base.color.status.content.standard.withDefault}",
+            "value": "{modes.color.status.content.inverse.withDefault}",
             "type": "color"
           },
           "bg-default": {
-            "value": "{base.color.status.caution.standard.default}",
+            "value": "{modes.color.status.negative.standard.default}",
             "type": "color"
           },
           "label-default": {
-            "value": "{base.color.status.content.inverse.withDefault}",
+            "value": "{modes.color.status.content.inverse.withDefault}",
             "type": "color"
           }
         }
@@ -36,10 +36,22 @@
     },
     "size": {
       "micro": {
-        "M": {
+        "dot": {
           "value": "{global.size.micro.M}",
           "type": "sizing",
           "description": "Micro dot badge size"
+        },
+        "numbered": {
+          "min": {
+            "value": "{global.size.macro.XXS}",
+            "type": "sizing",
+            "description": "Micro dot badge size with numbering"
+          },
+          "max": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "Micro dot badge size max width"
+          }
         }
       },
       "standard": {
@@ -64,10 +76,27 @@
     },
     "space": {
       "x": {
+        "S": {
+          "value": "{global.space.micro.XS}",
+          "type": "spacing",
+          "description": "horizontal padding on micro badges with numbering"
+        },
         "M": {
           "value": "{global.space.micro.S}",
           "type": "spacing",
-          "description": "used on standard badges for left and right padding"
+          "description": "horizontal padding on typical badge"
+        }
+      },
+      "y": {
+        "S": {
+          "value": "{global.space.micro.XXS}",
+          "type": "spacing",
+          "description": "bottom padding on micro badge with number"
+        },
+        "M": {
+          "value": "{global.space.micro.XXS}",
+          "type": "spacing",
+          "description": "bottom padding on typical badge"
         }
       }
     },
@@ -76,6 +105,20 @@
         "value": "{global.borderwidth.S}",
         "type": "borderWidth",
         "description": "Badge"
+      }
+    },
+    "typography": {
+      "responsive": {
+        "M": {
+          "value": "{global.typography.responsive.component.notification.M}",
+          "type": "typography"
+        }
+      },
+      "adaptive": {
+        "M": {
+          "value": "{global.typography.adaptive.component.notification.M}",
+          "type": "typography"
+        }
       }
     }
   }

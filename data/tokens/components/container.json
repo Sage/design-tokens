@@ -2,75 +2,136 @@
   "container": {
     "color": {
       "inverse": {
+        "bg-alt": {
+          "value": "{modes.color.generic.bg.inverse.faint}",
+          "type": "color"
+        },
+        "bg-default": {
+          "value": "{modes.color.generic.bg.inverse.nought}",
+          "type": "color"
+        },
         "border-alt": {
-          "value": "{base.color.generic.fg.inverse.soft}",
+          "value": "{modes.color.generic.fg.inverse.moderate}",
           "type": "color"
         },
         "border-default": {
-          "value": "{base.color.generic.fg.inverse.delicate}",
+          "value": "{modes.color.generic.fg.inverse.soft}",
           "type": "color"
-        }
-      },
-      "scroll": {
-        "bg-default": {
-          "value": "{base.color.generic.bg.inverse.nought}",
+        },
+        "text-alt": {
+          "value": "{modes.color.generic.content.inverse.moderate}",
           "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "alpha",
-                "value": "0.12",
-                "space": "lch"
+          "description": "for subheadings etc"
+        },
+        "text-default": {
+          "value": "{modes.color.generic.content.inverse.extreme}",
+          "type": "color"
+        },
+        "scrollbar": {
+          "bg-default": {
+            "value": "{modes.color.generic.bg.standard.nought}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.12",
+                  "space": "lch"
+                }
               }
             }
+          },
+          "fg-default": {
+            "value": "{modes.color.generic.fg.standard.moderate}",
+            "type": "color"
           }
         },
-        "fg-default": {
-          "value": "{base.color.generic.fg.standard.moderate}",
-          "type": "color"
+        "interactive": {
+          "detailedicon": {
+            "bg": {
+              "value": "{modes.color.brandreference.custom2}",
+              "type": "color",
+              "description": "\n"
+            }
+          },
+          "bg-hover": {
+            "value": "{modes.color.interactive.monochrome.inverse.hoverAlt}",
+            "type": "color",
+            "description": "Used for accordion hover backgrounds\n"
+          },
+          "icon-enabled": {
+            "value": "{modes.color.interactive.monochrome.inverse.default}",
+            "type": "color",
+            "description": "Enabled chevron for any accordion."
+          },
+          "icon-hover": {
+            "value": "{modes.color.interactive.monochrome.inverse.default}",
+            "type": "color",
+            "description": "Hover chevron for any accordion."
+          },
+          "text-enabled": {
+            "value": "{modes.color.generic.content.inverse.harsh}",
+            "type": "color",
+            "description": "Enabled label for standard accordion."
+          },
+          "textAlt-enabled": {
+            "value": "{modes.color.generic.content.inverse.firm}",
+            "type": "color",
+            "description": "Enabled label for subtle accordion."
+          },
+          "text-hover": {
+            "value": "{modes.color.interactive.monochrome.inverse.default}",
+            "type": "color",
+            "description": "Hover label for any accordion."
+          },
+          "icon-active": {
+            "value": "{modes.color.interactive.monochrome.inverse.active}",
+            "type": "color",
+            "description": "Active chevron for any accordion."
+          },
+          "text-active": {
+            "value": "{modes.color.interactive.monochrome.inverse.active}",
+            "type": "color",
+            "description": "Active label for any accordion."
+          },
+          "bg-enabled": {
+            "value": "{modes.color.generic.bg.standard.nought}",
+            "type": "color"
+          },
+          "border-enabled": {
+            "value": "{modes.color.generic.fg.inverse.moderate}",
+            "type": "color"
+          }
         }
       },
       "standard": {
         "bg-alt": {
-          "value": "{base.color.generic.bg.standard.faint}",
+          "value": "{modes.color.generic.bg.standard.faint}",
           "type": "color"
         },
         "bg-default": {
-          "value": "{base.color.generic.bg.standard.nought}",
-          "type": "color"
-        },
-        "bgFooter-activated": {
-          "value": "{base.color.status.success.standard.default}",
-          "type": "color",
-          "description": "\n"
-        },
-        "bgFooter-active": {
-          "value": "{base.color.interactive.monochrome.standard.active}",
+          "value": "{modes.color.generic.bg.standard.nought}",
           "type": "color"
         },
         "bgFooter-default": {
-          "value": "{base.color.generic.bg.standard.faint}",
+          "value": "{modes.color.generic.bg.standard.faint}",
           "type": "color",
           "description": "tile footer bg color\n"
         },
-        "border-activated": {
-          "value": "{base.color.status.success.standard.default}",
-          "type": "color"
-        },
         "border-active": {
-          "value": "{base.color.interactive.monochrome.standard.active}",
+          "value": "{modes.color.interactive.monochrome.standard.active}",
           "type": "color"
         },
         "border-alt": {
-          "value": "{base.color.generic.fg.standard.soft}",
+          "value": "{modes.color.generic.fg.standard.soft}",
           "type": "color"
         },
         "border-default": {
-          "value": "{base.color.generic.fg.standard.delicate}",
+          "value": "{modes.color.generic.fg.standard.delicate}",
           "type": "color"
         },
         "dimmer": {
-          "value": "{base.color.generic.bg.inverse.nought}",
+          "value": "{modes.color.generic.bg.inverse.nought}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -84,45 +145,96 @@
           "description": "dimmed mask for dialogs"
         },
         "icon": {
-          "value": "{base.color.generic.fg.standard.moderate}",
+          "value": "{modes.color.generic.fg.standard.moderate}",
           "type": "color",
           "description": "Link preview image thumbnail"
         },
         "text-alt": {
-          "value": "{base.color.generic.content.standard.firm}",
+          "value": "{modes.color.generic.content.standard.moderate}",
           "type": "color",
           "description": "for subheadings etc"
         },
         "text-default": {
-          "value": "{base.color.generic.content.standard.harsh}",
+          "value": "{modes.color.generic.content.standard.harsh}",
           "type": "color",
           "description": "for headings, paragraph text etc "
         },
+        "AI": {
+          "borderhorizontal": {
+            "value": "{modes.color.status.ai.standard.default-horizontal}",
+            "type": "color",
+            "description": "top and bottom border for AI dialog component"
+          },
+          "bordervertical": {
+            "value": "{modes.color.status.ai.standard.default-vertical}",
+            "type": "color",
+            "description": "left and right border for dialog and insight bubbles."
+          }
+        },
+        "scrollbar": {
+          "bg-default": {
+            "value": "{modes.color.generic.bg.standard.nought}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.12",
+                  "space": "lch"
+                }
+              }
+            }
+          },
+          "fg-default": {
+            "value": "{modes.color.generic.fg.standard.moderate}",
+            "type": "color"
+          }
+        },
         "interactive": {
+          "detailedicon": {
+            "bg": {
+              "value": "{modes.color.brandreference.custom1}",
+              "type": "color",
+              "description": "\n"
+            }
+          },
+          "bgFooter-activated": {
+            "value": "{modes.color.status.success.standard.default}",
+            "type": "color",
+            "description": "\n"
+          },
+          "bgFooter-active": {
+            "value": "{modes.color.interactive.monochrome.standard.active}",
+            "type": "color"
+          },
+          "border-activated": {
+            "value": "{modes.color.status.success.standard.default}",
+            "type": "color"
+          },
           "bgFooter-default": {
-            "value": "{base.color.generic.bg.standard.nought}",
+            "value": "{modes.color.generic.bg.standard.nought}",
             "type": "color",
             "description": "tile footer bg color\n"
           },
           "bg-enabled": {
-            "value": "{base.color.generic.bg.standard.nought}",
+            "value": "{modes.color.generic.bg.standard.nought}",
             "type": "color"
           },
           "bg-disabled": {
-            "value": "{base.color.interactive.inactive.standard.defaultAlt}",
+            "value": "{modes.color.interactive.inactive.standard.defaultAlt}",
             "type": "color"
           },
           "bg-hover": {
-            "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
+            "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
             "type": "color",
             "description": "Used for accordion hover backgrounds\n"
           },
           "border-active": {
-            "value": "{base.color.interactive.monochrome.standard.active}",
+            "value": "{modes.color.interactive.monochrome.standard.active}",
             "type": "color"
           },
           "border-alt": {
-            "value": "{base.color.generic.fg.standard.delicate}",
+            "value": "{modes.color.generic.fg.standard.delicate}",
             "type": "color",
             "description": "Link preview.\n"
           },
@@ -133,73 +245,87 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{base.color.modifiers.button.hover}",
+                  "value": "{modes.color.modifiers.button.hover}",
                   "space": "lch",
-                  "color": "{base.color.modifier.contrastMore} "
+                  "color": "{modes.color.modifier.contrastMore} "
                 }
               }
             },
             "description": "For hover border on Link preview."
           },
           "border-inactive": {
-            "value": "{base.color.generic.fg.standard.soft}",
+            "value": "{modes.color.generic.fg.standard.soft}",
             "type": "color"
           },
           "border-enabled": {
-            "value": "{base.color.generic.fg.standard.moderate}",
+            "value": "{modes.color.generic.fg.standard.moderate}",
             "type": "color"
           },
           "icon-active": {
-            "value": "{base.color.interactive.monochrome.standard.active}",
+            "value": "{modes.color.interactive.monochrome.standard.active}",
             "type": "color",
             "description": "Active chevron for any accordion."
           },
           "icon-enabled": {
-            "value": "{base.color.interactive.monochrome.standard.default}",
+            "value": "{modes.color.interactive.monochrome.standard.default}",
             "type": "color",
             "description": "Enabled chevron for any accordion."
           },
           "iconAlt-enabled": {
-            "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
+            "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
             "type": "color",
             "description": "Enabled label for subtle accordion."
           },
           "icon-hover": {
-            "value": "{base.color.interactive.monochrome.standard.hover}",
+            "value": "{modes.color.interactive.monochrome.standard.default}",
             "type": "color",
             "description": "Hover chevron for any accordion."
           },
           "labelFooter-active": {
-            "value": "{base.color.interactive.monochrome.standard.withActive}",
+            "value": "{modes.color.interactive.monochrome.standard.withActive}",
             "type": "color"
           },
           "labelFooter-activated": {
-            "value": "{base.color.interactive.monochrome.standard.withActive}",
+            "value": "{modes.color.interactive.monochrome.standard.withActive}",
             "type": "color"
           },
           "text-active": {
-            "value": "{base.color.interactive.monochrome.standard.active}",
+            "value": "{modes.color.interactive.monochrome.standard.active}",
             "type": "color",
             "description": "Active label for any accordion."
           },
           "text-disabled": {
-            "value": "{base.color.interactive.inactive.standard.content}",
+            "value": "{modes.color.interactive.inactive.standard.content}",
             "type": "color"
           },
           "text-enabled": {
-            "value": "{base.color.interactive.monochrome.standard.default}",
+            "value": "{modes.color.generic.content.standard.harsh}",
             "type": "color",
             "description": "Enabled label for standard accordion."
           },
           "textAlt-enabled": {
-            "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
+            "value": "{modes.color.generic.content.standard.moderate}",
             "type": "color",
             "description": "Enabled label for subtle accordion."
           },
           "text-hover": {
-            "value": "{base.color.interactive.monochrome.standard.hover}",
+            "value": "{modes.color.interactive.monochrome.standard.default}",
             "type": "color",
             "description": "Hover label for any accordion."
+          }
+        }
+      },
+      "blockquote": {
+        "standard": {
+          "border": {
+            "value": "{modes.color.interactive.primary.standard.default}",
+            "type": "color"
+          }
+        },
+        "inverse": {
+          "border": {
+            "value": "{modes.color.interactive.primary.inverse.default}",
+            "type": "color"
           }
         }
       }
@@ -207,9 +333,83 @@
     "size": {
       "accordionstandard": {
         "chevron": {
-          "value": "{global.size.icon.L}",
+          "value": "{global.size.icon.M}",
           "type": "sizing",
           "description": "Accordion chevron container"
+        }
+      },
+      "quotebar": {
+        "width": {
+          "value": "{global.size.micro.M}",
+          "type": "sizing",
+          "description": "block quote bar width"
+        }
+      },
+      "chatbubble": {
+        "maxwidth": {
+          "value": "{global.size.macro.XXXXL}* 5",
+          "type": "sizing",
+          "description": "max width for chat bubbles"
+        }
+      },
+      "carousel": {
+        "mediaslide": {
+          "minheight": {
+            "value": "300",
+            "type": "sizing",
+            "description": "max height for media visual"
+          }
+        }
+      },
+      "copilot": {
+        "emptystate": {
+          "illustration": {
+            "value": "{global.size.macro.M} * 5",
+            "type": "sizing",
+            "description": "Illustration size"
+          },
+          "content": {
+            "maxwidth": {
+              "value": "{global.size.macro.XXXXL} * 5",
+              "type": "sizing",
+              "description": "max-width of the insight empty state content area"
+            }
+          }
+        },
+        "overlay": {
+          "maxheight": {
+            "value": "{global.size.macro.XXXXL} * 8",
+            "type": "sizing",
+            "description": "max-height of the copilot container overlay "
+          }
+        }
+      },
+      "generic": {
+        "emptystate": {
+          "illustration": {
+            "primary": {
+              "S": {
+                "value": "{global.size.macro.M} * 5",
+                "type": "sizing",
+                "description": "Illustration size for small error and empty states"
+              },
+              "M": {
+                "value": "{global.size.macro.M} * 6",
+                "type": "sizing",
+                "description": "Illustration size for medium error and empty states"
+              },
+              "L": {
+                "value": "{global.size.macro.M} * 8",
+                "type": "sizing",
+                "description": "Illustration size for large error and empty states"
+              }
+            },
+            "secondary": {
+              "value": "{global.size.macro.M} + {button.size.icon.M}",
+              "type": "sizing",
+              "description": "Illustration size for secondary empty states"
+            }
+          }
         }
       },
       "drawer": {
@@ -233,79 +433,119 @@
           "description": "Dialog, sidebar and drawer footer max-height"
         }
       },
+      "icon": {
+        "S": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
+        },
+        "M": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
+        },
+        "L": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing",
+          "description": "Deliberately referencing global M (20px). Accordion chevron."
+        }
+      },
+      "linkpreview": {
+        "thumbnail": {
+          "S": {
+            "value": "{global.size.macro.XXXXL} - 3",
+            "type": "sizing",
+            "description": "Thumbnail height and width for small variant"
+          },
+          "M": {
+            "value": "{global.size.macro.XXXXL} + {global.size.macro.XXS}",
+            "type": "sizing",
+            "description": "Thumbnail height and width for medium variant"
+          },
+          "L": {
+            "value": "{global.size.macro.XXXXL} + {global.size.macro.L}",
+            "type": "sizing",
+            "description": "Thumbnail height and width for large variant"
+          }
+        },
+        "headertext": {
+          "S": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "fixed text layer size for small header"
+          },
+          "M": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "fixed text layer size for large header"
+          },
+          "L": {
+            "value": "{global.size.macro.M}",
+            "type": "sizing",
+            "description": "fixed text layer size for small header"
+          }
+        },
+        "descriptiontext": {
+          "S": {
+            "value": "{global.size.macro.M} + {global.size.micro.XS}",
+            "type": "sizing",
+            "description": "Fixed height for small note description text string"
+          },
+          "M": {
+            "value": "{global.size.macro.L}",
+            "type": "sizing",
+            "description": "Fixed height for medium note description text string"
+          },
+          "L": {
+            "value": "{global.size.macro.XL}",
+            "type": "sizing",
+            "description": "Fixed height for large note description text string"
+          }
+        }
+      },
       "responsive": {
         "XXS": {
-          "value": "{global.size.mega.XXS}",
+          "value": "{global.size.flex.XXS}",
           "type": "sizing",
           "description": "min and max widths for responsive tile items"
         },
         "XS": {
-          "value": "{global.size.mega.XS}",
+          "value": "{global.size.flex.XS}",
           "type": "sizing",
           "description": "min and max widths for responsive tile items"
         },
         "S": {
-          "value": "{global.size.mega.S}",
+          "value": "{global.size.flex.S}",
           "type": "sizing",
           "description": "min and max widths for responsive tile items. Min width for Tile select content wrapper."
         },
         "M": {
-          "value": "{global.size.mega.M}",
+          "value": "{global.size.flex.M}",
           "type": "sizing",
           "description": "min and max widths for responsive tile items"
         },
         "L": {
-          "value": "{global.size.mega.L}",
+          "value": "{global.size.flex.L}",
           "type": "sizing",
           "description": "min and max widths for responsive tile items"
         },
         "XL": {
-          "value": "{global.size.mega.XL}",
+          "value": "{global.size.flex.XL}",
           "type": "sizing",
           "description": "Small screen mid width inside page margins."
         },
         "XXL": {
-          "value": "{global.size.mega.XXL}",
+          "value": "{global.size.flex.XXL}",
           "type": "sizing",
           "description": "Small screen full page width."
         },
         "XXXL": {
-          "value": "{global.size.mega.XXXL}",
+          "value": "{global.size.flex.XXXL}",
           "type": "sizing",
           "description": "min and max widths for responsive tile items"
         },
         "XXXXL": {
-          "value": "{global.size.mega.XXXXL}",
+          "value": "{global.size.flex.XXXXL}",
           "type": "sizing",
           "description": "Max width for single line of text."
-        }
-      },
-      "linkpreview": {
-        "M": {
-          "value": "{global.size.macro.XXXXL}",
-          "type": "sizing",
-          "description": "Thumbnail container"
-        }
-      },
-      "uploadpreview": {
-        "M": {
-          "value": "{global.size.macro.XXXL}",
-          "type": "sizing",
-          "description": "Thumbnail container"
-        }
-      },
-      "pagination": {
-        "dots": {
-          "value": "{global.size.micro.L}",
-          "type": "sizing"
-        },
-        "activedot": {
-          "value": "{global.size.macro.XXS}",
-          "type": "sizing"
-        },
-        "hitarea": {
-          "value": "{global.size.macro.M}",
-          "type": "sizing"
         }
       },
       "scrollbar": {
@@ -313,28 +553,39 @@
           "value": "{global.size.micro.XL}",
           "type": "sizing",
           "description": "Container that the scrollbar sits within\n"
-        },
-        "bg": {
-          "value": "{global.size.micro.M}",
-          "type": "sizing",
-          "description": "Scrollbar bg\n"
-        },
-        "fg": {
-          "value": "{global.size.micro.S}",
-          "type": "sizing",
-          "description": "scrollbar handle"
         }
       },
-      "subscriptiontile": {
+      "sidebar": {
+        "responsive": {
+          "min": {
+            "value": "{global.size.flex.XL}",
+            "type": "sizing",
+            "description": "min-width for sidebar"
+          },
+          "max": {
+            "value": "{global.size.flex.XXXXL}",
+            "type": "sizing",
+            "description": "max-width for sidebar"
+          }
+        }
+      },
+      "tileselect": {
         "footer": {
           "value": "{global.size.macro.L}",
           "type": "sizing",
           "description": "Product identifier\n"
         },
         "productidentifier": {
-          "value": "{global.size.macro.L}",
-          "type": "sizing",
-          "description": "Product identifier\n"
+          "M": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "Product identifier\n"
+          },
+          "L": {
+            "value": "{global.size.macro.L}",
+            "type": "sizing",
+            "description": "Product identifier\n"
+          }
         }
       },
       "tooltipArrow": {
@@ -349,15 +600,11 @@
           "description": "tooltip arrow height"
         }
       },
-      "icon": {
+      "uploadpreview": {
         "M": {
-          "value": "{global.size.icon.M}",
-          "type": "sizing"
-        },
-        "L": {
-          "value": "{global.size.icon.L}",
+          "value": "{global.size.macro.XXXL}",
           "type": "sizing",
-          "description": "Link preview thumbnail."
+          "description": "Thumbnail container"
         }
       }
     },
@@ -366,51 +613,6 @@
         "value": "{global.radius.none}",
         "type": "borderRadius",
         "description": "Card select (inner adjacent corners), Subscription tile footer top corners"
-      },
-      "carouselslide": {
-        "value": "{global.radius.container.L}",
-        "type": "borderRadius",
-        "description": "Carousel slides"
-      },
-      "dialog": {
-        "value": "{global.radius.container.XL}",
-        "type": "borderRadius",
-        "description": "Dialog"
-      },
-      "colorpicker": {
-        "value": "{global.radius.container.L}",
-        "type": "borderRadius",
-        "description": "Color picker container radius"
-      },
-      "filepreview": {
-        "value": "{global.radius.container.M}",
-        "type": "borderRadius",
-        "description": "File preview (parent container), "
-      },
-      "note": {
-        "value": "{global.radius.container.M}",
-        "type": "borderRadius",
-        "description": "Note"
-      },
-      "linkpreview": {
-        "value": "{global.radius.interactive.M}",
-        "type": "borderRadius",
-        "description": "Link preview (outer corners)"
-      },
-      "scrollbar": {
-        "value": "{global.radius.circle}",
-        "type": "borderRadius",
-        "description": "Scrollbar"
-      },
-      "subscriptiontile": {
-        "value": "{global.radius.container.M}",
-        "type": "borderRadius",
-        "description": "Subscription tile"
-      },
-      "texteditor": {
-        "value": "{global.radius.container.M}",
-        "type": "borderRadius",
-        "description": "Text editor (footer bottom corners)\n"
       },
       "card": {
         "moderate": {
@@ -422,19 +624,72 @@
           "value": "{global.radius.container.XL}",
           "type": "borderRadius",
           "description": "Card (more rounded)"
+        },
+        "sweeping": {
+          "value": "{global.radius.container.XXL}",
+          "type": "borderRadius",
+          "description": "Card largest rounded type"
         }
       },
-      "skeleton": {
-        "rectangle": {
-          "value": "{global.radius.container.M}",
-          "type": "borderRadius",
-          "description": "Skeleton (rectangle & text)"
-        },
-        "circle": {
+      "carouselslide": {
+        "value": "{global.radius.container.L}",
+        "type": "borderRadius",
+        "description": "Carousel slides"
+      },
+      "chatbubble": {
+        "value": "{global.radius.container.L}",
+        "type": "borderRadius"
+      },
+      "colorpicker": {
+        "value": "{global.radius.container.L}",
+        "type": "borderRadius",
+        "description": "Color picker container radius"
+      },
+      "blockquote": {
+        "bar": {
           "value": "{global.radius.circle}",
           "type": "borderRadius",
-          "description": "Skeleton (circle)"
+          "description": "radius for blockquote bar"
         }
+      },
+      "contacttile": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius"
+      },
+      "dialog": {
+        "value": "{global.radius.container.XL}",
+        "type": "borderRadius",
+        "description": "Dialog"
+      },
+      "filepreview": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius",
+        "description": "File preview (parent container), "
+      },
+      "linkpreview": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "Link preview (outer corners)"
+      },
+      "heroimage": {
+        "value": "{global.radius.container.XXXXL}",
+        "type": "borderRadius",
+        "description": "hero image radius"
+      },
+      "note": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius",
+        "description": "Note"
+      },
+      "scrollbar": {
+        "value": "{global.radius.circle}",
+        "type": "borderRadius",
+        "description": "Scrollbar"
+      },
+      "texteditor": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius",
+        "description": "Text editor (footer bottom corners)\n"
       },
       "tile": {
         "moderate": {
@@ -446,41 +701,37 @@
           "value": "{global.radius.container.XL}",
           "type": "borderRadius",
           "description": "Tile (more rounded)"
+        },
+        "sweeping": {
+          "value": "{global.radius.container.XXL}",
+          "type": "borderRadius",
+          "description": "Tile largest roundedness\n"
+        }
+      },
+      "tileselect": {
+        "moderate": {
+          "value": "{global.radius.container.L}",
+          "type": "borderRadius",
+          "description": "Tile (less rounded)"
+        },
+        "curved": {
+          "value": "{global.radius.container.XL}",
+          "type": "borderRadius",
+          "description": "Tile (more rounded)"
+        },
+        "sweeping": {
+          "value": "{global.radius.container.XXL}",
+          "type": "borderRadius",
+          "description": "Tile largest roundedness\n"
         }
       }
     },
     "space": {
       "none": {
-        "value": "0",
+        "value": "{global.space.none}",
         "type": "spacing"
       },
       "accordionsubtle": {
-        "integral": {
-          "value": "{global.space.micro.S}",
-          "type": "spacing",
-          "description": "Gap between icon and label in subtle accordion."
-        },
-        "pl": {
-          "M": {
-            "value": "{global.space.micro.XL}",
-            "type": "spacing",
-            "description": "Left padding on Subtle accordion vertical line"
-          }
-        },
-        "x": {
-          "M": {
-            "value": "{global.space.micro.XS}",
-            "type": "spacing",
-            "description": "Horizontal padding on Accordion subtle."
-          }
-        },
-        "y": {
-          "M": {
-            "value": "{global.space.micro.XS}",
-            "type": "spacing",
-            "description": "Vertical padding on Accordion subtle."
-          }
-        },
         "yg": {
           "M": {
             "value": "{global.space.macro.XS}",
@@ -489,13 +740,182 @@
           }
         }
       },
+      "chatbubble": {
+        "outer": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Left margin on AI response bubbles and right margin on user prompt bubbles."
+            },
+            "L": {
+              "value": "{global.space.macro.XL} * 2",
+              "type": "spacing",
+              "description": "Right margin on AI response bubbles and left margin on user prompt bubbles."
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Top and bottom margin on all chat bubbles."
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Gap between timestamp and chat bubble container. Also gap between give feedback button and container."
+            }
+          }
+        },
+        "inner": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Left and right padding inside chat bubbles."
+            }
+          },
+          "xg": {
+            "S": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing"
+            },
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing"
+            }
+          },
+          "Y": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Top and bottom padding inside chat bubbles."
+            }
+          },
+          "yg": {
+            "XS": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing"
+            },
+            "S": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing"
+            },
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing"
+            },
+            "L": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Vertical gap between inner blocks within a chat or insight bubble."
+            }
+          }
+        }
+      },
+      "filepreview": {
+        "preview": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Horizontal padding on large thumbnail image"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical padding on large thumbnail image."
+            }
+          }
+        }
+      },
+      "flex": {
+        "xg": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Small horizontal item spacing"
+          },
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Medium horizontal item spacing"
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Large horizontal item spacing"
+          }
+        },
+        "yg": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Small row gap"
+          },
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Medium row gap"
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Large row gap"
+          }
+        },
+        "item": {
+          "x": {
+            "S": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Small left and right padding on flex items"
+            },
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Medium left and right padding on flex items"
+            },
+            "L": {
+              "value": "{global.space.macro.L}",
+              "type": "spacing",
+              "description": "Large left and right padding on flex items"
+            }
+          },
+          "y": {
+            "S": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Small top bottom padding on flex items"
+            },
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Medium top bottom padding on flex items"
+            },
+            "L": {
+              "value": "{global.space.macro.L}",
+              "type": "spacing",
+              "description": "Large top bottom padding on flex items"
+            }
+          }
+        }
+      },
       "generic": {
         "content": {
           "x": {
+            "XS": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing"
+            },
             "S": {
-              "value": "{global.space.macro.S}",
+              "value": "{global.space.macro.XS}",
               "type": "spacing",
-              "description": "Left and right padding S cards and S tiles"
+              "description": "Left and right padding copilot chat history items, S accordions, S cards and S tiles"
             },
             "M": {
               "value": "{global.space.macro.M}",
@@ -509,15 +929,23 @@
             }
           },
           "y": {
+            "XS": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing"
+            },
             "S": {
-              "value": "{global.space.macro.S}",
+              "value": "{global.space.macro.XS}",
               "type": "spacing",
-              "description": "Left and right padding S cards and S tiles"
+              "description": "Top and bottom padding S Accordions, S cards and S tiles"
             },
             "M": {
               "value": "{global.space.macro.M}",
               "type": "spacing",
               "description": "Vertical padding on content in dialog, drawer, sidebar card and tile"
+            },
+            "L": {
+              "value": "{global.space.macro.L}",
+              "type": "spacing"
             }
           },
           "xg": {
@@ -530,48 +958,75 @@
               "value": "{global.space.macro.XS}",
               "type": "spacing",
               "description": "gap padding between carousel tiles"
-            }
-          },
-          "yg": {
-            "M": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing",
-              "description": "Vertical gap between content items in dialog, drawer, sidebar, M card and M tile. "
-            }
-          }
-        },
-        "footer": {
-          "x": {
-            "S": {
-              "value": "{global.space.macro.S}",
-              "type": "spacing",
-              "description": "Left and right padding S card and S tile footers"
             },
             "M": {
               "value": "{global.space.macro.M}",
               "type": "spacing",
-              "description": "Left and right padding on dialog, drawer, M card, M tile and sidebar footers"
+              "description": "gap padding between carousel tiles"
+            }
+          },
+          "yg": {
+            "S": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical gap between content items in Anchor nav quick links\n"
+            },
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Vertical gap between content items in copilot content, dialog, drawer, sidebar, M card and M tile. "
             },
             "L": {
-              "value": "{global.space.macro.L}",
+              "value": "{global.space.macro.M}",
               "type": "spacing",
-              "description": "Left and right padding on large card and tile footers"
+              "description": "vertical gap between block quote text and avatar"
+            }
+          }
+        },
+        "outer": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Left and right margins on dialog and sidebar in small screen full width contexts"
             }
           },
           "y": {
             "M": {
-              "value": "{global.space.macro.XS}",
+              "value": "{global.space.macro.M}",
               "type": "spacing",
-              "description": "top and bottom padding on dialog, drawer and sidebar footers"
+              "description": "Top and Bottom margins on dialog and sidebar in small screen full width contexts"
             }
           }
         },
         "header": {
           "x": {
+            "S": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Left and right padding on accordion"
+            },
             "M": {
               "value": "{global.space.macro.M}",
               "type": "spacing",
-              "description": "Left and right padding on dialog, drawer, M cards, M tiles and sidebar"
+              "description": "Left and right padding on copilot, dialog, drawer, M cards, M tiles and sidebar."
+            }
+          },
+          "y": {
+            "XS": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "Top and bottom padding copilot header and subheader."
+            },
+            "S": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Top and bottom padding on small accordion."
+            },
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Vertical padding on accordion, dialog headers and on sub-page headers inside copilot (e.g insights and chat history)."
             }
           },
           "xg": {
@@ -581,18 +1036,46 @@
               "description": "horizontal space between dialog heading and icon"
             }
           },
-          "y": {
-            "M": {
-              "value": "{global.space.macro.M}",
-              "type": "spacing",
-              "description": "Vertical padding on Accordion and dialog headers"
-            }
-          },
           "yg": {
             "M": {
               "value": "{global.space.micro.S}",
               "type": "spacing",
-              "description": "vertical space between heading and subheading in dialog, accordion"
+              "description": "vertical space between heading and subheading in dialog, accordion and sub-pages inside copilot."
+            },
+            "L": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "vertical space between heading and Powered By AI identifier in dialog header"
+            }
+          }
+        },
+        "emptystate": {
+          "y": {
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Spacing between empty state heading and body copy below it."
+            },
+            "L": {
+              "value": "{global.space.macro.XL}",
+              "type": "spacing",
+              "description": "Spacing between empty state roundel and heading below it."
+            }
+          }
+        },
+        "footer": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Left and right padding on copilot footer"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Top and bottom padding on copilot footer"
             }
           }
         }
@@ -612,6 +1095,22 @@
             "description": "Gap between columns in editor detail in Note."
           }
         },
+        "timestamp": {
+          "xg": {
+            "M": {
+              "value": "{global.space.macro.M}",
+              "type": "spacing",
+              "description": "Gap between created and updated editor columns"
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "gap between create or updated title and timestamp"
+            }
+          }
+        },
         "y": {
           "M": {
             "value": "{global.space.macro.M}",
@@ -624,6 +1123,76 @@
             "value": "{global.space.macro.XS}",
             "type": "spacing",
             "description": "Vertical gap on Note"
+          }
+        }
+      },
+      "linkpreview": {
+        "x": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Content horizontal padding for small variant"
+          },
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Content horizontal padding for medium variant"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Content horizontal padding for large variant"
+          }
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Content horizontal padding for small variant"
+          },
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Content horizontal padding for medium variant"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Content horizontal padding for large variant"
+          }
+        },
+        "y": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Content horizontal padding for small variant"
+          },
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Content horizontal padding for medium variant"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Content horizontal padding for large variant"
+          }
+        },
+        "yg": {
+          "S": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Content horizontal padding for small variant"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Content horizontal padding for medium variant"
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Content horizontal padding for large variant"
           }
         }
       },
@@ -666,70 +1235,6 @@
             "value": "{global.space.micro.XS}",
             "type": "spacing",
             "description": "top and bottom padding inside scrollbar outer container"
-          }
-        }
-      },
-      "stepflow": {
-        "header": {
-          "yg": {
-            "M": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing",
-              "description": "Gap between Step flow title and step numbers"
-            }
-          }
-        },
-        "content": {
-          "yg": {
-            "M": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Gap between Step flow numers and step visuals"
-            }
-          }
-        }
-      },
-      "subscriptiontile": {
-        "x": {
-          "M": {
-            "value": "{global.space.macro.XS}",
-            "type": "spacing",
-            "description": "Left and right padding on Subscription tile container"
-          }
-        },
-        "y": {
-          "M": {
-            "value": "{global.space.macro.XS}",
-            "type": "spacing",
-            "description": "Top bottom padding on Subscription tile container"
-          }
-        },
-        "yg": {
-          "M": {
-            "value": "{global.space.macro.XS}",
-            "type": "spacing",
-            "description": "Vertical gap between content blocks in Subscription tile."
-          }
-        },
-        "footer": {
-          "y": {
-            "M": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Top bottom padding in footer."
-            },
-            "L": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing",
-              "description": "Top bottom margins on carousel dots"
-            }
-          },
-          "xg": {
-            "S": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Gap between carousel dots"
-            }
           }
         }
       },
@@ -787,7 +1292,7 @@
           "M": {
             "value": "{global.space.macro.M}",
             "type": "spacing",
-            "description": "Right left padding on Tile or Card."
+            "description": "Right left padding on drag wrapper"
           },
           "L": {
             "value": "{global.space.macro.L}",
@@ -806,7 +1311,7 @@
           "XS": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
-            "description": "Top bottom padding on Link preview"
+            "description": "Top bottom padding on Link preview and on card drag wrapper"
           },
           "S": {
             "value": "{global.space.macro.XS}",
@@ -831,44 +1336,124 @@
           }
         }
       },
-      "tileflex": {
+      "tileselect": {
         "x": {
           "S": {
             "value": "{global.space.macro.XS}",
             "type": "spacing",
-            "description": "Left and right padding on Tile flex"
+            "description": "Left and right padding on tile select container"
           },
           "M": {
             "value": "{global.space.macro.M}",
             "type": "spacing",
-            "description": "Left and right padding on Tile flex"
+            "description": "Left and right padding on tile select container"
           },
           "L": {
             "value": "{global.space.macro.L}",
             "type": "spacing",
-            "description": "Left and right padding on Tile flex"
+            "description": "Left and right padding on tile select container"
           }
         },
         "y": {
           "S": {
-            "value": "{global.space.micro.L}",
-            "type": "spacing",
-            "description": "Top bottom padding on Tile flex"
-          },
-          "M": {
             "value": "{global.space.macro.XS}",
             "type": "spacing",
-            "description": "Top bottom padding on Tile flex"
+            "description": "Top and bottom padding on tile select container"
           },
-          "L": {
+          "M": {
             "value": "{global.space.macro.M}",
             "type": "spacing",
-            "description": "Top bottom padding on Tile flex"
+            "description": "Top bottom padding on tile select container"
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Top and bottom padding on tile select container"
+          }
+        },
+        "yg": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Vertical gap between content blocks in Subscription tile."
+          },
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Vertical gap between content blocks in Subscription tile."
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Vertical gap between content blocks in Subscription tile."
+          }
+        },
+        "content": {
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical gap between strings of text"
+            }
+          }
+        },
+        "header": {
+          "xg": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "gap between identifier and header content"
+            }
+          },
+          "yg": {
+            "S": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical gap between header content wrapper items"
+            }
+          }
+        },
+        "footer": {
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Top bottom padding in footer."
+            },
+            "L": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Top bottom margins on carousel dots"
+            }
+          },
+          "xg": {
+            "S": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Gap between carousel dots"
+            }
           }
         }
       }
     },
     "boxshadow": {
+      "card": {
+        "enabled": {
+          "value": "{global.boxshadow.interactive.enabled}",
+          "type": "boxShadow",
+          "description": "Card (enabled)"
+        },
+        "hover": {
+          "value": "{global.boxshadow.interactive.hover}",
+          "type": "boxShadow",
+          "description": "Card (hover state)"
+        },
+        "drag": {
+          "value": "{global.boxshadow.interactive.drag}",
+          "type": "boxShadow",
+          "description": "Card (drag state)"
+        }
+      },
       "carousel": {
         "value": "{global.boxshadow.container.distant}",
         "type": "boxShadow",
@@ -898,26 +1483,14 @@
         "value": "{global.boxshadow.container.sticky-footer}",
         "type": "boxShadow",
         "description": "Sticky footer in Dialog, Drawer, Sidebar."
-      },
-      "card": {
-        "enabled": {
-          "value": "{global.boxshadow.interactive.enabled}",
-          "type": "boxShadow",
-          "description": "Card (enabled)"
-        },
-        "hover": {
-          "value": "{global.boxshadow.interactive.hover}",
-          "type": "boxShadow",
-          "description": "Card (hover state)"
-        },
-        "drag": {
-          "value": "{global.boxshadow.interactive.drag}",
-          "type": "boxShadow",
-          "description": "Card (drag state)"
-        }
       }
     },
     "borderwidth": {
+      "AIgradient": {
+        "value": "{global.borderwidth.XL}",
+        "type": "borderWidth",
+        "description": "AI gradient used on all containers such as dialog, chat bubbles etc"
+      },
       "dialog": {
         "value": "{global.borderwidth.XS}",
         "type": "borderWidth",
@@ -980,6 +1553,20 @@
           "description": "Accordion subtle (content vertical line)"
         }
       },
+      "chatbubble": {
+        "default": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth"
+        },
+        "error": {
+          "value": "{global.borderwidth.S}",
+          "type": "borderWidth"
+        },
+        "success": {
+          "value": "{global.borderwidth.S}",
+          "type": "borderWidth"
+        }
+      },
       "filepreview": {
         "container": {
           "value": "{global.borderwidth.XS}",
@@ -997,7 +1584,7 @@
           "description": "File preview (file selector)\n"
         }
       },
-      "subscriptiontile": {
+      "tileselect": {
         "active": {
           "value": "{global.borderwidth.XS}",
           "type": "borderWidth",
@@ -1011,24 +1598,126 @@
         "selected": {
           "value": "{global.borderwidth.S}",
           "type": "borderWidth",
-          "description": "Subscription tile (selected product)"
+          "description": "Tile select (selected tile)"
         },
         "unavailable": {
           "value": "{global.borderwidth.XS}",
           "type": "borderWidth",
           "description": "Subscription tile (unavailable product)"
-        }
-      },
-      "tileselect": {
+        },
         "enabled": {
           "value": "{global.borderwidth.XS}",
           "type": "borderWidth",
           "description": "Tile select (enabled tile)"
+        }
+      }
+    },
+    "opacity": {
+      "carousel": {
+        "hidden": {
+          "value": "{modes.color.modifiers.input.disabledFg}",
+          "type": "opacity",
+          "description": "opacity applied to next and previous carousel slides"
+        }
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "heading": {
+          "M": {
+            "value": "{global.typography.adaptive.heading.XS}",
+            "type": "typography",
+            "description": "Accordion, Subscription tile, Tile select and generic tile or card headings"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.heading.S}",
+            "type": "typography",
+            "description": "Dialog, drawer and sidebar headings"
+          }
         },
-        "selected": {
-          "value": "{global.borderwidth.S}",
-          "type": "borderWidth",
-          "description": "Tile select (selected tile)"
+        "subheading": {
+          "M": {
+            "value": "{global.typography.adaptive.subheading.S}",
+            "type": "typography",
+            "description": "Accordion subheading,  Step flow subheading, tile select subheading, dialog, drawer and sidebar subheading"
+          }
+        },
+        "label": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "paragraph": {
+          "S": {
+            "value": "{global.typography.adaptive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.moderate.L}",
+            "type": "typography"
+          }
+        }
+      },
+      "responsive": {
+        "heading": {
+          "M": {
+            "value": "{global.typography.responsive.heading.XS}",
+            "type": "typography",
+            "description": "Accordion, Subscription tile, Tile select and generic tile or card headings"
+          },
+          "L": {
+            "value": "{global.typography.responsive.heading.S}",
+            "type": "typography",
+            "description": "Dialog, drawer and sidebar headings"
+          }
+        },
+        "subheading": {
+          "M": {
+            "value": "{global.typography.responsive.subheading.S}",
+            "type": "typography",
+            "description": "Accordion subheading,  Step flow subheading, tile select subheading, dialog, drawer and sidebar subheading"
+          }
+        },
+        "label": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
+        },
+        "paragraph": {
+          "S": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          }
         }
       }
     }

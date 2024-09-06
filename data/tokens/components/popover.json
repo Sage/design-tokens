@@ -1,138 +1,321 @@
 {
   "popover": {
-    "color": {
-      "bg-active": {
-        "value": "{base.color.interactive.monochrome.standard.active}",
-        "type": "color",
-        "description": "previously action minor 850"
-      },
-      "bg-default": {
-        "value": "{base.color.generic.bg.standard.nought}",
-        "type": "color",
-        "description": "popover container bg"
-      },
-      "bg-hover": {
-        "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
-        "type": "color",
-        "description": "was action minor 100\n"
-      },
-      "label-active": {
-        "value": "{base.color.interactive.monochrome.standard.withActive}",
-        "type": "color"
-      },
-      "label-disabled": {
-        "value": "{base.color.interactive.inactive.standard.content}",
-        "type": "color"
-      },
-      "label-hover": {
-        "value": "{base.color.interactive.monochrome.standard.withHover}",
-        "type": "color"
-      },
-      "label-enabled": {
-        "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
-        "type": "color"
-      }
-    },
     "size": {
-      "item": {
-        "S": {
-          "value": "{global.size.macro.S}",
-          "type": "sizing",
-          "description": "small popover menu items"
-        },
-        "M": {
-          "value": "{global.size.macro.M}",
-          "type": "sizing",
-          "description": "medium popover menu items"
-        },
-        "L": {
-          "value": "{global.size.macro.L}",
-          "type": "sizing",
-          "description": "Large popover menu items"
-        }
-      },
       "icon": {
         "M": {
           "value": "{global.size.icon.M}",
           "type": "sizing"
         }
+      },
+      "item": {
+        "S": {
+          "value": "{global.size.macro.S}",
+          "type": "sizing",
+          "description": "REF'D IN FORM. Menu item min height."
+        },
+        "M": {
+          "value": "{global.size.macro.M}",
+          "type": "sizing",
+          "description": "REF'D IN FORM. Menu item min height."
+        },
+        "L": {
+          "value": "{global.size.macro.L}",
+          "type": "sizing",
+          "description": "REF'D IN FORM. Menu item min height."
+        }
       }
     },
     "radius": {
+      "none": {
+        "value": "{global.radius.none}",
+        "type": "borderRadius",
+        "description": "Navigation menu top corners"
+      },
       "container": {
         "value": "{global.radius.container.M}",
         "type": "borderRadius",
-        "description": "Popover (menu container in Action popovers)"
+        "description": "REF'D IN FORM. Menu container."
+      },
+      "optionfocus": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius",
+        "description": "Popover menu option focus"
       }
     },
     "boxshadow": {
-      "popover": {
+      "container": {
         "value": "{global.boxshadow.container.near}",
         "type": "boxShadow",
-        "description": "popover container for Action popover, Button (multi action and split), Dropdown"
-      }
-    },
-    "borderwidth": {
-      "divider": {
-        "item": {
-          "value": "{global.borderwidth.XS}",
-          "type": "borderWidth",
-          "description": "Dropdown (menu item divider)"
-        }
+        "description": "REF'D IN FORM. Popover container for Button popover, Button split, (and Form calendar, color picker, dropdown) "
       }
     },
     "space": {
-      "generic": {
-        "content": {
-          "x": {
-            "M": {
-              "value": "{global.space.macro.M}",
-              "type": "spacing"
-            }
-          },
-          "y": {
-            "M": {
-              "value": "{global.space.macro.M}",
-              "type": "spacing",
-              "description": "Vertical padding on content in dialog, drawer, sidebar card and tile"
-            }
-          },
-          "yg": {
-            "M": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing"
-            }
-          },
-          "xg": {
-            "M": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing"
-            }
-          }
-        }
-      },
       "menu": {
         "y": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "REF'D IN FORM. Top and bottom padding on popover menu container."
+          },
           "M": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
-            "description": "Top and bottom padding on popover menu container"
+            "description": "REF'D IN FORM. Top and bottom padding on popover menu container"
+          },
+          "L": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "REF'D IN FORM. Top and bottom padding on popover menu container"
+          }
+        },
+        "yg": {
+          "S": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Space between trigger and menu card."
+          },
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Space between trigger and menu card."
+          },
+          "L": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Space between trigger and menu card."
           }
         }
       },
       "option": {
         "x": {
+          "S": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "REF'D in FORM. Right left padding on popover option."
+          },
           "M": {
             "value": "{global.space.micro.XXL}",
             "type": "spacing",
-            "description": "Right left padding on popover option."
+            "description": "REF'D in FORM. Right left padding on popover option."
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "REF'D in FORM. Right left padding on popover option."
           }
         },
-        "y": {
+        "xg": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between left icon and menu button label"
+          },
           "M": {
             "value": "{global.space.micro.L}",
             "type": "spacing",
-            "description": "Top and bottom padding on popover option."
+            "description": "Gap between left icon and menu button label"
+          },
+          "L": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between left icon and menu button label"
+          }
+        },
+        "y": {
+          "S": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "REF'D in FORM. Vertical padding on popover option."
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "REF'D in FORM. Vertical padding on popover option."
+          },
+          "L": {
+            "value": "{global.space.micro.XL}",
+            "type": "spacing",
+            "description": "REF'D in FORM. Vertical padding on popover option."
+          }
+        }
+      },
+      "submenu": {
+        "x": {
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Right left padding on small screen submenu popover container."
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Right left padding on small screen submenu popover container."
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Right left padding on small screen submenu popover container."
+          }
+        }
+      }
+    },
+    "color": {
+      "standard": {
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.standard.active}",
+          "type": "color",
+          "description": "previously action minor 850"
+        },
+        "bg-activealt": {
+          "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
+          "type": "color",
+          "description": "REF'D IN FORM.\n"
+        },
+        "bg-default": {
+          "value": "{modes.color.generic.bg.standard.nought}",
+          "type": "color",
+          "description": "REF'D IN FORM. Popover container bg"
+        },
+        "bg-hover": {
+          "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
+          "type": "color",
+          "description": "REF'D IN FORM.\n"
+        },
+        "label-active": {
+          "value": "{modes.color.interactive.monochrome.standard.withActive}",
+          "type": "color"
+        },
+        "label-activealt": {
+          "value": "{modes.color.interactive.monochrome.standard.withHover}",
+          "type": "color"
+        },
+        "label-disabled": {
+          "value": "{modes.color.interactive.inactive.standard.content}",
+          "type": "color"
+        },
+        "label-hover": {
+          "value": "{modes.color.interactive.monochrome.standard.withHover}",
+          "type": "color"
+        },
+        "label-enabled": {
+          "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
+          "type": "color"
+        },
+        "submenu": {
+          "bg-default": {
+            "value": "{modes.color.generic.bg.standard.faint}",
+            "type": "color",
+            "description": "popover small screen submenu container bg"
+          }
+        }
+      },
+      "inverse": {
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.standard.active}",
+          "type": "color"
+        },
+        "bg-activealt": {
+          "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
+          "type": "color",
+          "description": "REF'D IN FORM.\n"
+        },
+        "bg-default": {
+          "value": "{modes.color.generic.bg.standard.nought}",
+          "type": "color",
+          "description": "REF'D IN FORM. Popover container bg"
+        },
+        "bg-hover": {
+          "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
+          "type": "color",
+          "description": "REF'D IN FORM.\n"
+        },
+        "label-activealt": {
+          "value": "{modes.color.interactive.monochrome.standard.withHover}",
+          "type": "color"
+        },
+        "label-active": {
+          "value": "{modes.color.interactive.monochrome.standard.withActive}",
+          "type": "color"
+        },
+        "label-disabled": {
+          "value": "{modes.color.interactive.inactive.standard.content}",
+          "type": "color"
+        },
+        "label-hover": {
+          "value": "{modes.color.interactive.monochrome.standard.withHover}",
+          "type": "color"
+        },
+        "label-enabled": {
+          "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
+          "type": "color"
+        },
+        "submenu": {
+          "bg-default": {
+            "value": "{modes.color.generic.bg.standard.faint}",
+            "type": "color",
+            "description": "popover small screen submenu container bg"
+          }
+        }
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.adaptive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.moderate.L}",
+            "type": "typography"
+          }
+        }
+      },
+      "responsive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
           }
         }
       }

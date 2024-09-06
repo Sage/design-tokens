@@ -1,153 +1,128 @@
 {
   "nav": {
     "color": {
-      "harsh": {
+      "inverse": {
         "bg-default": {
-          "value": "{base.color.generic.bg.inverse.nought}",
-          "type": "color"
-        },
-        "bg-alt": {
-          "value": "{base.color.generic.bg.inverse.delicate}",
-          "type": "color"
+          "value": "{modes.color.generic.bg.inverse.nought}",
+          "type": "color",
+          "description": "nav bar bg"
         },
         "item": {
           "bg-active": {
-            "value": "{base.color.interactive.monochrome.inverse.active}",
+            "value": "{modes.color.interactive.monochrome.inverse.active}",
+            "type": "color"
+          },
+          "bg-activealt": {
+            "value": "{modes.color.interactive.monochrome.inverse.hover}",
             "type": "color"
           },
           "bg-enabled": {
-            "value": "{origin.colors.transparent}",
+            "value": "{modes.color.none}",
             "type": "color"
           },
           "bg-hover": {
-            "value": "{base.color.interactive.monochrome.inverse.hoverAlt}",
-            "type": "color"
-          },
-          "border-active": {
-            "value": "{base.color.generic.fg.inverse.soft}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{base.color.generic.fg.inverse.soft}",
+            "value": "{modes.color.interactive.monochrome.inverse.hover}",
             "type": "color"
           },
           "label-active": {
-            "value": "{base.color.interactive.monochrome.inverse.withActive}",
+            "value": "{modes.color.interactive.monochrome.inverse.withActive}",
+            "type": "color"
+          },
+          "label-activealt": {
+            "value": "{modes.color.interactive.monochrome.inverse.withHover}",
             "type": "color"
           },
           "label-enabled": {
-            "value": "{base.color.interactive.monochrome.inverse.default}",
+            "value": "{modes.color.interactive.monochrome.inverse.default}",
             "type": "color"
           },
           "label-hover": {
-            "value": "{base.color.interactive.monochrome.inverse.withHover}",
+            "value": "{modes.color.interactive.monochrome.inverse.withHover}",
             "type": "color"
           },
           "label-alt": {
-            "value": "{base.color.interactive.monochrome.inverse.defaultAlt}",
+            "value": "{modes.color.interactive.monochrome.inverse.defaultAlt}",
             "type": "color"
           }
         },
         "menu": {
           "bg-default": {
-            "value": "{base.color.generic.bg.inverse.soft}",
-            "type": "color"
+            "value": "{modes.color.generic.bg.inverse.moderate}",
+            "type": "color",
+            "description": "menu (level 1) nav bg"
+          },
+          "bg-alt": {
+            "value": "{modes.color.generic.bg.inverse.firm}",
+            "type": "color",
+            "description": "level 2 nav bg"
+          },
+          "bg-alt2": {
+            "value": "{modes.color.generic.bg.inverse.harsh}",
+            "type": "color",
+            "description": "level 3 nav bg"
           }
         }
       },
-      "subtle": {
+      "standard": {
         "bg-default": {
-          "value": "{base.color.generic.bg.standard.nought}",
-          "type": "color"
-        },
-        "bg-alt": {
-          "value": "{base.color.generic.bg.standard.delicate}",
-          "type": "color"
+          "value": "{modes.color.generic.bg.standard.nought}",
+          "type": "color",
+          "description": "nav bar bg"
         },
         "item": {
           "bg-active": {
-            "value": "{base.color.interactive.monochrome.standard.active}",
+            "value": "{modes.color.interactive.monochrome.standard.active}",
+            "type": "color"
+          },
+          "bg-activealt": {
+            "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
             "type": "color"
           },
           "bg-enabled": {
-            "value": "{origin.colors.transparent}",
+            "value": "{modes.color.none}",
             "type": "color"
           },
           "bg-hover": {
-            "value": "{base.color.interactive.monochrome.standard.hoverAlt}",
-            "type": "color"
-          },
-          "border-active": {
-            "value": "{base.color.generic.fg.standard.soft}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{base.color.generic.fg.standard.soft}",
+            "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
             "type": "color"
           },
           "label-active": {
-            "value": "{base.color.interactive.monochrome.standard.withActive}",
+            "value": "{modes.color.interactive.monochrome.standard.withActive}",
+            "type": "color"
+          },
+          "label-activealt": {
+            "value": "{modes.color.interactive.monochrome.standard.withHover}",
             "type": "color"
           },
           "label-enabled": {
-            "value": "{base.color.interactive.monochrome.standard.default}",
+            "value": "{modes.color.interactive.monochrome.standard.default}",
             "type": "color"
           },
           "label-hover": {
-            "value": "{base.color.interactive.monochrome.standard.withHover}",
+            "value": "{modes.color.interactive.monochrome.standard.withHover}",
             "type": "color"
           },
           "label-alt": {
-            "value": "{base.color.interactive.monochrome.standard.defaultAlt}",
+            "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
             "type": "color"
           }
         },
         "menu": {
           "bg-default": {
-            "value": "{base.color.generic.bg.standard.soft}",
-            "type": "color"
-          }
-        }
-      }
-    },
-    "size": {
-      "horizontal": {
-        "S": {
-          "value": "{global.size.macro.S}",
-          "type": "sizing",
-          "description": "Top nav child menu item min-height"
-        },
-        "M": {
-          "value": "{global.size.macro.M}",
-          "type": "sizing",
-          "description": "global nav and horizontal nav container height"
-        }
-      },
-      "vertical": {
-        "inside": {
-          "M": {
-            "value": "{global.size.macro.M}",
-            "type": "sizing",
-            "description": "Left nav child menu item min-height"
+            "value": "{modes.color.generic.bg.standard.faint}",
+            "type": "color",
+            "description": "menu (level 1) nav bg"
           },
-          "L": {
-            "value": "{global.size.macro.L}",
-            "type": "sizing",
-            "description": "Left nav collapsed item min-height"
+          "bg-alt": {
+            "value": "{modes.color.generic.bg.standard.delicate}",
+            "type": "color",
+            "description": "level 2 nav bg"
+          },
+          "bg-alt2": {
+            "value": "{modes.color.generic.bg.standard.soft}",
+            "type": "color",
+            "description": "level 3 nav bg"
           }
-        },
-        "outside": {
-          "M": {
-            "value": "{global.size.micro.L} * 10",
-            "type": "sizing",
-            "description": "Left nav collapsed parent container"
-          }
-        }
-      },
-      "icon": {
-        "M": {
-          "value": "{global.size.icon.M}",
-          "type": "sizing"
         }
       }
     },
@@ -155,22 +130,22 @@
       "menu": {
         "value": "{global.radius.interactive.M}",
         "type": "borderRadius",
-        "description": "Menu (bottom corners), "
+        "description": "Drop list bottom corners, product popout list all corners"
       },
       "menuitem": {
         "value": "{global.radius.interactive.S}",
         "type": "borderRadius",
         "description": "Menu (menu item state bg shape), "
       },
-      "navigationleft": {
+      "menumodal": {
         "value": "{global.radius.interactive.L}",
         "type": "borderRadius",
-        "description": "Navigation left (collapsible Assets/Menu select top-right and bottom-right corners)"
+        "description": "Menu on mobile"
       }
     },
     "boxshadow": {
       "menu": {
-        "value": "{global.boxshadow.container.distant}",
+        "value": "{global.boxshadow.cleanedge.near}",
         "type": "boxShadow",
         "description": "Menu"
       }
@@ -189,127 +164,297 @@
         }
       }
     },
-    "space": {
+    "size": {
       "menu": {
-        "child": {
-          "x": {
-            "M": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Left right padding."
-            }
-          },
+        "content": {
           "y": {
             "M": {
-              "value": "{global.space.micro.S}",
-              "type": "spacing",
-              "description": "Top bottom padding."
+              "value": "{global.size.macro.S}",
+              "type": "sizing",
+              "description": "Min height of menu content"
+            }
+          },
+          "icon": {
+            "M": {
+              "value": "{global.size.icon.M}",
+              "type": "sizing",
+              "description": "Icon size"
+            },
+            "L": {
+              "value": "{global.size.icon.L}",
+              "type": "sizing",
+              "description": "Icon size"
             }
           }
         },
-        "list": {
+        "option": {
           "x": {
             "M": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Left right padding on menu list."
+              "value": "{global.size.flex.M}",
+              "type": "sizing",
+              "description": "Min width of options"
             }
           },
           "y": {
             "M": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Top bottom padding on menu list."
-            }
-          },
-          "yg": {
-            "M": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Space between menu items in list."
-            }
-          }
-        },
-        "parent": {
-          "x": {
-            "M": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Left right padding."
-            }
-          },
-          "xg": {
-            "M": {
-              "value": "{global.space.micro.S}",
-              "type": "spacing",
-              "description": "Gap spacing between elements."
-            }
-          },
-          "y": {
-            "M": {
-              "value": "{global.space.micro.S}",
-              "type": "spacing",
-              "description": "Top bottom padding."
-            }
-          }
-        },
-        "segment": {
-          "x": {
-            "M": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Left right padding on segment title."
-            }
-          },
-          "y": {
-            "M": {
-              "value": "{global.space.macro.XS}",
-              "type": "spacing",
-              "description": "Top padding on segment title."
+              "value": "{global.size.macro.M}",
+              "type": "sizing",
+              "description": "Min height of menu option"
             }
           }
         }
       },
-      "navleft": {
-        "collapsed": {
-          "button": {
-            "x": {
-              "M": {
-                "value": "{global.space.micro.S}",
-                "type": "spacing",
-                "description": "Left right spacing on left nav collapsed menu item."
-              }
-            },
-            "y": {
-              "M": {
-                "value": "{global.space.micro.S}",
-                "type": "spacing",
-                "description": "Top bottom spacing on left nav collapsed menu item."
-              }
-            },
-            "yg": {
-              "M": {
-                "value": "{global.space.micro.XS}",
-                "type": "spacing",
-                "description": "Spacing gap inside collapsible menu buttons."
-              }
+      "navbar": {
+        "content": {
+          "y": {
+            "M": {
+              "value": "{global.size.macro.S}",
+              "type": "sizing",
+              "description": "Min height of nav content"
             }
           },
-          "container": {
-            "y": {
-              "M": {
-                "value": "{global.space.micro.L}",
-                "type": "spacing",
-                "description": "Top bottom padding in collapsible left nav."
-              }
+          "icon": {
+            "M": {
+              "value": "{global.size.icon.M}",
+              "type": "sizing",
+              "description": "Chevron and caret icons"
             },
-            "yg": {
-              "M": {
-                "value": "{global.space.micro.XXL}",
-                "type": "spacing",
-                "description": "Space between menu items in collapsible left nav."
-              }
+            "L": {
+              "value": "{global.size.icon.L}",
+              "type": "sizing",
+              "description": "Icon size"
             }
+          }
+        },
+        "item": {
+          "x": {
+            "M": {
+              "value": "{global.size.flex.M}",
+              "type": "sizing",
+              "description": "Max width of nav item"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.size.macro.M}",
+              "type": "sizing",
+              "description": "Min height of nav item"
+            }
+          }
+        }
+      }
+    },
+    "space": {
+      "menu": {
+        "container": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Horizontal space on menu complex and menu items wrapper in sidebar menu"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical space on mobile menu items"
+            }
+          }
+        },
+        "content": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Horizontal space on content within menu item"
+            },
+            "L": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Left padding for indented content in options"
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Space between content elements within menu item"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Vertical space on content within menu item"
+            }
+          }
+        },
+        "item": {
+          "x": {
+            "S": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Horizontal space on menu option complex, small screen option"
+            },
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Horizontal space on nav menu item"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Vertical space on nav menu item"
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Space between menu item and submenu"
+            }
+          }
+        }
+      },
+      "navbar": {
+        "x": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing"
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.micro.XS}",
+            "type": "spacing",
+            "description": "Vertical padding on nav bar"
+          }
+        },
+        "content": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Horizontal space in content within nav item"
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Gap between content elements within nav item"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Vertical space in content within nav item"
+            }
+          }
+        },
+        "item": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Horizontal space in nav item"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Vertical space in nav item"
+            }
+          }
+        },
+        "logo": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Horizontal space around logo"
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Gap between logo and divider"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top padding on logo"
+            }
+          }
+        }
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.adaptive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.moderate.L}",
+            "type": "typography"
+          }
+        }
+      },
+      "responsive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
           }
         }
       }

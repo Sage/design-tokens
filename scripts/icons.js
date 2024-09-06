@@ -9,7 +9,6 @@ const {
   outputJson,
   removeSync,
   ensureDir
-  // readFileSync
 } = require('fs-extra')
 const { generateFonts } = require('fantasticon')
 const {
@@ -188,35 +187,6 @@ async function writeGlyphsData (glyphsData, config) {
     console.log('Done.\r\n')
   })
 }
-
-// function createDocs (glyphsData, config) {
-//   console.log('Creating documentation for icons...')
-
-//   const buildDocsFile = require('./handlebars')(config.docsPartials)
-
-//   const mappedGlyphsData = glyphsData.map(icon => {
-//     const fullIconPath = resolve(config.distDir, icon.path)
-//     const relativePath = relative(config.docsDir, fullIconPath)
-
-//     return {
-//       ...icon,
-//       srcPath: relativePath
-//     }
-//   })
-
-//   const template = readFileSync(config.mainTemplate, 'utf8')
-
-//   const context = {
-//     glyphs: mappedGlyphsData,
-//     title: 'Sage Icons',
-//     bodyType: 'icons'
-//   }
-
-//   console.log(resolve(process.cwd(), config.docsDir, 'index.html'))
-
-//   buildDocsFile(template, context, [config.docsDir, 'index.html'])
-//   console.log('Done.\r\n')
-// }
 
 /**
  * @typedef {Object} IconsConfig
