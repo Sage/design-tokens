@@ -1,3 +1,11 @@
+# [5.0.0-beta.22](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.21...v5.0.0-beta.22) (2024-09-09)
+
+
+### Features
+
+* **data:** adding a button goggle specific border ([6285e93](https://github.com/Sage/design-tokens/commit/6285e93ebf5bae4b36ca8ffb9803f96c9ce06737))
+* **data:** deleting out duplicate disabled color ([3b338c5](https://github.com/Sage/design-tokens/commit/3b338c57fed67351fb829fc279f239cba46da68c))
+
 # [5.0.0-beta.21](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.20...v5.0.0-beta.21) (2024-09-06)
 
 
