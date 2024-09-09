@@ -133,15 +133,6 @@
         "dimmer": {
           "value": "{modes.color.generic.bg.inverse.nought}",
           "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "alpha",
-                "value": "0.4",
-                "space": "lch"
-              }
-            }
-          },
           "description": "dimmed mask for dialogs"
         },
         "icon": {
@@ -1617,6 +1608,13 @@
           "value": "{modes.color.modifiers.input.disabledFg}",
           "type": "opacity",
           "description": "opacity applied to next and previous carousel slides"
+        }
+      },
+      "dialog": {
+        "dimmer": {
+          "value": "0.4",
+          "type": "opacity",
+          "description": "dimmer opacity value"
         }
       }
     },
