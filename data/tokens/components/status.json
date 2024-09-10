@@ -150,20 +150,6 @@
             "value": "{modes.color.status.caution.inverse.default}",
             "type": "color"
           }
-        },
-        "AI": {
-          "nudge": {
-            "borderAi-horizontal": {
-              "value": "{modes.color.status.ai.inverse.default-horizontal}",
-              "type": "color",
-              "description": "top and bottom border for AI nudge message component"
-            },
-            "borderAi-vertical": {
-              "value": "{modes.color.status.ai.inverse.default-vertical}",
-              "type": "color",
-              "description": "left and right border for AI nudge message component"
-            }
-          }
         }
       },
       "standard": {
@@ -225,18 +211,6 @@
           "border-default": {
             "value": "{modes.color.status.ai.inverse.default}",
             "type": "color"
-          },
-          "nudge": {
-            "borderAi-horizontal": {
-              "value": "{modes.color.status.ai.standard.default-horizontal}",
-              "type": "color",
-              "description": "top and bottom border for AI nudge message component"
-            },
-            "borderAi-vertical": {
-              "value": "{modes.color.status.ai.standard.default-vertical}",
-              "type": "color",
-              "description": "left and right border for AI nudge message component"
-            }
           }
         },
         "error": {
@@ -425,22 +399,10 @@
         "type": "borderRadius",
         "description": "Pill (outer corners)"
       },
-      "nudge": {
-        "value": "{global.radius.container.L}",
-        "type": "borderRadius",
-        "description": "nudge radius"
-      },
       "tooltip": {
         "value": "{global.radius.container.S}",
         "type": "borderRadius",
         "description": "Tooltip\n"
-      }
-    },
-    "boxshadow": {
-      "nudge": {
-        "value": "{global.boxshadow.container.far}",
-        "type": "boxShadow",
-        "description": "nudge shadow"
       }
     },
     "borderwidth": {
@@ -453,11 +415,6 @@
         "value": "{global.borderwidth.XS}",
         "type": "borderWidth",
         "description": "Contextual message and AI inline border"
-      },
-      "nudge": {
-        "value": "{global.borderwidth.XL}",
-        "type": "borderWidth",
-        "description": "nudge AI message borders\n"
       }
     },
     "space": {
@@ -602,58 +559,6 @@
                 "value": "{global.space.micro.XXL}",
                 "type": "spacing",
                 "description": "Top padding on global message icon wrapper."
-              }
-            }
-          }
-        },
-        "nudge": {
-          "x": {
-            "M": {
-              "value": "{global.space.macro.M}",
-              "type": "spacing",
-              "description": "Left and right padding on medium nudge"
-            },
-            "L": {
-              "value": "{global.space.macro.L}",
-              "type": "spacing",
-              "description": "left and right padding on large nudge "
-            }
-          },
-          "y": {
-            "M": {
-              "value": "{global.space.macro.M}",
-              "type": "spacing",
-              "description": "Top and bottom padding on medium nudge"
-            },
-            "L": {
-              "value": "{global.space.macro.L}",
-              "type": "spacing",
-              "description": "Top and bottom paddding on large nudge"
-            }
-          },
-          "yg": {
-            "M": {
-              "value": "{global.space.micro.L}",
-              "type": "spacing",
-              "description": "Gap between message elements"
-            },
-            "L": {
-              "value": "{global.space.micro.XXL}",
-              "type": "spacing",
-              "description": "Gap between message elements"
-            }
-          },
-          "header": {
-            "xg": {
-              "M": {
-                "value": "{global.space.macro.XS}",
-                "type": "spacing",
-                "description": "gap between header and ai logo"
-              },
-              "L": {
-                "value": "{global.space.macro.XS}",
-                "type": "spacing",
-                "description": "gap between header and ai logo"
               }
             }
           }

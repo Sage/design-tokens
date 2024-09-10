@@ -102,6 +102,20 @@
             "value": "{modes.color.generic.fg.inverse.moderate}",
             "type": "color"
           }
+        },
+        "AI": {
+          "nudge": {
+            "borderAi-horizontal": {
+              "value": "{modes.color.status.ai.inverse.default-horizontal}",
+              "type": "color",
+              "description": "top and bottom border for AI nudge message component"
+            },
+            "borderAi-vertical": {
+              "value": "{modes.color.status.ai.inverse.default-vertical}",
+              "type": "color",
+              "description": "left and right border for AI nudge message component"
+            }
+          }
         }
       },
       "standard": {
@@ -160,6 +174,18 @@
             "value": "{modes.color.status.ai.standard.default-vertical}",
             "type": "color",
             "description": "left and right border for dialog and insight bubbles."
+          },
+          "nudge": {
+            "borderAi-horizontal": {
+              "value": "{modes.color.status.ai.standard.default-horizontal}",
+              "type": "color",
+              "description": "top and bottom border for AI nudge message component"
+            },
+            "borderAi-vertical": {
+              "value": "{modes.color.status.ai.standard.default-vertical}",
+              "type": "color",
+              "description": "left and right border for AI nudge message component"
+            }
           }
         },
         "scrollbar": {
@@ -714,6 +740,11 @@
           "value": "{global.radius.container.XXL}",
           "type": "borderRadius"
         }
+      },
+      "nudge": {
+        "value": "{global.radius.container.L}",
+        "type": "borderRadius",
+        "description": "nudge radius"
       }
     },
     "space": {
@@ -1424,6 +1455,58 @@
             }
           }
         }
+      },
+      "nudge": {
+        "x": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Left and right padding on medium nudge"
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "left and right padding on large nudge "
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Top and bottom padding on medium nudge"
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Top and bottom paddding on large nudge"
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between message elements"
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Gap between message elements"
+          }
+        },
+        "header": {
+          "xg": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "gap between header and ai logo"
+            },
+            "L": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "gap between header and ai logo"
+            }
+          }
+        }
       }
     },
     "boxshadow": {
@@ -1473,6 +1556,11 @@
         "value": "{global.boxshadow.container.sticky-footer}",
         "type": "boxShadow",
         "description": "Sticky footer in Dialog, Drawer, Sidebar."
+      },
+      "nudge": {
+        "value": "{global.boxshadow.container.far}",
+        "type": "boxShadow",
+        "description": "nudge shadow"
       }
     },
     "borderwidth": {
@@ -1600,6 +1688,11 @@
           "type": "borderWidth",
           "description": "Tile select (enabled tile)"
         }
+      },
+      "nudge": {
+        "value": "{global.borderwidth.XL}",
+        "type": "borderWidth",
+        "description": "nudge AI message borders\n"
       }
     },
     "opacity": {
