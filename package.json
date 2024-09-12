@@ -25,7 +25,8 @@
     "dev:docs": "nodemon --watch \"./scripts/*\" --watch \"./templates/**/*\" --exec \"node ./scripts/tokens-documentation.js\"",
     "prepublishOnly": "node ./scripts/bump-main-package-version.js",
     "lint": "eslint .",
-    "format": "eslint --fix ."
+    "format": "eslint --fix .",
+    "stylelint:dist": "npx stylelint 'dist/**/*.{css,scss}' --report-needless-disables --report-descriptionless-disables --report-invalid-scope-disables"
   },
   "devDependencies": {
     "@amanda-mitchell/semantic-release-npm-multiple": "^3.9.0",

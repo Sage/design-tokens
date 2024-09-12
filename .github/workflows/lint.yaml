@@ -34,4 +34,4 @@ jobs:
         run: npm run build
 
       - name: Run stylelint
-        run: npx stylelint 'dist/**/*.{css,scss}' --report-needless-disables --report-descriptionless-disables --report-invalid-scope-disables
+        run: npm run stylelint:dist
