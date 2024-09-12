@@ -2036,6 +2036,59 @@
               "description": "used for marketing banners"
             }
           }
+        },
+        "reviews": {
+          "standard": {
+            "default": {
+              "value": "{primitives.colors.green}",
+              "type": "color"
+            },
+            "defaultAlt": {
+              "value": "linear-gradient(90deg, #008047 0%, #008047 50%, rgba(0, 128, 71, 0.00) 50%, rgba(0, 128, 71, 0.00) 100%);",
+              "type": "color",
+              "description": "half fill"
+            },
+            "hover": {
+              "value": "{modes.color.status.success.standard.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "used on pill hover states"
+            }
+          },
+          "inverse": {
+            "default": {
+              "value": "{primitives.colors.brilliantGreen}",
+              "type": "color"
+            },
+            "defaultAlt": {
+              "value": "linear-gradient(90deg, #00D639 0%, #00D639 50%, rgba(0, 214, 57, 0.00) 50%, rgba(0, 214, 57, 0.00) 100%);",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{modes.color.status.success.inverse.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "description": "used on pill hover states"
+            }
+          }
         }
       },
       "modifier": {
