@@ -19,7 +19,7 @@
     "design system"
   ],
   "scripts": {
-    "build": "node ./scripts/build.js",
+    "build": "node ./scripts/build.js && npm run stylelint:dist -- --fix",
     "prebuild": "node ./scripts/prebuild.js",
     "postbuild": "node ./scripts/postbuild.js",
     "dev:docs": "nodemon --watch \"./scripts/*\" --watch \"./templates/**/*\" --exec \"node ./scripts/tokens-documentation.js\"",

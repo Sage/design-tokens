@@ -11,11 +11,6 @@ module.exports = {
     choose not to fix should be disabled in this file.
   */
   rules: {
-    "alpha-value-notation": null, // Has no end user impact
-    "color-function-notation": null, // Has no end user impact
-    "color-hex-length": null, // Has no end user impact apart from affecting the size of the CSS file by a tiny amount
-    "comment-whitespace-inside": null, // Ignoring as this is managed by `ts/descriptionToComment` transform and has no end user impact
-    "length-zero-no-unit": null, // Has no end user impact apart from affecting the size of the CSS file by a tiny amount
     "scss/comment-no-empty": null, // Ignoring as this is managed by `ts/descriptionToComment` transform and has no end user impact
     "scss/operator-no-unspaced": null, // Has no end user impact
   },
