@@ -11,12 +11,12 @@ module.exports = {
     choose not to fix should be disabled in this file.
   */
   rules: {
-    "color-hex-length": null,
-    "scss/operator-no-unspaced": null, // This is likely easily fixable: https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/operator-no-unspaced/README.md
-    "length-zero-no-unit": null,
-    "alpha-value-notation": null,
-    "color-function-notation": null, // Although this is presumably easily fixable: https://stylelint.io/user-guide/rules/color-function-notation/
-    "scss/comment-no-empty": null, // This is likely easily fixable: https://stylelint.io/user-guide/rules/comment-no-empty/
-    "comment-whitespace-inside": null, // Probably fixable if we wanted to?
-  }
+    "alpha-value-notation": null, // Has no end user impact
+    "color-function-notation": null, // Has no end user impact
+    "color-hex-length": null, // Has no end user impact apart from affecting the size of the CSS file by a tiny amount
+    "comment-whitespace-inside": null, // Ignoring as this is managed by `ts/descriptionToComment` transform and has no end user impact
+    "length-zero-no-unit": null, // Has no end user impact apart from affecting the size of the CSS file by a tiny amount
+    "scss/comment-no-empty": null, // Ignoring as this is managed by `ts/descriptionToComment` transform and has no end user impact
+    "scss/operator-no-unspaced": null, // Has no end user impact
+  },
 };
