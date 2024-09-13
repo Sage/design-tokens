@@ -1,5 +1,6 @@
 {
-  "include": ["dist/**/*.js"],
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "include": ["dist/**/*.js", "**/*.ts"],
   "compilerOptions": {
     "allowJs": true,
     "declaration": true,

@@ -19,6 +19,8 @@
     "design system"
   ],
   "scripts": {
+    "test": "mocha",
+    "test:watch": "npm test -- --watch",
     "build": "node ./scripts/build.js",
     "prebuild": "node ./scripts/prebuild.js",
     "postbuild": "node ./scripts/postbuild.js",
@@ -37,7 +39,11 @@
     "@semantic-release/npm": "^11.0.2",
     "@semantic-release/release-notes-generator": "^12.1.0",
     "@tokens-studio/sd-transforms": "^0.12.2",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/chai": "^4.3.19",
     "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.8",
+    "chai": "^5.1.1",
     "dotenv": "^16.3.1",
     "eslint": "^8.56.0",
     "eslint-config-standard": "^17.1.0",
@@ -51,6 +57,7 @@
     "glob": "^10.3.10",
     "less": "^4.2.0",
     "lodash": "^4.17.21",
+    "mocha": "^10.7.3",
     "node-fetch": "^2.7.0",
     "nodemon": "^3.0.2",
     "scss": "^0.2.4",
@@ -59,6 +66,7 @@
     "stylelint-config-standard": "^36.0.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "tinycolor2": "^1.6.0",
+    "tsx": "^4.19.1",
     "typescript": "^5.3.3"
   }
 }
