@@ -91,8 +91,9 @@ styleDictionary.registerFormat({
     const { outputReferences, selector } = options
     return (
       fileHeader({ file }) +
-      `${selector} {\n` +
-      '  @media (width >= 1200px) {\n' +
+      '@media (width >= 1200px) {\n' +
+      `  ${selector} {\n` +
+
       formattedVariables({ format: 'css', dictionary, outputReferences }) +
       '\n  }\n}\n'
     )
