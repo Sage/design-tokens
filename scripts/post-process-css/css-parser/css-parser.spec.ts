@@ -22,4 +22,28 @@ describe("CssParser", () => {
       { name: "--header-height", value: "60px", fullLine: "--header-height: 60px; /* Header height */" },
     ]);
   });
+
+  it("should error when root selector not found", () => {
+    const cssContent = `
+body {
+    --main-bg-color: #ffffff;
+    --main-text-color: #333333; /* Semi-colons(;) don't go in CSS values */
+    /* Random comment in middle indicating an unexpected input */
+    --header-height: 60px; /* Header height */
+}`;
+
+    expect(() => cssParser.parseRootVariables(cssContent)).to.throw("Root selector not found");
+  });
+
+  it("should error when not outputting expected number of items", () => {
+    const cssContent = `
+:root {
+    --main-bg-color: #ffffff;
+    --main-text-color: #333333; /* Semi-colons(;) don't go in CSS values */
+    /* Random comment in middle indicating an unexpected input */
+    --header-height: 60px; /* Header height */
+}`;
+
+    expect(() => cssParser.parseRootVariables(cssContent)).to.throw("Expected 4 items, but got 3");
+  });
 });
