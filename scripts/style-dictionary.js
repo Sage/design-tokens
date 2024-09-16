@@ -93,7 +93,7 @@ styleDictionary.registerFormat({
       fileHeader({ file }) +
       '@media (width >= 1200px) {\n' +
       `  ${selector} {\n` +
-      
+
       formattedVariables({ format: 'css', dictionary, outputReferences }) +
       '\n  }\n}\n'
     )
