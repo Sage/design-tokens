@@ -1,3 +1,4 @@
+import { CssProperty } from "./css-parser/css-parser.types";
 import { ScreenSizeTokens } from "./screen-size-tokens";
 
 export class BrandTokens {
@@ -34,7 +35,7 @@ export class BrandTokens {
     return lines.join("\n");
   }
 
-  private getTokenLines(tokens: ScreenSizeTokens, level: number = 1) {
+  private getTokenLines(tokens: ScreenSizeTokens, level: number = 1): string[] {
     const space = "  ";
     const rootSpace = space.repeat(level - 1);
     const tokenSpace = space.repeat(level);
@@ -42,47 +43,28 @@ export class BrandTokens {
     const lines: string[] = [];
     lines.push(`${rootSpace}:root {`);
 
-    if (tokens.global.length > 0) {
-      lines.push(`${tokenSpace}/* Global tokens */`);
-      lines.push(
-        tokens.global
-          .map((p) => `${tokenSpace}${p.name}: ${p.value};`)
-          .join("\n")
-      );
-    }
+    const addTokenSection = (title: string, tokenList: CssProperty[]) => {
+      if (tokenList.length > 0) {
+        if (lines.length > 1) lines.push("");
+        lines.push(`${tokenSpace}/* ${title} */`);
+        lines.push(
+          tokenList.map((p) => `${tokenSpace}${p.name}: ${p.value};`).join("\n")
+        );
+      }
+    };
 
-    if (tokens.light.length > 0) {
-      if (lines.length > 1) lines.push("");
-      lines.push(`${tokenSpace}/* Light mode tokens */`);
-      lines.push(
-        tokens.light
-          .map((p) => `${tokenSpace}${p.name}: ${p.value};`)
-          .join("\n")
-      );
-    }
+    addTokenSection("Global tokens", tokens.global);
+    addTokenSection("Light mode tokens", tokens.light);
+    addTokenSection("Dark mode tokens", tokens.dark);
 
-    if (tokens.dark.length > 0) {
-      if (lines.length > 1) lines.push("");
-      lines.push(`${tokenSpace}/* Dark mode tokens */`);
-      lines.push(
-        tokens.dark.map((p) => `${tokenSpace}${p.name}: ${p.value};`).join("\n")
-      );
-    }
-
-    const componentKeys = Object.keys(tokens.components);
-    if (componentKeys.length > 0) {
-      componentKeys.forEach((component) => {
-        if (tokens.components[component]) {
-          if (lines.length > 1) lines.push("");
-          lines.push(`${tokenSpace}/* ${component} component tokens */`);
-          lines.push(
-            tokens.components[component]
-              .map((p) => `${tokenSpace}${p.name}: ${p.value};`)
-              .join("\n")
-          );
-        }
-      });
-    }
+    Object.keys(tokens.components).forEach((component) => {
+      if (tokens.components[component]) {
+        addTokenSection(
+          `${component} component tokens`,
+          tokens.components[component]
+        );
+      }
+    });
 
     lines.push(`${rootSpace}}`);
 
