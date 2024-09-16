@@ -11,17 +11,14 @@ describe("ConsolidateScreenSizes", () => {
     {
       name: "--global-prop1",
       value: "value1",
-      fullLine: "--global-prop1: value1;",
     },
     {
       name: "--global-prop2",
       value: "value2",
-      fullLine: "--global-prop2: value2;",
     },
     {
       name: "--global-prop3",
       value: "value3",
-      fullLine: "--global-prop3: value3;",
     },
   ];
 
@@ -29,17 +26,14 @@ describe("ConsolidateScreenSizes", () => {
     {
       name: "--global-prop1",
       value: "value1",
-      fullLine: "--global-prop1: value1;",
     },
     {
       name: "--global-prop2",
       value: "value2-large",
-      fullLine: "--global-prop2: value2;",
     },
     {
       name: "--global-prop3",
       value: "value3",
-      fullLine: "--global-prop3: value3;",
     },
   ];
 
@@ -47,7 +41,6 @@ describe("ConsolidateScreenSizes", () => {
     {
       name: "--global-prop2",
       value: "value2-large",
-      fullLine: "--global-prop2: value2;",
     },
   ];
 
@@ -129,7 +122,6 @@ describe("ConsolidateScreenSizes", () => {
             {
               name: "--global-prop1",
               value: "value1",
-              fullLine: "--global-prop1: value1;",
             },
           ],
           button: populatedSmallTokens,
@@ -140,7 +132,6 @@ describe("ConsolidateScreenSizes", () => {
             {
               name: "--global-prop1",
               value: "value1",
-              fullLine: "--global-prop1: value1;",
             },
           ],
           button: populatedLargeTokens,
@@ -159,7 +150,6 @@ describe("ConsolidateScreenSizes", () => {
               {
                 name: "--global-prop1",
                 value: "value1",
-                fullLine: "--global-prop1: value1;",
               },
             ],
             button: populatedSmallTokens,
@@ -171,7 +161,7 @@ describe("ConsolidateScreenSizes", () => {
           dark: [],
           components: {
             accordion: expectedFilteredTokens,
-            badge:[],
+            badge: [],
             button: expectedFilteredTokens,
           },
         },

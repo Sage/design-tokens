@@ -9,36 +9,32 @@ describe("BrandTokens", () => {
         {
           name: "--global-prop1",
           value: "value1",
-          fullLine: "--global-prop1: value1;",
         },
         {
           name: "--global-prop2",
           value: "value2",
-          fullLine: "--global-prop2: value2;",
+          comment: "/* Some comment */",
         },
       ],
       [
         {
           name: "--prop1-light",
           value: "value1",
-          fullLine: "--prop1-light: value1;",
+          comment: "/* Some comment */",
         },
         {
           name: "--prop2-light",
           value: "value2",
-          fullLine: "--prop2-light: value2;",
         },
       ],
       [
         {
           name: "--prop1-dark",
           value: "value1",
-          fullLine: "--prop1-dark: value1;",
         },
         {
           name: "--prop2-dark",
           value: "value2",
-          fullLine: "--prop2-dark: value2;",
         },
       ],
       {
@@ -46,24 +42,21 @@ describe("BrandTokens", () => {
           {
             name: "--badge-prop1",
             value: "badge-value1",
-            fullLine: "--badge-prop1: badge-value1;",
           },
           {
             name: "--badge-prop2",
             value: "badge-value2",
-            fullLine: "--badge-prop2: badge-value2;",
           },
         ],
         button: [
           {
             name: "--button-prop1",
             value: "button-value1",
-            fullLine: "--button-prop1: button-value1;",
           },
           {
             name: "--button-prop2",
             value: "button-value2",
-            fullLine: "--button-prop2: button-value2;",
+            comment: "/* Some comment */",
           },
         ],
       }
@@ -72,10 +65,10 @@ describe("BrandTokens", () => {
     const expectedSingleSizeTokenResult = `:root {
   /* Global tokens */
   --global-prop1: value1;
-  --global-prop2: value2;
+  --global-prop2: value2; /* Some comment */
 
   /* Light mode tokens */
-  --prop1-light: value1;
+  --prop1-light: value1; /* Some comment */
   --prop2-light: value2;
 
   /* Dark mode tokens */
@@ -88,7 +81,7 @@ describe("BrandTokens", () => {
 
   /* button component tokens */
   --button-prop1: button-value1;
-  --button-prop2: button-value2;
+  --button-prop2: button-value2; /* Some comment */
 }
 `;
 
@@ -132,10 +125,10 @@ describe("BrandTokens", () => {
   :root {
     /* Global tokens */
     --global-prop1: value1;
-    --global-prop2: value2;
+    --global-prop2: value2; /* Some comment */
 
     /* Light mode tokens */
-    --prop1-light: value1;
+    --prop1-light: value1; /* Some comment */
     --prop2-light: value2;
 
     /* Dark mode tokens */
@@ -148,7 +141,7 @@ describe("BrandTokens", () => {
 
     /* button component tokens */
     --button-prop1: button-value1;
-    --button-prop2: button-value2;
+    --button-prop2: button-value2; /* Some comment */
   }
 }
 `
@@ -163,12 +156,10 @@ describe("BrandTokens", () => {
             {
               name: "--prop1-light",
               value: "value1",
-              fullLine: "--prop1-light: value1;",
             },
             {
               name: "--prop2-light",
               value: "value2",
-              fullLine: "--prop2-light: value2;",
             },
           ],
           [],
@@ -197,7 +188,6 @@ describe("BrandTokens", () => {
             {
               name: "--prop1",
               value: "value1",
-              fullLine: "--prop1: value1;",
             },
           ],
           button: [],

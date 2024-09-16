@@ -8,21 +8,18 @@ describe("ScreenSizeTokens", () => {
       {
         name: "--global-prop1",
         value: "value1",
-        fullLine: "--global-prop1: value1;",
       },
     ];
     const lightTokens: CssProperty[] = [
       {
         name: "--prop1-light",
         value: "value1",
-        fullLine: "--prop1-light: value1;",
       },
     ];
     const darkTokens: CssProperty[] = [
       {
         name: "--prop1-dark",
         value: "value1",
-        fullLine: "--prop1-dark: value1;",
       },
     ];
     const componentTokens: Record<string, CssProperty[]> = {
@@ -30,7 +27,6 @@ describe("ScreenSizeTokens", () => {
         {
           name: "--badge-prop1",
           value: "badge-value1",
-          fullLine: "--badge-prop1: badge-value1;",
         },
       ],
     };

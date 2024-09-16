@@ -2,10 +2,7 @@ import { CssProperty } from "./css-parser/css-parser.types";
 import { ScreenSizeTokens } from "./screen-size-tokens";
 
 export class BrandTokens {
-  constructor(
-    public small: ScreenSizeTokens,
-    public large: ScreenSizeTokens
-  ) {}
+  constructor(public small: ScreenSizeTokens, public large: ScreenSizeTokens) {}
 
   public toString(): string {
     if (!this.small.hasTokens && !this.large.hasTokens) {
@@ -48,7 +45,14 @@ export class BrandTokens {
         if (lines.length > 1) lines.push("");
         lines.push(`${tokenSpace}/* ${title} */`);
         lines.push(
-          tokenList.map((p) => `${tokenSpace}${p.name}: ${p.value};`).join("\n")
+          tokenList
+            .map(
+              (p) =>
+                `${tokenSpace}${p.name}: ${p.value};${
+                  p.comment ? ` ${p.comment}` : ""
+                }`
+            )
+            .join("\n")
         );
       }
     };

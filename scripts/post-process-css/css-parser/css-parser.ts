@@ -23,15 +23,32 @@ export class CssParser {
 
       if (!name) continue;
 
-      const value = colonSplit[1]?.split(";")[0]?.trim();
+      if (!colonSplit[1]) continue;
+
+      const semiColonSplit = colonSplit.slice(1).join(':').split(";");
+      const value = semiColonSplit[0]?.trim();
 
       if (!value) continue;
 
-      cssProperties.push({
-        name,
-        value,
-        fullLine,
-      });
+      const comment = semiColonSplit.slice(1).join(';').trim();
+
+      // Sanity check
+      const expectedLine = `${name}: ${value};${comment ? ` ${comment}` : ""}`;
+      if(fullLine !== expectedLine) {
+        throw new Error(
+          `Expected concatenation to equal "${fullLine}", but found: "${expectedLine}"`
+        );
+      }
+
+      const cssProp: CssProperty = {
+        name, value
+      };
+
+      if(comment) {
+        cssProp.comment = comment;
+      }
+
+      cssProperties.push(cssProp);
     }
 
     // Sanity check
