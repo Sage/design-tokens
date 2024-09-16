@@ -3,18 +3,8 @@ import * as path from "path";
 
 import { CssProperty } from "./css-parser/css-parser.types";
 import { CssParser } from "./css-parser/css-parser";
-
-interface Tokens {
-  large: ScreenSizeTokens;
-  small: ScreenSizeTokens;
-}
-
-interface ScreenSizeTokens {
-  global: CssProperty[];
-  dark: CssProperty[];
-  light: CssProperty[];
-  components: Record<string, CssProperty[]>;
-}
+import { ScreenSizeTokens } from "./screen-size-tokens";
+import { BrandTokens } from "./brand-tokens";
 
 const cssParser = new CssParser();
 
@@ -30,68 +20,11 @@ fs.readdirSync(cssDistPath).forEach((file) => {
     "small"
   );
 
-  writeCombinedCssFile(file, smallTokens, largeTokens);
+  writeCombinedCssFile(file, new BrandTokens(smallTokens, largeTokens));
 });
 
-function writeCombinedCssFile(
-  file: string,
-  smallTokens: ScreenSizeTokens,
-  largeTokens: ScreenSizeTokens
-) {
-  const lines: string[] = [];
-  lines.push(...getTokenLines(smallTokens));
-
-  lines.push("");
-  lines.push("@media (width > 1024px) {"); // Perhaps this value should be a token to allow control from XD team?
-  lines.push(...getTokenLines(largeTokens, 2));
-  lines.push("}");
-
-  fs.writeFileSync(path.join(cssDistPath, file, "all.css"), lines.join("\n"));
-}
-
-function getTokenLines(smallTokens: ScreenSizeTokens, level: number = 1) {
-  const space = "  ";
-  const tokenSpace = space.repeat(level);
-
-  const lines: string[] = [];
-  lines.push(`${space.repeat(level - 1)}:root {`);
-  lines.push(`${tokenSpace}/* Global tokens */`);
-  lines.push(
-    smallTokens.global
-      .map((p) => `${tokenSpace}${p.name}: ${p.value};`)
-      .join("\n")
-  );
-
-  lines.push("");
-  lines.push(`${tokenSpace}/* Light mode tokens */`);
-  lines.push(
-    smallTokens.light
-      .map((p) => `${tokenSpace}${p.name}: ${p.value};`)
-      .join("\n")
-  );
-
-  lines.push("");
-  lines.push(`${tokenSpace}/* Dark mode tokens */`);
-  lines.push(
-    smallTokens.dark
-      .map((p) => `${tokenSpace}${p.name}: ${p.value};`)
-      .join("\n")
-  );
-
-  Object.keys(smallTokens.components).forEach((component) => {
-    if (smallTokens.components[component]) {
-      lines.push("");
-      lines.push(`${tokenSpace}/* ${component} component tokens */`);
-      lines.push(
-        smallTokens.components[component]
-          .map((p) => `${tokenSpace}${p.name}: ${p.value};`)
-          .join("\n")
-      );
-    }
-  });
-  lines.push("}");
-
-  return lines;
+function writeCombinedCssFile(file: string, tokens: BrandTokens) {
+  fs.writeFileSync(path.join(cssDistPath, file, "all.css"), tokens.toString());
 }
 
 function getScreenSizeTokens(
@@ -114,10 +47,10 @@ function getScreenSizeTokens(
     }
   );
 
-  return {
-    global: cssParser.parseRootVariables(globalContents),
-    dark: cssParser.parseRootVariables(darkContents),
-    light: cssParser.parseRootVariables(lightContents),
-    components: components,
-  };
+  return new ScreenSizeTokens(
+    cssParser.parseRootVariables(globalContents),
+    cssParser.parseRootVariables(lightContents),
+    cssParser.parseRootVariables(darkContents),
+    components
+  );
 }
