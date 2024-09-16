@@ -5,6 +5,7 @@ import { CssProperty } from "./css-parser/css-parser.types";
 import { CssParser } from "./css-parser/css-parser";
 import { ScreenSizeTokens } from "./screen-size-tokens";
 import { BrandTokens } from "./brand-tokens";
+import { ConsolidateScreenSizes } from "./formatters/consolidate-screen-sizes/consolidate-screen-sizes";
 
 const cssParser = new CssParser();
 
@@ -20,7 +21,12 @@ fs.readdirSync(cssDistPath).forEach((file) => {
     "small"
   );
 
-  writeCombinedCssFile(file, new BrandTokens(smallTokens, largeTokens));
+  const tokens = new BrandTokens(smallTokens, largeTokens);
+  
+  const consolidateScreenSizes = new ConsolidateScreenSizes();
+  const formattedTokens = consolidateScreenSizes.formatTokens(tokens);
+
+  writeCombinedCssFile(file, formattedTokens);
 });
 
 function writeCombinedCssFile(file: string, tokens: BrandTokens) {

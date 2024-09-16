@@ -156,18 +156,26 @@ describe("BrandTokens", () => {
     });
 
     it("should return expected string with only light tokens", () => {
-      const tokens = new BrandTokens(new ScreenSizeTokens([], [
-        {
-          name: "--prop1-light",
-          value: "value1",
-          fullLine: "--prop1-light: value1;",
-        },
-        {
-          name: "--prop2-light",
-          value: "value2",
-          fullLine: "--prop2-light: value2;",
-        },
-      ],[],{}), new ScreenSizeTokens([], [], [], {}));
+      const tokens = new BrandTokens(
+        new ScreenSizeTokens(
+          [],
+          [
+            {
+              name: "--prop1-light",
+              value: "value1",
+              fullLine: "--prop1-light: value1;",
+            },
+            {
+              name: "--prop2-light",
+              value: "value2",
+              fullLine: "--prop2-light: value2;",
+            },
+          ],
+          [],
+          {}
+        ),
+        new ScreenSizeTokens([], [], [], {})
+      );
 
       const result = tokens.toString();
       expect(result).to.equal(
@@ -175,6 +183,32 @@ describe("BrandTokens", () => {
   /* Light mode tokens */
   --prop1-light: value1;
   --prop2-light: value2;
+}
+`
+      );
+    });
+
+    it("should return expected string with only one component", () => {
+      const tokens = new BrandTokens(
+        new ScreenSizeTokens([], [], [], {}),
+        new ScreenSizeTokens([], [], [], {
+          accordion: [],
+          badge: [
+            {
+              name: "--prop1",
+              value: "value1",
+              fullLine: "--prop1: value1;",
+            },
+          ],
+          button: [],
+        })
+      );
+
+      const result = tokens.toString();
+      expect(result).to.equal(
+        `:root {
+  /* badge component tokens */
+  --prop1: value1;
 }
 `
       );

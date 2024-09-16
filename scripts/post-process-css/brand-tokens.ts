@@ -3,8 +3,8 @@ import { ScreenSizeTokens } from "./screen-size-tokens";
 
 export class BrandTokens {
   constructor(
-    private small: ScreenSizeTokens,
-    private large: ScreenSizeTokens
+    public small: ScreenSizeTokens,
+    public large: ScreenSizeTokens
   ) {}
 
   public toString(): string {
