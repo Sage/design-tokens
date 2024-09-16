@@ -1,6 +1,7 @@
 {
   "extends": "@tsconfig/strictest/tsconfig.json",
   "include": ["dist/**/*.js", "**/*.ts"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "allowJs": true,
     "declaration": true,
