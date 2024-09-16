@@ -154,5 +154,30 @@ describe("BrandTokens", () => {
 `
       );
     });
+
+    it("should return expected string with only light tokens", () => {
+      const tokens = new BrandTokens(new ScreenSizeTokens([], [
+        {
+          name: "--prop1-light",
+          value: "value1",
+          fullLine: "--prop1-light: value1;",
+        },
+        {
+          name: "--prop2-light",
+          value: "value2",
+          fullLine: "--prop2-light: value2;",
+        },
+      ],[],{}), new ScreenSizeTokens([], [], [], {}));
+
+      const result = tokens.toString();
+      expect(result).to.equal(
+        `:root {
+  /* Light mode tokens */
+  --prop1-light: value1;
+  --prop2-light: value2;
+}
+`
+      );
+    });
   });
 });
