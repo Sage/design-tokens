@@ -25,7 +25,8 @@
     "dev:docs": "nodemon --watch \"./scripts/*\" --watch \"./templates/**/*\" --exec \"node ./scripts/tokens-documentation.js\"",
     "prepublishOnly": "node ./scripts/bump-main-package-version.js",
     "lint": "eslint .",
-    "format": "eslint --fix ."
+    "format": "eslint --fix .",
+    "stylelint:dist": "npx stylelint 'dist/**/*.{css,scss}' --report-needless-disables --report-descriptionless-disables --report-invalid-scope-disables"
   },
   "devDependencies": {
     "@amanda-mitchell/semantic-release-npm-multiple": "^3.9.0",
@@ -54,6 +55,9 @@
     "nodemon": "^3.0.2",
     "scss": "^0.2.4",
     "style-dictionary": "^3.9.1",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard-scss": "^13.1.0",
     "tinycolor2": "^1.6.0",
     "typescript": "^5.3.3"
   }
