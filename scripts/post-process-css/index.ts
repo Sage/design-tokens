@@ -6,6 +6,7 @@ import { CssParser } from "./css-parser/css-parser";
 import { ScreenSizeTokens } from "./screen-size-tokens";
 import { BrandTokens } from "./brand-tokens";
 import { ConsolidateScreenSizes } from "./formatters/consolidate-screen-sizes/consolidate-screen-sizes";
+import { LightDarkModeFormatter } from "./formatters/light-dark-mode/light-dark-mode-formatter";
 
 const cssParser = new CssParser();
 
@@ -22,9 +23,10 @@ fs.readdirSync(cssDistPath).forEach((file) => {
   );
 
   const tokens = new BrandTokens(smallTokens, largeTokens);
-  
+
   const consolidateScreenSizes = new ConsolidateScreenSizes();
-  const formattedTokens = consolidateScreenSizes.formatTokens(tokens);
+  const lightDarkModeFormatter = new LightDarkModeFormatter(consolidateScreenSizes);
+  const formattedTokens = lightDarkModeFormatter.formatTokens(tokens);
 
   writeCombinedCssFile(file, formattedTokens);
 });

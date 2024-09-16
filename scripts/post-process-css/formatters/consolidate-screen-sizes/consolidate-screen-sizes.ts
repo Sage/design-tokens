@@ -40,6 +40,6 @@ export class ConsolidateScreenSizes extends Decorator {
       return components;
     }, {});
 
-    return tokens;
+    return super.formatTokens(tokens);
   }
 }
