@@ -34,7 +34,7 @@ export class BrandTokens {
     return lines.join("\n");
   }
 
-  private getTokenLines(smallTokens: ScreenSizeTokens, level: number = 1) {
+  private getTokenLines(tokens: ScreenSizeTokens, level: number = 1) {
     const space = "  ";
     const rootSpace = space.repeat(level - 1);
     const tokenSpace = space.repeat(level);
@@ -43,7 +43,7 @@ export class BrandTokens {
     lines.push(`${rootSpace}:root {`);
     lines.push(`${tokenSpace}/* Global tokens */`);
     lines.push(
-      smallTokens.global
+      tokens.global
         .map((p) => `${tokenSpace}${p.name}: ${p.value};`)
         .join("\n")
     );
@@ -51,7 +51,7 @@ export class BrandTokens {
     lines.push("");
     lines.push(`${tokenSpace}/* Light mode tokens */`);
     lines.push(
-      smallTokens.light
+      tokens.light
         .map((p) => `${tokenSpace}${p.name}: ${p.value};`)
         .join("\n")
     );
@@ -59,17 +59,17 @@ export class BrandTokens {
     lines.push("");
     lines.push(`${tokenSpace}/* Dark mode tokens */`);
     lines.push(
-      smallTokens.dark
+      tokens.dark
         .map((p) => `${tokenSpace}${p.name}: ${p.value};`)
         .join("\n")
     );
 
-    Object.keys(smallTokens.components).forEach((component) => {
-      if (smallTokens.components[component]) {
+    Object.keys(tokens.components).forEach((component) => {
+      if (tokens.components[component]) {
         lines.push("");
         lines.push(`${tokenSpace}/* ${component} component tokens */`);
         lines.push(
-          smallTokens.components[component]
+          tokens.components[component]
             .map((p) => `${tokenSpace}${p.name}: ${p.value};`)
             .join("\n")
         );
