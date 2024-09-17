@@ -19,3 +19,5 @@ Due to the nature of CSS and the requirement for browsers to consume styles dire
 - Formatter to rename light/dark mode token to add a suffix and include the light-dark function where ever used. This will allow consumers to switch to light/dark mode (or device specified) on a page or section level using the [`color-scheme`](https://web.dev/articles/light-dark) css property.
 
 See the associated index.html files provided in each of the distributed brand directories for examples over how these tokens may be consumed.
+
+NOTE: Whilst there is good browser support for the [light-dark function](https://caniuse.com/?search=light-dark), you may want to use the [`postcss-preset-env`](https://www.npmjs.com/package/postcss-preset-env) postcss plugin alongside a [`.browserslistrc`](https://github.com/browserslist/browserslist) file to enhance support.to the browsers required.
