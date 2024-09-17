@@ -29,6 +29,8 @@ fs.readdirSync(cssDistPath).forEach((file) => {
   const formattedTokens = lightDarkModeFormatter.formatTokens(tokens);
 
   writeCombinedCssFile(file, formattedTokens);
+
+  fs.copyFileSync(path.join(__dirname, "../../docs/usage/index.html"), path.join(cssDistPath, file, "index.html"));
 });
 
 function writeCombinedCssFile(file: string, tokens: BrandTokens) {
