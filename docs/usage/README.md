@@ -20,4 +20,4 @@ Due to the nature of CSS and the requirement for browsers to consume styles dire
 
 See the associated index.html files provided in each of the distributed brand directories for examples over how these tokens may be consumed.
 
-NOTE: Whilst there is good browser support for the [light-dark function](https://caniuse.com/?search=light-dark), you may want to use the [`postcss-preset-env`](https://www.npmjs.com/package/postcss-preset-env) postcss plugin alongside a [`.browserslistrc`](https://github.com/browserslist/browserslist) file to enhance support.to the browsers required.
+NOTE: Whilst there is good browser support for the [light-dark function](https://caniuse.com/?search=light-dark), you may want to use the [`postcss-preset-env`](https://www.npmjs.com/package/postcss-preset-env) postcss plugin alongside a [`.browserslistrc`](https://github.com/browserslist/browserslist) file to enhance support to the browsers required.
