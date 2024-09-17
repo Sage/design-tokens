@@ -8,9 +8,6 @@
       body {
         font: var(--page-typography-p-standard);
         background: var(--page-color-standard-bg-default);
-      }
-
-      * {
         color: var(--page-color-standard-text-default);
       }
 
@@ -66,6 +63,12 @@
         color-scheme: light dark; /* Device preference by default */
       }
 
+      .mode-light,
+      .mode-dark {
+        background: var(--page-color-standard-bg-default);
+        color: var(--page-color-standard-text-default);
+      }
+
       .mode-light {
         color-scheme: only light;
       }
@@ -80,7 +83,7 @@
         }
       }
 
-      .inverted * {
+      .inverted {
         color: var(--page-color-inverse-text-default);
       }
     </style>
@@ -106,7 +109,9 @@
     <section>
       <h2>User selection</h2>
       <p>This section will change based on user preference.</p>
-      <button onclick="setMode(event, 'mode-system')" class="active">System</button>
+      <button onclick="setMode(event, 'mode-system')" class="active">
+        System
+      </button>
       <button onclick="setMode(event, 'mode-light')">Light</button>
       <button onclick="setMode(event, 'mode-dark')">Dark</button>
     </section>
