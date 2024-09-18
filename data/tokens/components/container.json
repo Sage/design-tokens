@@ -29,20 +29,11 @@
         },
         "scrollbar": {
           "bg-default": {
-            "value": "{modes.color.generic.bg.standard.nought}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.12",
-                  "space": "lch"
-                }
-              }
-            }
+            "value": "{modes.color.generic.bg.inverse.soft}",
+            "type": "color"
           },
           "fg-default": {
-            "value": "{modes.color.generic.fg.standard.moderate}",
+            "value": "{modes.color.generic.fg.inverse.moderate}",
             "type": "color"
           }
         },
@@ -95,7 +86,7 @@
             "description": "Active label for any accordion."
           },
           "bg-enabled": {
-            "value": "{modes.color.generic.bg.standard.nought}",
+            "value": "{modes.color.generic.bg.inverse.nought}",
             "type": "color"
           },
           "border-enabled": {
@@ -145,7 +136,7 @@
           "type": "color"
         },
         "dimmer": {
-          "value": "{modes.color.generic.bg.inverse.nought}",
+          "value": "{modes.color.interactive.inactive.standard.mask}",
           "type": "color",
           "description": "dimmed mask for dialogs"
         },
@@ -190,17 +181,8 @@
         },
         "scrollbar": {
           "bg-default": {
-            "value": "{modes.color.generic.bg.standard.nought}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.12",
-                  "space": "lch"
-                }
-              }
-            }
+            "value": "{modes.color.generic.bg.standard.faint}",
+            "type": "color"
           },
           "fg-default": {
             "value": "{modes.color.generic.fg.standard.moderate}",
