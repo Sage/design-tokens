@@ -42,6 +42,54 @@
             "type": "typography"
           }
         }
+      },
+      "adaptive": {
+        "H1": {
+          "value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.black}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step5}"
+          },
+          "type": "typography"
+        },
+        "H2": {
+          "value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.black}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step4}"
+          },
+          "type": "typography"
+        },
+        "H4": {
+          "value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.bold}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step2}"
+          },
+          "type": "typography"
+        },
+        "H5": {
+          "value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.medium}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step1}"
+          },
+          "type": "typography"
+        },
+        "p": {
+          "standard": {
+            "value": "{global.typography.adaptive.body.M}",
+            "type": "typography"
+          },
+          "large": {
+            "value": "{global.typography.adaptive.body.L}",
+            "type": "typography"
+          }
+        }
       }
     }
   },
@@ -253,6 +301,34 @@
         "sweeping": {
           "value": "{global.radius.container.XXXXL}",
           "type": "borderRadius"
+        }
+      }
+    }
+  },
+  "global": {
+    "fontSize": {
+      "adaptive": {
+        "heading": {
+          "step1": {
+            "value": "22",
+            "type": "fontSizes"
+          },
+          "step2": {
+            "value": "25",
+            "type": "fontSizes"
+          },
+          "step3": {
+            "value": "34",
+            "type": "fontSizes"
+          },
+          "step4": {
+            "value": "45",
+            "type": "fontSizes"
+          },
+          "step5": {
+            "value": "52",
+            "type": "fontSizes"
+          }
         }
       }
     }
