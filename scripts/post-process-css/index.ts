@@ -13,24 +13,18 @@ const cssParser = new CssParser();
 // Loop through token contexts
 const cssDistPath = path.join(__dirname, "../../dist/css");
 fs.readdirSync(cssDistPath).forEach((file) => {
+  const screenSizeTokens: ScreenSizeTokens[] = [];
+
   fs.readdirSync(path.join(cssDistPath, file)).forEach((screenSize) => {
     if (!fs.statSync(path.join(cssDistPath, file, screenSize)).isDirectory())
       return;
 
-    console.log(screenSize);
+    screenSizeTokens.push(
+      getScreenSizeTokens(path.join(cssDistPath, file), screenSize)
+    );
   });
-  // throw new Error("screenSize");
 
-  const largeTokens = getScreenSizeTokens(
-    path.join(cssDistPath, file),
-    "large"
-  );
-  const smallTokens = getScreenSizeTokens(
-    path.join(cssDistPath, file),
-    "small"
-  );
-
-  const tokens = new BrandTokens(smallTokens, largeTokens);
+  const tokens = new BrandTokens(screenSizeTokens);
 
   const consolidateScreenSizes = new ConsolidateScreenSizes();
   const lightDarkModeFormatter = new LightDarkModeFormatter(
@@ -52,7 +46,7 @@ function writeCombinedCssFile(file: string, tokens: BrandTokens) {
 
 function getScreenSizeTokens(
   basePath: string,
-  screenSize: "large" | "small"
+  screenSize: string
 ): ScreenSizeTokens {
   const getFileContents = (file: string) =>
     fs.readFileSync(path.join(basePath, screenSize, file), "utf8");

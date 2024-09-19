@@ -1,5 +1,6 @@
 import { BrandTokens } from "../../brand-tokens";
 import { CssProperty } from "../../css-parser/css-parser.types";
+import { getSymetricalDifference } from "../../helpers";
 import { ScreenSizeTokens } from "../../screen-size-tokens";
 import { Decorator } from "../decorator";
 
@@ -12,25 +13,37 @@ export class LightDarkModeFormatter extends Decorator {
    * @returns Formatted tokens.
    */
   public override formatTokens(tokens: BrandTokens) {
-    this.santiyCheckModeTokens(tokens);
+    tokens.screenSizes.forEach((screenSize) => {
+      this.sanityCheckModeTokens(screenSize);
 
-    // Function above ensures that the lists of light and dark token names are the same. We can now use only one of them to loop through.
-    const smallModeTokenNames = tokens.small.light.map((token) => token.name);
+      // Function above ensures that the lists of light and dark token names are the same. We can now use only one of them to loop through.
+      const smallModeTokenNames = screenSize.light.map((token) => token.name);
 
-    smallModeTokenNames.forEach((tokenName) =>
-      this.formatScreenSizeModes(tokens.small, tokenName)
-    );
+      smallModeTokenNames.forEach((tokenName) =>
+        this.formatScreenSizeModes(screenSize, tokenName)
+      );
 
-    const largeModeTokenNames = tokens.large.light.map((token) => token.name);
+      screenSize.light.forEach((token) => (token.name = `${token.name}-light`));
+      screenSize.dark.forEach((token) => (token.name = `${token.name}-dark`));
+    });
 
-    largeModeTokenNames.forEach((tokenName) =>
-      this.formatScreenSizeModes(tokens.large, tokenName)
-    );
+    // // Function above ensures that the lists of light and dark token names are the same. We can now use only one of them to loop through.
+    // const smallModeTokenNames = tokens.small.light.map((token) => token.name);
 
-    tokens.small.light.forEach((token) => (token.name = `${token.name}-light`));
-    tokens.small.dark.forEach((token) => (token.name = `${token.name}-dark`));
-    tokens.large.light.forEach((token) => (token.name = `${token.name}-light`));
-    tokens.large.dark.forEach((token) => (token.name = `${token.name}-dark`));
+    // smallModeTokenNames.forEach((tokenName) =>
+    //   this.formatScreenSizeModes(tokens.small, tokenName)
+    // );
+
+    // const largeModeTokenNames = tokens.large.light.map((token) => token.name);
+
+    // largeModeTokenNames.forEach((tokenName) =>
+    //   this.formatScreenSizeModes(tokens.large, tokenName)
+    // );
+
+    // tokens.small.light.forEach((token) => (token.name = `${token.name}-light`));
+    // tokens.small.dark.forEach((token) => (token.name = `${token.name}-dark`));
+    // tokens.large.light.forEach((token) => (token.name = `${token.name}-light`));
+    // tokens.large.dark.forEach((token) => (token.name = `${token.name}-dark`));
 
     return super.formatTokens(tokens);
   }
@@ -59,40 +72,25 @@ export class LightDarkModeFormatter extends Decorator {
    * Assumption is made that the lists of light and dark token names are the same. This verifies that.
    * @param tokens
    */
-  private santiyCheckModeTokens(tokens: BrandTokens) {
-    const smallModeDifference = this.getSymetricalDifference(
-      tokens.small.light,
-      tokens.small.dark
+  private sanityCheckModeTokens(screenSize: ScreenSizeTokens) {
+    const smallModeDifference = getSymetricalDifference(
+      screenSize.light.map((token) => token.name),
+      screenSize.dark.map((token) => token.name)
     );
-    const largeModeDifference = this.getSymetricalDifference(
-      tokens.large.light,
-      tokens.large.dark
+
+    this.checkModeDifference(
+      smallModeDifference,
+      `${screenSize.minBreakpoint}px`
     );
-    this.checkModeDifference(smallModeDifference, "small");
-    this.checkModeDifference(largeModeDifference, "large");
   }
 
   private checkModeDifference(difference: string[], size: string) {
     if (difference.length > 0) {
       throw new Error(
-        `The following tokens are not defined in both light and dark mode in ${size} screen size: ${difference.join(
+        `The following tokens are not defined in both light and dark mode for min-width breakpoint ${size}: ${difference.join(
           ", "
         )}`
       );
     }
-  }
-
-  private getSymetricalDifference(
-    lightTokens: CssProperty[],
-    darkTokens: CssProperty[]
-  ) {
-    const lightTokenNames = lightTokens.map((x) => x.name);
-    const darkTokenNames = darkTokens.map((x) => x.name);
-
-    let difference = lightTokenNames
-      .filter((x) => !darkTokenNames.includes(x))
-      .concat(darkTokenNames.filter((x) => !lightTokenNames.includes(x)));
-
-    return difference;
   }
 }

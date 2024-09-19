@@ -1,7 +1,6 @@
 import { expect } from "chai";
 import { BrandTokens } from "../../brand-tokens";
 import { ScreenSizeTokens } from "../../screen-size-tokens";
-import { CssProperty } from "../../css-parser/css-parser.types";
 import { LightDarkModeFormatter } from "./light-dark-mode-formatter";
 
 describe("LightDarkModeFormatter", () => {
@@ -9,7 +8,7 @@ describe("LightDarkModeFormatter", () => {
 
   describe("formatTokens", () => {
     it("should throw error if small tokens are in both light and dark mode", () => {
-      const tokens = new BrandTokens(
+      const tokens = new BrandTokens([
         new ScreenSizeTokens(
           [],
           [
@@ -22,18 +21,17 @@ describe("LightDarkModeFormatter", () => {
           ],
           {}
         ),
-        new ScreenSizeTokens([], [], [], {})
-      );
+      ]);
       expect(() => lightDarkModeFormatter.formatTokens(tokens)).to.throw(
-        "The following tokens are not defined in both light and dark mode in small screen size: --prop1, --prop3"
+        "The following tokens are not defined in both light and dark mode for min-width breakpoint 0px: --prop1, --prop3"
       );
     });
 
     it("should throw error if large tokens are in both light and dark mode", () => {
-      const tokens = new BrandTokens(
+      const tokens = new BrandTokens([
         new ScreenSizeTokens([], [], [], {}),
         new ScreenSizeTokens(
-          [],
+          [{ name: "--breakpoint-min-width", value: "1024px" }],
           [
             { name: "--prop1", value: "" },
             { name: "--prop2", value: "" },
@@ -43,15 +41,15 @@ describe("LightDarkModeFormatter", () => {
             { name: "--prop3", value: "" },
           ],
           {}
-        )
-      );
+        ),
+      ]);
       expect(() => lightDarkModeFormatter.formatTokens(tokens)).to.throw(
-        "The following tokens are not defined in both light and dark mode in large screen size: --prop1, --prop3"
+        "The following tokens are not defined in both light and dark mode for min-width breakpoint 1024px: --prop1, --prop3"
       );
     });
 
-    it("should format small tokens as expected", () => {
-      const tokens = new BrandTokens(
+    it("should format tokens as expected", () => {
+      const tokens = new BrandTokens([
         new ScreenSizeTokens(
           [],
           [
@@ -75,51 +73,8 @@ describe("LightDarkModeFormatter", () => {
             ],
           }
         ),
-        new ScreenSizeTokens([], [], [], {})
-      );
-
-      const result = lightDarkModeFormatter.formatTokens(tokens);
-      expect(result).to.deep.equal({
-        small: {
-          global: [],
-          light: [
-            {
-              name: "--modes-color-text-light",
-              value: "#000000",
-            },
-          ],
-          dark: [
-            {
-              name: "--modes-color-text-dark",
-              value: "#ffffff",
-            },
-          ],
-          components: {
-            badge: [
-              {
-                name: "--badge-prop1",
-                value:
-                  "light-dark(var(--modes-color-text-light), var(--modes-color-text-dark))",
-              },
-            ],
-          },
-          minBreakpoint: undefined,
-        },
-        large: {
-          global: [],
-          light: [],
-          dark: [],
-          components: {},
-          minBreakpoint: undefined,
-        },
-      });
-    });
-
-    it("should format large tokens as expected", () => {
-      const tokens = new BrandTokens(
-        new ScreenSizeTokens([], [], [], {}),
         new ScreenSizeTokens(
-          [],
+          [{ name: "--breakpoint-min-width", value: "1024px" }],
           [
             {
               name: "--modes-color-text",
@@ -140,43 +95,63 @@ describe("LightDarkModeFormatter", () => {
               },
             ],
           }
-        )
-      );
+        ),
+      ]);
 
       const result = lightDarkModeFormatter.formatTokens(tokens);
       expect(result).to.deep.equal({
-        small: {
-          global: [],
-          light: [],
-          dark: [],
-          components: {},
-          minBreakpoint: undefined,
-        },
-        large: {
-          global: [],
-          light: [
-            {
-              name: "--modes-color-text-light",
-              value: "#000000",
-            },
-          ],
-          dark: [
-            {
-              name: "--modes-color-text-dark",
-              value: "#ffffff",
-            },
-          ],
-          components: {
-            badge: [
+        screenSizes: [
+          {
+            global: [],
+            light: [
               {
-                name: "--badge-prop1",
-                value:
-                  "light-dark(var(--modes-color-text-light), var(--modes-color-text-dark))",
+                name: "--modes-color-text-light",
+                value: "#000000",
               },
             ],
+            dark: [
+              {
+                name: "--modes-color-text-dark",
+                value: "#ffffff",
+              },
+            ],
+            components: {
+              badge: [
+                {
+                  name: "--badge-prop1",
+                  value:
+                    "light-dark(var(--modes-color-text-light), var(--modes-color-text-dark))",
+                },
+              ],
+            },
+            minBreakpoint: 0,
           },
-          minBreakpoint: undefined,
-        },
+          {
+            global: [],
+            light: [
+              {
+                name: "--modes-color-text-light",
+                value: "#000000",
+              },
+            ],
+            dark: [
+              {
+                name: "--modes-color-text-dark",
+                value: "#ffffff",
+              },
+            ],
+            components: {
+              badge: [
+                {
+                  name: "--badge-prop1",
+                  value:
+                    "light-dark(var(--modes-color-text-light), var(--modes-color-text-dark))",
+                },
+              ],
+            },
+            minBreakpoint: 1024,
+          },
+        ],
       });
     });
   });

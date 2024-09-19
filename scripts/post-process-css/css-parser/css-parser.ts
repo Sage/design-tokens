@@ -1,4 +1,5 @@
 import { type CssProperty } from "./css-parser.types";
+import { findDuplicates } from "../helpers";
 
 export class CssParser {
   public parseRootVariables(cssContent: string): CssProperty[] {
@@ -59,28 +60,11 @@ export class CssParser {
       );
     }
 
-    const duplicateTokens = this.findDuplicates(
-      cssProperties.map((p) => p.name)
-    );
+    const duplicateTokens = findDuplicates(cssProperties.map((p) => p.name));
     if (duplicateTokens.length > 0) {
       throw new Error(`Duplicate tokens found: ${duplicateTokens.join(", ")}`);
     }
 
     return cssProperties;
-  }
-
-  private findDuplicates(arr: string[]): string[] {
-    const seen = new Set<string>();
-    const duplicates: string[] = [];
-
-    for (const item of arr) {
-      if (seen.has(item)) {
-        duplicates.push(item);
-      } else {
-        seen.add(item);
-      }
-    }
-
-    return duplicates;
   }
 }

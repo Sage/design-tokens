@@ -20,10 +20,26 @@ describe("ScreenSizeTokens", () => {
       expect(tokens.minBreakpoint).to.equal(1024);
     });
 
-    it("should not set minBreakpoint when --breakpoint-min-width is not present", () => {
+    it("should set minBreakpoint to zero when --breakpoint-min-width is not present", () => {
+      const tokens = new ScreenSizeTokens(
+        [
+          {
+            name: "--breakpoint-min-width",
+            value: "",
+          },
+        ],
+        [],
+        [],
+        {}
+      );
+
+      expect(tokens.minBreakpoint).to.be.equal(0);
+    });
+
+    it("should set minBreakpoint to zero when --breakpoint-min-width is blank", () => {
       const tokens = new ScreenSizeTokens([], [], [], {});
 
-      expect(tokens.minBreakpoint).to.be.undefined;
+      expect(tokens.minBreakpoint).to.be.equal(0);
     });
 
     it("should throw an error when --breakpoint-min-width is not a number or a pixel value", () => {
@@ -76,6 +92,16 @@ describe("ScreenSizeTokens", () => {
 
     it("should return false when there are no tokens are available", () => {
       const tokens: ScreenSizeTokens = new ScreenSizeTokens([], [], [], {});
+      expect(tokens.hasTokens).to.be.false;
+    });
+
+    it("should return false when there is only breakpoint token available", () => {
+      const tokens: ScreenSizeTokens = new ScreenSizeTokens(
+        [{ name: "--breakpoint-min-width", value: "0" }],
+        [],
+        [],
+        {}
+      );
       expect(tokens.hasTokens).to.be.false;
     });
 
