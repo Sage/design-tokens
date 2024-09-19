@@ -17,9 +17,21 @@ describe("CssParser", () => {
     const result: CssProperty[] = cssParser.parseRootVariables(cssContent);
     expect(result).deep.equal([
       { name: "--main-bg-color", value: "#ffffff" },
-      { name: "--main-text-color", value: "#333333", comment: "/* Semi-colons(;) don't go in CSS values */" },
-      { name: "--main-border-radius", value: "5px", comment: "/* Colons(:) don't go in CSS values */" },
-      { name: "--header-height", value: "60px", comment: "/* Header height */" },
+      {
+        name: "--main-text-color",
+        value: "#333333",
+        comment: "/* Semi-colons(;) don't go in CSS values */",
+      },
+      {
+        name: "--main-border-radius",
+        value: "5px",
+        comment: "/* Colons(:) don't go in CSS values */",
+      },
+      {
+        name: "--header-height",
+        value: "60px",
+        comment: "/* Header height */",
+      },
     ]);
   });
 
@@ -32,7 +44,9 @@ body {
     --header-height: 60px; /* Header height */
 }`;
 
-    expect(() => cssParser.parseRootVariables(cssContent)).to.throw("Root selector not found");
+    expect(() => cssParser.parseRootVariables(cssContent)).to.throw(
+      "Root selector not found"
+    );
   });
 
   it("should error when not outputting expected number of items", () => {
@@ -44,6 +58,23 @@ body {
     --header-height: 60px; /* Header height */
 }`;
 
-    expect(() => cssParser.parseRootVariables(cssContent)).to.throw("Expected 4 items, but got 3");
+    expect(() => cssParser.parseRootVariables(cssContent)).to.throw(
+      "Expected 4 items, but got 3"
+    );
+  });
+
+  it("should error when duplicate tokens are provided", () => {
+    const cssContent = `
+:root {
+    --main-bg-color: #ffffff;
+    --main-text-color: #333333;
+    --main-text-color: #333333;
+    --main-bg-color: #000000;
+    --header-height: 60px;
+}`;
+
+    expect(() => cssParser.parseRootVariables(cssContent)).to.throw(
+      "Duplicate tokens found: --main-text-color, --main-bg-color"
+    );
   });
 });

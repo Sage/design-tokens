@@ -25,26 +25,27 @@ export class CssParser {
 
       if (!colonSplit[1]) continue;
 
-      const semiColonSplit = colonSplit.slice(1).join(':').split(";");
+      const semiColonSplit = colonSplit.slice(1).join(":").split(";");
       const value = semiColonSplit[0]?.trim();
 
       if (!value) continue;
 
-      const comment = semiColonSplit.slice(1).join(';').trim();
+      const comment = semiColonSplit.slice(1).join(";").trim();
 
       // Sanity check
       const expectedLine = `${name}: ${value};${comment ? ` ${comment}` : ""}`;
-      if(fullLine !== expectedLine) {
+      if (fullLine !== expectedLine) {
         throw new Error(
           `Expected concatenation to equal "${fullLine}", but found: "${expectedLine}"`
         );
       }
 
       const cssProp: CssProperty = {
-        name, value
+        name,
+        value,
       };
 
-      if(comment) {
+      if (comment) {
         cssProp.comment = comment;
       }
 
@@ -58,6 +59,28 @@ export class CssParser {
       );
     }
 
+    const duplicateTokens = this.findDuplicates(
+      cssProperties.map((p) => p.name)
+    );
+    if (duplicateTokens.length > 0) {
+      throw new Error(`Duplicate tokens found: ${duplicateTokens.join(", ")}`);
+    }
+
     return cssProperties;
+  }
+
+  private findDuplicates(arr: string[]): string[] {
+    const seen = new Set<string>();
+    const duplicates: string[] = [];
+
+    for (const item of arr) {
+      if (seen.has(item)) {
+        duplicates.push(item);
+      } else {
+        seen.add(item);
+      }
+    }
+
+    return duplicates;
   }
 }
