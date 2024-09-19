@@ -31,7 +31,7 @@ describe("LightDarkModeFormatter", () => {
       const tokens = new BrandTokens([
         new ScreenSizeTokens([], [], [], {}),
         new ScreenSizeTokens(
-          [{ name: "--breakpoint-min-width", value: "1024px" }],
+          [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
           [
             { name: "--prop1", value: "" },
             { name: "--prop2", value: "" },
@@ -74,7 +74,7 @@ describe("LightDarkModeFormatter", () => {
           }
         ),
         new ScreenSizeTokens(
-          [{ name: "--breakpoint-min-width", value: "1024px" }],
+          [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
           [
             {
               name: "--modes-color-text",

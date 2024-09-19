@@ -24,7 +24,7 @@ describe("ConsolidateScreenSizes", () => {
   ];
 
   const largeGlobalBreakpointToken: CssProperty = {
-    name: "--breakpoint-min-width",
+    name: "--global-size-breakpoint-min-width",
     value: "1024px",
   };
 
@@ -33,7 +33,7 @@ describe("ConsolidateScreenSizes", () => {
       const tokens = new BrandTokens([
         new ScreenSizeTokens(
           [
-            { name: "--breakpoint-min-width", value: "0" },
+            { name: "--global-size-breakpoint-min-width", value: "0" },
             { name: "--global-prop1", value: "value1" },
             { name: "--global-prop2", value: "value1" },
           ],
@@ -43,7 +43,7 @@ describe("ConsolidateScreenSizes", () => {
         ),
         new ScreenSizeTokens(
           [
-            { name: "--breakpoint-min-width", value: "768" },
+            { name: "--global-size-breakpoint-min-width", value: "768" },
             { name: "--global-prop2", value: "value1" },
             { name: "--global-prop3", value: "value1" },
           ],
@@ -53,7 +53,7 @@ describe("ConsolidateScreenSizes", () => {
         ),
         new ScreenSizeTokens(
           [
-            { name: "--breakpoint-min-width", value: "1024" },
+            { name: "--global-size-breakpoint-min-width", value: "1024" },
             { name: "--global-prop2", value: "value1" },
             { name: "--global-prop3", value: "value1" },
           ],
@@ -71,7 +71,7 @@ describe("ConsolidateScreenSizes", () => {
     it("should throw an error if any light mode tokens are not found in all screen sizes", () => {
       const tokens = new BrandTokens([
         new ScreenSizeTokens(
-          [{ name: "--breakpoint-min-width", value: "0" }],
+          [{ name: "--global-size-breakpoint-min-width", value: "0" }],
           [
             { name: "--global-prop1", value: "value1" },
             { name: "--global-prop2", value: "value1" },
@@ -80,7 +80,7 @@ describe("ConsolidateScreenSizes", () => {
           {}
         ),
         new ScreenSizeTokens(
-          [{ name: "--breakpoint-min-width", value: "768" }],
+          [{ name: "--global-size-breakpoint-min-width", value: "768" }],
           [
             { name: "--global-prop2", value: "value1" },
             { name: "--global-prop3", value: "value1" },
@@ -89,7 +89,7 @@ describe("ConsolidateScreenSizes", () => {
           {}
         ),
         new ScreenSizeTokens(
-          [{ name: "--breakpoint-min-width", value: "1024" }],
+          [{ name: "--global-size-breakpoint-min-width", value: "1024" }],
           [
             { name: "--global-prop2", value: "value1" },
             { name: "--global-prop3", value: "value1" },
@@ -107,7 +107,7 @@ describe("ConsolidateScreenSizes", () => {
     it("should throw an error if any dark mode tokens are not found in all screen sizes", () => {
       const tokens = new BrandTokens([
         new ScreenSizeTokens(
-          [{ name: "--breakpoint-min-width", value: "0" }],
+          [{ name: "--global-size-breakpoint-min-width", value: "0" }],
           [],
           [
             { name: "--global-prop1", value: "value1" },
@@ -116,7 +116,7 @@ describe("ConsolidateScreenSizes", () => {
           {}
         ),
         new ScreenSizeTokens(
-          [{ name: "--breakpoint-min-width", value: "768" }],
+          [{ name: "--global-size-breakpoint-min-width", value: "768" }],
           [],
           [
             { name: "--global-prop2", value: "value1" },
@@ -125,7 +125,7 @@ describe("ConsolidateScreenSizes", () => {
           {}
         ),
         new ScreenSizeTokens(
-          [{ name: "--breakpoint-min-width", value: "1024" }],
+          [{ name: "--global-size-breakpoint-min-width", value: "1024" }],
           [],
           [
             { name: "--global-prop2", value: "value1" },
@@ -143,7 +143,7 @@ describe("ConsolidateScreenSizes", () => {
     it("should throw an error if any component tokens are not found in all screen sizes", () => {
       const tokens = new BrandTokens([
         new ScreenSizeTokens(
-          [{ name: "--breakpoint-min-width", value: "0" }],
+          [{ name: "--global-size-breakpoint-min-width", value: "0" }],
           [],
           [],
           {
@@ -154,7 +154,7 @@ describe("ConsolidateScreenSizes", () => {
           }
         ),
         new ScreenSizeTokens(
-          [{ name: "--breakpoint-min-width", value: "768" }],
+          [{ name: "--global-size-breakpoint-min-width", value: "768" }],
           [],
           [],
           {
@@ -165,7 +165,7 @@ describe("ConsolidateScreenSizes", () => {
           }
         ),
         new ScreenSizeTokens(
-          [{ name: "--breakpoint-min-width", value: "1024" }],
+          [{ name: "--global-size-breakpoint-min-width", value: "1024" }],
           [],
           [],
           {
@@ -343,7 +343,7 @@ describe("ConsolidateScreenSizes", () => {
 
       const smallSize = new ScreenSizeTokens(
         [
-          { name: "--breakpoint-min-width", value: "0" },
+          { name: "--global-size-breakpoint-min-width", value: "0" },
           { name: "--global-prop1", value: "SMALL" },
           { name: "--global-prop2", value: "SMALL" },
           { name: "--global-prop3", value: "SMALL" },
@@ -354,7 +354,7 @@ describe("ConsolidateScreenSizes", () => {
       );
       const mediumSize = new ScreenSizeTokens(
         [
-          { name: "--breakpoint-min-width", value: "768" },
+          { name: "--global-size-breakpoint-min-width", value: "768" },
           { name: "--global-prop1", value: "SMALL" },
           { name: "--global-prop2", value: "SMALL" },
           { name: "--global-prop3", value: "MEDIUM" },
@@ -365,7 +365,7 @@ describe("ConsolidateScreenSizes", () => {
       );
       const largeSize = new ScreenSizeTokens(
         [
-          { name: "--breakpoint-min-width", value: "992" },
+          { name: "--global-size-breakpoint-min-width", value: "992" },
           { name: "--global-prop1", value: "SMALL" },
           { name: "--global-prop2", value: "LARGE" },
           { name: "--global-prop3", value: "MEDIUM" },
@@ -376,7 +376,7 @@ describe("ConsolidateScreenSizes", () => {
       );
       const extraLargeSize = new ScreenSizeTokens(
         [
-          { name: "--breakpoint-min-width", value: "1200" },
+          { name: "--global-size-breakpoint-min-width", value: "1200" },
           { name: "--global-prop1", value: "SMALL" },
           { name: "--global-prop2", value: "LARGE" },
           { name: "--global-prop3", value: "EXTRALARGE" },

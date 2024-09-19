@@ -9,13 +9,13 @@ describe("BrandTokens", () => {
         () =>
           new BrandTokens([
             new ScreenSizeTokens(
-              [{ name: "--breakpoint-min-width", value: "0" }],
+              [{ name: "--global-size-breakpoint-min-width", value: "0" }],
               [],
               [],
               {}
             ),
             new ScreenSizeTokens(
-              [{ name: "--breakpoint-min-width", value: "1024px" }],
+              [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
               [],
               [],
               {}
@@ -35,7 +35,7 @@ describe("BrandTokens", () => {
               {}
             ),
             new ScreenSizeTokens(
-              [{ name: "--breakpoint-min-width", value: "1024px" }],
+              [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
               [],
               [],
               {}
@@ -49,7 +49,7 @@ describe("BrandTokens", () => {
         () =>
           new BrandTokens([
             new ScreenSizeTokens(
-              [{ name: "--breakpoint-min-width", value: "1024px" }],
+              [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
               [],
               [],
               {}
@@ -65,37 +65,37 @@ describe("BrandTokens", () => {
         () =>
           new BrandTokens([
             new ScreenSizeTokens(
-              [{ name: "--breakpoint-min-width", value: "1024px" }],
+              [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
               [],
               [],
               {}
             ),
             new ScreenSizeTokens(
-              [{ name: "--breakpoint-min-width", value: "728px" }],
+              [{ name: "--global-size-breakpoint-min-width", value: "728px" }],
               [],
               [],
               {}
             ),
             new ScreenSizeTokens(
-              [{ name: "--breakpoint-min-width", value: "1024px" }],
+              [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
               [],
               [],
               {}
             ),
             new ScreenSizeTokens(
-              [{ name: "--breakpoint-min-width", value: "728px" }],
+              [{ name: "--global-size-breakpoint-min-width", value: "728px" }],
               [],
               [],
               {}
             ),
             new ScreenSizeTokens(
-              [{ name: "--breakpoint-min-width", value: "" }],
+              [{ name: "--global-size-breakpoint-min-width", value: "" }],
               [],
               [],
               {}
             ),
             new ScreenSizeTokens(
-              [{ name: "--breakpoint-min-width", value: "980px" }],
+              [{ name: "--global-size-breakpoint-min-width", value: "980px" }],
               [],
               [],
               {}
@@ -141,7 +141,7 @@ describe("BrandTokens", () => {
         new ScreenSizeTokens(
           [
             {
-              name: "--breakpoint-min-width",
+              name: "--global-size-breakpoint-min-width",
               value: `0`,
             },
           ],
@@ -152,7 +152,7 @@ describe("BrandTokens", () => {
         new ScreenSizeTokens(
           [
             {
-              name: "--breakpoint-min-width",
+              name: "--global-size-breakpoint-min-width",
               value: `1024px`,
             },
           ],
@@ -288,7 +288,7 @@ describe("BrandTokens", () => {
             comment: "/* Some comment */",
           },
           {
-            name: "--breakpoint-min-width",
+            name: "--global-size-breakpoint-min-width",
             value: `${minWidthBreakpoint}px`,
           },
         ],

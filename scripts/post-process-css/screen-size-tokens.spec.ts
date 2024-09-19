@@ -4,11 +4,11 @@ import { CssProperty } from "./css-parser/css-parser.types";
 
 describe("ScreenSizeTokens", () => {
   describe("constructor", () => {
-    it("should set minBreakpoint when --breakpoint-min-width is present", () => {
+    it("should set minBreakpoint when --global-size-breakpoint-min-width is present", () => {
       const tokens = new ScreenSizeTokens(
         [
           {
-            name: "--breakpoint-min-width",
+            name: "--global-size-breakpoint-min-width",
             value: "1024px",
           },
         ],
@@ -20,11 +20,11 @@ describe("ScreenSizeTokens", () => {
       expect(tokens.minBreakpoint).to.equal(1024);
     });
 
-    it("should set minBreakpoint to zero when --breakpoint-min-width is not present", () => {
+    it("should set minBreakpoint to zero when --global-size-breakpoint-min-width is not present", () => {
       const tokens = new ScreenSizeTokens(
         [
           {
-            name: "--breakpoint-min-width",
+            name: "--global-size-breakpoint-min-width",
             value: "",
           },
         ],
@@ -36,19 +36,19 @@ describe("ScreenSizeTokens", () => {
       expect(tokens.minBreakpoint).to.be.equal(0);
     });
 
-    it("should set minBreakpoint to zero when --breakpoint-min-width is blank", () => {
+    it("should set minBreakpoint to zero when --global-size-breakpoint-min-width is blank", () => {
       const tokens = new ScreenSizeTokens([], [], [], {});
 
       expect(tokens.minBreakpoint).to.be.equal(0);
     });
 
-    it("should throw an error when --breakpoint-min-width is not a number or a pixel value", () => {
+    it("should throw an error when --global-size-breakpoint-min-width is not a number or a pixel value", () => {
       expect(
         () =>
           new ScreenSizeTokens(
             [
               {
-                name: "--breakpoint-min-width",
+                name: "--global-size-breakpoint-min-width",
                 value: "ERROR",
               },
             ],
@@ -97,7 +97,7 @@ describe("ScreenSizeTokens", () => {
 
     it("should return false when there is only breakpoint token available", () => {
       const tokens: ScreenSizeTokens = new ScreenSizeTokens(
-        [{ name: "--breakpoint-min-width", value: "0" }],
+        [{ name: "--global-size-breakpoint-min-width", value: "0" }],
         [],
         [],
         {}

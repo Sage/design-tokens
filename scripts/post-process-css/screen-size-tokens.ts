@@ -1,7 +1,7 @@
 import { CssProperty } from "./css-parser/css-parser.types";
 
 export class ScreenSizeTokens {
-  public static readonly breakpointToken = "--breakpoint-min-width";
+  public static readonly breakpointToken = "--global-size-breakpoint-min-width";
   public readonly minBreakpoint: number = 0;
 
   constructor(
