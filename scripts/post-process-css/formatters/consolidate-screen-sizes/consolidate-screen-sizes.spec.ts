@@ -58,12 +58,14 @@ describe("ConsolidateScreenSizes", () => {
           light: [],
           dark: [],
           components: {},
+          minBreakpoint: undefined,
         },
         large: {
           global: expectedFilteredTokens,
           light: [],
           dark: [],
           components: {},
+          minBreakpoint: undefined,
         },
       });
     });
@@ -81,12 +83,14 @@ describe("ConsolidateScreenSizes", () => {
           light: populatedSmallTokens,
           dark: [],
           components: {},
+          minBreakpoint: undefined,
         },
         large: {
           global: [],
           light: expectedFilteredTokens,
           dark: [],
           components: {},
+          minBreakpoint: undefined,
         },
       });
     });
@@ -104,12 +108,14 @@ describe("ConsolidateScreenSizes", () => {
           light: [],
           dark: populatedSmallTokens,
           components: {},
+          minBreakpoint: undefined,
         },
         large: {
           global: [],
           light: [],
           dark: expectedFilteredTokens,
           components: {},
+          minBreakpoint: undefined,
         },
       });
     });
@@ -154,6 +160,7 @@ describe("ConsolidateScreenSizes", () => {
             ],
             button: populatedSmallTokens,
           },
+          minBreakpoint: undefined,
         },
         large: {
           global: [],
@@ -164,6 +171,7 @@ describe("ConsolidateScreenSizes", () => {
             badge: [],
             button: expectedFilteredTokens,
           },
+          minBreakpoint: undefined,
         },
       });
     });

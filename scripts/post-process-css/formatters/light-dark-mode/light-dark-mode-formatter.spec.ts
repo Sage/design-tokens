@@ -103,12 +103,14 @@ describe("LightDarkModeFormatter", () => {
               },
             ],
           },
+          minBreakpoint: undefined,
         },
         large: {
           global: [],
           light: [],
           dark: [],
           components: {},
+          minBreakpoint: undefined,
         },
       });
     });
@@ -138,7 +140,7 @@ describe("LightDarkModeFormatter", () => {
               },
             ],
           }
-        ),
+        )
       );
 
       const result = lightDarkModeFormatter.formatTokens(tokens);
@@ -148,6 +150,7 @@ describe("LightDarkModeFormatter", () => {
           light: [],
           dark: [],
           components: {},
+          minBreakpoint: undefined,
         },
         large: {
           global: [],
@@ -172,6 +175,7 @@ describe("LightDarkModeFormatter", () => {
               },
             ],
           },
+          minBreakpoint: undefined,
         },
       });
     });

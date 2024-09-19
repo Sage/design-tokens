@@ -3,6 +3,49 @@ import { ScreenSizeTokens } from "./screen-size-tokens";
 import { CssProperty } from "./css-parser/css-parser.types";
 
 describe("ScreenSizeTokens", () => {
+  describe("constructor", () => {
+    it("should set minBreakpoint when --breakpoint-min-width is present", () => {
+      const tokens = new ScreenSizeTokens(
+        [
+          {
+            name: "--breakpoint-min-width",
+            value: "1024px",
+          },
+        ],
+        [],
+        [],
+        {}
+      );
+
+      expect(tokens.minBreakpoint).to.equal(1024);
+    });
+
+    it("should not set minBreakpoint when --breakpoint-min-width is not present", () => {
+      const tokens = new ScreenSizeTokens([], [], [], {});
+
+      expect(tokens.minBreakpoint).to.be.undefined;
+    });
+
+    it("should throw an error when --breakpoint-min-width is not a number or a pixel value", () => {
+      expect(
+        () =>
+          new ScreenSizeTokens(
+            [
+              {
+                name: "--breakpoint-min-width",
+                value: "ERROR",
+              },
+            ],
+            [],
+            [],
+            {}
+          )
+      ).to.throw(
+        'Breakpoint min width "ERROR" is not a number or a pixel value'
+      );
+    });
+  });
+
   describe("hasTokens", () => {
     const globalTokens: CssProperty[] = [
       {
