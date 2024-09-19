@@ -1116,6 +1116,57 @@
               "value": "{modes.color.generic.content.standard.extreme}",
               "type": "color",
               "description": "maybe should be white to align with primary group logic\n"
+            },
+            "legacy": {
+              "active": {
+                "value": "{primitives.colors.navy}",
+                "type": "color"
+              },
+              "activeAlt": {
+                "value": "{modes.color.interactive.monochrome.standard.legacy.active}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "alpha",
+                      "value": "{modes.color.modifiers.button.activeAlt} ",
+                      "space": "lch"
+                    }
+                  }
+                }
+              },
+              "default": {
+                "value": "{modes.color.interactive.monochrome.standard.legacy.active}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "mix",
+                      "value": "0.2",
+                      "space": "lch",
+                      "color": "{modes.color.modifier.contrastLess} "
+                    }
+                  }
+                }
+              },
+              "hoverAlt": {
+                "value": "{modes.color.interactive.monochrome.standard.legacy.active}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "alpha",
+                      "value": "{modes.color.modifiers.button.hoverAlt} ",
+                      "space": "lch",
+                      "color": "{modes.color.modifier.contrastMore}"
+                    }
+                  }
+                }
+              },
+              "withHover": {
+                "value": "{modes.color.interactive.monochrome.standard.legacy.active}",
+                "type": "color"
+              }
             }
           },
           "inverse": {
@@ -1321,6 +1372,40 @@
             "withHover": {
               "value": "{primitives.colors.white}",
               "type": "color"
+            },
+            "legacy": {
+              "active": {
+                "value": "{modes.color.interactive.primary.standard.legacy.default}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "mix",
+                      "value": "{modes.color.modifiers.button.active} ",
+                      "space": "lch",
+                      "color": "{modes.color.modifier.contrastMore}"
+                    }
+                  }
+                }
+              },
+              "default": {
+                "value": "{primitives.colors.jade}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{modes.color.interactive.primary.standard.legacy.default}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "mix",
+                      "value": "{modes.color.modifiers.button.hover} ",
+                      "space": "lch",
+                      "color": "{modes.color.modifier.contrastMore}"
+                    }
+                  }
+                }
+              }
             }
           },
           "inverse": {

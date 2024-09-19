@@ -1111,6 +1111,57 @@
             "withHover": {
               "value": "{modes.color.generic.content.inverse.extreme}",
               "type": "color"
+            },
+            "legacy": {
+              "activeAlt": {
+                "value": "{modes.color.interactive.monochrome.inverse.legacy.default}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "alpha",
+                      "value": "{modes.color.modifiers.button.activeAlt}",
+                      "space": "lch"
+                    }
+                  }
+                }
+              },
+              "active": {
+                "value": "{primitives.colors.white}",
+                "type": "color"
+              },
+              "default": {
+                "value": "{modes.color.interactive.monochrome.inverse.legacy.active}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "alpha",
+                      "value": "0.9",
+                      "space": "lch"
+                    }
+                  }
+                }
+              },
+              "hoverAlt": {
+                "value": "{modes.color.interactive.monochrome.inverse.legacy.active}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "alpha",
+                      "value": "{modes.color.modifiers.button.hoverAlt} ",
+                      "space": "lch",
+                      "color": "{modes.color.modifier.contrastMore}"
+                    }
+                  }
+                },
+                "description": "Accordion and menu bg on hover\n"
+              },
+              "withHover": {
+                "value": "{modes.color.interactive.monochrome.inverse.legacy.active}",
+                "type": "color"
+              }
             }
           },
           "standard": {
@@ -1392,6 +1443,40 @@
             "withHover": {
               "value": "{primitives.colors.black}",
               "type": "color"
+            },
+            "legacy": {
+              "active": {
+                "value": "{modes.color.interactive.primary.standard.legacy.default}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "mix",
+                      "value": "{modes.color.modifiers.button.active} ",
+                      "space": "lch",
+                      "color": "{modes.color.modifier.contrastLess}"
+                    }
+                  }
+                }
+              },
+              "default": {
+                "value": "{modes.color.brandreference.custom2}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{modes.color.interactive.primary.standard.legacy.default}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "mix",
+                      "value": "{modes.color.modifiers.button.hover} ",
+                      "space": "lch",
+                      "color": "{modes.color.modifier.contrastLess} "
+                    }
+                  }
+                }
+              }
             }
           }
         }
