@@ -528,7 +528,7 @@
               "type": "color"
             },
             "faint": {
-              "value": "{modes.color.generic.bg.standard.nought}",
+              "value": "{modes.color.generic.backdrop.standard.nought}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -545,17 +545,17 @@
           },
           "inverse": {
             "nought": {
-              "value": "{primitives.colors.navy}",
+              "value": "{primitives.colors.black}",
               "type": "color"
             },
             "faint": {
-              "value": "{primitives.colors.navy}",
+              "value": "{primitives.colors.black}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "0.04",
+                    "value": "0.08",
                     "space": "lch",
                     "color": "{modes.color.modifier.contrastLess} "
                   }

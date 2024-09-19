@@ -520,6 +520,48 @@
               }
             }
           }
+        },
+        "backdrop": {
+          "inverse": {
+            "nought": {
+              "value": "{primitives.colors.black}",
+              "type": "color"
+            },
+            "faint": {
+              "value": "{primitives.colors.black}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.08",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            }
+          },
+          "standard": {
+            "nought": {
+              "value": "{primitives.colors.black}",
+              "type": "color"
+            },
+            "faint": {
+              "value": "{primitives.colors.black}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.08",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "interactive": {
