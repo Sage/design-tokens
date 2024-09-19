@@ -13,6 +13,14 @@ const cssParser = new CssParser();
 // Loop through token contexts
 const cssDistPath = path.join(__dirname, "../../dist/css");
 fs.readdirSync(cssDistPath).forEach((file) => {
+  fs.readdirSync(path.join(cssDistPath, file)).forEach((screenSize) => {
+    if (!fs.statSync(path.join(cssDistPath, file, screenSize)).isDirectory())
+      return;
+
+    console.log(screenSize);
+  });
+  // throw new Error("screenSize");
+
   const largeTokens = getScreenSizeTokens(
     path.join(cssDistPath, file),
     "large"
@@ -25,12 +33,17 @@ fs.readdirSync(cssDistPath).forEach((file) => {
   const tokens = new BrandTokens(smallTokens, largeTokens);
 
   const consolidateScreenSizes = new ConsolidateScreenSizes();
-  const lightDarkModeFormatter = new LightDarkModeFormatter(consolidateScreenSizes);
+  const lightDarkModeFormatter = new LightDarkModeFormatter(
+    consolidateScreenSizes
+  );
   const formattedTokens = lightDarkModeFormatter.formatTokens(tokens);
 
   writeCombinedCssFile(file, formattedTokens);
 
-  fs.copyFileSync(path.join(__dirname, "../../docs/usage/index.html"), path.join(cssDistPath, file, "index.html"));
+  fs.copyFileSync(
+    path.join(__dirname, "../../docs/usage/index.html"),
+    path.join(cssDistPath, file, "index.html")
+  );
 });
 
 function writeCombinedCssFile(file: string, tokens: BrandTokens) {

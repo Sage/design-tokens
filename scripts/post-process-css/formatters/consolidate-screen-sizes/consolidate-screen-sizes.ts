@@ -3,12 +3,12 @@ import { CssProperty } from "../../css-parser/css-parser.types";
 import { Decorator } from "../decorator";
 
 export class ConsolidateScreenSizes extends Decorator {
-    /**
-     * Consolidates screen sizes by removing tokens that are the same in both small and large screen sizes from the large tokens, following a
-     * mobile first approach. Makes the assumption that tokens are only defined one per screen size.
-     * @param tokens Tokens to format.
-     * @returns Consolidated tokens.
-     */
+  /**
+   * Consolidates screen sizes by removing tokens that are the same in both small and large screen sizes from the large tokens, following a
+   * mobile first approach. Makes the assumption that tokens are only defined one per screen size.
+   * @param tokens Tokens to format.
+   * @returns Consolidated tokens.
+   */
   public override formatTokens(tokens: BrandTokens) {
     const matchesToken = (token: CssProperty, tokensToCompare: CssProperty[]) =>
       !tokensToCompare.find(
