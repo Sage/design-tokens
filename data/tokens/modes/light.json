@@ -520,6 +520,49 @@
               }
             }
           }
+        },
+        "backdrop": {
+          "standard": {
+            "nought": {
+              "value": "{primitives.colors.white}",
+              "type": "color"
+            },
+            "faint": {
+              "value": "{modes.color.generic.bg.standard.nought}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.04",
+                    "space": "lch",
+                    "color": "{primitives.colors.navy}"
+                  }
+                }
+              },
+              "description": "used for full page backdrops as the pure black bg color felt too dated"
+            }
+          },
+          "inverse": {
+            "nought": {
+              "value": "{primitives.colors.navy}",
+              "type": "color"
+            },
+            "faint": {
+              "value": "{primitives.colors.navy}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.04",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "interactive": {
