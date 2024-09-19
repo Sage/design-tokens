@@ -263,7 +263,13 @@
             "type": "typography"
           },
           "large": {
-            "value": "{global.typography.adaptive.body.M}",
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.regular}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{global.fontSize.adaptive.step1}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.300}"
+            },
             "type": "typography"
           }
         },
