@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./all.css" />
+
+    <!-- Component library styles -->
+    <style>
+      body {
+        font: var(--page-typography-p-standard);
+        background: var(--page-color-standard-bg-default);
+        color: var(--page-color-standard-text-default);
+      }
+
+      p {
+        font: var(--page-typography-p-standard);
+      }
+
+      h1 {
+        font: var(--page-typography-h1);
+      }
+
+      h2 {
+        font: var(--page-typography-h2);
+      }
+
+      button {
+        background: var(--button-color-standard-typical-primary-bg-enabled);
+        padding: var(--button-space-primary-y-m) var(--button-space-primary-x-m);
+        gap: var(--button-space-primary-xg-m);
+        border-radius: var(--button-radius-primary-m);
+        border: none;
+        color: var(--button-color-standard-destructive-primary-label-enabled);
+        font: var(--button-typography-adaptive-primary-m);
+        cursor: pointer;
+
+        &.active {
+          background: var(--button-color-standard-typical-primary-bg-active);
+          color: var(--button-color-standard-typical-primary-label-active);
+        }
+      }
+
+      section {
+        background: var(--container-color-standard-interactive-bg-enabled);
+        border-radius: var(--container-radius-card-moderate);
+        box-shadow: var(--container-boxshadow-card-enabled);
+        padding: var(--container-space-generic-content-y-l)
+          var(--container-space-generic-content-x-l);
+
+        &.inverted {
+          background: var(--container-color-inverse-bg-default);
+
+          button {
+            background: var(--button-color-inverse-typical-primary-bg-enabled);
+            color: var(--button-color-inverse-typical-primary-label-enabled);
+          }
+        }
+      }
+    </style>
+
+    <!-- Application styles -->
+    <style>
+      body {
+        color-scheme: light dark; /* Device preference by default */
+      }
+
+      .mode-light,
+      .mode-dark {
+        background: var(--page-color-standard-bg-default);
+        color: var(--page-color-standard-text-default);
+      }
+
+      .mode-light {
+        color-scheme: only light;
+      }
+
+      .mode-dark {
+        color-scheme: only dark;
+      }
+
+      section {
+        + section {
+          margin-top: var(--page-space-y-l);
+        }
+      }
+
+      .inverted {
+        color: var(--page-color-inverse-text-default);
+      }
+    </style>
+
+    <script type="text/javascript">
+      function setMode(event, mode) {
+        const target = event.target;
+
+        document.querySelectorAll("button").forEach((button) => {
+          button.classList.remove("active");
+        });
+        target.classList.add("active");
+
+        document.body.classList.remove("mode-system");
+        document.body.classList.remove("mode-light");
+        document.body.classList.remove("mode-dark");
+        document.body.classList.add(mode);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Light/dark mode demonstration</h1>
+    <section>
+      <h2>User selection</h2>
+      <p>This section will change based on user preference.</p>
+      <button onclick="setMode(event, 'mode-system')" class="active">
+        System
+      </button>
+      <button onclick="setMode(event, 'mode-light')">Light</button>
+      <button onclick="setMode(event, 'mode-dark')">Dark</button>
+    </section>
+
+    <section class="mode-dark">
+      <h2>Always dark</h2>
+      <p>This section will always be dark.</p>
+      <button>Button</button>
+    </section>
+
+    <section class="mode-light">
+      <h2>Always light</h2>
+      <p>This section will always be light.</p>
+      <button>Button</button>
+    </section>
+
+    <section class="inverted">
+      <h2>Always inverted</h2>
+      <p>This section will always be inverted.</p>
+      <button>Button</button>
+    </section>
+  </body>
+</html>

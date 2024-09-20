@@ -3,7 +3,6 @@ Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
 
 const styleDictionary = require('style-dictionary')
-const { fileHeader, formattedVariables } = styleDictionary.formatHelpers
 const { registerTransforms } = require('@tokens-studio/sd-transforms')
 
 const groups = {
@@ -82,34 +81,6 @@ const groups = {
 registerTransforms(styleDictionary, {
   'ts/color/modifiers': {
     format: 'hex'
-  }
-})
-
-styleDictionary.registerFormat({
-  name: 'large',
-  formatter: function ({ dictionary, file, options }) {
-    const { outputReferences, selector } = options
-    return (
-      fileHeader({ file }) +
-      '@media (width >= 1200px) {\n' +
-      `  ${selector} {\n` +
-
-      formattedVariables({ format: 'css', dictionary, outputReferences }) +
-      '\n  }\n}\n'
-    )
-  }
-})
-
-styleDictionary.registerFormat({
-  name: 'small',
-  formatter: function ({ dictionary, file, options }) {
-    const { outputReferences, selector } = options
-    return (
-      fileHeader({ file }) +
-      `${selector} {\n` +
-      formattedVariables({ format: 'css', dictionary, outputReferences }) +
-      '\n}\n'
-    )
   }
 })
 
