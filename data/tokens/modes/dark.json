@@ -1486,6 +1486,38 @@
               }
             }
           }
+        },
+        "progress": {
+          "inverse": {
+            "bg": {
+              "value": "{primitives.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.04",
+                    "space": "lch"
+                  }
+                }
+              }
+            }
+          },
+          "standard": {
+            "bg": {
+              "value": "{primitives.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.04",
+                    "space": "lch"
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "status": {
