@@ -830,6 +830,23 @@
               "value": "{modes.color.generic.content.standard.moderate}",
               "type": "color",
               "description": "Hint text, placeholder text, character count etc"
+            },
+            "legacy": {
+              "withDefault": {
+                "value": "{primitives.colors.navy}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "mix",
+                      "value": "0.4",
+                      "space": "lch",
+                      "color": "{modes.color.modifier.contrastLess} "
+                    }
+                  }
+                },
+                "description": "Input borders."
+              }
             }
           },
           "inverse": {
