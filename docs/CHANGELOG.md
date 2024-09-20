@@ -1,3 +1,10 @@
+# [5.0.0-beta.23](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.22...v5.0.0-beta.23) (2024-09-20)
+
+
+### Features
+
+* **data:** adding screensize dependant breakpoint-min-width token ([4b280c3](https://github.com/Sage/design-tokens/commit/4b280c3197149a593370569552bddfa1c7e32617))
+
 # [5.0.0-beta.22](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.21...v5.0.0-beta.22) (2024-09-09)
 
 
