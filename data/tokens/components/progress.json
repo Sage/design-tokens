@@ -1,0 +1,794 @@
+{
+  "progress": {
+    "size": {
+      "bar": {
+        "S": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.XS}",
+          "$description": "S loader bar"
+        },
+        "M": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.M}",
+          "$description": "M progress tracker bar, M loader bar"
+        },
+        "L": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.XL}",
+          "$description": "L loader bar"
+        }
+      },
+      "carouselselector": {
+        "dot": {
+          "M": {
+            "$type": "sizing",
+            "$value": "{global.size.micro.L}"
+          }
+        },
+        "activedot": {
+          "M": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.XXS}"
+          }
+        },
+        "hitarea": {
+          "M": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.XS}"
+          }
+        }
+      },
+      "carouselslide": {
+        "x": {
+          "M": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.XL}",
+            "$description": "Inactive slide"
+          }
+        }
+      },
+      "ring": {
+        "S": {
+          "$type": "sizing",
+          "$value": "{global.size.macro.S}",
+          "$description": "Loader ring"
+        },
+        "M": {
+          "$type": "sizing",
+          "$value": "{global.size.macro.S} * 2",
+          "$description": "Loader ring"
+        },
+        "L": {
+          "$type": "sizing",
+          "$value": "{global.size.macro.XS} * 4",
+          "$description": "Loader ring"
+        }
+      },
+      "skeleton": {
+        "text": {
+          "XS": {
+            "$type": "sizing",
+            "$value": "{global.typography.adaptive.subheading.M}",
+            "$description": "Skeleton paragraph and H5"
+          },
+          "S": {
+            "$type": "sizing",
+            "$value": "{global.typography.adaptive.subheading.M}",
+            "$description": "H4 Skeletons"
+          },
+          "M": {
+            "$type": "sizing",
+            "$value": "{global.typography.adaptive.heading.XS}",
+            "$description": "H3 Skeletons"
+          },
+          "L": {
+            "$type": "sizing",
+            "$value": "{global.typography.adaptive.heading.S}",
+            "$description": "H2 Skeletons"
+          },
+          "XL": {
+            "$type": "sizing",
+            "$value": "{global.typography.adaptive.heading.M}",
+            "$description": "H1 Skeletons"
+          }
+        }
+      },
+      "stepflow": {
+        "M": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.M}",
+          "$description": "Step height"
+        }
+      },
+      "stepindicator": {
+        "bar": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.XXS}",
+          "$description": "step indicator bar"
+        },
+        "stepcircle": {
+          "S": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.XS}",
+            "$description": "M size step indicator"
+          },
+          "M": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.S}",
+            "$description": "M size step indicator"
+          }
+        }
+      }
+    },
+    "color": {
+      "inverse": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.progress.inverse.bg}"
+        },
+        "bg-skeleton": {
+          "$type": "color",
+          "$value": "{modes.color.status.content.inverse.loading}"
+        },
+        "fg-ai": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.ai.inverse.default}",
+          "$description": "For progress ring in ai buttons"
+        },
+        "fg-default": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.inverse.active}"
+        },
+        "label-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.inverse.firm}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.inverse.harsh}"
+        },
+        "stepindicator": {
+          "bg-active": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.inverse.active}"
+          },
+          "bg-complete": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.primary.inverse.default}"
+          },
+          "border-active-outer": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.inverse.active}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.fg.inverse.moderate}"
+          },
+          "border-success": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.primary.inverse.default}"
+          },
+          "label-active": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.inverse.withActive}"
+          },
+          "label-complete": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.inverse.withActive}"
+          },
+          "label-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.inverse.harsh}"
+          }
+        }
+      },
+      "standard": {
+        "bg-skeleton": {
+          "$type": "color",
+          "$value": "{modes.color.status.content.standard.loading}"
+        },
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.progress.standard.bg}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.standard.soft}"
+        },
+        "fg-ai": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.ai.standard.default}",
+          "$description": "For progress ring in ai buttons"
+        },
+        "fg-alt": {
+          "$type": "color",
+          "$value": "{modes.color.status.success.standard.default}"
+        },
+        "fg-alt2": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.standard.firm}"
+        },
+        "fg-caution": {
+          "$type": "color",
+          "$value": "{modes.color.status.caution.standard.default}"
+        },
+        "fg-default": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.standard.active}"
+        },
+        "fg-error": {
+          "$type": "color",
+          "$value": "{modes.color.status.negative.standard.default}"
+        },
+        "fg-info": {
+          "$type": "color",
+          "$value": "{modes.color.status.info.standard.default}"
+        },
+        "label-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.standard.firm}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.standard.harsh}"
+        },
+        "datavis": {
+          "fg-default": {
+            "$type": "color",
+            "$value": "{modes.color.status.generic.standard.default}"
+          }
+        },
+        "stepflow": {
+          "bg-active": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.standard.active}"
+          },
+          "bg-complete": {
+            "$type": "color",
+            "$value": "{modes.color.status.success.standard.default}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.fg.standard.nought}"
+          },
+          "border-active-inner": {
+            "$type": "color",
+            "$value": "{modes.color.generic.fg.standard.nought}"
+          },
+          "border-active-outer": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.standard.active}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.fg.standard.soft}"
+          },
+          "label-alt": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.standard.firm}"
+          },
+          "label-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.standard.harsh}"
+          }
+        },
+        "stepindicator": {
+          "bg-active": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.standard.active}"
+          },
+          "bg-complete": {
+            "$type": "color",
+            "$value": "{modes.color.status.success.standard.default}"
+          },
+          "border-active-outer": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.standard.active}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.fg.standard.soft}"
+          },
+          "border-success": {
+            "$type": "color",
+            "$value": "{modes.color.status.success.standard.default}"
+          },
+          "label-active": {
+            "$type": "color",
+            "$value": "modes.color.interactive.monochrome.standard.withActive"
+          },
+          "label-complete": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.standard.withActive}"
+          },
+          "label-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.standard.harsh}"
+          }
+        }
+      }
+    },
+    "radius": {
+      "none": {
+        "$type": "borderRadius",
+        "$value": "{global.radius.none}",
+        "$description": "File input (top corners of integrated progress bar),"
+      },
+      "stepflow": {
+        "$type": "borderRadius",
+        "$value": "{global.radius.circle}",
+        "$description": "Step flow (step indicators)"
+      },
+      "stepindicator": {
+        "$type": "borderRadius",
+        "$value": "{global.radius.circle}",
+        "$description": "step indicator circles"
+      },
+      "carouselselector": {
+        "$type": "borderRadius",
+        "$value": "{global.radius.circle}",
+        "$description": "Carousel (selector dot)"
+      },
+      "integrated": {
+        "$type": "borderRadius",
+        "$value": "{global.radius.container.S}",
+        "$description": "File input (bottom corners of integrated status bar)"
+      },
+      "skeleton": {
+        "moderate": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.M}",
+          "$description": "used to represent headings, inputs and text"
+        },
+        "curved": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.L}",
+          "$description": "used to represent elements such as icons"
+        },
+        "sweeping": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXL}",
+          "$description": "used to represent buttons"
+        },
+        "circle": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.circle}",
+          "$description": "Used to represent circular elements such as profiles, badges etc"
+        }
+      },
+      "bar": {
+        "S": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XS}",
+          "$description": "Progress tracker S"
+        },
+        "M": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.S}",
+          "$description": "File input (bottom corners of integrated status bar), Progress tracker M, "
+        },
+        "L": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.SM}",
+          "$description": "Progress tracker L"
+        }
+      }
+    },
+    "borderwidth": {
+      "bar": {
+        "$type": "borderWidth",
+        "$value": "{global.borderwidth.XS}",
+        "$description": "Progress bar (all sizes)\n"
+      },
+      "carouselector": {
+        "$type": "borderWidth",
+        "$value": "{global.borderwidth.XS}",
+        "$description": "Carousel slide selector dots\n"
+      },
+      "integrated": {
+        "$type": "borderWidth",
+        "$value": "{global.borderwidth.XS}",
+        "$description": "Progress bar in File upload\n"
+      },
+      "stepflow": {
+        "inner": {
+          "$type": "borderWidth",
+          "$value": "{global.borderwidth.XS}",
+          "$description": "Step flow default (not started)"
+        },
+        "active-inner": {
+          "$type": "borderWidth",
+          "$value": "{global.borderwidth.XS}",
+          "$description": "Step flow active step border outer"
+        },
+        "active-outer": {
+          "$type": "borderWidth",
+          "$value": "{global.borderwidth.S}",
+          "$description": "Step flow active step border outermost"
+        }
+      },
+      "stepindicator": {
+        "S": {
+          "active": {
+            "$type": "borderWidth",
+            "$value": "{global.borderwidth.S}"
+          },
+          "default": {
+            "$type": "borderWidth",
+            "$value": "{global.borderwidth.S}"
+          }
+        },
+        "M": {
+          "active": {
+            "$type": "borderWidth",
+            "$value": "{global.borderwidth.M}"
+          },
+          "default": {
+            "$type": "borderWidth",
+            "$value": "{global.borderwidth.M}"
+          }
+        }
+      }
+    },
+    "space": {
+      "carouselselector": {
+        "xg": {
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.L}",
+            "$description": "Gap between selectors."
+          }
+        },
+        "y": {
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.macro.XS}",
+            "$description": "Vertical padding on selector group."
+          }
+        }
+      },
+      "integral": {
+        "x": {
+          "$type": "spacing",
+          "$value": "{global.space.micro.S}",
+          "$description": "Little space between words in progress components"
+        }
+      },
+      "loader": {
+        "yg": {
+          "S": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.M}",
+            "$description": "gap between loader visual and loading text"
+          },
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.L}",
+            "$description": "gap between loader visual and loading text"
+          },
+          "L": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.XL}",
+            "$description": "gap between loader visual and loading text"
+          }
+        },
+        "xg": {
+          "S": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.L}",
+            "$description": "Gap between loader graphic and label."
+          },
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.XXL}",
+            "$description": "Gap between loader graphic and label."
+          },
+          "L": {
+            "$type": "spacing",
+            "$value": "{global.space.macro.XS}",
+            "$description": "Gap between loader graphic and label."
+          }
+        }
+      },
+      "skeleton": {
+        "multiline": {
+          "yg": {
+            "XS": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.L}",
+              "$description": "vertical gap between skeleton bars"
+            },
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XL}",
+              "$description": "vertical gap between skeleton bars"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.M}",
+              "$description": "vertical gap between skeleton bars"
+            },
+            "L": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.L}",
+              "$description": "vertical gap between skeleton bars"
+            },
+            "XL": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XL}",
+              "$description": "vertical gap between skeleton bars"
+            }
+          },
+          "y": {
+            "XS": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Top bottom padding on grouped lines"
+            },
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Top bottom padding on grouped lines"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XS}",
+              "$description": "Top bottom padding on grouped lines"
+            },
+            "L": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XS}",
+              "$description": "Top bottom padding on grouped lines"
+            },
+            "XL": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Top bottom padding on grouped lines"
+            }
+          }
+        },
+        "singleline": {
+          "xg": {
+            "XS": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.L}",
+              "$description": "horizontal gap between elements"
+            },
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.L}",
+              "$description": "horizontal gap between elements"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XXL}",
+              "$description": "horizontal gap between elements"
+            },
+            "L": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XXL}",
+              "$description": "horizontal gap between elements"
+            },
+            "XL": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XS}",
+              "$description": "horizontal gap between elements"
+            }
+          }
+        }
+      },
+      "stepflow": {
+        "y": {
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.S}",
+            "$description": "Vertical padding around step indicators"
+          }
+        },
+        "yg": {
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.L}",
+            "$description": "Gap between step heading and back link."
+          }
+        },
+        "steps": {
+          "xg": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XS}",
+              "$description": "Gap between step indicators"
+            }
+          },
+          "yg": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Gap between glow heading, step label and step indicators"
+            }
+          }
+        }
+      },
+      "tracker": {
+        "yg": {
+          "S": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.M}",
+            "$description": "Space between bar and label"
+          },
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.L}",
+            "$description": "Space between bar and label"
+          },
+          "L": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.XXL}",
+            "$description": "Space between bar and label"
+          }
+        },
+        "xg": {
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.L}",
+            "$description": "Gap between tracker value text and description"
+          }
+        }
+      },
+      "stepindicator": {
+        "generic": {
+          "g": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XXL}",
+              "$description": "gap between timeline visual and text"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XS}",
+              "$description": "gap between timeline visual and text"
+            }
+          },
+          "text": {
+            "yg": {
+              "S": {
+                "$type": "spacing",
+                "$value": "{global.space.micro.S}",
+                "$description": "gap between label and subtext"
+              },
+              "M": {
+                "$type": "spacing",
+                "$value": "{global.space.micro.S}",
+                "$description": "gap between label and subtext"
+              }
+            }
+          },
+          "visual": {
+            "g": {
+              "S": {
+                "$type": "spacing",
+                "$value": "{global.space.micro.L}",
+                "$description": "gap between step number and line"
+              },
+              "M": {
+                "$type": "spacing",
+                "$value": "{global.space.micro.L}",
+                "$description": "gap between step number and line"
+              }
+            }
+          }
+        },
+        "vertical": {
+          "y": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.L}",
+              "$description": "Vertical variant top padding on parent container"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.L}",
+              "$description": "Vertical variant top padding on parent container"
+            }
+          },
+          "text": {
+            "y": {
+              "S": {
+                "$type": "spacing",
+                "$value": "{global.space.micro.XS}",
+                "$description": "space above text and parent container on vertical variant"
+              }
+            }
+          }
+        },
+        "horizontal": {
+          "text": {
+            "x": {
+              "S": {
+                "$type": "spacing",
+                "$value": "{global.space.micro.S}",
+                "$description": "horizontal variant left and right padding on text container"
+              },
+              "M": {
+                "$type": "spacing",
+                "$value": "{global.space.micro.L}",
+                "$description": "horizontal variant left and right padding on text container"
+              }
+            }
+          }
+        }
+      }
+    },
+    "opacity": {
+      "carousel": {
+        "inactive": {
+          "$type": "opacity",
+          "$value": "0.3",
+          "$description": "Inactive slide IMAGE layer."
+        }
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "label": {
+          "S": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.firm.S}"
+          },
+          "M": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.firm.M}"
+          },
+          "L": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.firm.L}"
+          }
+        },
+        "default": {
+          "S": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.moderate.S}"
+          },
+          "M": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.moderate.M}"
+          },
+          "L": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.moderate.L}"
+          }
+        }
+      },
+      "responsive": {
+        "label": {
+          "S": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.firm.S}"
+          },
+          "M": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.firm.M}"
+          },
+          "L": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.firm.S}"
+          }
+        },
+        "default": {
+          "S": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.moderate.S}"
+          },
+          "M": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.moderate.M}"
+          },
+          "L": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.moderate.S}"
+          }
+        }
+      }
+    }
+  }
+}

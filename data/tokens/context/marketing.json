@@ -1,0 +1,336 @@
+{
+  "page": {
+    "typography": {
+      "responsive": {
+        "hero": {
+          "h1": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.display.L}"
+          },
+          "h2": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.display.M}"
+          }
+        },
+        "H1": {
+          "$type": "typography",
+          "$value": "{global.typography.responsive.heading.XL}"
+        },
+        "H2": {
+          "$type": "typography",
+          "$value": "{global.typography.responsive.heading.L}"
+        },
+        "H3": {
+          "$type": "typography",
+          "$value": "{global.typography.responsive.heading.M}"
+        },
+        "H4": {
+          "$type": "typography",
+          "$value": "{global.typography.responsive.heading.S}"
+        },
+        "H5": {
+          "$type": "typography",
+          "$value": "{global.typography.responsive.subheading.M}"
+        },
+        "p": {
+          "typical": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.body.M}"
+          },
+          "large": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.body.L}"
+          }
+        }
+      },
+      "adaptive": {
+        "H1": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.black}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step5}"
+          }
+        },
+        "H2": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.black}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step4}"
+          }
+        },
+        "H4": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.bold}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step2}"
+          }
+        },
+        "H5": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.medium}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step1}"
+          }
+        },
+        "p": {
+          "typical": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.body.M}"
+          },
+          "large": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.body.L}"
+          }
+        }
+      }
+    }
+  },
+  "button": {
+    "color": {
+      "standard": {
+        "typical": {
+          "toggle": {
+            "label-active": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.monochrome.standard.withActiveAlt2}"
+            }
+          },
+          "tertiary": {
+            "bg-enabled": {
+              "$type": "color",
+              "$value": "{modes.color.none}"
+            }
+          }
+        },
+        "video": {
+          "primary": {
+            "label-enabled": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.monochrome.standard.withActiveAlt2}"
+            }
+          }
+        }
+      },
+      "inverse": {
+        "typical": {
+          "toggle": {
+            "bg-active": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.monochrome.standard.withActiveAlt2}"
+            }
+          },
+          "tertiary": {
+            "bg-enabled": {
+              "$type": "color",
+              "$value": "{modes.color.none}"
+            }
+          }
+        }
+      }
+    },
+    "borderwidth": {
+      "tertiary": {
+        "$type": "borderWidth",
+        "$value": "{global.borderwidth.S}",
+        "$description": "tertiary button border\n"
+      }
+    },
+    "space": {
+      "tertiary": {
+        "x": {
+          "S": {
+            "$type": "spacing",
+            "$value": "{global.space.none}",
+            "$description": "Left and right padding on small buttons"
+          },
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.none}",
+            "$description": "Left and right padding on medium buttons"
+          },
+          "L": {
+            "$type": "spacing",
+            "$value": "{global.space.none}",
+            "$description": "Left and right padding on large buttons"
+          }
+        },
+        "icononly": {
+          "x": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.none}",
+              "$description": "Left and right padding on icon-only processing button\n"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.none}",
+              "$description": "Left and right padding on icon-only processing button\n"
+            },
+            "L": {
+              "$type": "spacing",
+              "$value": "{global.space.none}",
+              "$description": "Left and right padding on icon-only processing button\n"
+            }
+          }
+        }
+      }
+    },
+    "radius": {
+      "tertiary": {
+        "S": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.none}",
+          "$description": "tertiary button"
+        },
+        "M": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.none}",
+          "$description": "tertiary button"
+        },
+        "L": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.none}",
+          "$description": "tertiary button"
+        }
+      }
+    }
+  },
+  "form": {
+    "color": {
+      "standard": {
+        "switch": {
+          "fg-active": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.standard.withActiveAlt2}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.standard.activeAlt2}"
+          }
+        }
+      },
+      "inverse": {
+        "switch": {
+          "fg-active": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.inverse.withActiveAlt2}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.inverse.activeAlt2}"
+          }
+        }
+      }
+    }
+  },
+  "tab": {
+    "color": {
+      "inverse": {
+        "border-active": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.standard.withActiveAlt2}"
+        }
+      }
+    }
+  },
+  "progress": {
+    "color": {
+      "inverse": {
+        "fg-default": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.standard.withActiveAlt2}"
+        }
+      }
+    }
+  },
+  "container": {
+    "radius": {
+      "card": {
+        "moderate": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXL}",
+          "$description": "Card (less rounded)"
+        },
+        "curved": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXL}",
+          "$description": "Card (more rounded)"
+        },
+        "sweeping": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXXL}",
+          "$description": "Card largest rounded type"
+        }
+      },
+      "tile": {
+        "moderate": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXL}",
+          "$description": "Tile (less rounded)"
+        },
+        "curved": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXL}",
+          "$description": "Tile (more rounded)"
+        },
+        "sweeping": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXXL}",
+          "$description": "Tile largest roundedness\n"
+        }
+      },
+      "tileselect": {
+        "moderate": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXL}",
+          "$description": "Tile (less rounded)"
+        },
+        "curved": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXL}",
+          "$description": "Tile (more rounded)"
+        },
+        "sweeping": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXXL}"
+        }
+      }
+    }
+  },
+  "global": {
+    "fontSize": {
+      "adaptive": {
+        "heading": {
+          "step1": {
+            "$type": "fontSizes",
+            "$value": "22"
+          },
+          "step2": {
+            "$type": "fontSizes",
+            "$value": "25"
+          },
+          "step3": {
+            "$type": "fontSizes",
+            "$value": "34"
+          },
+          "step4": {
+            "$type": "fontSizes",
+            "$value": "45"
+          },
+          "step5": {
+            "$type": "fontSizes",
+            "$value": "52"
+          }
+        }
+      }
+    }
+  }
+}

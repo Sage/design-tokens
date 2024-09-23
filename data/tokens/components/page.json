@@ -1,0 +1,285 @@
+{
+  "page": {
+    "space": {
+      "none": {
+        "$type": "spacing",
+        "$value": "{global.space.none}"
+      },
+      "x": {
+        "XXXS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS} / 4"
+        },
+        "XXS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS} / 2"
+        },
+        "XS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS}"
+        },
+        "S": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.M}"
+        },
+        "M": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.L}"
+        },
+        "L": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XL}"
+        },
+        "XL": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XL} * 2"
+        }
+      },
+      "xg": {
+        "XXXS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS} / 4"
+        },
+        "XXS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS} / 2"
+        },
+        "XS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS}"
+        },
+        "S": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.M}"
+        },
+        "M": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.L}"
+        },
+        "L": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XL}"
+        },
+        "XL": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XL} * 2"
+        }
+      },
+      "yg": {
+        "XXXS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS} / 4"
+        },
+        "XXS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS} / 2"
+        },
+        "XS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS}"
+        },
+        "S": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.M}"
+        },
+        "M": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.L}"
+        },
+        "L": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XL}"
+        },
+        "XL": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XL} * 2"
+        }
+      },
+      "y": {
+        "XXXS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS} / 4"
+        },
+        "XXS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS} / 2"
+        },
+        "XS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XS}"
+        },
+        "S": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.M}"
+        },
+        "M": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.L}"
+        },
+        "L": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XL}"
+        },
+        "XL": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XL} * 2"
+        }
+      }
+    },
+    "color": {
+      "inverse": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.backdrop.inverse.nought}"
+        },
+        "bg-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.backdrop.inverse.faint}"
+        },
+        "text-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.inverse.moderate}",
+          "$description": "for subheadings etc"
+        },
+        "text-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.inverse.harsh}",
+          "$description": "for headings, paragraph text etc "
+        }
+      },
+      "standard": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.backdrop.standard.nought}"
+        },
+        "bg-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.backdrop.standard.faint}"
+        },
+        "text-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.standard.moderate}",
+          "$description": "for subheadings etc"
+        },
+        "text-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.standard.harsh}",
+          "$description": "for headings, paragraph text etc "
+        }
+      }
+    },
+    "typography": {
+      "responsive": {
+        "H1": {
+          "$type": "typography",
+          "$value": "{global.typography.responsive.heading.M}"
+        },
+        "H2": {
+          "$type": "typography",
+          "$value": "{global.typography.responsive.heading.S}"
+        },
+        "H3": {
+          "$type": "typography",
+          "$value": "{global.typography.responsive.heading.XS}"
+        },
+        "H4": {
+          "$type": "typography",
+          "$value": "{global.typography.responsive.subheading.M}"
+        },
+        "p": {
+          "typical": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.body.S}"
+          },
+          "large": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.body.M}"
+          }
+        },
+        "hero": {
+          "h1": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.display.L}"
+          },
+          "h2": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.display.M}"
+          }
+        }
+      },
+      "adaptive": {
+        "H1": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.bold}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step5}"
+          }
+        },
+        "H2": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.bold}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step4}"
+          }
+        },
+        "H3": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.bold}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step3}"
+          }
+        },
+        "H4": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.medium}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step2}"
+          }
+        },
+        "H5": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{global.fontFamilies.sage-text}",
+            "fontWeight": "{primitives.fontWeights.medium}",
+            "lineHeight": "{primitives.lineHeights.400}",
+            "fontSize": "{global.fontSize.adaptive.heading.step1}"
+          }
+        },
+        "p": {
+          "typical": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.body.S}"
+          },
+          "large": {
+            "$type": "typography",
+            "$value": {
+              "fontFamily": "{global.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.regular}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{global.fontSize.adaptive.step1}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.300}"
+            }
+          }
+        },
+        "hero": {
+          "h1": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.display.L}"
+          },
+          "h2": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.display.M}"
+          }
+        }
+      }
+    }
+  }
+}

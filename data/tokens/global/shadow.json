@@ -1,0 +1,57 @@
+{
+  "global": {
+    "boxshadow": {
+      "cleanedge": {
+        "near": {
+          "$type": "boxShadow",
+          "$value": "{primitives.box-shadow.downward.0}",
+          "$description": "Popovers used in navigation"
+        }
+      },
+      "container": {
+        "near": {
+          "$type": "boxShadow",
+          "$value": "{primitives.box-shadow.downward.1}",
+          "$description": "Popover menus used on split, multiaction, dropdown and action popovers"
+        },
+        "far": {
+          "$type": "boxShadow",
+          "$value": "{primitives.box-shadow.downward.2}",
+          "$description": "Toasts"
+        },
+        "distant": {
+          "$type": "boxShadow",
+          "$value": "{primitives.box-shadow.downward.3}",
+          "$description": "Dialog, Menu, Sidebar\n"
+        },
+        "sticky-footer": {
+          "$type": "boxShadow",
+          "$value": "{primitives.box-shadow.upward.1}",
+          "$description": "Sticky footer on dialogs, drawer and sidebar"
+        },
+        "solid-border": {
+          "$type": "boxShadow",
+          "$value": "{primitives.box-shadow.solid.border}",
+          "$description": "Solid border using box shadow tokens when using the border property is not possible. "
+        }
+      },
+      "interactive": {
+        "enabled": {
+          "$type": "boxShadow",
+          "$value": "{primitives.box-shadow.downward.1}",
+          "$description": "Default card state"
+        },
+        "hover": {
+          "$type": "boxShadow",
+          "$value": "{primitives.box-shadow.downward.2}",
+          "$description": "Card hover state"
+        },
+        "drag": {
+          "$type": "boxShadow",
+          "$value": "{primitives.box-shadow.downward.3}",
+          "$description": "Card drag state"
+        }
+      }
+    }
+  }
+}
