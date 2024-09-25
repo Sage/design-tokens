@@ -29,3 +29,14 @@ jobs:
           auto_fix: true
           git_name: github-actions[bot]
           git_email: github-actions[bot]@users.noreply.github.com
+
+      - name: Build project
+        run: npm run build
+
+      - name: Download W3C Validator (vnu.jar)
+        run: wget https://github.com/validator/validator/releases/download/latest/vnu.jar
+
+      - name: Validate CSS
+        run: |
+          # Find all CSS files in dist directory and run validation
+          find ./dist -name "*.css" -print0 | xargs -0 java -jar vnu.jar --css
