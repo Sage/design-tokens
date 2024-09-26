@@ -128,12 +128,12 @@ describe("FilterTypographyTokens", () => {
                 value: "0.8px",
               },
               {
-                name: "--global-typography-responsive-display-m",
+                name: "--global-typography-display-m",
                 value:
                   "900 clamp(2.1588rem, 1.7083rem + 2.2525vw, 4.4113rem)/1.25 'Sage Headline'",
               },
               {
-                name: "--global-typography-responsive-display-l",
+                name: "--global-typography-display-l",
                 value:
                   "900 clamp(2.5187rem, 1.6647rem + 4.2703vi, 5.935rem)/1.25 'Sage Headline'",
               },
@@ -165,12 +165,12 @@ describe("FilterTypographyTokens", () => {
                 value: "1px",
               },
               {
-                name: "--global-typography-responsive-display-m",
+                name: "--global-typography-display-m",
                 value:
                   "900 clamp(2.1588rem, 1.7083rem + 2.2525vw, 4.4113rem)/1.25 'Sage Headline'",
               },
               {
-                name: "--global-typography-responsive-display-l",
+                name: "--global-typography-display-l",
                 value:
                   "900 clamp(2.5187rem, 1.6647rem + 4.2703vi, 5.935rem)/1.25 'Sage Headline'",
               },
@@ -316,7 +316,7 @@ describe("FilterTypographyTokens", () => {
           {
             global: [
               {
-                name: "--global-typography-adaptive-display-m",
+                name: "--global-typography-display-m",
                 value: "900 35px/1.25 'Sage Headline'",
               },
               {
@@ -324,7 +324,7 @@ describe("FilterTypographyTokens", () => {
                 value: "0.8px",
               },
               {
-                name: "--global-typography-adaptive-display-l",
+                name: "--global-typography-display-l",
                 value: "900 40px/1.25 'Sage Headline'",
               },
             ],
@@ -351,7 +351,7 @@ describe("FilterTypographyTokens", () => {
           {
             global: [
               {
-                name: "--global-typography-adaptive-display-m",
+                name: "--global-typography-display-m",
                 value: "900 71px/1.25 'Sage Headline'",
               },
               {
@@ -359,7 +359,7 @@ describe("FilterTypographyTokens", () => {
                 value: "1px",
               },
               {
-                name: "--global-typography-adaptive-display-l",
+                name: "--global-typography-display-l",
                 value: "900 95px/1.25 'Sage Headline'",
               },
             ],

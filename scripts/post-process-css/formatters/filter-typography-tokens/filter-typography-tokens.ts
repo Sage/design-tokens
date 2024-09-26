@@ -2,7 +2,17 @@ import { ContextTokens } from "../../context-tokens";
 import { CssProperty } from "../../css-parser/css-parser.types";
 import { Decorator } from "../decorator";
 
+/**
+ * TODOs:
+ * - Add non typography tokens into component test
+ * - For the assumption that there's always a mirror adaptive/responsive token,
+ *  throw an error when this isn't the case for both global & component tokens
+ */
 export class FilterTypographyTokens extends Decorator {
+  private readonly globalResponsiveRegex =
+    /^--global-typography-responsive-.*$/;
+  private readonly globalAdaptiveRegex = /^--global-typography-adaptive-.*$/;
+
   /**
    * Whilst typography tokens are currently specified in Figma, it is the responsive typography tokens that
    * are intended for use. Adaptive typography tokens are only present due to Figma not currently allowing
@@ -15,15 +25,22 @@ export class FilterTypographyTokens extends Decorator {
    * @returns Formatted tokens.
    */
   public override formatTokens(tokens: ContextTokens) {
-    const regex =
+    this.filterTokens(tokens);
+    this.formatTokenNames(tokens);
+
+    return super.formatTokens(tokens);
+  }
+
+  private filterTokens(tokens: ContextTokens) {
+    const removeTokensRegex =
       tokens.context === "frozenproduct"
-        ? /^--global-typography-responsive-.*$/
-        : /^--global-typography-adaptive-.*$/;
+        ? this.globalResponsiveRegex
+        : this.globalAdaptiveRegex;
 
     tokens.screenSizes.forEach((screenSize) => {
       const filteredGlobalTokens = screenSize.global
         .map((token) => token.name)
-        .filter((token) => regex.test(token));
+        .filter((token) => removeTokensRegex.test(token));
 
       screenSize.global = screenSize.global.filter(
         (token) => !filteredGlobalTokens.includes(token.name)
@@ -45,7 +62,47 @@ export class FilterTypographyTokens extends Decorator {
         }, {});
       });
     });
+  }
 
-    return super.formatTokens(tokens);
+  private formatTokenNames(tokens: ContextTokens) {
+    const keepTokensRegex =
+      tokens.context === "frozenproduct"
+        ? this.globalAdaptiveRegex
+        : this.globalResponsiveRegex;
+
+    tokens.screenSizes.forEach((screenSize) => {
+      const globalTypographyTokensToKeep = screenSize.global
+        .map((token) => token.name)
+        .filter((token) => keepTokensRegex.test(token));
+
+      screenSize.global = screenSize.global.map((token) =>
+        globalTypographyTokensToKeep.includes(token.name)
+          ? this.removeTypographyType(token)
+          : token
+      );
+
+      // globalTypographyTokensToKeep.forEach((token) => {
+      //   screenSize.components = Object.keys(screenSize.components).reduce<
+      //     Record<string, CssProperty[]>
+      //   >((components, component) => {
+      //     if (!screenSize.components[component]) {
+      //       return {};
+      //     }
+
+      //     components[component] = screenSize.components[component]
+      //       .filter(
+      //         (componentToken) => componentToken.value === `var(${token})`
+      //       )
+      //       .map((token) => this.removeTypographyType(token));
+
+      //     return components;
+      //   }, {});
+      // });
+    });
+  }
+
+  private removeTypographyType(token: CssProperty) {
+    token.name = token.name.replace(/(-adaptive-|-responsive-)/, "-");
+    return token;
   }
 }
