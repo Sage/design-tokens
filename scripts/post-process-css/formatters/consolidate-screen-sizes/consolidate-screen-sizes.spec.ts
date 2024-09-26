@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { ConsolidateScreenSizes } from "./consolidate-screen-sizes";
-import { BrandTokens } from "../../brand-tokens";
+import { ContextTokens } from "../../context-tokens";
 import { ScreenSizeTokens } from "../../screen-size-tokens";
 import { CssProperty } from "../../css-parser/css-parser.types";
 
@@ -30,7 +30,7 @@ describe("ConsolidateScreenSizes", () => {
 
   describe("formatTokens", () => {
     it("should throw an error if any global tokens are not found in all screen sizes", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens(
           [
             { name: "--global-size-breakpoint-min-width", value: "0" },
@@ -69,7 +69,7 @@ describe("ConsolidateScreenSizes", () => {
     });
 
     it("should throw an error if any light mode tokens are not found in all screen sizes", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens(
           [{ name: "--global-size-breakpoint-min-width", value: "0" }],
           [
@@ -105,7 +105,7 @@ describe("ConsolidateScreenSizes", () => {
     });
 
     it("should throw an error if any dark mode tokens are not found in all screen sizes", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens(
           [{ name: "--global-size-breakpoint-min-width", value: "0" }],
           [],
@@ -141,7 +141,7 @@ describe("ConsolidateScreenSizes", () => {
     });
 
     it("should throw an error if any component tokens are not found in all screen sizes", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens(
           [{ name: "--global-size-breakpoint-min-width", value: "0" }],
           [],
@@ -183,7 +183,7 @@ describe("ConsolidateScreenSizes", () => {
     });
 
     it("should filter global large screen tokens when the same value is applied to small screen tokens", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens(populatedSmallTokens, [], [], {}),
         new ScreenSizeTokens(
           [largeGlobalBreakpointToken, ...populatedLargeTokens],
@@ -215,7 +215,7 @@ describe("ConsolidateScreenSizes", () => {
     });
 
     it("should filter light large screen tokens when the same value is applied to small screen tokens", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens([], populatedSmallTokens, [], {}),
         new ScreenSizeTokens(
           [largeGlobalBreakpointToken],
@@ -247,7 +247,7 @@ describe("ConsolidateScreenSizes", () => {
     });
 
     it("should filter dark large screen tokens when the same value is applied to small screen tokens", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens([], [], populatedSmallTokens, {}),
         new ScreenSizeTokens(
           [largeGlobalBreakpointToken],
@@ -279,7 +279,7 @@ describe("ConsolidateScreenSizes", () => {
     });
 
     it("should filter component large screen tokens when the same value is applied to small screen tokens", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens([], [], [], {
           accordion: populatedSmallTokens,
           badge: [
@@ -386,7 +386,7 @@ describe("ConsolidateScreenSizes", () => {
         {}
       );
 
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         extraLargeSize,
         mediumSize,
         smallSize,

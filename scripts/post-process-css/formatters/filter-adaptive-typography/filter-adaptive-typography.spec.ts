@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { BrandTokens } from "../../brand-tokens";
+import { ContextTokens } from "../../context-tokens";
 import { ScreenSizeTokens } from "../../screen-size-tokens";
 import { FilterAdaptiveTypography } from "./filter-adaptive-typography";
 
@@ -8,7 +8,7 @@ describe("FilterAdaptiveTypography", () => {
 
   describe("formatTokens", () => {
     it("should format tokens as expected", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens(
           [
             { name: "--global-size-breakpoint-min-width", value: "0" },

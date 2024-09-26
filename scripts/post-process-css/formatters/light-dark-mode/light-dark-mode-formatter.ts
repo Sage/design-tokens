@@ -1,4 +1,4 @@
-import { BrandTokens } from "../../brand-tokens";
+import { ContextTokens } from "../../context-tokens";
 import { CssProperty } from "../../css-parser/css-parser.types";
 import { getSymetricalDifference } from "../../helpers";
 import { ScreenSizeTokens } from "../../screen-size-tokens";
@@ -12,7 +12,7 @@ export class LightDarkModeFormatter extends Decorator {
    * @param tokens Tokens to format.
    * @returns Formatted tokens.
    */
-  public override formatTokens(tokens: BrandTokens) {
+  public override formatTokens(tokens: ContextTokens) {
     tokens.screenSizes.forEach((screenSize) => {
       this.sanityCheckModeTokens(screenSize);
 

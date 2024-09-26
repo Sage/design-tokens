@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { BrandTokens } from "../../brand-tokens";
+import { ContextTokens } from "../../context-tokens";
 import { ScreenSizeTokens } from "../../screen-size-tokens";
 import { LightDarkModeFormatter } from "./light-dark-mode-formatter";
 
@@ -8,7 +8,7 @@ describe("LightDarkModeFormatter", () => {
 
   describe("formatTokens", () => {
     it("should throw error if small tokens are in both light and dark mode", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens(
           [],
           [
@@ -28,7 +28,7 @@ describe("LightDarkModeFormatter", () => {
     });
 
     it("should throw error if large tokens are in both light and dark mode", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens([], [], [], {}),
         new ScreenSizeTokens(
           [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
@@ -49,7 +49,7 @@ describe("LightDarkModeFormatter", () => {
     });
 
     it("should format tokens as expected", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens([
         new ScreenSizeTokens(
           [],
           [

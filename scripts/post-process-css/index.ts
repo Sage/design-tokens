@@ -4,37 +4,39 @@ import * as path from "path";
 import { CssProperty } from "./css-parser/css-parser.types";
 import { CssParser } from "./css-parser/css-parser";
 import { ScreenSizeTokens } from "./screen-size-tokens";
-import { BrandTokens } from "./brand-tokens";
+import { ContextTokens } from "./context-tokens";
 import {
   ConsolidateScreenSizes,
   FilterAdaptiveTypography,
   LightDarkModeFormatter,
 } from "./formatters/";
 
-const VALID_BRAND_NAMES = ["frozenproduct", "marketing", "product"] as const;
-type BrandName = (typeof VALID_BRAND_NAMES)[number];
+const VALID_CONTEXT_NAMES = ["frozenproduct", "marketing", "product"] as const;
+type ContextName = (typeof VALID_CONTEXT_NAMES)[number];
 const cssParser = new CssParser();
 
 // Loop through token contexts
 const cssDistPath = path.join(__dirname, "../../dist/css");
-fs.readdirSync(cssDistPath).forEach((brandName) => {
-  if (!isValidBrandName(brandName))
-    throw new Error(`${brandName} is not an expected brand name`);
+fs.readdirSync(cssDistPath).forEach((contextName) => {
+  if (!isValidContextName(contextName))
+    throw new Error(`${contextName} is not an expected context name`);
 
   const screenSizeTokens: ScreenSizeTokens[] = [];
 
-  fs.readdirSync(path.join(cssDistPath, brandName)).forEach((screenSize) => {
+  fs.readdirSync(path.join(cssDistPath, contextName)).forEach((screenSize) => {
     if (
-      !fs.statSync(path.join(cssDistPath, brandName, screenSize)).isDirectory()
+      !fs
+        .statSync(path.join(cssDistPath, contextName, screenSize))
+        .isDirectory()
     )
       return;
 
     screenSizeTokens.push(
-      getScreenSizeTokens(path.join(cssDistPath, brandName), screenSize)
+      getScreenSizeTokens(path.join(cssDistPath, contextName), screenSize)
     );
   });
 
-  const tokens = new BrandTokens(screenSizeTokens);
+  const tokens = new ContextTokens(screenSizeTokens);
 
   const consolidateScreenSizes = new ConsolidateScreenSizes();
   const lightDarkModeFormatter = new LightDarkModeFormatter(
@@ -47,23 +49,23 @@ fs.readdirSync(cssDistPath).forEach((brandName) => {
 
   // For "frozenproduct" we won't remove the adaptive typography for backward compatibility purposes
   const formattedTokens =
-    brandName === "frozenproduct"
+    contextName === "frozenproduct"
       ? lightDarkModeFormatter.formatTokens(tokens)
       : filterAdaptiveTypography.formatTokens(tokens);
 
-  writeCombinedCssFile(brandName, formattedTokens);
+  writeCombinedCssFile(contextName, formattedTokens);
 
   fs.copyFileSync(
     path.join(__dirname, "../../docs/usage/index.html"),
-    path.join(cssDistPath, brandName, "index.html")
+    path.join(cssDistPath, contextName, "index.html")
   );
 });
 
-function isValidBrandName(value: string): value is BrandName {
-  return (VALID_BRAND_NAMES as readonly string[]).includes(value);
+function isValidContextName(value: string): value is ContextName {
+  return (VALID_CONTEXT_NAMES as readonly string[]).includes(value);
 }
 
-function writeCombinedCssFile(file: string, tokens: BrandTokens) {
+function writeCombinedCssFile(file: string, tokens: ContextTokens) {
   fs.writeFileSync(path.join(cssDistPath, file, "all.css"), tokens.toString());
 }
 

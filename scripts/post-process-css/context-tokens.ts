@@ -2,7 +2,7 @@ import { CssProperty } from "./css-parser/css-parser.types";
 import { findDuplicates } from "./helpers";
 import { ScreenSizeTokens } from "./screen-size-tokens";
 
-export class BrandTokens {
+export class ContextTokens {
   public screenSizes: ScreenSizeTokens[];
 
   constructor(screenSizes: ScreenSizeTokens[]) {
@@ -14,7 +14,7 @@ export class BrandTokens {
       !this.screenSizes.some((size) => !size.minBreakpoint)
     ) {
       throw new Error(
-        "Brand tokens must have at least one set of screen size tokens with zero min-width breakpoint"
+        "Context tokens must have at least one set of screen size tokens with zero min-width breakpoint"
       );
     }
 

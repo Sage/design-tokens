@@ -1,4 +1,4 @@
-import { BrandTokens } from "../../brand-tokens";
+import { ContextTokens } from "../../context-tokens";
 import { CssProperty } from "../../css-parser/css-parser.types";
 import { Decorator } from "../decorator";
 
@@ -11,7 +11,7 @@ export class FilterAdaptiveTypography extends Decorator {
    * @param tokens Tokens to format.
    * @returns Formatted tokens.
    */
-  public override formatTokens(tokens: BrandTokens) {
+  public override formatTokens(tokens: ContextTokens) {
     tokens.screenSizes.forEach((screenSize) => {
       const regex = /^--global-typography-adaptive-.*$/;
 
