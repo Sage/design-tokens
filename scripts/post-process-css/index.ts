@@ -7,12 +7,10 @@ import { ScreenSizeTokens } from "./screen-size-tokens";
 import { ContextTokens } from "./context-tokens";
 import {
   ConsolidateScreenSizes,
-  FilterAdaptiveTypography,
+  FilterTypographyTokens,
   LightDarkModeFormatter,
 } from "./formatters/";
 
-const VALID_CONTEXT_NAMES = ["frozenproduct", "marketing", "product"] as const;
-type ContextName = (typeof VALID_CONTEXT_NAMES)[number];
 const cssParser = new CssParser();
 
 // Loop through token contexts
@@ -39,16 +37,10 @@ fs.readdirSync(cssDistPath).forEach((contextName) => {
   const lightDarkModeFormatter = new LightDarkModeFormatter(
     consolidateScreenSizes
   );
-
-  const filterAdaptiveTypography = new FilterAdaptiveTypography(
+  const filterAdaptiveTypography = new FilterTypographyTokens(
     lightDarkModeFormatter
   );
-
-  // For "frozenproduct" we won't remove the adaptive typography for backward compatibility purposes
-  const formattedTokens =
-    contextName === "frozenproduct"
-      ? lightDarkModeFormatter.formatTokens(tokens)
-      : filterAdaptiveTypography.formatTokens(tokens);
+  const formattedTokens = filterAdaptiveTypography.formatTokens(tokens);
 
   writeCombinedCssFile(contextName, formattedTokens);
 

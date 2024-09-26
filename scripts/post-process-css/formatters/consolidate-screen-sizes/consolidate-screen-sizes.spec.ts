@@ -195,6 +195,7 @@ describe("ConsolidateScreenSizes", () => {
 
       const result = consolidateScreenSizes.formatTokens(tokens);
       expect(result).to.deep.equal({
+        context: "product",
         screenSizes: [
           {
             global: populatedSmallTokens,
@@ -227,6 +228,7 @@ describe("ConsolidateScreenSizes", () => {
 
       const result = consolidateScreenSizes.formatTokens(tokens);
       expect(result).to.deep.equal({
+        context: "product",
         screenSizes: [
           {
             global: [],
@@ -259,6 +261,7 @@ describe("ConsolidateScreenSizes", () => {
 
       const result = consolidateScreenSizes.formatTokens(tokens);
       expect(result).to.deep.equal({
+        context: "product",
         screenSizes: [
           {
             global: [],
@@ -304,6 +307,7 @@ describe("ConsolidateScreenSizes", () => {
 
       const result = consolidateScreenSizes.formatTokens(tokens);
       expect(result).to.deep.equal({
+        context: "product",
         screenSizes: [
           {
             global: [],
@@ -395,6 +399,7 @@ describe("ConsolidateScreenSizes", () => {
 
       const result = consolidateScreenSizes.formatTokens(tokens);
       expect(result).to.deep.equal({
+        context: "product",
         screenSizes: [
           {
             global: [

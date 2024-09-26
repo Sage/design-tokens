@@ -5,12 +5,14 @@ import { ScreenSizeTokens } from "./screen-size-tokens";
 const VALID_CONTEXT_NAMES = ["frozenproduct", "marketing", "product"] as const;
 type ContextName = (typeof VALID_CONTEXT_NAMES)[number];
 export class ContextTokens {
+  public readonly context: ContextName;
   public screenSizes: ScreenSizeTokens[];
 
   constructor(contextName: string, screenSizes: ScreenSizeTokens[]) {
     if (!this.isValidContextName(contextName))
       throw new Error(`${contextName} is not an expected context name`);
 
+    this.context = contextName;
     this.screenSizes = screenSizes;
 
     // At least one of the provided screen size tokens must have zero min-width breakpoint

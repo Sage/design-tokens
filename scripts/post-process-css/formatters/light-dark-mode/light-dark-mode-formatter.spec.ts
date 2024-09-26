@@ -100,6 +100,7 @@ describe("LightDarkModeFormatter", () => {
 
       const result = lightDarkModeFormatter.formatTokens(tokens);
       expect(result).to.deep.equal({
+        context: "product",
         screenSizes: [
           {
             global: [],
