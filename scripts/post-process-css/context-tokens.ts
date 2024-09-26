@@ -2,10 +2,15 @@ import { CssProperty } from "./css-parser/css-parser.types";
 import { findDuplicates } from "./helpers";
 import { ScreenSizeTokens } from "./screen-size-tokens";
 
+const VALID_CONTEXT_NAMES = ["frozenproduct", "marketing", "product"] as const;
+type ContextName = (typeof VALID_CONTEXT_NAMES)[number];
 export class ContextTokens {
   public screenSizes: ScreenSizeTokens[];
 
-  constructor(screenSizes: ScreenSizeTokens[]) {
+  constructor(contextName: string, screenSizes: ScreenSizeTokens[]) {
+    if (!this.isValidContextName(contextName))
+      throw new Error(`${contextName} is not an expected context name`);
+
     this.screenSizes = screenSizes;
 
     // At least one of the provided screen size tokens must have zero min-width breakpoint
@@ -29,6 +34,10 @@ export class ContextTokens {
         )}`
       );
     }
+  }
+
+  private isValidContextName(value: string): value is ContextName {
+    return (VALID_CONTEXT_NAMES as readonly string[]).includes(value);
   }
 
   public toString(): string {

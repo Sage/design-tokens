@@ -4,10 +4,19 @@ import { ScreenSizeTokens } from "./screen-size-tokens";
 
 describe("ContextTokens", () => {
   describe("constructor", () => {
+    it("should throw an error when provided a non-supported context name", () => {
+      expect(
+        () =>
+          new ContextTokens("NOT_SUPPORTED", [
+            new ScreenSizeTokens([], [], [], {}),
+          ])
+      ).to.throw("NOT_SUPPORTED is not an expected context name");
+    });
+
     it("should not throw an error when zero min-width screen size is available", () => {
       expect(
         () =>
-          new ContextTokens([
+          new ContextTokens("product", [
             new ScreenSizeTokens(
               [{ name: "--global-size-breakpoint-min-width", value: "0" }],
               [],
@@ -27,7 +36,7 @@ describe("ContextTokens", () => {
     it("should not throw an error when undefined screen size size is available", () => {
       expect(
         () =>
-          new ContextTokens([
+          new ContextTokens("product", [
             new ScreenSizeTokens(
               [{ name: "--title-color", value: "#FFFFFF" }],
               [],
@@ -47,7 +56,7 @@ describe("ContextTokens", () => {
     it("should throw an error when no screen sizes provided with zero min-width or undefined breakpoint", () => {
       expect(
         () =>
-          new ContextTokens([
+          new ContextTokens("product", [
             new ScreenSizeTokens(
               [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
               [],
@@ -63,7 +72,7 @@ describe("ContextTokens", () => {
     it("should throw an error when duplicate min-width screen size breakpoints are provided", () => {
       expect(
         () =>
-          new ContextTokens([
+          new ContextTokens("product", [
             new ScreenSizeTokens(
               [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
               [],
@@ -130,14 +139,14 @@ describe("ContextTokens", () => {
 `;
 
     it("should return expected string when provided no tokens", () => {
-      const tokens = new ContextTokens([]);
+      const tokens = new ContextTokens("product", []);
 
       const result = tokens.toString();
       expect(result).to.be.empty;
     });
 
     it("should return expected string when provided no useful tokens", () => {
-      const tokens = new ContextTokens([
+      const tokens = new ContextTokens("product", [
         new ScreenSizeTokens(
           [
             {
@@ -167,14 +176,14 @@ describe("ContextTokens", () => {
     });
 
     it("should return expected string when only provided small tokens", () => {
-      const tokens = new ContextTokens([generateScreenSizeTokens()]);
+      const tokens = new ContextTokens("product", [generateScreenSizeTokens()]);
 
       const result = tokens.toString();
       expect(result).to.equal(expectedSingleSizeTokenResult);
     });
 
     it("should return expected string when only provided large tokens", () => {
-      const tokens = new ContextTokens([
+      const tokens = new ContextTokens("product", [
         new ScreenSizeTokens([], [], [], {}),
         generateScreenSizeTokens(1024),
       ]);
@@ -184,7 +193,7 @@ describe("ContextTokens", () => {
     });
 
     it("should return expected string when provided fully populated object", () => {
-      const tokens = new ContextTokens([
+      const tokens = new ContextTokens("product", [
         generateScreenSizeTokens(1024),
         generateScreenSizeTokens(0),
       ]);
@@ -220,7 +229,7 @@ describe("ContextTokens", () => {
     });
 
     it("should return expected string with only light tokens", () => {
-      const tokens = new ContextTokens([
+      const tokens = new ContextTokens("product", [
         new ScreenSizeTokens(
           [],
           [
@@ -250,7 +259,7 @@ describe("ContextTokens", () => {
     });
 
     it("should return expected string with only one screen size", () => {
-      const tokens = new ContextTokens([
+      const tokens = new ContextTokens("product", [
         new ScreenSizeTokens([], [], [], {
           accordion: [],
           badge: [

@@ -8,7 +8,7 @@ describe("FilterAdaptiveTypography", () => {
 
   describe("formatTokens", () => {
     it("should format tokens as expected", () => {
-      const tokens = new ContextTokens([
+      const tokens = new ContextTokens("product", [
         new ScreenSizeTokens(
           [
             { name: "--global-size-breakpoint-min-width", value: "0" },

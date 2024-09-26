@@ -8,7 +8,7 @@ describe("LightDarkModeFormatter", () => {
 
   describe("formatTokens", () => {
     it("should throw error if small tokens are in both light and dark mode", () => {
-      const tokens = new ContextTokens([
+      const tokens = new ContextTokens("product", [
         new ScreenSizeTokens(
           [],
           [
@@ -28,7 +28,7 @@ describe("LightDarkModeFormatter", () => {
     });
 
     it("should throw error if large tokens are in both light and dark mode", () => {
-      const tokens = new ContextTokens([
+      const tokens = new ContextTokens("product", [
         new ScreenSizeTokens([], [], [], {}),
         new ScreenSizeTokens(
           [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
@@ -49,7 +49,7 @@ describe("LightDarkModeFormatter", () => {
     });
 
     it("should format tokens as expected", () => {
-      const tokens = new ContextTokens([
+      const tokens = new ContextTokens("product", [
         new ScreenSizeTokens(
           [],
           [

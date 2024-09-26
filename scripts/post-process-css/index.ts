@@ -18,9 +18,6 @@ const cssParser = new CssParser();
 // Loop through token contexts
 const cssDistPath = path.join(__dirname, "../../dist/css");
 fs.readdirSync(cssDistPath).forEach((contextName) => {
-  if (!isValidContextName(contextName))
-    throw new Error(`${contextName} is not an expected context name`);
-
   const screenSizeTokens: ScreenSizeTokens[] = [];
 
   fs.readdirSync(path.join(cssDistPath, contextName)).forEach((screenSize) => {
@@ -36,7 +33,7 @@ fs.readdirSync(cssDistPath).forEach((contextName) => {
     );
   });
 
-  const tokens = new ContextTokens(screenSizeTokens);
+  const tokens = new ContextTokens(contextName, screenSizeTokens);
 
   const consolidateScreenSizes = new ConsolidateScreenSizes();
   const lightDarkModeFormatter = new LightDarkModeFormatter(
@@ -60,10 +57,6 @@ fs.readdirSync(cssDistPath).forEach((contextName) => {
     path.join(cssDistPath, contextName, "index.html")
   );
 });
-
-function isValidContextName(value: string): value is ContextName {
-  return (VALID_CONTEXT_NAMES as readonly string[]).includes(value);
-}
 
 function writeCombinedCssFile(file: string, tokens: ContextTokens) {
   fs.writeFileSync(path.join(cssDistPath, file, "all.css"), tokens.toString());
