@@ -4,7 +4,7 @@ import { Decorator } from "../decorator";
 
 /**
  * TODOs:
- * - Add non typography tokens into component test
+ * - Add close match to tests
  * - For the assumption that there's always a mirror adaptive/responsive token,
  *  throw an error when this isn't the case for both global & component tokens
  */
@@ -81,28 +81,30 @@ export class FilterTypographyTokens extends Decorator {
           : token
       );
 
-      // globalTypographyTokensToKeep.forEach((token) => {
-      //   screenSize.components = Object.keys(screenSize.components).reduce<
-      //     Record<string, CssProperty[]>
-      //   >((components, component) => {
-      //     if (!screenSize.components[component]) {
-      //       return {};
-      //     }
+      globalTypographyTokensToKeep.forEach((globalToken) => {
+        screenSize.components = Object.keys(screenSize.components).reduce<
+          Record<string, CssProperty[]>
+        >((components, component) => {
+          if (!screenSize.components[component]) {
+            return {};
+          }
 
-      //     components[component] = screenSize.components[component]
-      //       .filter(
-      //         (componentToken) => componentToken.value === `var(${token})`
-      //       )
-      //       .map((token) => this.removeTypographyType(token));
+          components[component] = screenSize.components[component].map(
+            (token) =>
+              token.value === `var(${globalToken})`
+                ? this.removeTypographyType(token)
+                : token
+          );
 
-      //     return components;
-      //   }, {});
-      // });
+          return components;
+        }, {});
+      });
     });
   }
 
   private removeTypographyType(token: CssProperty) {
     token.name = token.name.replace(/(-adaptive-|-responsive-)/, "-");
+    token.value = token.value.replace(/(-adaptive-|-responsive-)/, "-");
     return token;
   }
 }

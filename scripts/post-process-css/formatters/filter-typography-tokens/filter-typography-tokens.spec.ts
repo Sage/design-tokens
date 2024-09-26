@@ -147,12 +147,12 @@ describe("FilterTypographyTokens", () => {
                   value: "var(--global-space-macro-scale)",
                 },
                 {
-                  name: "--badge-typography-responsive-m",
-                  value: "var(--global-typography-responsive-display-m)",
+                  name: "--badge-typography-m",
+                  value: "var(--global-typography-display-m)",
                 },
                 {
-                  name: "--badge-typography-responsive-l",
-                  value: "var(--global-typography-responsive-display-l)",
+                  name: "--badge-typography-l",
+                  value: "var(--global-typography-display-l)",
                 },
               ],
             },
@@ -184,12 +184,12 @@ describe("FilterTypographyTokens", () => {
                   value: "var(--global-space-macro-scale)",
                 },
                 {
-                  name: "--badge-typography-responsive-m",
-                  value: "var(--global-typography-responsive-display-m)",
+                  name: "--badge-typography-m",
+                  value: "var(--global-typography-display-m)",
                 },
                 {
-                  name: "--badge-typography-responsive-l",
-                  value: "var(--global-typography-responsive-display-l)",
+                  name: "--badge-typography-l",
+                  value: "var(--global-typography-display-l)",
                 },
               ],
             },
@@ -333,12 +333,12 @@ describe("FilterTypographyTokens", () => {
             components: {
               badge: [
                 {
-                  name: "--badge-typography-adaptive-m",
-                  value: "var(--global-typography-adaptive-display-m)",
+                  name: "--badge-typography-m",
+                  value: "var(--global-typography-display-m)",
                 },
                 {
-                  name: "--badge-typography-adaptive-l",
-                  value: "var(--global-typography-adaptive-display-l)",
+                  name: "--badge-typography-l",
+                  value: "var(--global-typography-display-l)",
                 },
                 {
                   name: "--badge-size",
@@ -368,12 +368,12 @@ describe("FilterTypographyTokens", () => {
             components: {
               badge: [
                 {
-                  name: "--badge-typography-adaptive-m",
-                  value: "var(--global-typography-adaptive-display-m)",
+                  name: "--badge-typography-m",
+                  value: "var(--global-typography-display-m)",
                 },
                 {
-                  name: "--badge-typography-adaptive-l",
-                  value: "var(--global-typography-adaptive-display-l)",
+                  name: "--badge-typography-l",
+                  value: "var(--global-typography-display-l)",
                 },
                 {
                   name: "--badge-size",
