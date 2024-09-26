@@ -48,6 +48,10 @@ describe("FilterTypographyTokens", () => {
                 value: "var(--global-typography-adaptive-display-l)",
               },
               {
+                name: "--badge-size",
+                value: "var(--global-space-macro-scale)",
+              },
+              {
                 name: "--badge-typography-responsive-m",
                 value: "var(--global-typography-responsive-display-m)",
               },
@@ -97,6 +101,10 @@ describe("FilterTypographyTokens", () => {
                 value: "var(--global-typography-adaptive-display-l)",
               },
               {
+                name: "--badge-size",
+                value: "var(--global-space-macro-scale)",
+              },
+              {
                 name: "--badge-typography-responsive-m",
                 value: "var(--global-typography-responsive-display-m)",
               },
@@ -135,6 +143,10 @@ describe("FilterTypographyTokens", () => {
             components: {
               badge: [
                 {
+                  name: "--badge-size",
+                  value: "var(--global-space-macro-scale)",
+                },
+                {
                   name: "--badge-typography-responsive-m",
                   value: "var(--global-typography-responsive-display-m)",
                 },
@@ -167,6 +179,10 @@ describe("FilterTypographyTokens", () => {
             dark: [],
             components: {
               badge: [
+                {
+                  name: "--badge-size",
+                  value: "var(--global-space-macro-scale)",
+                },
                 {
                   name: "--badge-typography-responsive-m",
                   value: "var(--global-typography-responsive-display-m)",
@@ -224,6 +240,10 @@ describe("FilterTypographyTokens", () => {
                 value: "var(--global-typography-adaptive-display-l)",
               },
               {
+                name: "--badge-size",
+                value: "var(--global-space-macro-scale)",
+              },
+              {
                 name: "--badge-typography-responsive-m",
                 value: "var(--global-typography-responsive-display-m)",
               },
@@ -273,6 +293,10 @@ describe("FilterTypographyTokens", () => {
                 value: "var(--global-typography-adaptive-display-l)",
               },
               {
+                name: "--badge-size",
+                value: "var(--global-space-macro-scale)",
+              },
+              {
                 name: "--badge-typography-responsive-m",
                 value: "var(--global-typography-responsive-display-m)",
               },
@@ -316,6 +340,10 @@ describe("FilterTypographyTokens", () => {
                   name: "--badge-typography-adaptive-l",
                   value: "var(--global-typography-adaptive-display-l)",
                 },
+                {
+                  name: "--badge-size",
+                  value: "var(--global-space-macro-scale)",
+                },
               ],
             },
             minBreakpoint: 0,
@@ -346,6 +374,10 @@ describe("FilterTypographyTokens", () => {
                 {
                   name: "--badge-typography-adaptive-l",
                   value: "var(--global-typography-adaptive-display-l)",
+                },
+                {
+                  name: "--badge-size",
+                  value: "var(--global-space-macro-scale)",
                 },
               ],
             },
