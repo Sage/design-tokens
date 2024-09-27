@@ -20,22 +20,23 @@ export class FilterTypographyTokens extends Decorator {
    */
   public override formatTokens(tokens: ContextTokens) {
     this.sanityCheckTokens(tokens);
-    this.filterTokens(tokens);
+    this.removeTokens(tokens);
     this.formatTokenNames(tokens);
 
     return super.formatTokens(tokens);
   }
 
-  private filterTokens(tokens: ContextTokens) {
+  private removeTokens(tokens: ContextTokens) {
     const removeGlobalTokensRegex =
       tokens.context === "frozenproduct"
         ? this.globalResponsiveRegex
         : this.globalAdaptiveRegex;
 
     tokens.screenSizes.forEach((screenSize) => {
-      const filteredGlobalTokens = screenSize.global
-        .map((token) => token.name)
-        .filter((token) => removeGlobalTokensRegex.test(token));
+      const filteredGlobalTokens = this.filterTokens(
+        screenSize.global,
+        removeGlobalTokensRegex
+      );
 
       screenSize.global = screenSize.global.filter(
         (token) => !filteredGlobalTokens.includes(token.name)
@@ -50,7 +51,7 @@ export class FilterTypographyTokens extends Decorator {
           }
 
           components[component] = screenSize.components[component].filter(
-            (componentToken) => componentToken.value !== `var(${token})`
+            (componentToken) => componentToken.value !== this.toVar(token)
           );
 
           return components;
@@ -66,9 +67,10 @@ export class FilterTypographyTokens extends Decorator {
         : this.globalResponsiveRegex;
 
     tokens.screenSizes.forEach((screenSize) => {
-      const globalTypographyTokensToKeep = screenSize.global
-        .map((token) => token.name)
-        .filter((token) => keepGlobalTokensRegex.test(token));
+      const globalTypographyTokensToKeep = this.filterTokens(
+        screenSize.global,
+        keepGlobalTokensRegex
+      );
 
       screenSize.global = screenSize.global.map((token) =>
         globalTypographyTokensToKeep.includes(token.name)
@@ -107,6 +109,20 @@ export class FilterTypographyTokens extends Decorator {
     return value.replace(/(-adaptive-|-responsive-)/, "-");
   }
 
+  private filterTokens(tokens: CssProperty[], regex: RegExp): string[] {
+    return tokens
+      .map((token) => token.name)
+      .filter((token) => regex.test(token));
+  }
+
+  private mapToVar(tokens: string[]): string[] {
+    return tokens.map((x) => this.toVar(x));
+  }
+
+  private toVar(value: string): string {
+    return `var(${value})`;
+  }
+
   /**
    * Given that this formatter deletes and renames tokens, this checks assumptions made about the typography tokens. Specifically:
    * - Each typography token (global & component) should have a mirror adaptive/responsive token
@@ -115,99 +131,129 @@ export class FilterTypographyTokens extends Decorator {
   private sanityCheckTokens(tokens: ContextTokens) {
     // Each typography token should have a mirror adaptive/responsive token
     tokens.screenSizes.forEach((screenSize) => {
-      const responsiveGlobalTypographyTokens = screenSize.global
-        .map((token) => token.name)
-        .filter((token) => this.globalResponsiveRegex.test(token));
-      const adaptiveGlobalTypographyTokens = screenSize.global
-        .map((token) => token.name)
-        .filter((token) => this.globalAdaptiveRegex.test(token));
+      const responsiveGlobalTypographyTokens = this.filterTokens(
+        screenSize.global,
+        this.globalResponsiveRegex
+      );
+      const adaptiveGlobalTypographyTokens = this.filterTokens(
+        screenSize.global,
+        this.globalAdaptiveRegex
+      );
 
-      responsiveGlobalTypographyTokens.forEach((token) => {
-        if (
-          !adaptiveGlobalTypographyTokens
-            .map((x) => this.removeTypographyType(x))
-            .includes(this.removeTypographyType(token))
-        ) {
-          throw new Error(
-            `Missing adaptive global typography token for responsive token: ${token} on min breakpoint: ${screenSize.minBreakpoint}, context: ${tokens.context}`
-          );
-        }
-      });
+      this.checkMissingTokens(
+        responsiveGlobalTypographyTokens,
+        adaptiveGlobalTypographyTokens,
+        "adaptive",
+        screenSize.minBreakpoint,
+        tokens.context
+      );
 
-      adaptiveGlobalTypographyTokens.forEach((token) => {
-        if (
-          !responsiveGlobalTypographyTokens
-            .map((x) => this.removeTypographyType(x))
-            .includes(this.removeTypographyType(token))
-        ) {
-          throw new Error(
-            `Missing responsive global typography token for adaptive token: ${token} on min breakpoint: ${screenSize.minBreakpoint}, context: ${tokens.context}`
-          );
-        }
-      });
+      this.checkMissingTokens(
+        adaptiveGlobalTypographyTokens,
+        responsiveGlobalTypographyTokens,
+        "responsive",
+        screenSize.minBreakpoint,
+        tokens.context
+      );
 
-      const responsiveGlobalTypographyTokensAsVar =
-        responsiveGlobalTypographyTokens.map((x) => `var(${x})`);
-      const adaptiveGlobalTypographyTokensAsVar =
-        adaptiveGlobalTypographyTokens.map((x) => `var(${x})`);
+      const responsiveGlobalTypographyTokensAsVar = this.mapToVar(
+        responsiveGlobalTypographyTokens
+      );
+      const adaptiveGlobalTypographyTokensAsVar = this.mapToVar(
+        adaptiveGlobalTypographyTokens
+      );
+
       Object.keys(screenSize.components).forEach((component) => {
         const componentProps = screenSize.components[component];
-
         if (!componentProps) return;
 
-        const componentResponsiveTypographyTokens = componentProps.filter(
-          (token) => responsiveGlobalTypographyTokensAsVar.includes(token.value)
+        const componentResponsiveTypographyTokens = this.filterComponentTokens(
+          componentProps,
+          responsiveGlobalTypographyTokensAsVar
         );
-        const componentAdaptiveTypographyTokens = componentProps.filter(
-          (token) => adaptiveGlobalTypographyTokensAsVar.includes(token.value)
+        const componentAdaptiveTypographyTokens = this.filterComponentTokens(
+          componentProps,
+          adaptiveGlobalTypographyTokensAsVar
         );
 
-        componentResponsiveTypographyTokens.forEach((token) => {
-          const foundToken = componentAdaptiveTypographyTokens.find(
-            (x) =>
-              this.removeTypographyType(x.name) ===
-              this.removeTypographyType(token.name)
-          );
+        this.checkComponentTokens(
+          componentResponsiveTypographyTokens,
+          componentAdaptiveTypographyTokens,
+          component,
+          screenSize.minBreakpoint,
+          tokens.context
+        );
 
-          if (!foundToken) {
-            throw new Error(
-              `Missing adaptive ${component} token for responsive token: ${token.name} on min breakpoint: ${screenSize.minBreakpoint}, context: ${tokens.context}`
-            );
-          }
-
-          if (
-            this.removeTypographyType(foundToken.value) !==
-            this.removeTypographyType(token.value)
-          ) {
-            throw new Error(
-              `Value mismatch on ${component} component for tokens ${token.name} and ${foundToken.name} on min breakpoint: ${screenSize.minBreakpoint}, context: ${tokens.context}`
-            );
-          }
-        });
-
-        componentAdaptiveTypographyTokens.forEach((token) => {
-          const foundToken = componentResponsiveTypographyTokens.find(
-            (x) =>
-              this.removeTypographyType(x.name) ===
-              this.removeTypographyType(token.name)
-          );
-
-          if (!foundToken) {
-            throw new Error(
-              `Missing responsive ${component} token for adaptive token: ${token.name} on min breakpoint: ${screenSize.minBreakpoint}, context: ${tokens.context}`
-            );
-          }
-
-          if (
-            this.removeTypographyType(foundToken.value) !==
-            this.removeTypographyType(token.value)
-          ) {
-            throw new Error(
-              `Value mismatch on ${component} component for tokens ${token.name} and ${foundToken.name} on min breakpoint: ${screenSize.minBreakpoint}, context: ${tokens.context}`
-            );
-          }
-        });
+        this.checkComponentTokens(
+          componentAdaptiveTypographyTokens,
+          componentResponsiveTypographyTokens,
+          component,
+          screenSize.minBreakpoint,
+          tokens.context
+        );
       });
+    });
+  }
+
+  private filterComponentTokens(
+    componentProps: CssProperty[],
+    globalTokensAsVar: string[]
+  ): CssProperty[] {
+    return componentProps.filter((token) =>
+      globalTokensAsVar.includes(token.value)
+    );
+  }
+
+  private checkMissingTokens(
+    sourceTokens: string[],
+    targetTokens: string[],
+    targetType: string,
+    minBreakpoint: number,
+    context: string
+  ) {
+    sourceTokens.forEach((token) => {
+      if (
+        !targetTokens
+          .map((x) => this.removeTypographyType(x))
+          .includes(this.removeTypographyType(token))
+      ) {
+        throw new Error(
+          `Missing ${targetType} global typography token for ${
+            targetType === "adaptive" ? "responsive" : "adaptive"
+          } token: ${token} on min breakpoint: ${minBreakpoint}, context: ${context}`
+        );
+      }
+    });
+  }
+
+  private checkComponentTokens(
+    sourceTokens: CssProperty[],
+    targetTokens: CssProperty[],
+    component: string,
+    minBreakpoint: number,
+    context: string
+  ) {
+    sourceTokens.forEach((token) => {
+      const foundToken = targetTokens.find(
+        (x) =>
+          this.removeTypographyType(x.name) ===
+          this.removeTypographyType(token.name)
+      );
+
+      if (!foundToken) {
+        throw new Error(
+          `Missing ${component} token for ${token.name} on min breakpoint: ${minBreakpoint}, context: ${context}`
+        );
+      }
+
+      if (
+        this.removeTypographyType(foundToken.value) !==
+        this.removeTypographyType(token.value)
+      ) {
+        throw new Error(
+          `Value mismatch on ${component} component for tokens ${token.name} and ${foundToken.name} on min breakpoint: ${minBreakpoint}, context: ${context}`
+        );
+      }
     });
   }
 }

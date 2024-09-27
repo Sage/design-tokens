@@ -71,7 +71,7 @@ describe("FilterTypographyTokens", () => {
         ),
       ]);
       expect(() => filterAdaptiveTypography.formatTokens(tokens)).to.throw(
-        "Missing adaptive badge token for responsive token: --badge-typography-responsive-l on min breakpoint: 0, context: product"
+        "Missing badge token for --badge-typography-responsive-l on min breakpoint: 0, context: product"
       );
     });
 
@@ -101,7 +101,7 @@ describe("FilterTypographyTokens", () => {
         ),
       ]);
       expect(() => filterAdaptiveTypography.formatTokens(tokens)).to.throw(
-        "Missing responsive badge token for adaptive token: --badge-typography-adaptive-l on min breakpoint: 0, context: product"
+        "Missing badge token for --badge-typography-adaptive-l on min breakpoint: 0, context: product"
       );
     });
 
