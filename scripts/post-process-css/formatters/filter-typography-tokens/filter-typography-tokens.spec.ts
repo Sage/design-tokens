@@ -7,6 +7,204 @@ describe("FilterTypographyTokens", () => {
   const filterAdaptiveTypography = new FilterTypographyTokens();
 
   describe("formatTokens", () => {
+    it("should throw an error when a mirror adaptive global token is not found", () => {
+      const tokens = new ContextTokens("product", [
+        new ScreenSizeTokens(
+          [
+            {
+              name: "--global-typography-responsive-display-l",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+          ],
+          [],
+          [],
+          {}
+        ),
+      ]);
+      expect(() => filterAdaptiveTypography.formatTokens(tokens)).to.throw(
+        "Missing adaptive global typography token for responsive token: --global-typography-responsive-display-l on min breakpoint: 0, context: product"
+      );
+    });
+
+    it("should throw an error when a mirror responsive global token is not found", () => {
+      const tokens = new ContextTokens("product", [
+        new ScreenSizeTokens(
+          [
+            {
+              name: "--global-typography-adaptive-display-l",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+          ],
+          [],
+          [],
+          {}
+        ),
+      ]);
+      expect(() => filterAdaptiveTypography.formatTokens(tokens)).to.throw(
+        "Missing responsive global typography token for adaptive token: --global-typography-adaptive-display-l on min breakpoint: 0, context: product"
+      );
+    });
+
+    it("should throw an error when a mirror adaptive component token is not found", () => {
+      const tokens = new ContextTokens("product", [
+        new ScreenSizeTokens(
+          [
+            {
+              name: "--global-typography-responsive-display-l",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+            {
+              name: "--global-typography-adaptive-display-l",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+          ],
+          [],
+          [],
+          {
+            badge: [
+              {
+                name: "--badge-typography-responsive-l",
+                value: "var(--global-typography-responsive-display-l)",
+              },
+            ],
+          }
+        ),
+      ]);
+      expect(() => filterAdaptiveTypography.formatTokens(tokens)).to.throw(
+        "Missing adaptive badge token for responsive token: --badge-typography-responsive-l on min breakpoint: 0, context: product"
+      );
+    });
+
+    it("should throw an error when a mirror responsive component token is not found", () => {
+      const tokens = new ContextTokens("product", [
+        new ScreenSizeTokens(
+          [
+            {
+              name: "--global-typography-responsive-display-l",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+            {
+              name: "--global-typography-adaptive-display-l",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+          ],
+          [],
+          [],
+          {
+            badge: [
+              {
+                name: "--badge-typography-adaptive-l",
+                value: "var(--global-typography-adaptive-display-l)",
+              },
+            ],
+          }
+        ),
+      ]);
+      expect(() => filterAdaptiveTypography.formatTokens(tokens)).to.throw(
+        "Missing responsive badge token for adaptive token: --badge-typography-adaptive-l on min breakpoint: 0, context: product"
+      );
+    });
+
+    it("should throw an error when a mirror adaptive component token has an unexpected value", () => {
+      const tokens = new ContextTokens("product", [
+        new ScreenSizeTokens(
+          [
+            {
+              name: "--global-typography-responsive-display-l",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+            {
+              name: "--global-typography-adaptive-display-l",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+            {
+              name: "--global-typography-responsive-display-s",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+            {
+              name: "--global-typography-adaptive-display-s",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+          ],
+          [],
+          [],
+          {
+            badge: [
+              {
+                name: "--badge-typography-responsive-l",
+                value: "var(--global-typography-responsive-display-l)",
+              },
+              {
+                name: "--badge-typography-responsive-l",
+                value: "var(--global-typography-responsive-display-l)",
+              },
+              {
+                name: "--badge-typography-adaptive-l",
+                value: "var(--global-typography-adaptive-display-l)",
+              },
+              {
+                name: "--badge-typography-adaptive-l",
+                value: "var(--global-typography-adaptive-display-s)",
+              },
+            ],
+          }
+        ),
+      ]);
+      expect(() => filterAdaptiveTypography.formatTokens(tokens)).to.throw(
+        "Value mismatch on badge component for tokens --badge-typography-adaptive-l and --badge-typography-responsive-l on min breakpoint: 0, context: product"
+      );
+    });
+
+    it("should throw an error when a mirror responsive component token has an unexpected value", () => {
+      const tokens = new ContextTokens("product", [
+        new ScreenSizeTokens(
+          [
+            {
+              name: "--global-typography-responsive-display-l",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+            {
+              name: "--global-typography-adaptive-display-l",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+            {
+              name: "--global-typography-responsive-display-s",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+            {
+              name: "--global-typography-adaptive-display-s",
+              value: "900 40px/1.25 'Sage Headline'",
+            },
+          ],
+          [],
+          [],
+          {
+            badge: [
+              {
+                name: "--badge-typography-responsive-l",
+                value: "var(--global-typography-responsive-display-l)",
+              },
+              {
+                name: "--badge-typography-responsive-l",
+                value: "var(--global-typography-responsive-display-s)",
+              },
+              {
+                name: "--badge-typography-adaptive-l",
+                value: "var(--global-typography-adaptive-display-l)",
+              },
+              {
+                name: "--badge-typography-adaptive-l",
+                value: "var(--global-typography-adaptive-display-l)",
+              },
+            ],
+          }
+        ),
+      ]);
+      expect(() => filterAdaptiveTypography.formatTokens(tokens)).to.throw(
+        "Value mismatch on badge component for tokens --badge-typography-responsive-l and --badge-typography-adaptive-l on min breakpoint: 0, context: product"
+      );
+    });
+
     it("should filter adaptive tokens when supplied product context tokens", () => {
       const tokens = new ContextTokens("product", [
         new ScreenSizeTokens(
