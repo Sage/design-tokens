@@ -17,7 +17,7 @@ describe("FilterTypographyTokens", () => {
               value: "900 35px/1.25 'Sage Headline'",
             },
             {
-              name: "--global-space-macro-scale",
+              name: "--global-space-adaptive-macro-scale",
               value: "0.8px",
             },
             {
@@ -48,8 +48,8 @@ describe("FilterTypographyTokens", () => {
                 value: "var(--global-typography-adaptive-display-l)",
               },
               {
-                name: "--badge-size",
-                value: "var(--global-space-macro-scale)",
+                name: "--badge-typography-adaptive-size",
+                value: "var(--global-space-adaptive-macro-scale)",
               },
               {
                 name: "--badge-typography-responsive-m",
@@ -70,7 +70,7 @@ describe("FilterTypographyTokens", () => {
               value: "900 71px/1.25 'Sage Headline'",
             },
             {
-              name: "--global-space-macro-scale",
+              name: "--global-space-adaptive-macro-scale",
               value: "1px",
             },
             {
@@ -101,8 +101,8 @@ describe("FilterTypographyTokens", () => {
                 value: "var(--global-typography-adaptive-display-l)",
               },
               {
-                name: "--badge-size",
-                value: "var(--global-space-macro-scale)",
+                name: "--badge-typography-adaptive-size",
+                value: "var(--global-space-adaptive-macro-scale)",
               },
               {
                 name: "--badge-typography-responsive-m",
@@ -124,7 +124,7 @@ describe("FilterTypographyTokens", () => {
           {
             global: [
               {
-                name: "--global-space-macro-scale",
+                name: "--global-space-adaptive-macro-scale",
                 value: "0.8px",
               },
               {
@@ -143,8 +143,8 @@ describe("FilterTypographyTokens", () => {
             components: {
               badge: [
                 {
-                  name: "--badge-size",
-                  value: "var(--global-space-macro-scale)",
+                  name: "--badge-typography-adaptive-size",
+                  value: "var(--global-space-adaptive-macro-scale)",
                 },
                 {
                   name: "--badge-typography-m",
@@ -161,7 +161,7 @@ describe("FilterTypographyTokens", () => {
           {
             global: [
               {
-                name: "--global-space-macro-scale",
+                name: "--global-space-adaptive-macro-scale",
                 value: "1px",
               },
               {
@@ -180,8 +180,8 @@ describe("FilterTypographyTokens", () => {
             components: {
               badge: [
                 {
-                  name: "--badge-size",
-                  value: "var(--global-space-macro-scale)",
+                  name: "--badge-typography-adaptive-size",
+                  value: "var(--global-space-adaptive-macro-scale)",
                 },
                 {
                   name: "--badge-typography-m",
@@ -209,7 +209,7 @@ describe("FilterTypographyTokens", () => {
               value: "900 35px/1.25 'Sage Headline'",
             },
             {
-              name: "--global-space-macro-scale",
+              name: "--global-space-adaptive-macro-scale",
               value: "0.8px",
             },
             {
@@ -240,8 +240,8 @@ describe("FilterTypographyTokens", () => {
                 value: "var(--global-typography-adaptive-display-l)",
               },
               {
-                name: "--badge-size",
-                value: "var(--global-space-macro-scale)",
+                name: "--badge-typography-adaptive-size",
+                value: "var(--global-space-adaptive-macro-scale)",
               },
               {
                 name: "--badge-typography-responsive-m",
@@ -262,7 +262,7 @@ describe("FilterTypographyTokens", () => {
               value: "900 71px/1.25 'Sage Headline'",
             },
             {
-              name: "--global-space-macro-scale",
+              name: "--global-space-adaptive-macro-scale",
               value: "1px",
             },
             {
@@ -293,8 +293,8 @@ describe("FilterTypographyTokens", () => {
                 value: "var(--global-typography-adaptive-display-l)",
               },
               {
-                name: "--badge-size",
-                value: "var(--global-space-macro-scale)",
+                name: "--badge-typography-adaptive-size",
+                value: "var(--global-space-adaptive-macro-scale)",
               },
               {
                 name: "--badge-typography-responsive-m",
@@ -320,7 +320,7 @@ describe("FilterTypographyTokens", () => {
                 value: "900 35px/1.25 'Sage Headline'",
               },
               {
-                name: "--global-space-macro-scale",
+                name: "--global-space-adaptive-macro-scale",
                 value: "0.8px",
               },
               {
@@ -341,8 +341,8 @@ describe("FilterTypographyTokens", () => {
                   value: "var(--global-typography-display-l)",
                 },
                 {
-                  name: "--badge-size",
-                  value: "var(--global-space-macro-scale)",
+                  name: "--badge-typography-adaptive-size",
+                  value: "var(--global-space-adaptive-macro-scale)",
                 },
               ],
             },
@@ -355,7 +355,7 @@ describe("FilterTypographyTokens", () => {
                 value: "900 71px/1.25 'Sage Headline'",
               },
               {
-                name: "--global-space-macro-scale",
+                name: "--global-space-adaptive-macro-scale",
                 value: "1px",
               },
               {
@@ -376,8 +376,8 @@ describe("FilterTypographyTokens", () => {
                   value: "var(--global-typography-display-l)",
                 },
                 {
-                  name: "--badge-size",
-                  value: "var(--global-space-macro-scale)",
+                  name: "--badge-typography-adaptive-size",
+                  value: "var(--global-space-adaptive-macro-scale)",
                 },
               ],
             },

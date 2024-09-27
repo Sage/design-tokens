@@ -4,7 +4,6 @@ import { Decorator } from "../decorator";
 
 /**
  * TODOs:
- * - Add close match to tests
  * - For the assumption that there's always a mirror adaptive/responsive token,
  *  throw an error when this isn't the case for both global & component tokens
  */
