@@ -20,7 +20,10 @@ describe("MathsCalc", () => {
             { name: "--global-prop7", value: "value1 * value2 + value3" },
             { name: "--global-prop8", value: "value1 * value2 value3" },
             { name: "--global-prop9", value: "(value1 + value2) * value3" },
-            { name: "--global-typography1", value: "900 clamp( 2rem , 1rem + 2vw , 4rem ) / 1.25 'Sage Headline'"},
+            { name: "--global-prop10", value: "(value1 + value2) * (value3 - value4)" },
+            { name: "--global-prop11", value: "(value1 + value2) * (value3 - value4) value5 - value6" },
+            { name: "--global-typography1", value: "900 clamp(2.1588rem, 1.7083rem + 2.2525vw, 4.4113rem)/1.25 'Sage Headline'"},
+            { name: "--global-typography2", value: "400 20px/1 sage-icons"},
           ],
           [],
           [],
@@ -45,6 +48,14 @@ describe("MathsCalc", () => {
               {
                 name: "--badge-prop5",
                 value: "var(--global-prop1) - 2",
+              },
+              {
+                name: "--badge-prop6",
+                value: "var(--global-prop1) - var(--global-prop2)",
+              },
+              {
+                name: "--badge-prop7",
+                value: "(var(--global-prop1) - var(--global-prop2)) * var(--global-prop3)",
               },
             ],
           }
@@ -61,7 +72,10 @@ describe("MathsCalc", () => {
             { name: "--global-prop7", value: "value1 * value2 + value3" },
             { name: "--global-prop8", value: "value1 * value2 value3" },
             { name: "--global-prop9", value: "(value1 + value2) * value3" },
-            { name: "--global-typography1", value: "900 clamp( 2rem , 1rem + 2vw , 4rem ) / 1.25 'Sage Headline'"},
+            { name: "--global-prop10", value: "(value1 + value2) * (value3 - value4)" },
+            { name: "--global-prop11", value: "(value1 + value2) * (value3 - value4) value5 - value6" },
+            { name: "--global-typography1", value: "900 clamp(2.1588rem, 1.7083rem + 2.2525vw, 4.4113rem)/1.25 'Sage Headline'"},
+            { name: "--global-typography2", value: "400 20px/1 sage-icons"},
           ],
           [],
           [],
@@ -87,6 +101,14 @@ describe("MathsCalc", () => {
                 name: "--badge-prop5",
                 value: "var(--global-prop1) - 2",
               },
+              {
+                name: "--badge-prop6",
+                value: "var(--global-prop1) - var(--global-prop2)",
+              },
+              {
+                name: "--badge-prop7",
+                value: "(var(--global-prop1) - var(--global-prop2)) * var(--global-prop3)",
+              },
             ],
           }
         ),
@@ -94,7 +116,6 @@ describe("MathsCalc", () => {
 
       const result = mathsCalc.formatTokens(tokens);
       expect(result).to.deep.equal({
-        context: "product",
         screenSizes: [
           {
             global: [
@@ -107,7 +128,10 @@ describe("MathsCalc", () => {
               { name: "--global-prop7", value: "calc(value1 * value2 + value3)" },
               { name: "--global-prop8", value: "calc(value1 * value2) value3" },
               { name: "--global-prop9", value: "calc((value1 + value2) * value3)" },
-              { name: "--global-typography1", value: "900 calc(clamp( 2rem , calc(1rem + 2vw) , 4rem ) / 1.25) 'Sage Headline'"},
+              { name: "--global-prop10", value: "calc((value1 + value2) * (value3 - value4))" },
+              { name: "--global-prop11", value: "calc((value1 + value2) * (value3 - value4)) calc(value5 - value6)" },
+              { name: "--global-typography1", value: "900 clamp(2.1588rem, 1.7083rem + 2.2525vw, 4.4113rem)/1.25 'Sage Headline'"},
+              { name: "--global-typography2", value: "400 20px/1 sage-icons"},
             ],
             light: [],
             dark: [],
@@ -132,6 +156,14 @@ describe("MathsCalc", () => {
                 {
                   name: "--badge-prop5",
                   value: "calc(var(--global-prop1) - 2)",
+                },
+                {
+                  name: "--badge-prop6",
+                  value: "calc(var(--global-prop1) - var(--global-prop2))",
+                },
+                {
+                  name: "--badge-prop7",
+                  value: "calc((var(--global-prop1) - var(--global-prop2)) * var(--global-prop3))",
                 },
               ],
             },
@@ -148,7 +180,10 @@ describe("MathsCalc", () => {
               { name: "--global-prop7", value: "calc(value1 * value2 + value3)" },
               { name: "--global-prop8", value: "calc(value1 * value2) value3" },
               { name: "--global-prop9", value: "calc((value1 + value2) * value3)" },
-              { name: "--global-typography1", value: "900 calc(clamp( 2rem , calc(1rem + 2vw) , 4rem ) / 1.25) 'Sage Headline'"},
+              { name: "--global-prop10", value: "calc((value1 + value2) * (value3 - value4))" },
+              { name: "--global-prop11", value: "calc((value1 + value2) * (value3 - value4)) calc(value5 - value6)" },
+              { name: "--global-typography1", value: "900 clamp(2.1588rem, 1.7083rem + 2.2525vw, 4.4113rem)/1.25 'Sage Headline'"},
+              { name: "--global-typography2", value: "400 20px/1 sage-icons"},
             ],
             light: [],
             dark: [],
@@ -173,6 +208,14 @@ describe("MathsCalc", () => {
                 {
                   name: "--badge-prop5",
                   value: "calc(var(--global-prop1) - 2)",
+                },
+                {
+                  name: "--badge-prop6",
+                  value: "calc(var(--global-prop1) - var(--global-prop2))",
+                },
+                {
+                  name: "--badge-prop7",
+                  value: "calc((var(--global-prop1) - var(--global-prop2)) * var(--global-prop3))",
                 },
               ],
             },
