@@ -6,370 +6,204 @@
         "type": "color",
         "description": "transparent override used for hiding colors when needed."
       },
-      "inverse": {
+      "bg-default": {
+        "value": "{modes.color.generic.bg.nought}",
+        "type": "color"
+      },
+      "bg-readonly": {
+        "value": "{modes.color.status.inactive.default}",
+        "type": "color",
+        "description": "Pill (all types, readonly, when nested in disabled parent components)"
+      },
+      "border-readonly": {
+        "value": "{modes.color.status.inactive.default}",
+        "type": "color",
+        "description": "Pill (all types, readonly, when nested in disabled parent components)"
+      },
+      "icon-default": {
+        "value": "{modes.color.generic.bg.nought}",
+        "type": "color",
+        "description": "Decorative message icons"
+      },
+      "label-default": {
+        "value": "{modes.color.interactive.monochrome.withDefault}",
+        "type": "color"
+      },
+      "label-readonly": {
+        "value": "{modes.color.interactive.monochrome.withDefault}",
+        "type": "color",
+        "description": "Pill (all types, readonly, when nested in disabled parent components)"
+      },
+      "label-hover": {
+        "value": "{modes.color.status.content.withHover}",
+        "type": "color"
+      },
+      "labelAlt-default": {
+        "value": "{modes.color.status.content.withDefaultAlt}",
+        "type": "color"
+      },
+      "labelAlt-readonly": {
+        "value": "{modes.color.generic.content.firm}",
+        "type": "color",
+        "description": "Pill (all types, readonly, when nested in disabled parent components)"
+      },
+      "labelAlt-hover": {
+        "value": "{modes.color.status.content.withHoverAlt}",
+        "type": "color"
+      },
+      "text": {
+        "value": "{modes.color.status.content.withHoverAlt}",
+        "type": "color",
+        "description": "Message text."
+      },
+      "AI": {
         "bg-default": {
-          "value": "{modes.color.generic.bg.inverse.nought}",
+          "value": "{modes.color.status.ai.defaultAlt}",
           "type": "color"
         },
-        "bg-alt": {
-          "value": "{modes.color.generic.bg.inverse.faint}",
+        "border-default": {
+          "value": "{modes.color.status.ai.defaultAlt}",
           "type": "color"
-        },
-        "bg-readonly": {
-          "value": "{modes.color.status.inactive.inverse.default}",
-          "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
-        },
-        "border-readonly": {
-          "value": "{modes.color.status.inactive.inverse.default}",
-          "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
-        },
-        "icon-default": {
-          "value": "{modes.color.generic.bg.inverse.nought}",
-          "type": "color",
-          "description": "Decorative message icons"
-        },
-        "label-readonly": {
-          "value": "{modes.color.interactive.monochrome.inverse.withDefault}",
-          "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
-        },
-        "label-default": {
-          "value": "{modes.color.interactive.monochrome.inverse.withDefault}",
-          "type": "color"
-        },
-        "label-hover": {
-          "value": "{modes.color.status.content.inverse.withHover}",
-          "type": "color"
-        },
-        "labelAlt-default": {
-          "value": "{modes.color.status.content.inverse.withDefaultAlt}",
-          "type": "color"
-        },
-        "labelAlt-readonly": {
-          "value": "{modes.color.generic.content.inverse.firm}",
-          "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
-        },
-        "labelAlt-hover": {
-          "value": "{modes.color.status.content.inverse.withHoverAlt}",
-          "type": "color"
-        },
-        "text": {
-          "value": "{modes.color.status.content.inverse.withHoverAlt}",
-          "type": "color",
-          "description": "Message text."
-        },
-        "error": {
-          "bg-default": {
-            "value": "{modes.color.status.negative.inverse.default}",
-            "type": "color"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.negative.inverse.hover}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.negative.inverse.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.negative.inverse.default}",
-            "type": "color"
-          }
-        },
-        "info": {
-          "bg-default": {
-            "value": "{modes.color.status.info.inverse.default}",
-            "type": "color"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.info.inverse.hover}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.info.inverse.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.info.inverse.default}",
-            "type": "color"
-          }
-        },
-        "neutral": {
-          "bg-default": {
-            "value": "{modes.color.status.neutral.inverse.default}",
-            "type": "color"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.neutral.inverse.hover}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.neutral.inverse.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.neutral.inverse.default}",
-            "type": "color"
-          }
-        },
-        "success": {
-          "bg-default": {
-            "value": "{modes.color.status.success.inverse.default}",
-            "type": "color"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.success.inverse.hover}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.success.inverse.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.success.inverse.default}",
-            "type": "color"
-          }
-        },
-        "warning": {
-          "bg-default": {
-            "value": "{modes.color.status.caution.inverse.default}",
-            "type": "color"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.caution.inverse.hover}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.caution.inverse.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.caution.inverse.default}",
-            "type": "color"
-          }
-        },
-        "rating": {
-          "bg-default": {
-            "value": "{modes.color.status.reviews.inverse.default}",
-            "type": "color"
-          },
-          "bg-defaultAlt": {
-            "value": "{modes.color.status.reviews.inverse.defaultAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.reviews.inverse.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.reviews.inverse.default}",
-            "type": "color"
-          }
         }
       },
-      "standard": {
+      "error": {
         "bg-default": {
-          "value": "{modes.color.generic.bg.standard.nought}",
+          "value": "{modes.color.status.negative.default}",
           "type": "color"
         },
-        "bg-readonly": {
-          "value": "{modes.color.status.inactive.standard.default}",
+        "bgAlt-default": {
+          "value": "{modes.color.status.negative.defaultAlt}",
           "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
+          "description": "Subtle message bg"
         },
-        "border-readonly": {
-          "value": "{modes.color.status.inactive.standard.default}",
-          "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
-        },
-        "icon-default": {
-          "value": "{modes.color.generic.bg.standard.nought}",
-          "type": "color",
-          "description": "Decorative message icons"
-        },
-        "label-default": {
-          "value": "{modes.color.interactive.monochrome.standard.withDefault}",
+        "bgAlt-hover": {
+          "value": "{modes.color.status.negative.hoverAlt}",
           "type": "color"
         },
-        "label-readonly": {
-          "value": "{modes.color.interactive.monochrome.standard.withDefault}",
-          "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
-        },
-        "label-hover": {
-          "value": "{modes.color.status.content.standard.withHover}",
+        "bg-hover": {
+          "value": "{modes.color.status.negative.hover}",
           "type": "color"
         },
-        "labelAlt-default": {
-          "value": "{modes.color.status.content.standard.withDefaultAlt}",
+        "border-default": {
+          "value": "{modes.color.status.negative.default}",
+          "type": "color"
+        }
+      },
+      "info": {
+        "bg-default": {
+          "value": "{modes.color.status.info.default}",
           "type": "color"
         },
-        "labelAlt-readonly": {
-          "value": "{modes.color.generic.content.standard.firm}",
+        "bgAlt-default": {
+          "value": "{modes.color.status.info.defaultAlt}",
           "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
+          "description": "Subtle message bg"
         },
-        "labelAlt-hover": {
-          "value": "{modes.color.status.content.standard.withHoverAlt}",
+        "bgAlt-hover": {
+          "value": "{modes.color.status.info.hoverAlt}",
           "type": "color"
         },
-        "text": {
-          "value": "{modes.color.status.content.standard.withHoverAlt}",
+        "bg-hover": {
+          "value": "{modes.color.status.info.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.info.default}",
+          "type": "color"
+        }
+      },
+      "neutral": {
+        "bg-default": {
+          "value": "{modes.color.status.neutral.default}",
+          "type": "color"
+        },
+        "bgAlt-default": {
+          "value": "{modes.color.status.neutral.defaultAlt}",
           "type": "color",
-          "description": "Message text."
+          "description": "Subtle message bg"
         },
-        "AI": {
-          "bg-default": {
-            "value": "{modes.color.status.ai.standard.defaultAlt}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.ai.standard.defaultAlt}",
-            "type": "color"
-          }
+        "bgAlt-hover": {
+          "value": "{modes.color.status.neutral.hoverAlt}",
+          "type": "color"
         },
-        "error": {
-          "bg-default": {
-            "value": "{modes.color.status.negative.standard.default}",
-            "type": "color"
-          },
-          "bgAlt-default": {
-            "value": "{modes.color.status.negative.standard.defaultAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.negative.standard.hoverAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.negative.standard.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.negative.standard.default}",
-            "type": "color"
-          }
+        "bg-hover": {
+          "value": "{modes.color.status.neutral.hover}",
+          "type": "color"
         },
-        "info": {
-          "bg-default": {
-            "value": "{modes.color.status.info.standard.default}",
-            "type": "color"
-          },
-          "bgAlt-default": {
-            "value": "{modes.color.status.info.standard.defaultAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.info.standard.hoverAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.info.standard.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.info.standard.default}",
-            "type": "color"
-          }
+        "border-default": {
+          "value": "{modes.color.status.neutral.default}",
+          "type": "color"
+        }
+      },
+      "success": {
+        "bg-default": {
+          "value": "{modes.color.status.success.default}",
+          "type": "color"
         },
-        "neutral": {
-          "bg-default": {
-            "value": "{modes.color.status.neutral.standard.default}",
-            "type": "color"
-          },
-          "bgAlt-default": {
-            "value": "{modes.color.status.neutral.standard.defaultAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.neutral.standard.hoverAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.neutral.standard.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.neutral.standard.default}",
-            "type": "color"
-          }
+        "bgAlt-default": {
+          "value": "{modes.color.status.success.defaultAlt}",
+          "type": "color",
+          "description": "Subtle message bg"
         },
-        "success": {
-          "bg-default": {
-            "value": "{modes.color.status.success.standard.default}",
-            "type": "color"
-          },
-          "bgAlt-default": {
-            "value": "{modes.color.status.success.standard.defaultAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.success.standard.hoverAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.success.standard.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.success.standard.default}",
-            "type": "color"
-          }
+        "bgAlt-hover": {
+          "value": "{modes.color.status.success.hoverAlt}",
+          "type": "color"
         },
-        "warning": {
-          "bg-default": {
-            "value": "{modes.color.status.caution.standard.default}",
-            "type": "color"
-          },
-          "bgAlt-default": {
-            "value": "{modes.color.status.caution.standard.defaultAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.caution.standard.hoverAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.caution.standard.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.caution.standard.default}",
-            "type": "color"
-          }
+        "bg-hover": {
+          "value": "{modes.color.status.success.hover}",
+          "type": "color"
         },
-        "callout": {
-          "bg-default": {
-            "value": "{modes.color.status.callout.standard.default}",
-            "type": "color",
-            "description": "Subtle message bg"
-          }
+        "border-default": {
+          "value": "{modes.color.status.success.default}",
+          "type": "color"
+        }
+      },
+      "warning": {
+        "bg-default": {
+          "value": "{modes.color.status.caution.default}",
+          "type": "color"
         },
-        "rating": {
-          "bg-default": {
-            "value": "{modes.color.status.reviews.standard.default}",
-            "type": "color"
-          },
-          "bg-defaultAlt": {
-            "value": "{modes.color.status.reviews.standard.defaultAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.reviews.standard.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.reviews.standard.default}",
-            "type": "color"
-          }
+        "bgAlt-default": {
+          "value": "{modes.color.status.caution.defaultAlt}",
+          "type": "color",
+          "description": "Subtle message bg"
+        },
+        "bgAlt-hover": {
+          "value": "{modes.color.status.caution.hoverAlt}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.status.caution.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.caution.default}",
+          "type": "color"
+        }
+      },
+      "callout": {
+        "bg-default": {
+          "value": "{modes.color.status.callout.default}",
+          "type": "color",
+          "description": "Subtle message bg"
+        }
+      },
+      "rating": {
+        "bg-default": {
+          "value": "{modes.color.status.reviews.default}",
+          "type": "color"
+        },
+        "bg-defaultAlt": {
+          "value": "{modes.color.status.reviews.defaultAlt}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.status.reviews.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.reviews.default}",
+          "type": "color"
         }
       }
     },
