@@ -18,5 +18,6 @@ module.exports = {
     "length-zero-no-unit": null, // Has no end user impact apart from affecting the size of the CSS file by a tiny amount
     "scss/comment-no-empty": null, // Ignoring as this is managed by `ts/descriptionToComment` transform and has no end user impact
     "scss/operator-no-unspaced": null, // Has no end user impact
+    "value-keyword-case": null, // Ignore to allow for correct casing of typography font names
   },
 };
