@@ -57,7 +57,7 @@ function copyReadme () {
 }
 
 function addEntryFile () {
-  const jsFilePaths = sync('./dist/js/*/*/{base,global}/*.js')
+  const jsFilePaths = sync('./dist/js/*/*/{large.small}/*.js')
   const jsComponentPaths = sync('./dist/js/*/*/components/*/*.js')
   const entryFilePath = resolve(__dirname, '../dist/index.js')
 
