@@ -1,128 +1,64 @@
 {
   "nav": {
     "color": {
-      "inverse": {
-        "bg-default": {
-          "value": "{modes.color.generic.bg.inverse.nought}",
-          "type": "color",
-          "description": "nav bar bg"
+      "bg-default": {
+        "value": "{modes.color.generic.bg.nought}",
+        "type": "color",
+        "description": "nav bar bg"
+      },
+      "item": {
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.active}",
+          "type": "color"
         },
-        "item": {
-          "bg-active": {
-            "value": "{modes.color.interactive.monochrome.inverse.active}",
-            "type": "color"
-          },
-          "bg-activealt": {
-            "value": "{modes.color.interactive.monochrome.inverse.hover}",
-            "type": "color"
-          },
-          "bg-enabled": {
-            "value": "{modes.color.none}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.interactive.monochrome.inverse.hover}",
-            "type": "color"
-          },
-          "label-active": {
-            "value": "{modes.color.interactive.monochrome.inverse.withActive}",
-            "type": "color"
-          },
-          "label-activealt": {
-            "value": "{modes.color.interactive.monochrome.inverse.withHover}",
-            "type": "color"
-          },
-          "label-enabled": {
-            "value": "{modes.color.interactive.monochrome.inverse.default}",
-            "type": "color"
-          },
-          "label-hover": {
-            "value": "{modes.color.interactive.monochrome.inverse.withHover}",
-            "type": "color"
-          },
-          "label-alt": {
-            "value": "{modes.color.interactive.monochrome.inverse.defaultAlt}",
-            "type": "color"
-          }
+        "bg-activealt": {
+          "value": "{modes.color.interactive.monochrome.hoverAlt}",
+          "type": "color"
         },
-        "menu": {
-          "bg-default": {
-            "value": "{modes.color.generic.bg.inverse.moderate}",
-            "type": "color",
-            "description": "menu (level 1) nav bg"
-          },
-          "bg-alt": {
-            "value": "{modes.color.generic.bg.inverse.firm}",
-            "type": "color",
-            "description": "level 2 nav bg"
-          },
-          "bg-alt2": {
-            "value": "{modes.color.generic.bg.inverse.harsh}",
-            "type": "color",
-            "description": "level 3 nav bg"
-          }
+        "bg-enabled": {
+          "value": "{modes.color.none}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.interactive.monochrome.hoverAlt}",
+          "type": "color"
+        },
+        "label-active": {
+          "value": "{modes.color.interactive.monochrome.withActive}",
+          "type": "color"
+        },
+        "label-activealt": {
+          "value": "{modes.color.interactive.monochrome.withHover}",
+          "type": "color"
+        },
+        "label-enabled": {
+          "value": "{modes.color.interactive.monochrome.default}",
+          "type": "color"
+        },
+        "label-hover": {
+          "value": "{modes.color.interactive.monochrome.withHover}",
+          "type": "color"
+        },
+        "label-alt": {
+          "value": "{modes.color.interactive.monochrome.defaultAlt}",
+          "type": "color"
         }
       },
-      "standard": {
+      "menu": {
         "bg-default": {
-          "value": "{modes.color.generic.bg.standard.nought}",
+          "value": "{modes.color.generic.bg.faint}",
           "type": "color",
-          "description": "nav bar bg"
+          "description": "menu (level 1) nav bg"
         },
-        "item": {
-          "bg-active": {
-            "value": "{modes.color.interactive.monochrome.standard.active}",
-            "type": "color"
-          },
-          "bg-activealt": {
-            "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
-            "type": "color"
-          },
-          "bg-enabled": {
-            "value": "{modes.color.none}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
-            "type": "color"
-          },
-          "label-active": {
-            "value": "{modes.color.interactive.monochrome.standard.withActive}",
-            "type": "color"
-          },
-          "label-activealt": {
-            "value": "{modes.color.interactive.monochrome.standard.withHover}",
-            "type": "color"
-          },
-          "label-enabled": {
-            "value": "{modes.color.interactive.monochrome.standard.default}",
-            "type": "color"
-          },
-          "label-hover": {
-            "value": "{modes.color.interactive.monochrome.standard.withHover}",
-            "type": "color"
-          },
-          "label-alt": {
-            "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
-            "type": "color"
-          }
+        "bg-alt": {
+          "value": "{modes.color.generic.bg.delicate}",
+          "type": "color",
+          "description": "level 2 nav bg"
         },
-        "menu": {
-          "bg-default": {
-            "value": "{modes.color.generic.bg.standard.faint}",
-            "type": "color",
-            "description": "menu (level 1) nav bg"
-          },
-          "bg-alt": {
-            "value": "{modes.color.generic.bg.standard.delicate}",
-            "type": "color",
-            "description": "level 2 nav bg"
-          },
-          "bg-alt2": {
-            "value": "{modes.color.generic.bg.standard.soft}",
-            "type": "color",
-            "description": "level 3 nav bg"
-          }
+        "bg-alt2": {
+          "value": "{modes.color.generic.bg.soft}",
+          "type": "color",
+          "description": "level 3 nav bg"
         }
       }
     },
@@ -439,7 +375,7 @@
             "type": "typography"
           },
           "L": {
-            "value": "{global.typography.responsive.component.firm.S}",
+            "value": "{global.typography.responsive.component.firm.L}",
             "type": "typography"
           }
         },
@@ -453,7 +389,7 @@
             "type": "typography"
           },
           "L": {
-            "value": "{global.typography.responsive.component.moderate.S}",
+            "value": "{global.typography.responsive.component.moderate.L}",
             "type": "typography"
           }
         }
