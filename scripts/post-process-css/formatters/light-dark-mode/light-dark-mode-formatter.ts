@@ -1,4 +1,4 @@
-import { BrandTokens } from "../../brand-tokens";
+import { ContextTokens } from "../../context-tokens";
 import { CssProperty } from "../../css-parser/css-parser.types";
 import { getSymetricalDifference } from "../../helpers";
 import { ScreenSizeTokens } from "../../screen-size-tokens";
@@ -12,7 +12,7 @@ export class LightDarkModeFormatter extends Decorator {
    * @param tokens Tokens to format.
    * @returns Formatted tokens.
    */
-  public override formatTokens(tokens: BrandTokens) {
+  public override formatTokens(tokens: ContextTokens) {
     tokens.screenSizes.forEach((screenSize) => {
       this.sanityCheckModeTokens(screenSize);
 
@@ -26,24 +26,6 @@ export class LightDarkModeFormatter extends Decorator {
       screenSize.light.forEach((token) => (token.name = `${token.name}-light`));
       screenSize.dark.forEach((token) => (token.name = `${token.name}-dark`));
     });
-
-    // // Function above ensures that the lists of light and dark token names are the same. We can now use only one of them to loop through.
-    // const smallModeTokenNames = tokens.small.light.map((token) => token.name);
-
-    // smallModeTokenNames.forEach((tokenName) =>
-    //   this.formatScreenSizeModes(tokens.small, tokenName)
-    // );
-
-    // const largeModeTokenNames = tokens.large.light.map((token) => token.name);
-
-    // largeModeTokenNames.forEach((tokenName) =>
-    //   this.formatScreenSizeModes(tokens.large, tokenName)
-    // );
-
-    // tokens.small.light.forEach((token) => (token.name = `${token.name}-light`));
-    // tokens.small.dark.forEach((token) => (token.name = `${token.name}-dark`));
-    // tokens.large.light.forEach((token) => (token.name = `${token.name}-light`));
-    // tokens.large.dark.forEach((token) => (token.name = `${token.name}-dark`));
 
     return super.formatTokens(tokens);
   }
