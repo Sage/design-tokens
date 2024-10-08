@@ -131,13 +131,14 @@ const getGlobalConfig = ({contextName, sizeName}: IConfig) => {
           ...getFiles({componentName: 'global', format: 'json/flat', subType: `flat/${subType}`, suffix: 'json'})
         ]
       },
-      android: {
-        buildPath: 'dist/android/',
-        transforms: groups.mobile,
-        files: [
-          ...getFiles({componentName: 'global', format: 'android/resources', subType, suffix: 'xml'})
-        ]
-      },
+      // todo: debug android build
+      // android: {
+      //   buildPath: 'dist/android/',
+      //   transforms: groups.mobile,
+      //   files: [
+      //     ...getFiles({componentName: 'global', format: 'android/resources', subType, suffix: 'xml'})
+      //   ]
+      // },
       ios: {
         buildPath: 'dist/ios/',
         transforms: groups.mobile,
@@ -201,13 +202,14 @@ const getModeConfig = ({contextName, modeName, sizeName}: IConfig) => {
           ...getMode({modeName, format: 'json/flat', subType: `flat/${subType}`, suffix: 'json'})
         ]
       },
-      android: {
-        buildPath: 'dist/android/',
-        transforms: groups.mobile,
-        files: [
-          ...getMode({modeName, format: 'android/resources', subType, suffix: 'xml'})
-        ]
-      },
+      // todo: debug android build
+      // android: {
+      //   buildPath: 'dist/android/',
+      //   transforms: groups.mobile,
+      //   files: [
+      //     ...getMode({modeName, format: 'android/resources', subType, suffix: 'xml'})
+      //   ]
+      // },
       ios: {
         buildPath: 'dist/ios/',
         transforms: groups.mobile,
@@ -249,7 +251,7 @@ context.forEach(async (context) => {
     await styleDictionary.buildPlatform('js')
     await styleDictionary.buildPlatform('json')
     await styleDictionary.buildPlatform('ios')
-    await styleDictionary.buildPlatform('android')
+    //await styleDictionary.buildPlatform('android')
 
     modes.forEach(async (mode) => {
       const modeName = mode.split('.json')[0]
@@ -266,7 +268,7 @@ context.forEach(async (context) => {
       await styleDictionary.buildPlatform('js')
       await styleDictionary.buildPlatform('json')
       await styleDictionary.buildPlatform('ios')
-      await styleDictionary.buildPlatform('android')
+      //await styleDictionary.buildPlatform('android')
     })
   })
 })
