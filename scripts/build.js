@@ -14,7 +14,7 @@ const screensize = readdirSync('./data/tokens/screensize/')
 const getFiles = (contextName, modeName, format, subType, suffix) => {
   const mode = format.includes('variables') ? '' : modeName
   return [
-    ...getSplit(contextName, 'modes', modeName, format, subType, suffix, false),
+    ...getSplit('modes', modeName, format, subType, suffix, false),
     ...getComponents(contextName, mode, format, subType, suffix)
   ]
 }
@@ -23,13 +23,13 @@ const getComponents = (contextName, modeName, format, subType, suffix) => {
   const componentArray = []
 
   components.forEach((component) => {
-    componentArray.push(...getSplit(contextName, component.split('.')[0], modeName, format, subType, suffix, true))
+    componentArray.push(...getSplit(component.split('.')[0], modeName, format, subType, suffix, true))
   })
 
   return componentArray
 }
 
-const getSplit = (contextName, componentName, modeName, format, subType, suffix, outputReferences) => {
+const getSplit = (componentName, modeName, format, subType, suffix, outputReferences) => {
   const hasRefs = suffix === 'css' || suffix === 'scss'
 
   const getPath = (componentName) => {
@@ -42,16 +42,13 @@ const getSplit = (contextName, componentName, modeName, format, subType, suffix,
 
   const path = getPath(componentName).trim()
 
-  const selector = outputReferences ? `.sds-context-${contextName}[class^="sds-mode-"]` : modeName ? `.sds-context-${contextName}.sds-mode-${modeName}` : `.sds-context-${contextName}`
-
   return [
     {
       destination: `${subType}/${path}.${suffix}`,
       filter: (token) => filterComponent(token, componentName),
       format,
       options: {
-        outputReferences,
-        selector
+        outputReferences
       }
     }
   ]
@@ -70,47 +67,47 @@ const getGlobalConfig = (contextName, sizeName) => {
         buildPath: 'dist/css/',
         transforms: groups.css,
         files: [
-          ...getSplit(contextName, 'global', '', sizeName, `${contextName}/${sizeName}`, 'css', false)
+          ...getSplit('global', '', 'css/variables', `${contextName}/${sizeName}`, 'css', false)
         ]
       },
       scss: {
         buildPath: 'dist/scss/',
         transforms: groups.scss,
         files: [
-          ...getSplit(contextName, 'global', '', 'scss/variables', `${contextName}/${sizeName}`, 'scss', false)
+          ...getSplit('global', '', 'scss/variables', `${contextName}/${sizeName}`, 'scss', false)
         ]
       },
       js: {
         buildPath: 'dist/js/',
         transforms: groups.js,
         files: [
-          ...getSplit(contextName, 'global', '', 'javascript/module', `common/${contextName}/${sizeName}`, 'js', false),
-          ...getSplit(contextName, 'global', '', 'typescript/module-declarations', `common/${contextName}/${sizeName}`, 'd.ts', false),
-          ...getSplit(contextName, 'global', '', 'javascript/es6', `es6/${contextName}/${sizeName}`, 'js', false),
-          ...getSplit(contextName, 'global', '', 'typescript/es6-declarations', `es6/${contextName}/${sizeName}`, 'd.ts', false),
-          ...getSplit(contextName, 'global', '', 'javascript/umd', `umd/${contextName}/${sizeName}`, 'js', false)
+          ...getSplit('global', '', 'javascript/module', `common/${contextName}/${sizeName}`, 'js', false),
+          ...getSplit('global', '', 'typescript/module-declarations', `common/${contextName}/${sizeName}`, 'd.ts', false),
+          ...getSplit('global', '', 'javascript/es6', `es6/${contextName}/${sizeName}`, 'js', false),
+          ...getSplit('global', '', 'typescript/es6-declarations', `es6/${contextName}/${sizeName}`, 'd.ts', false),
+          ...getSplit('global', '', 'javascript/umd', `umd/${contextName}/${sizeName}`, 'js', false)
         ]
       },
       json: {
         buildPath: 'dist/json/',
         transforms: groups.json,
         files: [
-          ...getSplit(contextName, 'global', '', 'json/nested', `nested/${contextName}/${sizeName}`, 'json', false),
-          ...getSplit(contextName, 'global', '', 'json/flat', `flat/${contextName}/${sizeName}`, 'json', false)
+          ...getSplit('global', '', 'json/nested', `nested/${contextName}/${sizeName}`, 'json', false),
+          ...getSplit('global', '', 'json/flat', `flat/${contextName}/${sizeName}`, 'json', false)
         ]
       },
       android: {
         buildPath: 'dist/android/',
         transforms: groups.mobile,
         files: [
-          ...getSplit(contextName, 'global', '', 'android/resources', `${contextName}/${sizeName}`, 'xml', false)
+          ...getSplit('global', '', 'android/resources', `${contextName}/${sizeName}`, 'xml', false)
         ]
       },
       ios: {
         buildPath: 'dist/ios/',
         transforms: groups.mobile,
         files: [
-          ...getSplit(contextName, 'global', '', 'ios/macros', `${contextName}/${sizeName}`, 'h', false)
+          ...getSplit('global', '', 'ios/macros', `${contextName}/${sizeName}`, 'h', false)
         ]
       }
     }
@@ -131,7 +128,7 @@ const getModeConfig = (contextName, modeName, sizeName) => {
         buildPath: 'dist/css/',
         transforms: groups.css,
         files: [
-          ...getFiles(contextName, modeName, sizeName, `${contextName}/${sizeName}`, 'css')
+          ...getFiles(contextName, modeName, 'css/variables', `${contextName}/${sizeName}`, 'css')
         ]
       },
       scss: {
