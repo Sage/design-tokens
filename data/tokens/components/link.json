@@ -1,69 +1,35 @@
 {
   "link": {
     "color": {
-      "inverse": {
-        "typical": {
-          "label-default": {
-            "value": "{modes.color.interactive.primary.inverse.defaultAlt}",
-            "type": "color"
-          },
-          "label-hover": {
-            "value": "{modes.color.interactive.primary.inverse.hoverAlt}",
-            "type": "color"
-          }
+      "destructive": {
+        "label-default": {
+          "value": "{modes.color.interactive.danger.defaultAlt}",
+          "type": "color",
+          "description": "."
         },
-        "subtle": {
-          "label-default": {
-            "value": "{modes.color.interactive.monochrome.inverse.default}",
-            "type": "color"
-          },
-          "label-hover": {
-            "value": "{modes.color.interactive.monochrome.inverse.active}",
-            "type": "color"
-          }
-        },
-        "destructive": {
-          "label-default": {
-            "value": "{modes.color.interactive.danger.inverse.defaultAlt}",
-            "type": "color"
-          },
-          "label-hover": {
-            "value": "{modes.color.interactive.danger.inverse.hoverAlt2}",
-            "type": "color"
-          }
+        "label-hover": {
+          "value": "{modes.color.interactive.danger.hoverAlt2}",
+          "type": "color"
         }
       },
-      "standard": {
-        "destructive": {
-          "label-default": {
-            "value": "{modes.color.interactive.danger.standard.defaultAlt}",
-            "type": "color",
-            "description": "."
-          },
-          "label-hover": {
-            "value": "{modes.color.interactive.danger.standard.hoverAlt2}",
-            "type": "color"
-          }
+      "typical": {
+        "label-default": {
+          "value": "{modes.color.interactive.primary.defaultAlt}",
+          "type": "color"
         },
-        "typical": {
-          "label-default": {
-            "value": "{modes.color.interactive.primary.standard.defaultAlt}",
-            "type": "color"
-          },
-          "label-hover": {
-            "value": "{modes.color.interactive.primary.standard.hoverAlt}",
-            "type": "color"
-          }
+        "label-hover": {
+          "value": "{modes.color.interactive.primary.hoverAlt}",
+          "type": "color"
+        }
+      },
+      "subtle": {
+        "label-default": {
+          "value": "{modes.color.interactive.monochrome.default}",
+          "type": "color"
         },
-        "subtle": {
-          "label-default": {
-            "value": "{modes.color.interactive.monochrome.standard.default}",
-            "type": "color"
-          },
-          "label-hover": {
-            "value": "{modes.color.interactive.monochrome.standard.active}",
-            "type": "color"
-          }
+        "label-hover": {
+          "value": "{modes.color.interactive.monochrome.active}",
+          "type": "color"
         }
       }
     },
@@ -129,34 +95,66 @@
     },
     "typography": {
       "responsive": {
-        "S": {
-          "value": "{global.typography.responsive.component.underlined.S}",
-          "type": "typography",
-          "description": "Small Viewports: 14.81, Large Viewports: 13.79. Match token size to component size."
+        "default": {
+          "S": {
+            "value": "{global.typography.responsive.component.underlined.moderate.S}",
+            "type": "typography",
+            "description": "Small Viewports: 14.81, Large Viewports: 13.79. Match token size to component size."
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.underlined.moderate.M}",
+            "type": "typography",
+            "description": "Small Viewports: 16, Large Viewports: 16. Match token size to component size."
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.underlined.moderate.L}",
+            "type": "typography",
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56. Match token size to component size."
+          }
         },
-        "M": {
-          "value": "{global.typography.responsive.component.underlined.M}",
-          "type": "typography",
-          "description": "Small Viewports: 16, Large Viewports: 16. Match token size to component size."
-        },
-        "L": {
-          "value": "{global.typography.responsive.component.underlined.L}",
-          "type": "typography",
-          "description": "Small Viewports: 17.28, Large Viewports: 18.56. Match token size to component size."
+        "heading": {
+          "S": {
+            "value": "{global.typography.responsive.component.underlined.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.underlined.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.underlined.firm.L}",
+            "type": "typography"
+          }
         }
       },
       "adaptive": {
-        "S": {
-          "value": "{global.typography.adaptive.component.underlined.S}",
-          "type": "typography"
+        "default": {
+          "S": {
+            "value": "{global.typography.adaptive.component.underlined.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.underlined.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.underlined.moderate.L}",
+            "type": "typography"
+          }
         },
-        "M": {
-          "value": "{global.typography.adaptive.component.underlined.M}",
-          "type": "typography"
-        },
-        "L": {
-          "value": "{global.typography.adaptive.component.underlined.L}",
-          "type": "typography"
+        "heading": {
+          "S": {
+            "value": "{global.typography.adaptive.component.underlined.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.underlined.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.underlined.firm.L}",
+            "type": "typography"
+          }
         }
       }
     }

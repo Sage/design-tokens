@@ -65,31 +65,62 @@
         }
       },
       "skeleton": {
-        "text": {
-          "XS": {
-            "value": "{global.typography.adaptive.subheading.M}",
-            "type": "sizing",
-            "description": "Skeleton paragraph and H5"
-          },
-          "S": {
-            "value": "{global.typography.adaptive.subheading.M}",
-            "type": "sizing",
-            "description": "H4 Skeletons"
-          },
-          "M": {
-            "value": "{global.typography.adaptive.heading.XS}",
-            "type": "sizing",
-            "description": "H3 Skeletons"
-          },
-          "L": {
-            "value": "{global.typography.adaptive.heading.S}",
-            "type": "sizing",
-            "description": "H2 Skeletons"
-          },
-          "XL": {
-            "value": "{global.typography.adaptive.heading.M}",
-            "type": "sizing",
-            "description": "H1 Skeletons"
+        "responsive": {
+          "text": {
+            "XS": {
+              "value": "{primitives.fontSize.responsive.step0}",
+              "type": "sizing",
+              "description": "Skeleton paragraph and H5"
+            },
+            "S": {
+              "value": "{primitives.fontSize.responsive.step2}",
+              "type": "sizing",
+              "description": "H4 Skeletons"
+            },
+            "M": {
+              "value": "{primitives.fontSize.responsive.step2}",
+              "type": "sizing",
+              "description": "H3 Skeletons"
+            },
+            "L": {
+              "value": "{primitives.fontSize.responsive.step3}",
+              "type": "sizing",
+              "description": "H2 Skeletons"
+            },
+            "XL": {
+              "value": "{primitives.fontSize.responsive.step5}",
+              "type": "sizing",
+              "description": "H1 Skeletons"
+            }
+          }
+        },
+        "adaptive": {
+          "text": {
+            "XS": {
+              "value": "{global.fontSize.adaptive.step0}",
+              "type": "sizing",
+              "description": "Skeleton paragraph and H5"
+            },
+            "S": {
+              "value": "{global.fontSize.adaptive.heading.step2}",
+              "type": "sizing",
+              "description": "H4 Skeletons"
+            },
+            "M": {
+              "value": "{global.fontSize.adaptive.heading.step2}",
+              "type": "sizing",
+              "description": "H3 Skeletons"
+            },
+            "L": {
+              "value": "{global.fontSize.adaptive.heading.step3}",
+              "type": "sizing",
+              "description": "H2 Skeletons"
+            },
+            "XL": {
+              "value": "{global.fontSize.adaptive.heading.step5}",
+              "type": "sizing",
+              "description": "H1 Skeletons"
+            }
           }
         }
       },
@@ -121,208 +152,127 @@
       }
     },
     "color": {
-      "inverse": {
-        "bg-default": {
-          "value": "{modes.color.generic.bg.standard.nought}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "alpha",
-                "value": "0.32",
-                "space": "lch"
-              }
-            }
-          }
-        },
-        "bg-skeleton": {
-          "value": "{modes.color.status.content.inverse.loading}",
-          "type": "color"
-        },
-        "fg-ai": {
-          "value": "{modes.color.interactive.ai.inverse.default}",
-          "type": "color",
-          "description": "For progress ring in ai buttons"
-        },
+      "bg-skeleton": {
+        "value": "{modes.color.status.content.loading}",
+        "type": "color"
+      },
+      "bg-default": {
+        "value": "{modes.color.interactive.progress.bg}",
+        "type": "color"
+      },
+      "border-default": {
+        "value": "{modes.color.generic.fg.soft}",
+        "type": "color"
+      },
+      "fg-ai": {
+        "value": "{modes.color.interactive.ai.default}",
+        "type": "color",
+        "description": "For progress ring in ai buttons"
+      },
+      "fg-alt": {
+        "value": "{modes.color.status.success.default}",
+        "type": "color"
+      },
+      "fg-alt2": {
+        "value": "{modes.color.generic.content.firm}",
+        "type": "color"
+      },
+      "fg-caution": {
+        "value": "{modes.color.status.caution.default}",
+        "type": "color"
+      },
+      "fg-default": {
+        "value": "{modes.color.interactive.monochrome.active}",
+        "type": "color"
+      },
+      "fg-error": {
+        "value": "{modes.color.status.negative.default}",
+        "type": "color"
+      },
+      "fg-info": {
+        "value": "{modes.color.status.info.default}",
+        "type": "color"
+      },
+      "label-alt": {
+        "value": "{modes.color.generic.content.firm}",
+        "type": "color"
+      },
+      "label-default": {
+        "value": "{modes.color.generic.content.harsh}",
+        "type": "color"
+      },
+      "datavis": {
         "fg-default": {
-          "value": "{modes.color.generic.fg.standard.nought}",
+          "value": "{modes.color.status.generic.default}",
           "type": "color"
-        },
-        "label-alt": {
-          "value": "{modes.color.generic.content.inverse.firm}",
-          "type": "color"
-        },
-        "label-default": {
-          "value": "{modes.color.generic.content.inverse.harsh}",
-          "type": "color"
-        },
-        "stepindicator": {
-          "bg-active": {
-            "value": "{modes.color.generic.fg.standard.nought}",
-            "type": "color"
-          },
-          "bg-complete": {
-            "value": "{modes.color.interactive.primary.inverse.default}",
-            "type": "color"
-          },
-          "border-active-outer": {
-            "value": "{modes.color.generic.fg.standard.nought}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.generic.fg.inverse.moderate}",
-            "type": "color"
-          },
-          "border-success": {
-            "value": "{modes.color.interactive.primary.inverse.default}",
-            "type": "color"
-          },
-          "label-active": {
-            "value": "{modes.color.generic.content.standard.extreme}",
-            "type": "color"
-          },
-          "label-complete": {
-            "value": "{modes.color.generic.content.standard.extreme}",
-            "type": "color"
-          },
-          "label-default": {
-            "value": "{modes.color.generic.content.inverse.harsh}",
-            "type": "color"
-          }
         }
       },
-      "standard": {
-        "bg-skeleton": {
-          "value": "{modes.color.status.content.standard.loading}",
+      "stepflow": {
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.active}",
+          "type": "color"
+        },
+        "bg-complete": {
+          "value": "{modes.color.status.success.default}",
           "type": "color"
         },
         "bg-default": {
-          "value": "{modes.color.generic.bg.inverse.nought}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "alpha",
-                "value": "0.12",
-                "space": "lch"
-              }
-            }
-          }
+          "value": "{modes.color.generic.fg.nought}",
+          "type": "color"
+        },
+        "border-active-inner": {
+          "value": "{modes.color.generic.fg.nought}",
+          "type": "color"
+        },
+        "border-active-outer": {
+          "value": "{modes.color.interactive.monochrome.active}",
+          "type": "color"
         },
         "border-default": {
-          "value": "{modes.color.generic.fg.standard.soft}",
-          "type": "color"
-        },
-        "fg-ai": {
-          "value": "{modes.color.interactive.ai.standard.default}",
-          "type": "color",
-          "description": "For progress ring in ai buttons"
-        },
-        "fg-alt": {
-          "value": "{modes.color.status.success.standard.default}",
-          "type": "color"
-        },
-        "fg-alt2": {
-          "value": "{modes.color.generic.content.standard.firm}",
-          "type": "color"
-        },
-        "fg-caution": {
-          "value": "{modes.color.status.caution.standard.default}",
-          "type": "color"
-        },
-        "fg-default": {
-          "value": "{modes.color.generic.fg.inverse.nought}",
-          "type": "color"
-        },
-        "fg-error": {
-          "value": "{modes.color.status.negative.standard.default}",
-          "type": "color"
-        },
-        "fg-info": {
-          "value": "{modes.color.status.info.standard.default}",
+          "value": "{modes.color.generic.fg.soft}",
           "type": "color"
         },
         "label-alt": {
-          "value": "{modes.color.generic.content.standard.firm}",
+          "value": "{modes.color.generic.content.firm}",
           "type": "color"
         },
         "label-default": {
-          "value": "{modes.color.generic.content.standard.harsh}",
+          "value": "{modes.color.generic.content.harsh}",
+          "type": "color"
+        }
+      },
+      "stepindicator": {
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.active}",
           "type": "color"
         },
-        "datavis": {
-          "fg-default": {
-            "value": "{modes.color.status.generic.standard.default}",
-            "type": "color"
-          }
+        "bg-complete": {
+          "value": "{modes.color.status.success.default}",
+          "type": "color"
         },
-        "stepflow": {
-          "bg-active": {
-            "value": "{modes.color.generic.fg.inverse.nought}",
-            "type": "color"
-          },
-          "bg-complete": {
-            "value": "{modes.color.status.success.standard.default}",
-            "type": "color"
-          },
-          "bg-default": {
-            "value": "{modes.color.generic.fg.standard.nought}",
-            "type": "color"
-          },
-          "border-active-inner": {
-            "value": "{modes.color.generic.fg.standard.nought}",
-            "type": "color"
-          },
-          "border-active-outer": {
-            "value": "{modes.color.generic.fg.inverse.nought}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.generic.fg.standard.soft}",
-            "type": "color"
-          },
-          "label-alt": {
-            "value": "{modes.color.generic.content.standard.firm}",
-            "type": "color"
-          },
-          "label-default": {
-            "value": "{modes.color.generic.content.standard.harsh}",
-            "type": "color"
-          }
+        "border-active-outer": {
+          "value": "{modes.color.interactive.monochrome.active}",
+          "type": "color"
         },
-        "stepindicator": {
-          "bg-active": {
-            "value": "{modes.color.generic.fg.inverse.nought}",
-            "type": "color"
-          },
-          "bg-complete": {
-            "value": "{modes.color.status.success.standard.default}",
-            "type": "color"
-          },
-          "border-active-outer": {
-            "value": "{modes.color.generic.fg.inverse.nought}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.generic.fg.standard.soft}",
-            "type": "color"
-          },
-          "border-success": {
-            "value": "{modes.color.status.success.standard.default}",
-            "type": "color"
-          },
-          "label-active": {
-            "value": "{modes.color.generic.content.inverse.extreme}",
-            "type": "color"
-          },
-          "label-complete": {
-            "value": "{modes.color.generic.content.inverse.extreme}",
-            "type": "color"
-          },
-          "label-default": {
-            "value": "{modes.color.generic.content.standard.harsh}",
-            "type": "color"
-          }
+        "border-default": {
+          "value": "{modes.color.generic.fg.soft}",
+          "type": "color"
+        },
+        "border-success": {
+          "value": "{modes.color.status.success.default}",
+          "type": "color"
+        },
+        "label-active": {
+          "value": "modes.color.interactive.monochrome.standard.withActive",
+          "type": "color"
+        },
+        "label-complete": {
+          "value": "{modes.color.interactive.monochrome.withActive}",
+          "type": "color"
+        },
+        "label-default": {
+          "value": "{modes.color.generic.content.harsh}",
+          "type": "color"
         }
       }
     },
@@ -788,7 +738,7 @@
             "type": "typography"
           },
           "L": {
-            "value": "{global.typography.responsive.component.firm.S}",
+            "value": "{global.typography.responsive.component.firm.L}",
             "type": "typography"
           }
         },
@@ -802,7 +752,7 @@
             "type": "typography"
           },
           "L": {
-            "value": "{global.typography.responsive.component.moderate.S}",
+            "value": "{global.typography.responsive.component.moderate.L}",
             "type": "typography"
           }
         }
