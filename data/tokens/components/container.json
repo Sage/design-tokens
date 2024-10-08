@@ -1,336 +1,223 @@
 {
   "container": {
     "color": {
-      "inverse": {
-        "bg-alt": {
-          "value": "{modes.color.generic.bg.inverse.faint}",
-          "type": "color"
-        },
-        "bg-default": {
-          "value": "{modes.color.generic.bg.inverse.nought}",
-          "type": "color"
-        },
-        "border-alt": {
-          "value": "{modes.color.generic.fg.inverse.moderate}",
-          "type": "color"
-        },
-        "border-default": {
-          "value": "{modes.color.generic.fg.inverse.soft}",
-          "type": "color"
-        },
-        "text-alt": {
-          "value": "{modes.color.generic.content.inverse.moderate}",
-          "type": "color",
-          "description": "for subheadings etc"
-        },
-        "text-default": {
-          "value": "{modes.color.generic.content.inverse.extreme}",
-          "type": "color"
-        },
-        "scrollbar": {
-          "bg-default": {
-            "value": "{modes.color.generic.bg.standard.nought}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.12",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "fg-default": {
-            "value": "{modes.color.generic.fg.standard.moderate}",
-            "type": "color"
-          }
-        },
-        "interactive": {
-          "detailedicon": {
-            "bg": {
-              "value": "{modes.color.brandreference.custom2}",
-              "type": "color",
-              "description": " "
-            }
-          },
-          "bg-hover": {
-            "value": "{modes.color.interactive.monochrome.inverse.hoverAlt}",
-            "type": "color",
-            "description": "Used for accordion hover backgrounds "
-          },
-          "icon-enabled": {
-            "value": "{modes.color.interactive.monochrome.inverse.default}",
-            "type": "color",
-            "description": "Enabled chevron for any accordion."
-          },
-          "icon-hover": {
-            "value": "{modes.color.interactive.monochrome.inverse.default}",
-            "type": "color",
-            "description": "Hover chevron for any accordion."
-          },
-          "text-enabled": {
-            "value": "{modes.color.generic.content.inverse.harsh}",
-            "type": "color",
-            "description": "Enabled label for standard accordion."
-          },
-          "textAlt-enabled": {
-            "value": "{modes.color.generic.content.inverse.firm}",
-            "type": "color",
-            "description": "Enabled label for subtle accordion."
-          },
-          "text-hover": {
-            "value": "{modes.color.interactive.monochrome.inverse.default}",
-            "type": "color",
-            "description": "Hover label for any accordion."
-          },
-          "icon-active": {
-            "value": "{modes.color.interactive.monochrome.inverse.active}",
-            "type": "color",
-            "description": "Active chevron for any accordion."
-          },
-          "text-active": {
-            "value": "{modes.color.interactive.monochrome.inverse.active}",
-            "type": "color",
-            "description": "Active label for any accordion."
-          },
-          "bg-enabled": {
-            "value": "{modes.color.generic.bg.standard.nought}",
-            "type": "color"
-          },
-          "border-enabled": {
-            "value": "{modes.color.generic.fg.inverse.moderate}",
-            "type": "color"
-          }
-        }
-      },
       "standard": {
         "bg-alt": {
-          "value": "{modes.color.generic.bg.standard.faint}",
+          "value": "{modes.color.generic.bg.faint}",
           "type": "color"
         },
         "bg-default": {
-          "value": "{modes.color.generic.bg.standard.nought}",
+          "value": "{modes.color.generic.bg.nought}",
           "type": "color"
         },
         "bgFooter-default": {
-          "value": "{modes.color.generic.bg.standard.faint}",
+          "value": "{modes.color.generic.bg.faint}",
           "type": "color",
           "description": "tile footer bg color "
         },
         "border-active": {
-          "value": "{modes.color.interactive.monochrome.standard.active}",
+          "value": "{modes.color.interactive.monochrome.active}",
           "type": "color"
         },
         "border-alt": {
-          "value": "{modes.color.generic.fg.standard.soft}",
+          "value": "{modes.color.generic.fg.soft}",
           "type": "color"
         },
         "border-default": {
-          "value": "{modes.color.generic.fg.standard.delicate}",
+          "value": "{modes.color.generic.fg.faint}",
           "type": "color"
         },
         "dimmer": {
-          "value": "{modes.color.generic.bg.inverse.nought}",
+          "value": "{modes.color.interactive.inactive.mask}",
           "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "alpha",
-                "value": "0.4",
-                "space": "lch"
-              }
-            }
-          },
           "description": "dimmed mask for dialogs"
         },
         "icon": {
-          "value": "{modes.color.generic.fg.standard.moderate}",
+          "value": "{modes.color.generic.fg.moderate}",
           "type": "color",
           "description": "Link preview image thumbnail"
         },
         "text-alt": {
-          "value": "{modes.color.generic.content.standard.moderate}",
+          "value": "{modes.color.generic.content.moderate}",
           "type": "color",
           "description": "for subheadings etc"
         },
         "text-default": {
-          "value": "{modes.color.generic.content.standard.harsh}",
+          "value": "{modes.color.generic.content.harsh}",
           "type": "color",
           "description": "for headings, paragraph text etc "
+        }
+      },
+      "AI": {
+        "borderhorizontal": {
+          "value": "{modes.color.status.ai.default-horizontal}",
+          "type": "color",
+          "description": "top and bottom border for AI dialog component"
         },
-        "AI": {
-          "borderhorizontal": {
-            "value": "{modes.color.status.ai.standard.default-horizontal}",
-            "type": "color",
-            "description": "top and bottom border for AI dialog component"
-          },
-          "bordervertical": {
-            "value": "{modes.color.status.ai.standard.default-vertical}",
-            "type": "color",
-            "description": "left and right border for dialog and insight bubbles."
-          }
+        "bordervertical": {
+          "value": "{modes.color.status.ai.default-vertical}",
+          "type": "color",
+          "description": "left and right border for dialog and insight bubbles."
         },
-        "scrollbar": {
-          "bg-default": {
-            "value": "{modes.color.generic.bg.standard.nought}",
+        "nudge": {
+          "borderAi-horizontal": {
+            "value": "{modes.color.status.ai.default-horizontal}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.12",
-                  "space": "lch"
-                }
-              }
-            }
+            "description": "top and bottom border for AI nudge message component"
           },
-          "fg-default": {
-            "value": "{modes.color.generic.fg.standard.moderate}",
-            "type": "color"
-          }
-        },
-        "interactive": {
-          "detailedicon": {
-            "bg": {
-              "value": "{modes.color.brandreference.custom1}",
-              "type": "color",
-              "description": " "
-            }
-          },
-          "bgFooter-activated": {
-            "value": "{modes.color.status.success.standard.default}",
+          "borderAi-vertical": {
+            "value": "{modes.color.status.ai.default-vertical}",
             "type": "color",
-            "description": " "
-          },
-          "bgFooter-active": {
-            "value": "{modes.color.interactive.monochrome.standard.active}",
-            "type": "color"
-          },
-          "border-activated": {
-            "value": "{modes.color.status.success.standard.default}",
-            "type": "color"
-          },
-          "bgFooter-default": {
-            "value": "{modes.color.generic.bg.standard.nought}",
-            "type": "color",
-            "description": "tile footer bg color "
-          },
-          "bg-enabled": {
-            "value": "{modes.color.generic.bg.standard.nought}",
-            "type": "color"
-          },
-          "bg-disabled": {
-            "value": "{modes.color.interactive.inactive.standard.defaultAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.interactive.monochrome.standard.hoverAlt}",
-            "type": "color",
-            "description": "Used for accordion hover backgrounds "
-          },
-          "border-active": {
-            "value": "{modes.color.interactive.monochrome.standard.active}",
-            "type": "color"
-          },
-          "border-alt": {
-            "value": "{modes.color.generic.fg.standard.delicate}",
-            "type": "color",
-            "description": "Link preview. "
-          },
-          "borderalt-hover": {
-            "value": "{container.color.standard.interactive.border-alt}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{modes.color.modifiers.button.hover}",
-                  "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore} "
-                }
-              }
-            },
-            "description": "For hover border on Link preview."
-          },
-          "border-inactive": {
-            "value": "{modes.color.generic.fg.standard.soft}",
-            "type": "color"
-          },
-          "border-enabled": {
-            "value": "{modes.color.generic.fg.standard.moderate}",
-            "type": "color"
-          },
-          "icon-active": {
-            "value": "{modes.color.interactive.monochrome.standard.active}",
-            "type": "color",
-            "description": "Active chevron for any accordion."
-          },
-          "icon-enabled": {
-            "value": "{modes.color.interactive.monochrome.standard.default}",
-            "type": "color",
-            "description": "Enabled chevron for any accordion."
-          },
-          "iconAlt-enabled": {
-            "value": "{modes.color.interactive.monochrome.standard.defaultAlt}",
-            "type": "color",
-            "description": "Enabled label for subtle accordion."
-          },
-          "icon-hover": {
-            "value": "{modes.color.interactive.monochrome.standard.default}",
-            "type": "color",
-            "description": "Hover chevron for any accordion."
-          },
-          "labelFooter-active": {
-            "value": "{modes.color.interactive.monochrome.standard.withActive}",
-            "type": "color"
-          },
-          "labelFooter-activated": {
-            "value": "{modes.color.interactive.monochrome.standard.withActive}",
-            "type": "color"
-          },
-          "text-active": {
-            "value": "{modes.color.interactive.monochrome.standard.active}",
-            "type": "color",
-            "description": "Active label for any accordion."
-          },
-          "text-disabled": {
-            "value": "{modes.color.interactive.inactive.standard.content}",
-            "type": "color"
-          },
-          "text-enabled": {
-            "value": "{modes.color.generic.content.standard.harsh}",
-            "type": "color",
-            "description": "Enabled label for standard accordion."
-          },
-          "textAlt-enabled": {
-            "value": "{modes.color.generic.content.standard.moderate}",
-            "type": "color",
-            "description": "Enabled label for subtle accordion."
-          },
-          "text-hover": {
-            "value": "{modes.color.interactive.monochrome.standard.default}",
-            "type": "color",
-            "description": "Hover label for any accordion."
+            "description": "left and right border for AI nudge message component"
           }
         }
       },
-      "blockquote": {
-        "standard": {
-          "border": {
-            "value": "{modes.color.interactive.primary.standard.default}",
-            "type": "color"
+      "scrollbar": {
+        "bg-default": {
+          "value": "{modes.color.generic.bg.faint}",
+          "type": "color"
+        },
+        "fg-default": {
+          "value": "{modes.color.generic.fg.moderate}",
+          "type": "color"
+        }
+      },
+      "interactive": {
+        "detailedicon": {
+          "bg": {
+            "value": "{modes.color.brandreference.custom1}",
+            "type": "color",
+            "description": "\n"
           }
         },
-        "inverse": {
-          "border": {
-            "value": "{modes.color.interactive.primary.inverse.default}",
-            "type": "color"
-          }
+        "bgFooter-activated": {
+          "value": "{modes.color.status.success.default}",
+          "type": "color",
+          "description": "\n"
+        },
+        "bgFooter-active": {
+          "value": "{modes.color.interactive.monochrome.active}",
+          "type": "color"
+        },
+        "border-activated": {
+          "value": "{modes.color.status.success.default}",
+          "type": "color"
+        },
+        "bgFooter-default": {
+          "value": "{modes.color.generic.bg.nought}",
+          "type": "color",
+          "description": "tile footer bg color\n"
+        },
+        "bg-enabled": {
+          "value": "{modes.color.generic.bg.nought}",
+          "type": "color"
+        },
+        "bg-disabled": {
+          "value": "{modes.color.interactive.inactive.defaultAlt}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.interactive.monochrome.hoverAlt}",
+          "type": "color",
+          "description": "Used for accordion hover backgrounds\n"
+        },
+        "border-active": {
+          "value": "{modes.color.interactive.monochrome.active}",
+          "type": "color"
+        },
+        "border-alt": {
+          "value": "{modes.color.generic.fg.delicate}",
+          "type": "color",
+          "description": "Link preview.\n"
+        },
+        "borderalt-hover": {
+          "value": "{container.color.interactive.border-alt}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{modes.color.modifiers.button.hover}",
+                "space": "lch",
+                "color": "{modes.color.modifier.contrastMore} "
+              }
+            }
+          },
+          "description": "For hover border on Link preview."
+        },
+        "border-inactive": {
+          "value": "{modes.color.generic.fg.soft}",
+          "type": "color"
+        },
+        "border-enabled": {
+          "value": "{modes.color.generic.fg.moderate}",
+          "type": "color"
+        },
+        "icon-active": {
+          "value": "{modes.color.interactive.monochrome.active}",
+          "type": "color",
+          "description": "Active chevron for any accordion."
+        },
+        "icon-enabled": {
+          "value": "{modes.color.interactive.monochrome.default}",
+          "type": "color",
+          "description": "Enabled chevron for any accordion."
+        },
+        "iconAlt-enabled": {
+          "value": "{modes.color.interactive.monochrome.defaultAlt}",
+          "type": "color",
+          "description": "Enabled label for subtle accordion."
+        },
+        "icon-hover": {
+          "value": "{modes.color.interactive.monochrome.default}",
+          "type": "color",
+          "description": "Hover chevron for any accordion."
+        },
+        "labelFooter-active": {
+          "value": "{modes.color.interactive.monochrome.withActive}",
+          "type": "color"
+        },
+        "labelFooter-activated": {
+          "value": "{modes.color.interactive.monochrome.withActive}",
+          "type": "color"
+        },
+        "text-active": {
+          "value": "{modes.color.interactive.monochrome.active}",
+          "type": "color",
+          "description": "Active label for any accordion."
+        },
+        "text-disabled": {
+          "value": "{modes.color.interactive.inactive.content}",
+          "type": "color"
+        },
+        "text-enabled": {
+          "value": "{modes.color.generic.content.harsh}",
+          "type": "color",
+          "description": "Enabled label for standard accordion."
+        },
+        "textAlt-enabled": {
+          "value": "{modes.color.generic.content.moderate}",
+          "type": "color",
+          "description": "Enabled label for subtle accordion."
+        },
+        "text-hover": {
+          "value": "{modes.color.interactive.monochrome.default}",
+          "type": "color",
+          "description": "Hover label for any accordion."
+        }
+      },
+      "blockquote": {
+        "border": {
+          "value": "{modes.color.interactive.primary.default}",
+          "type": "color"
         }
       }
     },
     "size": {
+      "none": {
+        "value": "{global.size.none}",
+        "type": "sizing"
+      },
       "accordionstandard": {
         "chevron": {
           "value": "{global.size.icon.M}",
@@ -721,9 +608,13 @@
         },
         "sweeping": {
           "value": "{global.radius.container.XXL}",
-          "type": "borderRadius",
-          "description": "Tile largest roundedness "
+          "type": "borderRadius"
         }
+      },
+      "nudge": {
+        "value": "{global.radius.container.L}",
+        "type": "borderRadius",
+        "description": "nudge radius"
       }
     },
     "space": {
@@ -1434,6 +1325,58 @@
             }
           }
         }
+      },
+      "nudge": {
+        "x": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Left and right padding on medium nudge"
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "left and right padding on large nudge "
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing",
+            "description": "Top and bottom padding on medium nudge"
+          },
+          "L": {
+            "value": "{global.space.macro.L}",
+            "type": "spacing",
+            "description": "Top and bottom paddding on large nudge"
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between message elements"
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Gap between message elements"
+          }
+        },
+        "header": {
+          "xg": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "gap between header and ai logo"
+            },
+            "L": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "gap between header and ai logo"
+            }
+          }
+        }
       }
     },
     "boxshadow": {
@@ -1483,6 +1426,11 @@
         "value": "{global.boxshadow.container.sticky-footer}",
         "type": "boxShadow",
         "description": "Sticky footer in Dialog, Drawer, Sidebar."
+      },
+      "nudge": {
+        "value": "{global.boxshadow.container.far}",
+        "type": "boxShadow",
+        "description": "nudge shadow"
       }
     },
     "borderwidth": {
@@ -1610,6 +1558,11 @@
           "type": "borderWidth",
           "description": "Tile select (enabled tile)"
         }
+      },
+      "nudge": {
+        "value": "{global.borderwidth.XL}",
+        "type": "borderWidth",
+        "description": "nudge AI message borders\n"
       }
     },
     "opacity": {
@@ -1618,6 +1571,13 @@
           "value": "{modes.color.modifiers.input.disabledFg}",
           "type": "opacity",
           "description": "opacity applied to next and previous carousel slides"
+        }
+      },
+      "dialog": {
+        "dimmer": {
+          "value": "0.4",
+          "type": "opacity",
+          "description": "dimmer opacity value"
         }
       }
     },
@@ -1701,7 +1661,7 @@
             "type": "typography"
           },
           "L": {
-            "value": "{global.typography.responsive.component.firm.S}",
+            "value": "{global.typography.responsive.component.firm.L}",
             "type": "typography"
           }
         },
@@ -1715,7 +1675,7 @@
             "type": "typography"
           },
           "L": {
-            "value": "{global.typography.responsive.component.moderate.S}",
+            "value": "{global.typography.responsive.component.moderate.L}",
             "type": "typography"
           }
         }
