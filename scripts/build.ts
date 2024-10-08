@@ -145,7 +145,14 @@ const getGlobalConfig = ({contextName, sizeName}: IConfig) => {
           ...getFiles({componentName: 'global', format: 'ios/macros', subType, suffix: 'h'})
         ]
       }
-    }
+    },
+    log: {
+      warnings: 'warn',
+      verbosity: 'verbose',
+      errors: {
+        brokenReferences: 'throw',
+      },
+    },
   }
 }
 
@@ -208,7 +215,14 @@ const getModeConfig = ({contextName, modeName, sizeName}: IConfig) => {
           ...getMode({modeName, format: 'ios/macros', subType, suffix: 'h'})
         ]
       }
-    }
+    },
+    log: {
+      warnings: 'warn',
+      verbosity: 'verbose',
+      errors: {
+        brokenReferences: 'throw',
+      },
+    },
   }
 }
 
