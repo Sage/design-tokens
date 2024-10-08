@@ -80,7 +80,7 @@ const getFiles = ({componentName, modeName = '', format, subType, suffix, output
       filter: (token: DesignToken) => FilterComponent(token, componentName),
       format,
       options: {
-        outputRefs
+        outputReferences: outputRefs
       }
     }
   ]
