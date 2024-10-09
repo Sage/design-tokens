@@ -27,8 +27,6 @@
     "postbuild": "npx tsx ./scripts/postbuild",
     "post-process-css": "npx tsx ./scripts/post-process-css",
     "prepublishOnly": "npx tsx ./scripts/bump-main-package-version",
-    "lint": "eslint .",
-    "format": "eslint --fix .",
     "stylelint:dist": "npx stylelint 'dist/**/*.{css,scss}' --report-needless-disables --report-descriptionless-disables --report-invalid-scope-disables"
   },
   "devDependencies": {
