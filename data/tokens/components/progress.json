@@ -207,6 +207,35 @@
           "type": "color"
         }
       },
+      "loader": {
+        "bg-default": {
+          "value": "{modes.color.interactive.progress.bg}",
+          "type": "color"
+        },
+        "bg-alt": {
+          "value": "{modes.color.interactive.progress.bgAlt}",
+          "type": "color",
+          "description": "used for inverse loader bgs"
+        },
+        "fg-default": {
+          "value": "{modes.color.interactive.monochrome.active}",
+          "type": "color",
+          "description": "used for loader standard loader spinner"
+        },
+        "fg-alt": {
+          "value": "{modes.color.interactive.monochrome.withActive}",
+          "type": "color",
+          "description": "used on inverse loading spinner"
+        },
+        "fg-error": {
+          "value": "{modes.color.status.negative.default}",
+          "type": "color"
+        },
+        "fg-complete": {
+          "value": "{modes.color.status.success.default}",
+          "type": "color"
+        }
+      },
       "stepflow": {
         "bg-active": {
           "value": "{modes.color.interactive.monochrome.active}",

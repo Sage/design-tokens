@@ -15,15 +15,10 @@
         }
       },
       "brandreference": {
-        "custom1": {
-          "value": "{primitives.colors.emerald}",
-          "type": "color",
-          "description": "This is the color to replace in white label products. \nEnsure luminousity of custom color = 46.8 (see hsluv.org). \nAAA against FFFFFF bg."
-        },
-        "custom2": {
+        "custombrand": {
           "value": "{primitives.colors.brilliantGreen}",
           "type": "color",
-          "description": "This is the color to replace in white label products. Ensure luminousity of custom color is >=52.1 (see hsluv.org) to be AAA text on 000000 bgs."
+          "description": "This is the color to replace in white label products. Dark mode recommended luminosity is 75.1 (tested), but above 52.1 may be ok. See hsluv.org) to be AAA text on 000000 bgs."
         }
       },
       "generic": {
@@ -720,7 +715,7 @@
             }
           },
           "default": {
-            "value": "{modes.color.brandreference.custom2}",
+            "value": "{modes.color.brandreference.custombrand}",
             "type": "color"
           },
           "defaultAlt": {
@@ -795,7 +790,7 @@
               }
             },
             "default": {
-              "value": "{modes.color.brandreference.custom2}",
+              "value": "{modes.color.brandreference.custombrand}",
               "type": "color"
             },
             "hover": {
@@ -822,7 +817,20 @@
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "0.04",
+                  "value": "0.08",
+                  "space": "lch"
+                }
+              }
+            }
+          },
+          "bgAlt": {
+            "value": "{primitives.colors.black}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.08",
                   "space": "lch"
                 }
               }
