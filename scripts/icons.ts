@@ -2,32 +2,75 @@
 Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
 
-const Figma = require('figma-js')
-const fetch = require('node-fetch')
-const {
-  outputFile,
-  outputJson,
-  removeSync,
-  ensureDir
-} = require('fs-extra')
-const { generateFonts } = require('fantasticon')
-const {
+import Figma from 'figma-js'
+import fetch from 'node-fetch'
+import fs from 'fs-extra'
+import { FontAssetType, generateFonts } from 'fantasticon'
+import {
   join,
   relative,
   resolve,
   sep,
   posix
-} = require('path')
-const kebabCase = require('lodash/kebabCase')
-const pick = require('lodash/pick')
+} from 'path'
+import kebabCase from 'lodash/kebabCase.js'
+import pick from 'lodash/pick.js'
 
-const uniqueValues = require('./utils/unique-values')
-const collect = require('./utils/collect')
+import { UniqueValues } from './utils/unique-values.js'
+import { Collect } from './utils/collect.js'
 
-require('dotenv').config()
+interface IConfig {
+  personalAccessToken: string | undefined
+  fileId: string | undefined
+  pages: string[]
+  multipleSets: boolean
+  distDir: string
+  svgDir: string
+  fontsDir: string
+  dataDir: string
+  fontName: string
+  formats: FontAssetType[]
+  mainTemplate: string
+  docsDir: string
+  docsPartials: string
+  meta: IMeta
+}
 
-const getDataFromDescription = (description) => {
-  const output = {}
+interface IMeta {
+  description: string
+  url: string
+  copyright: string
+  version: string
+}
+
+export interface IIcon {
+  url: string | undefined
+  unicode?: string
+  description?: string
+  key?: string
+  name?: string
+  id: any
+  path?: string
+  set: string | undefined
+  svg?: string
+}
+
+export interface IGlyphData {
+  name: string | undefined
+  path?: string
+  codepoint?: number
+  glyph?: string
+  unicode?: string
+  url?: string | undefined
+  description?: string
+  key?: string
+  id?: any
+  set?: string | undefined
+  svg?: string
+}
+
+const getDataFromDescription = (description: string) => {
+  const output: { unicode?: string, description?:string } = {}
   const unicodeMatch = description.match(/code: ?([a-zA-Z0-9]{4})\s?/)
 
   if (unicodeMatch && unicodeMatch[1]) {
@@ -38,7 +81,14 @@ const getDataFromDescription = (description) => {
   return output
 }
 
-async function getIconsArray (config) {
+async function getIconsArray (config: IConfig): Promise<IIcon[]> {
+
+  if (!config.fileId || !config.personalAccessToken) {
+    throw new Error(
+      `'FIGMA_ACCESS_TOKEN or FIGMA_FILE_ID not defined.\r\n'`
+    );
+  }
+
   console.log(`Fetching icon components information from Figma file ${config.fileId}...`)
   const client = Figma.Client({ personalAccessToken: config.personalAccessToken })
 
@@ -52,21 +102,25 @@ async function getIconsArray (config) {
     if (config.pages && config.pages.length > 0) {
       canvases = canvases.filter(node => config.pages.includes(node.name))
     }
-    const verifyFn = (node) => componentIds.includes(node?.id)
+    const verifyFn = (node: Figma.Node) => componentIds.includes(node?.id)
 
-    const groupedComponents = Object.fromEntries(canvases.map(canvas => [canvas.name, collect(canvas, verifyFn).map(node => node.id)]))
+    const groupedComponents = Object.fromEntries(canvases.map(canvas => [canvas.name, Collect({object: canvas, callback: verifyFn}).map(node => node.id)]))
 
     return Object.entries(groupedComponents)
       .map(([set, ids]) => ids.map(id => {
         const currentComponent = components[id]
-        const output = {
-          id,
-          ...currentComponent,
-          ...getDataFromDescription(currentComponent.description)
+
+        if (!currentComponent) {
+          throw new Error(
+            `Component ${id} is undefined`
+          );
         }
 
-        if (config.multipleSets) {
-          output.set = set
+        const output = {
+          id,
+          set: config.multipleSets ? set : undefined,
+          ...currentComponent,
+          ...getDataFromDescription(currentComponent.description)
         }
 
         return output
@@ -84,10 +138,17 @@ async function getIconsArray (config) {
   })))
 }
 
-async function fetchIconData (iconsList) {
+async function fetchIconData (iconsList: IIcon[]) {
   console.log('Fetching icons svg data...')
   return await Promise.all(
     iconsList.map(async (icon) => {
+
+      if (!icon.url) {
+        throw new Error(
+          `Icon ${icon.name} has undefined url`
+        );
+      }
+
       return {
         ...icon,
         svg: await fetch(icon.url).then(response => {
@@ -102,7 +163,7 @@ async function fetchIconData (iconsList) {
   })
 }
 
-async function writeIconsToSvg (iconsList, config) {
+async function writeIconsToSvg (iconsList: IIcon[], config: IConfig) {
   console.log('Writing svg icons data to files...')
   return await Promise.all(
     iconsList.map(async (icon) => {
@@ -110,7 +171,13 @@ async function writeIconsToSvg (iconsList, config) {
         ? join(config.svgDir, kebabCase(icon.set), `${kebabCase(icon.name)}.svg`)
         : join(config.svgDir, `${kebabCase(icon.name)}.svg`)
 
-      return await outputFile(filePath, icon.svg).then(() => {
+        if (!icon.svg) {
+          throw new Error(
+            `Icon ${icon.name} has undefined svg`
+          );
+        }
+
+      return await fs.outputFile(filePath, icon.svg).then(() => {
         console.log(`  - ${icon.name} written to ${filePath}`)
         return {
           ...icon,
@@ -124,19 +191,26 @@ async function writeIconsToSvg (iconsList, config) {
   })
 }
 
-async function createWebFonts (iconsList, config) {
+async function createWebFonts (iconsList: IIcon[], config: IConfig) {
   console.log('Writing font files...')
   console.log(`  Using formats: ${config.formats.join(', ')} \r\n`)
 
-  const sets = config.multipleSets ? uniqueValues(iconsList, item => item.set) : ['']
+  const sets = config.multipleSets ? UniqueValues({array: iconsList, mapFn: item => item.set}) : ['']
   return await Promise.all(sets.map(async (set) => {
     const icons = config.multipleSets ? iconsList.filter(icon => icon.set === set) : iconsList
     const name = config.multipleSets ? `${config.fontName}-${set}` : config.fontName
     const inputDir = config.multipleSets ? resolve('.', config.svgDir, kebabCase(set)) : resolve('.', config.svgDir)
     const outputDir = resolve('.', config.fontsDir)
-    const codepoints = Object.fromEntries(icons.filter(icon => !!icon.unicode).map(icon => [kebabCase(icon.name), parseInt(icon.unicode, 16)]))
+    const codepoints = Object.fromEntries(icons.filter(icon => !!icon.unicode).map(icon => {
+      if (!icon.unicode) {
+        throw new Error(
+          `Unicode is undefined for icon ${icon.name}`
+        );
+      }
+      return [kebabCase(icon.name), parseInt(icon.unicode, 16)]
+    }))
 
-    await ensureDir(outputDir)
+    await fs.ensureDir(outputDir)
 
     return generateFonts({
       name,
@@ -157,6 +231,18 @@ async function createWebFonts (iconsList, config) {
       return icons.map(icon => {
         const codepoint = codepoints[kebabCase(icon.name)]
 
+        if (!codepoint) {
+          throw new Error(
+            `Codepoint is undefined for icon ${icon.name}`
+          );
+        }
+
+        if (!icon.path) {
+          throw new Error(
+            `Path is undefined for icon ${icon.name}`
+          );
+        }
+
         return {
           ...icon,
           path: relative(config.distDir, icon.path).split(sep).join(posix.sep),
@@ -172,17 +258,17 @@ async function createWebFonts (iconsList, config) {
   })
 }
 
-async function writeGlyphsData (glyphsData, config) {
+async function writeGlyphsData (glyphsData: IGlyphData[], config: IConfig) {
   console.log('Writing glyph data...')
   const glyphsDataFilePath = resolve(config.dataDir, 'glyphs.json')
   if (config.multipleSets) {
-    const sets = uniqueValues(glyphsData, item => item.set)
+    const sets = UniqueValues({array: glyphsData, mapFn: item => item.set})
     console.log(`  Writing data for ${glyphsData.length} icons in ${sets.length} sets`)
   } else {
     console.log(`  Writing data for ${glyphsData.length} icons in 1 set`)
   }
 
-  await outputJson(glyphsDataFilePath, glyphsData, { spaces: 2 }).then(() => {
+  await fs.outputJson(glyphsDataFilePath, glyphsData, { spaces: 2 }).then(() => {
     console.log(`  - glyphs data in file: ${glyphsDataFilePath}`)
     console.log('Done.\r\n')
   })
@@ -214,16 +300,16 @@ async function writeGlyphsData (glyphsData, config) {
  * @param {IconsConfig} config - config for icons generator
  * @returns {Promise<void>}
  */
-(async (config) => {
+export const Icons = async (config: IConfig) => {
   if (!config.fileId || !config.personalAccessToken) {
     console.error('Icons will not be generated, since token and figma file id were not found.')
     console.error('Please provide FIGMA_ACCESS_TOKEN and FIGMA_FILE_ID env variables or in .env file.\r\n')
     return
   }
 
-  removeSync(config.svgDir)
-  removeSync(config.dataDir)
-  removeSync(config.fontsDir)
+  fs.removeSync(config.svgDir)
+  fs.removeSync(config.dataDir)
+  fs.removeSync(config.fontsDir)
 
   const iconsList = await getIconsArray(config)
   const iconsData = await fetchIconData(iconsList)
@@ -238,25 +324,5 @@ async function writeGlyphsData (glyphsData, config) {
     }))
 
   await writeGlyphsData(formattedGlyphsData, config)
-  // createDocs(formattedGlyphsData, config)
-})({
-  personalAccessToken: process.env.FIGMA_ACCESS_TOKEN,
-  fileId: process.env.FIGMA_FILE_ID,
-  pages: ['Icons'],
-  multipleSets: false,
-  distDir: './dist',
-  svgDir: './dist/assets/icons/svg',
-  fontsDir: './dist/assets/icons/fonts',
-  dataDir: './dist/assets/icons/data',
-  fontName: 'sage-icons',
-  formats: ['svg', 'woff', 'woff2', 'ttf', 'eot'],
-  mainTemplate: './templates/layout.hbs',
-  docsDir: './dist/docs/icons/',
-  docsPartials: './templates/partials/**/*.hbs',
-  meta: {
-    description: 'Sage Icon Font',
-    url: 'http://sage.com',
-    copyright: 'Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved.',
-    version: '1.0'
-  }
-})
+
+}

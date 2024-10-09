@@ -1,6 +1,6 @@
 import { expect } from "chai";
-import { CssParser } from "./css-parser";
-import { CssProperty } from "./css-parser.types";
+import { CssParser } from "./css-parser.js";
+import { CssProperty } from "./css-parser.types.js";
 
 describe("CssParser", () => {
   const cssParser = new CssParser();

@@ -20,16 +20,6 @@ jobs:
       - name: Install
         run: yarn install --frozen-lockfile
 
-      # Install your linters here
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          eslint: true
-          auto_fix: true
-          git_name: github-actions[bot]
-          git_email: github-actions[bot]@users.noreply.github.com
-
       - name: Build project
         run: npm run build
 

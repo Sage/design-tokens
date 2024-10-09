@@ -1,5 +1,5 @@
-import { type CssProperty } from "./css-parser.types";
-import { findDuplicates } from "../helpers";
+import { type CssProperty } from "./css-parser.types.js";
+import { findDuplicates } from "../helpers.js";
 
 export class CssParser {
   public parseRootVariables(cssContent: string): CssProperty[] {

@@ -1,6 +1,6 @@
-import { CssProperty } from "./css-parser/css-parser.types";
-import { findDuplicates } from "./helpers";
-import { ScreenSizeTokens } from "./screen-size-tokens";
+import { CssProperty } from "./css-parser/css-parser.types.js";
+import { findDuplicates } from "./helpers.js";
+import { ScreenSizeTokens } from "./screen-size-tokens.js";
 
 export class BrandTokens {
   public screenSizes: ScreenSizeTokens[];

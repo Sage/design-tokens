@@ -1,6 +1,6 @@
-import { BrandTokens } from "../../brand-tokens";
-import { CssProperty } from "../../css-parser/css-parser.types";
-import { Decorator } from "../decorator";
+import { BrandTokens } from "../../brand-tokens.js";
+import { CssProperty } from "../../css-parser/css-parser.types.js";
+import { Decorator } from "../decorator.js";
 
 interface ListObject {
   name: string;

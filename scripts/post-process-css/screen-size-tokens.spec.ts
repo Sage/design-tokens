@@ -1,6 +1,6 @@
 import { expect } from "chai";
-import { ScreenSizeTokens } from "./screen-size-tokens";
-import { CssProperty } from "./css-parser/css-parser.types";
+import { ScreenSizeTokens } from "./screen-size-tokens.js";
+import { CssProperty } from "./css-parser/css-parser.types.js";
 
 describe("ScreenSizeTokens", () => {
   describe("constructor", () => {

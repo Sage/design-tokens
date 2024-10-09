@@ -1,8 +1,8 @@
 /*
 Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
-const { resolve } = require('path')
-const { readJsonSync, outputJsonSync } = require('fs-extra')
+import { resolve } from 'path'
+import { readJsonSync, outputJsonSync } from 'fs-extra'
 
 console.log('Bumping version in main package.json file...')
 try {

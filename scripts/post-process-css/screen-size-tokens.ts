@@ -1,4 +1,4 @@
-import { CssProperty } from "./css-parser/css-parser.types";
+import { CssProperty } from "./css-parser/css-parser.types.js";
 
 export class ScreenSizeTokens {
   public static readonly breakpointToken = "--global-size-breakpoint-min-width";

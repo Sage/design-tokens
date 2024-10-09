@@ -1,4 +1,4 @@
-import { BrandTokens } from "../brand-tokens";
+import { BrandTokens } from "../brand-tokens.js";
 
 export interface Component {
   formatTokens(contents: BrandTokens): BrandTokens;

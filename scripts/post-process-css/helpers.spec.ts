@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { findDuplicates, getSymetricalDifference } from "./helpers";
+import { findDuplicates, getSymetricalDifference } from "./helpers.js";
 
 describe("helpers", () => {
   describe("findDuplicates", () => {
