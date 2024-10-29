@@ -28,9 +28,33 @@
           "type": "color"
         },
         "copilot": {
-          "default": {
-            "value": "linear-gradient(191deg, #9D60FF 28.12%, #7C78F8 33.5%, #29B7E6 46.96%, #00D6DE 52.34%, #00D6DA 55.03%, #00D6D0 56.83%, #00D6C0 57.73%, #00D6A8 59.52%, #00D68A 60.42%, #00D665 62.21%, #00D639 63.11%)",
-            "type": "color"
+          "noBg": {
+            "S": {
+              "value": "{primitives.colors.black}",
+              "type": "color"
+            },
+            "star": {
+              "value": "{primitives.colors.black}",
+              "type": "color"
+            },
+            "mono": {
+              "value": "{primitives.colors.white}",
+              "type": "color"
+            }
+          },
+          "withBg": {
+            "S": {
+              "value": "linear-gradient(191deg, #9D60FF 28.12%, #7C78F8 33.5%, #29B7E6 46.96%, #00D6DE 52.34%, #00D6DA 55.03%, #00D6D0 56.83%, #00D6C0 57.73%, #00D6A8 59.52%, #00D68A 60.42%, #00D665 62.21%, #00D639 63.11%)",
+              "type": "color"
+            },
+            "star": {
+              "value": "linear-gradient(191deg, #9D60FF 28.12%, #7C78F8 33.5%, #29B7E6 46.96%, #00D6DE 52.34%, #00D6DA 55.03%, #00D6D0 56.83%, #00D6C0 57.73%, #00D6A8 59.52%, #00D68A 60.42%, #00D665 62.21%, #00D639 63.11%)",
+              "type": "color"
+            },
+            "bg": {
+              "value": "{primitives.colors.white}",
+              "type": "color"
+            }
           }
         }
       },
