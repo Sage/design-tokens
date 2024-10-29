@@ -18,7 +18,7 @@
           "type": "color",
           "description": "filled"
         },
-        "bg-alt": {
+        "outline": {
           "value": "{modes.color.generic.content.extreme}",
           "type": "color"
         }
@@ -26,46 +26,47 @@
       "copilot": {
         "noBg": {
           "bg-S": {
-            "value": "{primitives.colors.black}",
+            "value": "{modes.color.brand.copilot.noBg.S}",
             "type": "color"
           },
           "bg-star": {
-            "value": "{primitives.colors.black}",
+            "value": "{modes.color.brand.copilot.noBg.star}",
             "type": "color"
           },
           "fg-default": {
-            "value": "{primitives.colors.white}",
+            "value": "{modes.color.brand.copilot.noBg.mono}",
             "type": "color"
           }
         },
         "withBg": {
           "bg-S": {
-            "value": "linear-gradient(191deg, #9D60FF 28.12%, #7C78F8 33.5%, #29B7E6 46.96%, #00D6DE 52.34%, #00D6DA 55.03%, #00D6D0 56.83%, #00D6C0 57.73%, #00D6A8 59.52%, #00D68A 60.42%, #00D665 62.21%, #00D639 63.11%)",
+            "value": "{modes.color.brand.copilot.withBg.S}",
             "type": "color"
           },
           "bg-star": {
-            "value": "linear-gradient(191deg, #9D60FF 28.12%, #7C78F8 33.5%, #29B7E6 46.96%, #00D6DE 52.34%, #00D6DA 55.03%, #00D6D0 56.83%, #00D6C0 57.73%, #00D6A8 59.52%, #00D68A 60.42%, #00D665 62.21%, #00D639 63.11%)",
+            "value": "{modes.color.brand.copilot.withBg.star}",
             "type": "color"
           },
           "bg-default": {
-            "value": "{primitives.colors.white}",
+            "value": "{modes.color.brand.copilot.withBg.bg}",
             "type": "color"
           }
         }
       },
-      "AIstar": {
-        "bg-Star": {
-          "value": "{modes.color.brand.default}",
+      "AIIdentifier": {
+        "bg-star": {
+          "value": "{modes.color.brand.copilot.AIIdentifier.default}",
           "type": "color",
-          "description": "sage logo"
+          "description": "star bg color"
         },
         "bg-dot": {
-          "value": "{modes.color.brand.defaultAlt}",
+          "value": "{modes.color.brand.copilot.AIIdentifier.withDefault}",
           "type": "color"
         },
-        "fg": {
-          "value": "{modes.color.brand.defaultAlt}",
-          "type": "color"
+        "outline": {
+          "value": "{modes.color.brand.copilot.AIIdentifier.default}",
+          "type": "color",
+          "description": "star outline variant"
         }
       }
     },
