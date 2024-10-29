@@ -24,12 +24,46 @@
         }
       },
       "copilot": {
-        "bg-default": {
+        "noBg": {
+          "bg-S": {
+            "value": "{primitives.colors.black}",
+            "type": "color"
+          },
+          "bg-star": {
+            "value": "{primitives.colors.black}",
+            "type": "color"
+          },
+          "fg-default": {
+            "value": "{primitives.colors.white}",
+            "type": "color"
+          }
+        },
+        "withBg": {
+          "bg-S": {
+            "value": "linear-gradient(191deg, #9D60FF 28.12%, #7C78F8 33.5%, #29B7E6 46.96%, #00D6DE 52.34%, #00D6DA 55.03%, #00D6D0 56.83%, #00D6C0 57.73%, #00D6A8 59.52%, #00D68A 60.42%, #00D665 62.21%, #00D639 63.11%)",
+            "type": "color"
+          },
+          "bg-star": {
+            "value": "linear-gradient(191deg, #9D60FF 28.12%, #7C78F8 33.5%, #29B7E6 46.96%, #00D6DE 52.34%, #00D6DA 55.03%, #00D6D0 56.83%, #00D6C0 57.73%, #00D6A8 59.52%, #00D68A 60.42%, #00D665 62.21%, #00D639 63.11%)",
+            "type": "color"
+          },
+          "bg-default": {
+            "value": "{primitives.colors.white}",
+            "type": "color"
+          }
+        }
+      },
+      "AIstar": {
+        "bg-Star": {
           "value": "{modes.color.brand.default}",
           "type": "color",
           "description": "sage logo"
         },
-        "bg-alt": {
+        "bg-dot": {
+          "value": "{modes.color.brand.defaultAlt}",
+          "type": "color"
+        },
+        "fg": {
           "value": "{modes.color.brand.defaultAlt}",
           "type": "color"
         }
