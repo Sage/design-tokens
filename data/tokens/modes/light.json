@@ -1236,7 +1236,7 @@
           }
         },
         "callout": {
-          "default": {
+          "defaultAlt": {
             "value": "{modes.color.modifier.contrastLess}",
             "type": "color",
             "$extensions": {
@@ -1246,6 +1246,21 @@
                   "value": "0.15",
                   "space": "lch",
                   "color": "{primitives.colors.brilliantGreen}"
+                }
+              }
+            },
+            "description": "used for marketing banners"
+          },
+          "hoverAlt": {
+            "value": "{modes.color.status.callout.defaultAlt}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{modes.color.modifiers.button.hoverAlt} ",
+                  "space": "lch",
+                  "color": "{modes.color.modifier.contrastMore}"
                 }
               }
             },
