@@ -973,13 +973,13 @@
             "description": "used on pill hover states"
           },
           "hoverAlt": {
-            "value": "{modes.color.status.caution.default}",
+            "value": "{modes.color.status.caution.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "type": "mix",
+                  "value": "0.05",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1063,13 +1063,13 @@
             "description": "used on pill hover states"
           },
           "hoverAlt": {
-            "value": "{modes.color.status.info.default}",
+            "value": "{modes.color.status.info.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "type": "mix",
+                  "value": "0.05",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1114,13 +1114,13 @@
             "description": "used on pill hover states"
           },
           "hoverAlt": {
-            "value": "{modes.color.status.negative.default}",
+            "value": "{modes.color.status.negative.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "type": "mix",
+                  "value": "0.05",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1169,13 +1169,13 @@
             "description": "used on pill hover states"
           },
           "hoverAlt": {
-            "value": "{modes.color.status.neutral.default}",
+            "value": "{modes.color.status.neutral.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "type": "mix",
+                  "value": "0.05",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1220,13 +1220,13 @@
             "description": "used on pill hover states"
           },
           "hoverAlt": {
-            "value": "{modes.color.status.success.default}",
+            "value": "{modes.color.status.success.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "type": "mix",
+                  "value": "0.05",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1258,7 +1258,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{modes.color.modifiers.button.hoverAlt} ",
+                  "value": "0.05",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
