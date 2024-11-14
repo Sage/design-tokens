@@ -1269,16 +1269,16 @@
         },
         "reviews": {
           "default": {
-            "value": "{primitives.colors.green}",
+            "value": "{modes.color.status.success.default}",
             "type": "color"
           },
           "defaultAlt": {
-            "value": "linear-gradient(90deg, #008047 0%, #008047 50%, #A6A6A6 50%, #A6A6A6 100%)",
+            "value": "linear-gradient(90deg, #008047 0%, #008047 50%, #D1D1D1 50%, #D1D1D1 100%)",
             "type": "color",
             "description": "half fill"
           },
           "hover": {
-            "value": "{modes.color.status.success.default}",
+            "value": "{modes.color.status.success.hover}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -1289,8 +1289,7 @@
                   "color": "{modes.color.modifier.contrastMore}"
                 }
               }
-            },
-            "description": "used on pill hover states"
+            }
           }
         }
       },
