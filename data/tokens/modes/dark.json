@@ -626,11 +626,12 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "{modes.color.modifiers.button.hover}",
+                    "value": "{modes.color.modifiers.button.hoverAlt}",
                     "space": "lch"
                   }
                 }
-              }
+              },
+              "description": "Accordion, secondary, tertiary, menu bg on hover"
             },
             "hover": {
               "value": "{modes.color.interactive.monochrome.generic.active}",
@@ -639,13 +640,13 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "{modes.color.modifiers.button.hoverAlt} ",
+                    "value": "{modes.color.modifiers.button.hover} ",
                     "space": "lch",
                     "color": "{modes.color.modifier.contrastMore}"
                   }
                 }
               },
-              "description": "Accordion, secondary, tertiary, menu bg on hover\n"
+              "description": "subtle table header hover"
             },
             "withActive": {
               "value": "{primitives.colors.black}",
@@ -784,7 +785,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{modes.color.modifiers.link.default}",
+                  "value": "{modes.color.modifiers.link.enabled}",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastLess} "
                 }
@@ -1275,7 +1276,7 @@
           }
         },
         "link": {
-          "default": {
+          "enabled": {
             "value": "0.12",
             "type": "other",
             "description": "for links - these need to be slightly darker than buttons for accessible contrast ratio in tables."
