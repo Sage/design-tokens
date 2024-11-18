@@ -73,6 +73,11 @@
           "value": "{primitives.colors.emerald}",
           "type": "color",
           "description": "This is the color to replace in white label products. \nEnsure luminousity of custom color = 46.8 (see hsluv.org). \nAAA against FFFFFF bg."
+        },
+        "frozen": {
+          "value": "#008046",
+          "type": "color",
+          "description": "This isa derivative of Jade, and is the color to replace in white label products that are using the FROZEN theme. \nEnsure luminousity of custom color = 46.8 (see hsluv.org). \nAAA against FFFFFF bg."
         }
       },
       "generic": {
@@ -875,9 +880,9 @@
             "value": "{primitives.colors.white}",
             "type": "color"
           },
-          "legacy": {
+          "frozen": {
             "active": {
-              "value": "{modes.color.interactive.primary.legacy.default}",
+              "value": "{modes.color.interactive.primary.frozen.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -891,11 +896,11 @@
               }
             },
             "default": {
-              "value": "{primitives.colors.jade}",
+              "value": "{modes.color.custom.frozen}",
               "type": "color"
             },
             "hover": {
-              "value": "{modes.color.interactive.primary.legacy.default}",
+              "value": "{modes.color.interactive.primary.frozen.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
