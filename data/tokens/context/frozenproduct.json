@@ -97,6 +97,76 @@
       }
     }
   },
+  "container": {
+    "color": {
+      "interactive": {
+        "detailedicon": {
+          "bg": {
+            "value": "{modes.color.custom.frozen}",
+            "type": "color"
+          }
+        }
+      },
+      "blockquote": {
+        "border": {
+          "value": "{modes.color.interactive.primary.frozen.default}",
+          "type": "color"
+        }
+      }
+    },
+    "radius": {
+      "card": {
+        "moderate": {
+          "value": "{global.radius.container.M}",
+          "type": "borderRadius",
+          "description": "Card (less rounded)"
+        },
+        "curved": {
+          "value": "{global.radius.container.L}",
+          "type": "borderRadius",
+          "description": "Card (more rounded)"
+        },
+        "sweeping": {
+          "value": "{global.radius.container.XL}",
+          "type": "borderRadius",
+          "description": "Card largest rounded type"
+        }
+      },
+      "tile": {
+        "moderate": {
+          "value": "{global.radius.container.M}",
+          "type": "borderRadius",
+          "description": "Tile (less rounded)"
+        },
+        "curved": {
+          "value": "{global.radius.container.L}",
+          "type": "borderRadius",
+          "description": "Tile (more rounded)"
+        },
+        "sweeping": {
+          "value": "{global.radius.container.XL}",
+          "type": "borderRadius",
+          "description": "Tile largest roundedness\n"
+        }
+      },
+      "tileselect": {
+        "moderate": {
+          "value": "{global.radius.container.M}",
+          "type": "borderRadius",
+          "description": "Tile (less rounded)"
+        },
+        "curved": {
+          "value": "{global.radius.container.L}",
+          "type": "borderRadius",
+          "description": "Tile (more rounded)"
+        },
+        "sweeping": {
+          "value": "{global.radius.container.XL}",
+          "type": "borderRadius"
+        }
+      }
+    }
+  },
   "form": {
     "radius": {
       "checkbox": {
@@ -149,56 +219,16 @@
       }
     }
   },
-  "container": {
-    "radius": {
-      "card": {
-        "moderate": {
-          "value": "{global.radius.container.M}",
-          "type": "borderRadius",
-          "description": "Card (less rounded)"
+  "link": {
+    "color": {
+      "typical": {
+        "label-default": {
+          "value": "{modes.color.interactive.primary.frozen.defaultAlt}",
+          "type": "color"
         },
-        "curved": {
-          "value": "{global.radius.container.L}",
-          "type": "borderRadius",
-          "description": "Card (more rounded)"
-        },
-        "sweeping": {
-          "value": "{global.radius.container.XL}",
-          "type": "borderRadius",
-          "description": "Card largest rounded type"
-        }
-      },
-      "tile": {
-        "moderate": {
-          "value": "{global.radius.container.M}",
-          "type": "borderRadius",
-          "description": "Tile (less rounded)"
-        },
-        "curved": {
-          "value": "{global.radius.container.L}",
-          "type": "borderRadius",
-          "description": "Tile (more rounded)"
-        },
-        "sweeping": {
-          "value": "{global.radius.container.XL}",
-          "type": "borderRadius",
-          "description": "Tile largest roundedness\n"
-        }
-      },
-      "tileselect": {
-        "moderate": {
-          "value": "{global.radius.container.M}",
-          "type": "borderRadius",
-          "description": "Tile (less rounded)"
-        },
-        "curved": {
-          "value": "{global.radius.container.L}",
-          "type": "borderRadius",
-          "description": "Tile (more rounded)"
-        },
-        "sweeping": {
-          "value": "{global.radius.container.XL}",
-          "type": "borderRadius"
+        "label-hover": {
+          "value": "{modes.color.interactive.primary.frozen.hoverAlt}",
+          "type": "color"
         }
       }
     }
@@ -330,6 +360,16 @@
         "value": "{global.radius.container.XS}",
         "type": "borderRadius",
         "description": "Pill (outer corners)"
+      }
+    }
+  },
+  "table": {
+    "color": {
+      "row": {
+        "bg-activated": {
+          "value": "{modes.color.interactive.primary.frozen.default}",
+          "type": "color"
+        }
       }
     }
   }

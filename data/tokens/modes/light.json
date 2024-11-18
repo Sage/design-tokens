@@ -899,6 +899,21 @@
               "value": "{modes.color.custom.frozen}",
               "type": "color"
             },
+            "defaultAlt": {
+              "value": "{modes.color.interactive.primary.frozen.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.link.enabled}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "for links"
+            },
             "hover": {
               "value": "{modes.color.interactive.primary.frozen.default}",
               "type": "color",
@@ -912,6 +927,21 @@
                   }
                 }
               }
+            },
+            "hoverAlt": {
+              "value": "{modes.color.interactive.primary.frozen.defaultAlt}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.link.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "for link hover"
             }
           }
         }
