@@ -73,6 +73,11 @@
           "value": "{primitives.colors.brilliantGreen}",
           "type": "color",
           "description": "This is the color to replace in white label products. Dark mode recommended luminosity is 75.1 (tested), but above 52.1 may be ok. See hsluv.org) to be AAA text on 000000 bgs."
+        },
+        "frozen": {
+          "value": "{primitives.colors.brilliantGreen}",
+          "type": "color",
+          "description": "Replace this color in white label products that use the FROZEN theme. \nEnsure luminousity of custom color = 46.8 (see hsluv.org). \nAAA against FFFFFF bg."
         }
       },
       "generic": {
@@ -707,13 +712,13 @@
               "description": "needed for specific marketing usecase on light bg"
             }
           },
-          "legacy": {
+          "frozen": {
             "active": {
               "value": "{primitives.colors.white}",
               "type": "color"
             },
             "activeAlt": {
-              "value": "{modes.color.interactive.monochrome.legacy.active}",
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -726,7 +731,7 @@
               }
             },
             "default": {
-              "value": "{modes.color.interactive.monochrome.legacy.active}",
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -740,7 +745,7 @@
               }
             },
             "hoverAlt": {
-              "value": "{modes.color.interactive.monochrome.legacy.active}",
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -754,7 +759,7 @@
               }
             },
             "withHover": {
-              "value": "{modes.color.interactive.monochrome.legacy.active}",
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
               "type": "color"
             }
           }
@@ -834,7 +839,7 @@
             "value": "{primitives.colors.black}",
             "type": "color"
           },
-          "legacy": {
+          "frozen": {
             "active": {
               "value": "{modes.color.interactive.primary.frozen.default}",
               "type": "color",
