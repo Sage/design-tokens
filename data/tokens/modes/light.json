@@ -338,7 +338,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "0.02",
+                  "value": "0.04",
                   "space": "lch",
                   "color": "{primitives.colors.navy}"
                 }
@@ -1274,16 +1274,16 @@
         },
         "reviews": {
           "default": {
-            "value": "{modes.color.status.success.default}",
+            "value": "{modes.color.custom.default}",
             "type": "color"
           },
           "defaultAlt": {
-            "value": "linear-gradient(90deg, #008047 0%, #008047 50%, #D1D1D1 50%, #D1D1D1 100%)",
+            "value": "linear-gradient(90deg, {modes.color.custom.default} 0%, {modes.color.custom.default} 50%, {modes.color.generic.bg.moderate} 50%, {modes.color.generic.bg.moderate} 100%)",
             "type": "color",
             "description": "half fill"
           },
           "hover": {
-            "value": "{modes.color.status.success.hover}",
+            "value": "{modes.color.custom.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -1292,6 +1292,31 @@
                   "value": "{modes.color.modifiers.button.hover}",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
+                }
+              }
+            }
+          },
+          "frozen": {
+            "default": {
+              "value": "{modes.color.custom.frozen}",
+              "type": "color"
+            },
+            "defaultAlt": {
+              "value": "linear-gradient(90deg, {modes.color.custom.frozen} 0%, {modes.color.custom.frozen} 50%, {modes.color.generic.bg.moderate} 50%, {modes.color.generic.bg.moderate} 100%)",
+              "type": "color",
+              "description": "half fill"
+            },
+            "hover": {
+              "value": "{modes.color.custom.frozen}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
                 }
               }
             }
