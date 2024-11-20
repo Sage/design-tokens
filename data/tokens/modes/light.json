@@ -349,34 +349,6 @@
         }
       },
       "interactive": {
-        "progress": {
-          "bg": {
-            "value": "{primitives.colors.black}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.08",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "bgAlt": {
-            "value": "{primitives.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.08",
-                  "space": "lch"
-                }
-              }
-            }
-          }
-        },
         "ai": {
           "active": {
             "value": "linear-gradient(90deg, rgba(#13A038,0.15) 0%, rgba(#149197,0.15) 40%, rgba(#a87cfb,0.15) 90%)",
@@ -619,6 +591,57 @@
           }
         },
         "monochrome": {
+          "frozen": {
+            "active": {
+              "value": "{primitives.colors.navy}",
+              "type": "color"
+            },
+            "activeAlt": {
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.activeAlt} ",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "default": {
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.2",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            },
+            "hoverAlt": {
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              }
+            },
+            "withHover": {
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
+              "type": "color"
+            }
+          },
           "generic": {
             "active": {
               "value": "{primitives.colors.black}",
@@ -711,6 +734,18 @@
               "description": "maybe should be white to align with primary group logic\n"
             }
           },
+          "marketing": {
+            "active": {
+              "value": "{primitives.colors.black}",
+              "type": "color",
+              "description": "needed for specific marketing usecase on light bg"
+            },
+            "withActive": {
+              "value": "{primitives.colors.brilliantGreen}",
+              "type": "color",
+              "description": "needed for specific marketing usecase on light bg"
+            }
+          },
           "subtle": {
             "defaultAlt": {
               "value": "{modes.color.interactive.monochrome.generic.active}",
@@ -739,69 +774,6 @@
                 }
               },
               "description": "bg color for tertiary buttons and table headers"
-            }
-          },
-          "frozen": {
-            "active": {
-              "value": "{primitives.colors.navy}",
-              "type": "color"
-            },
-            "activeAlt": {
-              "value": "{modes.color.interactive.monochrome.frozen.active}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "{modes.color.modifiers.button.activeAlt} ",
-                    "space": "lch"
-                  }
-                }
-              }
-            },
-            "default": {
-              "value": "{modes.color.interactive.monochrome.frozen.active}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.2",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess} "
-                  }
-                }
-              }
-            },
-            "hoverAlt": {
-              "value": "{modes.color.interactive.monochrome.frozen.active}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "{modes.color.modifiers.button.hoverAlt} ",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              }
-            },
-            "withHover": {
-              "value": "{modes.color.interactive.monochrome.frozen.active}",
-              "type": "color"
-            }
-          },
-          "marketing": {
-            "active": {
-              "value": "{primitives.colors.black}",
-              "type": "color",
-              "description": "needed for specific marketing usecase on light bg"
-            },
-            "withActive": {
-              "value": "{primitives.colors.brilliantGreen}",
-              "type": "color",
-              "description": "needed for specific marketing usecase on light bg"
             }
           }
         },
@@ -942,6 +914,34 @@
                 }
               },
               "description": "for link hover"
+            }
+          }
+        },
+        "progress": {
+          "bg": {
+            "value": "{primitives.colors.black}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.08",
+                  "space": "lch"
+                }
+              }
+            }
+          },
+          "bgAlt": {
+            "value": "{primitives.colors.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.08",
+                  "space": "lch"
+                }
+              }
             }
           }
         }
