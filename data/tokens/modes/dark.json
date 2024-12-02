@@ -183,6 +183,10 @@
                 }
               }
             }
+          },
+          "extreme": {
+            "value": "{primitives.colors.white}",
+            "type": "color"
           }
         },
         "content": {
@@ -440,11 +444,11 @@
             "description": "for links in datatables"
           },
           "withActive": {
-            "value": "{primitives.colors.black}",
+            "value": "{modes.color.generic.fg.nought}",
             "type": "color"
           },
           "withDefault": {
-            "value": "{primitives.colors.black}",
+            "value": "{modes.color.generic.fg.nought}",
             "type": "color"
           }
         },
@@ -455,7 +459,7 @@
             "description": "Input backgrounds."
           },
           "withActive": {
-            "value": "{primitives.colors.white}",
+            "value": "{modes.color.generic.content.extreme}",
             "type": "color",
             "description": "checkbox tick icon or radio handle"
           },
@@ -464,7 +468,7 @@
             "type": "color"
           },
           "withHover": {
-            "value": "{primitives.colors.white}",
+            "value": "{modes.color.generic.content.extreme}",
             "type": "color",
             "description": "text for draggable area on file input"
           },
@@ -546,7 +550,7 @@
             "description": "disabled buttons on dark"
           },
           "mask": {
-            "value": "{primitives.colors.white}",
+            "value": "{modes.color.modifier.contrastMore}",
             "type": "color",
             "description": "full screen takeover token for modal dimmer"
           },
@@ -561,7 +565,7 @@
             "description": "Disabled text inside buttons"
           },
           "contentAlt": {
-            "value": "{primitives.colors.black}",
+            "value": "{modes.color.generic.fg.nought}",
             "type": "color"
           },
           "icon": {
@@ -627,7 +631,7 @@
           },
           "generic": {
             "active": {
-              "value": "{primitives.colors.white}",
+              "value": "{modes.color.generic.bg.extreme}",
               "type": "color"
             },
             "activeAlt": {
@@ -671,7 +675,7 @@
               "description": "subtle and toggle button text"
             },
             "hoverAlt": {
-              "value": "{primitives.colors.white}",
+              "value": "{modes.color.generic.bg.extreme}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -699,7 +703,7 @@
               "description": "subtle table header hover"
             },
             "withActive": {
-              "value": "{primitives.colors.black}",
+              "value": "{modes.color.generic.fg.nought}",
               "type": "color"
             },
             "withActiveAlt": {
@@ -707,7 +711,7 @@
               "type": "color"
             },
             "withDefault": {
-              "value": "{primitives.colors.black}",
+              "value": "{modes.color.generic.fg.nought}",
               "type": "color"
             },
             "withHover": {
@@ -822,15 +826,15 @@
             "description": "for link hover\n"
           },
           "withActive": {
-            "value": "{primitives.colors.black}",
+            "value": "{modes.color.generic.fg.nought}",
             "type": "color"
           },
           "withDefault": {
-            "value": "{primitives.colors.black}",
+            "value": "{modes.color.generic.fg.nought}",
             "type": "color"
           },
           "withHover": {
-            "value": "{primitives.colors.black}",
+            "value": "{modes.color.generic.fg.nought}",
             "type": "color"
           },
           "frozen": {
@@ -899,7 +903,7 @@
         },
         "progress": {
           "bg": {
-            "value": "{primitives.colors.white}",
+            "value": "{modes.color.generic.bg.extreme}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -912,7 +916,7 @@
             }
           },
           "bgAlt": {
-            "value": "{primitives.colors.black}",
+            "value": "{modes.color.generic.bg.nought}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -933,7 +937,7 @@
             "type": "color"
           },
           "defaultAlt": {
-            "value": "{primitives.colors.white}",
+            "value": "{modes.color.generic.bg.extreme}",
             "type": "color",
             "description": "bg for contextual message comp"
           },
