@@ -1,3 +1,11 @@
+# [5.0.0-beta.26](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.25...v5.0.0-beta.26) (2024-12-02)
+
+
+### Bug Fixes
+
+* **data:** syntax errors ([3298a21](https://github.com/Sage/design-tokens/commit/3298a21b87f55d7ef107825fd3f3cb9bec09c6fc))
+* update tests ([a3f5764](https://github.com/Sage/design-tokens/commit/a3f5764d33ce0af1f3a9f1efc1b15e500289d344))
+
 # [5.0.0-beta.25](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.24...v5.0.0-beta.25) (2024-12-02)
 
 
