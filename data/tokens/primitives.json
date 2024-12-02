@@ -21,15 +21,15 @@
         "type": "color",
         "description": "Sage Logo color\nPrimary buttons on dark backgrounds"
       },
+      "frozenJade": {
+        "value": "#008046",
+        "type": "color",
+        "description": "Legacy green used on old product theme"
+      },
       "emerald": {
         "value": "#00811F",
         "type": "color",
         "description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-      },
-      "jade": {
-        "value": "#007E45",
-        "type": "color",
-        "description": "Legacy green used on old product theme"
       },
       "emeraldLight": {
         "value": "#009024",
@@ -95,6 +95,11 @@
         "value": "#007c7b",
         "type": "color",
         "description": "Alternative colour with no semantic meaning. Used in progress tracker.\nAAA against FFFFFF bg. \nLuminosity 46.8."
+      },
+      "tealBright": {
+        "value": "#009695",
+        "type": "color",
+        "description": "Alternative colour with no semantic meaning. Used in progress tracker.\nLuminosity 56.1."
       },
       "transparent": {
         "value": "rgba(0,0,0,0)",
@@ -515,80 +520,139 @@
     },
     "fontSize": {
       "responsive": {
-        "step-2": {
-          "value": "clamp(0.7431rem, 0.8804rem + -0.1144vw, 0.8575rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 13.72, Large Viewports: 11.89"
+        "product": {
+          "step-2": {
+            "value": "clamp(0.7431rem, 0.8804rem + -0.1144vw, 0.8575rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 13.72, Large Viewports: 11.89"
+          },
+          "step-1": {
+            "value": "clamp(0.8619rem, 0.9384rem + -0.0637vw, 0.9256rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 14.81, Large Viewports: 13.79"
+          },
+          "step0": {
+            "value": "clamp(1rem, 1rem + 0vw, 1rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 16, Large Viewports: 16"
+          },
+          "step1": {
+            "value": "clamp(1.08rem, 1.064rem + 0.08vw, 1.16rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+          },
+          "step2": {
+            "value": "clamp(1.1663rem, 1.1304rem + 0.1794vw, 1.3456rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 18.66, Large Viewports: 21.53"
+          },
+          "step3": {
+            "value": "clamp(1.26rem, 1.1999rem + 0.3006vw, 1.5606rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 20.16, Large Viewports: 24.97"
+          },
+          "step4": {
+            "value": "clamp(1.3606rem, 1.2706rem + 0.45vw, 1.8106rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 21.77, Large Viewports: 28.97"
+          },
+          "step5": {
+            "value": "clamp(1.4694rem, 1.3431rem + 0.6313vw, 2.1006rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 23.51, Large Viewports: 33.61"
+          },
+          "step6": {
+            "value": "clamp(1.5869rem, 1.417rem + 0.8494vw, 2.4363rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 25.39, Large Viewports: 38.98"
+          },
+          "step7": {
+            "value": "clamp(1.7138rem, 1.4913rem + 1.1125vw, 2.8263rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 27.42, Large Viewports: 45.22"
+          },
+          "step8": {
+            "value": "clamp(1.8506rem, 1.5651rem + 1.4275vw, 3.2781rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 29.61, Large Viewports: 52.45"
+          },
+          "step9": {
+            "value": "clamp(1.9988rem, 1.6379rem + 1.8044vw, 3.8031rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 31.98, Large Viewports: 60.85"
+          },
+          "step10": {
+            "value": "clamp(2.1588rem, 1.7083rem + 2.2525vw, 4.4113rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 34.54, Large Viewports: 70.58"
+          }
         },
-        "step-1": {
-          "value": "clamp(0.8619rem, 0.9384rem + -0.0637vw, 0.9256rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 14.81, Large Viewports: 13.79"
-        },
-        "step0": {
-          "value": "clamp(1rem, 1rem + 0vw, 1rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 16, Large Viewports: 16"
-        },
-        "step1": {
-          "value": "clamp(1.08rem, 1.064rem + 0.08vw, 1.16rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 17.28, Large Viewports: 18.56"
-        },
-        "step2": {
-          "value": "clamp(1.1663rem, 1.1304rem + 0.1794vw, 1.3456rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 18.66, Large Viewports: 21.53"
-        },
-        "step3": {
-          "value": "clamp(1.26rem, 1.1999rem + 0.3006vw, 1.5606rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 20.16, Large Viewports: 24.97"
-        },
-        "step4": {
-          "value": "clamp(1.3606rem, 1.2706rem + 0.45vw, 1.8106rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 21.77, Large Viewports: 28.97"
-        },
-        "step5": {
-          "value": "clamp(1.4694rem, 1.3431rem + 0.6313vw, 2.1006rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 23.51, Large Viewports: 33.61"
-        },
-        "step6": {
-          "value": "clamp(1.5869rem, 1.417rem + 0.8494vw, 2.4363rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 25.39, Large Viewports: 38.98"
-        },
-        "step7": {
-          "value": "clamp(1.7138rem, 1.4913rem + 1.1125vw, 2.8263rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 27.42, Large Viewports: 45.22"
-        },
-        "step8": {
-          "value": "clamp(1.8506rem, 1.5651rem + 1.4275vw, 3.2781rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 29.61, Large Viewports: 52.45"
-        },
-        "step9": {
-          "value": "clamp(1.9988rem, 1.6379rem + 1.8044vw, 3.8031rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 31.98, Large Viewports: 60.85"
-        },
-        "step10": {
-          "value": "clamp(2.1588rem, 1.7083rem + 2.2525vw, 4.4113rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 34.54, Large Viewports: 70.58"
-        },
-        "step11": {
-          "value": "clamp(2.3322rem, 1.6361rem + 3.4803vi, 5.1164rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 37.31, Large Viewports: 81.86"
-        },
-        "step12": {
-          "value": "clamp(2.5187rem, 1.6647rem + 4.2703vi, 5.935rem)",
-          "type": "fontSizes",
-          "description": "Small Viewports: 40.30, Large Viewports: 94.96"
+        "marketing": {
+          "step-2": {
+            "value": "clamp(0.8264rem, 0.8237rem + 0.0118vw, 0.8361rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 13.22, Large Viewports: 13.38"
+          },
+          "step-1": {
+            "value": "clamp(0.9091rem, 0.8916rem + 0.0745vw, 0.9698rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 14.55, Large Viewports: 15.52"
+          },
+          "step0": {
+            "value": "clamp(1rem, 0.9641rem + 0.1533vw, 1.125rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 16, Large Viewports: 18"
+          },
+          "step1": {
+            "value": "clamp(1.1rem, 1.0411rem + 0.2513vw, 1.305rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 17.60, Large Viewports: 20.88"
+          },
+          "step2": {
+            "value": "clamp(1.21rem, 1.1227rem + 0.3725vw, 1.5138rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 19.36, Large Viewports: 24.22"
+          },
+          "step3": {
+            "value": "clamp(1.331rem, 1.2089rem + 0.5211vw, 1.756rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 21.30, Large Viewports: 28.10"
+          },
+          "step4": {
+            "value": "clamp(1.4641rem, 1.2995rem + 0.7024vw, 2.037rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 23.43, Large Viewports: 32.59"
+          },
+          "step5": {
+            "value": "clamp(1.6105rem, 1.3943rem + 0.9225vw, 2.3629rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 25.77, Large Viewports: 37.81"
+          },
+          "step6": {
+            "value": "clamp(1.7716rem, 1.493rem + 1.1885vw, 2.7409rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 28.34, Large Viewports: 43.86"
+          },
+          "step7": {
+            "value": "clamp(1.9487rem, 1.595rem + 1.509vw, 3.1795rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 31.18, Large Viewports: 50.87"
+          },
+          "step8": {
+            "value": "clamp(2.1436rem, 1.6997rem + 1.8938vw, 3.6882rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 34.30, Large Viewports: 59.01"
+          },
+          "step9": {
+            "value": "clamp(2.3579rem, 1.8061rem + 2.3545vw, 4.2783rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 37.73, Large Viewports: 68.45"
+          },
+          "step10": {
+            "value": "clamp(2.5937rem, 1.913rem + 2.9047vw, 4.9629rem)",
+            "type": "fontSizes",
+            "description": "Small Viewports: 41.50, Large Viewports: 79.41"
+          }
         }
       },
       "icon": {

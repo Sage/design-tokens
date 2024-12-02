@@ -14,16 +14,70 @@
           }
         }
       },
-      "brandreference": {
-        "custom1": {
-          "value": "{primitives.colors.emerald}",
-          "type": "color",
-          "description": "This is the color to replace in white label products. \nEnsure luminousity of custom color = 46.8 (see hsluv.org). \nAAA against FFFFFF bg."
+      "brand": {
+        "default": {
+          "value": "{primitives.colors.brilliantGreen}",
+          "type": "color"
         },
-        "custom2": {
+        "defaultAlt": {
+          "value": "{primitives.colors.white}",
+          "type": "color"
+        },
+        "withDefaultAlt": {
+          "value": "{primitives.colors.black}",
+          "type": "color"
+        },
+        "copilot": {
+          "AIIdentifier": {
+            "default": {
+              "value": "{primitives.colors.white}",
+              "type": "color"
+            },
+            "withDefault": {
+              "value": "{primitives.colors.brilliantGreen}",
+              "type": "color"
+            }
+          },
+          "noBg": {
+            "S": {
+              "value": "linear-gradient(191deg, #9D60FF 28.12%, #7C78F8 33.5%, #29B7E6 46.96%, #00D6DE 52.34%, #00D6DA 55.03%, #00D6D0 56.83%, #00D6C0 57.73%, #00D6A8 59.52%, #00D68A 60.42%, #00D665 62.21%, #00D639 63.11%)",
+              "type": "color"
+            },
+            "star": {
+              "value": "radial-gradient(99.94% 104.1% at 8.01% 0.98%, #9D60FF 34%, #5A99F1 52%, #32B3E8 59%, #0DCCE0 68%, #00D6DE 72%, #00D6D7 74%, #00D6C6 77%, #00D6AA 81%, #00D682 84%, #00D650 88%, #00D639 90%)",
+              "type": "color"
+            },
+            "mono": {
+              "value": "{primitives.colors.white}",
+              "type": "color"
+            }
+          },
+          "withBg": {
+            "S": {
+              "value": "{primitives.colors.black}",
+              "type": "color"
+            },
+            "star": {
+              "value": "{primitives.colors.black}",
+              "type": "color"
+            },
+            "bg": {
+              "value": "{primitives.colors.white}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "custom": {
+        "default": {
           "value": "{primitives.colors.brilliantGreen}",
           "type": "color",
-          "description": "This is the color to replace in white label products. Ensure luminousity of custom color is >=52.1 (see hsluv.org) to be AAA text on 000000 bgs."
+          "description": "This is the color to replace in white label products. Dark mode recommended luminosity is 75.1 (tested), but above 52.1 may be ok. See hsluv.org) to be AAA text on 000000 bgs."
+        },
+        "frozen": {
+          "value": "{primitives.colors.brilliantGreen}",
+          "type": "color",
+          "description": "Replace this color in white label products that use the FROZEN theme. \nEnsure luminousity of custom color = 46.8 (see hsluv.org). \nAAA against FFFFFF bg."
         }
       },
       "generic": {
@@ -144,8 +198,7 @@
                 "modify": {
                   "type": "alpha",
                   "value": "0.95",
-                  "space": "lch",
-                  "color": "{modes.color.modifier.contrastLess}"
+                  "space": "lch"
                 }
               }
             }
@@ -199,8 +252,7 @@
                 "modify": {
                   "type": "alpha",
                   "value": "0.3",
-                  "space": "lch",
-                  "color": "{modes.color.modifier.contrastLess}"
+                  "space": "lch"
                 }
               }
             },
@@ -297,11 +349,11 @@
       "interactive": {
         "ai": {
           "active": {
-            "value": "linear-gradient(90deg, rgba(#00D639,0.15) 0%, rgba(#00d6de,0.15) 40%, rgba(#9d60ff,0.15) 90%)",
+            "value": "linear-gradient(90deg, #00D63926 0%, #00d6de26 40%, #9d60ff26 90%)",
             "type": "color"
           },
           "hover": {
-            "value": "linear-gradient(90deg, rgba(#00D639,0.08) 0%, rgba(#00d6de,0.08) 40%, rgba(#9d60ff,0.08) 90%)",
+            "value": "linear-gradient(90deg, #00D63914 0%, #00d6de14 40%, #9d60ff14 90%)",
             "type": "color"
           },
           "default": {
@@ -366,8 +418,7 @@
                 "modify": {
                   "type": "alpha",
                   "value": "{modes.color.modifiers.button.hover} ",
-                  "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore}"
+                  "space": "lch"
                 }
               }
             },
@@ -452,7 +503,7 @@
             "type": "color",
             "description": "Hint text, placeholder text, character count etc"
           },
-          "legacy": {
+          "frozen": {
             "withDefault": {
               "value": "{modes.color.generic.fg.moderate}",
               "type": "color",
@@ -525,120 +576,144 @@
           }
         },
         "monochrome": {
-          "active": {
-            "value": "{primitives.colors.white}",
-            "type": "color"
-          },
-          "activeAlt": {
-            "value": "{modes.color.interactive.monochrome.default}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.activeAlt}",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "default": {
-            "value": "{modes.color.interactive.monochrome.active}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.9",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "defaultAlt": {
-            "value": "{modes.color.interactive.monochrome.active}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.67",
-                  "space": "lch"
-                }
-              }
-            }
-          },
-          "defaultAlt2": {
-            "value": "{modes.color.interactive.monochrome.active}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.50",
-                  "space": "lch"
+          "frozen": {
+            "active": {
+              "value": "{primitives.colors.white}",
+              "type": "color"
+            },
+            "activeAlt": {
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.activeAlt} ",
+                    "space": "lch"
+                  }
                 }
               }
             },
-            "description": "border color for off switches"
-          },
-          "defaultAlt3": {
-            "value": "{modes.color.interactive.monochrome.active}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.04",
-                  "space": "lch"
+            "default": {
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.9",
+                    "space": "lch"
+                  }
                 }
               }
             },
-            "description": "default bg color for tertiary button"
-          },
-          "hover": {
-            "value": "{primitives.colors.white}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hover}",
-                  "space": "lch"
+            "hoverAlt": {
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.hoverAlt} ",
+                    "space": "lch"
+                  }
                 }
               }
+            },
+            "withHover": {
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
+              "type": "color"
             }
           },
-          "hoverAlt": {
-            "value": "{modes.color.interactive.monochrome.active}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hoverAlt} ",
-                  "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore}"
+          "generic": {
+            "active": {
+              "value": "{primitives.colors.white}",
+              "type": "color"
+            },
+            "activeAlt": {
+              "value": "{modes.color.interactive.monochrome.generic.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.activeAlt}",
+                    "space": "lch"
+                  }
                 }
               }
             },
-            "description": "Accordion and menu bg on hover\n"
-          },
-          "withActive": {
-            "value": "{primitives.colors.black}",
-            "type": "color"
-          },
-          "withActiveAlt": {
-            "value": "{modes.color.interactive.monochrome.default}",
-            "type": "color"
-          },
-          "withDefault": {
-            "value": "{primitives.colors.black}",
-            "type": "color"
-          },
-          "withHover": {
-            "value": "{modes.color.generic.content.extreme}",
-            "type": "color"
+            "default": {
+              "value": "{modes.color.interactive.monochrome.generic.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.9",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "defaultAlt": {
+              "value": "{modes.color.interactive.monochrome.generic.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "subtle and toggle button text"
+            },
+            "hoverAlt": {
+              "value": "{primitives.colors.white}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.hoverAlt}",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "Accordion, secondary, tertiary, menu bg on hover"
+            },
+            "hover": {
+              "value": "{modes.color.interactive.monochrome.generic.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.hover} ",
+                    "space": "lch"
+                  }
+                }
+              },
+              "description": "subtle table header hover"
+            },
+            "withActive": {
+              "value": "{primitives.colors.black}",
+              "type": "color"
+            },
+            "withActiveAlt": {
+              "value": "{modes.color.interactive.monochrome.generic.default}",
+              "type": "color"
+            },
+            "withDefault": {
+              "value": "{primitives.colors.black}",
+              "type": "color"
+            },
+            "withHover": {
+              "value": "{modes.color.generic.content.extreme}",
+              "type": "color"
+            }
           },
           "marketing": {
             "withActive": {
@@ -652,55 +727,34 @@
               "description": "needed for specific marketing usecase on light bg"
             }
           },
-          "legacy": {
-            "active": {
-              "value": "{primitives.colors.white}",
-              "type": "color"
-            },
-            "activeAlt": {
-              "value": "{modes.color.interactive.monochrome.legacy.active}",
+          "subtle": {
+            "defaultAlt": {
+              "value": "{modes.color.interactive.monochrome.generic.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "{modes.color.modifiers.button.activeAlt} ",
+                    "value": "0.50",
                     "space": "lch"
                   }
                 }
-              }
+              },
+              "description": "border color for off switches"
             },
             "default": {
-              "value": "{modes.color.interactive.monochrome.legacy.active}",
+              "value": "{modes.color.interactive.monochrome.generic.active}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess} "
+                    "value": "0.08",
+                    "space": "lch"
                   }
                 }
-              }
-            },
-            "hoverAlt": {
-              "value": "{modes.color.interactive.monochrome.legacy.active}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "{modes.color.modifiers.button.hoverAlt} ",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              }
-            },
-            "withHover": {
-              "value": "{modes.color.interactive.monochrome.legacy.active}",
-              "type": "color"
+              },
+              "description": "subtle table header hover"
             }
           }
         },
@@ -720,7 +774,7 @@
             }
           },
           "default": {
-            "value": "{modes.color.brandreference.custom2}",
+            "value": "{modes.color.custom.default}",
             "type": "color"
           },
           "defaultAlt": {
@@ -730,7 +784,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{modes.color.modifiers.link.default}",
+                  "value": "{modes.color.modifiers.link.enabled}",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastLess} "
                 }
@@ -779,9 +833,9 @@
             "value": "{primitives.colors.black}",
             "type": "color"
           },
-          "legacy": {
+          "frozen": {
             "active": {
-              "value": "{modes.color.interactive.primary.legacy.default}",
+              "value": "{modes.color.interactive.primary.frozen.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -795,11 +849,25 @@
               }
             },
             "default": {
-              "value": "{modes.color.brandreference.custom2}",
+              "value": "{modes.color.custom.default}",
               "type": "color"
             },
+            "defaultAlt": {
+              "value": "{modes.color.interactive.primary.frozen.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.link.enabled}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              }
+            },
             "hover": {
-              "value": "{modes.color.interactive.primary.legacy.default}",
+              "value": "{modes.color.interactive.primary.frozen.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -811,6 +879,21 @@
                   }
                 }
               }
+            },
+            "hoverAlt": {
+              "value": "{modes.color.interactive.primary.frozen.defaultAlt}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.link.hover} ",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore} "
+                  }
+                }
+              },
+              "description": "for link hover"
             }
           }
         },
@@ -822,7 +905,20 @@
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "0.04",
+                  "value": "0.08",
+                  "space": "lch"
+                }
+              }
+            }
+          },
+          "bgAlt": {
+            "value": "{primitives.colors.black}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.08",
                   "space": "lch"
                 }
               }
@@ -852,7 +948,7 @@
         },
         "generic": {
           "default": {
-            "value": "{primitives.colors.teal}",
+            "value": "{primitives.colors.tealBright}",
             "type": "color"
           }
         },
@@ -862,18 +958,8 @@
             "type": "color"
           },
           "defaultAlt": {
-            "value": "{modes.color.modifier.contrastLess}",
+            "value": "{primitives.colors.orange}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.1",
-                  "space": "lch",
-                  "color": "{primitives.colors.orangeBright}"
-                }
-              }
-            },
             "description": "Subtle message bg"
           },
           "hover": {
@@ -892,13 +978,13 @@
             "description": "used on pill hover states"
           },
           "hoverAlt": {
-            "value": "{modes.color.status.caution.default}",
+            "value": "{modes.color.status.caution.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "type": "mix",
+                  "value": "{modes.color.modifiers.button.hoverAlt} ",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -929,7 +1015,7 @@
             "type": "color"
           },
           "loading": {
-            "value": "linear-gradient(135deg, rgba(#FFF,0.36) 0%, rgba(#FFF, 0.04) 100%)",
+            "value": "linear-gradient(135deg, #FFFFFF5C 0%, #FFFFFF0A 100%)",
             "type": "color",
             "description": "used on skeleton text"
           }
@@ -952,18 +1038,8 @@
             "type": "color"
           },
           "defaultAlt": {
-            "value": "{primitives.colors.white}",
+            "value": "{primitives.colors.blue}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.1",
-                  "space": "lch",
-                  "color": "{primitives.colors.blueBright} "
-                }
-              }
-            },
             "description": "Subtle message bg"
           },
           "hover": {
@@ -982,13 +1058,13 @@
             "description": "used on pill hover states"
           },
           "hoverAlt": {
-            "value": "{modes.color.status.info.default}",
+            "value": "{modes.color.status.info.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "type": "mix",
+                  "value": "{modes.color.modifiers.button.hoverAlt} ",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1003,18 +1079,8 @@
             "type": "color"
           },
           "defaultAlt": {
-            "value": "{modes.color.modifier.contrastLess}",
+            "value": "{primitives.colors.red}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.1",
-                  "space": "lch",
-                  "color": "{primitives.colors.redBright}"
-                }
-              }
-            },
             "description": "Subtle message bg"
           },
           "hover": {
@@ -1033,13 +1099,13 @@
             "description": "used on pill hover states"
           },
           "hoverAlt": {
-            "value": "{modes.color.status.negative.default}",
+            "value": "{modes.color.status.negative.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "type": "mix",
+                  "value": "{modes.color.modifiers.button.hoverAlt} ",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1058,18 +1124,8 @@
             "type": "color"
           },
           "defaultAlt": {
-            "value": "{modes.color.modifier.contrastLess}",
+            "value": "{primitives.colors.storm}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.1",
-                  "space": "lch",
-                  "color": "{primitives.colors.stormBright}"
-                }
-              }
-            },
             "description": "Subtle message bg"
           },
           "hover": {
@@ -1088,13 +1144,13 @@
             "description": "used on pill hover states"
           },
           "hoverAlt": {
-            "value": "{modes.color.status.neutral.default}",
+            "value": "{modes.color.status.neutral.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "type": "mix",
+                  "value": "{modes.color.modifiers.button.hoverAlt} ",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1109,18 +1165,8 @@
             "type": "color"
           },
           "defaultAlt": {
-            "value": "{modes.color.modifier.contrastLess}",
+            "value": "{primitives.colors.green}",
             "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.1",
-                  "space": "lch",
-                  "color": "{modes.color.status.success.default} "
-                }
-              }
-            },
             "description": "Subtle message bg"
           },
           "hover": {
@@ -1139,13 +1185,13 @@
             "description": "used on pill hover states"
           },
           "hoverAlt": {
-            "value": "{modes.color.status.success.default}",
+            "value": "{modes.color.status.success.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "type": "mix",
+                  "value": "{modes.color.modifiers.button.hoverAlt}",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1155,33 +1201,48 @@
           }
         },
         "callout": {
-          "default": {
-            "value": "{modes.color.modifier.contrastLess}",
+          "defaultAlt": {
+            "value": "{primitives.colors.brilliantGreen}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "0.15",
+                  "value": "0.4",
                   "space": "lch",
-                  "color": "{primitives.colors.brilliantGreen}"
+                  "color": "{modes.color.modifier.contrastMore} "
                 }
               }
             },
             "description": "used for marketing banners"
+          },
+          "hoverAlt": {
+            "value": "{modes.color.status.callout.defaultAlt}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{modes.color.modifiers.button.hoverAlt} ",
+                  "space": "lch",
+                  "color": "{modes.color.modifier.contrastMore} "
+                }
+              }
+            },
+            "description": "marketing banner hover\n"
           }
         },
         "reviews": {
           "default": {
-            "value": "{primitives.colors.brilliantGreen}",
+            "value": "{modes.color.custom.default}",
             "type": "color"
           },
           "defaultAlt": {
-            "value": "linear-gradient(90deg, #00D639 0%, #00D639 50%, #4B4B4B 50%, #4B4B4B 100%)",
+            "value": "linear-gradient(90deg, {modes.color.custom.default} 0%, {modes.color.custom.default} 50%, {modes.color.generic.bg.moderate} 50%, {modes.color.generic.bg.moderate}  100%)",
             "type": "color"
           },
           "hover": {
-            "value": "{modes.color.status.success.default}",
+            "value": "{modes.color.custom.default}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -1194,6 +1255,31 @@
               }
             },
             "description": "used on pill hover states"
+          },
+          "frozen": {
+            "default": {
+              "value": "{modes.color.custom.frozen}",
+              "type": "color"
+            },
+            "defaultAlt": {
+              "value": "linear-gradient(90deg, {modes.color.custom.frozen} 0%, {modes.color.custom.frozen} 50%, {modes.color.generic.bg.moderate} 50%, {modes.color.generic.bg.moderate}  100%)",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{modes.color.custom.frozen}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "description": "used on pill hover states"
+            }
           }
         }
       },
@@ -1243,7 +1329,7 @@
           }
         },
         "link": {
-          "default": {
+          "enabled": {
             "value": "0.12",
             "type": "other",
             "description": "for links - these need to be slightly darker than buttons for accessible contrast ratio in tables."
