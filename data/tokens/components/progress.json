@@ -68,27 +68,27 @@
         "responsive": {
           "text": {
             "XS": {
-              "value": "{primitives.fontSize.responsive.step0}",
+              "value": "{primitives.fontSize.responsive.product.step0}",
               "type": "sizing",
               "description": "Skeleton paragraph and H5"
             },
             "S": {
-              "value": "{primitives.fontSize.responsive.step2}",
+              "value": "{primitives.fontSize.responsive.product.step2}",
               "type": "sizing",
               "description": "H4 Skeletons"
             },
             "M": {
-              "value": "{primitives.fontSize.responsive.step2}",
+              "value": "{primitives.fontSize.responsive.product.step2}",
               "type": "sizing",
               "description": "H3 Skeletons"
             },
             "L": {
-              "value": "{primitives.fontSize.responsive.step3}",
+              "value": "{primitives.fontSize.responsive.product.step3}",
               "type": "sizing",
               "description": "H2 Skeletons"
             },
             "XL": {
-              "value": "{primitives.fontSize.responsive.step5}",
+              "value": "{primitives.fontSize.responsive.product.step5}",
               "type": "sizing",
               "description": "H1 Skeletons"
             }
@@ -102,22 +102,22 @@
               "description": "Skeleton paragraph and H5"
             },
             "S": {
-              "value": "{global.fontSize.adaptive.heading.step2}",
+              "value": "{global.fontSize.adaptive.step2}",
               "type": "sizing",
               "description": "H4 Skeletons"
             },
             "M": {
-              "value": "{global.fontSize.adaptive.heading.step2}",
+              "value": "{global.fontSize.adaptive.step2}",
               "type": "sizing",
               "description": "H3 Skeletons"
             },
             "L": {
-              "value": "{global.fontSize.adaptive.heading.step3}",
+              "value": "{global.fontSize.adaptive.step3}",
               "type": "sizing",
               "description": "H2 Skeletons"
             },
             "XL": {
-              "value": "{global.fontSize.adaptive.heading.step5}",
+              "value": "{global.fontSize.adaptive.step5}",
               "type": "sizing",
               "description": "H1 Skeletons"
             }
@@ -182,7 +182,7 @@
         "type": "color"
       },
       "fg-default": {
-        "value": "{modes.color.interactive.monochrome.active}",
+        "value": "{modes.color.interactive.monochrome.generic.active}",
         "type": "color"
       },
       "fg-error": {
@@ -207,9 +207,38 @@
           "type": "color"
         }
       },
+      "loader": {
+        "bg-default": {
+          "value": "{modes.color.interactive.progress.bg}",
+          "type": "color"
+        },
+        "bg-alt": {
+          "value": "{modes.color.interactive.progress.bgAlt}",
+          "type": "color",
+          "description": "used for inverse loader bgs"
+        },
+        "fg-default": {
+          "value": "{modes.color.interactive.monochrome.generic.active}",
+          "type": "color",
+          "description": "used for loader standard loader spinner"
+        },
+        "fg-alt": {
+          "value": "{modes.color.interactive.monochrome.generic.withActive}",
+          "type": "color",
+          "description": "used on inverse loading spinner"
+        },
+        "fg-error": {
+          "value": "{modes.color.status.negative.default}",
+          "type": "color"
+        },
+        "fg-complete": {
+          "value": "{modes.color.status.success.default}",
+          "type": "color"
+        }
+      },
       "stepflow": {
         "bg-active": {
-          "value": "{modes.color.interactive.monochrome.active}",
+          "value": "{modes.color.interactive.monochrome.generic.active}",
           "type": "color"
         },
         "bg-complete": {
@@ -225,7 +254,7 @@
           "type": "color"
         },
         "border-active-outer": {
-          "value": "{modes.color.interactive.monochrome.active}",
+          "value": "{modes.color.interactive.monochrome.generic.active}",
           "type": "color"
         },
         "border-default": {
@@ -243,7 +272,7 @@
       },
       "stepindicator": {
         "bg-active": {
-          "value": "{modes.color.interactive.monochrome.active}",
+          "value": "{modes.color.interactive.monochrome.generic.active}",
           "type": "color"
         },
         "bg-complete": {
@@ -251,7 +280,7 @@
           "type": "color"
         },
         "border-active-outer": {
-          "value": "{modes.color.interactive.monochrome.active}",
+          "value": "{modes.color.interactive.monochrome.generic.active}",
           "type": "color"
         },
         "border-default": {
@@ -263,11 +292,11 @@
           "type": "color"
         },
         "label-active": {
-          "value": "modes.color.interactive.monochrome.standard.withActive",
+          "value": "{modes.color.interactive.monochrome.generic.withActive}",
           "type": "color"
         },
         "label-complete": {
-          "value": "{modes.color.interactive.monochrome.withActive}",
+          "value": "{modes.color.interactive.monochrome.generic.withActive}",
           "type": "color"
         },
         "label-default": {
@@ -365,12 +394,12 @@
           "description": "Step flow default (not started)"
         },
         "active-inner": {
-          "value": "{global.borderwidth.XS}",
+          "value": "{global.borderwidth.S}",
           "type": "borderWidth",
           "description": "Step flow active step border outer"
         },
         "active-outer": {
-          "value": "{global.borderwidth.S}",
+          "value": "{global.borderwidth.L}",
           "type": "borderWidth",
           "description": "Step flow active step border outermost"
         }

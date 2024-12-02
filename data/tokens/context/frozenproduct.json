@@ -4,53 +4,53 @@
       "typical": {
         "secondary": {
           "bg-active": {
-            "value": "{modes.color.interactive.primary.legacy.active}",
+            "value": "{modes.color.interactive.primary.frozen.active}",
             "type": "color"
           },
           "bg-hover": {
-            "value": "{modes.color.interactive.primary.legacy.hover}",
+            "value": "{modes.color.interactive.primary.frozen.hover}",
             "type": "color"
           },
           "border-active": {
-            "value": "{modes.color.interactive.primary.legacy.active}",
+            "value": "{modes.color.interactive.primary.frozen.active}",
             "type": "color"
           },
           "border-enabled": {
-            "value": "{modes.color.interactive.primary.legacy.default}",
+            "value": "{modes.color.interactive.primary.frozen.default}",
             "type": "color"
           },
           "border-hover": {
-            "value": "{modes.color.interactive.primary.legacy.hover}",
+            "value": "{modes.color.interactive.primary.frozen.hover}",
             "type": "color"
           },
           "label-enabled": {
-            "value": "{modes.color.interactive.primary.legacy.default}",
+            "value": "{modes.color.interactive.primary.frozen.default}",
             "type": "color"
           }
         },
         "tertiary": {
           "bg-active": {
-            "value": "{modes.color.interactive.primary.legacy.active}",
+            "value": "{modes.color.interactive.primary.frozen.active}",
             "type": "color"
           },
           "bg-hover": {
-            "value": "{modes.color.interactive.primary.legacy.hover}",
+            "value": "{modes.color.interactive.primary.frozen.hover}",
             "type": "color"
           },
           "border-active": {
-            "value": "{modes.color.interactive.primary.legacy.active}",
+            "value": "{modes.color.interactive.primary.frozen.active}",
             "type": "color"
           },
           "border-enabled": {
-            "value": "{modes.color.interactive.primary.legacy.default}",
+            "value": "{modes.color.interactive.primary.frozen.default}",
             "type": "color"
           },
           "border-hover": {
-            "value": "{modes.color.interactive.primary.legacy.hover}",
+            "value": "{modes.color.interactive.primary.frozen.hover}",
             "type": "color"
           },
           "label-enabled": {
-            "value": "{modes.color.interactive.primary.legacy.default}",
+            "value": "{modes.color.interactive.primary.frozen.default}",
             "type": "color"
           },
           "bg-enabled": {
@@ -60,96 +60,60 @@
         },
         "primary": {
           "bg-active": {
-            "value": "{modes.color.interactive.primary.legacy.active}",
+            "value": "{modes.color.interactive.primary.frozen.active}",
             "type": "color"
           },
           "bg-enabled": {
-            "value": "{modes.color.interactive.primary.legacy.default}",
+            "value": "{modes.color.interactive.primary.frozen.default}",
             "type": "color"
           },
           "bg-hover": {
-            "value": "{modes.color.interactive.primary.legacy.hover}",
+            "value": "{modes.color.interactive.primary.frozen.hover}",
             "type": "color"
           }
         },
         "subtle": {
           "bg-active": {
-            "value": "{modes.color.interactive.monochrome.legacy.activeAlt}",
+            "value": "{modes.color.interactive.monochrome.frozen.activeAlt}",
             "type": "color"
           },
           "bg-hover": {
-            "value": "{modes.color.interactive.monochrome.legacy.hoverAlt}",
+            "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
             "type": "color"
           },
           "label-active": {
-            "value": "{modes.color.interactive.monochrome.legacy.active}",
+            "value": "{modes.color.interactive.monochrome.frozen.active}",
             "type": "color"
           },
           "label-enabled": {
-            "value": "{modes.color.interactive.monochrome.legacy.default}",
+            "value": "{modes.color.interactive.monochrome.frozen.default}",
             "type": "color"
           },
           "label-hover": {
-            "value": "{modes.color.interactive.monochrome.legacy.withHover}",
+            "value": "{modes.color.interactive.monochrome.frozen.withHover}",
             "type": "color"
           }
         }
       }
     }
   },
-  "form": {
-    "radius": {
-      "checkbox": {
-        "value": "{global.radius.interactive.XS}",
-        "type": "borderRadius",
-        "description": "S and M checkbox"
-      },
-      "texteditorfooter": {
-        "value": "{global.radius.interactive.S}",
-        "type": "borderRadius",
-        "description": "AI text editor footer"
-      },
-      "colorpicker": {
-        "value": "{global.radius.interactive.L}",
-        "type": "borderRadius",
-        "description": "Color picker (swatch container),  "
-      },
-      "dropdown": {
-        "value": "{popover.radius.container}",
-        "type": "borderRadius",
-        "description": "REF POPOVER. Popover container."
-      },
-      "fileupload": {
-        "value": "{global.radius.interactive.S}",
-        "type": "borderRadius",
-        "description": "File input (file uploads)"
-      },
-      "fileselector": {
-        "value": "{global.radius.interactive.S}",
-        "type": "borderRadius",
-        "description": "File preview (file selector asset)"
-      },
-      "input": {
-        "value": "{global.radius.interactive.S}",
-        "type": "borderRadius",
-        "description": "Date picker input, Date range input, Dropdown select (trigger), Search, File input (draggable area), Text area, Text input"
-      },
-      "validationbar": {
-        "value": "{global.radius.interactive.XXS}",
-        "type": "borderRadius",
-        "description": "Validation bar"
-      }
-    },
+  "container": {
     "color": {
-      "typical": {
-        "border-enabled": {
-          "value": "{modes.color.interactive.dataEntry.legacy.withDefault}",
+      "interactive": {
+        "detailedicon": {
+          "bg": {
+            "value": "{modes.color.custom.frozen}",
+            "type": "color"
+          }
+        }
+      },
+      "blockquote": {
+        "border": {
+          "value": "{modes.color.interactive.primary.frozen.default}",
           "type": "color"
         }
       }
-    }
-  },
-  "container": {
+    },
     "radius": {
       "card": {
         "moderate": {
@@ -203,15 +167,81 @@
       }
     }
   },
+  "form": {
+    "radius": {
+      "checkbox": {
+        "value": "{global.radius.interactive.XS}",
+        "type": "borderRadius",
+        "description": "S and M checkbox"
+      },
+      "texteditorfooter": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "AI text editor footer"
+      },
+      "colorpicker": {
+        "value": "{global.radius.interactive.L}",
+        "type": "borderRadius",
+        "description": "Color picker (swatch container), \n"
+      },
+      "dropdown": {
+        "value": "{popover.radius.container}",
+        "type": "borderRadius",
+        "description": "REF POPOVER. Popover container."
+      },
+      "fileupload": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "File input (file uploads)"
+      },
+      "fileselector": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "File preview (file selector asset)"
+      },
+      "input": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "Date picker input, Date range input, Dropdown select (trigger), Search, File input (draggable area), Text area, Text input"
+      },
+      "validationbar": {
+        "value": "{global.radius.interactive.XXS}",
+        "type": "borderRadius",
+        "description": "Validation bar"
+      }
+    },
+    "color": {
+      "typical": {
+        "border-enabled": {
+          "value": "{modes.color.interactive.dataEntry.frozen.withDefault}",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "link": {
+    "color": {
+      "typical": {
+        "label-default": {
+          "value": "{modes.color.interactive.primary.frozen.defaultAlt}",
+          "type": "color"
+        },
+        "label-hover": {
+          "value": "{modes.color.interactive.primary.frozen.hoverAlt}",
+          "type": "color"
+        }
+      }
+    }
+  },
   "global": {
     "fontSize": {
       "adaptive": {
         "step-2": {
-          "value": "11",
+          "value": "12",
           "type": "fontSizes"
         },
         "step-1": {
-          "value": "12",
+          "value": "13",
           "type": "fontSizes"
         },
         "step0": {
@@ -237,32 +267,6 @@
         "step5": {
           "value": "24",
           "type": "fontSizes"
-        },
-        "step11": {
-          "value": "82",
-          "type": "fontSizes"
-        },
-        "heading": {
-          "step1": {
-            "value": "16",
-            "type": "fontSizes"
-          },
-          "step2": {
-            "value": "18",
-            "type": "fontSizes"
-          },
-          "step3": {
-            "value": "20",
-            "type": "fontSizes"
-          },
-          "step4": {
-            "value": "22",
-            "type": "fontSizes"
-          },
-          "step5": {
-            "value": "24",
-            "type": "fontSizes"
-          }
         }
       }
     },
@@ -305,37 +309,67 @@
   "popover": {
     "color": {
       "bg-active": {
-        "value": "{modes.color.interactive.monochrome.legacy.active}",
+        "value": "{modes.color.interactive.monochrome.frozen.active}",
         "type": "color"
       },
       "bg-activealt": {
-        "value": "{modes.color.interactive.monochrome.legacy.hoverAlt}",
+        "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
         "type": "color"
       },
       "bg-hover": {
-        "value": "{modes.color.interactive.monochrome.legacy.hoverAlt}",
+        "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
         "type": "color"
       },
       "label-activealt": {
-        "value": "{modes.color.interactive.monochrome.legacy.withHover}",
+        "value": "{modes.color.interactive.monochrome.frozen.withHover}",
         "type": "color"
       },
       "label-hover": {
-        "value": "{modes.color.interactive.monochrome.legacy.withHover}",
+        "value": "{modes.color.interactive.monochrome.frozen.withHover}",
         "type": "color"
       },
       "label-enabled": {
-        "value": "{modes.color.interactive.monochrome.legacy.default}",
+        "value": "{modes.color.interactive.monochrome.frozen.default}",
         "type": "color"
       }
     }
   },
   "status": {
+    "color": {
+      "rating": {
+        "bg-default": {
+          "value": "{modes.color.status.reviews.frozen.default}",
+          "type": "color"
+        },
+        "bg-defaultAlt": {
+          "value": "{modes.color.status.reviews.frozen.defaultAlt}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.status.reviews.frozen.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.reviews.frozen.default}",
+          "type": "color"
+        }
+      }
+    },
     "radius": {
       "pill": {
         "value": "{global.radius.container.XS}",
         "type": "borderRadius",
         "description": "Pill (outer corners)"
+      }
+    }
+  },
+  "table": {
+    "color": {
+      "row": {
+        "bg-activated": {
+          "value": "{modes.color.interactive.primary.frozen.default}",
+          "type": "color"
+        }
       }
     }
   }
