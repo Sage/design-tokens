@@ -1,5 +1,4 @@
-import { BrandTokens } from "../../brand-tokens";
-import { Decorator } from "../decorator";
+import { CssProperty } from "../../css-parser/css-parser.types";
 
 interface IPartConditions {
   isLeft: boolean
@@ -9,29 +8,20 @@ interface IPartConditions {
   part: string
 }
 
-export class MathsCalc extends Decorator {
+export class MathsCalc {
   private readonly mathChars = ['+', '-', '*', '/'];
   /**
    *
    * @param tokens Tokens to format.
    * @returns Formatted tokens.
    */
-  public override formatTokens(tokens: BrandTokens) {
+  public formatTokens(tokens: CssProperty[]) {
 
-    tokens.screenSizes.forEach((screenSize) => {
-
-      screenSize.global.forEach((token) => token.value = this.formatTokenValue(token.value));
-      screenSize.light.forEach((token) => token.value = this.formatTokenValue(token.value));
-      screenSize.dark.forEach((token) => token.value = this.formatTokenValue(token.value));
-
-      Object.keys(screenSize.components).forEach((component) => {
-        if (screenSize.components[component]) {
-          screenSize.components[component].forEach((token) => token.value = this.formatTokenValue(token.value));
-        }
-      });
+    tokens.forEach((token) => {
+      token.value = this.formatTokenValue(token.value);
     })
 
-    return super.formatTokens(tokens);
+    return tokens;
   }
 
   private formatTokenValue(value: string): string {
@@ -55,8 +45,8 @@ export class MathsCalc extends Decorator {
     const partConditions: IPartConditions[] = []
 
     valueParts.forEach((part, i) => {
-      const left = i > 0 ? valueParts[i - 1] : '';
-      const right = valueParts[i + 1] ?? '';
+      const left: string = i > 0 ? valueParts[i - 1] ?? '' : '';
+      const right: string = valueParts[i + 1] ?? '';
 
       const conditions = {
         part,
