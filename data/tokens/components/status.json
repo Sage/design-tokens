@@ -1,0 +1,552 @@
+{
+  "status": {
+    "color": {
+      "none": {
+        "value": "{modes.color.none}",
+        "type": "color",
+        "description": "transparent override used for hiding colors when needed."
+      },
+      "bg-default": {
+        "value": "{modes.color.generic.bg.nought}",
+        "type": "color"
+      },
+      "bg-readonly": {
+        "value": "{modes.color.status.inactive.default}",
+        "type": "color",
+        "description": "Pill (all types, readonly, when nested in disabled parent components)"
+      },
+      "border-readonly": {
+        "value": "{modes.color.status.inactive.default}",
+        "type": "color",
+        "description": "Pill (all types, readonly, when nested in disabled parent components)"
+      },
+      "icon-default": {
+        "value": "{modes.color.generic.bg.nought}",
+        "type": "color",
+        "description": "Decorative message icons"
+      },
+      "label-default": {
+        "value": "{modes.color.interactive.monochrome.generic.withDefault}",
+        "type": "color"
+      },
+      "label-readonly": {
+        "value": "{modes.color.interactive.monochrome.generic.withDefault}",
+        "type": "color",
+        "description": "Pill (all types, readonly, when nested in disabled parent components)"
+      },
+      "label-hover": {
+        "value": "{modes.color.status.content.withHover}",
+        "type": "color"
+      },
+      "labelAlt-default": {
+        "value": "{modes.color.status.content.withDefaultAlt}",
+        "type": "color"
+      },
+      "labelAlt-readonly": {
+        "value": "{modes.color.generic.content.firm}",
+        "type": "color",
+        "description": "Pill (all types, readonly, when nested in disabled parent components)"
+      },
+      "labelAlt-hover": {
+        "value": "{modes.color.status.content.withHoverAlt}",
+        "type": "color"
+      },
+      "text": {
+        "value": "{modes.color.status.content.withHoverAlt}",
+        "type": "color",
+        "description": "Message text."
+      },
+      "AI": {
+        "bg-default": {
+          "value": "{modes.color.status.ai.defaultAlt}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.ai.defaultAlt}",
+          "type": "color"
+        }
+      },
+      "error": {
+        "bg-default": {
+          "value": "{modes.color.status.negative.default}",
+          "type": "color"
+        },
+        "bgAlt-default": {
+          "value": "{modes.color.status.negative.defaultAlt}",
+          "type": "color",
+          "description": "Subtle message bg"
+        },
+        "bgAlt-hover": {
+          "value": "{modes.color.status.negative.hoverAlt}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.status.negative.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.negative.default}",
+          "type": "color"
+        }
+      },
+      "info": {
+        "bg-default": {
+          "value": "{modes.color.status.info.default}",
+          "type": "color"
+        },
+        "bgAlt-default": {
+          "value": "{modes.color.status.info.defaultAlt}",
+          "type": "color",
+          "description": "Subtle message bg"
+        },
+        "bgAlt-hover": {
+          "value": "{modes.color.status.info.hoverAlt}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.status.info.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.info.default}",
+          "type": "color"
+        }
+      },
+      "neutral": {
+        "bg-default": {
+          "value": "{modes.color.status.neutral.default}",
+          "type": "color"
+        },
+        "bgAlt-default": {
+          "value": "{modes.color.status.neutral.defaultAlt}",
+          "type": "color",
+          "description": "Subtle message bg"
+        },
+        "bgAlt-hover": {
+          "value": "{modes.color.status.neutral.hoverAlt}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.status.neutral.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.neutral.default}",
+          "type": "color"
+        }
+      },
+      "success": {
+        "bg-default": {
+          "value": "{modes.color.status.success.default}",
+          "type": "color"
+        },
+        "bgAlt-default": {
+          "value": "{modes.color.status.success.defaultAlt}",
+          "type": "color",
+          "description": "Subtle message bg"
+        },
+        "bgAlt-hover": {
+          "value": "{modes.color.status.success.hoverAlt}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.status.success.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.success.default}",
+          "type": "color"
+        }
+      },
+      "warning": {
+        "bg-default": {
+          "value": "{modes.color.status.caution.default}",
+          "type": "color"
+        },
+        "bgAlt-default": {
+          "value": "{modes.color.status.caution.defaultAlt}",
+          "type": "color",
+          "description": "Subtle message bg"
+        },
+        "bgAlt-hover": {
+          "value": "{modes.color.status.caution.hoverAlt}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.status.caution.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.caution.default}",
+          "type": "color"
+        }
+      },
+      "callout": {
+        "bgAlt-default": {
+          "value": "{modes.color.status.callout.defaultAlt}",
+          "type": "color",
+          "description": "Subtle message bg"
+        },
+        "bgAlt-hover": {
+          "value": "{modes.color.status.callout.hoverAlt}",
+          "type": "color",
+          "description": "Subtle message bg"
+        }
+      },
+      "rating": {
+        "bg-default": {
+          "value": "{modes.color.status.reviews.default}",
+          "type": "color"
+        },
+        "bg-defaultAlt": {
+          "value": "{modes.color.status.reviews.defaultAlt}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.status.reviews.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.reviews.default}",
+          "type": "color"
+        }
+      }
+    },
+    "size": {
+      "pill": {
+        "S": {
+          "value": "{global.size.macro.XS} - {global.size.micro.XS}",
+          "type": "sizing",
+          "description": "Min height"
+        },
+        "M": {
+          "value": "{global.size.macro.XS}",
+          "type": "sizing",
+          "description": "Min height and removable button."
+        },
+        "L": {
+          "value": "{global.size.macro.XS} + {global.size.micro.XS}",
+          "type": "sizing",
+          "description": "Min height and removable button"
+        }
+      },
+      "message": {
+        "statuscontainer": {
+          "M": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "message and toast icon container width"
+          },
+          "L": {
+            "value": "{global.size.macro.M}",
+            "type": "sizing",
+            "description": "message and toast icon container width"
+          }
+        },
+        "messagecontent": {
+          "maxwidth": {
+            "value": "{container.size.responsive.XXXL}",
+            "type": "sizing",
+            "description": "max width of content inside message to make sure there are roughly 12 works per line"
+          }
+        },
+        "global": {
+          "M": {
+            "value": "{global.size.macro.M}",
+            "type": "sizing",
+            "description": "Global message minheight"
+          }
+        }
+      },
+      "icon": {
+        "M": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
+        }
+      }
+    },
+    "radius": {
+      "none": {
+        "value": "{global.radius.none}",
+        "type": "borderRadius",
+        "description": "Pill (embedded element inner corners)"
+      },
+      "message": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius",
+        "description": "Message"
+      },
+      "pill": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius",
+        "description": "Pill (outer corners)"
+      }
+    },
+    "borderwidth": {
+      "pill": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "Outlined Pill border"
+      },
+      "message": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Contextual message and AI inline border"
+      }
+    },
+    "space": {
+      "none": {
+        "value": "{global.space.none}",
+        "type": "spacing"
+      },
+      "integral": {
+        "x": {
+          "value": "{global.space.micro.S}",
+          "type": "spacing",
+          "description": "Space between pill label and icon. Space between message text and link."
+        }
+      },
+      "pill": {
+        "x": {
+          "S": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing"
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing"
+          }
+        }
+      },
+      "tooltip": {
+        "x": {
+          "value": "{global.space.micro.XXL}",
+          "type": "spacing",
+          "description": "Right left padding.\n"
+        },
+        "y": {
+          "value": "{global.space.micro.L}",
+          "type": "spacing",
+          "description": "Top bottom padding.\n"
+        }
+      },
+      "message": {
+        "contextual": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "Left and right padding on Medium message"
+            },
+            "L": {
+              "value": "{global.space.macro.S}",
+              "type": "spacing",
+              "description": "Left and right paddding on Large Message"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "Top and bottom padding on Medium message"
+            },
+            "L": {
+              "value": "{global.space.macro.S}",
+              "type": "spacing",
+              "description": "Top and bottom paddding on Large Message"
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Gap between icon and text in subtle message, and between text and action button in typical message"
+            },
+            "L": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Gap between icon and text in subtle message, and between text and action button in typical message"
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.XS}",
+              "type": "spacing",
+              "description": "Gap between heading and other content"
+            },
+            "L": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Gap between heading and other content"
+            }
+          },
+          "subtle": {
+            "iconwrapper": {
+              "y": {
+                "M": {
+                  "value": "{global.space.micro.XS}",
+                  "type": "spacing",
+                  "description": "space above icon on subtle message for medium variant"
+                },
+                "L": {
+                  "value": "{global.space.micro.S}",
+                  "type": "spacing",
+                  "description": "space above icon on subtle message for large variant"
+                }
+              }
+            }
+          }
+        },
+        "global": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.L}",
+              "type": "spacing",
+              "description": "Left and right padding on global message"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Top and bottom padding on global message."
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Space between icon wrapper and text wrapper"
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Gap between heading and other content."
+            }
+          },
+          "CTA": {
+            "Y": {
+              "M": {
+                "value": "{global.space.macro.XS}",
+                "type": "spacing",
+                "description": "Top and bottom padding on global message for countdown"
+              }
+            },
+            "yg": {
+              "M": {
+                "value": "{global.space.macro.M}",
+                "type": "spacing",
+                "description": "Gap between countdown spacing for global message"
+              }
+            }
+          },
+          "iconwrapper": {
+            "y": {
+              "M": {
+                "value": "{global.space.micro.XXL}",
+                "type": "spacing",
+                "description": "Top padding on global message icon wrapper."
+              }
+            }
+          }
+        }
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.adaptive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.moderate.L}",
+            "type": "typography"
+          }
+        },
+        "heading": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        }
+      },
+      "responsive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.moderate.L}",
+            "type": "typography"
+          }
+        },
+        "heading": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.L}",
+            "type": "typography"
+          }
+        }
+      }
+    }
+  }
+}

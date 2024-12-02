@@ -127,64 +127,88 @@
       }
     },
     "color": {
-      "inverse": {
-        "bg-default": {
-          "value": "{modes.color.generic.bg.inverse.nought}",
-          "type": "color"
-        },
-        "text-alt": {
-          "value": "{modes.color.generic.content.inverse.moderate}",
-          "type": "color",
-          "description": "for subheadings etc"
-        },
-        "text-default": {
-          "value": "{modes.color.generic.content.inverse.harsh}",
-          "type": "color",
-          "description": "for headings, paragraph text etc "
-        }
+      "bg-default": {
+        "value": "{modes.color.generic.backdrop.nought}",
+        "type": "color"
       },
-      "standard": {
-        "bg-alt": {
-          "value": "{modes.color.generic.bg.standard.faint}",
-          "type": "color"
-        },
-        "bg-default": {
-          "value": "{modes.color.generic.bg.standard.nought}",
-          "type": "color"
-        },
-        "text-alt": {
-          "value": "{modes.color.generic.content.standard.moderate}",
-          "type": "color",
-          "description": "for subheadings etc"
-        },
-        "text-default": {
-          "value": "{modes.color.generic.content.standard.harsh}",
-          "type": "color",
-          "description": "for headings, paragraph text etc "
-        }
+      "bg-alt": {
+        "value": "{modes.color.generic.backdrop.faint}",
+        "type": "color"
+      },
+      "text-alt": {
+        "value": "{modes.color.generic.content.moderate}",
+        "type": "color",
+        "description": "for subheadings etc"
+      },
+      "text-default": {
+        "value": "{modes.color.generic.content.harsh}",
+        "type": "color",
+        "description": "for headings, paragraph text etc "
       }
     },
     "typography": {
-      "H1": {
-        "value": "{global.typography.responsive.heading.M}",
-        "type": "typography"
-      },
-      "H2": {
-        "value": "{global.typography.responsive.heading.S}",
-        "type": "typography"
-      },
-      "H3": {
-        "value": "{global.typography.responsive.heading.XS}",
-        "type": "typography"
-      },
-      "H4": {
-        "value": "{global.typography.responsive.subheading.M}",
-        "type": "typography"
-      },
-      "p": {
-        "standard": {
-          "value": "{global.typography.responsive.body.S}",
+      "responsive": {
+        "H1": {
+          "value": "{global.typography.responsive.heading.L}",
           "type": "typography"
+        },
+        "H2": {
+          "value": "{global.typography.responsive.heading.M}",
+          "type": "typography"
+        },
+        "H3": {
+          "value": "{global.typography.responsive.heading.S}",
+          "type": "typography"
+        },
+        "H4": {
+          "value": "{global.typography.responsive.subheading.L}",
+          "type": "typography"
+        },
+        "H5": {
+          "value": "{global.typography.responsive.subheading.M}",
+          "type": "typography"
+        },
+        "p": {
+          "typical": {
+            "value": "{global.typography.responsive.body.S}",
+            "type": "typography"
+          },
+          "large": {
+            "value": "{global.typography.responsive.body.S}",
+            "type": "typography"
+          }
+        }
+      },
+      "adaptive": {
+        "H1": {
+          "value": "{global.typography.adaptive.heading.L}",
+          "type": "typography"
+        },
+        "H2": {
+          "value": "{global.typography.adaptive.heading.M}",
+          "type": "typography"
+        },
+        "H3": {
+          "value": "{global.typography.adaptive.heading.S}",
+          "type": "typography"
+        },
+        "H4": {
+          "value": "{global.typography.adaptive.subheading.L}",
+          "type": "typography"
+        },
+        "H5": {
+          "value": "{global.typography.adaptive.subheading.M}",
+          "type": "typography"
+        },
+        "p": {
+          "typical": {
+            "value": "{global.typography.adaptive.body.S}",
+            "type": "typography"
+          },
+          "large": {
+            "value": "{global.typography.adaptive.body.S}",
+            "type": "typography"
+          }
         }
       }
     }

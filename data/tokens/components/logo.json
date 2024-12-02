@@ -1,54 +1,72 @@
 {
   "logo": {
     "color": {
-      "inverse": {
-        "sage": {
-          "bg-default": {
-            "value": "{modes.color.brandreference.custom2}",
-            "type": "color",
-            "description": "sage logo"
+      "sage": {
+        "bg-default": {
+          "value": "{modes.color.brand.default}",
+          "type": "color",
+          "description": "sage logo"
+        },
+        "bg-alt": {
+          "value": "{modes.color.brand.defaultAlt}",
+          "type": "color"
+        }
+      },
+      "trust": {
+        "bg-default": {
+          "value": "{modes.color.status.success.default}",
+          "type": "color",
+          "description": "filled"
+        },
+        "outline": {
+          "value": "{modes.color.generic.content.extreme}",
+          "type": "color"
+        }
+      },
+      "copilot": {
+        "noBg": {
+          "bg-S": {
+            "value": "{modes.color.brand.copilot.noBg.S}",
+            "type": "color"
           },
-          "bg-alt": {
-            "value": "{modes.color.generic.content.inverse.extreme}",
+          "bg-star": {
+            "value": "{modes.color.brand.copilot.noBg.star}",
+            "type": "color"
+          },
+          "fg-default": {
+            "value": "{modes.color.brand.copilot.noBg.mono}",
             "type": "color"
           }
         },
-        "trust": {
-          "bg-default": {
-            "value": "{modes.color.brandreference.custom2}",
-            "type": "color",
-            "description": "filled"
+        "withBg": {
+          "bg-S": {
+            "value": "{modes.color.brand.copilot.withBg.S}",
+            "type": "color"
           },
-          "bg-alt": {
-            "value": "{modes.color.generic.content.inverse.extreme}",
-            "type": "color",
-            "description": "sage logo"
+          "bg-star": {
+            "value": "{modes.color.brand.copilot.withBg.star}",
+            "type": "color"
+          },
+          "bg-default": {
+            "value": "{modes.color.brand.copilot.withBg.bg}",
+            "type": "color"
           }
         }
       },
-      "standard": {
-        "sage": {
-          "bg-default": {
-            "value": "{modes.color.generic.content.standard.extreme}",
-            "type": "color",
-            "description": "sage logo"
-          },
-          "bg-alt": {
-            "value": "{modes.color.generic.content.standard.firm}",
-            "type": "color"
-          }
+      "AIIdentifier": {
+        "bg-star": {
+          "value": "{modes.color.brand.copilot.AIIdentifier.default}",
+          "type": "color",
+          "description": "star bg color"
         },
-        "trust": {
-          "bg-default": {
-            "value": "{modes.color.status.success.standard.default}",
-            "type": "color",
-            "description": "filled"
-          },
-          "bg-alt": {
-            "value": "{modes.color.generic.content.standard.extreme}",
-            "type": "color",
-            "description": "sage logo"
-          }
+        "bg-dot": {
+          "value": "{modes.color.brand.copilot.AIIdentifier.withDefault}",
+          "type": "color"
+        },
+        "outline": {
+          "value": "{modes.color.brand.copilot.AIIdentifier.default}",
+          "type": "color",
+          "description": "star outline variant"
         }
       }
     },
