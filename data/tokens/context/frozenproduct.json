@@ -2,6 +2,20 @@
   "button": {
     "color": {
       "typical": {
+        "primary": {
+          "bg-active": {
+            "value": "{modes.color.interactive.primary.frozen.active}",
+            "type": "color"
+          },
+          "bg-enabled": {
+            "value": "{modes.color.interactive.primary.frozen.default}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.interactive.primary.frozen.hover}",
+            "type": "color"
+          }
+        },
         "secondary": {
           "bg-active": {
             "value": "{modes.color.interactive.primary.frozen.active}",
@@ -26,49 +40,13 @@
           "label-enabled": {
             "value": "{modes.color.interactive.primary.frozen.default}",
             "type": "color"
-          }
-        },
-        "tertiary": {
-          "bg-active": {
-            "value": "{modes.color.interactive.primary.frozen.active}",
+          },
+          "label-hover": {
+            "value": "{modes.color.interactive.monochrome.frozen.withHoverAlt}",
             "type": "color"
           },
-          "bg-hover": {
-            "value": "{modes.color.interactive.primary.frozen.hover}",
-            "type": "color"
-          },
-          "border-active": {
-            "value": "{modes.color.interactive.primary.frozen.active}",
-            "type": "color"
-          },
-          "border-enabled": {
-            "value": "{modes.color.interactive.primary.frozen.default}",
-            "type": "color"
-          },
-          "border-hover": {
-            "value": "{modes.color.interactive.primary.frozen.hover}",
-            "type": "color"
-          },
-          "label-enabled": {
-            "value": "{modes.color.interactive.primary.frozen.default}",
-            "type": "color"
-          },
-          "bg-enabled": {
-            "value": "{modes.color.none}",
-            "type": "color"
-          }
-        },
-        "primary": {
-          "bg-active": {
-            "value": "{modes.color.interactive.primary.frozen.active}",
-            "type": "color"
-          },
-          "bg-enabled": {
-            "value": "{modes.color.interactive.primary.frozen.default}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.interactive.primary.frozen.hover}",
+          "label-active": {
+            "value": "{modes.color.interactive.monochrome.frozen.withActive}",
             "type": "color"
           }
         },
@@ -91,6 +69,50 @@
           },
           "label-hover": {
             "value": "{modes.color.interactive.monochrome.frozen.withHover}",
+            "type": "color"
+          }
+        },
+        "tertiary": {
+          "bg-active": {
+            "value": "{modes.color.interactive.primary.frozen.active}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.interactive.primary.frozen.hover}",
+            "type": "color"
+          },
+          "border-active": {
+            "value": "{modes.color.interactive.primary.frozen.active}",
+            "type": "color"
+          },
+          "border-enabled": {
+            "value": "{modes.color.none}",
+            "type": "color"
+          },
+          "border-hover": {
+            "value": "{modes.color.interactive.primary.frozen.hover}",
+            "type": "color"
+          },
+          "label-enabled": {
+            "value": "{modes.color.interactive.primary.frozen.default}",
+            "type": "color"
+          },
+          "bg-enabled": {
+            "value": "{modes.color.none}",
+            "type": "color"
+          },
+          "label-hover": {
+            "value": "{modes.color.interactive.monochrome.frozen.withHoverAlt}",
+            "type": "color"
+          },
+          "label-active": {
+            "value": "{modes.color.interactive.monochrome.frozen.withActive}",
+            "type": "color"
+          }
+        },
+        "toggle": {
+          "label-hover": {
+            "value": "{modes.color.interactive.monochrome.generic.withHover}",
             "type": "color"
           }
         }
@@ -216,6 +238,20 @@
           "value": "{modes.color.interactive.dataEntry.frozen.withDefault}",
           "type": "color"
         }
+      },
+      "switch": {
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.frozen.default}",
+          "type": "color"
+        },
+        "border-enabled": {
+          "value": "{modes.color.interactive.dataEntry.frozen.withDefault}",
+          "type": "color"
+        },
+        "fg-enabled": {
+          "value": "{modes.color.interactive.dataEntry.frozen.withDefault}",
+          "type": "color"
+        }
       }
     }
   },
@@ -283,20 +319,6 @@
       }
     }
   },
-  "tab": {
-    "radius": {
-      "M": {
-        "value": "{global.radius.interactive.S}",
-        "type": "borderRadius",
-        "description": "Tab horizontal - top corners. Tab vertical - left corners."
-      },
-      "L": {
-        "value": "{global.radius.interactive.S}",
-        "type": "borderRadius",
-        "description": "Tab horizontal - top corners. Tab vertical - left corners."
-      }
-    }
-  },
   "nav": {
     "radius": {
       "menumodal": {
@@ -325,12 +347,27 @@
         "type": "color"
       },
       "label-hover": {
-        "value": "{modes.color.interactive.monochrome.frozen.withHover}",
+        "value": "{modes.color.interactive.monochrome.generic.default}",
         "type": "color"
       },
       "label-enabled": {
-        "value": "{modes.color.interactive.monochrome.frozen.default}",
+        "value": "{modes.color.interactive.monochrome.generic.default}",
         "type": "color"
+      }
+    }
+  },
+  "progress": {
+    "color": {
+      "loader": {
+        "bg-default": {
+          "value": "{modes.color.interactive.progress.frozen.bg}",
+          "type": "color"
+        },
+        "fg-default": {
+          "value": "{modes.color.interactive.primary.frozen.default}",
+          "type": "color",
+          "description": "used for loader standard loader spinner"
+        }
       }
     }
   },
@@ -360,6 +397,43 @@
         "value": "{global.radius.container.XS}",
         "type": "borderRadius",
         "description": "Pill (outer corners)"
+      }
+    }
+  },
+  "tab": {
+    "radius": {
+      "M": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "Tab horizontal - top corners. Tab vertical - left corners."
+      },
+      "L": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "Tab horizontal - top corners. Tab vertical - left corners."
+      }
+    },
+    "color": {
+      "bg-enabled": {
+        "value": "{modes.color.interactive.monochrome.generic.withDefault}",
+        "type": "color"
+      },
+      "bg-hover": {
+        "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
+        "type": "color",
+        "description": "For anchor nav, not tab."
+      },
+      "border-active": {
+        "value": "{modes.color.interactive.primary.frozen.default}",
+        "type": "color"
+      },
+      "border-enabled": {
+        "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
+        "type": "color"
+      },
+      "border-hover": {
+        "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
+        "type": "color"
       }
     }
   },
