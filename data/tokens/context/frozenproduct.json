@@ -305,43 +305,6 @@
       }
     }
   },
-  "tab": {
-    "radius": {
-      "M": {
-        "value": "{global.radius.interactive.S}",
-        "type": "borderRadius",
-        "description": "Tab horizontal - top corners. Tab vertical - left corners."
-      },
-      "L": {
-        "value": "{global.radius.interactive.S}",
-        "type": "borderRadius",
-        "description": "Tab horizontal - top corners. Tab vertical - left corners."
-      }
-    },
-    "color": {
-      "bg-enabled": {
-        "value": "{modes.color.interactive.monochrome.generic.withDefault}",
-        "type": "color"
-      },
-      "bg-hover": {
-        "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
-        "type": "color",
-        "description": "For anchor nav, not tab."
-      },
-      "border-active": {
-        "value": "{modes.color.interactive.primary.frozen.default}",
-        "type": "color"
-      },
-      "border-enabled": {
-        "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
-        "type": "color"
-      },
-      "border-hover": {
-        "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
-        "type": "color"
-      }
-    }
-  },
   "nav": {
     "radius": {
       "menumodal": {
@@ -379,6 +342,21 @@
       }
     }
   },
+  "progress": {
+    "color": {
+      "loader": {
+        "bg-default": {
+          "value": "{modes.color.interactive.progress.frozen.bg}",
+          "type": "color"
+        },
+        "fg-default": {
+          "value": "{modes.color.interactive.primary.frozen.default}",
+          "type": "color",
+          "description": "used for loader standard loader spinner"
+        }
+      }
+    }
+  },
   "status": {
     "color": {
       "rating": {
@@ -408,27 +386,49 @@
       }
     }
   },
+  "tab": {
+    "radius": {
+      "M": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "Tab horizontal - top corners. Tab vertical - left corners."
+      },
+      "L": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "Tab horizontal - top corners. Tab vertical - left corners."
+      }
+    },
+    "color": {
+      "bg-enabled": {
+        "value": "{modes.color.interactive.monochrome.generic.withDefault}",
+        "type": "color"
+      },
+      "bg-hover": {
+        "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
+        "type": "color",
+        "description": "For anchor nav, not tab."
+      },
+      "border-active": {
+        "value": "{modes.color.interactive.primary.frozen.default}",
+        "type": "color"
+      },
+      "border-enabled": {
+        "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
+        "type": "color"
+      },
+      "border-hover": {
+        "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
+        "type": "color"
+      }
+    }
+  },
   "table": {
     "color": {
       "row": {
         "bg-activated": {
           "value": "{modes.color.interactive.primary.frozen.default}",
           "type": "color"
-        }
-      }
-    }
-  },
-  "progress": {
-    "color": {
-      "loader": {
-        "bg-default": {
-          "value": "{modes.color.interactive.progress.frozen.bg}",
-          "type": "color"
-        },
-        "fg-default": {
-          "value": "{modes.color.interactive.primary.frozen.default}",
-          "type": "color",
-          "description": "used for loader standard loader spinner"
         }
       }
     }
