@@ -590,6 +590,23 @@
             "value": "{modes.color.generic.content.moderate}",
             "type": "color",
             "description": "Readonly icon inside form inputs. "
+          },
+          "frozen": {
+            "defaultAlt": {
+              "value": "{primitives.colors.navy}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.9",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "description": "Disabled input and button backgrounds, button borders and input backgrounds."
+            }
           }
         },
         "monochrome": {
