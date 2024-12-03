@@ -183,6 +183,11 @@
                 }
               }
             }
+          },
+          "extreme": {
+            "value": "{primitives.colors.black}",
+            "type": "color",
+            "description": "Consumed within generic monochrome, progress"
           }
         },
         "content": {
@@ -633,8 +638,16 @@
                 }
               }
             },
+            "withActive": {
+              "value": "{modes.color.generic.fg.nought}",
+              "type": "color"
+            },
             "withHover": {
               "value": "{modes.color.interactive.monochrome.frozen.active}",
+              "type": "color"
+            },
+            "withHoverAlt": {
+              "value": "{modes.color.generic.fg.nought}",
               "type": "color"
             }
           },
