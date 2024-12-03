@@ -1,7 +1,7 @@
 import { expect } from "chai";
-import { ContextTokens } from "../../context-tokens";
-import { ScreenSizeTokens } from "../../screen-size-tokens";
-import { LightDarkModeFormatter } from "./light-dark-mode-formatter";
+import { ContextTokens } from "../../context-tokens.js";
+import { ScreenSizeTokens } from "../../screen-size-tokens.js";
+import { LightDarkModeFormatter } from "./light-dark-mode-formatter.js";
 
 describe("LightDarkModeFormatter", () => {
   const lightDarkModeFormatter = new LightDarkModeFormatter();

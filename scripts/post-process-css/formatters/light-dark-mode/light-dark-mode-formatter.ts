@@ -1,8 +1,7 @@
-import { ContextTokens } from "../../context-tokens";
-import { CssProperty } from "../../css-parser/css-parser.types";
-import { getSymetricalDifference } from "../../helpers";
-import { ScreenSizeTokens } from "../../screen-size-tokens";
-import { Decorator } from "../decorator";
+import { ContextTokens } from "../../context-tokens.js";
+import { getSymetricalDifference } from "../../helpers.js";
+import { ScreenSizeTokens } from "../../screen-size-tokens.js";
+import { Decorator } from "../decorator.js";
 
 export class LightDarkModeFormatter extends Decorator {
   /**

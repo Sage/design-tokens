@@ -1,16 +1,20 @@
 import * as fs from "fs";
 import * as path from "path";
+import { fileURLToPath } from 'url';
 
-import { CssProperty } from "./css-parser/css-parser.types";
-import { CssParser } from "./css-parser/css-parser";
-import { ScreenSizeTokens } from "./screen-size-tokens";
-import { ContextTokens } from "./context-tokens";
+import { CssProperty } from "./css-parser/css-parser.types.js";
+import { CssParser } from "./css-parser/css-parser.js";
+import { ScreenSizeTokens } from "./screen-size-tokens.js";
+import { ContextTokens } from "./context-tokens.js";
 import {
   ConsolidateScreenSizes,
   FilterTypographyTokens,
   LightDarkModeFormatter,
   MathsCalc
 } from "./formatters/";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const cssParser = new CssParser();
 
@@ -29,18 +33,18 @@ fs.readdirSync(cssDistPath, { recursive: true, withFileTypes: true }).filter((fi
   const lines: string[] = [];
   lines.push(`:root {`);
 
-    if (tokens.length > 0) {
-      lines.push(
-        tokens
-          .map(
-            (p) =>
-              `${space}${p.name}: ${p.value};${
-                p.comment ? ` ${p.comment}` : ""
-              }`
-          )
-          .join("\n")
-      );
-    }
+  if (tokens.length > 0) {
+    lines.push(
+      tokens
+        .map(
+          (p) =>
+            `${space}${p.name}: ${p.value};${
+              p.comment ? ` ${p.comment}` : ""
+            }`
+        )
+        .join("\n")
+    );
+  }
 
   lines.push(`}`);
   lines.push("");

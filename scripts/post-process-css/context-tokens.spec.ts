@@ -1,6 +1,6 @@
 import { expect } from "chai";
-import { ContextTokens } from "./context-tokens";
-import { ScreenSizeTokens } from "./screen-size-tokens";
+import { ContextTokens } from "./context-tokens.js";
+import { ScreenSizeTokens } from "./screen-size-tokens.js";
 
 describe("ContextTokens", () => {
   describe("constructor", () => {

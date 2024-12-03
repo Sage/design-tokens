@@ -1,6 +1,6 @@
-import { ContextTokens } from "../../context-tokens";
-import { CssProperty } from "../../css-parser/css-parser.types";
-import { Decorator } from "../decorator";
+import { ContextTokens } from "../../context-tokens.js";
+import { CssProperty } from "../../css-parser/css-parser.types.js";
+import { Decorator } from "../decorator.js";
 
 interface ListObject {
   name: string;

@@ -1,4 +1,4 @@
-import { ContextTokens } from "../context-tokens";
+import { ContextTokens } from "../context-tokens.js";
 
 export interface Component {
   formatTokens(contents: ContextTokens): ContextTokens;
