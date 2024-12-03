@@ -1,13 +1,17 @@
 import * as fs from "fs";
 import * as path from "path";
+import { fileURLToPath } from 'url';
 
-import { CssProperty } from "./css-parser/css-parser.types";
-import { CssParser } from "./css-parser/css-parser";
-import { ScreenSizeTokens } from "./screen-size-tokens";
-import { BrandTokens } from "./brand-tokens";
-import { ConsolidateScreenSizes } from "./formatters/consolidate-screen-sizes/consolidate-screen-sizes";
-import { LightDarkModeFormatter } from "./formatters/light-dark-mode/light-dark-mode-formatter";
+import { CssProperty } from "./css-parser/css-parser.types.js";
+import { CssParser } from "./css-parser/css-parser.js";
+import { ScreenSizeTokens } from "./screen-size-tokens.js";
+import { BrandTokens } from "./brand-tokens.js";
+import { ConsolidateScreenSizes } from "./formatters/consolidate-screen-sizes/consolidate-screen-sizes.js";
+import { LightDarkModeFormatter } from "./formatters/light-dark-mode/light-dark-mode-formatter.js";
 import { MathsCalc } from "./formatters/maths-calc/maths-calc";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const cssParser = new CssParser();
 
@@ -26,18 +30,18 @@ fs.readdirSync(cssDistPath, { recursive: true, withFileTypes: true }).filter((fi
   const lines: string[] = [];
   lines.push(`:root {`);
 
-    if (tokens.length > 0) {
-      lines.push(
-        tokens
-          .map(
-            (p) =>
-              `${space}${p.name}: ${p.value};${
-                p.comment ? ` ${p.comment}` : ""
-              }`
-          )
-          .join("\n")
-      );
-    }
+  if (tokens.length > 0) {
+    lines.push(
+      tokens
+        .map(
+          (p) =>
+            `${space}${p.name}: ${p.value};${
+              p.comment ? ` ${p.comment}` : ""
+            }`
+        )
+        .join("\n")
+    );
+  }
 
   lines.push(`}`);
   lines.push("");

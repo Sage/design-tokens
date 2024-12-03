@@ -1,8 +1,8 @@
 import { expect } from "chai";
-import { ConsolidateScreenSizes } from "./consolidate-screen-sizes";
-import { BrandTokens } from "../../brand-tokens";
-import { ScreenSizeTokens } from "../../screen-size-tokens";
-import { CssProperty } from "../../css-parser/css-parser.types";
+import { ConsolidateScreenSizes } from "./consolidate-screen-sizes.js";
+import { BrandTokens } from "../../brand-tokens.js";
+import { ScreenSizeTokens } from "../../screen-size-tokens.js";
+import { CssProperty } from "../../css-parser/css-parser.types.js";
 
 describe("ConsolidateScreenSizes", () => {
   const consolidateScreenSizes = new ConsolidateScreenSizes();

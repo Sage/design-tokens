@@ -1,6 +1,6 @@
 import { expect } from "chai";
-import { BrandTokens } from "./brand-tokens";
-import { ScreenSizeTokens } from "./screen-size-tokens";
+import { BrandTokens } from "./brand-tokens.js";
+import { ScreenSizeTokens } from "./screen-size-tokens.js";
 
 describe("BrandTokens", () => {
   describe("constructor", () => {
