@@ -59,7 +59,6 @@ const getGlobalConfig = (contextName, sizeName) => {
     source: [
       './data/tokens/primitives.json',
       './data/tokens/global/*.json',
-      `./data/tokens/screensize/${contextName}.json`,
       `./data/tokens/screensize/${sizeName}.json`
     ],
     platforms: {
@@ -119,7 +118,7 @@ const getModeConfig = (contextName, modeName, sizeName) => {
     source: [
       './data/tokens/primitives.json',
       './data/tokens/global/*.json',
-      `./data/tokens/screensize/${contextName}.json`,
+      `./data/tokens/screensize/${sizeName}.json`,
       `./data/tokens/modes/${modeName}.json`,
       './data/tokens/components/*.json'
     ],

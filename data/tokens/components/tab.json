@@ -20,12 +20,12 @@
       },
       "baseline": {
         "M": {
-          "value": "{global.size.micro.XXS}",
+          "value": "{global.size.micro.XS}",
           "type": "sizing",
           "description": "Thickness of baseline."
         },
         "L": {
-          "value": "{global.size.micro.XXS}",
+          "value": "{global.size.micro.XS}",
           "type": "sizing",
           "description": "Thickness of baseline."
         }
@@ -92,13 +92,18 @@
       }
     },
     "color": {
+      "bg-enabled": {
+        "value": "{modes.color.none}",
+        "type": "color",
+        "description": "For anchor nav, not tab."
+      },
       "bg-hover": {
-        "value": "{modes.color.interactive.monochrome.hoverAlt}",
+        "value": "{modes.color.interactive.monochrome.generic.hoverAlt}",
         "type": "color",
         "description": "For anchor nav, not tab."
       },
       "border-active": {
-        "value": "{modes.color.interactive.monochrome.active}",
+        "value": "{modes.color.interactive.monochrome.generic.active}",
         "type": "color"
       },
       "border-enabled": {
@@ -110,27 +115,27 @@
         "type": "color"
       },
       "icon-enabled": {
-        "value": "{modes.color.interactive.monochrome.defaultAlt}",
+        "value": "{modes.color.interactive.monochrome.generic.defaultAlt}",
         "type": "color"
       },
       "icon-hover": {
-        "value": "{modes.color.interactive.monochrome.withHover}",
+        "value": "{modes.color.interactive.monochrome.generic.withHover}",
         "type": "color"
       },
       "label-active": {
-        "value": "{modes.color.interactive.monochrome.active}",
+        "value": "{modes.color.interactive.monochrome.generic.active}",
         "type": "color"
       },
       "icon-active": {
-        "value": "{modes.color.interactive.monochrome.active}",
+        "value": "{modes.color.interactive.monochrome.generic.active}",
         "type": "color"
       },
       "label-enabled": {
-        "value": "{modes.color.interactive.monochrome.defaultAlt}",
+        "value": "{modes.color.interactive.monochrome.generic.defaultAlt}",
         "type": "color"
       },
       "label-hover": {
-        "value": "{modes.color.interactive.monochrome.withHover}",
+        "value": "{modes.color.interactive.monochrome.generic.withHover}",
         "type": "color"
       },
       "navigation": {
@@ -158,11 +163,11 @@
           "type": "color"
         },
         "label-error": {
-          "value": "{modes.color.interactive.monochrome.defaultAlt}",
+          "value": "{modes.color.interactive.monochrome.generic.defaultAlt}",
           "type": "color"
         },
         "label-warning": {
-          "value": "{modes.color.interactive.monochrome.defaultAlt}",
+          "value": "{modes.color.interactive.monochrome.generic.defaultAlt}",
           "type": "color"
         }
       }
@@ -208,9 +213,16 @@
     },
     "borderwidth": {
       "navigation": {
-        "value": "{global.borderwidth.S}",
-        "type": "borderWidth",
-        "description": "Tab (enabled and hover bottom border)"
+        "bottom": {
+          "value": "{global.borderwidth.L}",
+          "type": "borderWidth",
+          "description": "Tab (enabled and hover bottom border)"
+        },
+        "side": {
+          "value": "{global.borderwidth.S}",
+          "type": "borderWidth",
+          "description": "Tab (enabled and hover bottom border)"
+        }
       }
     },
     "typography": {

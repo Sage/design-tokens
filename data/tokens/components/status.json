@@ -26,11 +26,11 @@
         "description": "Decorative message icons"
       },
       "label-default": {
-        "value": "{modes.color.interactive.monochrome.withDefault}",
+        "value": "{modes.color.interactive.monochrome.generic.withDefault}",
         "type": "color"
       },
       "label-readonly": {
-        "value": "{modes.color.interactive.monochrome.withDefault}",
+        "value": "{modes.color.interactive.monochrome.generic.withDefault}",
         "type": "color",
         "description": "Pill (all types, readonly, when nested in disabled parent components)"
       },
@@ -182,8 +182,13 @@
         }
       },
       "callout": {
-        "bg-default": {
-          "value": "{modes.color.status.callout.default}",
+        "bgAlt-default": {
+          "value": "{modes.color.status.callout.defaultAlt}",
+          "type": "color",
+          "description": "Subtle message bg"
+        },
+        "bgAlt-hover": {
+          "value": "{modes.color.status.callout.hoverAlt}",
           "type": "color",
           "description": "Subtle message bg"
         }
@@ -236,6 +241,13 @@
             "value": "{global.size.macro.M}",
             "type": "sizing",
             "description": "message and toast icon container width"
+          }
+        },
+        "messagecontent": {
+          "maxwidth": {
+            "value": "{container.size.responsive.XXXL}",
+            "type": "sizing",
+            "description": "max width of content inside message to make sure there are roughly 12 works per line"
           }
         },
         "global": {
@@ -416,6 +428,22 @@
               "value": "{global.space.micro.S}",
               "type": "spacing",
               "description": "Gap between heading and other content."
+            }
+          },
+          "CTA": {
+            "Y": {
+              "M": {
+                "value": "{global.space.macro.XS}",
+                "type": "spacing",
+                "description": "Top and bottom padding on global message for countdown"
+              }
+            },
+            "yg": {
+              "M": {
+                "value": "{global.space.macro.M}",
+                "type": "spacing",
+                "description": "Gap between countdown spacing for global message"
+              }
             }
           },
           "iconwrapper": {

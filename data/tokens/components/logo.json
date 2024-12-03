@@ -3,12 +3,12 @@
     "color": {
       "sage": {
         "bg-default": {
-          "value": "{modes.color.generic.content.extreme}",
+          "value": "{modes.color.brand.default}",
           "type": "color",
           "description": "sage logo"
         },
         "bg-alt": {
-          "value": "{modes.color.generic.content.firm}",
+          "value": "{modes.color.brand.defaultAlt}",
           "type": "color"
         }
       },
@@ -18,9 +18,55 @@
           "type": "color",
           "description": "filled"
         },
-        "bg-alt": {
+        "outline": {
           "value": "{modes.color.generic.content.extreme}",
           "type": "color"
+        }
+      },
+      "copilot": {
+        "noBg": {
+          "bg-S": {
+            "value": "{modes.color.brand.copilot.noBg.S}",
+            "type": "color"
+          },
+          "bg-star": {
+            "value": "{modes.color.brand.copilot.noBg.star}",
+            "type": "color"
+          },
+          "fg-default": {
+            "value": "{modes.color.brand.copilot.noBg.mono}",
+            "type": "color"
+          }
+        },
+        "withBg": {
+          "bg-S": {
+            "value": "{modes.color.brand.copilot.withBg.S}",
+            "type": "color"
+          },
+          "bg-star": {
+            "value": "{modes.color.brand.copilot.withBg.star}",
+            "type": "color"
+          },
+          "bg-default": {
+            "value": "{modes.color.brand.copilot.withBg.bg}",
+            "type": "color"
+          }
+        }
+      },
+      "AIIdentifier": {
+        "bg-star": {
+          "value": "{modes.color.brand.copilot.AIIdentifier.default}",
+          "type": "color",
+          "description": "star bg color"
+        },
+        "bg-dot": {
+          "value": "{modes.color.brand.copilot.AIIdentifier.withDefault}",
+          "type": "color"
+        },
+        "outline": {
+          "value": "{modes.color.brand.copilot.AIIdentifier.default}",
+          "type": "color",
+          "description": "star outline variant"
         }
       }
     },

@@ -9,12 +9,46 @@ import {
   ConsolidateScreenSizes,
   FilterTypographyTokens,
   LightDarkModeFormatter,
+  MathsCalc
 } from "./formatters/";
 
 const cssParser = new CssParser();
 
 // Loop through token contexts
 const cssDistPath = path.join(__dirname, "../../dist/css");
+
+fs.readdirSync(cssDistPath, { recursive: true, withFileTypes: true }).filter((file) => {
+  return /^(?!all\.css$)[\w,\s-]+\.css$/.test(file.name)
+}).forEach((file) => {
+  const space = "  ";
+  const maths = new MathsCalc()
+
+  const contents = fs.readFileSync(path.join(file.path, file.name), "utf8")
+  const tokens = maths.formatTokens(cssParser.parseRootVariables(contents))
+
+  const lines: string[] = [];
+  lines.push(`:root {`);
+
+    if (tokens.length > 0) {
+      lines.push(
+        tokens
+          .map(
+            (p) =>
+              `${space}${p.name}: ${p.value};${
+                p.comment ? ` ${p.comment}` : ""
+              }`
+          )
+          .join("\n")
+      );
+    }
+
+  lines.push(`}`);
+  lines.push("");
+
+  fs.writeFileSync(path.join(file.path, file.name), lines.join("\n"));
+})
+
+
 fs.readdirSync(cssDistPath).forEach((contextName) => {
   const screenSizeTokens: ScreenSizeTokens[] = [];
 
