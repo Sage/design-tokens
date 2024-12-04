@@ -1,11 +1,18 @@
-import { CssProperty } from "./css-parser/css-parser.types";
-import { findDuplicates } from "./helpers";
-import { ScreenSizeTokens } from "./screen-size-tokens";
+import { CssProperty } from "./css-parser/css-parser.types.js";
+import { findDuplicates } from "./helpers.js";
+import { ScreenSizeTokens } from "./screen-size-tokens.js";
 
-export class BrandTokens {
+const VALID_CONTEXT_NAMES = ["frozenproduct", "marketing", "product"] as const;
+type ContextName = (typeof VALID_CONTEXT_NAMES)[number];
+export class ContextTokens {
+  public readonly context: ContextName;
   public screenSizes: ScreenSizeTokens[];
 
-  constructor(screenSizes: ScreenSizeTokens[]) {
+  constructor(contextName: string, screenSizes: ScreenSizeTokens[]) {
+    if (!this.isValidContextName(contextName))
+      throw new Error(`${contextName} is not an expected context name`);
+
+    this.context = contextName;
     this.screenSizes = screenSizes;
 
     // At least one of the provided screen size tokens must have zero min-width breakpoint
@@ -14,7 +21,7 @@ export class BrandTokens {
       !this.screenSizes.some((size) => !size.minBreakpoint)
     ) {
       throw new Error(
-        "Brand tokens must have at least one set of screen size tokens with zero min-width breakpoint"
+        "Context tokens must have at least one set of screen size tokens with zero min-width breakpoint"
       );
     }
 
@@ -29,6 +36,10 @@ export class BrandTokens {
         )}`
       );
     }
+  }
+
+  private isValidContextName(value: string): value is ContextName {
+    return (VALID_CONTEXT_NAMES as readonly string[]).includes(value);
   }
 
   public toString(): string {

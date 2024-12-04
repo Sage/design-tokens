@@ -1,13 +1,20 @@
 import * as fs from "fs";
 import * as path from "path";
+import { fileURLToPath } from 'url';
 
-import { CssProperty } from "./css-parser/css-parser.types";
-import { CssParser } from "./css-parser/css-parser";
-import { ScreenSizeTokens } from "./screen-size-tokens";
-import { BrandTokens } from "./brand-tokens";
-import { ConsolidateScreenSizes } from "./formatters/consolidate-screen-sizes/consolidate-screen-sizes";
-import { LightDarkModeFormatter } from "./formatters/light-dark-mode/light-dark-mode-formatter";
-import { MathsCalc } from "./formatters/maths-calc/maths-calc";
+import { CssProperty } from "./css-parser/css-parser.types.js";
+import { CssParser } from "./css-parser/css-parser.js";
+import { ScreenSizeTokens } from "./screen-size-tokens.js";
+import { ContextTokens } from "./context-tokens.js";
+import {
+  ConsolidateScreenSizes,
+  FilterTypographyTokens,
+  LightDarkModeFormatter,
+  MathsCalc
+} from "./formatters/";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const cssParser = new CssParser();
 
@@ -26,18 +33,18 @@ fs.readdirSync(cssDistPath, { recursive: true, withFileTypes: true }).filter((fi
   const lines: string[] = [];
   lines.push(`:root {`);
 
-    if (tokens.length > 0) {
-      lines.push(
-        tokens
-          .map(
-            (p) =>
-              `${space}${p.name}: ${p.value};${
-                p.comment ? ` ${p.comment}` : ""
-              }`
-          )
-          .join("\n")
-      );
-    }
+  if (tokens.length > 0) {
+    lines.push(
+      tokens
+        .map(
+          (p) =>
+            `${space}${p.name}: ${p.value};${
+              p.comment ? ` ${p.comment}` : ""
+            }`
+        )
+        .join("\n")
+    );
+  }
 
   lines.push(`}`);
   lines.push("");
@@ -46,35 +53,42 @@ fs.readdirSync(cssDistPath, { recursive: true, withFileTypes: true }).filter((fi
 })
 
 
-fs.readdirSync(cssDistPath).forEach((file) => {
+fs.readdirSync(cssDistPath).forEach((contextName) => {
   const screenSizeTokens: ScreenSizeTokens[] = [];
 
-  fs.readdirSync(path.join(cssDistPath, file)).forEach((screenSize) => {
-    if (!fs.statSync(path.join(cssDistPath, file, screenSize)).isDirectory())
+  fs.readdirSync(path.join(cssDistPath, contextName)).forEach((screenSize) => {
+    if (
+      !fs
+        .statSync(path.join(cssDistPath, contextName, screenSize))
+        .isDirectory()
+    )
       return;
 
     screenSizeTokens.push(
-      getScreenSizeTokens(path.join(cssDistPath, file), screenSize)
+      getScreenSizeTokens(path.join(cssDistPath, contextName), screenSize)
     );
   });
 
-  const tokens = new BrandTokens(screenSizeTokens);
+  const tokens = new ContextTokens(contextName, screenSizeTokens);
 
   const consolidateScreenSizes = new ConsolidateScreenSizes();
   const lightDarkModeFormatter = new LightDarkModeFormatter(
     consolidateScreenSizes
   );
-  const formattedTokens = lightDarkModeFormatter.formatTokens(tokens);
+  const filterAdaptiveTypography = new FilterTypographyTokens(
+    lightDarkModeFormatter
+  );
+  const formattedTokens = filterAdaptiveTypography.formatTokens(tokens);
 
-  writeCombinedCssFile(file, formattedTokens);
+  writeCombinedCssFile(contextName, formattedTokens);
 
   fs.copyFileSync(
     path.join(__dirname, "../../docs/usage/index.html"),
-    path.join(cssDistPath, file, "index.html")
+    path.join(cssDistPath, contextName, "index.html")
   );
 });
 
-function writeCombinedCssFile(file: string, tokens: BrandTokens) {
+function writeCombinedCssFile(file: string, tokens: ContextTokens) {
   fs.writeFileSync(path.join(cssDistPath, file, "all.css"), tokens.toString());
 }
 

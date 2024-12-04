@@ -1,14 +1,14 @@
 import { expect } from "chai";
-import { BrandTokens } from "../../brand-tokens";
-import { ScreenSizeTokens } from "../../screen-size-tokens";
-import { LightDarkModeFormatter } from "./light-dark-mode-formatter";
+import { ContextTokens } from "../../context-tokens.js";
+import { ScreenSizeTokens } from "../../screen-size-tokens.js";
+import { LightDarkModeFormatter } from "./light-dark-mode-formatter.js";
 
 describe("LightDarkModeFormatter", () => {
   const lightDarkModeFormatter = new LightDarkModeFormatter();
 
   describe("formatTokens", () => {
     it("should throw error if small tokens are in both light and dark mode", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens("product", [
         new ScreenSizeTokens(
           [],
           [
@@ -28,7 +28,7 @@ describe("LightDarkModeFormatter", () => {
     });
 
     it("should throw error if large tokens are in both light and dark mode", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens("product", [
         new ScreenSizeTokens([], [], [], {}),
         new ScreenSizeTokens(
           [{ name: "--global-size-breakpoint-min-width", value: "1024px" }],
@@ -49,7 +49,7 @@ describe("LightDarkModeFormatter", () => {
     });
 
     it("should format tokens as expected", () => {
-      const tokens = new BrandTokens([
+      const tokens = new ContextTokens("product", [
         new ScreenSizeTokens(
           [],
           [
@@ -100,6 +100,7 @@ describe("LightDarkModeFormatter", () => {
 
       const result = lightDarkModeFormatter.formatTokens(tokens);
       expect(result).to.deep.equal({
+        context: "product",
         screenSizes: [
           {
             global: [],

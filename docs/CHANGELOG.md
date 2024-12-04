@@ -1,3 +1,34 @@
+# [5.0.0-beta.28](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.27...v5.0.0-beta.28) (2024-12-04)
+
+
+### Bug Fixes
+
+* **data:** remove new line characters ([63f575f](https://github.com/Sage/design-tokens/commit/63f575f1e9b54a43575f11fba207508ef1b0c0a1))
+* enable mocha ([e608b0c](https://github.com/Sage/design-tokens/commit/e608b0c69edd6a699036d4d33e822c2ac922ec53))
+* remove deprecated feedback data file ([8215876](https://github.com/Sage/design-tokens/commit/8215876a71662960026ac6b0119c44d7d2ad4fbe))
+
+# [5.0.0-beta.27](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.26...v5.0.0-beta.27) (2024-12-03)
+
+
+### Features
+
+* **data:** 2nd push ([5dc3fdc](https://github.com/Sage/design-tokens/commit/5dc3fdc947ed9c450f568ff97f2235b2f0cb589b))
+* **data:** Add form.color.switch for FROZENPRODUCT theme ([5535161](https://github.com/Sage/design-tokens/commit/5535161580792a45ba6d14dfcf6cb5a37d04724b))
+* **data:** adding color overrides for progress bar ([77bfecc](https://github.com/Sage/design-tokens/commit/77bfecc0a2161ff6fa0af9b9ea4e7bd178ae7b85))
+* **data:** adding tab frozen colors ([ae4b665](https://github.com/Sage/design-tokens/commit/ae4b665484330cb5cf48f51dd4a85fe77760da45))
+* **data:** Change code order in FROZENPRODUCT theme colours ([1a20919](https://github.com/Sage/design-tokens/commit/1a2091903e845c319af54e6b96cb7b1f8b69fc17))
+* **data:** correct FROZEN tertiary button enabled border value ([8ce493c](https://github.com/Sage/design-tokens/commit/8ce493cf03af8951b916f4b25eff52c2040f1c20))
+* **data:** DARK THEME Add modes.color.generic.bg.extreme. Update values of tokens referencing primitive black and white to reference generic colour tokens. ([acdcc09](https://github.com/Sage/design-tokens/commit/acdcc09f1a201fe15e081c9c08e1d7d43ec9e3de))
+* **data:** first set of changes relating to dark theme contrastMore and contrastLess values, along with changes to tokens that reference contrastMore and contrastLess ([db38739](https://github.com/Sage/design-tokens/commit/db38739f11802f6932d4c1dc2de93c4cafa9ce89))
+* **data:** fixing active and hover label breakages in frozen theme ([2516e22](https://github.com/Sage/design-tokens/commit/2516e22971346238342b0c994c7761dd1d478777))
+* **data:** fixing issues with popover component in frozen theme ([c1217e0](https://github.com/Sage/design-tokens/commit/c1217e0ea7845982dab6f9b9115003750c27b34d))
+* **data:** LIGHT THEME Add modes.color.generic.bg.extreme, and change all values that reference primitive white or black to reference generic colour tokens instead ([3728b06](https://github.com/Sage/design-tokens/commit/3728b06085d0be28d5c4a38542db8914d53eec8f))
+* **data:** LIGHT THEME: 1. Correct modes.color.status info and callout defaultAlt values. 2. Correct value of status.callout.hoverAlt.   DARK THEME: 1. Correct all status defaultAlt tokens to use same mixes as light theme tokens, with slight modification to the mix amount: 0.2 in dark vs of 0.1 in light. 2. Correct value of status.succes.hoverAlt. ([3297228](https://github.com/Sage/design-tokens/commit/32972285048dcb5c1baa45c0b2158da532ba8a6b))
+* **data:** Reorder code for button colours. ([7142986](https://github.com/Sage/design-tokens/commit/714298604cf2c066b0a367b1e9e050793aff7c82))
+* **data:** Update value of modes.color.status.caution.hover ([d182ff8](https://github.com/Sage/design-tokens/commit/d182ff80a5b46129f3d6b39e401682352b4fc3e7))
+* **data:** update values of DARK THEME focus colours ([974f3c7](https://github.com/Sage/design-tokens/commit/974f3c71ca0c8029d4f07b21f7f61691f9a69277))
+* **data:** Update values of primitives shadows for [@dru](https://github.com/dru) ([04f4097](https://github.com/Sage/design-tokens/commit/04f40978b2c25032d429f1cc352902b28158624a))
+
 # [5.0.0-beta.26](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.25...v5.0.0-beta.26) (2024-12-02)
 
 

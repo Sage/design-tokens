@@ -2,12 +2,16 @@
 Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
  */
 
-const styleDictionary = require('style-dictionary')
-const { registerTransforms } = require('@tokens-studio/sd-transforms')
+import StyleDictionary from 'style-dictionary'
+import { register } from '@tokens-studio/sd-transforms'
 
 const groups = {
   css: [
-    'name/cti/kebab',
+    'border/css/shorthand',
+    'shadow/css/shorthand',
+    'transition/css/shorthand',
+    'typography/css/shorthand',
+    'name/kebab',
     'ts/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
@@ -15,13 +19,10 @@ const groups = {
     'ts/typography/fontWeight',
     'ts/resolveMath',
     'ts/size/css/letterspacing',
-    'ts/typography/css/shorthand',
-    'ts/border/css/shorthand',
-    'ts/shadow/css/shorthand',
     'ts/color/modifiers'
   ],
   scss: [
-    'name/cti/kebab',
+    'name/kebab',
     'ts/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
@@ -29,13 +30,10 @@ const groups = {
     'ts/typography/fontWeight',
     'ts/resolveMath',
     'ts/size/css/letterspacing',
-    'ts/typography/css/shorthand',
-    'ts/border/css/shorthand',
-    'ts/shadow/css/shorthand',
     'ts/color/modifiers'
   ],
   js: [
-    'name/cti/camel',
+    'name/camel',
     'ts/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
@@ -43,13 +41,10 @@ const groups = {
     'ts/typography/fontWeight',
     'ts/resolveMath',
     'ts/size/css/letterspacing',
-    'ts/typography/css/shorthand',
-    'ts/border/css/shorthand',
-    'ts/shadow/css/shorthand',
     'ts/color/modifiers'
   ],
   json: [
-    'name/cti/camel',
+    'name/camel',
     'ts/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
@@ -57,13 +52,10 @@ const groups = {
     'ts/typography/fontWeight',
     'ts/resolveMath',
     'ts/size/css/letterspacing',
-    'ts/typography/css/shorthand',
-    'ts/border/css/shorthand',
-    'ts/shadow/css/shorthand',
     'ts/color/modifiers'
   ],
   mobile: [
-    'name/cti/camel',
+    'name/camel',
     'ts/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
@@ -71,20 +63,17 @@ const groups = {
     'ts/typography/fontWeight',
     'ts/resolveMath',
     'ts/size/css/letterspacing',
-    'ts/typography/css/shorthand',
-    'ts/border/css/shorthand',
-    'ts/shadow/css/shorthand',
     'ts/color/modifiers'
   ]
 }
 
-registerTransforms(styleDictionary, {
+register(StyleDictionary, {
   'ts/color/modifiers': {
     format: 'hex'
   }
 })
 
-module.exports = {
-  dictionary: styleDictionary,
+export {
+  StyleDictionary,
   groups
 }

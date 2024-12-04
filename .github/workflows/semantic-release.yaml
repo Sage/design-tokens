@@ -45,7 +45,7 @@ jobs:
           git_commit_gpgsign: true
 
       - name: Release package to NPM registries
-        run: npx semantic-release@19 --debug
+        run: npx semantic-release --debug
         env:
           GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
           GIT_COMMITTER_NAME: Sage Carbon
