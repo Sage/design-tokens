@@ -1,3 +1,12 @@
+# [5.0.0-beta.28](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.27...v5.0.0-beta.28) (2024-12-04)
+
+
+### Bug Fixes
+
+* **data:** remove new line characters ([63f575f](https://github.com/Sage/design-tokens/commit/63f575f1e9b54a43575f11fba207508ef1b0c0a1))
+* enable mocha ([e608b0c](https://github.com/Sage/design-tokens/commit/e608b0c69edd6a699036d4d33e822c2ac922ec53))
+* remove deprecated feedback data file ([8215876](https://github.com/Sage/design-tokens/commit/8215876a71662960026ac6b0119c44d7d2ad4fbe))
+
 # [5.0.0-beta.27](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.26...v5.0.0-beta.27) (2024-12-03)
 
 
