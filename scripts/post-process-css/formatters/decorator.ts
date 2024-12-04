@@ -1,7 +1,7 @@
-import { BrandTokens } from "../brand-tokens.js";
+import { ContextTokens } from "../context-tokens.js";
 
 export interface Component {
-  formatTokens(contents: BrandTokens): BrandTokens;
+  formatTokens(contents: ContextTokens): ContextTokens;
 }
 
 export class Decorator implements Component {
@@ -14,7 +14,7 @@ export class Decorator implements Component {
    * @param tokens The tokens being modified.
    * @returns Formatted tokens.
    */
-  public formatTokens(tokens: BrandTokens): BrandTokens {
+  public formatTokens(tokens: ContextTokens): ContextTokens {
     if (this.component === undefined) {
       return tokens;
     }

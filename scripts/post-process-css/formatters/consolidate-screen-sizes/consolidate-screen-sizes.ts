@@ -1,4 +1,4 @@
-import { BrandTokens } from "../../brand-tokens.js";
+import { ContextTokens } from "../../context-tokens.js";
 import { CssProperty } from "../../css-parser/css-parser.types.js";
 import { Decorator } from "../decorator.js";
 
@@ -14,7 +14,7 @@ export class ConsolidateScreenSizes extends Decorator {
    * @param tokens Tokens to format.
    * @returns Consolidated tokens.
    */
-  public override formatTokens(tokens: BrandTokens) {
+  public override formatTokens(tokens: ContextTokens) {
     this.sanityCheckTokens(tokens);
 
     const matchesToken = (token: CssProperty, tokensToCompare: CssProperty[]) =>
@@ -69,7 +69,7 @@ export class ConsolidateScreenSizes extends Decorator {
     return super.formatTokens(tokens);
   }
 
-  private sanityCheckTokens(tokens: BrandTokens) {
+  private sanityCheckTokens(tokens: ContextTokens) {
     const tokenTypes = ["global", "light", "dark"] as const;
 
     tokenTypes.forEach((type) => {
