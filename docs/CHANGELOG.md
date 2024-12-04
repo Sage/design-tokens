@@ -1,3 +1,10 @@
+# [5.0.0-beta.29](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.28...v5.0.0-beta.29) (2024-12-04)
+
+
+### Features
+
+* **data:** Update description on primitives.colors.greenBright ([0f3f361](https://github.com/Sage/design-tokens/commit/0f3f361798047d062aac831cd0c62ff3fa933daa))
+
 # [5.0.0-beta.28](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.27...v5.0.0-beta.28) (2024-12-04)
 
 
