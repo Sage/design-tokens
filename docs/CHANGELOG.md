@@ -1,3 +1,14 @@
+# [5.0.0-beta.30](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.29...v5.0.0-beta.30) (2024-12-05)
+
+
+### Features
+
+* **data:** Sync themes ([f27beca](https://github.com/Sage/design-tokens/commit/f27becada47dec42b257c68615a45fbf765a1b48))
+* **frozen dark:** Add modes.color.interactive.monochrome.frozen.defaultAlt ([ee66c85](https://github.com/Sage/design-tokens/commit/ee66c853ab4e3b2f739c9cbc25a5f4cfebbaf382))
+* **frozen status colors:** Add transparent token for subtle message bg. Plus re-order code in status to be alphabetical. ([7881bde](https://github.com/Sage/design-tokens/commit/7881bde6d5888b598726bb4af26e71c0c2f50208))
+* **frozen:** Add  ([105ba1a](https://github.com/Sage/design-tokens/commit/105ba1aa484f7ae14248bbeb485ba8050cf91061))
+* **frozen:** Add button.color.typical.toggle tokens ([9a532f8](https://github.com/Sage/design-tokens/commit/9a532f8dcee10270470d29d6166fe056aa006e41))
+
 # [5.0.0-beta.29](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.28...v5.0.0-beta.29) (2024-12-04)
 
 
