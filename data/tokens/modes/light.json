@@ -262,6 +262,11 @@
               }
             },
             "description": "Used for disabled text"
+          },
+          "nought": {
+            "value": "{modes.color.modifier.contrastLess}",
+            "type": "color",
+            "description": "pill hover X"
           }
         },
         "fg": {
@@ -1101,12 +1106,14 @@
             "type": "color"
           },
           "withHover": {
-            "value": "{modes.color.generic.content.extreme}",
-            "type": "color"
+            "value": "{modes.color.generic.content.nought}",
+            "type": "color",
+            "description": "for pill hover X"
           },
           "withHoverAlt": {
             "value": "{modes.color.generic.content.extreme}",
-            "type": "color"
+            "type": "color",
+            "description": "for message text"
           },
           "loading": {
             "value": "linear-gradient(135deg, #6F6F6F5c 0%, #6F6F6F0A 100%)",
