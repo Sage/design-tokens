@@ -1288,6 +1288,36 @@
               }
             },
             "description": "used on pill hover states and message bg"
+          },
+          "frozen": {
+            "default": {
+              "value": "{primitives.colors.navy}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.4",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              }
+            },
+            "hover": {
+              "value": "{modes.color.status.neutral.frozen.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore} "
+                  }
+                }
+              }
+            }
           }
         },
         "success": {
