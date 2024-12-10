@@ -61,15 +61,45 @@
         "type": "color",
         "description": "Outer focus border."
       },
-      "storm": {
-        "value": "#6f6f6f",
-        "type": "color",
-        "description": "Base neutral status color for on light surface  messages, toasts and pills. Luminosity 46.8."
-      },
       "navy": {
         "value": "#00293F",
         "type": "color",
         "description": "old product color for monochrome components. eg page backgrounds and minor buttons "
+      },
+      "navyAlt": {
+        "value": "{primitives.colors.navy}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "mix",
+              "value": "0.37",
+              "space": "lch",
+              "color": "{primitives.colors.white}"
+            }
+          }
+        },
+        "description": "adjusted old product colour. Luminosity is 46.8 to balance with other hue luminosities."
+      },
+      "navyAltBright": {
+        "value": "{primitives.colors.navy}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "mix",
+              "value": "0.48",
+              "space": "lch",
+              "color": "{primitives.colors.white}"
+            }
+          }
+        },
+        "description": "Base frozen neutral status color for on dark surface  messages, toasts and pills. Luminosity 56.2."
+      },
+      "storm": {
+        "value": "#6f6f6f",
+        "type": "color",
+        "description": "Base neutral status color for on light surface  messages, toasts and pills. Luminosity 46.8."
       },
       "stormBright": {
         "value": "#878787",

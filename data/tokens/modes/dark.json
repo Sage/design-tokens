@@ -795,18 +795,8 @@
             },
             "frozen": {
               "active": {
-                "value": "{primitives.colors.navy}",
+                "value": "{modes.color.interactive.monochrome.generic.active}",
                 "type": "color",
-                "$extensions": {
-                  "studio.tokens": {
-                    "modify": {
-                      "type": "mix",
-                      "value": "0.9",
-                      "space": "lch",
-                      "color": "{modes.color.modifier.contrastLess}"
-                    }
-                  }
-                },
                 "description": "Used within frozen table"
               }
             }
@@ -1048,17 +1038,8 @@
           },
           "frozen": {
             "bg": {
-              "value": "{modes.color.generic.bg.extreme}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.08",
-                    "space": "lch"
-                  }
-                }
-              }
+              "value": "{modes.color.interactive.progress.bg}",
+              "type": "color"
             }
           }
         }
@@ -1337,21 +1318,11 @@
           },
           "frozen": {
             "default": {
-              "value": "{primitives.colors.navy}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.4",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess} "
-                  }
-                }
-              }
+              "value": "{primitives.colors.navyAltBright}",
+              "type": "color"
             },
             "hover": {
-              "value": "{primitives.colors.navy}",
+              "value": "{modes.color.status.neutral.frozen.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {

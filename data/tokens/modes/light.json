@@ -548,13 +548,13 @@
           },
           "frozen": {
             "withDefault": {
-              "value": "{primitives.colors.navy}",
+              "value": "{primitives.colors.navyAlt}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "0.4",
+                    "value": "0.045",
                     "space": "lch",
                     "color": "{modes.color.modifier.contrastLess} "
                   }
@@ -630,13 +630,13 @@
           },
           "frozen": {
             "defaultAlt": {
-              "value": "{primitives.colors.navy}",
+              "value": "{primitives.colors.navyAlt}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "0.9",
+                    "value": "0.84",
                     "space": "lch",
                     "color": "{modes.color.modifier.contrastLess} "
                   }
@@ -649,8 +649,18 @@
         "monochrome": {
           "frozen": {
             "active": {
-              "value": "{primitives.colors.navy}",
-              "type": "color"
+              "value": "{primitives.colors.navyAlt}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.67",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              }
             },
             "activeAlt": {
               "value": "{modes.color.interactive.monochrome.frozen.active}",
@@ -811,13 +821,13 @@
             },
             "frozen": {
               "active": {
-                "value": "{primitives.colors.navy}",
+                "value": "{primitives.colors.navyAlt}",
                 "type": "color",
                 "$extensions": {
                   "studio.tokens": {
                     "modify": {
                       "type": "mix",
-                      "value": "0.9",
+                      "value": "0.84",
                       "space": "lch",
                       "color": "{modes.color.modifier.contrastLess}"
                     }
@@ -1020,13 +1030,13 @@
             },
             "table": {
               "default": {
-                "value": "{primitives.colors.navy}",
+                "value": "{primitives.colors.navyAlt}",
                 "type": "color",
                 "$extensions": {
                   "studio.tokens": {
                     "modify": {
                       "type": "mix",
-                      "value": "0.64",
+                      "value": "0.43",
                       "space": "lch",
                       "color": "{modes.color.modifier.contrastLess}"
                     }
@@ -1356,18 +1366,8 @@
           },
           "frozen": {
             "default": {
-              "value": "{primitives.colors.navy}",
-              "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.37",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess} "
-                  }
-                }
-              }
+              "value": "{primitives.colors.navyAlt}",
+              "type": "color"
             },
             "hover": {
               "value": "{modes.color.status.neutral.frozen.default}",
