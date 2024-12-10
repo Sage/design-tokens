@@ -188,6 +188,38 @@
             "value": "{primitives.colors.white}",
             "type": "color",
             "description": "Consumed within generic monochrome, progress"
+          },
+          "frozen": {
+            "delicate": {
+              "value": "{primitives.colors.navy}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.98",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "description": "Consumed within frozen table"
+            },
+            "soft": {
+              "value": "{primitives.colors.navy}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.96",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "description": "Consumed within frozen table"
+            }
           }
         },
         "content": {
@@ -760,6 +792,23 @@
             "withHover": {
               "value": "{modes.color.generic.content.extreme}",
               "type": "color"
+            },
+            "frozen": {
+              "active": {
+                "value": "{primitives.colors.navy}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "mix",
+                      "value": "0.9",
+                      "space": "lch",
+                      "color": "{modes.color.modifier.contrastLess}"
+                    }
+                  }
+                },
+                "description": "Used within frozen table"
+              }
             }
           },
           "marketing": {
@@ -950,6 +999,22 @@
               "label-hover": {
                 "value": "{primitives.colors.white}",
                 "type": "color"
+              }
+            },
+            "table": {
+              "default": {
+                "value": "{primitives.colors.navy}",
+                "type": "color",
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "mix",
+                      "value": "0.64",
+                      "space": "lch",
+                      "color": "{modes.color.modifier.contrastLess}"
+                    }
+                  }
+                }
               }
             }
           }

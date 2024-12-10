@@ -255,7 +255,7 @@
     "color": {
       "calendar": {
         "bg-active": {
-          "value": "{primitives.colors.navy}",
+          "value": "{modes.color.interactive.monochrome.frozen.active}",
           "type": "color"
         }
       },
@@ -538,62 +538,22 @@
       },
       "row": {
         "bg-activated": {
-          "value": "{primitives.colors.navy}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.64",
-                "space": "lch",
-                "color": "{modes.color.modifier.contrastLess}"
-              }
-            }
-          }
+          "value": "{modes.color.interactive.primary.frozen.table.default}",
+          "type": "color"
         },
         "bg-active": {
-          "value": "{primitives.colors.navy}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.9",
-                "space": "lch",
-                "color": "{modes.color.modifier.contrastLess}"
-              }
-            }
-          }
+          "value": "{modes.color.interactive.monochrome.generic.frozen.active}",
+          "type": "color"
         },
         "bg-alt": {
-          "value": "{primitives.colors.navy}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.98",
-                "space": "lch",
-                "color": "{modes.color.modifier.contrastLess}"
-              }
-            }
-          }
+          "value": "{modes.color.generic.bg.frozen.delicate}",
+          "type": "color"
         },
         "bg-hover": {
-          "value": "{primitives.colors.navy}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.96",
-                "space": "lch",
-                "color": "{modes.color.modifier.contrastLess}"
-              }
-            }
-          }
+          "value": "{modes.color.generic.bg.frozen.soft}",
+          "type": "color"
         },
-        "label-activate": {
+        "label-active": {
           "value": "{modes.color.interactive.monochrome.generic.withActiveAlt}",
           "type": "color"
         },
