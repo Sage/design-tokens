@@ -617,18 +617,8 @@
           },
           "frozen": {
             "defaultAlt": {
-              "value": "{primitives.colors.navy}",
+              "value": "{modes.color.interactive.inactive.defaultAlt}",
               "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess} "
-                  }
-                }
-              },
               "description": "Disabled input and button backgrounds, button borders and input backgrounds."
             }
           }
@@ -1135,11 +1125,11 @@
             "type": "color"
           },
           "withHover": {
-            "value": "{modes.color.generic.content.extreme}",
+            "value": "{modes.color.generic.content.nought}",
             "type": "color"
           },
           "withHoverAlt": {
-            "value": "{modes.color.generic.content.nought}",
+            "value": "{modes.color.generic.content.extreme}",
             "type": "color"
           },
           "loading": {
@@ -1318,8 +1308,18 @@
           },
           "frozen": {
             "default": {
-              "value": "{primitives.colors.navyAltBright}",
-              "type": "color"
+              "value": "{primitives.colors.navy}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.27",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              }
             },
             "hover": {
               "value": "{modes.color.status.neutral.frozen.default}",
@@ -1330,7 +1330,7 @@
                     "type": "mix",
                     "value": "{modes.color.modifiers.button.hover}",
                     "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
+                    "color": "{modes.color.modifier.contrastMore} "
                   }
                 }
               }
