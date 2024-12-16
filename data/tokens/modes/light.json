@@ -72,7 +72,7 @@
         "default": {
           "value": "{primitives.colors.emerald}",
           "type": "color",
-          "description": "This is the color to replace in white label products.  Ensure luminousity of custom color = 46.8 (see hsluv.org).  AAA against FFFFFF bg."
+          "description": "This is the color to replace in white label products. Ensure luminousity of custom color = 46.8 (see hsluv.org).  AAA against FFFFFF bg. "
         },
         "frozen": {
           "value": "{primitives.colors.frozenJade}",
@@ -1103,13 +1103,20 @@
         "generic": {
           "default": {
             "value": "{primitives.colors.teal}",
-            "type": "color"
+            "type": "color",
+            "description": "used in progress bar "
           }
         },
         "caution": {
+          "alt": {
+            "value": "{primitives.colors.orangeVibrant}",
+            "type": "color",
+            "description": "For pills and messages. Not accessible with white TEXT."
+          },
           "default": {
             "value": "{primitives.colors.orange}",
-            "type": "color"
+            "type": "color",
+            "description": "Used in form validation, progress bar, tab\n"
           },
           "defaultAlt": {
             "value": "{modes.color.modifier.contrastLess}",
@@ -1120,14 +1127,14 @@
                   "type": "mix",
                   "value": "0.1",
                   "space": "lch",
-                  "color": "{primitives.colors.orangeBright}"
+                  "color": "{primitives.colors.orangeVibrant}"
                 }
               }
             },
             "description": "Subtle message bg"
           },
           "hover": {
-            "value": "{modes.color.status.caution.default}",
+            "value": "{modes.color.status.caution.alt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -1206,9 +1213,15 @@
           }
         },
         "info": {
+          "alt": {
+            "value": "{primitives.colors.blueVibrant}",
+            "type": "color",
+            "description": "For pills and messages. Not accessible with white TEXT."
+          },
           "default": {
             "value": "{primitives.colors.blue}",
-            "type": "color"
+            "type": "color",
+            "description": "used in progress bar"
           },
           "defaultAlt": {
             "value": "{modes.color.modifier.contrastLess}",
@@ -1219,14 +1232,14 @@
                   "type": "mix",
                   "value": "0.1",
                   "space": "lch",
-                  "color": "{primitives.colors.blueBright} "
+                  "color": "{primitives.colors.blueVibrant} "
                 }
               }
             },
             "description": "Subtle message bg"
           },
           "hover": {
-            "value": "{modes.color.status.info.default}",
+            "value": "{modes.color.status.info.alt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -1264,9 +1277,15 @@
           }
         },
         "negative": {
+          "alt": {
+            "value": "{primitives.colors.redVibrant}",
+            "type": "color",
+            "description": "For pills and messages. Not accessible with white TEXT."
+          },
           "default": {
             "value": "{primitives.colors.red}",
-            "type": "color"
+            "type": "color",
+            "description": "used in badge, form validation, progress bar, tab"
           },
           "defaultAlt": {
             "value": "{modes.color.modifier.contrastLess}",
@@ -1277,14 +1296,14 @@
                   "type": "mix",
                   "value": "0.1",
                   "space": "lch",
-                  "color": "{primitives.colors.redBright}"
+                  "color": "{primitives.colors.redVibrant}"
                 }
               }
             },
             "description": "Subtle message bg"
           },
           "hover": {
-            "value": "{modes.color.status.negative.default}",
+            "value": "{modes.color.status.negative.alt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -1296,7 +1315,7 @@
                 }
               }
             },
-            "description": "used on pill hover states"
+            "description": "used on pill hover states\n\n"
           },
           "hoverAlt": {
             "value": "{modes.color.status.negative.defaultAlt}",
@@ -1319,6 +1338,10 @@
           }
         },
         "neutral": {
+          "alt": {
+            "value": "{primitives.colors.stormVibrant}",
+            "type": "color"
+          },
           "default": {
             "value": "{primitives.colors.storm}",
             "type": "color"
@@ -1332,14 +1355,14 @@
                   "type": "mix",
                   "value": "0.1",
                   "space": "lch",
-                  "color": "{primitives.colors.stormBright}"
+                  "color": "{primitives.colors.stormVibrant}"
                 }
               }
             },
             "description": "Subtle message bg"
           },
           "hover": {
-            "value": "{modes.color.status.neutral.default}",
+            "value": "{modes.color.status.neutral.alt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -1389,10 +1412,16 @@
             }
           }
         },
-        "success": {
+        "positive": {
+          "alt": {
+            "value": "{primitives.colors.greenVibrant}",
+            "type": "color",
+            "description": "For pills and messages. Not accessible with white TEXT."
+          },
           "default": {
             "value": "{primitives.colors.green}",
-            "type": "color"
+            "type": "color",
+            "description": "used in container interactive (eg in tile select), form validation, progress bar"
           },
           "defaultAlt": {
             "value": "{modes.color.modifier.contrastLess}",
@@ -1403,14 +1432,14 @@
                   "type": "mix",
                   "value": "0.1",
                   "space": "lch",
-                  "color": "{primitives.colors.greenBright}"
+                  "color": "{primitives.colors.greenVibrant} "
                 }
               }
             },
             "description": "Subtle message bg"
           },
           "hover": {
-            "value": "{modes.color.status.success.default}",
+            "value": "{modes.color.status.positive.alt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
@@ -1422,10 +1451,10 @@
                 }
               }
             },
-            "description": "used on pill hover states"
+            "description": "used on pill hover states "
           },
           "hoverAlt": {
-            "value": "{modes.color.status.success.defaultAlt}",
+            "value": "{modes.color.status.positive.defaultAlt}",
             "type": "color",
             "$extensions": {
               "studio.tokens": {
