@@ -4,6 +4,14 @@ Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
 
 import StyleDictionary from 'style-dictionary'
 import { register } from '@tokens-studio/sd-transforms'
+import { mapDescriptionToComment } from './transforms/mapDescriptionToComment.js'
+
+StyleDictionary.registerTransform({
+  name: 'custom/descriptionToComment',
+  type: 'attribute',
+  filter: token => token['description'],
+  transform: token => mapDescriptionToComment(token),
+});
 
 const groups = {
   css: [
@@ -12,7 +20,7 @@ const groups = {
     'transition/css/shorthand',
     'typography/css/shorthand',
     'name/kebab',
-    'ts/descriptionToComment',
+    'custom/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
     'ts/size/lineheight',
@@ -22,8 +30,8 @@ const groups = {
     'ts/color/modifiers'
   ],
   scss: [
+    'custom/descriptionToComment',
     'name/kebab',
-    'ts/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
     'ts/size/lineheight',
@@ -33,8 +41,8 @@ const groups = {
     'ts/color/modifiers'
   ],
   js: [
+    'custom/descriptionToComment',
     'name/camel',
-    'ts/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
     'ts/size/lineheight',
@@ -44,8 +52,8 @@ const groups = {
     'ts/color/modifiers'
   ],
   json: [
+    'custom/descriptionToComment',
     'name/camel',
-    'ts/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
     'ts/size/lineheight',
@@ -55,8 +63,8 @@ const groups = {
     'ts/color/modifiers'
   ],
   mobile: [
+    'custom/descriptionToComment',
     'name/camel',
-    'ts/descriptionToComment',
     'ts/size/px',
     'ts/opacity',
     'ts/size/lineheight',
@@ -77,3 +85,4 @@ export {
   StyleDictionary,
   groups
 }
+
