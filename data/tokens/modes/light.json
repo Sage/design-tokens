@@ -642,6 +642,20 @@
                 }
               }
             },
+            "defaultAlt": {
+              "value": "{modes.color.interactive.monochrome.frozen.active}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.1",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              }
+            },
             "hoverAlt": {
               "value": "{modes.color.interactive.monochrome.frozen.active}",
               "type": "color",

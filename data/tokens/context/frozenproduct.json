@@ -111,8 +111,28 @@
           }
         },
         "toggle": {
+          "bg-active": {
+            "value": "{modes.color.interactive.monochrome.frozen.active}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.interactive.monochrome.frozen.hoverAlt}",
+            "type": "color"
+          },
+          "border-enabled": {
+            "value": "{modes.color.interactive.monochrome.frozen.default}",
+            "type": "color"
+          },
+          "label-active": {
+            "value": "{modes.color.interactive.monochrome.frozen.withActive}",
+            "type": "color"
+          },
+          "label-enabled": {
+            "value": "{modes.color.interactive.monochrome.frozen.defaultAlt}",
+            "type": "color"
+          },
           "label-hover": {
-            "value": "{modes.color.interactive.monochrome.generic.withHover}",
+            "value": "{modes.color.interactive.monochrome.frozen.withHover}",
             "type": "color"
           }
         }
@@ -373,6 +393,27 @@
   },
   "status": {
     "color": {
+      "error": {
+        "bgAlt-default": {
+          "value": "{status.color.none}",
+          "type": "color",
+          "description": "Subtle message bg"
+        }
+      },
+      "info": {
+        "bgAlt-default": {
+          "value": "{status.color.none}",
+          "type": "color",
+          "description": "Subtle message bg"
+        }
+      },
+      "neutral": {
+        "bgAlt-default": {
+          "value": "{status.color.none}",
+          "type": "color",
+          "description": "Subtle message bg"
+        }
+      },
       "rating": {
         "bg-default": {
           "value": "{modes.color.status.reviews.frozen.default}",
@@ -389,6 +430,20 @@
         "border-default": {
           "value": "{modes.color.status.reviews.frozen.default}",
           "type": "color"
+        }
+      },
+      "success": {
+        "bgAlt-default": {
+          "value": "{status.color.none}",
+          "type": "color",
+          "description": "Subtle message bg"
+        }
+      },
+      "warning": {
+        "bgAlt-default": {
+          "value": "{status.color.none}",
+          "type": "color",
+          "description": "Subtle message bg"
         }
       }
     },
@@ -439,7 +494,19 @@
   },
   "table": {
     "color": {
-      "row": {
+      "header": {
+        "harsh": {
+          "bg-alt": {
+            "value": "{modes.color.interactive.monochrome.frozen.defaultAlt}",
+            "type": "color"
+          },
+          "bg-default": {
+            "value": "{modes.color.interactive.monochrome.frozen.default}",
+            "type": "color"
+          }
+        }
+      },
+      "row2": {
         "bg-activated": {
           "value": "{modes.color.interactive.primary.frozen.default}",
           "type": "color"
