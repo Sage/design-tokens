@@ -1,3 +1,11 @@
+# [5.0.0-beta.32](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.31...v5.0.0-beta.32) (2025-01-03)
+
+
+### Features
+
+* **data:** adding new type tokens to support step flow changes ([271a467](https://github.com/Sage/design-tokens/commit/271a4675d97458cd1eee1bdd10382b449138bc26))
+* **data:** relabelling a token to avoid breaking change ([51ad6ad](https://github.com/Sage/design-tokens/commit/51ad6ad745545646ad0bd97917b2e2c5e63ce266))
+
 # [5.0.0-beta.31](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.30...v5.0.0-beta.31) (2025-01-03)
 
 
