@@ -1372,6 +1372,14 @@
 
 * Restructure of design tokens and rewrite of build process
 
+# [4.35.0](https://github.com/Sage/design-tokens/compare/v4.34.0...v4.35.0) (2024-05-24)
+
+
+### Features
+
+* **data:** adding new type tokens to support step flow changes ([271a467](https://github.com/Sage/design-tokens/commit/271a4675d97458cd1eee1bdd10382b449138bc26))
+* **data:** relabelling a token to avoid breaking change ([51ad6ad](https://github.com/Sage/design-tokens/commit/51ad6ad745545646ad0bd97917b2e2c5e63ce266))
+
 # [4.34.0](https://github.com/Sage/design-tokens/compare/v4.33.0...v4.34.0) (2023-11-28)
 
 
