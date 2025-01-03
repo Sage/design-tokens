@@ -120,7 +120,7 @@
             "type": "color"
           },
           "border-enabled": {
-            "value": "{modes.color.interactive.monochrome.frozen.default}",
+            "value": "{modes.color.interactive.dataEntry.frozen.withDefault}",
             "type": "color"
           },
           "label-active": {
@@ -135,6 +135,16 @@
             "value": "{modes.color.interactive.monochrome.frozen.withHover}",
             "type": "color"
           }
+        }
+      }
+    }
+  },
+  "badge": {
+    "color": {
+      "notification": {
+        "bg-default": {
+          "value": "{modes.color.status.caution.alt}",
+          "type": "color"
         }
       }
     }
@@ -253,6 +263,20 @@
       }
     },
     "color": {
+      "calendar": {
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.frozen.active}",
+          "type": "color"
+        },
+        "border-duration": {
+          "value": "{form.color.calendar.bg-active}",
+          "type": "color"
+        },
+        "bg-duration": {
+          "value": "{modes.color.interactive.inactive.frozen.defaultAlt}",
+          "type": "color"
+        }
+      },
       "typical": {
         "border-enabled": {
           "value": "{modes.color.interactive.dataEntry.frozen.withDefault}",
@@ -286,6 +310,27 @@
           "value": "{modes.color.interactive.primary.frozen.hoverAlt}",
           "type": "color"
         }
+      }
+    }
+  },
+  "nav": {
+    "color": {
+      "item": {
+        "bg-hover": {
+          "value": "{modes.color.interactive.primary.frozen.nav.hover}",
+          "type": "color"
+        },
+        "label-hover": {
+          "value": "{modes.color.interactive.primary.frozen.nav.label-hover}",
+          "type": "color"
+        }
+      }
+    },
+    "radius": {
+      "menumodal": {
+        "value": "{global.radius.interactive.M}",
+        "type": "borderRadius",
+        "description": "Menu on mobile"
       }
     }
   },
@@ -339,15 +384,6 @@
       }
     }
   },
-  "nav": {
-    "radius": {
-      "menumodal": {
-        "value": "{global.radius.interactive.M}",
-        "type": "borderRadius",
-        "description": "Menu on mobile"
-      }
-    }
-  },
   "popover": {
     "color": {
       "bg-active": {
@@ -393,25 +429,50 @@
   },
   "status": {
     "color": {
+      "label-default": {
+        "value": "{modes.color.interactive.monochrome.generic.withDefault}",
+        "type": "color"
+      },
+      "label-hover": {
+        "value": "{modes.color.status.content.withHover}",
+        "type": "color"
+      },
       "error": {
-        "bgAlt-default": {
+        "bgAlt": {
           "value": "{status.color.none}",
           "type": "color",
           "description": "Subtle message bg"
         }
       },
       "info": {
-        "bgAlt-default": {
+        "bgAlt": {
           "value": "{status.color.none}",
           "type": "color",
           "description": "Subtle message bg"
+        },
+        "bgAlt-default": {
+          "value": "{modes.color.status.info.frozen.default}",
+          "type": "color",
+          "description": "Global message bg"
         }
       },
       "neutral": {
-        "bgAlt-default": {
+        "bgAlt": {
           "value": "{status.color.none}",
           "type": "color",
           "description": "Subtle message bg"
+        },
+        "bg-default": {
+          "value": "{modes.color.status.neutral.frozen.default}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.status.neutral.frozen.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.neutral.frozen.default}",
+          "type": "color"
         }
       },
       "rating": {
@@ -433,17 +494,22 @@
         }
       },
       "success": {
-        "bgAlt-default": {
+        "bgAlt": {
           "value": "{status.color.none}",
           "type": "color",
           "description": "Subtle message bg"
         }
       },
       "warning": {
-        "bgAlt-default": {
+        "bgAlt": {
           "value": "{status.color.none}",
           "type": "color",
           "description": "Subtle message bg"
+        },
+        "bgAlt-default": {
+          "value": "{modes.color.status.caution.frozen.default}",
+          "type": "color",
+          "description": "Global message bg"
         }
       }
     },
@@ -469,7 +535,7 @@
       }
     },
     "color": {
-      "bg-enabled": {
+      "bg-active": {
         "value": "{modes.color.interactive.monochrome.generic.withDefault}",
         "type": "color"
       },
@@ -506,9 +572,29 @@
           }
         }
       },
-      "row2": {
+      "row": {
         "bg-activated": {
-          "value": "{modes.color.interactive.primary.frozen.default}",
+          "value": "{modes.color.interactive.primary.frozen.table.default}",
+          "type": "color"
+        },
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.generic.frozen.active}",
+          "type": "color"
+        },
+        "bg-alt": {
+          "value": "{modes.color.generic.bg.frozen.delicate}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.generic.bg.frozen.soft}",
+          "type": "color"
+        },
+        "label-active": {
+          "value": "{modes.color.interactive.monochrome.generic.withActiveAlt}",
+          "type": "color"
+        },
+        "label-activated": {
+          "value": "{modes.color.interactive.monochrome.generic.withActiveAlt}",
           "type": "color"
         }
       }
