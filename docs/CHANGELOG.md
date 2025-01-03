@@ -1,3 +1,57 @@
+# [5.0.0-beta.32](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.31...v5.0.0-beta.32) (2025-01-03)
+
+
+### Features
+
+* **data:** adding new type tokens to support step flow changes ([271a467](https://github.com/Sage/design-tokens/commit/271a4675d97458cd1eee1bdd10382b449138bc26))
+* **data:** relabelling a token to avoid breaking change ([51ad6ad](https://github.com/Sage/design-tokens/commit/51ad6ad745545646ad0bd97917b2e2c5e63ce266))
+
+# [5.0.0-beta.31](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.30...v5.0.0-beta.31) (2025-01-03)
+
+
+### Bug Fixes
+
+* remove extra newline characters in comments ([71f816e](https://github.com/Sage/design-tokens/commit/71f816eea9cf25ae191c50f3b2190d780309174d))
+
+
+### Features
+
+* **dark mode:** Add missing modes.color.status.positive.alt to dark mode. ([218806a](https://github.com/Sage/design-tokens/commit/218806ad40d1b10d5927a528b37ff130dcd2a0d9))
+* **dark mode:** Add modes.color.status.neutral.frozen to mirror light mode tokens already added. ([6516862](https://github.com/Sage/design-tokens/commit/6516862bbf1be0ef37d55548b3bd514c336a9e23))
+* **dark mode:** Again, add modes.color.status.info.alt for dark mode. ([30b6810](https://github.com/Sage/design-tokens/commit/30b681071afee7395f89e3c63c4fe52ba080d89d))
+* **data:** Remove unnecessary primitive navy tokens, adjust value of primitive navy and bright, and update values of light and dark mode frozen tokens. Correct value of modes.color.status.content in dark mode. ([1be2f1e](https://github.com/Sage/design-tokens/commit/1be2f1eb9c6045bc2282b30c20b5e0b8d913ef21))
+* **frozen product:** Add form.color.calendar.bg-active to frozen product theme. ([807fad6](https://github.com/Sage/design-tokens/commit/807fad6d0814dd9cb069b7e71928d5b529ae8551))
+* **frozen theme:** Add badge.color.notification.bg-default. ([90f3a37](https://github.com/Sage/design-tokens/commit/90f3a370e14c056062ee03d823639338eb105202))
+* **frozen theme:** Add status.color.label-default to frozen. ([f89a79f](https://github.com/Sage/design-tokens/commit/f89a79f8c34381ee54f64fb243558357aa1bc095))
+* **frozen theme:** Update status color tokens. ([c450f17](https://github.com/Sage/design-tokens/commit/c450f17e053b8fe5b1f31fc2484b2603a39d1a8b))
+* **frozen:** 1. Add to light and dark modes modes.color.interactive.primary.frozen.table.default,  ([4be5fc9](https://github.com/Sage/design-tokens/commit/4be5fc90bcf1eb1d0425a9190c4242c6125e97b7))
+* **frozen:** 1. Update value of modes.color.status.neutral.frozen.default. ([cfa013d](https://github.com/Sage/design-tokens/commit/cfa013df9e58cb1dbf26f1ca9f592f4c4f8cddd4))
+* **frozen:** Add modes.color.interactive.primary.frozen.nav.label-hover. Update value of frozenproduct nav.color.item.label-hover. ([ad86455](https://github.com/Sage/design-tokens/commit/ad86455817b2986bd8a0495eea080faa06d18a23))
+* **frozen:** Add nav.color.item.bg-hover ([bd53d5f](https://github.com/Sage/design-tokens/commit/bd53d5f3f72c79b48fb130c4f880b857c1ab8c62))
+* **frozen:** Add status.color.label-hover to frozen theme. ([06add13](https://github.com/Sage/design-tokens/commit/06add135b7836b0ef2cab90049b9d290379a9e55))
+* **frozen:** Delete unnecessary tab.color.bg-enabled from frozen. ([1bc391c](https://github.com/Sage/design-tokens/commit/1bc391ca9be0c4f639335f5cb80ce26f76e5fc3d))
+* **frozenproduct:** Add status.color.neutral bg-default, bg-hover, and border-default. ([4ddcabe](https://github.com/Sage/design-tokens/commit/4ddcabeabc78f3b9b38c9a9a9bba743eb6d0d444))
+* **frozen:** Sync tokens and figma variables ([313cdaf](https://github.com/Sage/design-tokens/commit/313cdafd20511710a921be3ed731aaa5f121b558))
+* **frozen:** Update value of modes.color.interactive.primary.frozen.nav.hover. ([a4e1ce7](https://github.com/Sage/design-tokens/commit/a4e1ce7bd184ad494a4da4f9c9d8ae96be1465eb))
+* **light and dark modes:** Rename frozen tokens to match across modes. ([2c5be9f](https://github.com/Sage/design-tokens/commit/2c5be9f04e8207bf92c1df559034bcacb0ca2677))
+* **mode colors:** Adjusted a few colors in light mode, plus edited and added tokens in dark mode. ([65be767](https://github.com/Sage/design-tokens/commit/65be7672aaefa2aaea1493031e39f03d339eb34b))
+* **modes:** Add modes.color.generic.content.nought to light and dark themes. Update modes.color.status.content.withHoverAlt. ([43c395b](https://github.com/Sage/design-tokens/commit/43c395b1e99fe4a5ca165a49ac7799940275e9eb))
+* **modes:** add modes.color.interactive.primary.frozen.nav.hover ([0496cd1](https://github.com/Sage/design-tokens/commit/0496cd1808db986dcadb3d3dbd2fcf1222f7a288))
+* **primitive:** Recreate navy token which was buggy. ([689694d](https://github.com/Sage/design-tokens/commit/689694d2ca72db840f545f4a12473a1587240bb3))
+* **primitives and modes:** 1. Add  ([438fc19](https://github.com/Sage/design-tokens/commit/438fc19f6a780a81243f35658ca88e11cbf2cb6c))
+* **primitives:** 1. Delete emeraldLight and redLight as not used. 2. Edit and add primitive colors for accessible colour contrast throughout light and dark mode tokens. ([4508115](https://github.com/Sage/design-tokens/commit/4508115301cbd5494b027f9320b729a656dcf98e))
+* **primitives:** Delete unused tokens and hope to fix buggy xxxBright tokens. ([29a2751](https://github.com/Sage/design-tokens/commit/29a275144422830f4027db9f2b2a7b1567ea6e99))
+* **status colors:** Add and amend status color tokens, for use in global and contextual messages. ([d29d73d](https://github.com/Sage/design-tokens/commit/d29d73d44eb2b0a5d15ad8e7473e5738d9243f26))
+* **status:** Add color tokens to mode status caution and info. Change values of frozen product status caution and info tokens. ([52ad63f](https://github.com/Sage/design-tokens/commit/52ad63f2869c8b9340f0b70d9c605a55cc9c2bca))
+* **status:** Add dark mode tokens for status caution and info. ([e3cdde9](https://github.com/Sage/design-tokens/commit/e3cdde9c8ef78de92140ec2f34962962c653b280))
+* **status:** Swap values of mode status default and alt colors. Add status icon color to contextual tokens. ([cf4673c](https://github.com/Sage/design-tokens/commit/cf4673cb79a3415cf42f6b6a890e1a193a845ce1))
+* **tab:** 1. Add tab.color.bg-active (white in frozen product theme, transparent in other themes).  ([21124a4](https://github.com/Sage/design-tokens/commit/21124a409be7f0385f92411ea1d5271fc10e6bb5))
+* **theme:** Resync tokens and figma variables ([6c96420](https://github.com/Sage/design-tokens/commit/6c964200f33cc9eb0d08db55e9f0c1f8ad669850))
+* **themes:** More variable syncing... ([dc0d9af](https://github.com/Sage/design-tokens/commit/dc0d9af98c2063cc014ae86e7af35987950704f7))
+* **theme:** Sync tokens and figma variables again ([e5f8ccc](https://github.com/Sage/design-tokens/commit/e5f8ccc28e57efc57d34c1c9b37d4c4f95a725ba))
+* **theme:** Sync tokens and figma variables. ([8122793](https://github.com/Sage/design-tokens/commit/812279387a800cdd75466906ca2b2c4311f544b2))
+* **undo:** undo last change which threw an error ([35bbb8f](https://github.com/Sage/design-tokens/commit/35bbb8f9b832d2291cb2ca63157ca5140399e827))
+
 # [5.0.0-beta.30](https://github.com/Sage/design-tokens/compare/v5.0.0-beta.29...v5.0.0-beta.30) (2024-12-05)
 
 
@@ -1325,6 +1379,14 @@
 ### BREAKING CHANGES
 
 * Restructure of design tokens and rewrite of build process
+
+# [4.35.0](https://github.com/Sage/design-tokens/compare/v4.34.0...v4.35.0) (2024-05-24)
+
+
+### Features
+
+* **data:** adding new type tokens to support step flow changes ([271a467](https://github.com/Sage/design-tokens/commit/271a4675d97458cd1eee1bdd10382b449138bc26))
+* **data:** relabelling a token to avoid breaking change ([51ad6ad](https://github.com/Sage/design-tokens/commit/51ad6ad745545646ad0bd97917b2e2c5e63ce266))
 
 # [4.34.0](https://github.com/Sage/design-tokens/compare/v4.33.0...v4.34.0) (2023-11-28)
 
