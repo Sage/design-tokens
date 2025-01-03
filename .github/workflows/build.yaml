@@ -1,0 +1,35 @@
+name: Build
+on:
+  pull_request:
+    branches:
+      - master
+      
+jobs:
+  # Builds token library.
+  build:
+    name: Build library
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: yarn install --frozen-lockfile
+
+      - name: Append .env
+        run: |
+          echo "
+          FIGMA_ACCESS_TOKEN=${{ secrets.FIGMA_ACCESS_TOKEN }}
+          FIGMA_FILE_ID=${{ secrets.FIGMA_FILE_ID }}
+          " >> .env
+
+      - name: Build
+        run: yarn run build

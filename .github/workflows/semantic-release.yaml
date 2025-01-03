@@ -14,41 +14,58 @@ jobs:
       contents: write
       packages: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20'
 
       - run: yarn install --frozen-lockfile
+
+      - name: Append .env
+        run: |
+          echo "
+          FIGMA_ACCESS_TOKEN=${{ secrets.FIGMA_ACCESS_TOKEN }}
+          FIGMA_FILE_ID=${{ secrets.FIGMA_FILE_ID }}
+          " >> .env
 
       - name: Build
         run: yarn run build
 
       - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v3.0.1
+        uses: crazy-max/ghaction-import-gpg@v6
         with:
-          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          git-user-signingkey: true
-          git-commit-gpgsign: true
+          git_user_signingkey: true
+          git_commit_gpgsign: true
 
-      - name: Release package to public NPM registry
-        run: npx semantic-release@19 --debug
+      - name: Release package to NPM registries
+        run: npx semantic-release --debug
         env:
           GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GIT_COMMITTER_NAME: Sage Carbon
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
 
-      - name: Upload documentation via ftp
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "./dist/docs/"
-          server-dir: "./sage/docs/"
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+
+          # GitHub registry - @amanda-mitchell/semantic-release-npm-multiple
+          GITHUB_NPM_CONFIG_REGISTRY: https://npm.pkg.github.com
+          GITHUB_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_NPM_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+
+          # NpmJS registry - @amanda-mitchell/semantic-release-npm-multiple
+          PUBLIC_NPM_CONFIG_REGISTRY: https://registry.npmjs.org
+          PUBLIC_NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PUBLIC_NPM_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+
+          # X3 registry - @amanda-mitchell/semantic-release-npm-multiple
+          X3_NPM_CONFIG_REGISTRY: https://repository.sagex3.com:8443/repository/x3-npm-hosted/
+          X3_NPM_USERNAME: ${{ secrets.X3_NPM_USER }}
+          X3_NPM_PASSWORD: ${{ secrets.X3_NPM_PASSWORD }}
+          X3_NPM_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+

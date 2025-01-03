@@ -1,0 +1,409 @@
+{
+  "nav": {
+    "color": {
+      "bg-default": {
+        "value": "{modes.color.generic.bg.nought}",
+        "type": "color",
+        "description": "nav bar bg"
+      },
+      "item": {
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.generic.active}",
+          "type": "color"
+        },
+        "bg-activealt": {
+          "value": "{modes.color.interactive.monochrome.generic.hoverAlt}",
+          "type": "color"
+        },
+        "bg-enabled": {
+          "value": "{modes.color.none}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.interactive.monochrome.generic.hoverAlt}",
+          "type": "color"
+        },
+        "label-active": {
+          "value": "{modes.color.interactive.monochrome.generic.withActive}",
+          "type": "color"
+        },
+        "label-activealt": {
+          "value": "{modes.color.interactive.monochrome.generic.withHover}",
+          "type": "color"
+        },
+        "label-enabled": {
+          "value": "{modes.color.interactive.monochrome.generic.default}",
+          "type": "color"
+        },
+        "label-hover": {
+          "value": "{modes.color.interactive.monochrome.generic.withHover}",
+          "type": "color"
+        },
+        "label-alt": {
+          "value": "{modes.color.interactive.monochrome.generic.defaultAlt}",
+          "type": "color"
+        }
+      },
+      "menu": {
+        "bg-default": {
+          "value": "{modes.color.generic.bg.faint}",
+          "type": "color",
+          "description": "menu (level 1) nav bg"
+        },
+        "bg-alt": {
+          "value": "{modes.color.generic.bg.delicate}",
+          "type": "color",
+          "description": "level 2 nav bg"
+        },
+        "bg-alt2": {
+          "value": "{modes.color.generic.bg.soft}",
+          "type": "color",
+          "description": "level 3 nav bg"
+        },
+        "border-default": {
+          "value": "{modes.color.generic.fg.delicate}",
+          "type": "color",
+          "description": "level 1 border"
+        }
+      }
+    },
+    "radius": {
+      "menu": {
+        "value": "{global.radius.interactive.M}",
+        "type": "borderRadius",
+        "description": "Drop list bottom corners, product popout list all corners"
+      },
+      "menuitem": {
+        "value": "{global.radius.interactive.S}",
+        "type": "borderRadius",
+        "description": "Menu (menu item state bg shape), "
+      },
+      "menumodal": {
+        "value": "{global.radius.interactive.L}",
+        "type": "borderRadius",
+        "description": "Menu on mobile"
+      }
+    },
+    "boxshadow": {
+      "menu": {
+        "value": "{global.boxshadow.cleanedge.near}",
+        "type": "boxShadow",
+        "description": "Menu"
+      }
+    },
+    "borderwidth": {
+      "divider": {
+        "item": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth",
+          "description": "Menu (option divider)"
+        },
+        "menu": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth",
+          "description": "level 1 border"
+        },
+        "segment": {
+          "value": "{global.borderwidth.L}",
+          "type": "borderWidth",
+          "description": "Menu (segment divider)"
+        }
+      }
+    },
+    "size": {
+      "menu": {
+        "content": {
+          "y": {
+            "M": {
+              "value": "{global.size.macro.S}",
+              "type": "sizing",
+              "description": "Min height of menu content"
+            }
+          },
+          "icon": {
+            "M": {
+              "value": "{global.size.icon.M}",
+              "type": "sizing",
+              "description": "Icon size"
+            },
+            "L": {
+              "value": "{global.size.icon.L}",
+              "type": "sizing",
+              "description": "Icon size"
+            }
+          }
+        },
+        "option": {
+          "x": {
+            "M": {
+              "value": "{global.size.flex.M}",
+              "type": "sizing",
+              "description": "Min width of options"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.size.macro.M}",
+              "type": "sizing",
+              "description": "Min height of menu option"
+            }
+          }
+        }
+      },
+      "navbar": {
+        "content": {
+          "y": {
+            "M": {
+              "value": "{global.size.macro.S}",
+              "type": "sizing",
+              "description": "Min height of nav content"
+            }
+          },
+          "icon": {
+            "M": {
+              "value": "{global.size.icon.M}",
+              "type": "sizing",
+              "description": "Chevron and caret icons"
+            },
+            "L": {
+              "value": "{global.size.icon.L}",
+              "type": "sizing",
+              "description": "Icon size"
+            }
+          }
+        },
+        "item": {
+          "x": {
+            "M": {
+              "value": "{global.size.flex.M}",
+              "type": "sizing",
+              "description": "Max width of nav item"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.size.macro.M}",
+              "type": "sizing",
+              "description": "Min height of nav item"
+            }
+          }
+        }
+      }
+    },
+    "space": {
+      "menu": {
+        "container": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Horizontal space on menu complex and menu items wrapper in sidebar menu"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical space on mobile menu items"
+            }
+          }
+        },
+        "content": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Horizontal space on content within menu item"
+            },
+            "L": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Left padding for indented content in options"
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Space between content elements within menu item"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Vertical space on content within menu item"
+            }
+          }
+        },
+        "item": {
+          "x": {
+            "S": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Horizontal space on menu option complex, small screen option"
+            },
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Horizontal space on nav menu item"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Vertical space on nav menu item"
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Space between menu item and submenu"
+            }
+          }
+        }
+      },
+      "navbar": {
+        "x": {
+          "M": {
+            "value": "{global.space.macro.M}",
+            "type": "spacing"
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.micro.XS}",
+            "type": "spacing",
+            "description": "Vertical padding on nav bar"
+          }
+        },
+        "content": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Horizontal space in content within nav item"
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Gap between content elements within nav item"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Vertical space in content within nav item"
+            }
+          }
+        },
+        "item": {
+          "x": {
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Horizontal space in nav item"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Vertical space in nav item"
+            }
+          }
+        },
+        "logo": {
+          "x": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Horizontal space around logo"
+            }
+          },
+          "xg": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Gap between logo and divider"
+            }
+          },
+          "y": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top padding on logo"
+            }
+          }
+        }
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.adaptive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.moderate.L}",
+            "type": "typography"
+          }
+        }
+      },
+      "responsive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.moderate.L}",
+            "type": "typography"
+          }
+        }
+      }
+    }
+  }
+}

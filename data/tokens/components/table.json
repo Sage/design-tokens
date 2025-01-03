@@ -1,0 +1,405 @@
+{
+  "table": {
+    "color": {
+      "header": {
+        "subtle": {
+          "bg-alt": {
+            "value": "{modes.color.interactive.monochrome.subtle.default}",
+            "type": "color",
+            "description": "header alt"
+          },
+          "bg-default": {
+            "value": "{modes.color.none}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.interactive.monochrome.generic.hover}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.generic.fg.delicate}",
+            "type": "color",
+            "description": "Header borders"
+          },
+          "label-default": {
+            "value": "{modes.color.interactive.monochrome.generic.default}",
+            "type": "color"
+          },
+          "label-hover": {
+            "value": "{modes.color.interactive.monochrome.generic.default}",
+            "type": "color"
+          }
+        },
+        "harsh": {
+          "bg-alt": {
+            "value": "{modes.color.interactive.monochrome.generic.defaultAlt}",
+            "type": "color",
+            "description": "header alt"
+          },
+          "bg-default": {
+            "value": "{modes.color.interactive.monochrome.generic.default}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.interactive.monochrome.generic.hover}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.interactive.monochrome.subtle.defaultAlt}",
+            "type": "color"
+          },
+          "label-default": {
+            "value": "{modes.color.interactive.monochrome.generic.withDefault}",
+            "type": "color"
+          },
+          "label-hover": {
+            "value": "{modes.color.interactive.monochrome.generic.default}",
+            "type": "color"
+          }
+        }
+      },
+      "row": {
+        "bg-activated": {
+          "value": "{modes.color.interactive.primary.default}",
+          "type": "color"
+        },
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.generic.active}",
+          "type": "color"
+        },
+        "bg-default": {
+          "value": "{modes.color.generic.bg.nought}",
+          "type": "color"
+        },
+        "bg-alt": {
+          "value": "{modes.color.generic.bg.delicate}",
+          "type": "color",
+          "description": "Zebra stripes"
+        },
+        "bg-alt2": {
+          "value": "{modes.color.generic.bg.soft}",
+          "type": "color",
+          "description": "Zebra stripes combined with child rows."
+        },
+        "bg-alt3": {
+          "value": "{modes.color.generic.bg.faint}",
+          "type": "color",
+          "description": "Child rows."
+        },
+        "bg-hover": {
+          "value": "{modes.color.generic.bg.soft}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.generic.fg.delicate}",
+          "type": "color"
+        },
+        "label-activated": {
+          "value": "{modes.color.interactive.monochrome.generic.withActive}",
+          "type": "color"
+        },
+        "label-active": {
+          "value": "{modes.color.interactive.monochrome.generic.withActive}",
+          "type": "color"
+        },
+        "label-default": {
+          "value": "{modes.color.generic.content.harsh}",
+          "type": "color"
+        },
+        "label-hover": {
+          "value": "{modes.color.generic.content.extreme}",
+          "type": "color"
+        }
+      },
+      "footer": {
+        "bg-default": {
+          "value": "{modes.color.generic.bg.soft}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.generic.fg.delicate}",
+          "type": "color",
+          "description": "Header borders"
+        },
+        "label-default": {
+          "value": "{modes.color.interactive.monochrome.generic.default}",
+          "type": "color"
+        }
+      }
+    },
+    "radius": {
+      "container": {
+        "value": "{global.radius.container.M}",
+        "type": "borderRadius",
+        "description": "Table (parent container)"
+      }
+    },
+    "boxshadow": {
+      "parentrow": {
+        "value": "{global.boxshadow.container.far}",
+        "type": "boxShadow"
+      }
+    },
+    "borderwidth": {
+      "thin": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Table border"
+      },
+      "thick": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "header border for subtle"
+      }
+    },
+    "space": {
+      "none": {
+        "value": "{global.space.none}",
+        "type": "spacing"
+      },
+      "row": {
+        "x": {
+          "XS": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Left and right padding inside XS row cells"
+          },
+          "S": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding inside S row cells"
+          },
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding inside M row cells"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding inside L row cells"
+          },
+          "XL": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Left and right padding inside XL row cells"
+          }
+        },
+        "xg": {
+          "XS": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "internal spacing between text, checkboxes, icons etc"
+          },
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "internal spacing between text, checkboxes, icons etc"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "internal spacing between text, checkboxes, icons etc"
+          },
+          "L": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "internal spacing between text, checkboxes, icons etc"
+          },
+          "XL": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "internal spacing between text, checkboxes, icons etc"
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "top and bottom adding inside pagination"
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "gap between table and pagination"
+          }
+        }
+      },
+      "rowchild": {
+        "x": {
+          "XS": {
+            "value": "{global.space.macro.L} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside XS child row cells"
+          },
+          "S": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside S child row cells"
+          },
+          "M": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside M child row cells"
+          },
+          "L": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside L child row cells"
+          },
+          "XL": {
+            "value": "{global.space.macro.XL} + {global.space.micro.S}",
+            "type": "spacing",
+            "description": "Left padding inside XL child row cells"
+          }
+        }
+      }
+    },
+    "size": {
+      "row": {
+        "standard": {
+          "XS": {
+            "value": "{global.size.macro.XS}",
+            "type": "sizing"
+          },
+          "S": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing"
+          },
+          "M": {
+            "value": "{global.size.macro.M}",
+            "type": "sizing"
+          },
+          "L": {
+            "value": "{global.size.macro.L}",
+            "type": "sizing"
+          },
+          "XL": {
+            "value": "{global.size.macro.XL} + {global.size.micro.M}",
+            "type": "sizing"
+          }
+        },
+        "doubleheight": {
+          "XS": {
+            "value": "{table.size.row.standard.XS} * 2",
+            "type": "sizing"
+          },
+          "S": {
+            "value": "{table.size.row.standard.S} * 2",
+            "type": "sizing"
+          },
+          "M": {
+            "value": "{table.size.row.standard.M} * 2",
+            "type": "sizing"
+          },
+          "L": {
+            "value": "{table.size.row.standard.L} * 2",
+            "type": "sizing"
+          },
+          "XL": {
+            "value": "{table.size.row.standard.XL} * 2",
+            "type": "sizing"
+          }
+        }
+      },
+      "icon": {
+        "M": {
+          "value": "{global.size.icon.M}",
+          "type": "sizing"
+        }
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "heading": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.adaptive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.moderate.L}",
+            "type": "typography"
+          }
+        },
+        "label": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        }
+      },
+      "responsive": {
+        "heading": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.moderate.L}",
+            "type": "typography"
+          }
+        },
+        "label": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.L}",
+            "type": "typography"
+          }
+        }
+      }
+    }
+  }
+}

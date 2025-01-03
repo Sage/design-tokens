@@ -1,0 +1,107 @@
+{
+  "badge": {
+    "color": {
+      "notification": {
+        "border-default": {
+          "value": "{modes.color.generic.fg.nought}",
+          "type": "color"
+        },
+        "bg-default": {
+          "value": "{modes.color.status.negative.alt}",
+          "type": "color"
+        },
+        "label-default": {
+          "value": "{modes.color.generic.fg.nought}",
+          "type": "color"
+        }
+      }
+    },
+    "size": {
+      "micro": {
+        "dot": {
+          "value": "{global.size.micro.M}",
+          "type": "sizing",
+          "description": "Micro dot badge size"
+        },
+        "numbered": {
+          "min": {
+            "value": "{global.size.macro.XXS}",
+            "type": "sizing",
+            "description": "Micro dot badge size with numbering"
+          },
+          "max": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "Micro dot badge size max width"
+          }
+        }
+      },
+      "standard": {
+        "min": {
+          "value": "{global.size.macro.XS}",
+          "type": "sizing",
+          "description": "standard badge size"
+        },
+        "max": {
+          "value": "{global.size.macro.S} + {global.size.micro.XS}",
+          "type": "sizing",
+          "description": "Standard badge max-width"
+        }
+      }
+    },
+    "radius": {
+      "badge": {
+        "value": "{global.radius.circle}",
+        "type": "borderRadius",
+        "description": "Badge"
+      }
+    },
+    "space": {
+      "x": {
+        "S": {
+          "value": "{global.space.micro.XS}",
+          "type": "spacing",
+          "description": "horizontal padding on micro badges with numbering"
+        },
+        "M": {
+          "value": "{global.space.micro.S}",
+          "type": "spacing",
+          "description": "horizontal padding on typical badge"
+        }
+      },
+      "y": {
+        "S": {
+          "value": "{global.space.micro.XXS}",
+          "type": "spacing",
+          "description": "bottom padding on micro badge with number"
+        },
+        "M": {
+          "value": "{global.space.micro.XXS}",
+          "type": "spacing",
+          "description": "bottom padding on typical badge"
+        }
+      }
+    },
+    "borderwidth": {
+      "badge": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "Badge"
+      }
+    },
+    "typography": {
+      "responsive": {
+        "M": {
+          "value": "{global.typography.responsive.component.notification.M}",
+          "type": "typography"
+        }
+      },
+      "adaptive": {
+        "M": {
+          "value": "{global.typography.adaptive.component.notification.M}",
+          "type": "typography"
+        }
+      }
+    }
+  }
+}

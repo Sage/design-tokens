@@ -1,0 +1,791 @@
+{
+  "progress": {
+    "size": {
+      "bar": {
+        "S": {
+          "value": "{global.size.micro.XS}",
+          "type": "sizing",
+          "description": "S loader bar"
+        },
+        "M": {
+          "value": "{global.size.micro.M}",
+          "type": "sizing",
+          "description": "M progress tracker bar, M loader bar"
+        },
+        "L": {
+          "value": "{global.size.micro.XL}",
+          "type": "sizing",
+          "description": "L loader bar"
+        }
+      },
+      "carouselselector": {
+        "dot": {
+          "M": {
+            "value": "{global.size.micro.L}",
+            "type": "sizing"
+          }
+        },
+        "activedot": {
+          "M": {
+            "value": "{global.size.macro.XXS}",
+            "type": "sizing"
+          }
+        },
+        "hitarea": {
+          "M": {
+            "value": "{global.size.macro.XS}",
+            "type": "sizing"
+          }
+        }
+      },
+      "carouselslide": {
+        "x": {
+          "M": {
+            "value": "{global.size.macro.XL}",
+            "type": "sizing",
+            "description": "Inactive slide"
+          }
+        }
+      },
+      "ring": {
+        "S": {
+          "value": "{global.size.macro.S}",
+          "type": "sizing",
+          "description": "Loader ring"
+        },
+        "M": {
+          "value": "{global.size.macro.S} * 2",
+          "type": "sizing",
+          "description": "Loader ring"
+        },
+        "L": {
+          "value": "{global.size.macro.XS} * 4",
+          "type": "sizing",
+          "description": "Loader ring"
+        }
+      },
+      "skeleton": {
+        "responsive": {
+          "text": {
+            "XS": {
+              "value": "{primitives.fontSize.responsive.product.step0}",
+              "type": "sizing",
+              "description": "Skeleton paragraph and H5"
+            },
+            "S": {
+              "value": "{primitives.fontSize.responsive.product.step2}",
+              "type": "sizing",
+              "description": "H4 Skeletons"
+            },
+            "M": {
+              "value": "{primitives.fontSize.responsive.product.step2}",
+              "type": "sizing",
+              "description": "H3 Skeletons"
+            },
+            "L": {
+              "value": "{primitives.fontSize.responsive.product.step3}",
+              "type": "sizing",
+              "description": "H2 Skeletons"
+            },
+            "XL": {
+              "value": "{primitives.fontSize.responsive.product.step5}",
+              "type": "sizing",
+              "description": "H1 Skeletons"
+            }
+          }
+        },
+        "adaptive": {
+          "text": {
+            "XS": {
+              "value": "{global.fontSize.adaptive.step0}",
+              "type": "sizing",
+              "description": "Skeleton paragraph and H5"
+            },
+            "S": {
+              "value": "{global.fontSize.adaptive.step2}",
+              "type": "sizing",
+              "description": "H4 Skeletons"
+            },
+            "M": {
+              "value": "{global.fontSize.adaptive.step2}",
+              "type": "sizing",
+              "description": "H3 Skeletons"
+            },
+            "L": {
+              "value": "{global.fontSize.adaptive.step3}",
+              "type": "sizing",
+              "description": "H2 Skeletons"
+            },
+            "XL": {
+              "value": "{global.fontSize.adaptive.step5}",
+              "type": "sizing",
+              "description": "H1 Skeletons"
+            }
+          }
+        }
+      },
+      "stepflow": {
+        "M": {
+          "value": "{global.size.micro.M}",
+          "type": "sizing",
+          "description": "Step height"
+        }
+      },
+      "stepindicator": {
+        "bar": {
+          "value": "{global.size.micro.XXS}",
+          "type": "sizing",
+          "description": "step indicator bar"
+        },
+        "stepcircle": {
+          "S": {
+            "value": "{global.size.macro.XS}",
+            "type": "sizing",
+            "description": "M size step indicator"
+          },
+          "M": {
+            "value": "{global.size.macro.S}",
+            "type": "sizing",
+            "description": "M size step indicator"
+          }
+        }
+      }
+    },
+    "color": {
+      "bg-skeleton": {
+        "value": "{modes.color.status.content.loading}",
+        "type": "color"
+      },
+      "bg-default": {
+        "value": "{modes.color.interactive.progress.bg}",
+        "type": "color"
+      },
+      "border-default": {
+        "value": "{modes.color.generic.fg.soft}",
+        "type": "color"
+      },
+      "fg-ai": {
+        "value": "{modes.color.interactive.ai.default}",
+        "type": "color",
+        "description": "For progress ring in ai buttons"
+      },
+      "fg-alt": {
+        "value": "{modes.color.status.positive.alt}",
+        "type": "color"
+      },
+      "fg-alt2": {
+        "value": "{modes.color.generic.content.firm}",
+        "type": "color"
+      },
+      "fg-caution": {
+        "value": "{modes.color.status.caution.alt}",
+        "type": "color"
+      },
+      "fg-default": {
+        "value": "{modes.color.interactive.monochrome.generic.active}",
+        "type": "color"
+      },
+      "fg-error": {
+        "value": "{modes.color.status.negative.alt}",
+        "type": "color"
+      },
+      "fg-info": {
+        "value": "{modes.color.status.info.alt}",
+        "type": "color"
+      },
+      "label-alt": {
+        "value": "{modes.color.generic.content.firm}",
+        "type": "color"
+      },
+      "label-default": {
+        "value": "{modes.color.generic.content.harsh}",
+        "type": "color"
+      },
+      "datavis": {
+        "fg-default": {
+          "value": "{modes.color.status.generic.default}",
+          "type": "color"
+        }
+      },
+      "loader": {
+        "bg-default": {
+          "value": "{modes.color.interactive.progress.bg}",
+          "type": "color"
+        },
+        "bg-alt": {
+          "value": "{modes.color.interactive.progress.bgAlt}",
+          "type": "color",
+          "description": "used for inverse loader bgs"
+        },
+        "fg-default": {
+          "value": "{modes.color.interactive.monochrome.generic.active}",
+          "type": "color",
+          "description": "used for loader standard loader spinner"
+        },
+        "fg-alt": {
+          "value": "{modes.color.interactive.monochrome.generic.withActive}",
+          "type": "color",
+          "description": "used on inverse loading spinner"
+        },
+        "fg-error": {
+          "value": "{modes.color.status.negative.alt}",
+          "type": "color"
+        },
+        "fg-complete": {
+          "value": "{modes.color.status.positive.alt}",
+          "type": "color"
+        }
+      },
+      "stepflow": {
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.generic.active}",
+          "type": "color"
+        },
+        "bg-complete": {
+          "value": "{modes.color.status.positive.alt}",
+          "type": "color"
+        },
+        "bg-default": {
+          "value": "{modes.color.generic.fg.nought}",
+          "type": "color"
+        },
+        "border-active-inner": {
+          "value": "{modes.color.generic.fg.nought}",
+          "type": "color"
+        },
+        "border-active-outer": {
+          "value": "{modes.color.interactive.monochrome.generic.active}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.generic.fg.soft}",
+          "type": "color"
+        },
+        "label-alt": {
+          "value": "{modes.color.generic.content.firm}",
+          "type": "color"
+        },
+        "label-default": {
+          "value": "{modes.color.generic.content.harsh}",
+          "type": "color"
+        }
+      },
+      "stepindicator": {
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.generic.active}",
+          "type": "color"
+        },
+        "bg-complete": {
+          "value": "{modes.color.status.positive.alt}",
+          "type": "color"
+        },
+        "border-active-outer": {
+          "value": "{modes.color.interactive.monochrome.generic.active}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.generic.fg.soft}",
+          "type": "color"
+        },
+        "border-success": {
+          "value": "{modes.color.status.positive.alt}",
+          "type": "color"
+        },
+        "label-active": {
+          "value": "{modes.color.interactive.monochrome.generic.withActive}",
+          "type": "color"
+        },
+        "label-complete": {
+          "value": "{modes.color.interactive.monochrome.generic.withActive}",
+          "type": "color"
+        },
+        "label-default": {
+          "value": "{modes.color.generic.content.harsh}",
+          "type": "color"
+        }
+      }
+    },
+    "radius": {
+      "none": {
+        "value": "{global.radius.none}",
+        "type": "borderRadius",
+        "description": "File input (top corners of integrated progress bar),"
+      },
+      "stepflow": {
+        "value": "{global.radius.circle}",
+        "type": "borderRadius",
+        "description": "Step flow (step indicators)"
+      },
+      "stepindicator": {
+        "value": "{global.radius.circle}",
+        "type": "borderRadius",
+        "description": "step indicator circles"
+      },
+      "carouselselector": {
+        "value": "{global.radius.circle}",
+        "type": "borderRadius",
+        "description": "Carousel (selector dot)"
+      },
+      "integrated": {
+        "value": "{global.radius.container.S}",
+        "type": "borderRadius",
+        "description": "File input (bottom corners of integrated status bar)"
+      },
+      "skeleton": {
+        "moderate": {
+          "value": "{global.radius.container.M}",
+          "type": "borderRadius",
+          "description": "used to represent headings, inputs and text"
+        },
+        "curved": {
+          "value": "{global.radius.container.L}",
+          "type": "borderRadius",
+          "description": "used to represent elements such as icons"
+        },
+        "sweeping": {
+          "value": "{global.radius.container.XXL}",
+          "type": "borderRadius",
+          "description": "used to represent buttons"
+        },
+        "circle": {
+          "value": "{global.radius.circle}",
+          "type": "borderRadius",
+          "description": "Used to represent circular elements such as profiles, badges etc"
+        }
+      },
+      "bar": {
+        "S": {
+          "value": "{global.radius.container.XS}",
+          "type": "borderRadius",
+          "description": "Progress tracker S"
+        },
+        "M": {
+          "value": "{global.radius.container.S}",
+          "type": "borderRadius",
+          "description": "File input (bottom corners of integrated status bar), Progress tracker M, "
+        },
+        "L": {
+          "value": "{global.radius.container.SM}",
+          "type": "borderRadius",
+          "description": "Progress tracker L"
+        }
+      }
+    },
+    "borderwidth": {
+      "bar": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Progress bar (all sizes) "
+      },
+      "carouselector": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Carousel slide selector dots "
+      },
+      "integrated": {
+        "value": "{global.borderwidth.XS}",
+        "type": "borderWidth",
+        "description": "Progress bar in File upload "
+      },
+      "stepflow": {
+        "inner": {
+          "value": "{global.borderwidth.XS}",
+          "type": "borderWidth",
+          "description": "Step flow default (not started)"
+        },
+        "active-inner": {
+          "value": "{global.borderwidth.S}",
+          "type": "borderWidth",
+          "description": "Step flow active step border outer"
+        },
+        "active-outer": {
+          "value": "{global.borderwidth.L}",
+          "type": "borderWidth",
+          "description": "Step flow active step border outermost"
+        }
+      },
+      "stepindicator": {
+        "S": {
+          "active": {
+            "value": "{global.borderwidth.S}",
+            "type": "borderWidth"
+          },
+          "default": {
+            "value": "{global.borderwidth.S}",
+            "type": "borderWidth"
+          }
+        },
+        "M": {
+          "active": {
+            "value": "{global.borderwidth.M}",
+            "type": "borderWidth"
+          },
+          "default": {
+            "value": "{global.borderwidth.M}",
+            "type": "borderWidth"
+          }
+        }
+      }
+    },
+    "space": {
+      "carouselselector": {
+        "xg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between selectors."
+          }
+        },
+        "y": {
+          "M": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Vertical padding on selector group."
+          }
+        }
+      },
+      "integral": {
+        "x": {
+          "value": "{global.space.micro.S}",
+          "type": "spacing",
+          "description": "Little space between words in progress components"
+        }
+      },
+      "loader": {
+        "yg": {
+          "S": {
+            "value": "{global.space.micro.M}",
+            "type": "spacing",
+            "description": "gap between loader visual and loading text"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "gap between loader visual and loading text"
+          },
+          "L": {
+            "value": "{global.space.micro.XL}",
+            "type": "spacing",
+            "description": "gap between loader visual and loading text"
+          }
+        },
+        "xg": {
+          "S": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between loader graphic and label."
+          },
+          "M": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Gap between loader graphic and label."
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "Gap between loader graphic and label."
+          }
+        }
+      },
+      "skeleton": {
+        "multiline": {
+          "yg": {
+            "XS": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "S": {
+              "value": "{global.space.micro.XL}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "M": {
+              "value": "{global.space.micro.M}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "L": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            },
+            "XL": {
+              "value": "{global.space.micro.XL}",
+              "type": "spacing",
+              "description": "vertical gap between skeleton bars"
+            }
+          },
+          "y": {
+            "XS": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top bottom padding on grouped lines"
+            },
+            "S": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top bottom padding on grouped lines"
+            },
+            "M": {
+              "value": "{global.space.micro.XS}",
+              "type": "spacing",
+              "description": "Top bottom padding on grouped lines"
+            },
+            "L": {
+              "value": "{global.space.micro.XS}",
+              "type": "spacing",
+              "description": "Top bottom padding on grouped lines"
+            },
+            "XL": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Top bottom padding on grouped lines"
+            }
+          }
+        },
+        "singleline": {
+          "xg": {
+            "XS": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "horizontal gap between elements"
+            },
+            "S": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "horizontal gap between elements"
+            },
+            "M": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "horizontal gap between elements"
+            },
+            "L": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "horizontal gap between elements"
+            },
+            "XL": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "horizontal gap between elements"
+            }
+          }
+        }
+      },
+      "stepflow": {
+        "y": {
+          "M": {
+            "value": "{global.space.micro.S}",
+            "type": "spacing",
+            "description": "Vertical padding around step indicators"
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between step heading and back link."
+          }
+        },
+        "steps": {
+          "xg": {
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "Gap between step indicators"
+            }
+          },
+          "yg": {
+            "M": {
+              "value": "{global.space.micro.S}",
+              "type": "spacing",
+              "description": "Gap between glow heading, step label and step indicators"
+            }
+          }
+        }
+      },
+      "tracker": {
+        "yg": {
+          "S": {
+            "value": "{global.space.micro.M}",
+            "type": "spacing",
+            "description": "Space between bar and label"
+          },
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Space between bar and label"
+          },
+          "L": {
+            "value": "{global.space.micro.XXL}",
+            "type": "spacing",
+            "description": "Space between bar and label"
+          }
+        },
+        "xg": {
+          "M": {
+            "value": "{global.space.micro.L}",
+            "type": "spacing",
+            "description": "Gap between tracker value text and description"
+          }
+        }
+      },
+      "stepindicator": {
+        "generic": {
+          "g": {
+            "S": {
+              "value": "{global.space.micro.XXL}",
+              "type": "spacing",
+              "description": "gap between timeline visual and text"
+            },
+            "M": {
+              "value": "{global.space.macro.XS}",
+              "type": "spacing",
+              "description": "gap between timeline visual and text"
+            }
+          },
+          "text": {
+            "yg": {
+              "S": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "gap between label and subtext"
+              },
+              "M": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "gap between label and subtext"
+              }
+            }
+          },
+          "visual": {
+            "g": {
+              "S": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "gap between step number and line"
+              },
+              "M": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "gap between step number and line"
+              }
+            }
+          }
+        },
+        "vertical": {
+          "y": {
+            "S": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical variant top padding on parent container"
+            },
+            "M": {
+              "value": "{global.space.micro.L}",
+              "type": "spacing",
+              "description": "Vertical variant top padding on parent container"
+            }
+          },
+          "text": {
+            "y": {
+              "S": {
+                "value": "{global.space.micro.XS}",
+                "type": "spacing",
+                "description": "space above text and parent container on vertical variant"
+              }
+            }
+          }
+        },
+        "horizontal": {
+          "text": {
+            "x": {
+              "S": {
+                "value": "{global.space.micro.S}",
+                "type": "spacing",
+                "description": "horizontal variant left and right padding on text container"
+              },
+              "M": {
+                "value": "{global.space.micro.L}",
+                "type": "spacing",
+                "description": "horizontal variant left and right padding on text container"
+              }
+            }
+          }
+        }
+      }
+    },
+    "opacity": {
+      "carousel": {
+        "inactive": {
+          "value": "0.3",
+          "type": "opacity",
+          "description": "Inactive slide IMAGE layer."
+        }
+      }
+    },
+    "typography": {
+      "adaptive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.adaptive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.adaptive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.adaptive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.adaptive.component.moderate.L}",
+            "type": "typography"
+          }
+        }
+      },
+      "responsive": {
+        "label": {
+          "S": {
+            "value": "{global.typography.responsive.component.firm.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.firm.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.firm.L}",
+            "type": "typography"
+          }
+        },
+        "default": {
+          "S": {
+            "value": "{global.typography.responsive.component.moderate.S}",
+            "type": "typography"
+          },
+          "M": {
+            "value": "{global.typography.responsive.component.moderate.M}",
+            "type": "typography"
+          },
+          "L": {
+            "value": "{global.typography.responsive.component.moderate.L}",
+            "type": "typography"
+          }
+        }
+      }
+    }
+  }
+}

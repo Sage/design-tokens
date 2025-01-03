@@ -3,7 +3,7 @@ on:
   pull_request:
     branches:
       - master
-      - main
+      
 jobs:
   run-linters:
     name: Run linters
@@ -11,27 +11,20 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20'
 
       - name: Install
         run: yarn install --frozen-lockfile
 
-      # Install your linters here
-      - name: Run linters
-        uses: wearerequired/lint-action@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          eslint: true
-          auto_fix: true
-          git_name: github-actions[bot]
-          git_email: github-actions[bot]@users.noreply.github.com
-
       - name: Build project
         run: npm run build
+
+      - name: Run stylelint
+        run: npm run stylelint:dist
 
       - name: Download W3C Validator (vnu.jar)
         run: wget https://github.com/validator/validator/releases/download/latest/vnu.jar

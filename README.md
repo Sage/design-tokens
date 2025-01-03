@@ -20,10 +20,7 @@ Design tokens purpose is to:
 - **Keep visual consistency across all components of the library.**
 
 ## Docs:
-- [Figma tokens github workflow](./docs/figma-github-workflow.md)
-- [Pre-transform phase](./docs/pretransform-phase.md)
 - [Generating icons](./docs/icons.md)
-- [Generating tokens documentation](./docs/tokens-documentation.md)
 
 ## Using the design tokens
 
@@ -111,4 +108,4 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-Copyright (c) 2021 Sage Group Plc. All rights reserved.
+Copyright (c) 2024 Sage Group Plc. All rights reserved.

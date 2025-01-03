@@ -1,0 +1,428 @@
+{
+  "button": {
+    "color": {
+      "typical": {
+        "toggle": {
+          "label-active": {
+            "value": "{modes.color.interactive.monochrome.marketing.withActive}",
+            "type": "color"
+          }
+        },
+        "tertiary": {
+          "bg-enabled": {
+            "value": "{modes.color.none}",
+            "type": "color"
+          }
+        }
+      },
+      "video": {
+        "primary": {
+          "bg-enabled": {
+            "value": "{modes.color.interactive.monochrome.marketing.withActive}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.interactive.monochrome.marketing.withActive}",
+            "type": "color"
+          },
+          "label-enabled": {
+            "value": "{modes.color.interactive.monochrome.generic.default}",
+            "type": "color"
+          },
+          "label-hover": {
+            "value": "{modes.color.interactive.monochrome.generic.default}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "borderwidth": {
+      "tertiary": {
+        "value": "{global.borderwidth.S}",
+        "type": "borderWidth",
+        "description": "tertiary button border "
+      }
+    },
+    "space": {
+      "tertiary": {
+        "x": {
+          "S": {
+            "value": "{global.space.none}",
+            "type": "spacing",
+            "description": "Left and right padding on small buttons"
+          },
+          "M": {
+            "value": "{global.space.none}",
+            "type": "spacing",
+            "description": "Left and right padding on medium buttons"
+          },
+          "L": {
+            "value": "{global.space.none}",
+            "type": "spacing",
+            "description": "Left and right padding on large buttons"
+          }
+        },
+        "icononly": {
+          "x": {
+            "S": {
+              "value": "{global.space.none}",
+              "type": "spacing",
+              "description": "Left and right padding on icon-only processing button "
+            },
+            "M": {
+              "value": "{global.space.none}",
+              "type": "spacing",
+              "description": "Left and right padding on icon-only processing button "
+            },
+            "L": {
+              "value": "{global.space.none}",
+              "type": "spacing",
+              "description": "Left and right padding on icon-only processing button "
+            }
+          }
+        }
+      }
+    },
+    "radius": {
+      "tertiary": {
+        "S": {
+          "value": "{global.radius.none}",
+          "type": "borderRadius",
+          "description": "tertiary button"
+        },
+        "M": {
+          "value": "{global.radius.none}",
+          "type": "borderRadius",
+          "description": "tertiary button"
+        },
+        "L": {
+          "value": "{global.radius.none}",
+          "type": "borderRadius",
+          "description": "tertiary button"
+        }
+      }
+    }
+  },
+  "form": {
+    "color": {
+      "switch": {
+        "fg-active": {
+          "value": "{modes.color.interactive.monochrome.marketing.withActive}",
+          "type": "color"
+        },
+        "bg-active": {
+          "value": "{modes.color.interactive.monochrome.marketing.active}",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "tab": {
+    "color": {
+      "border-active": {
+        "value": "{modes.color.interactive.monochrome.marketing.active}",
+        "type": "color"
+      }
+    }
+  },
+  "progress": {
+    "color": {
+      "fg-default": {
+        "value": "{modes.color.interactive.monochrome.marketing.active}",
+        "type": "color"
+      }
+    }
+  },
+  "container": {
+    "radius": {
+      "card": {
+        "moderate": {
+          "value": "{global.radius.container.XXL}",
+          "type": "borderRadius",
+          "description": "Card (less rounded)"
+        },
+        "curved": {
+          "value": "{global.radius.container.XXXL}",
+          "type": "borderRadius",
+          "description": "Card (more rounded)"
+        },
+        "sweeping": {
+          "value": "{global.radius.container.XXXXL}",
+          "type": "borderRadius",
+          "description": "Card largest rounded type"
+        }
+      },
+      "tile": {
+        "moderate": {
+          "value": "{global.radius.container.XXL}",
+          "type": "borderRadius",
+          "description": "Tile (less rounded)"
+        },
+        "curved": {
+          "value": "{global.radius.container.XXXL}",
+          "type": "borderRadius",
+          "description": "Tile (more rounded)"
+        },
+        "sweeping": {
+          "value": "{global.radius.container.XXXXL}",
+          "type": "borderRadius",
+          "description": "Tile largest roundedness "
+        }
+      },
+      "tileselect": {
+        "moderate": {
+          "value": "{global.radius.container.XXL}",
+          "type": "borderRadius",
+          "description": "Tile (less rounded)"
+        },
+        "curved": {
+          "value": "{global.radius.container.XXXL}",
+          "type": "borderRadius",
+          "description": "Tile (more rounded)"
+        },
+        "sweeping": {
+          "value": "{global.radius.container.XXXXL}",
+          "type": "borderRadius"
+        }
+      }
+    }
+  },
+  "global": {
+    "typography": {
+      "responsive": {
+        "heading": {
+          "S": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.responsive.marketing.step4}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 18.66, Large Viewports: 21.53"
+          },
+          "M": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.responsive.marketing.step5}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 20.16, Large Viewports: 24.97"
+          },
+          "L": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.responsive.marketing.step7}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 23.51, Large Viewports: 33.61"
+          }
+        },
+        "subheading": {
+          "M": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.responsive.marketing.step0}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+          },
+          "L": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{primitives.fontSize.responsive.marketing.step2}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 18.66, Large Viewports: 21.53"
+          }
+        },
+        "body": {
+          "S": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.regular}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.marketing.step-1}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.200}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 16, Large Viewports: 16"
+          },
+          "M": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.regular}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.marketing.step0}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.300}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+          },
+          "L": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.regular}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{primitives.fontSize.responsive.marketing.step1}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.300}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+          }
+        }
+      },
+      "adaptive": {
+        "heading": {
+          "S": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{global.fontSize.adaptive.step4}"
+            },
+            "type": "typography"
+          },
+          "M": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{global.fontSize.adaptive.step5}"
+            },
+            "type": "typography"
+          },
+          "L": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{global.fontSize.adaptive.step7}"
+            },
+            "type": "typography"
+          }
+        },
+        "subheading": {
+          "M": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{global.fontSize.adaptive.step0}"
+            },
+            "type": "typography"
+          },
+          "L": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-headline}",
+              "fontWeight": "{primitives.fontWeights.bold}",
+              "lineHeight": "{primitives.lineHeights.400}",
+              "fontSize": "{global.fontSize.adaptive.step2}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 18.66, Large Viewports: 21.53"
+          }
+        },
+        "body": {
+          "S": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.regular}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{global.fontSize.adaptive.step-1}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.200}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 16, Large Viewports: 16"
+          },
+          "M": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.regular}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{global.fontSize.adaptive.step0}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.300}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+          },
+          "L": {
+            "value": {
+              "fontFamily": "{global.fontFamilies.sage-text}",
+              "fontWeight": "{primitives.fontWeights.regular}",
+              "lineHeight": "{primitives.lineHeights.500}",
+              "fontSize": "{global.fontSize.adaptive.step1}",
+              "paragraphSpacing": "{primitives.paragraphSpacing.300}"
+            },
+            "type": "typography",
+            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+          }
+        }
+      }
+    },
+    "fontSize": {
+      "adaptive": {
+        "step-2": {
+          "value": "13.38",
+          "type": "fontSizes"
+        },
+        "step-1": {
+          "value": "15.52",
+          "type": "fontSizes"
+        },
+        "step0": {
+          "value": "18",
+          "type": "fontSizes"
+        },
+        "step1": {
+          "value": "20.88",
+          "type": "fontSizes"
+        },
+        "step2": {
+          "value": "24.22",
+          "type": "fontSizes"
+        },
+        "step3": {
+          "value": "28.10",
+          "type": "fontSizes"
+        },
+        "step4": {
+          "value": "32.59",
+          "type": "fontSizes"
+        },
+        "step5": {
+          "value": "37.81",
+          "type": "fontSizes"
+        },
+        "step6": {
+          "value": "43.86",
+          "type": "fontSizes"
+        },
+        "step7": {
+          "value": "50.87",
+          "type": "fontSizes"
+        },
+        "step8": {
+          "value": "59.01",
+          "type": "fontSizes"
+        },
+        "step9": {
+          "value": "68.45",
+          "type": "fontSizes"
+        },
+        "step10": {
+          "value": "79.41",
+          "type": "fontSizes"
+        }
+      }
+    }
+  }
+}
