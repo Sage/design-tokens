@@ -1,3 +1,10 @@
+# [5.2.0](https://github.com/Sage/design-tokens/compare/v5.1.0...v5.2.0) (2025-01-07)
+
+
+### Features
+
+* **data:** fixing broken token in frozen overrides for notification bg color ([e68d899](https://github.com/Sage/design-tokens/commit/e68d899443a76c1e9d60a3843ddb72b64b0c4062))
+
 # [5.1.0](https://github.com/Sage/design-tokens/compare/v5.0.0...v5.1.0) (2025-01-07)
 
 
