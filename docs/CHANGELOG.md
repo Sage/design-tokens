@@ -1,3 +1,21 @@
+# [5.1.0](https://github.com/Sage/design-tokens/compare/v5.0.0...v5.1.0) (2025-01-07)
+
+
+### Features
+
+* **data:** adding a white tint to the bg color of alt page color ([3cc92ac](https://github.com/Sage/design-tokens/commit/3cc92ac28284c6930167c3eea4ee775ed4c2614f))
+* **data:** adjusting dark mode status colors to have same luminosity and making hue from light mode ones identical. ([0f6d0d7](https://github.com/Sage/design-tokens/commit/0f6d0d7d6bc95eae659ae9d8ed006bffbb3b128a))
+* **data:** adjusting dark theme pill color to be black ([9174467](https://github.com/Sage/design-tokens/commit/91744676772715934a84d4c27519776aa68fcc9e))
+* **data:** adjusting pill radius based on feedback from survey ([3858b40](https://github.com/Sage/design-tokens/commit/3858b40371ddc4365463bc47b87f133fb1da5771))
+* **data:** adjusting pill spacing based on feedback ([9ddf273](https://github.com/Sage/design-tokens/commit/9ddf2734c23926732ca97f3588075299ff3e9930))
+* **data:** adjusting status colors to be more legible ([eedcbdc](https://github.com/Sage/design-tokens/commit/eedcbdc89fc4e4e1bfef863e8d07b46e54e6f68a))
+* **data:** updating status colors to consume brand colors apart from orange. ([ebdac7d](https://github.com/Sage/design-tokens/commit/ebdac7dd5db8ce35bfcdc35b077bc61ac549e663))
+* **frozen:** Update values of modes.color.interactive.frozen.nav hover and label-hover. ([035cd22](https://github.com/Sage/design-tokens/commit/035cd221b98011aca93d00d554e24365d468a31e))
+* **modes:** Update values of modes.color.interactive.primary.frozen.nav tokens. ([dd0464a](https://github.com/Sage/design-tokens/commit/dd0464ab08fa4f9461e083346fc6c50c22e1a545))
+* **themes:** Sync tokens and figma variables ([9537668](https://github.com/Sage/design-tokens/commit/953766834f63ae318d1e457b310eb34682c541a1))
+* **themes:** Sync tokens and figma variables ([c59549d](https://github.com/Sage/design-tokens/commit/c59549d086a654284f894a3ccb01df778544ca72))
+* **themes:** Sync tokens and figma variables. ([c70349d](https://github.com/Sage/design-tokens/commit/c70349df823bf2ab4a61e9820056da748ff62137))
+
 # [5.0.0](https://github.com/Sage/design-tokens/compare/v4.35.0...v5.0.0) (2025-01-03)
 
 
