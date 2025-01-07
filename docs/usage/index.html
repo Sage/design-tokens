@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./all.css" />
@@ -6,13 +6,9 @@
     <!-- Component library styles -->
     <style>
       body {
-        font: var(--page-typography-p-standard);
-        background: var(--page-color-standard-bg-default);
-        color: var(--page-color-standard-text-default);
-      }
-
-      p {
-        font: var(--page-typography-p-standard);
+        font: var(--page-typography-p-typical);
+        background: var(--page-color-bg-default);
+        color: var(--page-color-text-default);
       }
 
       h1 {
@@ -24,36 +20,26 @@
       }
 
       button {
-        background: var(--button-color-standard-typical-primary-bg-enabled);
+        background: var(--button-color-typical-primary-bg-enabled);
         padding: var(--button-space-primary-y-m) var(--button-space-primary-x-m);
-        gap: var(--button-space-primary-xg-m);
         border-radius: var(--button-radius-primary-m);
         border: none;
         color: var(--button-color-standard-destructive-primary-label-enabled);
-        font: var(--button-typography-adaptive-primary-m);
+        font: var(--button-typography-primary-m);
         cursor: pointer;
 
         &.active {
-          background: var(--button-color-standard-typical-primary-bg-active);
-          color: var(--button-color-standard-typical-primary-label-active);
+          background: var(--button-color-typical-primary-bg-active);
+          color: var(--button-color-typical-primary-label-active);
         }
       }
 
       section {
-        background: var(--container-color-standard-interactive-bg-enabled);
+        background: var(--container-color-interactive-bg-enabled);
         border-radius: var(--container-radius-card-moderate);
         box-shadow: var(--container-boxshadow-card-enabled);
         padding: var(--container-space-generic-content-y-l)
           var(--container-space-generic-content-x-l);
-
-        &.inverted {
-          background: var(--container-color-inverse-bg-default);
-
-          button {
-            background: var(--button-color-inverse-typical-primary-bg-enabled);
-            color: var(--button-color-inverse-typical-primary-label-enabled);
-          }
-        }
       }
     </style>
 
@@ -65,8 +51,8 @@
 
       .mode-light,
       .mode-dark {
-        background: var(--page-color-standard-bg-default);
-        color: var(--page-color-standard-text-default);
+        background: var(--page-color-bg-default);
+        color: var(--page-color-text-default);
       }
 
       .mode-light {
@@ -81,10 +67,6 @@
         + section {
           margin-top: var(--page-space-y-l);
         }
-      }
-
-      .inverted {
-        color: var(--page-color-inverse-text-default);
       }
     </style>
 
@@ -125,12 +107,6 @@
     <section class="mode-light">
       <h2>Always light</h2>
       <p>This section will always be light.</p>
-      <button>Button</button>
-    </section>
-
-    <section class="inverted">
-      <h2>Always inverted</h2>
-      <p>This section will always be inverted.</p>
       <button>Button</button>
     </section>
   </body>
