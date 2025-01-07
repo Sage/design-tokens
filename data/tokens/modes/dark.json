@@ -1112,7 +1112,17 @@
           },
           "text": {
             "value": "{primitives.colors.tangerine}",
-            "type": "color"
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.10",
+                  "space": "lch",
+                  "color": "{modes.color.modifier.contrastMore} "
+                }
+              }
+            }
           },
           "frozen": {
             "default": {
