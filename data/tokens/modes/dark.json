@@ -1035,31 +1035,6 @@
         }
       },
       "status": {
-        "ai": {
-          "default": {
-            "value": "{modes.color.generic.bg.nought}",
-            "type": "color"
-          },
-          "defaultAlt": {
-            "value": "{modes.color.generic.bg.extreme}",
-            "type": "color",
-            "description": "bg for contextual message comp"
-          },
-          "default-horizontal": {
-            "value": "{primitives.colors.lightAiH}",
-            "type": "color"
-          },
-          "default-vertical": {
-            "value": "{primitives.colors.lightAiV}",
-            "type": "color"
-          }
-        },
-        "generic": {
-          "default": {
-            "value": "{primitives.colors.petrol}",
-            "type": "color"
-          }
-        },
         "caution": {
           "default": {
             "value": "{primitives.colors.tangerine}",
@@ -1129,7 +1104,47 @@
               "value": "{modes.color.status.caution.defaultAlt}",
               "type": "color",
               "description": "Global message bg"
+            },
+            "icon": {
+              "value": "{primitives.colors.tangerine}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.10",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "Global message icon."
             }
+          }
+        },
+        "ai": {
+          "default": {
+            "value": "{modes.color.generic.bg.nought}",
+            "type": "color"
+          },
+          "defaultAlt": {
+            "value": "{modes.color.generic.bg.extreme}",
+            "type": "color",
+            "description": "bg for contextual message comp"
+          },
+          "default-horizontal": {
+            "value": "{primitives.colors.lightAiH}",
+            "type": "color"
+          },
+          "default-vertical": {
+            "value": "{primitives.colors.lightAiV}",
+            "type": "color"
+          }
+        },
+        "generic": {
+          "default": {
+            "value": "{primitives.colors.petrol}",
+            "type": "color"
           }
         },
         "content": {
