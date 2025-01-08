@@ -1237,6 +1237,21 @@
               "value": "{modes.color.status.info.defaultAlt}",
               "type": "color",
               "description": "Global message bg"
+            },
+            "icon": {
+              "value": "{primitives.colors.azure}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.10",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "Global message icon"
             }
           }
         },
