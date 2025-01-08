@@ -1,3 +1,10 @@
+# [5.3.0](https://github.com/Sage/design-tokens/compare/v5.2.0...v5.3.0) (2025-01-08)
+
+
+### Features
+
+* **frozen:** Add modes.color.status.caution.frozen.icon to light and dark mode. Add status icon color token to frozenproduct. ([15b8e37](https://github.com/Sage/design-tokens/commit/15b8e3755018fe239d1f72061ac4cde97019ed56))
+
 # [5.2.0](https://github.com/Sage/design-tokens/compare/v5.1.0...v5.2.0) (2025-01-07)
 
 
