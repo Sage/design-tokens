@@ -6,253 +6,6 @@
         "type": "color",
         "description": "transparent override used for hiding colors when needed."
       },
-      "pill": {
-        "bg-default": {
-          "value": "{modes.color.generic.bg.nought}",
-          "type": "color"
-        },
-        "bg-readonly": {
-          "value": "{modes.color.status.inactive.default}",
-          "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
-        },
-        "border-readonly": {
-          "value": "{modes.color.status.inactive.default}",
-          "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
-        },
-        "icon-default": {
-          "value": "{modes.color.status.content.withDefault}",
-          "type": "color",
-          "description": "Decorative message icons"
-        },
-        "label-default": {
-          "value": "{modes.color.status.content.withDefault}",
-          "type": "color"
-        },
-        "label-readonly": {
-          "value": "{modes.color.interactive.monochrome.generic.withDefault}",
-          "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
-        },
-        "label-hover": {
-          "value": "{modes.color.status.content.withHover}",
-          "type": "color"
-        },
-        "labelAlt-default": {
-          "value": "{modes.color.status.content.withDefaultAlt}",
-          "type": "color"
-        },
-        "labelAlt-readonly": {
-          "value": "{modes.color.generic.content.firm}",
-          "type": "color",
-          "description": "Pill (all types, readonly, when nested in disabled parent components)"
-        },
-        "labelAlt-hover": {
-          "value": "{modes.color.status.content.withHoverAlt}",
-          "type": "color"
-        },
-        "text": {
-          "value": "{modes.color.status.content.withHoverAlt}",
-          "type": "color",
-          "description": "Message text."
-        },
-        "AI": {
-          "bg-default": {
-            "value": "{modes.color.status.ai.defaultAlt}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.ai.defaultAlt}",
-            "type": "color"
-          }
-        },
-        "callout": {
-          "bgAlt": {
-            "value": "{modes.color.status.callout.defaultAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          },
-          "bgAlt-default": {
-            "value": "{modes.color.status.callout.defaultAlt}",
-            "type": "color",
-            "description": "Global message bg"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.callout.hoverAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          }
-        },
-        "error": {
-          "bg-default": {
-            "value": "{modes.color.status.negative.default}",
-            "type": "color"
-          },
-          "bgAlt": {
-            "value": "{modes.color.status.negative.defaultAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.negative.hoverAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.negative.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.negative.default}",
-            "type": "color"
-          },
-          "icon": {
-            "value": "{modes.color.status.negative.default}",
-            "type": "color",
-            "description": "Icon on tinted bgs"
-          }
-        },
-        "info": {
-          "bg-default": {
-            "value": "{modes.color.status.info.default}",
-            "type": "color"
-          },
-          "bgAlt": {
-            "value": "{modes.color.status.info.defaultAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          },
-          "bgAlt-default": {
-            "value": "{modes.color.status.info.defaultAlt}",
-            "type": "color",
-            "description": "Global message bg"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.info.hoverAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.info.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.info.default}",
-            "type": "color"
-          },
-          "icon": {
-            "value": "{modes.color.status.info.default}",
-            "type": "color",
-            "description": "Icon on tinted bgs"
-          }
-        },
-        "neutral": {
-          "bg-default": {
-            "value": "{modes.color.status.neutral.default}",
-            "type": "color"
-          },
-          "bgAlt": {
-            "value": "{modes.color.status.neutral.defaultAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.neutral.hoverAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.neutral.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.neutral.default}",
-            "type": "color"
-          },
-          "icon": {
-            "value": "{modes.color.status.neutral.alt}",
-            "type": "color",
-            "description": "Icon on tinted bgs"
-          }
-        },
-        "success": {
-          "bg-default": {
-            "value": "{modes.color.status.positive.default}",
-            "type": "color"
-          },
-          "bgAlt": {
-            "value": "{modes.color.status.positive.defaultAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.positive.hoverAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.positive.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.positive.default}",
-            "type": "color"
-          },
-          "icon": {
-            "value": "{modes.color.status.positive.default}",
-            "type": "color",
-            "description": "Icon on tinted bgs"
-          }
-        },
-        "warning": {
-          "bg-default": {
-            "value": "{modes.color.status.caution.default}",
-            "type": "color"
-          },
-          "bgAlt": {
-            "value": "{modes.color.status.caution.defaultAlt}",
-            "type": "color",
-            "description": "Subtle message bg"
-          },
-          "bgAlt-default": {
-            "value": "{modes.color.status.caution.defaultAlt}",
-            "type": "color",
-            "description": "Global message bg"
-          },
-          "bgAlt-hover": {
-            "value": "{modes.color.status.caution.hoverAlt}",
-            "type": "color"
-          },
-          "bg-hover": {
-            "value": "{modes.color.status.caution.hover}",
-            "type": "color"
-          },
-          "border-default": {
-            "value": "{modes.color.status.caution.default}",
-            "type": "color"
-          },
-          "icon": {
-            "value": "{modes.color.status.caution.default}",
-            "type": "color",
-            "description": "Icon on tinted bgs"
-          }
-        }
-      },
-      "rating": {
-        "bg-default": {
-          "value": "{modes.color.status.reviews.default}",
-          "type": "color"
-        },
-        "bg-defaultAlt": {
-          "value": "{modes.color.status.reviews.defaultAlt}",
-          "type": "color"
-        },
-        "bg-hover": {
-          "value": "{modes.color.status.reviews.hover}",
-          "type": "color"
-        },
-        "border-default": {
-          "value": "{modes.color.status.reviews.default}",
-          "type": "color"
-        }
-      },
       "message": {
         "global": {
           "label-default": {
@@ -264,24 +17,29 @@
             "type": "color"
           },
           "callout": {
-            "bgAlt-default": {
+            "bg-default": {
               "value": "{modes.color.status.callout.defaultAlt}",
               "type": "color",
               "description": "Global message bg"
             },
-            "bgAlt-hover": {
+            "bg-hover": {
               "value": "{modes.color.status.callout.hoverAlt}",
               "type": "color",
               "description": "global message bg hover"
+            },
+            "icon": {
+              "value": "{modes.color.status.content.withDefaultAlt}",
+              "type": "color",
+              "description": "Icon on tinted bgs"
             }
           },
           "info": {
-            "bgAlt-default": {
+            "bg-default": {
               "value": "{modes.color.status.info.defaultAlt}",
               "type": "color",
               "description": "Global message bg"
             },
-            "bgAlt-hover": {
+            "bg-hover": {
               "value": "{modes.color.status.info.hoverAlt}",
               "type": "color"
             },
@@ -292,12 +50,12 @@
             }
           },
           "warning": {
-            "bgAlt-default": {
+            "bg-default": {
               "value": "{modes.color.status.caution.defaultAlt}",
               "type": "color",
               "description": "Global message bg"
             },
-            "bgAlt-hover": {
+            "bg-hover": {
               "value": "{modes.color.status.caution.hoverAlt}",
               "type": "color"
             },
@@ -309,9 +67,14 @@
           }
         },
         "contextual": {
-          "bg-default": {
+          "bg": {
             "value": "{modes.color.generic.bg.nought}",
             "type": "color"
+          },
+          "icon": {
+            "value": "{modes.color.generic.bg.nought}",
+            "type": "color",
+            "description": "decorative icon on standard contextual messages"
           },
           "text": {
             "value": "{modes.color.status.content.withHoverAlt}",
@@ -415,6 +178,174 @@
               "description": "Icon on tinted bgs"
             }
           }
+        }
+      },
+      "pill": {
+        "label-default": {
+          "value": "{modes.color.status.content.withDefault}",
+          "type": "color"
+        },
+        "label-hover": {
+          "value": "{modes.color.status.content.withHover}",
+          "type": "color"
+        },
+        "labelAlt-default": {
+          "value": "{modes.color.status.content.withDefaultAlt}",
+          "type": "color"
+        },
+        "labelAlt-hover": {
+          "value": "{modes.color.status.content.withDefaultAlt}",
+          "type": "color"
+        },
+        "error": {
+          "bg-default": {
+            "value": "{modes.color.status.negative.default}",
+            "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{modes.color.status.negative.defaultAlt}",
+            "type": "color",
+            "description": "outline pill bg"
+          },
+          "bgAlt-hover": {
+            "value": "{modes.color.status.negative.hoverAlt}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.status.negative.hover}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.status.negative.default}",
+            "type": "color"
+          }
+        },
+        "info": {
+          "bg-default": {
+            "value": "{modes.color.status.info.default}",
+            "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{modes.color.status.info.defaultAlt}",
+            "type": "color",
+            "description": "outline pill bg"
+          },
+          "bgAlt-hover": {
+            "value": "{modes.color.status.info.hoverAlt}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.status.info.hover}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.status.info.default}",
+            "type": "color"
+          }
+        },
+        "neutral": {
+          "bg-default": {
+            "value": "{modes.color.status.neutral.default}",
+            "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{modes.color.status.neutral.defaultAlt}",
+            "type": "color",
+            "description": "outline pill bg"
+          },
+          "bgAlt-hover": {
+            "value": "{modes.color.status.neutral.hoverAlt}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.status.neutral.hover}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.status.neutral.default}",
+            "type": "color"
+          }
+        },
+        "success": {
+          "bg-default": {
+            "value": "{modes.color.status.positive.default}",
+            "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{modes.color.status.positive.defaultAlt}",
+            "type": "color",
+            "description": "outline pill bg"
+          },
+          "bgAlt-hover": {
+            "value": "{modes.color.status.positive.hoverAlt}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.status.positive.hover}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.status.positive.default}",
+            "type": "color"
+          }
+        },
+        "warning": {
+          "bg-default": {
+            "value": "{modes.color.status.caution.default}",
+            "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{modes.color.status.caution.defaultAlt}",
+            "type": "color",
+            "description": "Global message bg"
+          },
+          "bgAlt-hover": {
+            "value": "{modes.color.status.caution.hoverAlt}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.status.caution.hover}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.status.caution.default}",
+            "type": "color"
+          }
+        },
+        "readonly": {
+          "bg-default": {
+            "value": "{modes.color.status.inactive.default}",
+            "type": "color",
+            "description": "Pill (all types, readonly, when nested in disabled parent components)"
+          },
+          "border-default": {
+            "value": "{modes.color.status.inactive.default}",
+            "type": "color",
+            "description": "Pill (all types, readonly, when nested in disabled parent components)"
+          },
+          "label": {
+            "value": "{modes.color.generic.content.firm}",
+            "type": "color",
+            "description": "Pill (all types, readonly, when nested in disabled parent components)"
+          }
+        }
+      },
+      "rating": {
+        "bg-default": {
+          "value": "{modes.color.status.reviews.default}",
+          "type": "color"
+        },
+        "bg-defaultAlt": {
+          "value": "{modes.color.status.reviews.defaultAlt}",
+          "type": "color"
+        },
+        "bg-hover": {
+          "value": "{modes.color.status.reviews.hover}",
+          "type": "color"
+        },
+        "border-default": {
+          "value": "{modes.color.status.reviews.default}",
+          "type": "color"
         }
       }
     },
