@@ -1,3 +1,13 @@
+## [7.0.0](https://github.com/Sage/design-tokens/compare/v6.0.0...v7.0.0) (2025-01-14)
+
+### ⚠ BREAKING CHANGES
+
+* **themefile:** syncing meta theme file unused by build process (#408)
+
+### Miscellaneous Chores
+
+* **themefile:** syncing meta theme file unused by build process ([#408](https://github.com/Sage/design-tokens/issues/408)) ([ddc99f1](https://github.com/Sage/design-tokens/commit/ddc99f157fe5cfe48445ce0a8c1e10a62e361ee6))
+
 ## [6.0.0](https://github.com/Sage/design-tokens/compare/v5.3.0...v6.0.0) (2025-01-14)
 
 ### ⚠ BREAKING CHANGES
