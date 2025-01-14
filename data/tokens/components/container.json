@@ -1090,7 +1090,7 @@
       "pagination": {
         "xg": {
           "M": {
-            "value": "{global.space.micro.L}",
+            "value": "{global.space.macro.XXXS}",
             "type": "spacing",
             "description": "gap between elements in pagination"
           },
@@ -1102,9 +1102,21 @@
         },
         "y": {
           "M": {
-            "value": "{global.space.micro.L}",
+            "value": "{global.space.macro.XXS}",
             "type": "spacing",
             "description": "top and bottom padding inside pagination"
+          },
+          "L": {
+            "value": "{global.space.macro.XS}",
+            "type": "spacing",
+            "description": "external margin on top of floating pagination variant"
+          }
+        },
+        "yg": {
+          "M": {
+            "value": "{global.space.macro.XXXS}",
+            "type": "spacing",
+            "description": "gap between left and right pagination elements when stacked vertically on small screens"
           }
         },
         "x": {
