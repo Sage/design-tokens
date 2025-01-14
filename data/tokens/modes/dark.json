@@ -1077,26 +1077,16 @@
               }
             }
           },
-          "frozen": {
+          "frozenglobal": {
             "default": {
-              "value": "{modes.color.status.caution.defaultAlt}",
+              "value": "{modes.color.status.caution.default}",
               "type": "color",
               "description": "Global message bg"
             },
-            "icon": {
-              "value": "{primitives.colors.tangerine}",
+            "hover": {
+              "value": "{modes.color.status.caution.hover}",
               "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.10",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "description": "Global message icon."
+              "description": "used on global message bg"
             }
           }
         },
@@ -1210,26 +1200,16 @@
             },
             "description": "used on pill hover states and message bg"
           },
-          "frozen": {
+          "frozenglobal": {
             "default": {
-              "value": "{modes.color.status.info.defaultAlt}",
+              "value": "{modes.color.status.info.default}",
               "type": "color",
               "description": "Global message bg"
             },
-            "icon": {
-              "value": "{primitives.colors.azure}",
+            "hover": {
+              "value": "{modes.color.status.info.hover}",
               "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.10",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "description": "Global message icon"
+              "description": "used on global message bg"
             }
           }
         },
@@ -1289,10 +1269,6 @@
           }
         },
         "neutral": {
-          "alt": {
-            "value": "{primitives.colors.smoke}",
-            "type": "color"
-          },
           "default": {
             "value": "{primitives.colors.smoke}",
             "type": "color"
@@ -1344,7 +1320,7 @@
           },
           "frozen": {
             "default": {
-              "value": "{modes.color.status.neutral.alt}",
+              "value": "{modes.color.status.neutral.default}",
               "type": "color",
               "$extensions": {
                 "studio.tokens": {
@@ -1357,9 +1333,39 @@
                 }
               }
             },
+            "defaultAlt": {
+              "value": "{primitives.colors.smoke}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.85",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "description": "Subtle message bg"
+            },
             "hover": {
               "value": "{modes.color.status.neutral.hover}",
               "type": "color"
+            },
+            "hoverAlt": {
+              "value": "{modes.color.status.neutral.defaultAlt}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "used on pill hover states and message bg"
             }
           }
         },
