@@ -1152,14 +1152,24 @@
           },
           "frozen": {
             "default": {
-              "value": "#FF8629",
+              "value": "{primitives.colors.frozenorange}",
               "type": "color",
               "description": "used on global message bg"
             },
-            "icon": {
-              "value": "{primitives.colors.black}",
+            "hover": {
+              "value": "{modes.color.status.caution.frozen.default}",
               "type": "color",
-              "description": "used on global message icon"
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hover} ",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore} "
+                  }
+                }
+              },
+              "description": "used on global message bg"
             }
           }
         },
@@ -1251,16 +1261,26 @@
             },
             "description": "used on pill hover states and message bg"
           },
-          "frozen": {
+          "frozenglobal": {
             "default": {
               "value": "#65a9ff",
               "type": "color",
               "description": "used on global message bg"
             },
-            "icon": {
-              "value": "{primitives.colors.black}",
+            "hover": {
+              "value": "{modes.color.status.info.frozenglobal.default}",
               "type": "color",
-              "description": "used on global message icon"
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hover} ",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "description": "used on global message bg"
             }
           }
         },
@@ -1318,6 +1338,27 @@
           "text": {
             "value": "{primitives.colors.red}",
             "type": "color"
+          },
+          "frozen": {
+            "default": {
+              "value": "{primitives.colors.frozenred}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{modes.color.status.negative.frozen.default}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hover} ",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore} "
+                  }
+                }
+              },
+              "description": "used on global message bg"
+            }
           }
         },
         "neutral": {

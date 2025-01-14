@@ -146,7 +146,7 @@
           "value": "{modes.color.status.caution.frozen.default}",
           "type": "color"
         },
-        "label-default-copy": {
+        "label-default": {
           "value": "{modes.color.generic.content.extreme}",
           "type": "color"
         }
@@ -433,55 +433,187 @@
   },
   "status": {
     "color": {
-      "label-default": {
-        "value": "{modes.color.interactive.monochrome.generic.withDefault}",
-        "type": "color"
-      },
-      "label-hover": {
-        "value": "{modes.color.status.content.withHover}",
-        "type": "color"
-      },
-      "error": {
-        "bgAlt": {
-          "value": "{status.color.none}",
-          "type": "color",
-          "description": "Subtle message bg"
+      "message": {
+        "contextual": {
+          "success": {
+            "bgAlt": {
+              "value": "{status.color.none}",
+              "type": "color",
+              "description": "Subtle message bg"
+            }
+          },
+          "warning": {
+            "bgAlt": {
+              "value": "{status.color.none}",
+              "type": "color",
+              "description": "Subtle message bg"
+            }
+          },
+          "info": {
+            "bgAlt": {
+              "value": "{status.color.none}",
+              "type": "color",
+              "description": "Subtle message bg"
+            }
+          },
+          "error": {
+            "bgAlt": {
+              "value": "{status.color.none}",
+              "type": "color",
+              "description": "Subtle message bg"
+            }
+          },
+          "AI": {
+            "bgAlt": {
+              "value": "{status.color.none}",
+              "type": "color",
+              "description": "Subtle message bg"
+            }
+          }
+        },
+        "global": {
+          "info": {
+            "icon": {
+              "value": "{modes.color.status.content.withDefaultAlt}",
+              "type": "color"
+            },
+            "bg-default": {
+              "value": "{modes.color.status.info.frozenglobal.default}",
+              "type": "color",
+              "description": "Global message bg"
+            },
+            "bg-hover": {
+              "value": "{modes.color.status.info.frozenglobal.hover}",
+              "type": "color",
+              "description": "Global message bg"
+            }
+          },
+          "warning": {
+            "icon": {
+              "value": "{modes.color.status.content.withDefaultAlt}",
+              "type": "color"
+            },
+            "bg-default": {
+              "value": "{modes.color.status.caution.frozen.default}",
+              "type": "color",
+              "description": "Global message bg"
+            },
+            "bg-hover": {
+              "value": "{modes.color.status.caution.frozen.hover}",
+              "type": "color",
+              "description": "Global message bg"
+            }
+          }
         }
       },
-      "info": {
-        "bgAlt": {
-          "value": "{status.color.none}",
+      "pill": {
+        "labelAlt-hover": {
+          "value": "{modes.color.status.content.withDefault}",
           "type": "color",
-          "description": "Subtle message bg"
+          "description": "was black. Turned to white so it mirrors carbon"
         },
-        "bgAlt-default": {
-          "value": "{modes.color.status.info.frozen.default}",
-          "type": "color",
-          "description": "Global message bg"
+        "neutral": {
+          "bg-default": {
+            "value": "{modes.color.status.neutral.frozen.default}",
+            "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{status.color.none}",
+            "type": "color",
+            "description": "outline pill bg"
+          },
+          "bgAlt-hover": {
+            "value": "{modes.color.status.neutral.frozen.hover}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.status.neutral.frozen.hover}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.status.neutral.frozen.default}",
+            "type": "color"
+          }
         },
-        "icon": {
-          "value": "{modes.color.status.info.frozen.icon}",
-          "type": "color",
-          "description": "Global message icon"
-        }
-      },
-      "neutral": {
-        "bgAlt": {
-          "value": "{status.color.none}",
-          "type": "color",
-          "description": "Subtle message bg"
+        "error": {
+          "bg-default": {
+            "value": "{modes.color.status.negative.frozen.default}",
+            "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{status.color.none}",
+            "type": "color",
+            "description": "outline pill bg"
+          },
+          "bgAlt-hover": {
+            "value": "{modes.color.status.negative.frozen.hover}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.status.negative.frozen.hover}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.status.negative.default}",
+            "type": "color"
+          }
         },
-        "bg-default": {
-          "value": "{modes.color.status.neutral.frozen.default}",
-          "type": "color"
+        "info": {
+          "bg-default": {
+            "value": "{modes.color.status.info.default}",
+            "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{status.color.none}",
+            "type": "color",
+            "description": "outline pill bg"
+          },
+          "bgAlt-hover": {
+            "value": "{modes.color.status.info.hover}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.status.info.hover}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.status.info.default}",
+            "type": "color"
+          }
         },
-        "bg-hover": {
-          "value": "{modes.color.status.neutral.frozen.hover}",
-          "type": "color"
+        "success": {
+          "bgAlt-default": {
+            "value": "{status.color.none}",
+            "type": "color",
+            "description": "outline pill bg"
+          },
+          "bgAlt-hover": {
+            "value": "{modes.color.status.positive.hover}",
+            "type": "color"
+          }
         },
-        "border-default": {
-          "value": "{modes.color.status.neutral.frozen.default}",
-          "type": "color"
+        "warning": {
+          "bg-default": {
+            "value": "{modes.color.status.caution.frozen.default}",
+            "type": "color"
+          },
+          "bgAlt-default": {
+            "value": "{status.color.none}",
+            "type": "color",
+            "description": "Global message bg"
+          },
+          "bgAlt-hover": {
+            "value": "{modes.color.status.caution.frozen.hover}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{modes.color.status.caution.frozen.hover}",
+            "type": "color"
+          },
+          "border-default": {
+            "value": "{modes.color.status.caution.frozen.default}",
+            "type": "color"
+          }
         }
       },
       "rating": {
@@ -500,30 +632,6 @@
         "border-default": {
           "value": "{modes.color.status.reviews.frozen.default}",
           "type": "color"
-        }
-      },
-      "success": {
-        "bgAlt": {
-          "value": "{status.color.none}",
-          "type": "color",
-          "description": "Subtle message bg"
-        }
-      },
-      "warning": {
-        "bgAlt": {
-          "value": "{status.color.none}",
-          "type": "color",
-          "description": "Subtle message bg"
-        },
-        "bgAlt-default": {
-          "value": "{modes.color.status.caution.frozen.default}",
-          "type": "color",
-          "description": "Global message bg"
-        },
-        "icon": {
-          "value": "{modes.color.status.caution.frozen.icon}",
-          "type": "color",
-          "description": "Global message icon."
         }
       }
     },

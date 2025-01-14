@@ -1079,24 +1079,14 @@
           },
           "frozen": {
             "default": {
-              "value": "{modes.color.status.caution.defaultAlt}",
+              "value": "{modes.color.status.caution.default}",
               "type": "color",
               "description": "Global message bg"
             },
-            "icon": {
-              "value": "{primitives.colors.tangerine}",
+            "hover": {
+              "value": "{modes.color.status.caution.hover}",
               "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.10",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "description": "Global message icon."
+              "description": "Global message bg"
             }
           }
         },
@@ -1210,26 +1200,16 @@
             },
             "description": "used on pill hover states and message bg"
           },
-          "frozen": {
+          "frozenglobal": {
             "default": {
-              "value": "{modes.color.status.info.defaultAlt}",
+              "value": "{modes.color.status.info.default}",
               "type": "color",
               "description": "Global message bg"
             },
-            "icon": {
-              "value": "{primitives.colors.azure}",
+            "hover": {
+              "value": "{modes.color.status.info.hover}",
               "type": "color",
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.10",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "description": "Global message icon"
+              "description": "used on global message bg"
             }
           }
         },
@@ -1286,6 +1266,18 @@
           "text": {
             "value": "{primitives.colors.blush}",
             "type": "color"
+          },
+          "frozen": {
+            "default": {
+              "value": "{modes.color.status.negative.default}",
+              "type": "color",
+              "description": "Global message bg"
+            },
+            "hover": {
+              "value": "{modes.color.status.negative.hover}",
+              "type": "color",
+              "description": "used on global message bg"
+            }
           }
         },
         "neutral": {
