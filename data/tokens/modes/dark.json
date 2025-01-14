@@ -1077,7 +1077,7 @@
               }
             }
           },
-          "frozen": {
+          "frozenglobal": {
             "default": {
               "value": "{modes.color.status.caution.default}",
               "type": "color",
@@ -1086,7 +1086,7 @@
             "hover": {
               "value": "{modes.color.status.caution.hover}",
               "type": "color",
-              "description": "Global message bg"
+              "description": "used on global message bg"
             }
           }
         },
@@ -1266,25 +1266,9 @@
           "text": {
             "value": "{primitives.colors.blush}",
             "type": "color"
-          },
-          "frozen": {
-            "default": {
-              "value": "{modes.color.status.negative.default}",
-              "type": "color",
-              "description": "Global message bg"
-            },
-            "hover": {
-              "value": "{modes.color.status.negative.hover}",
-              "type": "color",
-              "description": "used on global message bg"
-            }
           }
         },
         "neutral": {
-          "alt": {
-            "value": "{primitives.colors.smoke}",
-            "type": "color"
-          },
           "default": {
             "value": "{primitives.colors.smoke}",
             "type": "color"
@@ -1303,6 +1287,10 @@
               }
             },
             "description": "Subtle message bg"
+          },
+          "alt": {
+            "value": "{primitives.colors.smoke}",
+            "type": "color"
           },
           "hover": {
             "value": "{modes.color.status.neutral.default}",
@@ -1349,9 +1337,39 @@
                 }
               }
             },
+            "defaultAlt": {
+              "value": "{primitives.colors.smoke}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.85",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "description": "Subtle message bg"
+            },
             "hover": {
               "value": "{modes.color.status.neutral.hover}",
               "type": "color"
+            },
+            "hoverAlt": {
+              "value": "{modes.color.status.neutral.defaultAlt}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hoverAlt} ",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "description": "used on pill hover states and message bg"
             }
           }
         },
