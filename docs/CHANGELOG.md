@@ -1,3 +1,9 @@
+## [7.0.1](https://github.com/Sage/design-tokens/compare/v7.0.0...v7.0.1) (2025-01-14)
+
+### Bug Fixes
+
+* **pagination:** adjusting values of pagination spacing as there was an error with the first merge ([#409](https://github.com/Sage/design-tokens/issues/409)) ([743f79d](https://github.com/Sage/design-tokens/commit/743f79d17b2f82f6a02a833987e39682ca4ce8ef))
+
 ## [7.0.0](https://github.com/Sage/design-tokens/compare/v6.0.0...v7.0.0) (2025-01-14)
 
 ### ⚠ BREAKING CHANGES
