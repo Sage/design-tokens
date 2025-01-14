@@ -1,3 +1,18 @@
+## [6.0.0](https://github.com/Sage/design-tokens/compare/v5.3.0...v6.0.0) (2025-01-14)
+
+### ⚠ BREAKING CHANGES
+
+* **status:** deleted old component-specific status color tokens and created component specific pill, global message and contextual message color tokens. Also deleted unneeded copilot logo tokens. (#404)
+* **statuses:** deleted old component-specific status color tokens and created component specific pill, global message and contextual message color tokens. Also deleted unneeded copilot logo tokens.
+
+### eat
+
+* **statuses:** deleted old component-specific status color tokens and created component specific pill, global message and contextual message color tokens. Also deleted unneeded copilot logo tokens. ([e5034f3](https://github.com/Sage/design-tokens/commit/e5034f3a9d619d8f16d138a7d6dbf2d9018a6a0e))
+
+### Features
+
+* **status:** deleted old component-specific status color tokens and created component specific pill, global message and contextual message color tokens. Also deleted unneeded copilot logo tokens. ([#404](https://github.com/Sage/design-tokens/issues/404)) ([e83938b](https://github.com/Sage/design-tokens/commit/e83938b5de66295e18aa25287b71df0d5214f07e))
+
 # [5.3.0](https://github.com/Sage/design-tokens/compare/v5.2.0...v5.3.0) (2025-01-08)
 
 
