@@ -4,80 +4,80 @@
       "typical": {
         "toggle": {
           "label-active": {
-            "value": "{modes.color.interactive.monochrome.marketing.withActive}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.marketing.withActive}"
           }
         },
         "tertiary": {
           "bg-enabled": {
-            "value": "{modes.color.none}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{modes.color.none}"
           }
         }
       },
       "video": {
         "primary": {
           "bg-enabled": {
-            "value": "{modes.color.interactive.monochrome.marketing.withActive}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.marketing.withActive}"
           },
           "bg-hover": {
-            "value": "{modes.color.interactive.monochrome.marketing.withActive}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.marketing.withActive}"
           },
           "label-enabled": {
-            "value": "{modes.color.interactive.monochrome.generic.default}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.generic.default}"
           },
           "label-hover": {
-            "value": "{modes.color.interactive.monochrome.generic.default}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.generic.default}"
           }
         }
       }
     },
     "borderwidth": {
       "tertiary": {
-        "value": "{global.borderwidth.S}",
-        "type": "borderWidth",
-        "description": "tertiary button border "
+        "$type": "borderWidth",
+        "$value": "{global.borderwidth.S}",
+        "$description": "tertiary button border "
       }
     },
     "space": {
       "tertiary": {
         "x": {
           "S": {
-            "value": "{global.space.none}",
-            "type": "spacing",
-            "description": "Left and right padding on small buttons"
+            "$type": "spacing",
+            "$value": "{global.space.none}",
+            "$description": "Left and right padding on small buttons"
           },
           "M": {
-            "value": "{global.space.none}",
-            "type": "spacing",
-            "description": "Left and right padding on medium buttons"
+            "$type": "spacing",
+            "$value": "{global.space.none}",
+            "$description": "Left and right padding on medium buttons"
           },
           "L": {
-            "value": "{global.space.none}",
-            "type": "spacing",
-            "description": "Left and right padding on large buttons"
+            "$type": "spacing",
+            "$value": "{global.space.none}",
+            "$description": "Left and right padding on large buttons"
           }
         },
         "icononly": {
           "x": {
             "S": {
-              "value": "{global.space.none}",
-              "type": "spacing",
-              "description": "Left and right padding on icon-only processing button "
+              "$type": "spacing",
+              "$value": "{global.space.none}",
+              "$description": "Left and right padding on icon-only processing button "
             },
             "M": {
-              "value": "{global.space.none}",
-              "type": "spacing",
-              "description": "Left and right padding on icon-only processing button "
+              "$type": "spacing",
+              "$value": "{global.space.none}",
+              "$description": "Left and right padding on icon-only processing button "
             },
             "L": {
-              "value": "{global.space.none}",
-              "type": "spacing",
-              "description": "Left and right padding on icon-only processing button "
+              "$type": "spacing",
+              "$value": "{global.space.none}",
+              "$description": "Left and right padding on icon-only processing button "
             }
           }
         }
@@ -86,19 +86,19 @@
     "radius": {
       "tertiary": {
         "S": {
-          "value": "{global.radius.none}",
-          "type": "borderRadius",
-          "description": "tertiary button"
+          "$type": "borderRadius",
+          "$value": "{global.radius.none}",
+          "$description": "tertiary button"
         },
         "M": {
-          "value": "{global.radius.none}",
-          "type": "borderRadius",
-          "description": "tertiary button"
+          "$type": "borderRadius",
+          "$value": "{global.radius.none}",
+          "$description": "tertiary button"
         },
         "L": {
-          "value": "{global.radius.none}",
-          "type": "borderRadius",
-          "description": "tertiary button"
+          "$type": "borderRadius",
+          "$value": "{global.radius.none}",
+          "$description": "tertiary button"
         }
       }
     }
@@ -107,12 +107,12 @@
     "color": {
       "switch": {
         "fg-active": {
-          "value": "{modes.color.interactive.monochrome.marketing.withActive}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.marketing.withActive}"
         },
         "bg-active": {
-          "value": "{modes.color.interactive.monochrome.marketing.active}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.marketing.active}"
         }
       }
     }
@@ -120,16 +120,16 @@
   "tab": {
     "color": {
       "border-active": {
-        "value": "{modes.color.interactive.monochrome.marketing.active}",
-        "type": "color"
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.marketing.active}"
       }
     }
   },
   "progress": {
     "color": {
       "fg-default": {
-        "value": "{modes.color.interactive.monochrome.marketing.active}",
-        "type": "color"
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.marketing.active}"
       }
     }
   },
@@ -137,52 +137,52 @@
     "radius": {
       "card": {
         "moderate": {
-          "value": "{global.radius.container.XXL}",
-          "type": "borderRadius",
-          "description": "Card (less rounded)"
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXL}",
+          "$description": "Card (less rounded)"
         },
         "curved": {
-          "value": "{global.radius.container.XXXL}",
-          "type": "borderRadius",
-          "description": "Card (more rounded)"
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXL}",
+          "$description": "Card (more rounded)"
         },
         "sweeping": {
-          "value": "{global.radius.container.XXXXL}",
-          "type": "borderRadius",
-          "description": "Card largest rounded type"
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXXL}",
+          "$description": "Card largest rounded type"
         }
       },
       "tile": {
         "moderate": {
-          "value": "{global.radius.container.XXL}",
-          "type": "borderRadius",
-          "description": "Tile (less rounded)"
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXL}",
+          "$description": "Tile (less rounded)"
         },
         "curved": {
-          "value": "{global.radius.container.XXXL}",
-          "type": "borderRadius",
-          "description": "Tile (more rounded)"
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXL}",
+          "$description": "Tile (more rounded)"
         },
         "sweeping": {
-          "value": "{global.radius.container.XXXXL}",
-          "type": "borderRadius",
-          "description": "Tile largest roundedness "
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXXL}",
+          "$description": "Tile largest roundedness "
         }
       },
       "tileselect": {
         "moderate": {
-          "value": "{global.radius.container.XXL}",
-          "type": "borderRadius",
-          "description": "Tile (less rounded)"
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXL}",
+          "$description": "Tile (less rounded)"
         },
         "curved": {
-          "value": "{global.radius.container.XXXL}",
-          "type": "borderRadius",
-          "description": "Tile (more rounded)"
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXL}",
+          "$description": "Tile (more rounded)"
         },
         "sweeping": {
-          "value": "{global.radius.container.XXXXL}",
-          "type": "borderRadius"
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXXXL}"
         }
       }
     }
@@ -192,178 +192,178 @@
       "responsive": {
         "heading": {
           "S": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-headline}",
               "fontWeight": "{primitives.fontWeights.bold}",
               "lineHeight": "{primitives.lineHeights.400}",
               "fontSize": "{primitives.fontSize.responsive.marketing.step4}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 18.66, Large Viewports: 21.53"
+            "$description": "Small Viewports: 18.66, Large Viewports: 21.53"
           },
           "M": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-headline}",
               "fontWeight": "{primitives.fontWeights.bold}",
               "lineHeight": "{primitives.lineHeights.400}",
               "fontSize": "{primitives.fontSize.responsive.marketing.step5}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 20.16, Large Viewports: 24.97"
+            "$description": "Small Viewports: 20.16, Large Viewports: 24.97"
           },
           "L": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-headline}",
               "fontWeight": "{primitives.fontWeights.bold}",
               "lineHeight": "{primitives.lineHeights.400}",
               "fontSize": "{primitives.fontSize.responsive.marketing.step7}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 23.51, Large Viewports: 33.61"
+            "$description": "Small Viewports: 23.51, Large Viewports: 33.61"
           }
         },
         "subheading": {
           "M": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-headline}",
               "fontWeight": "{primitives.fontWeights.bold}",
               "lineHeight": "{primitives.lineHeights.400}",
               "fontSize": "{primitives.fontSize.responsive.marketing.step0}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+            "$description": "Small Viewports: 17.28, Large Viewports: 18.56"
           },
           "L": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-headline}",
               "fontWeight": "{primitives.fontWeights.bold}",
               "lineHeight": "{primitives.lineHeights.400}",
               "fontSize": "{primitives.fontSize.responsive.marketing.step2}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 18.66, Large Viewports: 21.53"
+            "$description": "Small Viewports: 18.66, Large Viewports: 21.53"
           }
         },
         "body": {
           "S": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-text}",
               "fontWeight": "{primitives.fontWeights.regular}",
               "lineHeight": "{primitives.lineHeights.500}",
               "fontSize": "{primitives.fontSize.responsive.marketing.step-1}",
               "paragraphSpacing": "{primitives.paragraphSpacing.200}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 16, Large Viewports: 16"
+            "$description": "Small Viewports: 16, Large Viewports: 16"
           },
           "M": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-text}",
               "fontWeight": "{primitives.fontWeights.regular}",
               "lineHeight": "{primitives.lineHeights.500}",
               "fontSize": "{primitives.fontSize.responsive.marketing.step0}",
               "paragraphSpacing": "{primitives.paragraphSpacing.300}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+            "$description": "Small Viewports: 17.28, Large Viewports: 18.56"
           },
           "L": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-text}",
               "fontWeight": "{primitives.fontWeights.regular}",
               "lineHeight": "{primitives.lineHeights.500}",
               "fontSize": "{primitives.fontSize.responsive.marketing.step1}",
               "paragraphSpacing": "{primitives.paragraphSpacing.300}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+            "$description": "Small Viewports: 17.28, Large Viewports: 18.56"
           }
         }
       },
       "adaptive": {
         "heading": {
           "S": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-headline}",
               "fontWeight": "{primitives.fontWeights.bold}",
               "lineHeight": "{primitives.lineHeights.400}",
               "fontSize": "{global.fontSize.adaptive.step4}"
-            },
-            "type": "typography"
+            }
           },
           "M": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-headline}",
               "fontWeight": "{primitives.fontWeights.bold}",
               "lineHeight": "{primitives.lineHeights.400}",
               "fontSize": "{global.fontSize.adaptive.step5}"
-            },
-            "type": "typography"
+            }
           },
           "L": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-headline}",
               "fontWeight": "{primitives.fontWeights.bold}",
               "lineHeight": "{primitives.lineHeights.400}",
               "fontSize": "{global.fontSize.adaptive.step7}"
-            },
-            "type": "typography"
+            }
           }
         },
         "subheading": {
           "M": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-headline}",
               "fontWeight": "{primitives.fontWeights.bold}",
               "lineHeight": "{primitives.lineHeights.400}",
               "fontSize": "{global.fontSize.adaptive.step0}"
-            },
-            "type": "typography"
+            }
           },
           "L": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-headline}",
               "fontWeight": "{primitives.fontWeights.bold}",
               "lineHeight": "{primitives.lineHeights.400}",
               "fontSize": "{global.fontSize.adaptive.step2}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 18.66, Large Viewports: 21.53"
+            "$description": "Small Viewports: 18.66, Large Viewports: 21.53"
           }
         },
         "body": {
           "S": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-text}",
               "fontWeight": "{primitives.fontWeights.regular}",
               "lineHeight": "{primitives.lineHeights.500}",
               "fontSize": "{global.fontSize.adaptive.step-1}",
               "paragraphSpacing": "{primitives.paragraphSpacing.200}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 16, Large Viewports: 16"
+            "$description": "Small Viewports: 16, Large Viewports: 16"
           },
           "M": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-text}",
               "fontWeight": "{primitives.fontWeights.regular}",
               "lineHeight": "{primitives.lineHeights.500}",
               "fontSize": "{global.fontSize.adaptive.step0}",
               "paragraphSpacing": "{primitives.paragraphSpacing.300}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+            "$description": "Small Viewports: 17.28, Large Viewports: 18.56"
           },
           "L": {
-            "value": {
+            "$type": "typography",
+            "$value": {
               "fontFamily": "{global.fontFamilies.sage-text}",
               "fontWeight": "{primitives.fontWeights.regular}",
               "lineHeight": "{primitives.lineHeights.500}",
               "fontSize": "{global.fontSize.adaptive.step1}",
               "paragraphSpacing": "{primitives.paragraphSpacing.300}"
             },
-            "type": "typography",
-            "description": "Small Viewports: 17.28, Large Viewports: 18.56"
+            "$description": "Small Viewports: 17.28, Large Viewports: 18.56"
           }
         }
       }
@@ -371,56 +371,56 @@
     "fontSize": {
       "adaptive": {
         "step-2": {
-          "value": "13.38",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "13.38"
         },
         "step-1": {
-          "value": "15.52",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "15.52"
         },
         "step0": {
-          "value": "18",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "18"
         },
         "step1": {
-          "value": "20.88",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "20.88"
         },
         "step2": {
-          "value": "24.22",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "24.22"
         },
         "step3": {
-          "value": "28.10",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "28.10"
         },
         "step4": {
-          "value": "32.59",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "32.59"
         },
         "step5": {
-          "value": "37.81",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "37.81"
         },
         "step6": {
-          "value": "43.86",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "43.86"
         },
         "step7": {
-          "value": "50.87",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "50.87"
         },
         "step8": {
-          "value": "59.01",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "59.01"
         },
         "step9": {
-          "value": "68.45",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "68.45"
         },
         "step10": {
-          "value": "79.41",
-          "type": "fontSizes"
+          "$type": "fontSizes",
+          "$value": "79.41"
         }
       }
     }
