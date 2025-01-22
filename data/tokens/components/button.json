@@ -245,7 +245,7 @@
           },
           "L": {
             "$type": "spacing",
-            "$value": "{global.space.micro.XL}",
+            "$value": "{global.space.micro.XL} - 0.5",
             "$description": "Top and bottom padding on Large buttons "
           }
         },
@@ -771,7 +771,7 @@
           },
           "label-enabled": {
             "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.generic.defaultAlt}"
+            "$value": "{modes.color.interactive.monochrome.generic.default}"
           },
           "label-hover": {
             "$type": "color",
@@ -789,7 +789,7 @@
           },
           "bg-enabled": {
             "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.subtle.default}"
+            "$value": "{button.color.none}"
           },
           "bg-hover": {
             "$type": "color",
@@ -803,13 +803,17 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.default}"
           },
+          "border-enabled": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.generic.defaultAlt2}"
+          },
+          "border-hover": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.generic.default}"
+          },
           "label-active": {
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.generic.withActiveAlt}"
-          },
-          "label-active-copy": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.frozen.withActive}"
           },
           "label-disabled": {
             "$type": "color",
@@ -1027,7 +1031,7 @@
       },
       "tertiary": {
         "$type": "borderWidth",
-        "$value": "{global.borderwidth.none}",
+        "$value": "{global.borderwidth.XS}",
         "$description": "tertiary button border "
       },
       "primary": {
