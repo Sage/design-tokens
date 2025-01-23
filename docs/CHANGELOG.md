@@ -1,3 +1,9 @@
+## [7.1.0](https://github.com/Sage/design-tokens/compare/v7.0.1...v7.1.0) (2025-01-23)
+
+### Features
+
+* **search:** add search input min and max widths ([#418](https://github.com/Sage/design-tokens/issues/418)) ([7303a07](https://github.com/Sage/design-tokens/commit/7303a078135d6d8b600379a50ceb51178cce3cda))
+
 ## [7.0.1](https://github.com/Sage/design-tokens/compare/v7.0.0...v7.0.1) (2025-01-14)
 
 ### Bug Fixes
