@@ -1053,6 +1053,20 @@
           }
         }
       },
+      "search": {
+        "input": {
+          "minwidth": {
+            "$type": "sizing",
+            "$value": "{container.size.responsive.XL}",
+            "$description": "minimum width for search input container"
+          },
+          "maxwidth": {
+            "$type": "sizing",
+            "$value": "{container.size.responsive.XXL} + {container.size.responsive.XXS}",
+            "$description": "maximum width for search input container"
+          }
+        }
+      },
       "textarea": {
         "M": {
           "$type": "sizing",
