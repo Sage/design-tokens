@@ -1,3 +1,9 @@
+## [7.1.1](https://github.com/Sage/design-tokens/compare/v7.1.0...v7.1.1) (2025-01-23)
+
+### Bug Fixes
+
+* **button:** change button y-padding for large buttons to be 9.5px in order to make them 48px in height as opposed to 49px. ([#420](https://github.com/Sage/design-tokens/issues/420)) ([02db93e](https://github.com/Sage/design-tokens/commit/02db93ed6893004e23e23eda9713b238e074b525))
+
 ## [7.1.0](https://github.com/Sage/design-tokens/compare/v7.0.1...v7.1.0) (2025-01-23)
 
 ### Features
