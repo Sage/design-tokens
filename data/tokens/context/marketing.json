@@ -125,14 +125,6 @@
       }
     }
   },
-  "progress": {
-    "color": {
-      "fg-default": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.marketing.active}"
-      }
-    }
-  },
   "container": {
     "radius": {
       "card": {
@@ -421,6 +413,21 @@
         "step10": {
           "$type": "fontSizes",
           "$value": "79.41"
+        }
+      }
+    }
+  },
+  "progress": {
+    "color": {
+      "fg-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.marketing.active}"
+      },
+      "loader": {
+        "fg-default": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.marketing.withActive}",
+          "$description": "used for loader standard loader spinner"
         }
       }
     }
