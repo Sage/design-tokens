@@ -1,3 +1,9 @@
+## [7.1.2](https://github.com/Sage/design-tokens/compare/v7.1.1...v7.1.2) (2025-01-24)
+
+### Bug Fixes
+
+* **progress:** add marketing override for the loader foreground color. ([#421](https://github.com/Sage/design-tokens/issues/421)) ([e1302e9](https://github.com/Sage/design-tokens/commit/e1302e9416bdf729fc07cdd3998763b11ee5973a))
+
 ## [7.1.1](https://github.com/Sage/design-tokens/compare/v7.1.0...v7.1.1) (2025-01-23)
 
 ### Bug Fixes
