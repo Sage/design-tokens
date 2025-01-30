@@ -1,3 +1,9 @@
+## [7.1.3](https://github.com/Sage/design-tokens/compare/v7.1.2...v7.1.3) (2025-01-30)
+
+### Bug Fixes
+
+* **tab:** Change value of tab.color.label-enabled ([#423](https://github.com/Sage/design-tokens/issues/423)) ([9c8aac2](https://github.com/Sage/design-tokens/commit/9c8aac21be52520361460a6dc0257e0fcecc212e))
+
 ## [7.1.2](https://github.com/Sage/design-tokens/compare/v7.1.1...v7.1.2) (2025-01-24)
 
 ### Bug Fixes
