@@ -1,3 +1,9 @@
+## [7.1.4](https://github.com/Sage/design-tokens/compare/v7.1.3...v7.1.4) (2025-01-31)
+
+### Bug Fixes
+
+* **table:** Change values of table.color.header.harsh bg-alt, bg-default, border-default. ([#424](https://github.com/Sage/design-tokens/issues/424)) ([64cd682](https://github.com/Sage/design-tokens/commit/64cd682b783d0c5141ef76aafef317e3ea0836cd))
+
 ## [7.1.3](https://github.com/Sage/design-tokens/compare/v7.1.2...v7.1.3) (2025-01-30)
 
 ### Bug Fixes
