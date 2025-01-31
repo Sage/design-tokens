@@ -1,3 +1,9 @@
+## [7.1.5](https://github.com/Sage/design-tokens/compare/v7.1.4...v7.1.5) (2025-01-31)
+
+### Bug Fixes
+
+* **table:** change border color of table header for harsh variant after recieving feedback from product designers. ([11c9b77](https://github.com/Sage/design-tokens/commit/11c9b77fc7683f31f63bc737e92c1effd0a66b30))
+
 ## [7.1.4](https://github.com/Sage/design-tokens/compare/v7.1.3...v7.1.4) (2025-01-31)
 
 ### Bug Fixes
