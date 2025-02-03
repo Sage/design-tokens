@@ -1,3 +1,9 @@
+## [7.1.6](https://github.com/Sage/design-tokens/compare/v7.1.5...v7.1.6) (2025-02-03)
+
+### Bug Fixes
+
+* **tab:** Update value of tab.size.baseline tokens. ([#427](https://github.com/Sage/design-tokens/issues/427)) ([71a0e56](https://github.com/Sage/design-tokens/commit/71a0e560cf4118d9db800ac59e6e6d235539689a))
+
 ## [7.1.5](https://github.com/Sage/design-tokens/compare/v7.1.4...v7.1.5) (2025-01-31)
 
 ### Bug Fixes
