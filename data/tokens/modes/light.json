@@ -341,6 +341,13 @@
             },
             "$type": "color",
             "$value": "{modes.color.generic.fg.nought}"
+          },
+          "frozen": {
+            "soft": {
+              "$type": "color",
+              "$value": "{modes.color.status.neutral.frozen.default}",
+              "$description": "frozen progress tracker border"
+            }
           }
         },
         "backdrop": {
@@ -807,6 +814,11 @@
                 "$type": "color",
                 "$value": "{primitives.colors.navy}",
                 "$description": "Used within frozen table"
+              },
+              "active2": {
+                "$type": "color",
+                "$value": "{modes.color.generic.fg.frozen.soft}",
+                "$description": "Frozen progress tracker"
               }
             }
           },
@@ -1059,6 +1071,21 @@
               },
               "$type": "color",
               "$value": "{primitives.colors.frozenJade}"
+            },
+            "bg-alt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.75",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{primitives.colors.navy}",
+              "$description": "progress tracker bg"
             }
           }
         }
