@@ -1,3 +1,9 @@
+## [7.2.0](https://github.com/Sage/design-tokens/compare/v7.1.7...v7.2.0) (2025-02-04)
+
+### Features
+
+* **frozen theme and profile:** Add progress tracker tokens for frozen theme, and amend profile tokens, based on user feedback. ([#429](https://github.com/Sage/design-tokens/issues/429)) ([d1e6148](https://github.com/Sage/design-tokens/commit/d1e6148119fb38bbc7fdacf85516d1e78a29cc50))
+
 ## [7.1.7](https://github.com/Sage/design-tokens/compare/v7.1.6...v7.1.7) (2025-02-04)
 
 ### Bug Fixes
