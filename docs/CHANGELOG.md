@@ -1,3 +1,9 @@
+## [7.1.7](https://github.com/Sage/design-tokens/compare/v7.1.6...v7.1.7) (2025-02-04)
+
+### Bug Fixes
+
+* **global message:** Update value of status.space.message.global.x.M to align icon with sage logo in global header ([#428](https://github.com/Sage/design-tokens/issues/428)) ([809c813](https://github.com/Sage/design-tokens/commit/809c8130dbba7fdd62de5c248672430f9a993066))
+
 ## [7.1.6](https://github.com/Sage/design-tokens/compare/v7.1.5...v7.1.6) (2025-02-03)
 
 ### Bug Fixes
