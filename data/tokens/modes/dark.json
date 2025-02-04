@@ -340,6 +340,22 @@
             },
             "$type": "color",
             "$value": "{modes.color.generic.fg.nought}"
+          },
+          "frozen": {
+            "soft": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.32",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.nought}"
+            }
           }
         },
         "backdrop": {
@@ -771,6 +787,11 @@
                 "$type": "color",
                 "$value": "{modes.color.interactive.monochrome.generic.active}",
                 "$description": "Used within frozen table"
+              },
+              "active2": {
+                "$type": "color",
+                "$value": "{modes.color.interactive.monochrome.generic.active}",
+                "$description": "progress tracker"
               }
             }
           },
@@ -1011,6 +1032,10 @@
           },
           "frozen": {
             "bg": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.progress.bg}"
+            },
+            "bg-alt": {
               "$type": "color",
               "$value": "{modes.color.interactive.progress.bg}"
             }
