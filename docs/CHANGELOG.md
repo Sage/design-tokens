@@ -1,3 +1,9 @@
+## [7.3.0](https://github.com/Sage/design-tokens/compare/v7.2.0...v7.3.0) (2025-02-05)
+
+### Features
+
+* **checkbox and radios:** add and update progressive disclosure spacing tokens ([#431](https://github.com/Sage/design-tokens/issues/431)) ([bd71718](https://github.com/Sage/design-tokens/commit/bd71718d8d58fa24703d927ee3e6970fd9626700))
+
 ## [7.2.0](https://github.com/Sage/design-tokens/compare/v7.1.7...v7.2.0) (2025-02-04)
 
 ### Features
