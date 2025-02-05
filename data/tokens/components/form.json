@@ -524,17 +524,17 @@
           "x": {
             "S": {
               "$type": "spacing",
-              "$value": "{global.space.macro.M} - {global.space.micro.XS}",
+              "$value": "{global.space.macro.XS} - 3",
               "$description": "Left padding on progressively shown form inputs on radio and checkbox"
             },
             "M": {
               "$type": "spacing",
-              "$value": "{global.space.macro.L}",
+              "$value": "{global.space.macro.S}",
               "$description": "Left padding on progressively shown form inputs on radio and checkbox"
             },
             "L": {
               "$type": "spacing",
-              "$value": "{global.space.macro.XL} + {global.space.micro.XS}",
+              "$value": "{global.space.macro.M} + 1",
               "$description": "Left padding on progressively shown form inputs on radio and checkbox"
             }
           },
@@ -570,6 +570,25 @@
               "$type": "spacing",
               "$value": "{global.space.micro.L} * 2",
               "$description": "Top and bottom padding on progressively shown form inputs on radio and checkbox"
+            }
+          },
+          "keyline": {
+            "x": {
+              "S": {
+                "$type": "spacing",
+                "$value": "{global.space.macro.XXXS} - 1",
+                "$description": "Left padding on keyline for small progressively shown inputs"
+              },
+              "M": {
+                "$type": "spacing",
+                "$value": "{global.space.macro.XXS} - 1",
+                "$description": "Left padding on keyline for medium progressively shown inputs"
+              },
+              "L": {
+                "$type": "spacing",
+                "$value": "{global.space.macro.XS} - 1",
+                "$description": "Left padding on keyline for large progressively shown inputs"
+              }
             }
           }
         }
@@ -1081,6 +1100,13 @@
           "$description": "2px validation bar used on errors and warnings"
         }
       },
+      "progressive": {
+        "bar": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.XXS}",
+          "$description": "2px progressive disclosure keyline bar used in checkbox and radio groups"
+        }
+      },
       "rating": {
         "M": {
           "$type": "sizing",
@@ -1457,6 +1483,11 @@
         "$description": "Switch container and handle"
       },
       "validationbar": {
+        "$type": "borderRadius",
+        "$value": "{global.radius.interactive.XS}",
+        "$description": "Validation bar"
+      },
+      "progressivebar": {
         "$type": "borderRadius",
         "$value": "{global.radius.interactive.XS}",
         "$description": "Validation bar"
