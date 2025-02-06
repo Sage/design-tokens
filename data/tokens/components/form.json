@@ -524,17 +524,17 @@
           "x": {
             "S": {
               "$type": "spacing",
-              "$value": "{global.space.macro.XS} - 3",
+              "$value": "{global.space.macro.M} - {global.space.micro.XS}",
               "$description": "Left padding on progressively shown form inputs on radio and checkbox"
             },
             "M": {
               "$type": "spacing",
-              "$value": "{global.space.macro.S}",
+              "$value": "{global.space.macro.L}",
               "$description": "Left padding on progressively shown form inputs on radio and checkbox"
             },
             "L": {
               "$type": "spacing",
-              "$value": "{global.space.macro.M} + 1",
+              "$value": "{global.space.macro.XL} + {global.space.micro.XS}",
               "$description": "Left padding on progressively shown form inputs on radio and checkbox"
             }
           },
@@ -570,25 +570,6 @@
               "$type": "spacing",
               "$value": "{global.space.micro.L} * 2",
               "$description": "Top and bottom padding on progressively shown form inputs on radio and checkbox"
-            }
-          },
-          "keyline": {
-            "x": {
-              "S": {
-                "$type": "spacing",
-                "$value": "{global.space.macro.XXXS} - 1",
-                "$description": "Left padding on keyline for small progressively shown inputs"
-              },
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.macro.XXS} - 1",
-                "$description": "Left padding on keyline for medium progressively shown inputs"
-              },
-              "L": {
-                "$type": "spacing",
-                "$value": "{global.space.macro.XS} - 1",
-                "$description": "Left padding on keyline for large progressively shown inputs"
-              }
             }
           }
         }
