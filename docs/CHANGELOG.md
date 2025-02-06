@@ -1,3 +1,9 @@
+## [7.3.1](https://github.com/Sage/design-tokens/compare/v7.3.0...v7.3.1) (2025-02-06)
+
+### Bug Fixes
+
+* **tab border:** Reduce value of tab.borderwidth.navigation.bottom. ([29abeaa](https://github.com/Sage/design-tokens/commit/29abeaa8557ae8a556ef28c5bea184bab1d468b5))
+
 ## [7.3.0](https://github.com/Sage/design-tokens/compare/v7.2.0...v7.3.0) (2025-02-05)
 
 ### Features
