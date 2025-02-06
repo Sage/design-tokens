@@ -1,3 +1,13 @@
+## [8.0.0](https://github.com/Sage/design-tokens/compare/v7.3.1...v8.0.0) (2025-02-06)
+
+### ⚠ BREAKING CHANGES
+
+* **checkbox and radio:** removing unneeded keyline space tokens. After reviewing, the keyline will be absolutely positioned so the keyline spacing tokens were redundant. (#434)
+
+### Features
+
+* **checkbox and radio:** removing unneeded keyline space tokens. After reviewing, the keyline will be absolutely positioned so the keyline spacing tokens were redundant. ([#434](https://github.com/Sage/design-tokens/issues/434)) ([66286ee](https://github.com/Sage/design-tokens/commit/66286eed8cc5d2c977b5ee7d89d94c2df8838bf0))
+
 ## [7.3.1](https://github.com/Sage/design-tokens/compare/v7.3.0...v7.3.1) (2025-02-06)
 
 ### Bug Fixes
