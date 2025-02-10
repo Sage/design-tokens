@@ -1,3 +1,9 @@
+## [8.2.0](https://github.com/Sage/design-tokens/compare/v8.1.0...v8.2.0) (2025-02-10)
+
+### Features
+
+* **checkbox and radio:** add new M size spacing tokens so that checkboxes and radios can be horizontally aligned with their label text ([#438](https://github.com/Sage/design-tokens/issues/438)) ([d5c1688](https://github.com/Sage/design-tokens/commit/d5c1688452304e7885e26e87dc468f42b00e759b))
+
 ## [8.1.0](https://github.com/Sage/design-tokens/compare/v8.0.0...v8.1.0) (2025-02-10)
 
 ### Features
