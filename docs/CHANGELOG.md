@@ -1,3 +1,9 @@
+## [8.1.0](https://github.com/Sage/design-tokens/compare/v8.0.0...v8.1.0) (2025-02-10)
+
+### Features
+
+* **button:** add marketing tertiary tokens so that the tertiary button has an underline with the marketing theme, and change mid layer positive color to point to a more accessible green. ([cac6b92](https://github.com/Sage/design-tokens/commit/cac6b92098272ad026100cb0af83bd62d23c04ae))
+
 ## [8.0.0](https://github.com/Sage/design-tokens/compare/v7.3.1...v8.0.0) (2025-02-06)
 
 ### ⚠ BREAKING CHANGES
