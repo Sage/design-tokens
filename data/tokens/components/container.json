@@ -1,53 +1,6 @@
 {
   "container": {
     "color": {
-      "standard": {
-        "bg-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}"
-        },
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.nought}"
-        },
-        "bgFooter-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}",
-          "$description": "tile footer bg color "
-        },
-        "border-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}"
-        },
-        "border-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.soft}"
-        },
-        "border-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.faint}"
-        },
-        "dimmer": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.mask}",
-          "$description": "dimmed mask for dialogs"
-        },
-        "icon": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.moderate}",
-          "$description": "Link preview image thumbnail"
-        },
-        "text-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.moderate}",
-          "$description": "for subheadings etc"
-        },
-        "text-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.harsh}",
-          "$description": "for headings, paragraph text etc "
-        }
-      },
       "AI": {
         "borderhorizontal": {
           "$type": "color",
@@ -72,14 +25,152 @@
           }
         }
       },
-      "scrollbar": {
-        "bg-default": {
+      "blockquote": {
+        "border": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}"
+          "$value": "{modes.color.interactive.primary.default}"
+        }
+      },
+      "calendar": {
+        "blue": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.blue.950}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.blue.550}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.blue.400}"
+          }
         },
-        "fg-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.moderate}"
+        "crimson": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.crimson.950}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.crimson.550}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.crimson.400}"
+          }
+        },
+        "gray": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.gray.950}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.gray.550}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.gray.400}"
+          }
+        },
+        "green": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.green.950}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.green.550}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.green.400}"
+          }
+        },
+        "lime": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.lime.950}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.lime.550}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.lime.400}"
+          }
+        },
+        "pewter": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.pewter.950}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.pewter.550}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.pewter.400}"
+          }
+        },
+        "pink": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.pink.950}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.pink.550}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.pink.400}"
+          }
+        },
+        "purple": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.purple.950}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.purple.550}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.purple.400}"
+          }
+        },
+        "teal": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.teal.950}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.teal.550}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.teal.400}"
+          }
+        },
+        "terracotta": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.terracotta.950}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.terracotta.550}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.terracotta.400}"
+          }
         }
       },
       "interactive": {
@@ -206,10 +297,61 @@
           "$description": "Hover label for any accordion."
         }
       },
-      "blockquote": {
-        "border": {
+      "scrollbar": {
+        "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.primary.default}"
+          "$value": "{modes.color.generic.bg.faint}"
+        },
+        "fg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.moderate}"
+        }
+      },
+      "standard": {
+        "bg-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.faint}"
+        },
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.nought}"
+        },
+        "bgFooter-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.faint}",
+          "$description": "tile footer bg color "
+        },
+        "border-active": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.generic.active}"
+        },
+        "border-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.soft}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.faint}"
+        },
+        "dimmer": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.inactive.mask}",
+          "$description": "dimmed mask for dialogs"
+        },
+        "icon": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.moderate}",
+          "$description": "Link preview image thumbnail"
+        },
+        "text-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.moderate}",
+          "$description": "for subheadings etc"
+        },
+        "text-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.harsh}",
+          "$description": "for headings, paragraph text etc "
         }
       }
     },
