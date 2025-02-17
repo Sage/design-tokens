@@ -1159,12 +1159,26 @@
         }
       },
       "colorpicker": {
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.extreme}",
+          "$description": "Accessible on colorpicker bg-default colors."
+        },
+        "label-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.nought}",
+          "$description": "Accessible on colorpicker bg-alt colors."
+        },
         "blue": {
           "border": {
             "$type": "color",
             "$value": "{modes.color.dataviz.blue.rich}"
           },
-          "bg": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{modes.color.dataviz.blue.rich}"
+          },
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.dataviz.blue.muted}"
           },
@@ -1172,9 +1186,10 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.blue.rich}"
           },
-          "text": {
+          "label-default": {
             "$type": "color",
-            "$value": "{modes.color.dataviz.blue.deep}"
+            "$value": "{modes.color.dataviz.blue.deep}",
+            "$description": "At least 4.5:1 against #F3 (light mode) and #0E (dark mode). Not to be used on bg-default."
           }
         },
         "teal": {
@@ -1182,7 +1197,11 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.teal.rich}"
           },
-          "bg": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{modes.color.dataviz.teal.rich}"
+          },
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.dataviz.teal.muted}"
           },
@@ -1190,9 +1209,10 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.teal.rich}"
           },
-          "text": {
+          "label-default": {
             "$type": "color",
-            "$value": "{modes.color.dataviz.teal.deep}"
+            "$value": "{modes.color.dataviz.teal.deep}",
+            "$description": "At least 4.5:1 against #F3 (light mode) and #0E (dark mode). Not to be used on bg-default."
           }
         },
         "green": {
@@ -1200,7 +1220,11 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.green.rich}"
           },
-          "bg": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{modes.color.dataviz.green.rich}"
+          },
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.dataviz.green.muted}"
           },
@@ -1208,9 +1232,10 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.green.rich}"
           },
-          "text": {
+          "label-default": {
             "$type": "color",
-            "$value": "{modes.color.dataviz.green.deep}"
+            "$value": "{modes.color.dataviz.green.deep}",
+            "$description": "At least 4.5:1 against #F3 (light mode) and #0E (dark mode). Not to be used on bg-default."
           }
         },
         "lime": {
@@ -1218,7 +1243,11 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.lime.rich}"
           },
-          "bg": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{modes.color.dataviz.lime.rich}"
+          },
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.dataviz.lime.muted}"
           },
@@ -1226,9 +1255,10 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.lime.rich}"
           },
-          "text": {
+          "label-default": {
             "$type": "color",
-            "$value": "{modes.color.dataviz.lime.deep}"
+            "$value": "{modes.color.dataviz.lime.deep}",
+            "$description": "At least 4.5:1 against #F3 (light mode) and #0E (dark mode). Not to be used on bg-default."
           }
         },
         "orange": {
@@ -1236,7 +1266,11 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.orange.rich}"
           },
-          "bg": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{modes.color.dataviz.orange.rich}"
+          },
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.dataviz.orange.muted}"
           },
@@ -1244,9 +1278,10 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.orange.rich}"
           },
-          "text": {
+          "label-default": {
             "$type": "color",
-            "$value": "{modes.color.dataviz.orange.deep}"
+            "$value": "{modes.color.dataviz.orange.deep}",
+            "$description": "At least 4.5:1 against #F3 (light mode) and #0E (dark mode). Not to be used on bg-default."
           }
         },
         "red": {
@@ -1254,7 +1289,11 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.red.rich}"
           },
-          "bg": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{modes.color.dataviz.red.rich}"
+          },
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.dataviz.red.muted}"
           },
@@ -1262,9 +1301,10 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.red.rich}"
           },
-          "text": {
+          "label-default": {
             "$type": "color",
-            "$value": "{modes.color.dataviz.red.deep}"
+            "$value": "{modes.color.dataviz.red.deep}",
+            "$description": "At least 4.5:1 against #F3 (light mode) and #0E (dark mode). Not to be used on bg-default."
           }
         },
         "pink": {
@@ -1272,7 +1312,11 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.pink.rich}"
           },
-          "bg": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{modes.color.dataviz.pink.rich}"
+          },
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.dataviz.pink.muted}"
           },
@@ -1280,9 +1324,10 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.pink.rich}"
           },
-          "text": {
+          "label-default": {
             "$type": "color",
-            "$value": "{modes.color.dataviz.pink.deep}"
+            "$value": "{modes.color.dataviz.pink.deep}",
+            "$description": "At least 4.5:1 against #F3 (light mode) and #0E (dark mode). Not to be used on bg-default."
           }
         },
         "purple": {
@@ -1290,7 +1335,11 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.purple.rich}"
           },
-          "bg": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{modes.color.dataviz.purple.rich}"
+          },
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.dataviz.purple.muted}"
           },
@@ -1298,9 +1347,10 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.purple.rich}"
           },
-          "text": {
+          "label-default": {
             "$type": "color",
-            "$value": "{modes.color.dataviz.purple.deep}"
+            "$value": "{modes.color.dataviz.purple.deep}",
+            "$description": "At least 4.5:1 against #F3 (light mode) and #0E (dark mode). Not to be used on bg-default."
           }
         },
         "slate": {
@@ -1308,7 +1358,11 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.slate.rich}"
           },
-          "bg": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{modes.color.dataviz.slate.rich}"
+          },
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.dataviz.slate.muted}"
           },
@@ -1316,9 +1370,10 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.slate.rich}"
           },
-          "text": {
+          "label-default": {
             "$type": "color",
-            "$value": "{modes.color.dataviz.slate.deep}"
+            "$value": "{modes.color.dataviz.slate.deep}",
+            "$description": "At least 4.5:1 against #F3 (light mode) and #0E (dark mode). Not to be used on bg-default."
           }
         },
         "gray": {
@@ -1326,7 +1381,11 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.gray.rich}"
           },
-          "bg": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{modes.color.dataviz.gray.rich}"
+          },
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.dataviz.gray.muted}"
           },
@@ -1334,9 +1393,10 @@
             "$type": "color",
             "$value": "{modes.color.dataviz.gray.rich}"
           },
-          "text": {
+          "label-default": {
             "$type": "color",
-            "$value": "{modes.color.dataviz.gray.deep}"
+            "$value": "{modes.color.dataviz.gray.deep}",
+            "$description": "At least 4.5:1 against #F3 (light mode) and #0E (dark mode). Not to be used on bg-default."
           }
         }
       },
