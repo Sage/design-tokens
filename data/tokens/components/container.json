@@ -1,53 +1,6 @@
 {
   "container": {
     "color": {
-      "standard": {
-        "bg-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}"
-        },
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.nought}"
-        },
-        "bgFooter-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}",
-          "$description": "tile footer bg color "
-        },
-        "border-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}"
-        },
-        "border-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.soft}"
-        },
-        "border-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.faint}"
-        },
-        "dimmer": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.mask}",
-          "$description": "dimmed mask for dialogs"
-        },
-        "icon": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.moderate}",
-          "$description": "Link preview image thumbnail"
-        },
-        "text-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.moderate}",
-          "$description": "for subheadings etc"
-        },
-        "text-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.harsh}",
-          "$description": "for headings, paragraph text etc "
-        }
-      },
       "AI": {
         "borderhorizontal": {
           "$type": "color",
@@ -72,24 +25,125 @@
           }
         }
       },
-      "scrollbar": {
-        "bg-default": {
+      "blockquote": {
+        "border": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}"
+          "$value": "{modes.color.interactive.primary.default}"
+        }
+      },
+      "calendar": {
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.extreme}",
+          "$description": "Accessible on calendar bg-default colors."
         },
-        "fg-default": {
+        "label-alt": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.moderate}"
+          "$value": "{modes.color.generic.content.extreme}",
+          "$description": "Accessible on calendar bg-alt colors."
+        },
+        "blue": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.blue.muted}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.blue.rich}"
+          }
+        },
+        "teal": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.teal.muted}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.teal.rich}"
+          }
+        },
+        "green": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.green.muted}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.green.rich}"
+          }
+        },
+        "lime": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.lime.muted}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.lime.rich}"
+          }
+        },
+        "orange": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.orange.muted}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.orange.rich}"
+          }
+        },
+        "red": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.red.muted}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.red.rich}"
+          }
+        },
+        "pink": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.pink.muted}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.pink.rich}"
+          }
+        },
+        "purple": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.purple.muted}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.purple.rich}"
+          }
+        },
+        "slate": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.slate.muted}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.slate.rich}"
+          }
+        },
+        "gray": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.gray.muted}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{modes.color.colorcode.gray.rich}"
+          }
         }
       },
       "interactive": {
-        "detailedicon": {
-          "bg": {
-            "$type": "color",
-            "$value": "{modes.color.custom.default}",
-            "$description": " "
-          }
-        },
         "bgFooter-activated": {
           "$type": "color",
           "$value": "{modes.color.status.positive.default}",
@@ -204,12 +258,70 @@
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.generic.default}",
           "$description": "Hover label for any accordion."
+        },
+        "detailedicon": {
+          "bg": {
+            "$type": "color",
+            "$value": "{modes.color.custom.default}",
+            "$description": " "
+          }
         }
       },
-      "blockquote": {
-        "border": {
+      "scrollbar": {
+        "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.primary.default}"
+          "$value": "{modes.color.generic.bg.faint}"
+        },
+        "fg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.moderate}"
+        }
+      },
+      "standard": {
+        "bg-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.faint}"
+        },
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.nought}"
+        },
+        "bgFooter-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.faint}",
+          "$description": "tile footer bg color "
+        },
+        "border-active": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.generic.active}"
+        },
+        "border-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.soft}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.faint}"
+        },
+        "dimmer": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.inactive.mask}",
+          "$description": "dimmed mask for dialogs"
+        },
+        "icon": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.moderate}",
+          "$description": "Link preview image thumbnail"
+        },
+        "text-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.moderate}",
+          "$description": "for subheadings etc"
+        },
+        "text-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.harsh}",
+          "$description": "for headings, paragraph text etc "
         }
       }
     },
