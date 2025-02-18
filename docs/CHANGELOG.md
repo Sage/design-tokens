@@ -1,3 +1,9 @@
+## [8.4.0](https://github.com/Sage/design-tokens/compare/v8.3.0...v8.4.0) (2025-02-18)
+
+### Features
+
+* **new colors:** Add new color tokens for badge, calendar, and colorpicker ([#440](https://github.com/Sage/design-tokens/issues/440)) ([7b23b92](https://github.com/Sage/design-tokens/commit/7b23b9260ed258efae764ec6d61a9752f6c9045b))
+
 ## [8.3.0](https://github.com/Sage/design-tokens/compare/v8.2.0...v8.3.0) (2025-02-18)
 
 ### Features
