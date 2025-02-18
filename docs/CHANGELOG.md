@@ -1,3 +1,9 @@
+## [8.3.0](https://github.com/Sage/design-tokens/compare/v8.2.0...v8.3.0) (2025-02-18)
+
+### Features
+
+* **tab border:** New color and borderWidth tokens added for active tabs. ([#444](https://github.com/Sage/design-tokens/issues/444)) ([3e911cd](https://github.com/Sage/design-tokens/commit/3e911cdc4f707712a1ac2fb2d2ad28255a276ee6))
+
 ## [8.2.0](https://github.com/Sage/design-tokens/compare/v8.1.0...v8.2.0) (2025-02-10)
 
 ### Features

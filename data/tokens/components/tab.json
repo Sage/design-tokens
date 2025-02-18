@@ -105,6 +105,10 @@
         "$value": "{modes.color.interactive.monochrome.generic.hoverAlt}",
         "$description": "For anchor nav, not tab."
       },
+      "border-activealt": {
+        "$type": "color",
+        "$value": "{modes.color.generic.fg.delicate}"
+      },
       "border-active": {
         "$type": "color",
         "$value": "{modes.color.interactive.monochrome.generic.active}"
@@ -218,13 +222,15 @@
       "navigation": {
         "bottom": {
           "$type": "borderWidth",
-          "$value": "{global.borderwidth.S}",
-          "$description": "Tab (enabled and hover bottom border)"
+          "$value": "{global.borderwidth.S}"
         },
         "side": {
           "$type": "borderWidth",
-          "$value": "{global.borderwidth.S}",
-          "$description": "Tab (enabled and hover bottom border)"
+          "$value": "{global.borderwidth.S}"
+        },
+        "top": {
+          "$type": "borderWidth",
+          "$value": "{global.borderwidth.S}"
         }
       }
     },
