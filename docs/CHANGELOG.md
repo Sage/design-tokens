@@ -1,3 +1,10 @@
+## [8.5.0](https://github.com/Sage/design-tokens/compare/v8.4.0...v8.5.0) (2025-02-21)
+
+### Features
+
+* **profile and button toggle:** add tokens to support XS profile variant needed for client management. Also add a disabled border token for button toggle. ([a936c67](https://github.com/Sage/design-tokens/commit/a936c67813f8ce7577d587b4614f735ad81d5a9f))
+* **profile and button toggle:** add tokens to support XS profile variant needed for client management. Also add a disabled border token for button toggle. ([b2ac173](https://github.com/Sage/design-tokens/commit/b2ac17386f24ad38883e3e28fac413be0e7fcfa6))
+
 ## [8.4.0](https://github.com/Sage/design-tokens/compare/v8.3.0...v8.4.0) (2025-02-18)
 
 ### Features
