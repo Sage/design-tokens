@@ -89,7 +89,7 @@
       },
       "bg-default": {
         "$type": "color",
-        "$value": "{modes.color.generic.bg.faint}"
+        "$value": "{modes.color.generic.bg.nought}"
       },
       "border-default": {
         "$type": "color",
@@ -113,9 +113,14 @@
         "$value": "{global.space.none}"
       },
       "x": {
+        "XS": {
+          "$type": "spacing",
+          "$value": "{global.space.macro.XXXS}",
+          "$description": "gap between avatar and name"
+        },
         "S": {
           "$type": "spacing",
-          "$value": "{global.space.macro.XS}",
+          "$value": "{global.space.macro.XXS}",
           "$description": "gap between avatar and name"
         },
         "M": {
@@ -125,22 +130,22 @@
         },
         "ML": {
           "$type": "spacing",
-          "$value": "{global.space.macro.M}",
+          "$value": "{global.space.macro.XS}",
           "$description": "gap between avatar and name"
         },
         "L": {
           "$type": "spacing",
-          "$value": "{global.space.macro.M}",
+          "$value": "{global.space.macro.S}",
           "$description": "gap between avatar and name"
         },
         "XL": {
           "$type": "spacing",
-          "$value": "{global.space.macro.L}",
+          "$value": "{global.space.macro.M}",
           "$description": "gap between avatar and name"
         },
         "XXL": {
           "$type": "spacing",
-          "$value": "{global.space.macro.XL}",
+          "$value": "{global.space.macro.L}",
           "$description": "gap between avatar and name"
         }
       }
@@ -185,6 +190,10 @@
           }
         },
         "default": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.moderate.S}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.adaptive.component.moderate.M}"
@@ -211,6 +220,10 @@
           }
         },
         "heading": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.firm.S}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.adaptive.component.firm.M}"
@@ -275,6 +288,10 @@
           }
         },
         "default": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.moderate.S}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.responsive.component.moderate.M}"
@@ -301,6 +318,10 @@
           }
         },
         "heading": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.firm.S}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.responsive.component.firm.M}"
