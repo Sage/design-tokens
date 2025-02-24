@@ -1,3 +1,9 @@
+## [8.5.1](https://github.com/Sage/design-tokens/compare/v8.5.0...v8.5.1) (2025-02-24)
+
+### Bug Fixes
+
+* **color palette tweaks:** Update values of color tokens for consistency and better legibility ([#450](https://github.com/Sage/design-tokens/issues/450)) ([9e14aa9](https://github.com/Sage/design-tokens/commit/9e14aa9e806162ac65edd14189d4fc6058706141))
+
 ## [8.5.0](https://github.com/Sage/design-tokens/compare/v8.4.0...v8.5.0) (2025-02-21)
 
 ### Features
