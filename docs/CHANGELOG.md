@@ -1,3 +1,17 @@
+## [9.0.0](https://github.com/Sage/design-tokens/compare/v8.6.0...v9.0.0) (2025-02-25)
+
+### ⚠ BREAKING CHANGES
+
+* **Remove color tokens:** Delete surplus primitive and mode color tokens.
+
+### Features
+
+* **Remove color tokens:** Delete surplus primitive and mode color tokens. ([8e6a51d](https://github.com/Sage/design-tokens/commit/8e6a51da2a974198355cd7962116e3034b216977))
+
+### Bug Fixes
+
+* **Remove surplus primitive and mode color tokens:** * Delete primitives.colors.supplementary.<hue> 550 tokens, and modes.color.colorcode.<hue>.rich tokens ([6ea11f2](https://github.com/Sage/design-tokens/commit/6ea11f24cdc2051a4a1276fbcd441d6fe805b2ac))
+
 ## [8.6.0](https://github.com/Sage/design-tokens/compare/v8.5.1...v8.6.0) (2025-02-25)
 
 ### Features
