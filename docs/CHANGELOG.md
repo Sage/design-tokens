@@ -1,3 +1,10 @@
+## [8.6.0](https://github.com/Sage/design-tokens/compare/v8.5.1...v8.6.0) (2025-02-25)
+
+### Features
+
+* **calendar color values:** 1. Add container.color.calendar.<hue>.border-default. 2. Update values of container.color.calendar.<hue>.pattern from modes.color.colorcode.<hue> rich to deep. ([677f12b](https://github.com/Sage/design-tokens/commit/677f12b48d7d1a801d7197dea19c739976ed7a85))
+* **calendar color values:** Add and update color tokens ([5413265](https://github.com/Sage/design-tokens/commit/541326558211e31b9c17520ac78697209c752445))
+
 ## [8.5.1](https://github.com/Sage/design-tokens/compare/v8.5.0...v8.5.1) (2025-02-24)
 
 ### Bug Fixes
