@@ -21,6 +21,28 @@
         "$value": "{global.size.macro.L}",
         "$description": "min-height on L Buttons"
       },
+      "toggle": {
+        "XS": {
+          "$type": "sizing",
+          "$value": "{global.size.macro.XS}",
+          "$description": "min-height on button within S toggle group"
+        },
+        "S": {
+          "$type": "sizing",
+          "$value": "{global.size.macro.S}",
+          "$description": "min-height on S single toggle, and on button within M toggle group"
+        },
+        "M": {
+          "$type": "sizing",
+          "$value": "{global.size.macro.M}",
+          "$description": "min-height on M single toggle, and on button within L toggle group"
+        },
+        "L": {
+          "$type": "sizing",
+          "$value": "{global.size.macro.L}",
+          "$description": "min-height on L single toggle"
+        }
+      },
       "icon": {
         "M": {
           "$type": "sizing",
@@ -469,6 +491,16 @@
       "toggle": {
         "button": {
           "x": {
+            "XS": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "Left and right padding on XS asset used within S toggle group"
+            },
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXS}",
+              "$description": "Left and right padding on S toggle buttons"
+            },
             "M": {
               "$type": "spacing",
               "$value": "{global.space.macro.XS}",
@@ -481,6 +513,11 @@
             }
           },
           "xg": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "Item spacing inside toggle buttons"
+            },
             "M": {
               "$type": "spacing",
               "$value": "{global.space.macro.XXXS}",
@@ -493,20 +530,35 @@
             }
           },
           "y": {
+            "XS": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XS}-0.5",
+              "$description": "Top and bottom padding on toggle buttons "
+            },
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.L}",
+              "$description": "Top and bottom padding on toggle buttons "
+            },
             "M": {
               "$type": "spacing",
-              "$value": "{global.space.micro.S}",
+              "$value": "{global.space.micro.L}",
               "$description": "Top and bottom padding on toggle buttons "
             },
             "L": {
               "$type": "spacing",
-              "$value": "{global.space.micro.M}",
+              "$value": "{global.space.micro.XL}-0.5",
               "$description": "Top and bottom padding on toggle buttons "
             }
           }
         },
         "container": {
           "x": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Horizontal padding"
+            },
             "M": {
               "$type": "spacing",
               "$value": "{global.space.micro.S}",
@@ -519,6 +571,11 @@
             }
           },
           "xg": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.L}",
+              "$description": "Spacing between buttons in Toggle. "
+            },
             "M": {
               "$type": "spacing",
               "$value": "{global.space.micro.L}",
@@ -531,6 +588,11 @@
             }
           },
           "y": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Vertical padding"
+            },
             "M": {
               "$type": "spacing",
               "$value": "{global.space.micro.S}",
@@ -982,6 +1044,23 @@
           "$description": "large tertiary button"
         }
       },
+      "subtle": {
+        "S": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.L}",
+          "$description": "Buttons S (typical and destructive, and inc bar, split and multi), Button toggle M (parent container)"
+        },
+        "M": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.XL}",
+          "$description": "Buttons  M (typical and destructive, and inc bar, split and multi), Button toggle L (parent container), Button toggle M (parent container)"
+        },
+        "L": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.XXL}",
+          "$description": "large subtle button"
+        }
+      },
       "tertiary": {
         "S": {
           "$type": "borderRadius",
@@ -999,21 +1078,45 @@
           "$description": "large tertiary button"
         }
       },
-      "subtle": {
-        "S": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.L}",
-          "$description": "Buttons S (typical and destructive, and inc bar, split and multi), Button toggle M (parent container)"
+      "toggle": {
+        "button": {
+          "XS": {
+            "$type": "borderRadius",
+            "$value": "{global.radius.interactive.XXL}/2",
+            "$description": "XS single toggle button (used within S toggle group)"
+          },
+          "S": {
+            "$type": "borderRadius",
+            "$value": "{global.radius.interactive.L}",
+            "$description": "S single toggle button (used within M toggle group)"
+          },
+          "M": {
+            "$type": "borderRadius",
+            "$value": "{global.radius.interactive.XL}",
+            "$description": "M single toggle button (used within L toggle group)"
+          },
+          "L": {
+            "$type": "borderRadius",
+            "$value": "{global.radius.interactive.XXL}",
+            "$description": "L single toggle button"
+          }
         },
-        "M": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XL}",
-          "$description": "Buttons  M (typical and destructive, and inc bar, split and multi), Button toggle L (parent container), Button toggle M (parent container)"
-        },
-        "L": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XXL}",
-          "$description": "large subtle button"
+        "container": {
+          "S": {
+            "$type": "borderRadius",
+            "$value": "{global.radius.interactive.L}",
+            "$description": "S toggle group"
+          },
+          "M": {
+            "$type": "borderRadius",
+            "$value": "{global.radius.interactive.XL}",
+            "$description": "M toggle group"
+          },
+          "L": {
+            "$type": "borderRadius",
+            "$value": "{global.radius.interactive.XXL}",
+            "$description": "L toggle group"
+          }
         }
       }
     },
@@ -1027,6 +1130,11 @@
         "$type": "borderWidth",
         "$value": "{global.borderwidth.XS}",
         "$description": "chip button border width"
+      },
+      "primary": {
+        "$type": "borderWidth",
+        "$value": "{global.borderwidth.none}",
+        "$description": "primary button border "
       },
       "secondary": {
         "$type": "borderWidth",
@@ -1042,11 +1150,6 @@
         "$type": "borderWidth",
         "$value": "{global.borderwidth.none}",
         "$description": "tertiary button border used for a marketing override"
-      },
-      "primary": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.none}",
-        "$description": "primary button border "
       },
       "togglecontainer": {
         "$type": "borderWidth",
@@ -1091,7 +1194,7 @@
             "$value": "{global.typography.adaptive.component.firm.L}"
           }
         },
-        "tertiary": {
+        "subtle": {
           "S": {
             "$type": "typography",
             "$value": "{global.typography.adaptive.component.firm.S}"
@@ -1105,7 +1208,7 @@
             "$value": "{global.typography.adaptive.component.firm.L}"
           }
         },
-        "subtle": {
+        "tertiary": {
           "S": {
             "$type": "typography",
             "$value": "{global.typography.adaptive.component.firm.S}"
@@ -1149,7 +1252,7 @@
             "$value": "{global.typography.responsive.component.firm.L}"
           }
         },
-        "tertiary": {
+        "subtle": {
           "S": {
             "$type": "typography",
             "$value": "{global.typography.responsive.component.firm.S}"
@@ -1163,7 +1266,7 @@
             "$value": "{global.typography.responsive.component.firm.L}"
           }
         },
-        "subtle": {
+        "tertiary": {
           "S": {
             "$type": "typography",
             "$value": "{global.typography.responsive.component.firm.S}"
