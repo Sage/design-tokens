@@ -1,3 +1,9 @@
+## [9.1.0](https://github.com/Sage/design-tokens/compare/v9.0.0...v9.1.0) (2025-03-04)
+
+### Features
+
+* **Toggle buttons:** Toggle button additions, edits and chores, plus Color picker chore. ([#455](https://github.com/Sage/design-tokens/issues/455)) ([5b3520d](https://github.com/Sage/design-tokens/commit/5b3520de718b83f3e228c99e64fc3a1c00c63a3f))
+
 ## [9.0.0](https://github.com/Sage/design-tokens/compare/v8.6.0...v9.0.0) (2025-02-25)
 
 ### ⚠ BREAKING CHANGES
