@@ -362,6 +362,36 @@
           "$type": "color",
           "$value": "{modes.color.generic.content.harsh}",
           "$description": "for headings, paragraph text etc "
+        },
+        "statusborder": {
+          "bg-ai": {
+            "$type": "color",
+            "$value": "{container.color.AI.bordervertical}"
+          },
+          "bg-caution": {
+            "$type": "color",
+            "$value": "{modes.color.status.caution.default}"
+          },
+          "bg-negative": {
+            "$type": "color",
+            "$value": "{modes.color.status.negative.default}"
+          },
+          "bg-important": {
+            "$type": "color",
+            "$value": "{modes.color.status.important.default}"
+          },
+          "bg-info": {
+            "$type": "color",
+            "$value": "{modes.color.status.info.default}"
+          },
+          "bg-neutral": {
+            "$type": "color",
+            "$value": "{modes.color.status.neutral.default}"
+          },
+          "bg-positive": {
+            "$type": "color",
+            "$value": "{modes.color.status.positive.default}"
+          }
         }
       }
     },
@@ -608,6 +638,13 @@
           }
         }
       },
+      "tile": {
+        "statusborder": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.M}",
+          "$description": "width of left status borders on tiles."
+        }
+      },
       "tileselect": {
         "footer": {
           "$type": "sizing",
@@ -674,10 +711,6 @@
         "$type": "borderRadius",
         "$value": "{global.radius.container.L}",
         "$description": "Carousel slides"
-      },
-      "chatbubble": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.L}"
       },
       "colorpicker": {
         "$type": "borderRadius",
@@ -780,81 +813,6 @@
             "$type": "spacing",
             "$value": "{global.space.macro.XS}",
             "$description": "Gap between Accordion subtle trigger and content"
-          }
-        }
-      },
-      "chatbubble": {
-        "outer": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Left margin on AI response bubbles and right margin on user prompt bubbles."
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XL} * 2",
-              "$description": "Right margin on AI response bubbles and left margin on user prompt bubbles."
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Top and bottom margin on all chat bubbles."
-            }
-          },
-          "yg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Gap between timestamp and chat bubble container. Also gap between give feedback button and container."
-            }
-          }
-        },
-        "inner": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Left and right padding inside chat bubbles."
-            }
-          },
-          "xg": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}"
-            }
-          },
-          "Y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Top and bottom padding inside chat bubbles."
-            }
-          },
-          "yg": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Vertical gap between inner blocks within a chat or insight bubble."
-            }
           }
         }
       },
@@ -1353,6 +1311,11 @@
             "$type": "spacing",
             "$value": "{global.space.macro.L}",
             "$description": "Right left padding on Tile or Card."
+          },
+          "XXXL": {
+            "$type": "spacing",
+            "$value": "{global.space.macro.XL} * 2",
+            "$description": "Right margin on AI response bubbles and left margin on user prompt bubbles."
           }
         },
         "xg": {
@@ -1663,20 +1626,6 @@
           "$type": "borderWidth",
           "$value": "{global.borderwidth.S}",
           "$description": "Accordion subtle (content vertical line)"
-        }
-      },
-      "chatbubble": {
-        "default": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}"
-        },
-        "error": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.S}"
-        },
-        "success": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.S}"
         }
       },
       "filepreview": {
