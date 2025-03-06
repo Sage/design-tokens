@@ -1,3 +1,9 @@
+## [9.2.0](https://github.com/Sage/design-tokens/compare/v9.1.0...v9.2.0) (2025-03-06)
+
+### Features
+
+* **Toggle button:** Add button.space.toggle.container.yg tokens. ([#457](https://github.com/Sage/design-tokens/issues/457)) ([b37aeb7](https://github.com/Sage/design-tokens/commit/b37aeb7c3abe61e2e155f311dc9f1af814d31594))
+
 ## [9.1.0](https://github.com/Sage/design-tokens/compare/v9.0.0...v9.1.0) (2025-03-04)
 
 ### Features
