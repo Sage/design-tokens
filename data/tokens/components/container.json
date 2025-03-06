@@ -362,6 +362,36 @@
           "$type": "color",
           "$value": "{modes.color.generic.content.harsh}",
           "$description": "for headings, paragraph text etc "
+        },
+        "statusborder": {
+          "bg-ai": {
+            "$type": "color",
+            "$value": "{container.color.AI.bordervertical}"
+          },
+          "bg-caution": {
+            "$type": "color",
+            "$value": "{modes.color.status.caution.default}"
+          },
+          "bg-negative": {
+            "$type": "color",
+            "$value": "{modes.color.status.negative.default}"
+          },
+          "bg-important": {
+            "$type": "color",
+            "$value": "{modes.color.status.important.default}"
+          },
+          "bg-info": {
+            "$type": "color",
+            "$value": "{modes.color.status.info.default}"
+          },
+          "bg-neutral": {
+            "$type": "color",
+            "$value": "{modes.color.status.neutral.default}"
+          },
+          "bg-positive": {
+            "$type": "color",
+            "$value": "{modes.color.status.positive.default}"
+          }
         }
       }
     },
@@ -606,6 +636,13 @@
             "$value": "{global.size.flex.XXXXL}",
             "$description": "max-width for sidebar"
           }
+        }
+      },
+      "tile": {
+        "statusborder": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.M}",
+          "$description": "width of status left status borders on tiles."
         }
       },
       "tileselect": {
