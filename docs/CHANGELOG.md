@@ -1,3 +1,25 @@
+## [10.0.0](https://github.com/Sage/design-tokens/compare/v9.2.0...v10.0.0) (2025-03-06)
+
+### ⚠ BREAKING CHANGES
+
+* **Color picker:** form.color.colorpicker.[hue].label removed for all hues.
+
+* feat(data): XXXL padding option needed for right margin on chat bubbles
+
+* feat(chatbubble)!: removing chat bubble spacing tokens as they are no longer needed. Tile component tokens are what we will use for chat bubble.
+
+* feat(modes): adding important status color of purple to dark and light mode.
+
+* feat(tile): adding status border colors.
+
+* updating description in status width borders
+
+* removing redundant green primitive token
+
+### Features
+
+* **Color picker:** Delete label tokens. ([#458](https://github.com/Sage/design-tokens/issues/458)) ([d47f578](https://github.com/Sage/design-tokens/commit/d47f578680b6f6e9d83e442c16ac96bbe774d3b2))
+
 ## [9.2.0](https://github.com/Sage/design-tokens/compare/v9.1.0...v9.2.0) (2025-03-06)
 
 ### Features
