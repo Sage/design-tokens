@@ -2,15 +2,12 @@
   "container": {
     "color": {
       "AI": {
-        "borderhorizontal": {
-          "$type": "color",
-          "$value": "{modes.color.status.ai.default-horizontal}",
-          "$description": "top and bottom border for AI dialog component"
-        },
-        "bordervertical": {
-          "$type": "color",
-          "$value": "{modes.color.status.ai.default-vertical}",
-          "$description": "left and right border for dialog and insight bubbles."
+        "dialog": {
+          "borderhorizontal": {
+            "$type": "color",
+            "$value": "{modes.color.generic.fg.ai.default}",
+            "$description": "top border for AI dialog component"
+          }
         },
         "nudge": {
           "borderAi-horizontal": {
@@ -22,6 +19,13 @@
             "$type": "color",
             "$value": "{modes.color.status.ai.default-vertical}",
             "$description": "left and right border for AI nudge message component"
+          }
+        },
+        "tile": {
+          "bordervertical": {
+            "$type": "color",
+            "$value": "{modes.color.status.ai.default-vertical}",
+            "$description": "left border for AI tiles and bubbles."
           }
         }
       },
@@ -366,7 +370,7 @@
         "statusborder": {
           "bg-ai": {
             "$type": "color",
-            "$value": "{container.color.AI.bordervertical}"
+            "$value": "{container.color.AI.tile.bordervertical}"
           },
           "bg-caution": {
             "$type": "color",
@@ -1563,7 +1567,7 @@
     "borderwidth": {
       "AIgradient": {
         "$type": "borderWidth",
-        "$value": "{global.borderwidth.XL}",
+        "$value": "{global.borderwidth.XXL}",
         "$description": "AI gradient used on all containers such as dialog, chat bubbles etc"
       },
       "dialog": {
