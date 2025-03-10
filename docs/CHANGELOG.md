@@ -1,3 +1,13 @@
+## [11.0.0](https://github.com/Sage/design-tokens/compare/v10.0.0...v11.0.0) (2025-03-10)
+
+### ⚠ BREAKING CHANGES
+
+* **Color picker:** Reorder tokens alphabetically.  BREAKING CHANGE Deletion of Color picker slate label tokens. (#459)
+
+### Features
+
+* **Color picker:** Reorder tokens alphabetically.  BREAKING CHANGE Deletion of Color picker slate label tokens. ([#459](https://github.com/Sage/design-tokens/issues/459)) ([6919957](https://github.com/Sage/design-tokens/commit/69199576ec0c7c4df43df44fa9c6cad0b50a817c))
+
 ## [10.0.0](https://github.com/Sage/design-tokens/compare/v9.2.0...v10.0.0) (2025-03-06)
 
 ### ⚠ BREAKING CHANGES
