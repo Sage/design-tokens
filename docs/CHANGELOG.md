@@ -1,3 +1,9 @@
+## [11.1.0](https://github.com/Sage/design-tokens/compare/v11.0.0...v11.1.0) (2025-03-24)
+
+### Features
+
+* **Color picker:** Add form.space.dropdown.option.colorpicker tokens. ([#463](https://github.com/Sage/design-tokens/issues/463)) ([f326989](https://github.com/Sage/design-tokens/commit/f3269896e6e8e0f25740b570cc2b8b65181e7616))
+
 ## [11.0.0](https://github.com/Sage/design-tokens/compare/v10.0.0...v11.0.0) (2025-03-10)
 
 ### ⚠ BREAKING CHANGES
