@@ -1,3 +1,9 @@
+## [11.2.0](https://github.com/Sage/design-tokens/compare/v11.1.0...v11.2.0) (2025-03-25)
+
+### Features
+
+* **Colorpicker:** Add form.size.dropdown.colorpicker.input.minwidth for input minwidth. ([#465](https://github.com/Sage/design-tokens/issues/465)) ([7ecc04c](https://github.com/Sage/design-tokens/commit/7ecc04c320f5555621b505b5b7a7516da033e6ad))
+
 ## [11.1.0](https://github.com/Sage/design-tokens/compare/v11.0.0...v11.1.0) (2025-03-24)
 
 ### Features
