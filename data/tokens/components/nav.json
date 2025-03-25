@@ -188,6 +188,29 @@
             }
           }
         }
+      },
+      "leftnav": {
+        "parent": {
+          "min": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.L}",
+            "$description": "Min height of parent items"
+          }
+        },
+        "children": {
+          "min": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.M}",
+            "$description": "Min height of children items"
+          }
+        },
+        "grandchildren": {
+          "min": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.S}",
+            "$description": "Min height of grandchildren"
+          }
+        }
       }
     },
     "space": {
