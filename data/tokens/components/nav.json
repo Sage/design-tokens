@@ -65,6 +65,46 @@
           "$value": "{modes.color.generic.fg.delicate}",
           "$description": "level 1 border"
         }
+      },
+      "leftnav": {
+        "container": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.bg.moderate}",
+            "$description": "bg of the parent container\n"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.fg.soft}",
+            "$description": "bg of the parent container\n"
+          }
+        },
+        "item": {
+          "bg-active": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.nav.active}"
+          },
+          "bg-enabled": {
+            "$type": "color",
+            "$value": "{modes.color.none}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.nav.hover}"
+          },
+          "label-active": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.nav.withActive}"
+          },
+          "label-enabled": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.nav.withDefault}"
+          },
+          "label-hover": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.nav.withHover}"
+          }
+        }
       }
     },
     "radius": {
@@ -82,6 +122,13 @@
         "$type": "borderRadius",
         "$value": "{global.radius.interactive.L}",
         "$description": "Menu on mobile"
+      },
+      "leftnav": {
+        "menuitem": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.M}",
+          "$description": "Radius on parent, child and grandchild items in left nav"
+        }
       }
     },
     "boxshadow": {
@@ -89,6 +136,13 @@
         "$type": "boxShadow",
         "$value": "{global.boxshadow.cleanedge.near}",
         "$description": "Menu"
+      },
+      "leftnav": {
+        "childContainer": {
+          "$type": "boxShadow",
+          "$value": "{global.boxshadow.container.near}",
+          "$description": "box shadow on progressively shown child container"
+        }
       }
     },
     "borderwidth": {
@@ -107,6 +161,13 @@
           "$type": "borderWidth",
           "$value": "{global.borderwidth.L}",
           "$description": "Menu (segment divider)"
+        }
+      },
+      "leftnav": {
+        "divider": {
+          "$type": "borderWidth",
+          "$value": "{global.borderwidth.XS}",
+          "$description": "Dividers between sticky header and between parent menu and child menu."
         }
       }
     },

@@ -974,6 +974,61 @@
             }
           }
         },
+        "nav": {
+          "active": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.45",
+                  "space": "lch"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{primitives.colors.black}",
+            "$description": "active bg for nav items"
+          },
+          "default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.bg.nought}",
+            "$description": "default bg for global nav"
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{modes.color.generic.bg.faint}",
+            "$description": "active bg for nav items"
+          },
+          "withActive": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.extreme}",
+            "$description": "text and icons on top of active bgs in nav contexts"
+          },
+          "hover": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{modes.color.modifiers.button.hoverAlt} ",
+                  "space": "lch"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{primitives.colors.black}",
+            "$description": "hover bg for nav items"
+          },
+          "withHover": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.extreme}",
+            "$description": "hover bg for nav items"
+          },
+          "withDefault": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.harsh}",
+            "$description": "hover bg for nav items"
+          }
+        },
         "primary": {
           "active": {
             "$extensions": {
@@ -1196,61 +1251,6 @@
               "$value": "{primitives.colors.navy}",
               "$description": "progress tracker bg"
             }
-          }
-        },
-        "nav": {
-          "active": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.45",
-                  "space": "lch"
-                }
-              }
-            },
-            "$type": "color",
-            "$value": "{primitives.colors.black}",
-            "$description": "active bg for nav items"
-          },
-          "default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.bg.nought}",
-            "$description": "default bg for global nav"
-          },
-          "defaultAlt": {
-            "$type": "color",
-            "$value": "{modes.color.generic.bg.faint}",
-            "$description": "active bg for nav items"
-          },
-          "withActive": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.extreme}",
-            "$description": "text and icons on top of active bgs in nav contexts"
-          },
-          "hover": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{modes.color.modifiers.button.hoverAlt} ",
-                  "space": "lch"
-                }
-              }
-            },
-            "$type": "color",
-            "$value": "{primitives.colors.black}",
-            "$description": "hover bg for nav items"
-          },
-          "withHover": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.extreme}",
-            "$description": "hover bg for nav items"
-          },
-          "withDefault": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.harsh}",
-            "$description": "hover bg for nav items"
           }
         }
       },
