@@ -1207,6 +1207,31 @@
         }
       },
       "status": {
+        "ai": {
+          "default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.bg.nought}"
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{modes.color.generic.bg.extreme}",
+            "$description": "bg for contextual message comp"
+          },
+          "default-horizontal": {
+            "$type": "color",
+            "$value": "{primitives.colors.lightAiH}"
+          },
+          "default-vertical": {
+            "$type": "color",
+            "$value": "{primitives.colors.lightAiV}"
+          }
+        },
+        "generic": {
+          "default": {
+            "$type": "color",
+            "$value": "{primitives.colors.petrol}"
+          }
+        },
         "caution": {
           "default": {
             "$type": "color",
@@ -1284,31 +1309,6 @@
             }
           }
         },
-        "ai": {
-          "default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.bg.nought}"
-          },
-          "defaultAlt": {
-            "$type": "color",
-            "$value": "{modes.color.generic.bg.extreme}",
-            "$description": "bg for contextual message comp"
-          },
-          "default-horizontal": {
-            "$type": "color",
-            "$value": "{primitives.colors.lightAiH}"
-          },
-          "default-vertical": {
-            "$type": "color",
-            "$value": "{primitives.colors.lightAiV}"
-          }
-        },
-        "generic": {
-          "default": {
-            "$type": "color",
-            "$value": "{primitives.colors.petrol}"
-          }
-        },
         "content": {
           "withDefault": {
             "$type": "color",
@@ -1342,6 +1342,13 @@
             "$type": "color",
             "$value": "{modes.color.generic.content.firm}",
             "$description": "For readonly filled pill text"
+          }
+        },
+        "important": {
+          "default": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.purple.500}",
+            "$description": "For tile status keylines to show if something is of high importance."
           }
         },
         "info": {
@@ -1460,13 +1467,6 @@
           "text": {
             "$type": "color",
             "$value": "{primitives.colors.blush}"
-          }
-        },
-        "important": {
-          "default": {
-            "$type": "color",
-            "$value": "{primitives.colors.supplementary.purple.500}",
-            "$description": "For tile status keylines to show if something is of high importance."
           }
         },
         "neutral": {

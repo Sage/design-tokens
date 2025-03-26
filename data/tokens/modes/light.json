@@ -1406,6 +1406,13 @@
             "$description": "For readonly filled pill text"
           }
         },
+        "important": {
+          "default": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.purple.400}",
+            "$description": "For tile status keylines to show if something is of high importance."
+          }
+        },
         "info": {
           "default": {
             "$type": "color",
@@ -1478,13 +1485,6 @@
               "$value": "{modes.color.status.info.frozenglobal.default}",
               "$description": "used on global message bg"
             }
-          }
-        },
-        "important": {
-          "default": {
-            "$type": "color",
-            "$value": "{primitives.colors.supplementary.purple.400}",
-            "$description": "For tile status keylines to show if something is of high importance."
           }
         },
         "negative": {
