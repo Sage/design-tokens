@@ -997,12 +997,7 @@
           "defaultAlt": {
             "$type": "color",
             "$value": "{modes.color.generic.bg.faint}",
-            "$description": "active bg for nav items"
-          },
-          "withActive": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.extreme}",
-            "$description": "text and icons on top of active bgs in nav contexts"
+            "$description": "default bg for left nav container"
           },
           "hover": {
             "$extensions": {
@@ -1018,14 +1013,19 @@
             "$value": "{primitives.colors.black}",
             "$description": "hover bg for nav items"
           },
-          "withHover": {
+          "withActive": {
             "$type": "color",
             "$value": "{modes.color.generic.content.extreme}",
-            "$description": "hover bg for nav items"
+            "$description": "text and icons on top of active bgs in nav contexts"
           },
           "withDefault": {
             "$type": "color",
             "$value": "{modes.color.generic.content.harsh}",
+            "$description": "hover bg for nav items"
+          },
+          "withHover": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.extreme}",
             "$description": "hover bg for nav items"
           }
         },

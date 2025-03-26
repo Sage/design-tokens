@@ -970,7 +970,7 @@
           "defaultAlt": {
             "$type": "color",
             "$value": "{modes.color.generic.bg.moderate}",
-            "$description": "active bg for nav items"
+            "$description": "default bg for left nav container"
           },
           "hover": {
             "$extensions": {
@@ -991,14 +991,14 @@
             "$value": "{modes.color.generic.content.extreme}",
             "$description": "text and icons on top of active bgs in nav contexts"
           },
-          "withHover": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.extreme}",
-            "$description": "hover bg for nav items"
-          },
           "withDefault": {
             "$type": "color",
             "$value": "{modes.color.generic.content.harsh}",
+            "$description": "hover bg for nav items"
+          },
+          "withHover": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.extreme}",
             "$description": "hover bg for nav items"
           }
         },
