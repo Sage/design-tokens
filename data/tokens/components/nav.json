@@ -427,93 +427,133 @@
         }
       },
       "leftnav": {
-        "item": {
-          "parent": {
-            "vertical": {
-              "x": {
+        "container": {
+          "x": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "horizontal padding on sticky quick actions header"
+            }
+          },
+          "y": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XS}",
+              "$description": "bottom padding on sticky quick actions header"
+            }
+          },
+          "yg": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "vertical gap betweenparent items"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XS}",
+              "$description": "vertical gap between child and grandchild items"
+            }
+          }
+        },
+        "parentitem": {
+          "vertical": {
+            "x": {
+              "M": {
                 "$type": "spacing",
                 "$value": "{global.space.micro.S}",
                 "$description": "horizontal padding on stacked parent items"
-              },
-              "y": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.S}",
-                "$description": "vertical padding on stacked parent items"
-              },
-              "yg": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.S}",
-                "$description": "vertical gap on stacked parent items"
               }
             },
-            "horizontal": {
-              "x": {
-                "$type": "spacing",
-                "$value": "{global.space.macro.XXXS}",
-                "$description": "horizontal padding on stacked parent items"
-              },
-              "xg": {
+            "y": {
+              "M": {
                 "$type": "spacing",
                 "$value": "{global.space.micro.S}",
-                "$description": "vertical gap on stacked parent items"
-              },
-              "y": {
-                "$type": "spacing",
-                "$value": "{global.space.macro.XXXS}",
                 "$description": "vertical padding on stacked parent items"
-              },
-              "yg": {
+              }
+            },
+            "yg": {
+              "M": {
                 "$type": "spacing",
                 "$value": "{global.space.micro.S}",
                 "$description": "vertical gap on stacked parent items"
               }
             }
           },
-          "child": {
+          "horizontal": {
             "x": {
+              "M": {
+                "$type": "spacing",
+                "$value": "{global.space.macro.XXXS}",
+                "$description": "horizontal padding on stacked parent items"
+              }
+            },
+            "xg": {
+              "M": {
+                "$type": "spacing",
+                "$value": "{global.space.micro.S}",
+                "$description": "vertical gap on stacked parent items"
+              }
+            },
+            "y": {
+              "M": {
+                "$type": "spacing",
+                "$value": "{global.space.macro.XXXS}",
+                "$description": "vertical padding on stacked parent items"
+              }
+            },
+            "yg": {
+              "M": {
+                "$type": "spacing",
+                "$value": "{global.space.micro.S}",
+                "$description": "vertical gap on stacked parent items"
+              }
+            }
+          }
+        },
+        "childitem": {
+          "x": {
+            "M": {
               "$type": "spacing",
               "$value": "{global.space.macro.XXXS}",
               "$description": "horizontal padding on child items"
-            },
-            "xg": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "gap spacing on child items between pills and accordion chevrons"
-            },
-            "y": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "vertical padding on child items"
             }
           },
-          "grandchild": {
-            "x": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "horizontal padding on child items"
-            },
-            "xg": {
+          "xg": {
+            "M": {
               "$type": "spacing",
               "$value": "{global.space.macro.XXXS}",
               "$description": "gap spacing on child items between pills and accordion chevrons"
-            },
-            "y": {
+            }
+          },
+          "y": {
+            "M": {
               "$type": "spacing",
               "$value": "{global.space.macro.XXXS}",
               "$description": "vertical padding on child items"
             }
           }
         },
-        "stickyheader": {
+        "grandchilditem": {
           "x": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "horizontal padding on sticky quick actions header"
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "horizontal padding on child items"
+            }
+          },
+          "xg": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "gap spacing on child items between pills and accordion chevrons"
+            }
           },
           "y": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "bottom padding on sticky quick actions header"
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "vertical padding on child items"
+            }
           }
         }
       }
