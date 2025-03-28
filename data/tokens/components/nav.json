@@ -70,6 +70,11 @@
         "container": {
           "bg-default": {
             "$type": "color",
+            "$value": "{modes.color.generic.bg.extreme}",
+            "$description": "bg of of horizontal nav variant that launches the left nav"
+          },
+          "bg-defaultAlt": {
+            "$type": "color",
             "$value": "{modes.color.generic.bg.moderate}",
             "$description": "bg of the parent container"
           },
@@ -436,6 +441,11 @@
             }
           },
           "y": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXS}",
+              "$description": "top and bottom padding on sticky header for small screens"
+            },
             "M": {
               "$type": "spacing",
               "$value": "{global.space.macro.XS}",
