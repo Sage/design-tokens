@@ -229,7 +229,7 @@
                   "type": "mix",
                   "value": "0.24",
                   "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore} "
+                  "color": "{modes.color.modifier.contrastMore}"
                 }
               }
             },
@@ -243,7 +243,7 @@
                   "type": "mix",
                   "value": "0.32",
                   "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore} "
+                  "color": "{modes.color.modifier.contrastMore}"
                 }
               }
             },
@@ -257,7 +257,7 @@
                   "type": "mix",
                   "value": "0.40",
                   "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore} "
+                  "color": "{modes.color.modifier.contrastMore}"
                 }
               }
             },
@@ -393,7 +393,7 @@
                   "type": "mix",
                   "value": "0.08",
                   "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore} "
+                  "color": "{modes.color.modifier.contrastMore}"
                 }
               }
             },
@@ -408,7 +408,7 @@
                   "type": "mix",
                   "value": "0.16",
                   "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore} "
+                  "color": "{modes.color.modifier.contrastMore}"
                 }
               }
             },
@@ -437,7 +437,7 @@
                   "type": "mix",
                   "value": "0.50",
                   "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore} "
+                  "color": "{modes.color.modifier.contrastMore}"
                 }
               }
             },
@@ -537,7 +537,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "value": "{modes.color.modifiers.button.hover}",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -557,7 +557,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{modes.color.modifiers.button.hoverAlt} ",
+                  "value": "{modes.color.modifiers.button.hoverAlt}",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -601,7 +601,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{modes.color.modifiers.button.hoverAlt} ",
+                  "value": "{modes.color.modifiers.button.hoverAlt}",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -711,7 +711,7 @@
           "iconAlt": {
             "$type": "color",
             "$value": "{modes.color.generic.content.moderate}",
-            "$description": "Readonly icon inside form inputs. "
+            "$description": "Readonly icon inside form inputs."
           },
           "frozen": {
             "defaultAlt": {
@@ -721,7 +721,7 @@
                     "type": "mix",
                     "value": "0.88",
                     "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess} "
+                    "color": "{modes.color.modifier.contrastLess}"
                   }
                 }
               },
@@ -752,7 +752,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "{modes.color.modifiers.button.activeAlt} ",
+                    "value": "{modes.color.modifiers.button.activeAlt}",
                     "space": "lch"
                   }
                 }
@@ -783,7 +783,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "{modes.color.modifiers.button.hoverAlt} ",
+                    "value": "{modes.color.modifiers.button.hoverAlt}",
                     "space": "lch"
                   }
                 }
@@ -814,7 +814,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "{modes.color.modifiers.button.activeAlt} ",
+                    "value": "{modes.color.modifiers.button.activeAlt}",
                     "space": "lch"
                   }
                 }
@@ -882,7 +882,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "{modes.color.modifiers.button.hover} ",
+                    "value": "{modes.color.modifiers.button.hover}",
                     "space": "lch"
                   }
                 }
@@ -974,13 +974,68 @@
             }
           }
         },
+        "nav": {
+          "active": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.45",
+                  "space": "lch"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{primitives.colors.black}",
+            "$description": "active bg for nav items"
+          },
+          "default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.bg.nought}",
+            "$description": "default bg for global nav"
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{modes.color.generic.bg.faint}",
+            "$description": "default bg for left nav container"
+          },
+          "hover": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{modes.color.modifiers.button.hoverAlt}",
+                  "space": "lch"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{primitives.colors.black}",
+            "$description": "hover bg for nav items"
+          },
+          "withActive": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.extreme}",
+            "$description": "text and icons on top of active bgs in nav contexts"
+          },
+          "withDefault": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.harsh}",
+            "$description": "hover bg for nav items"
+          },
+          "withHover": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.extreme}",
+            "$description": "hover bg for nav items"
+          }
+        },
         "primary": {
           "active": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{modes.color.modifiers.button.active} ",
+                  "value": "{modes.color.modifiers.button.active}",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1013,7 +1068,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "{modes.color.modifiers.button.hover} ",
+                  "value": "{modes.color.modifiers.button.hover}",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1055,7 +1110,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "{modes.color.modifiers.button.active} ",
+                    "value": "{modes.color.modifiers.button.active}",
                     "space": "lch",
                     "color": "{modes.color.modifier.contrastMore}"
                   }
@@ -1088,7 +1143,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "{modes.color.modifiers.button.hover} ",
+                    "value": "{modes.color.modifiers.button.hover}",
                     "space": "lch",
                     "color": "{modes.color.modifier.contrastMore}"
                   }
@@ -1284,7 +1339,7 @@
                   "type": "mix",
                   "value": "0.10",
                   "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore} "
+                  "color": "{modes.color.modifier.contrastMore}"
                 }
               }
             },
@@ -1302,7 +1357,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "{modes.color.modifiers.button.hover} ",
+                    "value": "{modes.color.modifiers.button.hover}",
                     "space": "lch",
                     "color": "{modes.color.modifier.contrastLess} "
                   }
@@ -1351,6 +1406,13 @@
             "$description": "For readonly filled pill text"
           }
         },
+        "important": {
+          "default": {
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.purple.400}",
+            "$description": "For tile status keylines to show if something is of high importance."
+          }
+        },
         "info": {
           "default": {
             "$type": "color",
@@ -1364,7 +1426,7 @@
                   "type": "mix",
                   "value": "0.9",
                   "space": "lch",
-                  "color": "{modes.color.modifier.contrastLess} "
+                  "color": "{modes.color.modifier.contrastLess}"
                 }
               }
             },
@@ -1413,7 +1475,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "mix",
-                    "value": "{modes.color.modifiers.button.hover} ",
+                    "value": "{modes.color.modifiers.button.hover}",
                     "space": "lch",
                     "color": "{modes.color.modifier.contrastLess} "
                   }
@@ -1423,13 +1485,6 @@
               "$value": "{modes.color.status.info.frozenglobal.default}",
               "$description": "used on global message bg"
             }
-          }
-        },
-        "important": {
-          "default": {
-            "$type": "color",
-            "$value": "{primitives.colors.supplementary.purple.400}",
-            "$description": "For tile status keylines to show if something is of high importance."
           }
         },
         "negative": {
@@ -1475,7 +1530,7 @@
                   "type": "mix",
                   "value": "{modes.color.modifiers.button.hover}",
                   "space": "lch",
-                  "color": "{modes.color.status.negative.default} "
+                  "color": "{modes.color.status.negative.default}"
                 }
               }
             },
@@ -1565,7 +1620,7 @@
                     "type": "mix",
                     "value": "0.47",
                     "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore} "
+                    "color": "{modes.color.modifier.contrastMore}"
                   }
                 }
               },
