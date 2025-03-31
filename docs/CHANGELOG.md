@@ -1,3 +1,13 @@
+## [12.0.0](https://github.com/Sage/design-tokens/compare/v11.3.0...v12.0.0) (2025-03-31)
+
+### ⚠ BREAKING CHANGES
+
+* **typography:** restructuring typography body tokens to allow for regular and medium font weights to be supported (#468)
+
+### Features
+
+* **typography:** restructuring typography body tokens to allow for regular and medium font weights to be supported ([#468](https://github.com/Sage/design-tokens/issues/468)) ([b89babc](https://github.com/Sage/design-tokens/commit/b89babcebf2bc5b0a839ae855ef557b9a8006a3d))
+
 ## [11.3.0](https://github.com/Sage/design-tokens/compare/v11.2.0...v11.3.0) (2025-03-28)
 
 ### Features
