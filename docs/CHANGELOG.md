@@ -1,3 +1,9 @@
+## [12.1.0](https://github.com/Sage/design-tokens/compare/v12.0.1...v12.1.0) (2025-04-02)
+
+### Features
+
+* **Left Nav:** add top margin token for outer containers in left nav ([#472](https://github.com/Sage/design-tokens/issues/472)) ([5a1c80a](https://github.com/Sage/design-tokens/commit/5a1c80a3c2424db6e2c6bb9a5dceb9fa8f5a86ff))
+
 ## [12.0.1](https://github.com/Sage/design-tokens/compare/v12.0.0...v12.0.1) (2025-04-02)
 
 ### Bug Fixes
