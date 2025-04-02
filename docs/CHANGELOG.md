@@ -1,3 +1,9 @@
+## [12.0.1](https://github.com/Sage/design-tokens/compare/v12.0.0...v12.0.1) (2025-04-02)
+
+### Bug Fixes
+
+* **Leftnav:** fixing left nav colors to pass contrast ratios ([#470](https://github.com/Sage/design-tokens/issues/470)) ([a9539d1](https://github.com/Sage/design-tokens/commit/a9539d1ebd0ac2822a687959803990a098ae9664))
+
 ## [12.0.0](https://github.com/Sage/design-tokens/compare/v11.3.0...v12.0.0) (2025-03-31)
 
 ### ⚠ BREAKING CHANGES
