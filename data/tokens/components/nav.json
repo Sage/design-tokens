@@ -444,12 +444,12 @@
             "S": {
               "$type": "spacing",
               "$value": "{global.space.macro.XXS}",
-              "$description": "top and bottom padding on sticky header for small screens"
+              "$description": "sticky header top and bottom padding"
             },
             "M": {
               "$type": "spacing",
               "$value": "{global.space.macro.XS}",
-              "$description": "vertical padding on sticky quick actions header at larger screen sizes"
+              "$description": "vertical padding inside parent and child containers"
             }
           },
           "yg": {
@@ -462,6 +462,15 @@
               "$type": "spacing",
               "$value": "{global.space.macro.XS}",
               "$description": "vertical gap between child and grandchild items"
+            }
+          },
+          "outer": {
+            "y": {
+              "M": {
+                "$type": "spacing",
+                "$value": "{global.space.macro.ML} * 2",
+                "$description": "margin outside of item containers to make items show underneath sticky headers"
+              }
             }
           }
         },
