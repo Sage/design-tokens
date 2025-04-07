@@ -1,3 +1,9 @@
+## [12.2.0](https://github.com/Sage/design-tokens/compare/v12.1.0...v12.2.0) (2025-04-07)
+
+### Features
+
+* **left navigation:** add vertical gap tokens tokens for vertical nav and fix grandchild indentation padding. ([dfab733](https://github.com/Sage/design-tokens/commit/dfab7339b79b63531c94187bdd292d480652d5be))
+
 ## [12.1.0](https://github.com/Sage/design-tokens/compare/v12.0.1...v12.1.0) (2025-04-02)
 
 ### Features
