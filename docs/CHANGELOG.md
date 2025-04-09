@@ -1,3 +1,9 @@
+## [12.3.0](https://github.com/Sage/design-tokens/compare/v12.2.0...v12.3.0) (2025-04-09)
+
+### Features
+
+* **status color and profile selector:** Additions  ([#476](https://github.com/Sage/design-tokens/issues/476)) ([f2e65e7](https://github.com/Sage/design-tokens/commit/f2e65e793e6be4b9038dc5ecbfc63b81d1fd55d5))
+
 ## [12.2.0](https://github.com/Sage/design-tokens/compare/v12.1.0...v12.2.0) (2025-04-07)
 
 ### Features
