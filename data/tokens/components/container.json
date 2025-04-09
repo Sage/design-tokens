@@ -552,23 +552,6 @@
         "$value": "{global.radius.none}",
         "$description": "Card select (inner adjacent corners), Subscription tile footer top corners"
       },
-      "card": {
-        "moderate": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.L}",
-          "$description": "Card (less rounded)"
-        },
-        "curved": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.XL}",
-          "$description": "Card (more rounded)"
-        },
-        "sweeping": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.XXL}",
-          "$description": "Card largest rounded type"
-        }
-      },
       "carouselslide": {
         "$type": "borderRadius",
         "$value": "{global.radius.container.L}",
@@ -578,13 +561,6 @@
         "$type": "borderRadius",
         "$value": "{global.radius.container.L}",
         "$description": "Color picker container radius"
-      },
-      "blockquote": {
-        "bar": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.circle}",
-          "$description": "radius for blockquote bar"
-        }
       },
       "contacttile": {
         "$type": "borderRadius",
@@ -615,6 +591,16 @@
         "$value": "{global.radius.container.M}",
         "$description": "Note"
       },
+      "nudge": {
+        "$type": "borderRadius",
+        "$value": "{global.radius.container.L}",
+        "$description": "nudge radius"
+      },
+      "profileselector": {
+        "$type": "borderRadius",
+        "$value": "{global.radius.container.M}",
+        "$description": "Profile selector list container."
+      },
       "scrollbar": {
         "$type": "borderRadius",
         "$value": "{global.radius.circle}",
@@ -624,6 +610,30 @@
         "$type": "borderRadius",
         "$value": "{global.radius.container.M}",
         "$description": "Text editor (footer bottom corners) "
+      },
+      "blockquote": {
+        "bar": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.circle}",
+          "$description": "radius for blockquote bar"
+        }
+      },
+      "card": {
+        "moderate": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.L}",
+          "$description": "Card (less rounded)"
+        },
+        "curved": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XL}",
+          "$description": "Card (more rounded)"
+        },
+        "sweeping": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.container.XXL}",
+          "$description": "Card largest rounded type"
+        }
       },
       "tile": {
         "moderate": {
@@ -657,11 +667,6 @@
           "$type": "borderRadius",
           "$value": "{global.radius.container.XXL}"
         }
-      },
-      "nudge": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.L}",
-        "$description": "nudge radius"
       }
     },
     "space": {
@@ -1369,23 +1374,6 @@
       }
     },
     "boxshadow": {
-      "card": {
-        "enabled": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.enabled}",
-          "$description": "Card (enabled)"
-        },
-        "hover": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.hover}",
-          "$description": "Card (hover state)"
-        },
-        "drag": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.drag}",
-          "$description": "Card (drag state)"
-        }
-      },
       "carousel": {
         "$type": "boxShadow",
         "$value": "{global.boxshadow.container.distant}",
@@ -1406,6 +1394,11 @@
         "$value": "{global.boxshadow.container.distant}",
         "$description": "File preview"
       },
+      "nudge": {
+        "$type": "boxShadow",
+        "$value": "{global.boxshadow.container.far}",
+        "$description": "nudge shadow"
+      },
       "sidebar": {
         "$type": "boxShadow",
         "$value": "{global.boxshadow.container.distant}",
@@ -1416,10 +1409,22 @@
         "$value": "{global.boxshadow.container.sticky-footer}",
         "$description": "Sticky footer in Dialog, Drawer, Sidebar."
       },
-      "nudge": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.far}",
-        "$description": "nudge shadow"
+      "card": {
+        "enabled": {
+          "$type": "boxShadow",
+          "$value": "{global.boxshadow.interactive.enabled}",
+          "$description": "Card (enabled)"
+        },
+        "hover": {
+          "$type": "boxShadow",
+          "$value": "{global.boxshadow.interactive.hover}",
+          "$description": "Card (hover state)"
+        },
+        "drag": {
+          "$type": "boxShadow",
+          "$value": "{global.boxshadow.interactive.drag}",
+          "$description": "Card (drag state)"
+        }
       }
     },
     "borderwidth": {
@@ -1462,6 +1467,16 @@
         "$type": "borderWidth",
         "$value": "{global.borderwidth.XS}",
         "$description": "Note "
+      },
+      "profileselector": {
+        "$type": "borderWidth",
+        "$value": "{global.borderwidth.XS}",
+        "$description": "Profile selector list container."
+      },
+      "nudge": {
+        "$type": "borderWidth",
+        "$value": "{global.borderwidth.XL}",
+        "$description": "nudge AI message borders "
       },
       "sidebar": {
         "$type": "borderWidth",
@@ -1533,11 +1548,6 @@
           "$value": "{global.borderwidth.XS}",
           "$description": "Tile select (enabled tile)"
         }
-      },
-      "nudge": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XL}",
-        "$description": "nudge AI message borders "
       }
     },
     "opacity": {
