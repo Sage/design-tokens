@@ -1,3 +1,9 @@
+## [12.4.0](https://github.com/Sage/design-tokens/compare/v12.3.0...v12.4.0) (2025-04-15)
+
+### Features
+
+* **Subtle Button:** add subtle icon only padding tokens ([#478](https://github.com/Sage/design-tokens/issues/478)) ([23f8108](https://github.com/Sage/design-tokens/commit/23f8108c1a629792c82ba2995b351b163bd59d18))
+
 ## [12.3.0](https://github.com/Sage/design-tokens/compare/v12.2.0...v12.3.0) (2025-04-09)
 
 ### Features
