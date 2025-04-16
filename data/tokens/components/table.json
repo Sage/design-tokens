@@ -140,10 +140,15 @@
         "$value": "{global.boxshadow.container.far}"
       },
       "row": {
+        "draggable": {
+          "$type": "boxShadow",
+          "$value": "{global.boxshadow.interactive.hover}",
+          "$description": "show on hover of a draggable row"
+        },
         "dragging": {
           "$type": "boxShadow",
           "$value": "{global.boxshadow.interactive.drag}",
-          "$description": "Card (drag state)"
+          "$description": "dragging state for a table row"
         }
       }
     },
