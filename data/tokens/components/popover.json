@@ -24,38 +24,36 @@
           "$description": "REF'D IN FORM. Menu item min height."
         }
       },
-      "container": {
-        "S": {
-          "minwidth": {
+      "menu": {
+        "minwidth": {
+          "S": {
             "$type": "sizing",
             "$value": "{container.size.responsive.M} / 2",
             "$description": "minwidth of small size popover menu container"
           },
-          "maxwidth": {
-            "$type": "sizing",
-            "$value": "{container.size.responsive.M}",
-            "$description": "maxwidth of small size popover menu container"
-          }
-        },
-        "M": {
-          "minwidth": {
+          "M": {
             "$type": "sizing",
             "$value": "{container.size.responsive.XS}",
             "$description": "minwidth of medium size popover menu container"
           },
-          "maxwidth": {
-            "$type": "sizing",
-            "$value": "{container.size.responsive.L}",
-            "$description": "maxwidth of medium size popover menu container"
-          }
-        },
-        "L": {
-          "minwidth": {
+          "L": {
             "$type": "sizing",
             "$value": "{container.size.responsive.S}",
             "$description": "minwidth of large size popover menu container"
+          }
+        },
+        "maxwidth": {
+          "S": {
+            "$type": "sizing",
+            "$value": "{container.size.responsive.M}",
+            "$description": "maxwidth of small size popover menu container"
           },
-          "maxwidth": {
+          "M": {
+            "$type": "sizing",
+            "$value": "{container.size.responsive.L}",
+            "$description": "maxwidth of medium size popover menu container"
+          },
+          "L": {
             "$type": "sizing",
             "$value": "{container.size.responsive.XL}",
             "$description": "maxwidth of large size popover menu container"
