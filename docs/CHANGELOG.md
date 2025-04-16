@@ -1,3 +1,9 @@
+## [12.5.1](https://github.com/Sage/design-tokens/compare/v12.5.0...v12.5.1) (2025-04-16)
+
+### Bug Fixes
+
+* **typography:** updating typography based on user testing. Primitive… ([#477](https://github.com/Sage/design-tokens/issues/477)) ([7ca90b1](https://github.com/Sage/design-tokens/commit/7ca90b1ea1f1ee38fec60086a68cf1e7144e8f67))
+
 ## [12.5.0](https://github.com/Sage/design-tokens/compare/v12.4.0...v12.5.0) (2025-04-16)
 
 ### Features
