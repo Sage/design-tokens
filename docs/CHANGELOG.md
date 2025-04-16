@@ -1,3 +1,9 @@
+## [12.5.0](https://github.com/Sage/design-tokens/compare/v12.4.0...v12.5.0) (2025-04-16)
+
+### Features
+
+* **Text Editor:** Add 4px border-radius token for ai container with with draft with copilot container. ([f1fc703](https://github.com/Sage/design-tokens/commit/f1fc70398d48f93a41da041e3c8ef66691597a60))
+
 ## [12.4.0](https://github.com/Sage/design-tokens/compare/v12.3.0...v12.4.0) (2025-04-15)
 
 ### Features
