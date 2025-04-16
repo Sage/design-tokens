@@ -1,3 +1,9 @@
+## [12.5.2](https://github.com/Sage/design-tokens/compare/v12.5.1...v12.5.2) (2025-04-16)
+
+### Bug Fixes
+
+* **Typography:** adjusting profile typography to be larger in size fo… ([#482](https://github.com/Sage/design-tokens/issues/482)) ([359ad2d](https://github.com/Sage/design-tokens/commit/359ad2d2be0c96fbdbaafab84af935217abecdeb))
+
 ## [12.5.1](https://github.com/Sage/design-tokens/compare/v12.5.0...v12.5.1) (2025-04-16)
 
 ### Bug Fixes
