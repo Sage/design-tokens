@@ -23,6 +23,42 @@
           "$value": "{global.size.macro.L}",
           "$description": "REF'D IN FORM. Menu item min height."
         }
+      },
+      "menu": {
+        "minwidth": {
+          "S": {
+            "$type": "sizing",
+            "$value": "{container.size.responsive.M} / 2",
+            "$description": "minwidth of small size popover menu container"
+          },
+          "M": {
+            "$type": "sizing",
+            "$value": "{container.size.responsive.XS}",
+            "$description": "minwidth of medium size popover menu container"
+          },
+          "L": {
+            "$type": "sizing",
+            "$value": "{container.size.responsive.S}",
+            "$description": "minwidth of large size popover menu container"
+          }
+        },
+        "maxwidth": {
+          "S": {
+            "$type": "sizing",
+            "$value": "{container.size.responsive.M}",
+            "$description": "maxwidth of small size popover menu container"
+          },
+          "M": {
+            "$type": "sizing",
+            "$value": "{container.size.responsive.L}",
+            "$description": "maxwidth of medium size popover menu container"
+          },
+          "L": {
+            "$type": "sizing",
+            "$value": "{container.size.responsive.XL}",
+            "$description": "maxwidth of large size popover menu container"
+          }
+        }
       }
     },
     "radius": {
