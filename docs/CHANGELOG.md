@@ -1,3 +1,9 @@
+## [12.5.3](https://github.com/Sage/design-tokens/compare/v12.5.2...v12.5.3) (2025-04-17)
+
+### Bug Fixes
+
+* **Primitive Shadows:** Fix a broken shadow token for when we want to override shadows to be set to 'none'. ([#484](https://github.com/Sage/design-tokens/issues/484)) ([32f2195](https://github.com/Sage/design-tokens/commit/32f21953890f8840e3c2c093679a3e1abe4ea209))
+
 ## [12.5.2](https://github.com/Sage/design-tokens/compare/v12.5.1...v12.5.2) (2025-04-16)
 
 ### Bug Fixes
