@@ -1,3 +1,9 @@
+## [12.6.0](https://github.com/Sage/design-tokens/compare/v12.5.3...v12.6.0) (2025-04-22)
+
+### Features
+
+* **table:** Add icon size tokens for XS, S, L and XL. ([#486](https://github.com/Sage/design-tokens/issues/486)) ([37e2043](https://github.com/Sage/design-tokens/commit/37e204394e345628f250e47c681a21d82537b1f8))
+
 ## [12.5.3](https://github.com/Sage/design-tokens/compare/v12.5.2...v12.5.3) (2025-04-17)
 
 ### Bug Fixes
