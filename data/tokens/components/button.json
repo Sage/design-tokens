@@ -6,6 +6,11 @@
         "$value": "{global.size.micro.XXS}",
         "$description": "Split button (divider width)"
       },
+      "XS": {
+        "$type": "sizing",
+        "$value": "{global.size.macro.XS}",
+        "$description": "min-height on XS Buttons"
+      },
       "S": {
         "$type": "sizing",
         "$value": "{global.size.macro.S}",
@@ -1020,6 +1025,11 @@
       "none": {
         "$type": "borderRadius",
         "$value": "{global.radius.none}"
+      },
+      "XS": {
+        "$type": "borderRadius",
+        "$value": "{global.radius.interactive.M} + {global.radius.interactive.S}",
+        "$description": "Consumed within XS buttons only in table context."
       },
       "S": {
         "$type": "borderRadius",
