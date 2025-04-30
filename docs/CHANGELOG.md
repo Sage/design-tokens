@@ -1,3 +1,9 @@
+## [12.8.0](https://github.com/Sage/design-tokens/compare/v12.7.0...v12.8.0) (2025-04-30)
+
+### Features
+
+* **Secondary Navigation:** Add tokens for secondary horizontal navigation and modal navigation options. ([09ecaa3](https://github.com/Sage/design-tokens/commit/09ecaa3001038e67e8678919712852bca82afdd0))
+
 ## [12.7.0](https://github.com/Sage/design-tokens/compare/v12.6.0...v12.7.0) (2025-04-30)
 
 ### Features
