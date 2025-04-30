@@ -1,3 +1,9 @@
+## [12.7.0](https://github.com/Sage/design-tokens/compare/v12.6.0...v12.7.0) (2025-04-30)
+
+### Features
+
+* **Buttons:** add XS button tokens for use on tables ([#487](https://github.com/Sage/design-tokens/issues/487)) ([7460895](https://github.com/Sage/design-tokens/commit/74608958bbafb1781831bc38217dcf29fb4d29a0))
+
 ## [12.6.0](https://github.com/Sage/design-tokens/compare/v12.5.3...v12.6.0) (2025-04-22)
 
 ### Features
