@@ -6,6 +6,11 @@
         "$value": "{global.size.micro.XXS}",
         "$description": "Split button (divider width)"
       },
+      "XS": {
+        "$type": "sizing",
+        "$value": "{global.size.macro.XS}",
+        "$description": "min-height on XS Buttons"
+      },
       "S": {
         "$type": "sizing",
         "$value": "{global.size.macro.S}",
@@ -293,6 +298,11 @@
       },
       "secondary": {
         "x": {
+          "XS": {
+            "$type": "spacing",
+            "$value": "{global.space.macro.XXXS}",
+            "$description": "Left and right padding on XS table buttons"
+          },
           "S": {
             "$type": "spacing",
             "$value": "{global.space.micro.XXL}",
@@ -307,6 +317,28 @@
             "$type": "spacing",
             "$value": "{global.space.macro.S}",
             "$description": "Left and right padding on large buttons"
+          }
+        },
+        "y": {
+          "XS": {
+            "$type": "spacing",
+            "$value": "({global.space.macro.XXXS} / 4) - 0.5",
+            "$description": "top and bottom padding on XS table buttons"
+          },
+          "S": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.S}",
+            "$description": "Bottom and top padding on small buttons."
+          },
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.L}",
+            "$description": "Top and bottom padding on medium buttons "
+          },
+          "L": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.XL} - 0.5",
+            "$description": "Top and bottom padding on Large buttons "
           }
         },
         "xg": {
@@ -324,23 +356,11 @@
             "$type": "spacing",
             "$value": "{global.space.macro.XXXS}",
             "$description": "Item spacing inside buttons"
-          }
-        },
-        "y": {
-          "S": {
+          },
+          "XS": {
             "$type": "spacing",
             "$value": "{global.space.micro.S}",
-            "$description": "Bottom and top padding on small buttons."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Top and bottom padding on medium buttons "
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XL} - 0.5",
-            "$description": "Top and bottom padding on Large buttons "
+            "$description": "Item spacing inside XS buttons"
           }
         },
         "icononly": {
@@ -363,42 +383,13 @@
           }
         }
       },
-      "subtle": {
-        "x": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "left and right padding on subtle buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "left and right padding on subtle buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "left and right padding on subtle buttons"
-          }
-        },
-        "xg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Item spacing inside buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Item spacing inside buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Item spacing inside buttons"
-          }
-        },
+      "tertiary": {
         "y": {
+          "XS": {
+            "$type": "spacing",
+            "$value": "({global.space.macro.XXXS} / 4) - 0.5",
+            "$description": "top and bottom padding on XS table buttons"
+          },
           "S": {
             "$type": "spacing",
             "$value": "{global.space.micro.S}",
@@ -415,28 +406,12 @@
             "$description": "Top and bottom padding on Large buttons "
           }
         },
-        "icononly": {
-          "x": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Left and right padding on icon-only S size subtle buttons"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Left and right padding on icon-only M size subtle buttons"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Left and right padding on icon-only L size subtle buttons"
-            }
-          }
-        }
-      },
-      "tertiary": {
         "x": {
+          "XS": {
+            "$type": "spacing",
+            "$value": "{global.space.macro.XXXS}",
+            "$description": "Left and right padding on XS table buttons"
+          },
           "S": {
             "$type": "spacing",
             "$value": "{global.space.macro.XXS}",
@@ -454,37 +429,25 @@
           }
         },
         "xg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Item spacing inside buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Item spacing inside buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Item spacing inside buttons"
-          }
-        },
-        "y": {
-          "S": {
+          "XS": {
             "$type": "spacing",
             "$value": "{global.space.micro.S}",
-            "$description": "Bottom and top padding on small buttons."
+            "$description": "Item spacing inside XS buttons"
+          },
+          "S": {
+            "$type": "spacing",
+            "$value": "{global.space.macro.XXXS}",
+            "$description": "Item spacing inside buttons"
           },
           "M": {
             "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Top and bottom padding on medium buttons "
+            "$value": "{global.space.macro.XXXS}",
+            "$description": "Item spacing inside buttons"
           },
           "L": {
             "$type": "spacing",
-            "$value": "{global.space.micro.XL} - 0.5",
-            "$description": "Top and bottom padding on Large buttons "
+            "$value": "{global.space.macro.XXXS}",
+            "$description": "Item spacing inside buttons"
           }
         },
         "icononly": {
@@ -503,6 +466,93 @@
               "$type": "spacing",
               "$value": "{global.space.micro.S}",
               "$description": "Left and right padding on icon-only L size tertiary buttons"
+            }
+          }
+        }
+      },
+      "subtle": {
+        "y": {
+          "XS": {
+            "$type": "spacing",
+            "$value": "({global.space.macro.XXXS} / 4) - 0.5",
+            "$description": "top and bottom padding on XS table buttons"
+          },
+          "S": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.S}",
+            "$description": "Bottom and top padding on small buttons."
+          },
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.L}",
+            "$description": "Top and bottom padding on medium buttons "
+          },
+          "L": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.XL} - 0.5",
+            "$description": "Top and bottom padding on Large buttons "
+          }
+        },
+        "x": {
+          "XS": {
+            "$type": "spacing",
+            "$value": "{global.space.macro.XXXS}",
+            "$description": "Left and right padding on XS table buttons"
+          },
+          "S": {
+            "$type": "spacing",
+            "$value": "{global.space.macro.XXXS}",
+            "$description": "left and right padding on subtle buttons"
+          },
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.macro.XXXS}",
+            "$description": "left and right padding on subtle buttons"
+          },
+          "L": {
+            "$type": "spacing",
+            "$value": "{global.space.macro.XXXS}",
+            "$description": "left and right padding on subtle buttons"
+          }
+        },
+        "xg": {
+          "XS": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.S}",
+            "$description": "Item spacing inside XS buttons"
+          },
+          "S": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.S}",
+            "$description": "Item spacing inside buttons"
+          },
+          "M": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.S}",
+            "$description": "Item spacing inside buttons"
+          },
+          "L": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.S}",
+            "$description": "Item spacing inside buttons"
+          }
+        },
+        "icononly": {
+          "x": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Left and right padding on icon-only S size subtle buttons"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Left and right padding on icon-only M size subtle buttons"
+            },
+            "L": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Left and right padding on icon-only L size subtle buttons"
             }
           }
         }
@@ -551,7 +601,7 @@
           "y": {
             "XS": {
               "$type": "spacing",
-              "$value": "{global.space.micro.XS}-0.5",
+              "$value": "({global.space.macro.XXXS} / 4) - 0.5",
               "$description": "Top and bottom padding on toggle buttons "
             },
             "S": {
@@ -1064,6 +1114,33 @@
         }
       },
       "secondary": {
+        "XS": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.M} + {global.radius.interactive.S}",
+          "$description": "Consumed within XS buttons only in table context."
+        },
+        "S": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.L}",
+          "$description": "Buttons S (typical and destructive, and inc bar, split and multi),  Button toggle M (parent container)"
+        },
+        "M": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.XL}",
+          "$description": "Buttons  M (typical and destructive, and inc bar, split and multi),  Button toggle L (parent container), Button toggle M (parent container)"
+        },
+        "L": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.XXL}",
+          "$description": "large tertiary button"
+        }
+      },
+      "tertiary": {
+        "XS": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.M} + {global.radius.interactive.S}",
+          "$description": "Consumed within XS buttons only in table context."
+        },
         "S": {
           "$type": "borderRadius",
           "$value": "{global.radius.interactive.L}",
@@ -1081,6 +1158,11 @@
         }
       },
       "subtle": {
+        "XS": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.M} + {global.radius.interactive.S}",
+          "$description": "Consumed within XS buttons only in table context."
+        },
         "S": {
           "$type": "borderRadius",
           "$value": "{global.radius.interactive.L}",
@@ -1095,23 +1177,6 @@
           "$type": "borderRadius",
           "$value": "{global.radius.interactive.XXL}",
           "$description": "large subtle button"
-        }
-      },
-      "tertiary": {
-        "S": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.L}",
-          "$description": "Buttons S (typical and destructive, and inc bar, split and multi),  Button toggle M (parent container)"
-        },
-        "M": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XL}",
-          "$description": "Buttons  M (typical and destructive, and inc bar, split and multi),  Button toggle L (parent container), Button toggle M (parent container)"
-        },
-        "L": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XXL}",
-          "$description": "large tertiary button"
         }
       },
       "toggle": {
@@ -1217,6 +1282,10 @@
           }
         },
         "secondary": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.firm.S}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.adaptive.component.firm.S}"
@@ -1231,6 +1300,10 @@
           }
         },
         "subtle": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.firm.S}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.adaptive.component.firm.S}"
@@ -1245,6 +1318,10 @@
           }
         },
         "tertiary": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.firm.S}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.adaptive.component.firm.S}"
@@ -1275,6 +1352,10 @@
           }
         },
         "secondary": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.firm.S}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.responsive.component.firm.S}"
@@ -1289,6 +1370,10 @@
           }
         },
         "subtle": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.firm.S}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.responsive.component.firm.S}"
@@ -1303,6 +1388,10 @@
           }
         },
         "tertiary": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.firm.S}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.responsive.component.firm.S}"
