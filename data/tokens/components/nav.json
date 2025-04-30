@@ -111,12 +111,17 @@
           }
         }
       },
-      "topnav": {
+      "modal": {
         "container": {
           "bg-default": {
             "$type": "color",
             "$value": "{modes.color.generic.bg.nought}",
-            "$description": "bg of of horizontal nav variant that launches the left nav"
+            "$description": "bg of container holding stack of items in modal nav"
+          },
+          "bg-defaultAlt": {
+            "$type": "color",
+            "$value": "{modes.color.generic.backdrop.faint}",
+            "$description": "bg of the sticky header within modal"
           },
           "border-default": {
             "$type": "color",
@@ -151,17 +156,12 @@
           }
         }
       },
-      "modal": {
+      "topnav": {
         "container": {
           "bg-default": {
             "$type": "color",
             "$value": "{modes.color.generic.bg.nought}",
-            "$description": "bg of container holding stack of items in modal nav"
-          },
-          "bg-defaultAlt": {
-            "$type": "color",
-            "$value": "{modes.color.generic.backdrop.faint}",
-            "$description": "bg of the sticky header within modal"
+            "$description": "bg of of horizontal nav variant that launches the left nav"
           },
           "border-default": {
             "$type": "color",
@@ -391,22 +391,6 @@
           }
         }
       },
-      "topnav": {
-        "parent": {
-          "minheight": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M}",
-            "$description": "Min height of parent items across items in secondary top nav "
-          }
-        },
-        "child": {
-          "minheight": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M}",
-            "$description": "Min height of child items across items in secondary top nav "
-          }
-        }
-      },
       "modal": {
         "parent": {
           "minheight": {
@@ -420,6 +404,22 @@
             "$type": "sizing",
             "$value": "{global.size.macro.M}",
             "$description": "Min height of children items"
+          }
+        }
+      },
+      "topnav": {
+        "parent": {
+          "minheight": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.M}",
+            "$description": "Min height of parent items across items in secondary top nav "
+          }
+        },
+        "child": {
+          "minheight": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.M}",
+            "$description": "Min height of child items across items in secondary top nav "
           }
         }
       }
