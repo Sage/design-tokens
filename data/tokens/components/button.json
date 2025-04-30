@@ -1071,11 +1071,6 @@
         "$type": "borderRadius",
         "$value": "{global.radius.none}"
       },
-      "XS": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.M} + {global.radius.interactive.S}",
-        "$description": "Consumed within XS buttons only in table context."
-      },
       "S": {
         "$type": "borderRadius",
         "$value": "{global.radius.interactive.L}",
@@ -1119,6 +1114,33 @@
         }
       },
       "secondary": {
+        "XS": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.M} + {global.radius.interactive.S}",
+          "$description": "Consumed within XS buttons only in table context."
+        },
+        "S": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.L}",
+          "$description": "Buttons S (typical and destructive, and inc bar, split and multi),  Button toggle M (parent container)"
+        },
+        "M": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.XL}",
+          "$description": "Buttons  M (typical and destructive, and inc bar, split and multi),  Button toggle L (parent container), Button toggle M (parent container)"
+        },
+        "L": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.XXL}",
+          "$description": "large tertiary button"
+        }
+      },
+      "tertiary": {
+        "XS": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.M} + {global.radius.interactive.S}",
+          "$description": "Consumed within XS buttons only in table context."
+        },
         "S": {
           "$type": "borderRadius",
           "$value": "{global.radius.interactive.L}",
@@ -1136,6 +1158,11 @@
         }
       },
       "subtle": {
+        "XS": {
+          "$type": "borderRadius",
+          "$value": "{global.radius.interactive.M} + {global.radius.interactive.S}",
+          "$description": "Consumed within XS buttons only in table context."
+        },
         "S": {
           "$type": "borderRadius",
           "$value": "{global.radius.interactive.L}",
@@ -1150,23 +1177,6 @@
           "$type": "borderRadius",
           "$value": "{global.radius.interactive.XXL}",
           "$description": "large subtle button"
-        }
-      },
-      "tertiary": {
-        "S": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.L}",
-          "$description": "Buttons S (typical and destructive, and inc bar, split and multi),  Button toggle M (parent container)"
-        },
-        "M": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XL}",
-          "$description": "Buttons  M (typical and destructive, and inc bar, split and multi),  Button toggle L (parent container), Button toggle M (parent container)"
-        },
-        "L": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XXL}",
-          "$description": "large tertiary button"
         }
       },
       "toggle": {
