@@ -347,6 +347,22 @@
             "$description": "Min height of child items across items in secondary top nav "
           }
         }
+      },
+      "modal": {
+        "parent": {
+          "minheight": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.M}",
+            "$description": "Min height of parent items"
+          }
+        },
+        "child": {
+          "minheight": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.M}",
+            "$description": "Min height of children items"
+          }
+        }
       }
     },
     "space": {
@@ -719,6 +735,24 @@
               "$type": "spacing",
               "$value": "{global.space.macro.XXXS}",
               "$description": "vertical padding on stacked parent items"
+            }
+          }
+        }
+      },
+      "modal": {
+        "container": {
+          "x": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "left and right padding on modal small screen container across leftnav and horizontal"
+            }
+          },
+          "y": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XS}",
+              "$description": "top and bottom padding on modal small screen container across leftnav and horizontal"
             }
           }
         }
