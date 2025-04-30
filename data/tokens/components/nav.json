@@ -220,14 +220,14 @@
           "$description": "Radius on parent, child and grandchild items in left nav"
         }
       },
-      "topnav": {
+      "modal": {
         "menuitem": {
           "$type": "borderRadius",
           "$value": "{global.radius.interactive.M}",
           "$description": "Radius on parent, child and grandchild items in left nav"
         }
       },
-      "modal": {
+      "topnav": {
         "menuitem": {
           "$type": "borderRadius",
           "$value": "{global.radius.interactive.M}",
@@ -274,14 +274,14 @@
           "$description": "Dividers between sticky header and between parent menu and child menu."
         }
       },
-      "topnav": {
+      "modal": {
         "divider": {
           "$type": "borderWidth",
           "$value": "{global.borderwidth.XS}",
           "$description": "Dividers between sticky header and between parent menu and child menu."
         }
       },
-      "modal": {
+      "topnav": {
         "divider": {
           "$type": "borderWidth",
           "$value": "{global.borderwidth.XS}",
@@ -740,6 +740,36 @@
           }
         }
       },
+      "modal": {
+        "container": {
+          "x": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "left and right padding on modal small screen container across leftnav and horizontal"
+            }
+          },
+          "y": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXS}",
+              "$description": "Top and bottom padding on sticky header within nav modal used in small screens."
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XS}",
+              "$description": "top and bottom padding on modal small screen container across leftnav and horizontal"
+            }
+          },
+          "yg": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XS}",
+              "$description": "vertical gap between modal nav items"
+            }
+          }
+        }
+      },
       "topnav": {
         "container": {
           "x": {
@@ -794,36 +824,6 @@
               "$type": "spacing",
               "$value": "{global.space.macro.XXXS}",
               "$description": "vertical padding on stacked parent items"
-            }
-          }
-        }
-      },
-      "modal": {
-        "container": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "left and right padding on modal small screen container across leftnav and horizontal"
-            }
-          },
-          "y": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXS}",
-              "$description": "Top and bottom padding on sticky header within nav modal used in small screens."
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "top and bottom padding on modal small screen container across leftnav and horizontal"
-            }
-          },
-          "yg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "vertical gap between modal nav items"
             }
           }
         }
