@@ -277,6 +277,22 @@
             "$description": "Min height of grandchildren"
           }
         }
+      },
+      "topnav": {
+        "parent": {
+          "minheight": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.M}",
+            "$description": "Min height of parent items across items in secondary top nav "
+          }
+        },
+        "child": {
+          "minheight": {
+            "$type": "sizing",
+            "$value": "{global.size.macro.M}",
+            "$description": "Min height of child items across items in secondary top nav "
+          }
+        }
       }
     },
     "space": {
