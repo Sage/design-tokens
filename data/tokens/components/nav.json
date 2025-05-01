@@ -154,6 +154,13 @@
             "$type": "color",
             "$value": "{modes.color.interactive.nav.withHover}"
           }
+        },
+        "headeritem": {
+          "label-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.firm}",
+            "$description": "color for subheaders passed into modal nav"
+          }
         }
       },
       "topnav": {
@@ -819,6 +826,34 @@
               "$type": "spacing",
               "$value": "{global.space.macro.XXXS} / 2",
               "$description": "vertical padding on stacked child items"
+            }
+          }
+        },
+        "headeritem": {
+          "x": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "horizontal padding on header item"
+            }
+          },
+          "xg": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "horizontal gap between header label and idebntifiers or icons"
+            }
+          },
+          "y": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "bottom padding on header items"
+            },
+            "L": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XS}",
+              "$description": "top padding on header items"
             }
           }
         }
