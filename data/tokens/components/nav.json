@@ -402,7 +402,7 @@
         "child": {
           "minheight": {
             "$type": "sizing",
-            "$value": "{global.size.macro.M}",
+            "$value": "{global.size.macro.S}",
             "$description": "Min height of children items"
           }
         }
@@ -777,6 +777,13 @@
               "$description": "horizontal padding on stacked parent items"
             }
           },
+          "xg": {
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS}",
+              "$description": "horizontal padding between parent label and chevron"
+            }
+          },
           "y": {
             "M": {
               "$type": "spacing",
@@ -810,8 +817,8 @@
           "y": {
             "M": {
               "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "vertical padding on stacked parent items"
+              "$value": "{global.space.macro.XXXS} / 2",
+              "$description": "vertical padding on stacked child items"
             }
           }
         }
@@ -838,6 +845,11 @@
             }
           },
           "y": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.macro.XXXS} / 2",
+              "$description": "vertical padding on secondary horizontal nav on small screens"
+            },
             "M": {
               "$type": "spacing",
               "$value": "{global.space.macro.XXXS} / 2",
