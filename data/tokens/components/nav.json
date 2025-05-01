@@ -285,7 +285,7 @@
         "divider": {
           "$type": "borderWidth",
           "$value": "{global.borderwidth.XS}",
-          "$description": "Dividers between sticky header and between parent menu and child menu."
+          "$description": "bottom border on secondary horizontal nav"
         }
       }
     },
@@ -411,15 +411,15 @@
         "parent": {
           "minheight": {
             "$type": "sizing",
-            "$value": "{global.size.macro.M}",
+            "$value": "{global.size.macro.S}",
             "$description": "Min height of parent items across items in secondary top nav "
           }
         },
-        "child": {
+        "container": {
           "minheight": {
             "$type": "sizing",
             "$value": "{global.size.macro.M}",
-            "$description": "Min height of child items across items in secondary top nav "
+            "$description": "Min height of secondary nav containers"
           }
         }
       }
@@ -821,7 +821,7 @@
           "x": {
             "S": {
               "$type": "spacing",
-              "$value": "{global.space.macro.L}",
+              "$value": "{global.space.macro.XXXS}",
               "$description": "horizontal padding on secondary horizontal nav on small screens"
             },
             "M": {
@@ -831,11 +831,6 @@
             }
           },
           "xg": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} / 2",
-              "$description": "horizontal gap on secondary horizontal nav on small screens"
-            },
             "M": {
               "$type": "spacing",
               "$value": "{global.space.macro.XXXS} / 2",
