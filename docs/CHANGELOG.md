@@ -1,3 +1,9 @@
+## [12.8.1](https://github.com/Sage/design-tokens/compare/v12.8.0...v12.8.1) (2025-05-01)
+
+### Bug Fixes
+
+* **Secondary Nav:** fixing some wrong token values for padding on secondary nav. ([5a88753](https://github.com/Sage/design-tokens/commit/5a88753b7add83211b93565500298ac863b5c2a1))
+
 ## [12.8.0](https://github.com/Sage/design-tokens/compare/v12.7.0...v12.8.0) (2025-04-30)
 
 ### Features
