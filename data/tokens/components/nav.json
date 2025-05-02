@@ -399,18 +399,34 @@
         }
       },
       "modal": {
-        "parent": {
+        "parentitem": {
           "minheight": {
             "$type": "sizing",
             "$value": "{global.size.macro.M}",
             "$description": "Min height of parent items"
           }
         },
-        "child": {
+        "childitem": {
           "minheight": {
             "$type": "sizing",
             "$value": "{global.size.macro.S}",
             "$description": "Min height of children items"
+          }
+        },
+        "headeritem": {
+          "identifier": {
+            "M": {
+              "$type": "sizing",
+              "$value": "{global.size.icon.L}",
+              "$description": "Icon size"
+            }
+          },
+          "icon": {
+            "M": {
+              "$type": "sizing",
+              "$value": "{global.size.icon.M}",
+              "$description": "Icon size"
+            }
           }
         }
       },
