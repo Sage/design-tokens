@@ -399,18 +399,34 @@
         }
       },
       "modal": {
-        "parent": {
+        "parentitem": {
           "minheight": {
             "$type": "sizing",
             "$value": "{global.size.macro.M}",
             "$description": "Min height of parent items"
           }
         },
-        "child": {
+        "childitem": {
           "minheight": {
             "$type": "sizing",
             "$value": "{global.size.macro.S}",
             "$description": "Min height of children items"
+          }
+        },
+        "headeritem": {
+          "identifier": {
+            "M": {
+              "$type": "sizing",
+              "$value": "{global.size.icon.L}",
+              "$description": "Icon size"
+            }
+          },
+          "icon": {
+            "M": {
+              "$type": "sizing",
+              "$value": "{global.size.icon.M}",
+              "$description": "Icon size"
+            }
           }
         }
       },
@@ -757,11 +773,6 @@
             }
           },
           "y": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXS}",
-              "$description": "Top and bottom padding on sticky header within nav modal used in small screens."
-            },
             "M": {
               "$type": "spacing",
               "$value": "{global.space.macro.XS}",
@@ -771,8 +782,17 @@
           "yg": {
             "M": {
               "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} / 2",
+              "$value": "{global.space.macro.XXXS} - {global.space.micro.XS}",
               "$description": "vertical gap between modal nav items"
+            }
+          },
+          "outer": {
+            "y": {
+              "M": {
+                "$type": "spacing",
+                "$value": "{global.space.macro.ML} * 2",
+                "$description": "margin outside of item containers to make items show underneath sticky headers"
+              }
             }
           }
         },
@@ -910,7 +930,7 @@
           "y": {
             "M": {
               "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
+              "$value": "{global.space.macro.XXXS} / 2",
               "$description": "vertical padding on stacked parent items"
             }
           }
