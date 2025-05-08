@@ -825,15 +825,15 @@
           },
           "withActive": {
             "$type": "color",
-            "$value": "{modes.color.generic.fg.nought}"
+            "$value": "{modes.color.generic.content.nought}"
           },
           "withActiveAlt": {
             "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}"
+            "$value": "{modes.color.generic.content.extreme}"
           },
           "withDefault": {
             "$type": "color",
-            "$value": "{modes.color.generic.fg.nought}"
+            "$value": "{modes.color.generic.content.nought}"
           },
           "withHover": {
             "$type": "color",
@@ -910,6 +910,110 @@
             "withHoverAlt": {
               "$type": "color",
               "$value": "{modes.color.generic.fg.nought}"
+            }
+          },
+          "inverse": {
+            "active": {
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.nought}"
+            },
+            "activeAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.activeAlt}",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.monochrome.inverse.default}"
+            },
+            "default": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.9",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.monochrome.inverse.active}"
+            },
+            "defaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.monochrome.inverse.active}",
+              "$description": "subtle and toggle button text"
+            },
+            "defaultAlt2": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.42",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.monochrome.inverse.active}",
+              "$description": "Tertiary border color"
+            },
+            "hoverAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.hoverAlt}",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.monochrome.inverse.active}",
+              "$description": "Accordion, secondary, tertiary, menu bg on hover"
+            },
+            "hover": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.hover}",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.monochrome.inverse.active}",
+              "$description": "subtle table header hover"
+            },
+            "withActive": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.extreme}"
+            },
+            "withActiveAlt": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.nought}"
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.extreme}"
+            },
+            "withHover": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.nought}"
             }
           },
           "marketing": {
