@@ -1648,6 +1648,35 @@
             "$type": "color",
             "$value": "linear-gradient(135deg, #6F6F6F5c 0%, #6F6F6F0A 100%)",
             "$description": "used on skeleton text"
+          },
+          "inverse": {
+            "withDefault": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.extreme}"
+            },
+            "withDefaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.95",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.nought}"
+            },
+            "withHover": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.extreme}",
+              "$description": "for pill hover X"
+            },
+            "withHoverAlt": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.nought}",
+              "$description": "for message text"
+            }
           }
         },
         "inactive": {
