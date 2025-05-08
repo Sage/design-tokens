@@ -52,6 +52,11 @@
           "$value": "{primitives.colors.emerald}",
           "$description": "This is the color to replace in white label products. Ensure luminousity of custom color = 46.8 (see hsluv.org).  AAA against FFFFFF bg. "
         },
+        "defaultAlt": {
+          "$type": "color",
+          "$value": "{primitives.colors.brilliantGreen}",
+          "$description": "This is the color to replace in white label products. Dark mode recommended luminosity for SAGE is 75.1 (tested), but above 51.9 should be ok. See hsluv.org to be AAA text on 000000 bgs."
+        },
         "frozen": {
           "$type": "color",
           "$value": "{primitives.colors.frozenJade}",
@@ -1093,15 +1098,15 @@
           },
           "withActive": {
             "$type": "color",
-            "$value": "{modes.color.generic.fg.nought}"
+            "$value": "{modes.color.generic.content.nought}"
           },
           "withDefault": {
             "$type": "color",
-            "$value": "{modes.color.generic.fg.nought}"
+            "$value": "{modes.color.generic.content.nought}"
           },
           "withHover": {
             "$type": "color",
-            "$value": "{modes.color.generic.fg.nought}"
+            "$value": "{modes.color.generic.content.nought}"
           },
           "frozen": {
             "active": {
@@ -1191,6 +1196,82 @@
                 "$type": "color",
                 "$value": "{primitives.colors.navy}"
               }
+            }
+          },
+          "inverse": {
+            "active": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.active}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.default}"
+            },
+            "default": {
+              "$type": "color",
+              "$value": "{modes.color.custom.defaultAlt}"
+            },
+            "defaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.link.enabled}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.default}",
+              "$description": "for links"
+            },
+            "hover": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.default}"
+            },
+            "hoverAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.link.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.defaultAlt}",
+              "$description": "for link hover"
+            },
+            "withActive": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.extreme}"
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.extreme}"
+            },
+            "withHover": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.extreme}"
             }
           }
         },
