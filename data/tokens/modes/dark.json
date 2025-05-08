@@ -720,6 +720,37 @@
               "$value": "{modes.color.interactive.inactive.defaultAlt}",
               "$description": "Disabled input and button backgrounds, button borders and input backgrounds."
             }
+          },
+          "inverse": {
+            "default": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.32",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{primitives.colors.white}",
+              "$description": "Inversed disabled form secondary, tertiary and input borders borders."
+            },
+            "content": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.42",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{primitives.colors.black}",
+              "$description": "Inversed disabled text inside buttons and form inputs."
+            }
           }
         },
         "monochrome": {
