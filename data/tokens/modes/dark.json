@@ -1143,6 +1143,21 @@
             "$type": "color",
             "$value": "{modes.color.interactive.primary.default}"
           },
+          "activeAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{modes.color.modifiers.button.active}",
+                  "space": "lch",
+                  "color": "{modes.color.modifier.contrastMore}"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{modes.color.interactive.primary.default}",
+            "$description": "Active color for secondary and tertiary buttons"
+          },
           "default": {
             "$type": "color",
             "$value": "{modes.color.custom.default}"
@@ -1180,8 +1195,8 @@
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
-                  "value": "{modes.color.modifiers.link.hover}",
+                  "type": "alpha",
+                  "value": "{modes.color.modifiers.button.hoverAlt}",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1189,7 +1204,7 @@
             },
             "$type": "color",
             "$value": "{modes.color.interactive.primary.defaultAlt}",
-            "$description": "for link hover "
+            "$description": "Secondary and tertiary button hover"
           },
           "withActive": {
             "$type": "color",
@@ -1307,6 +1322,21 @@
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.default}"
             },
+            "activeAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.active}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.default}",
+              "$description": "Active color for inverse secondary and tertiary buttons"
+            },
             "default": {
               "$type": "color",
               "$value": "{modes.color.custom.defaultAlt}"
@@ -1344,8 +1374,8 @@
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "mix",
-                    "value": "{modes.color.modifiers.link.hover}",
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.hoverAlt} ",
                     "space": "lch",
                     "color": "{modes.color.modifier.contrastLess}"
                   }
@@ -1353,7 +1383,7 @@
               },
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.defaultAlt}",
-              "$description": "for link hover"
+              "$description": "Secondary and tertiary inverse button hover"
             },
             "withActive": {
               "$type": "color",
