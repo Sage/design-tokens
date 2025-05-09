@@ -1166,8 +1166,8 @@
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
-                  "value": "{modes.color.modifiers.link.enabled}",
+                  "type": "alpha",
+                  "value": "0.8",
                   "space": "lch",
                   "color": "{modes.color.modifier.contrastMore}"
                 }
@@ -1175,7 +1175,37 @@
             },
             "$type": "color",
             "$value": "{modes.color.interactive.primary.default}",
-            "$description": "for links"
+            "$description": "Border color for secondary buttons"
+          },
+          "defaultAlt2": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.5",
+                  "space": "lch",
+                  "color": "{modes.color.modifier.contrastMore}"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{modes.color.interactive.primary.default}",
+            "$description": "Border color for tertiary buttons"
+          },
+          "defaultAlt3": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.12",
+                  "space": "lch",
+                  "color": "{modes.color.modifier.contrastMore}"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{modes.color.interactive.primary.default}",
+            "$description": "default value for links"
           },
           "hover": {
             "$extensions": {
@@ -1203,8 +1233,23 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.interactive.primary.defaultAlt}",
+            "$value": "{modes.color.interactive.primary.defaultAlt2}",
             "$description": "Secondary and tertiary button hover"
+          },
+          "hoverAlt2": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{modes.color.modifiers.button.hoverAlt}",
+                  "space": "lch",
+                  "color": "{modes.color.modifier.contrastMore} "
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{modes.color.interactive.primary.defaultAlt3}",
+            "$description": "hover for links"
           },
           "withActive": {
             "$type": "color",
@@ -1345,8 +1390,8 @@
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "mix",
-                    "value": "{modes.color.modifiers.link.enabled}",
+                    "type": "alpha",
+                    "value": "0.8",
                     "space": "lch",
                     "color": "{modes.color.modifier.contrastLess}"
                   }
@@ -1354,7 +1399,37 @@
               },
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.default}",
-              "$description": "for links"
+              "$description": "Borders on secondary inverse buttons"
+            },
+            "defaultAlt2": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.5",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.default}",
+              "$description": "Borders on tertiary inverse buttons"
+            },
+            "defaultAlt3": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.12",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.default}",
+              "$description": "Default color for links"
             },
             "hover": {
               "$extensions": {
@@ -1382,8 +1457,23 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.defaultAlt}",
+              "$value": "{modes.color.interactive.primary.inverse.defaultAlt2}",
               "$description": "Secondary and tertiary inverse button hover"
+            },
+            "hoverAlt2": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hoverAlt}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.defaultAlt3}",
+              "$description": "hover for links"
             },
             "withActive": {
               "$type": "color",
