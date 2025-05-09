@@ -151,6 +151,13 @@
           "$value": "{modes.color.interactive.monochrome.default}",
           "$description": "Hover label for any accordion."
         },
+        "droptarget": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.status.info.default}",
+            "$description": "background color for the droptarget keyline"
+          }
+        },
         "detailedicon": {
           "bg": {
             "$type": "color",
@@ -303,6 +310,13 @@
             "$value": "{global.size.macro.XXXXL} * 8",
             "$description": "max-height of the copilot container overlay "
           }
+        }
+      },
+      "drag": {
+        "droptarget": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.XXS}",
+          "$description": "Height or width of the droptarget keyline."
         }
       },
       "generic": {
