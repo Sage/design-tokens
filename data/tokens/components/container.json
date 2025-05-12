@@ -43,7 +43,7 @@
         },
         "bgFooter-active": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}"
+          "$value": "{modes.color.interactive.monochrome.active}"
         },
         "border-activated": {
           "$type": "color",
@@ -64,12 +64,12 @@
         },
         "bg-hover": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.hoverAlt}",
+          "$value": "{modes.color.interactive.monochrome.hoverAlt}",
           "$description": "Used for accordion hover backgrounds "
         },
         "border-active": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}"
+          "$value": "{modes.color.interactive.monochrome.active}"
         },
         "border-alt": {
           "$type": "color",
@@ -101,35 +101,35 @@
         },
         "icon-active": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}",
+          "$value": "{modes.color.interactive.monochrome.active}",
           "$description": "Active chevron for any accordion."
         },
         "icon-enabled": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.default}",
+          "$value": "{modes.color.interactive.monochrome.default}",
           "$description": "Enabled chevron for any accordion."
         },
         "iconAlt-enabled": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.defaultAlt}",
+          "$value": "{modes.color.interactive.monochrome.defaultAlt}",
           "$description": "Enabled label for subtle accordion."
         },
         "icon-hover": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.default}",
+          "$value": "{modes.color.interactive.monochrome.default}",
           "$description": "Hover chevron for any accordion."
         },
         "labelFooter-active": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.withActive}"
+          "$value": "{modes.color.interactive.monochrome.withActive}"
         },
         "labelFooter-activated": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.withActive}"
+          "$value": "{modes.color.interactive.monochrome.withActive}"
         },
         "text-active": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}",
+          "$value": "{modes.color.interactive.monochrome.active}",
           "$description": "Active label for any accordion."
         },
         "text-disabled": {
@@ -148,7 +148,7 @@
         },
         "text-hover": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.default}",
+          "$value": "{modes.color.interactive.monochrome.default}",
           "$description": "Hover label for any accordion."
         },
         "detailedicon": {
@@ -156,6 +156,13 @@
             "$type": "color",
             "$value": "{modes.color.custom.default}",
             "$description": " "
+          }
+        },
+        "droptarget": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.status.info.default}",
+            "$description": "draggable drop target background color"
           }
         }
       },
@@ -185,7 +192,7 @@
         },
         "border-active": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}"
+          "$value": "{modes.color.interactive.monochrome.active}"
         },
         "border-alt": {
           "$type": "color",
@@ -303,6 +310,13 @@
             "$value": "{global.size.macro.XXXXL} * 8",
             "$description": "max-height of the copilot container overlay "
           }
+        }
+      },
+      "drag": {
+        "droptarget": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.XXS}",
+          "$description": "drop target width or height"
         }
       },
       "generic": {
@@ -1567,6 +1581,13 @@
           "$type": "opacity",
           "$value": "0.4",
           "$description": "dimmer opacity value"
+        }
+      },
+      "drag": {
+        "ghost": {
+          "$type": "opacity",
+          "$value": "0.5",
+          "$description": "drag ghost state opacity value"
         }
       }
     },

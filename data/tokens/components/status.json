@@ -14,7 +14,7 @@
           },
           "label-hover": {
             "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.generic.withHover}"
+            "$value": "{modes.color.interactive.monochrome.withHover}"
           },
           "callout": {
             "bg-default": {
@@ -194,21 +194,41 @@
         }
       },
       "pill": {
-        "label-default": {
-          "$type": "color",
-          "$value": "{modes.color.status.content.withDefault}"
-        },
-        "label-hover": {
-          "$type": "color",
-          "$value": "{modes.color.status.content.withHover}"
-        },
-        "labelAlt-default": {
-          "$type": "color",
-          "$value": "{modes.color.status.content.withDefaultAlt}"
-        },
-        "labelAlt-hover": {
-          "$type": "color",
-          "$value": "{modes.color.status.content.withDefaultAlt}"
+        "generic": {
+          "label-default": {
+            "$type": "color",
+            "$value": "{modes.color.status.content.withDefault}"
+          },
+          "label-hover": {
+            "$type": "color",
+            "$value": "{modes.color.status.content.withHover}"
+          },
+          "labelAlt-default": {
+            "$type": "color",
+            "$value": "{modes.color.status.content.withDefaultAlt}"
+          },
+          "labelAlt-hover": {
+            "$type": "color",
+            "$value": "{modes.color.status.content.withDefaultAlt}"
+          },
+          "inverse": {
+            "label-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.content.inverse.withDefault}"
+            },
+            "label-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.content.inverse.withHover}"
+            },
+            "labelAlt-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.content.inverse.withDefaultAlt}"
+            },
+            "labelAlt-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.content.inverse.withDefaultAlt}"
+            }
+          }
         },
         "error": {
           "bg-default": {
@@ -231,6 +251,29 @@
           "border-default": {
             "$type": "color",
             "$value": "{modes.color.status.negative.default}"
+          },
+          "inverse": {
+            "bg-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.negative.inverse.default}"
+            },
+            "bgAlt-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.negative.inverse.defaultAlt}",
+              "$description": "outline pill bg"
+            },
+            "bgAlt-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.negative.inverse.hoverAlt}"
+            },
+            "bg-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.negative.inverse.hover}"
+            },
+            "border-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.negative.inverse.default}"
+            }
           }
         },
         "info": {
@@ -254,6 +297,29 @@
           "border-default": {
             "$type": "color",
             "$value": "{modes.color.status.info.default}"
+          },
+          "inverse": {
+            "bg-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.info.inverse.default}"
+            },
+            "bgAlt-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.info.inverse.defaultAlt}",
+              "$description": "outline pill bg"
+            },
+            "bgAlt-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.info.inverse.hoverAlt}"
+            },
+            "bg-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.info.inverse.hover}"
+            },
+            "border-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.info.inverse.default}"
+            }
           }
         },
         "neutral": {
@@ -277,6 +343,29 @@
           "border-default": {
             "$type": "color",
             "$value": "{modes.color.status.neutral.default}"
+          },
+          "inverse": {
+            "bg-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.neutral.inverse.default}"
+            },
+            "bgAlt-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.neutral.inverse.defaultAlt}",
+              "$description": "outline pill bg"
+            },
+            "bgAlt-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.neutral.inverse.hoverAlt}"
+            },
+            "bg-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.neutral.inverse.hover}"
+            },
+            "border-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.neutral.inverse.default}"
+            }
           }
         },
         "success": {
@@ -300,6 +389,29 @@
           "border-default": {
             "$type": "color",
             "$value": "{modes.color.status.positive.default}"
+          },
+          "inverse": {
+            "bg-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.positive.inverse.default}"
+            },
+            "bgAlt-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.positive.inverse.defaultAlt}",
+              "$description": "outline pill bg"
+            },
+            "bgAlt-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.positive.inverse.hoverAlt}"
+            },
+            "bg-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.positive.inverse.hover}"
+            },
+            "border-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.positive.inverse.default}"
+            }
           }
         },
         "warning": {
@@ -323,6 +435,29 @@
           "border-default": {
             "$type": "color",
             "$value": "{modes.color.status.caution.default}"
+          },
+          "inverse": {
+            "bg-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.caution.inverse.default}"
+            },
+            "bgAlt-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.caution.inverse.defaultAlt}",
+              "$description": "Global message bg"
+            },
+            "bgAlt-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.caution.inverse.hoverAlt}"
+            },
+            "bg-hover": {
+              "$type": "color",
+              "$value": "{modes.color.status.caution.inverse.hover}"
+            },
+            "border-default": {
+              "$type": "color",
+              "$value": "{modes.color.status.caution.inverse.default}"
+            }
           }
         },
         "readonly": {

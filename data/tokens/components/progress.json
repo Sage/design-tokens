@@ -183,7 +183,7 @@
       },
       "fg-default": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.generic.active}"
+        "$value": "{modes.color.interactive.monochrome.active}"
       },
       "fg-error": {
         "$type": "color",
@@ -212,20 +212,10 @@
           "$type": "color",
           "$value": "{modes.color.interactive.progress.bg}"
         },
-        "bg-alt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.progress.bgAlt}",
-          "$description": "used for inverse loader bgs"
-        },
         "fg-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}",
+          "$value": "{modes.color.interactive.monochrome.active}",
           "$description": "used for loader standard loader spinner"
-        },
-        "fg-alt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.withActive}",
-          "$description": "used on inverse loading spinner"
         },
         "fg-error": {
           "$type": "color",
@@ -234,12 +224,24 @@
         "fg-complete": {
           "$type": "color",
           "$value": "{modes.color.status.positive.default}"
+        },
+        "inverse": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.progress.bgAlt}",
+            "$description": "used for inverse loader bgs"
+          },
+          "fg-default": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.withActive}",
+            "$description": "used on inverse loading spinner"
+          }
         }
       },
       "stepflow": {
         "bg-active": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}"
+          "$value": "{modes.color.interactive.monochrome.active}"
         },
         "bg-complete": {
           "$type": "color",
@@ -255,7 +257,7 @@
         },
         "border-active-outer": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}"
+          "$value": "{modes.color.interactive.monochrome.active}"
         },
         "border-default": {
           "$type": "color",
@@ -273,7 +275,7 @@
       "stepindicator": {
         "bg-active": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}"
+          "$value": "{modes.color.interactive.monochrome.active}"
         },
         "bg-complete": {
           "$type": "color",
@@ -281,7 +283,7 @@
         },
         "border-active-outer": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.active}"
+          "$value": "{modes.color.interactive.monochrome.active}"
         },
         "border-default": {
           "$type": "color",
@@ -293,11 +295,11 @@
         },
         "label-active": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.withActive}"
+          "$value": "{modes.color.interactive.monochrome.withActive}"
         },
         "label-complete": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.generic.withActive}"
+          "$value": "{modes.color.interactive.monochrome.withActive}"
         },
         "label-default": {
           "$type": "color",
