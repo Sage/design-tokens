@@ -1,3 +1,9 @@
+## [13.0.1](https://github.com/Sage/design-tokens/compare/v13.0.0...v13.0.1) (2025-05-12)
+
+### Bug Fixes
+
+* **Button:** fixing an issue where standard buttons were pulling from inverse tokens accidentally ([#497](https://github.com/Sage/design-tokens/issues/497)) ([3f0c8c1](https://github.com/Sage/design-tokens/commit/3f0c8c1a6537d151664ffc673f021e90eed7658c))
+
 ## [13.0.0](https://github.com/Sage/design-tokens/compare/v12.8.1...v13.0.0) (2025-05-12)
 
 ### ⚠ BREAKING CHANGES
