@@ -1,3 +1,13 @@
+## [13.0.0](https://github.com/Sage/design-tokens/compare/v12.8.1...v13.0.0) (2025-05-12)
+
+### ⚠ BREAKING CHANGES
+
+* **Buttons and Links:** add mid layer inverse tokens and component s… (#495)
+
+### Features
+
+* **Buttons and Links:** add mid layer inverse tokens and component s… ([#495](https://github.com/Sage/design-tokens/issues/495)) ([384b009](https://github.com/Sage/design-tokens/commit/384b0098ef3e81bae43380b448fc4b2a0152ffa3))
+
 ## [12.8.1](https://github.com/Sage/design-tokens/compare/v12.8.0...v12.8.1) (2025-05-01)
 
 ### Bug Fixes
