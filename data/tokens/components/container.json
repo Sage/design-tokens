@@ -157,6 +157,13 @@
             "$value": "{modes.color.custom.default}",
             "$description": " "
           }
+        },
+        "droptarget": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.status.info.default}",
+            "$description": "draggable drop target background color"
+          }
         }
       },
       "scrollbar": {
@@ -303,6 +310,13 @@
             "$value": "{global.size.macro.XXXXL} * 8",
             "$description": "max-height of the copilot container overlay "
           }
+        }
+      },
+      "drag": {
+        "droptarget": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.XXS}",
+          "$description": "drop target width or height"
         }
       },
       "generic": {
@@ -1567,6 +1581,13 @@
           "$type": "opacity",
           "$value": "0.4",
           "$description": "dimmer opacity value"
+        }
+      },
+      "drag": {
+        "ghost": {
+          "$type": "opacity",
+          "$value": "0.5",
+          "$description": "drag ghost state opacity value"
         }
       }
     },
