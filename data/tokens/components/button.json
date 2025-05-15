@@ -856,6 +856,45 @@
           "label-hover": {
             "$type": "color",
             "$value": "{modes.color.interactive.primary.withDefault}"
+          },
+          "inverse": {
+            "bg-active": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.active}"
+            },
+            "bg-default": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.withDefault}",
+              "$description": "For spacer in Split button"
+            },
+            "bg-disabled": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.inactive.inverse.default}"
+            },
+            "bg-enabled": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.default}"
+            },
+            "bg-hover": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.hover}"
+            },
+            "label-active": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.withActive}"
+            },
+            "label-disabled": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.inactive.inverse.contentAlt}"
+            },
+            "label-enabled": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.withDefault}"
+            },
+            "label-hover": {
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.withDefault}"
+            }
           }
         },
         "secondary": {
