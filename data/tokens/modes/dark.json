@@ -652,13 +652,17 @@
           }
         },
         "focus": {
-          "withDefault": {
+          "default": {
             "$type": "color",
-            "$value": "{primitives.colors.black}"
+            "$value": "{primitives.colors.gold}"
           },
           "content": {
             "$type": "color",
-            "$value": "{modes.color.generic.content.extreme}"
+            "$value": "{primitives.colors.white}"
+          },
+          "withDefault": {
+            "$type": "color",
+            "$value": "{primitives.colors.black}"
           },
           "withDefaultAlt": {
             "$extensions": {
@@ -674,9 +678,33 @@
             "$type": "color",
             "$value": "{primitives.colors.gold}"
           },
-          "default": {
-            "$type": "color",
-            "$value": "{primitives.colors.gold}"
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{primitives.colors.black}"
+            },
+            "content": {
+              "$type": "color",
+              "$value": "{primitives.colors.black}"
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{primitives.colors.gold}"
+            },
+            "withDefaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.4",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{primitives.colors.gold}"
+            }
           }
         },
         "inactive": {
