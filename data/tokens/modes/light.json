@@ -553,8 +553,17 @@
             "$description": "used on solid-pill and primary-button hover states"
           },
           "hoverAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{modes.color.modifiers.button.hoverAlt}",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{modes.color.status.negative.hoverAlt}",
+            "$value": "{modes.color.interactive.danger.default}",
             "$description": "used on secondary-button hover states"
           },
           "hoverAlt2": {
@@ -574,11 +583,99 @@
           },
           "withActive": {
             "$type": "color",
-            "$value": "{modes.color.generic.fg.nought}"
+            "$value": "{primitives.colors.white}"
           },
           "withDefault": {
             "$type": "color",
-            "$value": "{modes.color.generic.fg.nought}"
+            "$value": "{primitives.colors.white}"
+          },
+          "inverse": {
+            "active": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.active}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.danger.inverse.default}",
+              "$description": "used on pill hover states"
+            },
+            "default": {
+              "$type": "color",
+              "$value": "{primitives.colors.blush}"
+            },
+            "defaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.12",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.danger.inverse.default}",
+              "$description": "For links in datatables"
+            },
+            "hover": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.danger.inverse.default}",
+              "$description": "used on solid-pill and primary-button hover states"
+            },
+            "hoverAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{modes.color.modifiers.button.hoverAlt}",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.danger.inverse.default}",
+              "$description": "used on secondary-button hover states"
+            },
+            "hoverAlt2": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{modes.color.modifiers.button.hoverAlt}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.danger.inverse.defaultAlt}",
+              "$description": "used on link hover state"
+            },
+            "withActive": {
+              "$type": "color",
+              "$value": "{primitives.colors.black}"
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{primitives.colors.black}"
+            }
           }
         },
         "dataEntry": {
@@ -655,6 +752,14 @@
           }
         },
         "focus": {
+          "default": {
+            "$type": "color",
+            "$value": "{primitives.colors.black}"
+          },
+          "content": {
+            "$type": "color",
+            "$value": "{primitives.colors.black}"
+          },
           "withDefault": {
             "$type": "color",
             "$value": "{primitives.colors.gold}"
@@ -673,13 +778,33 @@
             "$type": "color",
             "$value": "{primitives.colors.gold}"
           },
-          "default": {
-            "$type": "color",
-            "$value": "{primitives.colors.black}"
-          },
-          "content": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.extreme}"
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{primitives.colors.gold}"
+            },
+            "content": {
+              "$type": "color",
+              "$value": "{primitives.colors.white}"
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{primitives.colors.black}"
+            },
+            "withDefaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.4",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{primitives.colors.gold}"
+            }
           }
         },
         "inactive": {
@@ -764,6 +889,11 @@
               "$type": "color",
               "$value": "{primitives.colors.white}",
               "$description": "Inversed disabled text inside buttons and form inputs."
+            },
+            "contentAlt": {
+              "$type": "color",
+              "$value": "{primitives.colors.black}",
+              "$description": " Disabled labels inside buttons and Switch."
             }
           }
         },
@@ -1269,15 +1399,15 @@
           },
           "withActive": {
             "$type": "color",
-            "$value": "{modes.color.generic.content.nought}"
+            "$value": "{primitives.colors.white}"
           },
           "withDefault": {
             "$type": "color",
-            "$value": "{modes.color.generic.content.nought}"
+            "$value": "{primitives.colors.white}"
           },
           "withHover": {
             "$type": "color",
-            "$value": "{modes.color.generic.content.nought}"
+            "$value": "{primitives.colors.white}"
           },
           "frozen": {
             "active": {
@@ -1494,15 +1624,15 @@
             },
             "withActive": {
               "$type": "color",
-              "$value": "{modes.color.generic.content.extreme}"
+              "$value": "{primitives.colors.black}"
             },
             "withDefault": {
               "$type": "color",
-              "$value": "{modes.color.generic.content.extreme}"
+              "$value": "{primitives.colors.black}"
             },
             "withHover": {
               "$type": "color",
-              "$value": "{modes.color.generic.content.extreme}"
+              "$value": "{primitives.colors.black}"
             }
           }
         },
