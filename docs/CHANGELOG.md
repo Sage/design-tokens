@@ -1,3 +1,10 @@
+## [13.2.0](https://github.com/Sage/design-tokens/compare/v13.1.0...v13.2.0) (2025-05-16)
+
+### Features
+
+* **Button, Focus and Link:** Add new inverse tokens ([#501](https://github.com/Sage/design-tokens/issues/501)) ([563bc2d](https://github.com/Sage/design-tokens/commit/563bc2d84f2276167ea19390162f7832fe066cc4))
+* **Table pagination:** Add spacing token for use between table and table pagination. ([#503](https://github.com/Sage/design-tokens/issues/503)) ([14065ae](https://github.com/Sage/design-tokens/commit/14065ae9a0be9241bb9ee31540a9cfcc87b24fe4))
+
 ## [13.1.0](https://github.com/Sage/design-tokens/compare/v13.0.1...v13.1.0) (2025-05-16)
 
 ### Features
