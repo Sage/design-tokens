@@ -1,3 +1,9 @@
+## [13.1.0](https://github.com/Sage/design-tokens/compare/v13.0.1...v13.1.0) (2025-05-16)
+
+### Features
+
+* **Table:** Add box shadows for sticky columns in Table component. ([#500](https://github.com/Sage/design-tokens/issues/500)) ([15d779e](https://github.com/Sage/design-tokens/commit/15d779e2bde49407c490b76f7b54e538e76b0dca))
+
 ## [13.0.1](https://github.com/Sage/design-tokens/compare/v13.0.0...v13.0.1) (2025-05-12)
 
 ### Bug Fixes
