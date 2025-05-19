@@ -1,3 +1,9 @@
+## [14.0.1](https://github.com/Sage/design-tokens/compare/v14.0.0...v14.0.1) (2025-05-19)
+
+### Bug Fixes
+
+* **Button:** changing tertiary button border opacity to pass 3:1 cont… ([#506](https://github.com/Sage/design-tokens/issues/506)) ([5c5da26](https://github.com/Sage/design-tokens/commit/5c5da26d31d1ab67c385ce188068c841e9eb2e4d))
+
 ## [14.0.0](https://github.com/Sage/design-tokens/compare/v13.2.0...v14.0.0) (2025-05-19)
 
 ### ⚠ BREAKING CHANGES
