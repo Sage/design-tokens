@@ -1,3 +1,13 @@
+## [14.0.0](https://github.com/Sage/design-tokens/compare/v13.2.0...v14.0.0) (2025-05-19)
+
+### ⚠ BREAKING CHANGES
+
+* **Spinner:** Changing name of ring to spinner to align with the component name. Add XS size spinner for consumption inside buttons, file upload and switch. (#504)
+
+### Features
+
+* **Spinner:** Changing name of ring to spinner to align with the component name. Add XS size spinner for consumption inside buttons, file upload and switch. ([#504](https://github.com/Sage/design-tokens/issues/504)) ([dacb455](https://github.com/Sage/design-tokens/commit/dacb4559b67b4bda7723d88f65fdb8c7e954e941))
+
 ## [13.2.0](https://github.com/Sage/design-tokens/compare/v13.1.0...v13.2.0) (2025-05-16)
 
 ### Features
