@@ -1321,24 +1321,9 @@
             },
             "$type": "color",
             "$value": "{modes.color.interactive.primary.default}",
-            "$description": "border color for secondary buttons"
+            "$description": "border color for secondary and tertiary buttons"
           },
           "defaultAlt2": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.5",
-                  "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore}"
-                }
-              }
-            },
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.default}",
-            "$description": "border color for tertiary buttons"
-          },
-          "defaultAlt3": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -1352,6 +1337,21 @@
             "$type": "color",
             "$value": "{modes.color.interactive.primary.default}",
             "$description": "default value for links"
+          },
+          "defaultAlt3": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.03",
+                  "space": "lch",
+                  "color": "{modes.color.modifier.contrastMore}"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{modes.color.interactive.primary.default}",
+            "$description": "Default background color of secondary button"
           },
           "hover": {
             "$extensions": {
@@ -1379,7 +1379,7 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.interactive.primary.defaultAlt2}",
+            "$value": "{modes.color.interactive.primary.default}",
             "$description": "hover for secondary and tertiary buttons"
           },
           "hoverAlt2": {
@@ -1394,7 +1394,7 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.interactive.primary.defaultAlt3}",
+            "$value": "{modes.color.interactive.primary.defaultAlt2}",
             "$description": "hover for links"
           },
           "withActive": {
@@ -1546,24 +1546,9 @@
               },
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.default}",
-              "$description": "border color for secondary inverse buttons"
+              "$description": "border color for secondary and tertiary inverse buttons"
             },
             "defaultAlt2": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.5",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.default}",
-              "$description": "border color for tertiary inverse buttons"
-            },
-            "defaultAlt3": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -1577,6 +1562,21 @@
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.default}",
               "$description": "Default color for links"
+            },
+            "defaultAlt3": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.03",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.primary.inverse.default}",
+              "$description": "Default background color of inverse secondary buttons"
             },
             "hover": {
               "$extensions": {
@@ -1604,7 +1604,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.defaultAlt2}",
+              "$value": "{modes.color.interactive.primary.inverse.default}",
               "$description": "Hover for inverse secondary and tertiary buttons"
             },
             "hoverAlt2": {
@@ -1619,7 +1619,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.defaultAlt3}",
+              "$value": "{modes.color.interactive.primary.inverse.defaultAlt2}",
               "$description": "hover for links"
             },
             "withActive": {
