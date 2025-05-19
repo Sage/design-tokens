@@ -77,18 +77,8 @@
           "$description": "Link preview. "
         },
         "borderalt-hover": {
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "{modes.color.modifiers.button.hover}",
-                "space": "lch",
-                "color": "{modes.color.modifier.contrastMore} "
-              }
-            }
-          },
           "$type": "color",
-          "$value": "{container.color.interactive.border-alt}",
+          "$value": "{modes.color.interactive.monochrome.default}",
           "$description": "For hover border on Link preview."
         },
         "border-inactive": {
@@ -1572,7 +1562,7 @@
       "carousel": {
         "hidden": {
           "$type": "opacity",
-          "$value": "{modes.color.modifiers.input.disabledFg}",
+          "$value": "0.3",
           "$description": "opacity applied to next and previous carousel slides"
         }
       },

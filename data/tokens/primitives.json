@@ -961,6 +961,51 @@
         "$type": "paragraphSpacing",
         "$value": "{primitives.dimension.400}"
       }
+    },
+    "color": {
+      "modifiers": {
+        "button": {
+          "active": {
+            "$type": "other",
+            "$value": "0.30",
+            "$description": "Actve modifier used when 15% hover is used"
+          },
+          "activeAlt": {
+            "$type": "other",
+            "$value": "0.15",
+            "$description": "Active appled when 10% hover is used"
+          },
+          "hover": {
+            "$type": "other",
+            "$value": "0.15",
+            "$description": "Hover used on primary buttons"
+          },
+          "hoverAlt": {
+            "$type": "other",
+            "$value": "0.10",
+            "$description": "Hover used on secondary and tertiary buttons"
+          }
+        },
+        "input": {
+          "disabledBg": {
+            "$type": "other",
+            "$value": "0.05",
+            "$description": "less contrast"
+          },
+          "disabledFg": {
+            "$type": "other",
+            "$value": "0.30",
+            "$description": "less contrast"
+          }
+        },
+        "shadow": {
+          "standard": {
+            "$type": "other",
+            "$value": "0.5",
+            "$description": "standard mixer for shadow"
+          }
+        }
+      }
     }
   }
 }
