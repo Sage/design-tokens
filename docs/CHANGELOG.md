@@ -1,3 +1,9 @@
+## [14.1.0](https://github.com/Sage/design-tokens/compare/v14.0.1...v14.1.0) (2025-05-27)
+
+### Features
+
+* **Colors for Pills:** Add color tokens for Pill, update Table icon size, add Important status color tokens to modes. ([#510](https://github.com/Sage/design-tokens/issues/510)) ([45fb73a](https://github.com/Sage/design-tokens/commit/45fb73afdbf8a7fe790c413932eb164bfac0ac7e))
+
 ## [14.0.1](https://github.com/Sage/design-tokens/compare/v14.0.0...v14.0.1) (2025-05-19)
 
 ### Bug Fixes
