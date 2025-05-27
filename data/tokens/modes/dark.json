@@ -2434,8 +2434,104 @@
         "important": {
           "default": {
             "$type": "color",
-            "$value": "{primitives.colors.supplementary.purple.500}",
+            "$value": "{primitives.colors.supplementary.purple.400}",
             "$description": "For tile status keylines to show if something is of high importance."
+          },
+          "defaultAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.9",
+                  "space": "lch",
+                  "color": "{modes.color.modifier.contrastLess}"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{primitives.colors.supplementary.purple.400}",
+            "$description": "Subtle message bg"
+          },
+          "hover": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{primitives.color.modifiers.button.hover}",
+                  "space": "lch",
+                  "color": "{modes.color.modifier.contrastMore}"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{modes.color.status.important.default}",
+            "$description": "used on pill hover states"
+          },
+          "hoverAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "{primitives.color.modifiers.button.hover}",
+                  "space": "lch",
+                  "color": "{modes.color.status.info.default}"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{modes.color.status.important.defaultAlt}",
+            "$description": "used on pill hover states and message bg"
+          },
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{primitives.colors.supplementary.purple.500}"
+            },
+            "defaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.85",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{primitives.colors.supplementary.purple.500}",
+              "$description": "Subtle message bg"
+            },
+            "hover": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{primitives.color.modifiers.button.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.status.important.inverse.default}",
+              "$description": "used on pill hover states"
+            },
+            "hoverAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{primitives.color.modifiers.button.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.status.info.inverse.default}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.status.important.inverse.defaultAlt}",
+              "$description": "used on pill hover states and message bg"
+            }
           }
         },
         "inactive": {
