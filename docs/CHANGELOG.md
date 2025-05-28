@@ -1,3 +1,9 @@
+## [14.3.0](https://github.com/Sage/design-tokens/compare/v14.2.0...v14.3.0) (2025-05-28)
+
+### Features
+
+* **Table first child shadow:** ([#512](https://github.com/Sage/design-tokens/issues/512)) ([5ec9f71](https://github.com/Sage/design-tokens/commit/5ec9f717f789e412a88a46381986d980983c5a84))
+
 ## [14.2.0](https://github.com/Sage/design-tokens/compare/v14.1.0...v14.2.0) (2025-05-28)
 
 ### Features
