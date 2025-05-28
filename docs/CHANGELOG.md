@@ -1,3 +1,9 @@
+## [14.2.0](https://github.com/Sage/design-tokens/compare/v14.1.0...v14.2.0) (2025-05-28)
+
+### Features
+
+* **Pill important color:** Add many status.color.pill.important tokens. ([#511](https://github.com/Sage/design-tokens/issues/511)) ([7f9e791](https://github.com/Sage/design-tokens/commit/7f9e7910c010be37fa1109fef30b0129eafa73d3))
+
 ## [14.1.0](https://github.com/Sage/design-tokens/compare/v14.0.1...v14.1.0) (2025-05-27)
 
 ### Features
