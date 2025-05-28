@@ -1,3 +1,9 @@
+## [14.4.0](https://github.com/Sage/design-tokens/compare/v14.3.0...v14.4.0) (2025-05-28)
+
+### Features
+
+* **Date Picker:** add right padding tokens so that subtle icon only buttons feel visually balanced on date picker. ([3f1e9f4](https://github.com/Sage/design-tokens/commit/3f1e9f4d0ce112045bedb8e06029c98c6d486169))
+
 ## [14.3.0](https://github.com/Sage/design-tokens/compare/v14.2.0...v14.3.0) (2025-05-28)
 
 ### Features
