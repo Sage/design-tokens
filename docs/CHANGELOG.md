@@ -1,3 +1,9 @@
+## [14.5.0](https://github.com/Sage/design-tokens/compare/v14.4.0...v14.5.0) (2025-05-28)
+
+### Features
+
+* **typography:** add heading, subheading and body font family tokens to allow for marketing contexts overrides. ([70110d0](https://github.com/Sage/design-tokens/commit/70110d0f1272a2c8634a3c618d2eb10bb364897e))
+
 ## [14.4.0](https://github.com/Sage/design-tokens/compare/v14.3.0...v14.4.0) (2025-05-28)
 
 ### Features
