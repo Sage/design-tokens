@@ -1,3 +1,9 @@
+## [14.6.0](https://github.com/Sage/design-tokens/compare/v14.5.0...v14.6.0) (2025-05-30)
+
+### Features
+
+* **Buttons:** adding tokens for XS standard and icon only buttons to be supported ([#518](https://github.com/Sage/design-tokens/issues/518)) ([835477c](https://github.com/Sage/design-tokens/commit/835477c156cf82d7d0af0b47eb05210a7cf1f9de))
+
 ## [14.5.0](https://github.com/Sage/design-tokens/compare/v14.4.0...v14.5.0) (2025-05-28)
 
 ### Features
