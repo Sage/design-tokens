@@ -49,6 +49,10 @@
         }
       },
       "icon": {
+        "S": {
+          "$type": "sizing",
+          "$value": "{global.size.icon.S}"
+        },
         "M": {
           "$type": "sizing",
           "$value": "{global.size.icon.M}"
@@ -280,18 +284,35 @@
           "x": {
             "S": {
               "$type": "spacing",
-              "$value": "{global.space.micro.S}",
+              "$value": "{global.space.micro.M}",
               "$description": "Left and right padding on icon-only S size primary buttons"
             },
             "M": {
               "$type": "spacing",
-              "$value": "{global.space.micro.S}",
+              "$value": "{global.space.micro.XL}",
               "$description": "Left and right padding on icon-only M size primary buttons"
             },
             "L": {
               "$type": "spacing",
-              "$value": "{global.space.micro.S}",
+              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
               "$description": "Left and right padding on icon-only L size primary buttons"
+            }
+          },
+          "y": {
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.M}",
+              "$description": "Top and bottom padding on icon-only S size primary buttons"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XL}",
+              "$description": "Top and bottom padding on icon-only M size primary buttons"
+            },
+            "L": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
+              "$description": "Top and bottom padding on icon-only L size primary buttons"
             }
           }
         }
@@ -342,6 +363,11 @@
           }
         },
         "xg": {
+          "XS": {
+            "$type": "spacing",
+            "$value": "{global.space.micro.S}",
+            "$description": "Item spacing inside XS buttons"
+          },
           "S": {
             "$type": "spacing",
             "$value": "{global.space.macro.XXXS}",
@@ -356,29 +382,51 @@
             "$type": "spacing",
             "$value": "{global.space.macro.XXXS}",
             "$description": "Item spacing inside buttons"
-          },
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Item spacing inside XS buttons"
           }
         },
         "icononly": {
           "x": {
-            "S": {
+            "XS": {
               "$type": "spacing",
               "$value": "{global.space.micro.S}",
+              "$description": "Left and right padding on icon-only XS size secondary buttons"
+            },
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.M}",
               "$description": "Left and right padding on icon-only S size secondary buttons"
             },
             "M": {
               "$type": "spacing",
-              "$value": "{global.space.micro.S}",
+              "$value": "{global.space.micro.XL}",
               "$description": "Left and right padding on icon-only M size secondary buttons"
             },
             "L": {
               "$type": "spacing",
-              "$value": "{global.space.micro.S}",
+              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
               "$description": "Left and right padding on icon-only L size secondary buttons"
+            }
+          },
+          "y": {
+            "XS": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Top and bottom padding on icon-only XS size secondary buttons"
+            },
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.M}",
+              "$description": "Top and bottom padding on icon-only S size secondary buttons"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XL}",
+              "$description": "Top and bottom padding on icon-only M size secondary buttons"
+            },
+            "L": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
+              "$description": "Top and bottom padding on icon-only L size secondary buttons"
             }
           }
         }
@@ -452,20 +500,47 @@
         },
         "icononly": {
           "x": {
-            "S": {
+            "XS": {
               "$type": "spacing",
               "$value": "{global.space.micro.S}",
+              "$description": "Left and right padding on icon-only XS size tertiary buttons"
+            },
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.M}",
               "$description": "Left and right padding on icon-only S size tertiary buttons"
             },
             "M": {
               "$type": "spacing",
-              "$value": "{global.space.micro.S}",
+              "$value": "{global.space.micro.XL}",
               "$description": "Left and right padding on icon-only M size tertiary buttons"
             },
             "L": {
               "$type": "spacing",
-              "$value": "{global.space.micro.S}",
+              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
               "$description": "Left and right padding on icon-only L size tertiary buttons"
+            }
+          },
+          "y": {
+            "XS": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Top and bottom padding on icon-only XS size tertiary buttons"
+            },
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.M}",
+              "$description": "Top and bottom padding on icon-only S size tertiary buttons"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XL}",
+              "$description": "Top and bottom padding on icon-only M size tertiary buttons"
+            },
+            "L": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
+              "$description": "Top and bottom padding on icon-only L size tertiary buttons"
             }
           }
         }
@@ -539,20 +614,47 @@
         },
         "icononly": {
           "x": {
-            "S": {
+            "XS": {
               "$type": "spacing",
               "$value": "{global.space.micro.S}",
+              "$description": "Left and right padding on icon-only XS size subtle buttons"
+            },
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.M}",
               "$description": "Left and right padding on icon-only S size subtle buttons"
             },
             "M": {
               "$type": "spacing",
-              "$value": "{global.space.micro.S}",
+              "$value": "{global.space.micro.XL}",
               "$description": "Left and right padding on icon-only M size subtle buttons"
             },
             "L": {
               "$type": "spacing",
-              "$value": "{global.space.micro.S}",
+              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
               "$description": "Left and right padding on icon-only L size subtle buttons"
+            }
+          },
+          "y": {
+            "XS": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.S}",
+              "$description": "Top and bottom padding on icon-only XS size subtle buttons"
+            },
+            "S": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.M}",
+              "$description": "Top and bottom padding on icon-only S size subtle buttons"
+            },
+            "M": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XL}",
+              "$description": "Top and bottom padding on icon-only M size subtle buttons"
+            },
+            "L": {
+              "$type": "spacing",
+              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
+              "$description": "Top and bottom padding on icon-only L size subtle buttons"
             }
           }
         }
