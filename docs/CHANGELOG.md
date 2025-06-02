@@ -1,3 +1,9 @@
+## [14.7.0](https://github.com/Sage/design-tokens/compare/v14.6.0...v14.7.0) (2025-06-02)
+
+### Features
+
+* **Dialog:** add dialog max-width tokens to give parity to current carbon offering of sizes. ([044f4a6](https://github.com/Sage/design-tokens/commit/044f4a65db942c09ebeec8437215d1f7ed579c92))
+
 ## [14.6.0](https://github.com/Sage/design-tokens/compare/v14.5.0...v14.6.0) (2025-05-30)
 
 ### Features
