@@ -302,39 +302,49 @@
           }
         }
       },
+      "dialog": {
+        "maxWidth": {
+          "XXS": {
+            "$type": "sizing",
+            "$value": "{global.size.flex.XS}"
+          },
+          "XS": {
+            "$type": "sizing",
+            "$value": "{global.size.flex.XS}",
+            "$description": "min and max widths for responsive tile items"
+          },
+          "S": {
+            "$type": "sizing",
+            "$value": "{global.size.flex.S}",
+            "$description": "min and max widths for responsive tile items. Min width for Tile select content wrapper."
+          },
+          "M": {
+            "$type": "sizing",
+            "$value": "{global.size.flex.M}",
+            "$description": "min and max widths for responsive tile items"
+          },
+          "L": {
+            "$type": "sizing",
+            "$value": "{global.size.flex.L}",
+            "$description": "min and max widths for responsive tile items"
+          },
+          "XL": {
+            "$type": "sizing",
+            "$value": "{global.size.flex.XL}",
+            "$description": "Small screen mid width inside page margins."
+          },
+          "XXL": {
+            "$type": "sizing",
+            "$value": "{global.size.flex.XXL}",
+            "$description": "Small screen full page width."
+          }
+        }
+      },
       "drag": {
         "droptarget": {
           "$type": "sizing",
           "$value": "{global.size.micro.XXS}",
           "$description": "drop target width or height"
-        }
-      },
-      "generic": {
-        "emptystate": {
-          "illustration": {
-            "primary": {
-              "S": {
-                "$type": "sizing",
-                "$value": "{global.size.macro.M} * 5",
-                "$description": "Illustration size for small error and empty states"
-              },
-              "M": {
-                "$type": "sizing",
-                "$value": "{global.size.macro.M} * 6",
-                "$description": "Illustration size for medium error and empty states"
-              },
-              "L": {
-                "$type": "sizing",
-                "$value": "{global.size.macro.M} * 8",
-                "$description": "Illustration size for large error and empty states"
-              }
-            },
-            "secondary": {
-              "$type": "sizing",
-              "$value": "{global.size.macro.M} + {button.size.icon.M}",
-              "$description": "Illustration size for secondary empty states"
-            }
-          }
         }
       },
       "drawer": {
@@ -366,6 +376,34 @@
           "$type": "sizing",
           "$value": "{global.size.macro.XS} * 3",
           "$description": "Dialog, sidebar and drawer footer max-height"
+        }
+      },
+      "generic": {
+        "emptystate": {
+          "illustration": {
+            "primary": {
+              "S": {
+                "$type": "sizing",
+                "$value": "{global.size.macro.M} * 5",
+                "$description": "Illustration size for small error and empty states"
+              },
+              "M": {
+                "$type": "sizing",
+                "$value": "{global.size.macro.M} * 6",
+                "$description": "Illustration size for medium error and empty states"
+              },
+              "L": {
+                "$type": "sizing",
+                "$value": "{global.size.macro.M} * 8",
+                "$description": "Illustration size for large error and empty states"
+              }
+            },
+            "secondary": {
+              "$type": "sizing",
+              "$value": "{global.size.macro.M} + {button.size.icon.M}",
+              "$description": "Illustration size for secondary empty states"
+            }
+          }
         }
       },
       "icon": {
