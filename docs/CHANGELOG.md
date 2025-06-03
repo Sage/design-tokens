@@ -1,3 +1,9 @@
+## [14.8.0](https://github.com/Sage/design-tokens/compare/v14.7.0...v14.8.0) (2025-06-03)
+
+### Features
+
+* **Table border width:** Edit and add table border-width tokens. ([847c877](https://github.com/Sage/design-tokens/commit/847c877b7d22bf7162841ed9aee192c5f009a23a)), closes [#522](https://github.com/Sage/design-tokens/issues/522)
+
 ## [14.7.0](https://github.com/Sage/design-tokens/compare/v14.6.0...v14.7.0) (2025-06-02)
 
 ### Features
