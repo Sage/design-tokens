@@ -167,12 +167,17 @@
       "thin": {
         "$type": "borderWidth",
         "$value": "{global.borderwidth.XS}",
-        "$description": "Table border"
+        "$description": "Table border. Optional choice of cell border width."
+      },
+      "medium": {
+        "$type": "borderWidth",
+        "$value": "{global.borderwidth.S}",
+        "$description": "Header border for subtle. Optional choice of cell border width."
       },
       "thick": {
         "$type": "borderWidth",
-        "$value": "{global.borderwidth.S}",
-        "$description": "header border for subtle"
+        "$value": "{global.borderwidth.M}",
+        "$description": "Optional choice of cell border width."
       }
     },
     "space": {
