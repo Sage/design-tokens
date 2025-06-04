@@ -1,3 +1,9 @@
+## [14.9.0](https://github.com/Sage/design-tokens/compare/v14.8.0...v14.9.0) (2025-06-04)
+
+### Features
+
+* **Typography:** Add responsive and adaptive section tokens to: ([#523](https://github.com/Sage/design-tokens/issues/523)) ([44026e6](https://github.com/Sage/design-tokens/commit/44026e6af07902787a2043119198d70e650b6013))
+
 ## [14.8.0](https://github.com/Sage/design-tokens/compare/v14.7.0...v14.8.0) (2025-06-03)
 
 ### Features
