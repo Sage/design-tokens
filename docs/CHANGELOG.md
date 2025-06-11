@@ -1,3 +1,9 @@
+## [15.1.0](https://github.com/Sage/design-tokens/compare/v15.0.0...v15.1.0) (2025-06-11)
+
+### Features
+
+* **Left Navigation:** Increase parent container token width to 146px to allow for german translations ([#529](https://github.com/Sage/design-tokens/issues/529)) ([42d6509](https://github.com/Sage/design-tokens/commit/42d6509c95c0aab1b0b25e8cc44e36dfcab3f489))
+
 ## [15.0.0](https://github.com/Sage/design-tokens/compare/v14.9.1...v15.0.0) (2025-06-11)
 
 ### ⚠ BREAKING CHANGES
