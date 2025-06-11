@@ -1,3 +1,9 @@
+## [14.9.1](https://github.com/Sage/design-tokens/compare/v14.9.0...v14.9.1) (2025-06-11)
+
+### Bug Fixes
+
+* **Nav:** Adjust nav to allow more characters to be passed in. ([#526](https://github.com/Sage/design-tokens/issues/526)) ([c6c086d](https://github.com/Sage/design-tokens/commit/c6c086db393b74453c1ab0377fdd023a186acc40))
+
 ## [14.9.0](https://github.com/Sage/design-tokens/compare/v14.8.0...v14.9.0) (2025-06-04)
 
 ### Features
