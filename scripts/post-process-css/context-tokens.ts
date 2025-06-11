@@ -2,7 +2,7 @@ import { CssProperty } from "./css-parser/css-parser.types.js";
 import { findDuplicates } from "./helpers.js";
 import { ScreenSizeTokens } from "./screen-size-tokens.js";
 
-const VALID_CONTEXT_NAMES = ["frozenproduct", "marketing", "product"] as const;
+const VALID_CONTEXT_NAMES = ["frozenproduct", "product"] as const;
 type ContextName = (typeof VALID_CONTEXT_NAMES)[number];
 export class ContextTokens {
   public readonly context: ContextName;
