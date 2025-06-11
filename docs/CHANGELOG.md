@@ -1,3 +1,13 @@
+## [15.0.0](https://github.com/Sage/design-tokens/compare/v14.9.1...v15.0.0) (2025-06-11)
+
+### ⚠ BREAKING CHANGES
+
+* **Marketing:** remove support for marketing theme as its not consumed by sage.com  (#527)
+
+### Miscellaneous Chores
+
+* **Marketing:** remove support for marketing theme as its not consumed by sage.com  ([#527](https://github.com/Sage/design-tokens/issues/527)) ([76bd0a8](https://github.com/Sage/design-tokens/commit/76bd0a8d48c0815eb849d89af10506e8ee6cdf9a))
+
 ## [14.9.1](https://github.com/Sage/design-tokens/compare/v14.9.0...v14.9.1) (2025-06-11)
 
 ### Bug Fixes
