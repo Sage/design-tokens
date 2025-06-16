@@ -1,3 +1,9 @@
+## [15.2.1](https://github.com/Sage/design-tokens/compare/v15.2.0...v15.2.1) (2025-06-16)
+
+### Bug Fixes
+
+* **build:** include context tokens into build script ([86ab97c](https://github.com/Sage/design-tokens/commit/86ab97c452978d81039de60abcea8807dcd56296))
+
 ## [15.2.0](https://github.com/Sage/design-tokens/compare/v15.1.0...v15.2.0) (2025-06-16)
 
 ### Features
