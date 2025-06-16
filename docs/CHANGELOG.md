@@ -1,3 +1,9 @@
+## [15.2.0](https://github.com/Sage/design-tokens/compare/v15.1.0...v15.2.0) (2025-06-16)
+
+### Features
+
+* **Dropdown option subtext:** ([#532](https://github.com/Sage/design-tokens/issues/532)) ([f9e3907](https://github.com/Sage/design-tokens/commit/f9e39077545b248639a035cb6df74ffe429eb5a9))
+
 ## [15.1.0](https://github.com/Sage/design-tokens/compare/v15.0.0...v15.1.0) (2025-06-11)
 
 ### Features
