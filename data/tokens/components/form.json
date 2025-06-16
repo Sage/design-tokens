@@ -1226,6 +1226,11 @@
         "label-hover": {
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.withHover}"
+        },
+        "label-subtext": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.defaultAlt3}",
+          "$description": "Option subtext."
         }
       },
       "labelset": {
@@ -1636,6 +1641,10 @@
           }
         },
         "default": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.adaptive.component.moderate.XS}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.adaptive.component.moderate.S}"
@@ -1666,6 +1675,10 @@
           }
         },
         "default": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typography.responsive.component.moderate.XS}"
+          },
           "S": {
             "$type": "typography",
             "$value": "{global.typography.responsive.component.moderate.S}"
