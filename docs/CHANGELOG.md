@@ -1,3 +1,9 @@
+## [15.3.0](https://github.com/Sage/design-tokens/compare/v15.2.2...v15.3.0) (2025-06-18)
+
+### Features
+
+* **Table:** Add and edit color tokens. ([#536](https://github.com/Sage/design-tokens/issues/536)) ([5976e12](https://github.com/Sage/design-tokens/commit/5976e12559e4a335aa252b3adb0299587c96e165))
+
 ## [15.2.2](https://github.com/Sage/design-tokens/compare/v15.2.1...v15.2.2) (2025-06-18)
 
 ### Bug Fixes
