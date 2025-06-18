@@ -1,3 +1,9 @@
+## [15.2.2](https://github.com/Sage/design-tokens/compare/v15.2.1...v15.2.2) (2025-06-18)
+
+### Bug Fixes
+
+* **Mode and refactor Themes:** Revert one mode value, and sync theme. ([#535](https://github.com/Sage/design-tokens/issues/535)) ([8522235](https://github.com/Sage/design-tokens/commit/8522235a9207ba7a97670c6b1c91b63b17819fa2))
+
 ## [15.2.1](https://github.com/Sage/design-tokens/compare/v15.2.0...v15.2.1) (2025-06-16)
 
 ### Bug Fixes
