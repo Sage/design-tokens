@@ -61,11 +61,13 @@
       "row": {
         "bg-activated": {
           "$type": "color",
-          "$value": "{modes.color.interactive.primary.default}"
+          "$value": "#f0f",
+          "$description": "TO BE DEPRECATED (was {modes.color.interactive.primary.default})"
         },
         "bg-active": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
+          "$value": "#F6F",
+          "$description": "TO BE DEPRECATED (was {modes.color.interactive.monochrome.active})"
         },
         "bg-default": {
           "$type": "color",
@@ -79,7 +81,7 @@
         "bg-alt2": {
           "$type": "color",
           "$value": "{modes.color.generic.bg.soft}",
-          "$description": "Zebra stripes combined with child rows."
+          "$description": "Zebra stripes combined with child rows. Highlighted rows."
         },
         "bg-alt3": {
           "$type": "color",
@@ -88,7 +90,11 @@
         },
         "bg-hover": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.soft}"
+          "$value": "{modes.color.generic.bg.moderate}"
+        },
+        "bg-selected": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.active}"
         },
         "border-default": {
           "$type": "color",
@@ -96,9 +102,15 @@
         },
         "label-activated": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActive}"
+          "$value": "#FAF",
+          "$description": "TO BE DEPRECATED (was {modes.color.interactive.monochrome.withActive})"
         },
         "label-active": {
+          "$type": "color",
+          "$value": "#FDF",
+          "$description": "TO BE DEPRECATED (was {modes.color.interactive.monochrome.withActive})"
+        },
+        "label-selected": {
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.withActive}"
         },
@@ -114,7 +126,7 @@
       "footer": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.soft}"
+          "$value": "{modes.color.generic.bg.moderate}"
         },
         "border-default": {
           "$type": "color",
