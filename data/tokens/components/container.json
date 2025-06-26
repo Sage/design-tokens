@@ -54,7 +54,7 @@
           "$value": "{modes.color.generic.bg.nought}",
           "$description": "tile footer bg color "
         },
-        "bg-enabled": {
+        "bg-default": {
           "$type": "color",
           "$value": "{modes.color.generic.bg.nought}"
         },
@@ -85,7 +85,7 @@
           "$type": "color",
           "$value": "{modes.color.generic.fg.soft}"
         },
-        "border-enabled": {
+        "border-default": {
           "$type": "color",
           "$value": "{modes.color.generic.fg.moderate}"
         },
@@ -94,12 +94,12 @@
           "$value": "{modes.color.interactive.monochrome.active}",
           "$description": "Active chevron for any accordion."
         },
-        "icon-enabled": {
+        "icon-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.default}",
           "$description": "Enabled chevron for any accordion."
         },
-        "iconAlt-enabled": {
+        "iconAlt-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.defaultAlt}",
           "$description": "Enabled label for subtle accordion."
@@ -126,12 +126,12 @@
           "$type": "color",
           "$value": "{modes.color.interactive.inactive.content}"
         },
-        "text-enabled": {
+        "text-default": {
           "$type": "color",
           "$value": "{modes.color.generic.content.harsh}",
           "$description": "Enabled label for standard accordion."
         },
-        "textAlt-enabled": {
+        "textAlt-default": {
           "$type": "color",
           "$value": "{modes.color.generic.content.moderate}",
           "$description": "Enabled label for subtle accordion."
@@ -1448,9 +1448,9 @@
         "$description": "Sticky footer in Dialog, Drawer, Sidebar."
       },
       "card": {
-        "enabled": {
+        "default": {
           "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.enabled}",
+          "$value": "{global.boxshadow.interactive.default}",
           "$description": "Card (enabled)"
         },
         "hover": {
@@ -1549,7 +1549,7 @@
           "$value": "{global.borderwidth.XS}",
           "$description": "File preview (internal borders) "
         },
-        "enabled": {
+        "default": {
           "$type": "borderWidth",
           "$value": "{global.borderwidth.XS}",
           "$description": "File preview (file selector) "
@@ -1581,7 +1581,7 @@
           "$value": "{global.borderwidth.XS}",
           "$description": "Subscription tile (unavailable product)"
         },
-        "enabled": {
+        "default": {
           "$type": "borderWidth",
           "$value": "{global.borderwidth.XS}",
           "$description": "Tile select (enabled tile)"
