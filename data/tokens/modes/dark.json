@@ -305,6 +305,115 @@
               "$value": "{primitives.colors.navy}",
               "$description": "Consumed within frozen table"
             }
+          },
+          "inverse": {
+            "nought": {
+              "$type": "color",
+              "$value": "{primitives.colors.white}"
+            },
+            "faint": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.04",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "delicate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.08",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "soft": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.117",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "moderate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.16",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "firm": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.24",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "harsh": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.32",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "severe": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.40",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "extreme": {
+              "$type": "color",
+              "$value": "{primitives.colors.black}",
+              "$description": "Consumed within generic monochrome, progress"
+            }
           }
         },
         "content": {
