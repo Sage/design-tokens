@@ -47,6 +47,30 @@
           "$type": "boxShadow",
           "$value": "{primitives.box-shadow.solid.border}",
           "$description": "Solid border using box shadow tokens when using the border property is not possible. "
+        },
+        "inverse": {
+          "sticky-footer": {
+            "$type": "boxShadow",
+            "$value": [
+              {
+                "x": "0",
+                "y": "-1",
+                "blur": "2",
+                "spread": "0",
+                "color": "#ffffff1A",
+                "type": "dropShadow"
+              },
+              {
+                "x": "2",
+                "y": "-2",
+                "blur": "10",
+                "spread": "0",
+                "color": "#ffffff33",
+                "type": "dropShadow"
+              }
+            ],
+            "$description": "Sticky footer on dialogs, drawer and sidebar"
+          }
         }
       },
       "inner": {

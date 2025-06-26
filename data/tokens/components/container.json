@@ -241,6 +241,26 @@
             "$type": "color",
             "$value": "{modes.color.status.positive.default}"
           }
+        },
+        "inverse": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.bg.inverse.nought}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.fg.inverse.faint}"
+          },
+          "text-alt": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.inverse.moderate}",
+            "$description": "for subheadings etc"
+          },
+          "text-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.inverse.harsh}",
+            "$description": "for headings, paragraph text etc "
+          }
         }
       }
     },
@@ -1446,6 +1466,13 @@
         "$type": "boxShadow",
         "$value": "{global.boxshadow.container.sticky-footer}",
         "$description": "Sticky footer in Dialog, Drawer, Sidebar."
+      },
+      "inverse": {
+        "stickyfooter": {
+          "$type": "boxShadow",
+          "$value": "{global.boxshadow.container.inverse.sticky-footer}",
+          "$description": "inverse Sticky footer in Dialog, Drawer, Sidebar."
+        }
       },
       "card": {
         "default": {
