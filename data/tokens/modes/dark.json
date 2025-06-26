@@ -657,6 +657,70 @@
               "$value": "{primitives.colors.lightAiH}",
               "$description": "Dialog top border treatment"
             }
+          },
+          "inverse": {
+            "nought": {
+              "$type": "color",
+              "$value": "{modes.color.modifier.contrastMore}"
+            },
+            "faint": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.08",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.inverse.nought}",
+              "$description": "table dividers and borders"
+            },
+            "delicate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.16",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.inverse.nought}",
+              "$description": "table dividers and borders"
+            },
+            "soft": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.32",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.inverse.nought}"
+            },
+            "moderate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.50",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.nought}"
+            }
           }
         },
         "backdrop": {
