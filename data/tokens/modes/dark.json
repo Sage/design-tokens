@@ -1509,6 +1509,61 @@
             "$type": "color",
             "$value": "{modes.color.generic.content.extreme}",
             "$description": "hover bg for nav items"
+          },
+          "inverse": {
+            "active": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.35",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{primitives.colors.black}",
+              "$description": "active bg for nav items"
+            },
+            "default": {
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}",
+              "$description": "default bg for global nav"
+            },
+            "defaultAlt": {
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.faint}",
+              "$description": "default bg for left nav container"
+            },
+            "hover": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{primitives.color.modifiers.button.hover}",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{primitives.colors.black}",
+              "$description": "hover bg for nav items"
+            },
+            "withActive": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.nought}",
+              "$description": "text and icons on top of active bgs in nav contexts"
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.harsh}",
+              "$description": "hover bg for nav items"
+            },
+            "withHover": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.nought}",
+              "$description": "hover bg for nav items"
+            }
           }
         },
         "primary": {
