@@ -492,6 +492,84 @@
           "nought": {
             "$type": "color",
             "$value": "{modes.color.modifier.contrastLess}"
+          },
+          "inverse": {
+            "extreme": {
+              "$type": "color",
+              "$value": "{primitives.colors.black}"
+            },
+            "harsh": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.95",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}"
+            },
+            "firm": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}"
+            },
+            "moderate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.55",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}",
+              "$description": "was 0.5. Increased to 0.55 so that we can use this for hint text etc too, and still be accessible."
+            },
+            "muted": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.42",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}",
+              "$description": "accessible OBJECT against white."
+            },
+            "soft": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.3",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}",
+              "$description": "Used for disabled text"
+            },
+            "nought": {
+              "$type": "color",
+              "$value": "{modes.color.modifier.contrastMore}"
+            }
           }
         },
         "fg": {

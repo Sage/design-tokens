@@ -800,73 +800,71 @@
       }
     },
     "fontSize": {
-      "responsive": {
-        "product": {
-          "stepMinus2": {
-            "$type": "fontSizes",
-            "$value": "clamp(0.6733rem, 0.7398rem + -0.0831vw, 0.7231rem)",
-            "$description": "Small Viewports: 11.57, Large Viewports: 10.77"
-          },
-          "stepMinus1": {
-            "$type": "fontSizes",
-            "$value": "clamp(0.7675rem, 0.8048rem + -0.0465vw, 0.7955rem)",
-            "$description": "Small Viewports: 12.73, Large Viewports: 12.28"
-          },
-          "step0": {
-            "$type": "fontSizes",
-            "$value": "clamp(0.875rem, 0.875rem + 0vw, 0.875rem)",
-            "$description": "Small Viewports: 14, Large Viewports: 14"
-          },
-          "step1": {
-            "$type": "fontSizes",
-            "$value": "clamp(0.9625rem, 0.9508rem + 0.0583vw, 0.9975rem)",
-            "$description": "Small Viewports: 15.40, Large Viewports: 15.96"
-          },
-          "step2": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.0588rem, 1.0326rem + 0.1307vw, 1.1372rem)",
-            "$description": "Small Viewports: 16.94, Large Viewports: 18.91"
-          },
-          "step3": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.1646rem, 1.1207rem + 0.2195vw, 1.2964rem)",
-            "$description": "Small Viewports: 18.63, Large Viewports: 20.74"
-          },
-          "step4": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.2811rem, 1.2155rem + 0.3279vw, 1.4778rem)",
-            "$description": "Small Viewports: 20.50, Large Viewports: 23.65"
-          },
-          "step5": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.4092rem, 1.3173rem + 0.4592vw, 1.6847rem)",
-            "$description": "Small Viewports: 22.55, Large Viewports: 26.96"
-          },
-          "step6": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.5869rem, 1.417rem + 0.8494vw, 2.4363rem)",
-            "$description": "Small Viewports: 25.39, Large Viewports: 38.98"
-          },
-          "step7": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.7051rem, 1.5437rem + 0.8073vw, 2.1895rem)",
-            "$description": "Small Viewports: 27.28, Large Viewports: 35.03"
-          },
-          "step8": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.8756rem, 1.6688rem + 1.034vw, 2.496rem)",
-            "$description": "Small Viewports: 30.01 Large Viewports: 39.94"
-          },
-          "step9": {
-            "$type": "fontSizes",
-            "$value": "clamp(2.0632rem, 1.8025rem + 1.3038vw, 2.8455rem)",
-            "$description": "Small Viewports: 33.01, Large Viewports: 45.53"
-          },
-          "step10": {
-            "$type": "fontSizes",
-            "$value": "clamp(2.2695rem, 1.9448rem + 1.6238vw, 3.2438rem)",
-            "$description": "Small Viewports: 36.31, Large Viewports: 51.90"
-          }
+      "fluid": {
+        "stepMinus2": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.6733rem, 0.7398rem + -0.0831vw, 0.7231rem)",
+          "$description": "Small Viewports: 11.57, Large Viewports: 10.77"
+        },
+        "stepMinus1": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.7675rem, 0.8048rem + -0.0465vw, 0.7955rem)",
+          "$description": "Small Viewports: 12.73, Large Viewports: 12.28"
+        },
+        "step0": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.875rem, 0.875rem + 0vw, 0.875rem)",
+          "$description": "Small Viewports: 14, Large Viewports: 14"
+        },
+        "step1": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.9625rem, 0.9508rem + 0.0583vw, 0.9975rem)",
+          "$description": "Small Viewports: 15.40, Large Viewports: 15.96"
+        },
+        "step2": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.0588rem, 1.0326rem + 0.1307vw, 1.1372rem)",
+          "$description": "Small Viewports: 16.94, Large Viewports: 18.91"
+        },
+        "step3": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.1646rem, 1.1207rem + 0.2195vw, 1.2964rem)",
+          "$description": "Small Viewports: 18.63, Large Viewports: 20.74"
+        },
+        "step4": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.2811rem, 1.2155rem + 0.3279vw, 1.4778rem)",
+          "$description": "Small Viewports: 20.50, Large Viewports: 23.65"
+        },
+        "step5": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.4092rem, 1.3173rem + 0.4592vw, 1.6847rem)",
+          "$description": "Small Viewports: 22.55, Large Viewports: 26.96"
+        },
+        "step6": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.5869rem, 1.417rem + 0.8494vw, 2.4363rem)",
+          "$description": "Small Viewports: 25.39, Large Viewports: 38.98"
+        },
+        "step7": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.7051rem, 1.5437rem + 0.8073vw, 2.1895rem)",
+          "$description": "Small Viewports: 27.28, Large Viewports: 35.03"
+        },
+        "step8": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.8756rem, 1.6688rem + 1.034vw, 2.496rem)",
+          "$description": "Small Viewports: 30.01 Large Viewports: 39.94"
+        },
+        "step9": {
+          "$type": "fontSizes",
+          "$value": "clamp(2.0632rem, 1.8025rem + 1.3038vw, 2.8455rem)",
+          "$description": "Small Viewports: 33.01, Large Viewports: 45.53"
+        },
+        "step10": {
+          "$type": "fontSizes",
+          "$value": "clamp(2.2695rem, 1.9448rem + 1.6238vw, 3.2438rem)",
+          "$description": "Small Viewports: 36.31, Large Viewports: 51.90"
         }
       },
       "icon": {
@@ -874,6 +872,114 @@
           "$type": "fontSizes",
           "$value": "20px",
           "$description": "Small viewports: 20px, Large viewports: 20px."
+        }
+      },
+      "adaptiveSmall": {
+        "stepMinus2": {
+          "$type": "fontSizes",
+          "$value": "12"
+        },
+        "stepMinus1": {
+          "$type": "fontSizes",
+          "$value": "13"
+        },
+        "step0": {
+          "$type": "fontSizes",
+          "$value": "14"
+        },
+        "step1": {
+          "$type": "fontSizes",
+          "$value": "16"
+        },
+        "step2": {
+          "$type": "fontSizes",
+          "$value": "17"
+        },
+        "step3": {
+          "$type": "fontSizes",
+          "$value": "19"
+        },
+        "step4": {
+          "$type": "fontSizes",
+          "$value": "21"
+        },
+        "step5": {
+          "$type": "fontSizes",
+          "$value": "23"
+        },
+        "step6": {
+          "$type": "fontSizes",
+          "$value": "25"
+        },
+        "step7": {
+          "$type": "fontSizes",
+          "$value": "27"
+        },
+        "step8": {
+          "$type": "fontSizes",
+          "$value": "30"
+        },
+        "step9": {
+          "$type": "fontSizes",
+          "$value": "33"
+        },
+        "step10": {
+          "$type": "fontSizes",
+          "$value": "36"
+        }
+      },
+      "adaptiveLarge": {
+        "stepMinus2": {
+          "$type": "fontSizes",
+          "$value": "12"
+        },
+        "stepMinus1": {
+          "$type": "fontSizes",
+          "$value": "13"
+        },
+        "step0": {
+          "$type": "fontSizes",
+          "$value": "14"
+        },
+        "step1": {
+          "$type": "fontSizes",
+          "$value": "16"
+        },
+        "step2": {
+          "$type": "fontSizes",
+          "$value": "18"
+        },
+        "step3": {
+          "$type": "fontSizes",
+          "$value": "21"
+        },
+        "step4": {
+          "$type": "fontSizes",
+          "$value": "24"
+        },
+        "step5": {
+          "$type": "fontSizes",
+          "$value": "27"
+        },
+        "step6": {
+          "$type": "fontSizes",
+          "$value": "30"
+        },
+        "step7": {
+          "$type": "fontSizes",
+          "$value": "35"
+        },
+        "step8": {
+          "$type": "fontSizes",
+          "$value": "40"
+        },
+        "step9": {
+          "$type": "fontSizes",
+          "$value": "46"
+        },
+        "step10": {
+          "$type": "fontSizes",
+          "$value": "52"
         }
       }
     },

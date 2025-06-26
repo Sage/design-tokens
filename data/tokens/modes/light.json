@@ -493,6 +493,84 @@
             "$type": "color",
             "$value": "{modes.color.modifier.contrastLess}",
             "$description": "pill hover X"
+          },
+          "inverse": {
+            "extreme": {
+              "$type": "color",
+              "$value": "{primitives.colors.white}"
+            },
+            "harsh": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.95",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}"
+            },
+            "firm": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}"
+            },
+            "moderate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.55",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}",
+              "$description": "was 0.5. Increased to 0.55 so that we can use this for hint text etc too, and still be accessible."
+            },
+            "muted": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.42",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}",
+              "$description": "accessible OBJECT against white."
+            },
+            "soft": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.3",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}",
+              "$description": "Used for disabled text"
+            },
+            "nought": {
+              "$type": "color",
+              "$value": "{modes.color.modifier.contrastMore}"
+            }
           }
         },
         "fg": {
@@ -1401,12 +1479,12 @@
             },
             "default": {
               "$type": "color",
-              "$value": "{modes.color.generic.bg.nought}",
+              "$value": "{modes.color.generic.bg.inverse.nought}",
               "$description": "default bg for global nav"
             },
             "defaultAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.bg.moderate}",
+              "$value": "{modes.color.generic.bg.inverse.moderate}",
               "$description": "default bg for left nav container"
             },
             "hover": {
@@ -1425,17 +1503,17 @@
             },
             "withActive": {
               "$type": "color",
-              "$value": "{modes.color.generic.content.extreme}",
+              "$value": "{modes.color.generic.content.nought}",
               "$description": "text and icons on top of active bgs in nav contexts"
             },
             "withDefault": {
               "$type": "color",
-              "$value": "{modes.color.generic.content.harsh}",
+              "$value": "{modes.color.generic.content.inverse.harsh}",
               "$description": "hover bg for nav items"
             },
             "withHover": {
               "$type": "color",
-              "$value": "{modes.color.generic.content.extreme}",
+              "$value": "{modes.color.generic.content.nought}",
               "$description": "hover bg for nav items"
             }
           }
