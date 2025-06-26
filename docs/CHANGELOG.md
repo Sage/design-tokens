@@ -1,3 +1,9 @@
+## [15.4.0](https://github.com/Sage/design-tokens/compare/v15.3.0...v15.4.0) (2025-06-26)
+
+### Features
+
+* **Label Set:** Add top adding to inline labelsets in order to align baseline of input text and label text. ([#539](https://github.com/Sage/design-tokens/issues/539)) ([c7507ca](https://github.com/Sage/design-tokens/commit/c7507ca832e1e0337b61b8c77ef7226fa2c3287e))
+
 ## [15.3.0](https://github.com/Sage/design-tokens/compare/v15.2.2...v15.3.0) (2025-06-18)
 
 ### Features
