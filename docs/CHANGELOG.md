@@ -1,3 +1,13 @@
+## [16.0.0](https://github.com/Sage/design-tokens/compare/v15.4.0...v16.0.0) (2025-06-27)
+
+### ⚠ BREAKING CHANGES
+
+* **Container:** Added inverse tokens to support dark variant of sidebar (#540)
+
+### Features
+
+* **Container:** Added inverse tokens to support dark variant of sidebar ([#540](https://github.com/Sage/design-tokens/issues/540)) ([4bfe74f](https://github.com/Sage/design-tokens/commit/4bfe74fa729a913df7ac5849822892146673d885))
+
 ## [15.4.0](https://github.com/Sage/design-tokens/compare/v15.3.0...v15.4.0) (2025-06-26)
 
 ### Features
