@@ -645,25 +645,6 @@
           }
         }
       },
-      "layout": {
-        "stack": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Spacing between horizontal and vertical S form components"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.S}",
-            "$description": "Spacing between horizontal and vertical M form components"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Spacing between horizontal and vertical L form components"
-          }
-        }
-      },
       "switch": {
         "xg": {
           "M": {
@@ -1209,7 +1190,7 @@
           "$type": "color",
           "$value": "{modes.color.interactive.dataEntry.content}"
         },
-        "text-enabled": {
+        "text-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.dataEntry.content}"
         },
@@ -1217,7 +1198,7 @@
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.withHover}"
         },
-        "textAlt-enabled": {
+        "textAlt-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.dataEntry.contentAlt}"
         }
@@ -1240,7 +1221,7 @@
           "$type": "color",
           "$value": "{modes.color.interactive.inactive.content}"
         },
-        "label-enabled": {
+        "label-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.defaultAlt}"
         },
@@ -1291,10 +1272,6 @@
           "$type": "color",
           "$value": "{modes.color.interactive.dataEntry.default}"
         },
-        "bg-enabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.default}"
-        },
         "bg-hover": {
           "$type": "color",
           "$value": "{modes.color.interactive.dataEntry.hoverAlt}"
@@ -1307,7 +1284,7 @@
           "$type": "color",
           "$value": "{modes.color.interactive.inactive.default}"
         },
-        "border-enabled": {
+        "border-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.dataEntry.withDefault}"
         },
@@ -1336,10 +1313,6 @@
         "icon-disabled": {
           "$type": "color",
           "$value": "{modes.color.interactive.inactive.icon}"
-        },
-        "icon-enabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.content}"
         },
         "icon-hover": {
           "$type": "color",
@@ -1370,11 +1343,6 @@
           "$type": "color",
           "$value": "{modes.color.interactive.inactive.content}"
         },
-        "text-enabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.content}",
-          "$description": "Dropdown text (subtle dropdown)."
-        },
         "text-hover": {
           "$type": "color",
           "$value": "{modes.color.interactive.dataEntry.withHover}",
@@ -1399,7 +1367,7 @@
           "$value": "{modes.color.interactive.inactive.defaultAlt}",
           "$description": "for switch"
         },
-        "bg-enabled": {
+        "bg-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.dataEntry.default}",
           "$description": "for switch"
@@ -1416,7 +1384,7 @@
           "$type": "color",
           "$value": "{modes.color.interactive.inactive.default}"
         },
-        "border-enabled": {
+        "border-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.subtle.defaultAlt}"
         },
@@ -1432,7 +1400,7 @@
           "$type": "color",
           "$value": "{modes.color.interactive.inactive.default}"
         },
-        "fg-enabled": {
+        "fg-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.subtle.defaultAlt}"
         },
@@ -1448,11 +1416,11 @@
           "$type": "color",
           "$value": "{modes.color.interactive.inactive.default}"
         },
-        "label-enabled": {
+        "label-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.dataEntry.contentAlt}"
         },
-        "icon-enabled": {
+        "icon-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.dataEntry.contentAlt}"
         }
@@ -1643,76 +1611,6 @@
         "$type": "boxShadow",
         "$value": "{popover.boxshadow.container}",
         "$description": "REF POPOVER. popover container"
-      }
-    },
-    "typography": {
-      "adaptive": {
-        "label": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.L}"
-          }
-        },
-        "default": {
-          "XS": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.XS}"
-          },
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.L}"
-          }
-        }
-      },
-      "responsive": {
-        "label": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.L}"
-          }
-        },
-        "default": {
-          "XS": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.XS}"
-          },
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.L}"
-          }
-        }
       }
     }
   }

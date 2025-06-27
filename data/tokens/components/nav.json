@@ -15,7 +15,7 @@
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.hoverAlt}"
         },
-        "bg-enabled": {
+        "bg-default": {
           "$type": "color",
           "$value": "{modes.color.none}"
         },
@@ -31,7 +31,7 @@
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.withHover}"
         },
-        "label-enabled": {
+        "label-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.default}"
         },
@@ -70,44 +70,44 @@
         "container": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.generic.bg.nought}",
+            "$value": "{modes.color.generic.bg.inverse.nought}",
             "$description": "bg of horizontal nav variant that launches the left nav"
           },
           "bg-defaultAlt": {
             "$type": "color",
-            "$value": "{modes.color.generic.backdrop.faint}",
+            "$value": "{modes.color.interactive.nav.inverse.defaultAlt}",
             "$description": "bg of the parent container"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.generic.fg.soft}",
+            "$value": "{modes.color.generic.fg.inverse.soft}",
             "$description": "dividing lines within parent container"
           }
         },
         "item": {
           "bg-active": {
             "$type": "color",
-            "$value": "{modes.color.interactive.nav.active}"
+            "$value": "{modes.color.interactive.nav.inverse.active}"
           },
-          "bg-enabled": {
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.none}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.interactive.nav.hover}"
+            "$value": "{modes.color.interactive.nav.inverse.hover}"
           },
           "label-active": {
             "$type": "color",
-            "$value": "{modes.color.interactive.nav.withActive}"
+            "$value": "{modes.color.interactive.nav.inverse.withActive}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
-            "$value": "{modes.color.interactive.nav.withDefault}"
+            "$value": "{modes.color.interactive.nav.inverse.withDefault}"
           },
           "label-hover": {
             "$type": "color",
-            "$value": "{modes.color.interactive.nav.withHover}"
+            "$value": "{modes.color.interactive.nav.inverse.withHover}"
           }
         }
       },
@@ -134,7 +134,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.nav.active}"
           },
-          "bg-enabled": {
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.none}"
           },
@@ -146,7 +146,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.nav.withActive}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.nav.withDefault}"
           },
@@ -181,7 +181,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.nav.active}"
           },
-          "bg-enabled": {
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.none}"
           },
@@ -193,7 +193,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.nav.withActive}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.nav.withDefault}"
           },
@@ -947,68 +947,6 @@
               "$value": "{global.space.macro.XXXS} / 2",
               "$description": "vertical padding on stacked parent items"
             }
-          }
-        }
-      }
-    },
-    "typography": {
-      "adaptive": {
-        "label": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.XS}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.L}"
-          }
-        },
-        "default": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.XS}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.L}"
-          }
-        }
-      },
-      "responsive": {
-        "label": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.XS}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.L}"
-          }
-        },
-        "default": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.XS}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.L}"
           }
         }
       }

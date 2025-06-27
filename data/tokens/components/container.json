@@ -54,7 +54,7 @@
           "$value": "{modes.color.generic.bg.nought}",
           "$description": "tile footer bg color "
         },
-        "bg-enabled": {
+        "bg-default": {
           "$type": "color",
           "$value": "{modes.color.generic.bg.nought}"
         },
@@ -85,7 +85,7 @@
           "$type": "color",
           "$value": "{modes.color.generic.fg.soft}"
         },
-        "border-enabled": {
+        "border-default": {
           "$type": "color",
           "$value": "{modes.color.generic.fg.moderate}"
         },
@@ -94,12 +94,12 @@
           "$value": "{modes.color.interactive.monochrome.active}",
           "$description": "Active chevron for any accordion."
         },
-        "icon-enabled": {
+        "icon-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.default}",
           "$description": "Enabled chevron for any accordion."
         },
-        "iconAlt-enabled": {
+        "iconAlt-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.defaultAlt}",
           "$description": "Enabled label for subtle accordion."
@@ -126,12 +126,12 @@
           "$type": "color",
           "$value": "{modes.color.interactive.inactive.content}"
         },
-        "text-enabled": {
+        "text-default": {
           "$type": "color",
           "$value": "{modes.color.generic.content.harsh}",
           "$description": "Enabled label for standard accordion."
         },
-        "textAlt-enabled": {
+        "textAlt-default": {
           "$type": "color",
           "$value": "{modes.color.generic.content.moderate}",
           "$description": "Enabled label for subtle accordion."
@@ -240,6 +240,26 @@
           "bg-positive": {
             "$type": "color",
             "$value": "{modes.color.status.positive.default}"
+          }
+        },
+        "inverse": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.bg.inverse.nought}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.fg.inverse.faint}"
+          },
+          "text-alt": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.inverse.moderate}",
+            "$description": "for subheadings etc"
+          },
+          "text-default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.inverse.harsh}",
+            "$description": "for headings, paragraph text etc "
           }
         }
       }
@@ -1447,10 +1467,17 @@
         "$value": "{global.boxshadow.container.sticky-footer}",
         "$description": "Sticky footer in Dialog, Drawer, Sidebar."
       },
-      "card": {
-        "enabled": {
+      "inverse": {
+        "stickyfooter": {
           "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.enabled}",
+          "$value": "{global.boxshadow.container.inverse.sticky-footer}",
+          "$description": "inverse Sticky footer in Dialog, Drawer, Sidebar."
+        }
+      },
+      "card": {
+        "default": {
+          "$type": "boxShadow",
+          "$value": "{global.boxshadow.interactive.default}",
           "$description": "Card (enabled)"
         },
         "hover": {
@@ -1549,7 +1576,7 @@
           "$value": "{global.borderwidth.XS}",
           "$description": "File preview (internal borders) "
         },
-        "enabled": {
+        "default": {
           "$type": "borderWidth",
           "$value": "{global.borderwidth.XS}",
           "$description": "File preview (file selector) "
@@ -1581,7 +1608,7 @@
           "$value": "{global.borderwidth.XS}",
           "$description": "Subscription tile (unavailable product)"
         },
-        "enabled": {
+        "default": {
           "$type": "borderWidth",
           "$value": "{global.borderwidth.XS}",
           "$description": "Tile select (enabled tile)"
@@ -1608,106 +1635,6 @@
           "$type": "opacity",
           "$value": "0.5",
           "$description": "drag ghost state opacity value"
-        }
-      }
-    },
-    "typography": {
-      "adaptive": {
-        "heading": {
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.heading.S}",
-            "$description": "Accordion, Subscription tile, Tile select and generic tile or card headings"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.heading.M}",
-            "$description": "Dialog, drawer and sidebar headings"
-          }
-        },
-        "subheading": {
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.subheading.M}",
-            "$description": "Accordion subheading,  Step flow subheading, tile select subheading, dialog, drawer and sidebar subheading"
-          }
-        },
-        "label": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.L}"
-          }
-        },
-        "paragraph": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.L}"
-          }
-        }
-      },
-      "responsive": {
-        "heading": {
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.heading.S}",
-            "$description": "Accordion, Subscription tile, Tile select and generic tile or card headings"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.heading.M}",
-            "$description": "Dialog, drawer and sidebar headings"
-          }
-        },
-        "subheading": {
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.subheading.M}",
-            "$description": "Accordion subheading,  Step flow subheading, tile select subheading, dialog, drawer and sidebar subheading"
-          }
-        },
-        "label": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.L}"
-          }
-        },
-        "paragraph": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.L}"
-          }
         }
       }
     }

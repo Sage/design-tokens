@@ -148,86 +148,6 @@
           }
         }
       },
-      "layout": {
-        "x": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "XS left and right padding"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Small left and right padding"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Medium left and right padding"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L}",
-            "$description": "Large left and right padding"
-          }
-        },
-        "y": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "XS top and bottom padding"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Small top bottom padding"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Medium top bottom padding"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L}",
-            "$description": "Large top bottom padding"
-          }
-        },
-        "xg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Horizontal spacing between small buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "Horizontal spacing between medium buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Horizontal spacing between Large buttons"
-          }
-        },
-        "yg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Vertical spacing between small buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "Vertical spacing between medium buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Vertical spacing between Large buttons"
-          }
-        }
-      },
       "primary": {
         "x": {
           "S": {
@@ -837,7 +757,7 @@
           "$type": "color",
           "$value": "{modes.color.interactive.inactive.default}"
         },
-        "border-enabled": {
+        "border-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.ai.default}"
         },
@@ -853,7 +773,7 @@
           "$type": "color",
           "$value": "{modes.color.interactive.inactive.content}"
         },
-        "label-enabled": {
+        "label-default": {
           "$type": "color",
           "$value": "{modes.color.interactive.monochrome.default}"
         },
@@ -868,7 +788,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.default}"
           },
-          "bg-enabled": {
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.danger.default}"
           },
@@ -880,7 +800,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.contentAlt}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.danger.withDefault}"
           },
@@ -898,7 +818,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.default}"
           },
-          "border-enabled": {
+          "border-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.danger.default}"
           },
@@ -910,7 +830,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.content}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.danger.default}"
           },
@@ -926,7 +846,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.primary.active}"
           },
-          "bg-default": {
+          "border-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.primary.withDefault}",
             "$description": "For spacer in Split button"
@@ -935,7 +855,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.default}"
           },
-          "bg-enabled": {
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.primary.default}"
           },
@@ -951,7 +871,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.contentAlt}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.primary.withDefault}"
           },
@@ -964,7 +884,7 @@
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.active}"
             },
-            "bg-default": {
+            "border-default": {
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.withDefault}",
               "$description": "For spacer in Split button"
@@ -973,7 +893,7 @@
               "$type": "color",
               "$value": "{modes.color.interactive.inactive.inverse.default}"
             },
-            "bg-enabled": {
+            "bg-default": {
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.default}"
             },
@@ -989,7 +909,7 @@
               "$type": "color",
               "$value": "{modes.color.interactive.inactive.inverse.contentAlt}"
             },
-            "label-enabled": {
+            "label-default": {
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.withDefault}"
             },
@@ -1004,7 +924,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.primary.activeAlt}"
           },
-          "bg-enabled": {
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.primary.defaultAlt3}"
           },
@@ -1020,7 +940,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.default}"
           },
-          "border-enabled": {
+          "border-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.primary.defaultAlt}"
           },
@@ -1036,7 +956,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.content}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.default}"
           },
@@ -1049,7 +969,7 @@
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.activeAlt}"
             },
-            "bg-enabled": {
+            "bg-default": {
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.defaultAlt3}"
             },
@@ -1065,7 +985,7 @@
               "$type": "color",
               "$value": "{modes.color.interactive.inactive.inverse.default}"
             },
-            "border-enabled": {
+            "border-default": {
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.defaultAlt}"
             },
@@ -1081,7 +1001,7 @@
               "$type": "color",
               "$value": "{modes.color.interactive.inactive.inverse.content}"
             },
-            "label-enabled": {
+            "label-default": {
               "$type": "color",
               "$value": "{modes.color.interactive.monochrome.inverse.default}"
             },
@@ -1096,7 +1016,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.primary.activeAlt}"
           },
-          "bg-enabled": {
+          "bg-default": {
             "$type": "color",
             "$value": "{button.color.none}"
           },
@@ -1112,7 +1032,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.default}"
           },
-          "border-enabled": {
+          "border-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.primary.defaultAlt}"
           },
@@ -1128,7 +1048,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.content}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.default}"
           },
@@ -1141,7 +1061,7 @@
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.activeAlt}"
             },
-            "bg-enabled": {
+            "bg-default": {
               "$type": "color",
               "$value": "{button.color.none}"
             },
@@ -1157,7 +1077,7 @@
               "$type": "color",
               "$value": "{modes.color.interactive.inactive.inverse.default}"
             },
-            "border-enabled": {
+            "border-default": {
               "$type": "color",
               "$value": "{modes.color.interactive.primary.inverse.defaultAlt}"
             },
@@ -1173,7 +1093,7 @@
               "$type": "color",
               "$value": "{modes.color.interactive.inactive.inverse.content}"
             },
-            "label-enabled": {
+            "label-default": {
               "$type": "color",
               "$value": "{modes.color.interactive.monochrome.inverse.default}"
             },
@@ -1200,7 +1120,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.content}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.default}"
           },
@@ -1225,7 +1145,7 @@
               "$type": "color",
               "$value": "{modes.color.interactive.inactive.inverse.content}"
             },
-            "label-enabled": {
+            "label-default": {
               "$type": "color",
               "$value": "{modes.color.interactive.monochrome.inverse.default}"
             },
@@ -1252,7 +1172,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.hoverAlt}"
           },
-          "border-enabled": {
+          "border-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.default}"
           },
@@ -1268,7 +1188,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.inactive.content}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.defaultAlt}"
           },
@@ -1284,7 +1204,7 @@
           "$value": "{modes.color.interactive.monochrome.hoverAlt}"
         },
         "primary": {
-          "bg-enabled": {
+          "bg-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.withDefault}"
           },
@@ -1292,7 +1212,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.withDefault}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.default}"
           },
@@ -1306,7 +1226,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.withDefault}"
           },
-          "border-enabled": {
+          "border-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.withDefault}"
           },
@@ -1314,7 +1234,7 @@
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.withDefault}"
           },
-          "label-enabled": {
+          "label-default": {
             "$type": "color",
             "$value": "{modes.color.interactive.monochrome.withDefault}"
           },
@@ -1517,148 +1437,6 @@
         "$type": "dimension",
         "$value": "40px",
         "$description": "background blur on video"
-      }
-    },
-    "typography": {
-      "adaptive": {
-        "primary": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.L}"
-          }
-        },
-        "secondary": {
-          "XS": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.S}"
-          },
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.L}"
-          }
-        },
-        "subtle": {
-          "XS": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.S}"
-          },
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.L}"
-          }
-        },
-        "tertiary": {
-          "XS": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.S}"
-          },
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.L}"
-          }
-        }
-      },
-      "responsive": {
-        "primary": {
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.L}"
-          }
-        },
-        "secondary": {
-          "XS": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.S}"
-          },
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.L}"
-          }
-        },
-        "subtle": {
-          "XS": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.S}"
-          },
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.L}"
-          }
-        },
-        "tertiary": {
-          "XS": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.S}"
-          },
-          "S": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.S}"
-          },
-          "M": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.M}"
-          },
-          "L": {
-            "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.L}"
-          }
-        }
       }
     }
   }

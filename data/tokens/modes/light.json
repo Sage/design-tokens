@@ -305,6 +305,115 @@
               "$value": "{primitives.colors.navy}",
               "$description": "Consumed within frozen table"
             }
+          },
+          "inverse": {
+            "nought": {
+              "$type": "color",
+              "$value": "{primitives.colors.black}"
+            },
+            "faint": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.04",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "delicate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.08",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "soft": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.117",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "moderate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.16",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "firm": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.24",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "harsh": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.32",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "severe": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.40",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}"
+            },
+            "extreme": {
+              "$type": "color",
+              "$value": "{primitives.colors.white}",
+              "$description": "Consumed within generic monochrome, progress"
+            }
           }
         },
         "content": {
@@ -384,6 +493,84 @@
             "$type": "color",
             "$value": "{modes.color.modifier.contrastLess}",
             "$description": "pill hover X"
+          },
+          "inverse": {
+            "extreme": {
+              "$type": "color",
+              "$value": "{primitives.colors.white}"
+            },
+            "harsh": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.95",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}"
+            },
+            "firm": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}"
+            },
+            "moderate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.55",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}",
+              "$description": "was 0.5. Increased to 0.55 so that we can use this for hint text etc too, and still be accessible."
+            },
+            "muted": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.42",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}",
+              "$description": "accessible OBJECT against white."
+            },
+            "soft": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.3",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}",
+              "$description": "Used for disabled text"
+            },
+            "nought": {
+              "$type": "color",
+              "$value": "{modes.color.modifier.contrastMore}"
+            }
           }
         },
         "fg": {
@@ -461,6 +648,70 @@
               "$type": "color",
               "$value": "{primitives.colors.lightAiH}",
               "$description": "Dialog top border treatment."
+            }
+          },
+          "inverse": {
+            "nought": {
+              "$type": "color",
+              "$value": "{modes.color.modifier.contrastMore}"
+            },
+            "faint": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.08",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.inverse.nought}",
+              "$description": "table dividers and borders"
+            },
+            "delicate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.16",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.inverse.nought}",
+              "$description": "table dividers and borders"
+            },
+            "soft": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.32",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.inverse.nought}"
+            },
+            "moderate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.50",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastMore}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.nought}"
             }
           }
         },
@@ -1243,7 +1494,7 @@
           },
           "defaultAlt": {
             "$type": "color",
-            "$value": "{modes.color.generic.bg.faint}",
+            "$value": "{modes.color.generic.backdrop.faint}",
             "$description": "default bg for left nav container"
           },
           "hover": {
@@ -1274,6 +1525,61 @@
             "$type": "color",
             "$value": "{modes.color.generic.content.extreme}",
             "$description": "hover bg for nav items"
+          },
+          "inverse": {
+            "active": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.35",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{primitives.colors.white}",
+              "$description": "active bg for nav items"
+            },
+            "default": {
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}",
+              "$description": "default bg for global nav"
+            },
+            "defaultAlt": {
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.moderate}",
+              "$description": "default bg for left nav container"
+            },
+            "hover": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{primitives.color.modifiers.button.hover}",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{primitives.colors.white}",
+              "$description": "hover bg for nav items"
+            },
+            "withActive": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.nought}",
+              "$description": "text and icons on top of active bgs in nav contexts"
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.harsh}",
+              "$description": "hover bg for nav items"
+            },
+            "withHover": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.nought}",
+              "$description": "hover bg for nav items"
+            }
           }
         },
         "primary": {
