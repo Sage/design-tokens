@@ -394,12 +394,45 @@
         }
       },
       "sidebar": {
-        "maxW": {
+        "maxWidth": {
           "S": {
             "$type": "sizing",
             "$value": "760",
             "$description": "max-width for S size sidebar"
           },
+          "M": {
+            "$type": "sizing",
+            "$value": "1000",
+            "$description": "max-width for M size sidebar"
+          }
+        },
+        "minWidth": {
+          "S": {
+            "$type": "sizing",
+            "$value": "288",
+            "$description": "min-width for S sized sidebar"
+          },
+          "M": {
+            "$type": "sizing",
+            "$value": "288",
+            "$description": "min-width for M sized sidebar"
+          }
+        }
+      },
+      "tile": {
+        "statusborder": {
+          "$type": "sizing",
+          "$value": "{global.size.micro.M}",
+          "$description": "width of left status borders on tiles."
+        }
+      },
+      "tileselect": {
+        "footer": {
+          "$type": "sizing",
+          "$value": "{global.size.macro.L}",
+          "$description": "Product identifier "
+        },
+        "productidentifier": {
           "M": {
             "$type": "sizing",
             "$value": "1000",
