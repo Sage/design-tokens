@@ -541,16 +541,28 @@
         }
       },
       "sidebar": {
-        "responsive": {
-          "min": {
+        "maxWidth": {
+          "S": {
             "$type": "sizing",
-            "$value": "{global.size.flex.XL}",
-            "$description": "min-width for sidebar"
+            "$value": "760",
+            "$description": "max-width for S size sidebar"
           },
-          "max": {
+          "M": {
             "$type": "sizing",
-            "$value": "{global.size.flex.XXXXL}",
-            "$description": "max-width for sidebar"
+            "$value": "1000",
+            "$description": "max-width for M size sidebar"
+          }
+        },
+        "minWidth": {
+          "S": {
+            "$type": "sizing",
+            "$value": "288",
+            "$description": "min-width for S sized sidebar"
+          },
+          "M": {
+            "$type": "sizing",
+            "$value": "288",
+            "$description": "min-width for M sized sidebar"
           }
         }
       },
