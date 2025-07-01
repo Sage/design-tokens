@@ -1,6 +1,6 @@
 {
   "name": "@sage/design-tokens",
-  "version": "0.2.0",
+  "version": "16.0.0",
   "author": "The Sage Group plc",
   "description": "Design tokens for the Sage Design System.",
   "private": false,
@@ -20,12 +20,9 @@
   ],
   "type": "module",
   "scripts": {
-    "test": "mocha",
-    "test:watch": "npm test -- --watch",
-    "build": "node --loader ts-node/esm --no-warnings=ExperimentalWarning ./scripts/build.ts && npm run post-process-css",
+    "build": "node --loader ts-node/esm --no-warnings=ExperimentalWarning ./scripts/build.ts",
     "prebuild": "node --loader ts-node/esm --no-warnings=ExperimentalWarning ./scripts/prebuild.ts",
     "postbuild": "node --loader ts-node/esm --no-warnings=ExperimentalWarning ./scripts/postbuild.ts",
-    "post-process-css": "node --loader ts-node/esm --no-warnings=ExperimentalWarning ./scripts/post-process-css",
     "prepublishOnly": "node --loader ts-node/esm --no-warnings=ExperimentalWarning ./scripts/bump-main-package-version.ts",
     "stylelint:dist": "npx stylelint 'dist/**/*.{css,scss}' --report-needless-disables --report-descriptionless-disables --report-invalid-scope-disables"
   },
@@ -60,7 +57,6 @@
     "glob": "^11.0.0",
     "less": "^4.2.1",
     "lodash": "^4.17.21",
-    "mocha": "^10.8.2",
     "node-fetch": "^3.3.2",
     "nodemon": "^3.1.7",
     "prettier": "^3.4.1",

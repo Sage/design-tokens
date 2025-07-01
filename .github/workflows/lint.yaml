@@ -5,7 +5,7 @@ on:
       - master
       - rc-updates
       - rc-staged
-      
+
 jobs:
   run-linters:
     name: Run linters
@@ -41,3 +41,23 @@ jobs:
         run: |
           # Find all JSON files in dist directory and run validation
           npx jsonlint ./dist/**/*.json --no-duplicate-keys
+
+      - name: Check for [object Object] in SCSS
+        run: |
+          if grep -r '\[object Object\]' dist/scss; then
+            echo "Error: Found [object Object] in SCSS files."
+            exit 1
+          fi
+
+      - name: Compile SCSS
+        run: |
+          (
+            echo "@import 'global.scss';"
+            echo "@import 'dark.scss';"
+            echo "@import 'light.scss';"
+            for f in dist/scss/components/*.scss; do
+              fname=$(basename "$f")
+              echo "@import 'components/$fname';"
+            done
+          ) > dist/scss/index.scss
+          npx sass dist/scss/index.scss dist/scss/index.css

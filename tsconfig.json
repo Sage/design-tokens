@@ -1,12 +1,13 @@
 {
   "extends": "@tsconfig/strictest/tsconfig.json",
-  "include": ["dist/**/*.js", "**/*.ts"],
+  "include": ["**/*.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "allowJs": true,
     "declaration": true,
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
+    "exactOptionalPropertyTypes": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "allowUnreachableCode": true,

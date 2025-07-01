@@ -1,329 +1,326 @@
 {
   "container": {
-    "color": {
-      "AI": {
-        "dialog": {
-          "borderhorizontal": {
-            "$type": "color",
-            "$value": "{modes.color.generic.fg.ai.default}",
-            "$description": "top border for AI dialog component"
-          }
-        },
-        "nudge": {
-          "borderAi-horizontal": {
-            "$type": "color",
-            "$value": "{modes.color.status.ai.default-horizontal}",
-            "$description": "top and bottom border for AI nudge message component"
-          },
-          "borderAi-vertical": {
-            "$type": "color",
-            "$value": "{modes.color.status.ai.default-vertical}",
-            "$description": "left and right border for AI nudge message component"
-          }
-        },
-        "tile": {
-          "bordervertical": {
-            "$type": "color",
-            "$value": "{modes.color.status.ai.default-vertical}",
-            "$description": "left border for AI tiles and bubbles."
-          }
-        }
+    "action": {
+      "bgFooter-activated": {
+        "$type": "color",
+        "$value": "{mode.color.status.positive.default}",
+        "$description": " "
       },
-      "blockquote": {
-        "border": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.primary.default}"
-        }
+      "bgFooter-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.active}"
       },
-      "interactive": {
-        "bgFooter-activated": {
+      "border-activated": {
+        "$type": "color",
+        "$value": "{mode.color.status.positive.default}"
+      },
+      "bgFooter-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.bg.nought}",
+        "$description": "tile footer bg color "
+      },
+      "bg-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.bg.nought}"
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.defaultAlt}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.hoverAlt}",
+        "$description": "Used for accordion hov backgrounds "
+      },
+      "border-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.active}"
+      },
+      "border-alt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.moderate}",
+        "$description": "Link preview. "
+      },
+      "borderalt-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.default}",
+        "$description": "For hov border on Link preview."
+      },
+      "border-inactive": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.firm}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.firm}"
+      },
+      "icon-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.active}",
+        "$description": "Active chevron for any accordion."
+      },
+      "icon-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.default}",
+        "$description": "Enabled chevron for any accordion."
+      },
+      "iconAlt-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.defaultAlt}",
+        "$description": "Enabled label for subtle accordion."
+      },
+      "icon-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.default}",
+        "$description": "hov chevron for any accordion."
+      },
+      "labelFooter-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.withActive}"
+      },
+      "labelFooter-activated": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.withActive}"
+      },
+      "txt-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.active}",
+        "$description": "Active label for any accordion."
+      },
+      "txt-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.txt}"
+      },
+      "txt-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.severe}",
+        "$description": "Enabled label for standard accordion."
+      },
+      "txtAlt-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.moderate}",
+        "$description": "Enabled label for subtle accordion."
+      },
+      "txt-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.default}",
+        "$description": "hov label for any accordion."
+      },
+      "detailedicon": {
+        "bg": {
           "$type": "color",
-          "$value": "{modes.color.status.positive.default}",
+          "$value": "{mode.color.status.custom.green.default}",
           "$description": " "
-        },
-        "bgFooter-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "border-activated": {
-          "$type": "color",
-          "$value": "{modes.color.status.positive.default}"
-        },
-        "bgFooter-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.nought}",
-          "$description": "tile footer bg color "
-        },
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.nought}"
-        },
-        "bg-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.defaultAlt}"
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.hoverAlt}",
-          "$description": "Used for accordion hover backgrounds "
-        },
-        "border-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "border-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.delicate}",
-          "$description": "Link preview. "
-        },
-        "borderalt-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.default}",
-          "$description": "For hover border on Link preview."
-        },
-        "border-inactive": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.soft}"
-        },
-        "border-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.moderate}"
-        },
-        "icon-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}",
-          "$description": "Active chevron for any accordion."
-        },
-        "icon-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.default}",
-          "$description": "Enabled chevron for any accordion."
-        },
-        "iconAlt-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.defaultAlt}",
-          "$description": "Enabled label for subtle accordion."
-        },
-        "icon-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.default}",
-          "$description": "Hover chevron for any accordion."
-        },
-        "labelFooter-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActive}"
-        },
-        "labelFooter-activated": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActive}"
-        },
-        "text-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}",
-          "$description": "Active label for any accordion."
-        },
-        "text-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.content}"
-        },
-        "text-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.harsh}",
-          "$description": "Enabled label for standard accordion."
-        },
-        "textAlt-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.moderate}",
-          "$description": "Enabled label for subtle accordion."
-        },
-        "text-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.default}",
-          "$description": "Hover label for any accordion."
-        },
-        "detailedicon": {
-          "bg": {
-            "$type": "color",
-            "$value": "{modes.color.custom.default}",
-            "$description": " "
-          }
-        },
-        "droptarget": {
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.status.info.default}",
-            "$description": "draggable drop target background color"
-          }
         }
       },
-      "scrollbar": {
+      "target": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}"
+          "$value": "{mode.color.status.info.default}",
+          "$description": "draggable drop target background color"
+        }
+      }
+    },
+    "scrollbar": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.bg.faint}"
+      },
+      "fg-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.firm}"
+      },
+      "inverse": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{mode.color.generic.bg.inverse.soft}"
         },
         "fg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.moderate}"
+          "$value": "{mode.color.generic.fg.inverse.firm}"
         }
+      }
+    },
+    "standard": {
+      "bg-alt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.bg.faint}"
       },
-      "standard": {
-        "bg-alt": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.bg.nought}"
+      },
+      "bgFooter-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.bg.faint}",
+        "$description": "tile footer bg color "
+      },
+      "border-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.active}"
+      },
+      "border-AiH": {
+        "$type": "color",
+        "$value": "{mode.color.status.ai.inverse.default-horizontal}",
+        "$description": "top border for AI dialog component"
+      },
+      "border-AiV": {
+        "$type": "color",
+        "$value": "{mode.color.status.ai.inverse.default-vertical}",
+        "$description": "left and right border for AI nudge message component"
+      },
+      "border-alt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.firm}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.soft}"
+      },
+      "dimmer": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.mask}",
+        "$description": "dimmed mask for dialogs"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.firm}",
+        "$description": "Link preview image thumbnail"
+      },
+      "txt-alt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.moderate}",
+        "$description": "for subheadings etc"
+      },
+      "txt-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.severe}",
+        "$description": "for headings, paragraph txt etc "
+      },
+      "inverse": {
+        "border-alt": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}"
+          "$value": "{mode.color.generic.fg.inverse.firm}"
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.nought}"
-        },
-        "bgFooter-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}",
-          "$description": "tile footer bg color "
-        },
-        "border-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "border-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.soft}"
+          "$value": "{mode.color.generic.bg.inverse.nought}"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.faint}"
+          "$value": "{mode.color.generic.fg.inverse.soft}"
         },
-        "dimmer": {
+        "txt-alt": {
           "$type": "color",
-          "$value": "{modes.color.interactive.inactive.mask}",
-          "$description": "dimmed mask for dialogs"
-        },
-        "icon": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.moderate}",
-          "$description": "Link preview image thumbnail"
-        },
-        "text-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.moderate}",
+          "$value": "{mode.color.generic.txt.inverse.moderate}",
           "$description": "for subheadings etc"
         },
-        "text-default": {
+        "txt-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.content.harsh}",
-          "$description": "for headings, paragraph text etc "
+          "$value": "{mode.color.generic.txt.inverse.severe}",
+          "$description": "for headings, paragraph txt etc "
+        }
+      },
+      "priority": {
+        "bg-ai": {
+          "$type": "color",
+          "$value": "{mode.color.status.ai.inverse.default-vertical}"
         },
-        "statusborder": {
+        "bg-caution": {
+          "$type": "color",
+          "$value": "{mode.color.status.warning.default}"
+        },
+        "bg-negative": {
+          "$type": "color",
+          "$value": "{mode.color.status.negative.default}"
+        },
+        "bg-prio": {
+          "$type": "color",
+          "$value": "{mode.color.status.priority.default}"
+        },
+        "bg-info": {
+          "$type": "color",
+          "$value": "{mode.color.status.info.default}"
+        },
+        "bg-neutral": {
+          "$type": "color",
+          "$value": "{mode.color.status.neutral.default}"
+        },
+        "bg-positive": {
+          "$type": "color",
+          "$value": "{mode.color.status.positive.default}"
+        },
+        "inverse": {
           "bg-ai": {
             "$type": "color",
-            "$value": "{container.color.AI.tile.bordervertical}"
+            "$value": "{mode.color.status.ai.inverse.default-vertical}"
           },
           "bg-caution": {
             "$type": "color",
-            "$value": "{modes.color.status.caution.default}"
+            "$value": "{mode.color.status.warning.inverse.default}"
           },
           "bg-negative": {
             "$type": "color",
-            "$value": "{modes.color.status.negative.default}"
+            "$value": "{mode.color.status.negative.inverse.default}"
           },
-          "bg-important": {
+          "bg-prio": {
             "$type": "color",
-            "$value": "{modes.color.status.important.default}"
+            "$value": "{mode.color.status.priority.inverse.default}"
           },
           "bg-info": {
             "$type": "color",
-            "$value": "{modes.color.status.info.default}"
+            "$value": "{mode.color.status.info.inverse.default}"
           },
           "bg-neutral": {
             "$type": "color",
-            "$value": "{modes.color.status.neutral.default}"
+            "$value": "{mode.color.status.neutral.inverse.default}"
           },
           "bg-positive": {
             "$type": "color",
-            "$value": "{modes.color.status.positive.default}"
-          }
-        },
-        "inverse": {
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.bg.inverse.nought}"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.fg.inverse.faint}"
-          },
-          "text-alt": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.inverse.moderate}",
-            "$description": "for subheadings etc"
-          },
-          "text-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.inverse.harsh}",
-            "$description": "for headings, paragraph text etc "
+            "$value": "{mode.color.status.positive.inverse.default}"
           }
         }
       }
     },
+    "quote": {
+      "border": {
+        "$type": "color",
+        "$value": "{mode.color.action.main.default}"
+      }
+    },
     "size": {
-      "none": {
-        "$type": "sizing",
-        "$value": "{global.size.none}"
-      },
-      "accordionstandard": {
-        "chevron": {
+      "bubble": {
+        "maxW": {
           "$type": "sizing",
-          "$value": "{global.size.icon.M}",
-          "$description": "Accordion chevron container"
-        }
-      },
-      "quotebar": {
-        "width": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.M}",
-          "$description": "block quote bar width"
-        }
-      },
-      "chatbubble": {
-        "maxwidth": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XXXXL} * 5",
+          "$value": "600",
           "$description": "max width for chat bubbles"
-        }
-      },
-      "carousel": {
-        "mediaslide": {
-          "minheight": {
-            "$type": "sizing",
-            "$value": "300",
-            "$description": "max height for media visual"
-          }
         }
       },
       "copilot": {
         "emptystate": {
           "illustration": {
             "$type": "sizing",
-            "$value": "{global.size.macro.M} * 5",
+            "$value": "200",
             "$description": "Illustration size"
           },
-          "content": {
-            "maxwidth": {
+          "txt": {
+            "maxW": {
               "$type": "sizing",
-              "$value": "{global.size.macro.XXXXL} * 5",
-              "$description": "max-width of the insight empty state content area"
+              "$value": "600",
+              "$description": "max-width of the insight empty state txt area"
             }
           }
         },
         "overlay": {
-          "maxheight": {
+          "maxH": {
             "$type": "sizing",
-            "$value": "{global.size.macro.XXXXL} * 8",
+            "$value": "960",
             "$description": "max-height of the copilot container overlay "
           }
         }
       },
       "dialog": {
-        "maxWidth": {
+        "maxW": {
           "S": {
             "$type": "sizing",
             "$value": "540"
@@ -337,1304 +334,94 @@
             "$value": "1080"
           }
         },
-        "minWidth": {
+        "minW": {
+          "$type": "sizing",
+          "$value": "288"
+        }
+      },
+      "emptyState": {
+        "primary": {
           "S": {
             "$type": "sizing",
-            "$value": "288"
+            "$value": "200",
+            "$description": "Illustration size for small error and empty states"
           },
           "M": {
             "$type": "sizing",
-            "$value": "288"
+            "$value": "240",
+            "$description": "Illustration size for medium error and empty states"
           },
           "L": {
             "$type": "sizing",
-            "$value": "288"
+            "$value": "320",
+            "$description": "Illustration size for large error and empty states"
           }
         }
       },
-      "drag": {
-        "droptarget": {
+      "fluidItems": {
+        "2XS": {
           "$type": "sizing",
-          "$value": "{global.size.micro.XXS}",
-          "$description": "drop target width or height"
-        }
-      },
-      "drawer": {
-        "minwidth": {
-          "$type": "sizing",
-          "$value": "{container.size.responsive.XL}",
-          "$description": "min-width for drawer component"
-        },
-        "maxwidth": {
-          "$type": "sizing",
-          "$value": "{container.size.responsive.XXXXL}",
-          "$description": "max-width for drawer component"
-        },
-        "closed": {
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M}",
-            "$description": "width for the closed drawer state"
-          }
-        }
-      },
-      "footer": {
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XL}",
-          "$description": "card and tile footers"
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XS} * 3",
-          "$description": "Dialog, sidebar and drawer footer max-height"
-        }
-      },
-      "generic": {
-        "emptystate": {
-          "illustration": {
-            "primary": {
-              "S": {
-                "$type": "sizing",
-                "$value": "{global.size.macro.M} * 5",
-                "$description": "Illustration size for small error and empty states"
-              },
-              "M": {
-                "$type": "sizing",
-                "$value": "{global.size.macro.M} * 6",
-                "$description": "Illustration size for medium error and empty states"
-              },
-              "L": {
-                "$type": "sizing",
-                "$value": "{global.size.macro.M} * 8",
-                "$description": "Illustration size for large error and empty states"
-              }
-            },
-            "secondary": {
-              "$type": "sizing",
-              "$value": "{global.size.macro.M} + {button.size.icon.M}",
-              "$description": "Illustration size for secondary empty states"
-            }
-          }
-        }
-      },
-      "icon": {
-        "S": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}"
-        },
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}"
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}",
-          "$description": "Deliberately referencing global M (20px). Accordion chevron."
-        }
-      },
-      "linkpreview": {
-        "thumbnail": {
-          "S": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XXXXL} - 3",
-            "$description": "Thumbnail height and width for small variant"
-          },
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XXXXL} + {global.size.macro.XXS}",
-            "$description": "Thumbnail height and width for medium variant"
-          },
-          "L": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XXXXL} + {global.size.macro.L}",
-            "$description": "Thumbnail height and width for large variant"
-          }
-        },
-        "headertext": {
-          "S": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.S}",
-            "$description": "fixed text layer size for small header"
-          },
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.S}",
-            "$description": "fixed text layer size for large header"
-          },
-          "L": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M}",
-            "$description": "fixed text layer size for small header"
-          }
-        },
-        "descriptiontext": {
-          "S": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M} + {global.size.micro.XS}",
-            "$description": "Fixed height for small note description text string"
-          },
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.L}",
-            "$description": "Fixed height for medium note description text string"
-          },
-          "L": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XL}",
-            "$description": "Fixed height for large note description text string"
-          }
-        }
-      },
-      "responsive": {
-        "XXS": {
-          "$type": "sizing",
-          "$value": "{global.size.flex.XXS}",
+          "$value": "80",
           "$description": "min and max widths for responsive tile items"
         },
         "XS": {
           "$type": "sizing",
-          "$value": "{global.size.flex.XS}",
+          "$value": "128",
           "$description": "min and max widths for responsive tile items"
         },
         "S": {
           "$type": "sizing",
-          "$value": "{global.size.flex.S}",
-          "$description": "min and max widths for responsive tile items. Min width for Tile select content wrapper."
+          "$value": "160",
+          "$description": "min and max widths for responsive tile items. Min width for Tile select txt wrapper."
         },
         "M": {
           "$type": "sizing",
-          "$value": "{global.size.flex.M}",
+          "$value": "200",
           "$description": "min and max widths for responsive tile items"
         },
         "L": {
           "$type": "sizing",
-          "$value": "{global.size.flex.L}",
+          "$value": "240",
           "$description": "min and max widths for responsive tile items"
         },
         "XL": {
           "$type": "sizing",
-          "$value": "{global.size.flex.XL}",
+          "$value": "288",
           "$description": "Small screen mid width inside page margins."
         },
-        "XXL": {
+        "2XL": {
           "$type": "sizing",
-          "$value": "{global.size.flex.XXL}",
+          "$value": "320",
           "$description": "Small screen full page width."
         },
-        "XXXL": {
+        "3XL": {
           "$type": "sizing",
-          "$value": "{global.size.flex.XXXL}",
+          "$value": "560",
           "$description": "min and max widths for responsive tile items"
         },
-        "XXXXL": {
+        "4XL": {
           "$type": "sizing",
-          "$value": "{global.size.flex.XXXXL}",
-          "$description": "Max width for single line of text."
-        }
-      },
-      "scrollbar": {
-        "container": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.XL}",
-          "$description": "Container that the scrollbar sits within "
+          "$value": "760",
+          "$description": "Max width for single line of txt."
         }
       },
       "sidebar": {
-        "responsive": {
-          "min": {
+        "maxW": {
+          "S": {
             "$type": "sizing",
-            "$value": "{global.size.flex.XL}",
-            "$description": "min-width for sidebar"
+            "$value": "760",
+            "$description": "max-width for S size sidebar"
           },
-          "max": {
-            "$type": "sizing",
-            "$value": "{global.size.flex.XXXXL}",
-            "$description": "max-width for sidebar"
-          }
-        }
-      },
-      "tile": {
-        "statusborder": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.M}",
-          "$description": "width of left status borders on tiles."
-        }
-      },
-      "tileselect": {
-        "footer": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.L}",
-          "$description": "Product identifier "
-        },
-        "productidentifier": {
           "M": {
             "$type": "sizing",
-            "$value": "{global.size.macro.S}",
-            "$description": "Product identifier "
-          },
-          "L": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.L}",
-            "$description": "Product identifier "
+            "$value": "1000",
+            "$description": "max-width for M size sidebar"
           }
-        }
-      },
-      "tooltipArrow": {
-        "width": {
+        },
+        "minW": {
           "$type": "sizing",
-          "$value": "{global.size.micro.XXL}",
-          "$description": "tooltip arrow width"
-        },
-        "height": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.M}",
-          "$description": "tooltip arrow height"
-        }
-      },
-      "uploadpreview": {
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XXXL}",
-          "$description": "Thumbnail container"
-        }
-      }
-    },
-    "radius": {
-      "none": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.none}",
-        "$description": "Card select (inner adjacent corners), Subscription tile footer top corners"
-      },
-      "carouselslide": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.L}",
-        "$description": "Carousel slides"
-      },
-      "colorpicker": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.L}",
-        "$description": "Color picker container radius"
-      },
-      "contacttile": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.M}"
-      },
-      "dialog": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.XL}",
-        "$description": "Dialog"
-      },
-      "filepreview": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.M}",
-        "$description": "File preview (parent container), "
-      },
-      "linkpreview": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.S}",
-        "$description": "Link preview (outer corners)"
-      },
-      "heroimage": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.XXXXL}",
-        "$description": "hero image radius"
-      },
-      "note": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.M}",
-        "$description": "Note"
-      },
-      "nudge": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.L}",
-        "$description": "nudge radius"
-      },
-      "profileselector": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.M}",
-        "$description": "Profile selector list container."
-      },
-      "scrollbar": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.circle}",
-        "$description": "Scrollbar"
-      },
-      "texteditor": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.M}",
-        "$description": "Text editor (footer bottom corners) "
-      },
-      "blockquote": {
-        "bar": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.circle}",
-          "$description": "radius for blockquote bar"
-        }
-      },
-      "card": {
-        "moderate": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.L}",
-          "$description": "Card (less rounded)"
-        },
-        "curved": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.XL}",
-          "$description": "Card (more rounded)"
-        },
-        "sweeping": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.XXL}",
-          "$description": "Card largest rounded type"
-        }
-      },
-      "tile": {
-        "moderate": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.L}",
-          "$description": "Tile (less rounded)"
-        },
-        "curved": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.XL}",
-          "$description": "Tile (more rounded)"
-        },
-        "sweeping": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.XXL}",
-          "$description": "Tile largest roundedness "
-        }
-      },
-      "tileselect": {
-        "moderate": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.L}",
-          "$description": "Tile (less rounded)"
-        },
-        "curved": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.XL}",
-          "$description": "Tile (more rounded)"
-        },
-        "sweeping": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.XXL}"
-        }
-      }
-    },
-    "space": {
-      "none": {
-        "$type": "spacing",
-        "$value": "{global.space.none}"
-      },
-      "accordionsubtle": {
-        "yg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Gap between Accordion subtle trigger and content"
-          }
-        }
-      },
-      "filepreview": {
-        "preview": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Horizontal padding on large thumbnail image"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Vertical padding on large thumbnail image."
-            }
-          }
-        }
-      },
-      "flex": {
-        "xg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Small horizontal item spacing"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Medium horizontal item spacing"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L}",
-            "$description": "Large horizontal item spacing"
-          }
-        },
-        "yg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Small row gap"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Medium row gap"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L}",
-            "$description": "Large row gap"
-          }
-        },
-        "item": {
-          "x": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Small left and right padding on flex items"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Medium left and right padding on flex items"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.L}",
-              "$description": "Large left and right padding on flex items"
-            }
-          },
-          "y": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Small top bottom padding on flex items"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Medium top bottom padding on flex items"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.L}",
-              "$description": "Large top bottom padding on flex items"
-            }
-          }
-        }
-      },
-      "generic": {
-        "content": {
-          "x": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Left and right padding copilot chat history items, S accordions, S cards and S tiles"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Left and right padding on dialog, drawer, M cards, M tiles and sidebar"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.L}",
-              "$description": "Left and right padding on large card and tile "
-            }
-          },
-          "y": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Top and bottom padding S Accordions, S cards and S tiles"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Vertical padding on content in dialog, drawer, sidebar card and tile"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.L}"
-            }
-          },
-          "xg": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Gap padding within timestamp in Note."
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "gap padding between carousel tiles"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "gap padding between carousel tiles"
-            }
-          },
-          "yg": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Vertical gap between content items in Anchor nav quick links "
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Vertical gap between content items in copilot content, dialog, drawer, sidebar, M card and M tile. "
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "vertical gap between block quote text and avatar"
-            }
-          }
-        },
-        "outer": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Left and right margins on dialog and sidebar in small screen full width contexts"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Top and Bottom margins on dialog and sidebar in small screen full width contexts"
-            }
-          }
-        },
-        "header": {
-          "x": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Left and right padding on accordion"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Left and right padding on copilot, dialog, drawer, M cards, M tiles and sidebar."
-            }
-          },
-          "y": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL}",
-              "$description": "Top and bottom padding copilot header and subheader."
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Top and bottom padding on small accordion."
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Vertical padding on accordion, dialog headers and on sub-page headers inside copilot (e.g insights and chat history)."
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "horizontal space between dialog heading and icon"
-            }
-          },
-          "yg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "vertical space between heading and subheading in dialog, accordion and sub-pages inside copilot."
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "vertical space between heading and Powered By AI identifier in dialog header"
-            }
-          }
-        },
-        "emptystate": {
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Spacing between empty state heading and body copy below it."
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XL}",
-              "$description": "Spacing between empty state roundel and heading below it."
-            }
-          }
-        },
-        "footer": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Left and right padding on copilot footer"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Top and bottom padding on copilot footer"
-            }
-          }
-        }
-      },
-      "note": {
-        "x": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Left and right padding on Note"
-          }
-        },
-        "xg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Gap between columns in editor detail in Note."
-          }
-        },
-        "timestamp": {
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.M}",
-              "$description": "Gap between created and updated editor columns"
-            }
-          },
-          "yg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "gap between create or updated title and timestamp"
-            }
-          }
-        },
-        "y": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Top bottom padding on Note"
-          }
-        },
-        "yg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Vertical gap on Note"
-          }
-        }
-      },
-      "linkpreview": {
-        "x": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Content horizontal padding for small variant"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "Content horizontal padding for medium variant"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Content horizontal padding for large variant"
-          }
-        },
-        "xg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Content horizontal padding for small variant"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "Content horizontal padding for medium variant"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Content horizontal padding for large variant"
-          }
-        },
-        "y": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Content horizontal padding for small variant"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "Content horizontal padding for medium variant"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Content horizontal padding for large variant"
-          }
-        },
-        "yg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Content horizontal padding for small variant"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Content horizontal padding for medium variant"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "Content horizontal padding for large variant"
-          }
-        }
-      },
-      "pagination": {
-        "xg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "gap between elements in pagination"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "gap between button group and advanced left area"
-          }
-        },
-        "y": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "top and bottom padding inside pagination"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "external margin on top of floating pagination variant"
-          }
-        },
-        "yg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Vertical gap between elements on small screens"
-          }
-        },
-        "x": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "left and right padding inside pagination"
-          }
-        }
-      },
-      "scrollbar": {
-        "y": {
-          "inner": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXS}",
-            "$description": "top and bottom padding around scrollbar handle."
-          },
-          "outer": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XS}",
-            "$description": "top and bottom padding inside scrollbar outer container"
-          }
-        }
-      },
-      "summarylist": {
-        "item": {
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "gap between summary list item content"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL}",
-              "$description": "top and bottom padding for each item "
-            }
-          }
-        },
-        "title": {
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "gap between summary list title and edit link"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL}",
-              "$description": "bottom padding for each section title"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.L}",
-              "$description": "top padding for each section title"
-            }
-          }
-        }
-      },
-      "tilecard": {
-        "x": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Left and right padding on Link preview"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Right left padding on Tile or Card."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Right left padding on drag wrapper"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L}",
-            "$description": "Right left padding on Tile or Card."
-          },
-          "XXXL": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XL} * 2",
-            "$description": "Right margin on AI response bubbles and left margin on user prompt bubbles."
-          }
-        },
-        "xg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "horizontal gap between icons and text"
-          }
-        },
-        "y": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Top bottom padding on Link preview and on card drag wrapper"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Top bottom padding on Tile or Card."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Top bottom padding on Tile or Card."
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L}",
-            "$description": "Top bottom padding on Tile or Card."
-          }
-        },
-        "yg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}"
-          }
-        }
-      },
-      "tileselect": {
-        "x": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Left and right padding on tile select container"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Left and right padding on tile select container"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L}",
-            "$description": "Left and right padding on tile select container"
-          }
-        },
-        "y": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Top and bottom padding on tile select container"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Top bottom padding on tile select container"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L}",
-            "$description": "Top and bottom padding on tile select container"
-          }
-        },
-        "yg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Vertical gap between content blocks in Subscription tile."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Vertical gap between content blocks in Subscription tile."
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L}",
-            "$description": "Vertical gap between content blocks in Subscription tile."
-          }
-        },
-        "content": {
-          "yg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Vertical gap between strings of text"
-            }
-          }
-        },
-        "header": {
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "gap between identifier and header content"
-            }
-          },
-          "yg": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Vertical gap between header content wrapper items"
-            }
-          }
-        },
-        "footer": {
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Top bottom padding in footer."
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Top bottom margins on carousel dots"
-            }
-          },
-          "xg": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Gap between carousel dots"
-            }
-          }
-        }
-      },
-      "nudge": {
-        "x": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Left and right padding on medium nudge"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L}",
-            "$description": "left and right padding on large nudge "
-          }
-        },
-        "y": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}",
-            "$description": "Top and bottom padding on medium nudge"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L}",
-            "$description": "Top and bottom paddding on large nudge"
-          }
-        },
-        "yg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Gap between message elements"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "Gap between message elements"
-          }
-        },
-        "header": {
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "gap between header and ai logo"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "gap between header and ai logo"
-            }
-          }
-        }
-      }
-    },
-    "boxshadow": {
-      "none": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.none}"
-      },
-      "carousel": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.distant}",
-        "$description": "Carousel "
-      },
-      "colorpicker": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.near}",
-        "$description": "Color picker (advanced) "
-      },
-      "dialog": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.distant}",
-        "$description": "Dialog "
-      },
-      "filepreview": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.distant}",
-        "$description": "File preview"
-      },
-      "nudge": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.far}",
-        "$description": "nudge shadow"
-      },
-      "sidebar": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.distant}",
-        "$description": "Sidebar"
-      },
-      "stickyfooter": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.sticky-footer}",
-        "$description": "Sticky footer in Dialog, Drawer, Sidebar."
-      },
-      "inverse": {
-        "stickyfooter": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.container.inverse.sticky-footer}",
-          "$description": "inverse Sticky footer in Dialog, Drawer, Sidebar."
-        }
-      },
-      "card": {
-        "default": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.default}",
-          "$description": "Card (enabled)"
-        },
-        "hover": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.hover}",
-          "$description": "Card (hover state)"
-        },
-        "drag": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.drag}",
-          "$description": "Card (drag state)"
-        }
-      }
-    },
-    "borderwidth": {
-      "AIgradient": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XXL}",
-        "$description": "AI gradient used on all containers such as dialog, chat bubbles etc"
-      },
-      "dialog": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Dialog"
-      },
-      "divider": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Divider"
-      },
-      "drawer": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Drawer"
-      },
-      "footer": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Footer (in Card, Dialog) "
-      },
-      "header": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Global header (next to logo) "
-      },
-      "linkpreview": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Link preview in Text editor and Note "
-      },
-      "note": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Note "
-      },
-      "profileselector": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Profile selector list container."
-      },
-      "nudge": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XL}",
-        "$description": "nudge AI message borders "
-      },
-      "sidebar": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Sidebar"
-      },
-      "summarylist": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Summary list"
-      },
-      "tile": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Tile"
-      },
-      "accordion": {
-        "standard": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "Accordion standard (top and bottom borders)"
-        },
-        "subtle": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.S}",
-          "$description": "Accordion subtle (content vertical line)"
-        }
-      },
-      "filepreview": {
-        "container": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "File preview (internal borders) "
-        },
-        "default": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "File preview (file selector) "
-        },
-        "active": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.S}",
-          "$description": "File preview (file selector) "
-        }
-      },
-      "tileselect": {
-        "active": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "Subscription tile (active product)"
-        },
-        "inactive": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "Subscription tile (inactive product)"
-        },
-        "selected": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.S}",
-          "$description": "Tile select (selected tile)"
-        },
-        "unavailable": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "Subscription tile (unavailable product)"
-        },
-        "default": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "Tile select (enabled tile)"
-        }
-      }
-    },
-    "opacity": {
-      "carousel": {
-        "hidden": {
-          "$type": "opacity",
-          "$value": "0.3",
-          "$description": "opacity applied to next and previous carousel slides"
-        }
-      },
-      "dialog": {
-        "dimmer": {
-          "$type": "opacity",
-          "$value": "0.4",
-          "$description": "dimmer opacity value"
-        }
-      },
-      "drag": {
-        "ghost": {
-          "$type": "opacity",
-          "$value": "0.5",
-          "$description": "drag ghost state opacity value"
+          "$value": "288",
+          "$description": "min-width for M sized sidebar"
         }
       }
     }
