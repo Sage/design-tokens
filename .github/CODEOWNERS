@@ -1,13 +1,19 @@
 # These owners will be the default owners for everything in
-# the repo. Unless a later match takes precedence,
-*                        @Sage/carbon-design-tokens
+# the repo. Unless a later match takes precedence.
+*                            @Sage/carbon-design-tokens
 
 # The Carbon Design Tokens team are responsible for reviewing Pull Requests
-# that contain any change modifying JS, TS or JSON files
-*.js                     @Sage/carbon-design-tokens
-*.ts                     @Sage/carbon-design-tokens
-*.json                   @Sage/carbon-design-tokens
+# that contain any change modifying JS, TS or JSON files.
+*.js                         @Sage/carbon-design-tokens
+*.ts                         @Sage/carbon-design-tokens
+*.json                       @Sage/carbon-design-tokens
+
+
+# The Design System team are responsible for reviewing Pull Requests
+# that contain any changes to the following files.
+/data/tokens/$metadata.json  @Sage/ds-tokens-reviewers
+/data/tokens/$themes.json    @Sage/ds-tokens-reviewers
 
 # Codeowners file changes must be approved by a Carbon Design Tokens
 # team member.
-.github/CODEOWNERS       @Sage/carbon-design-tokens
+.github/CODEOWNERS           @Sage/carbon-design-tokens
