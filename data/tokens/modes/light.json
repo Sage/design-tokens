@@ -1000,6 +1000,62 @@
               "$value": "{primitives.colors.navy}",
               "$description": "Input borders."
             }
+          },
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}",
+              "$description": "Input backgrounds."
+            },
+            "withActive": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}",
+              "$description": "checkbox tick icon or radio handle"
+            },
+            "withActiveAlt": {
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.inverse.nought}"
+            },
+            "withHover": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.extreme}",
+              "$description": "text for draggable area on file input"
+            },
+            "hoverAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{primitives.color.modifiers.button.hoverAlt}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.interactive.dataEntry.inverse.content}",
+              "$description": "bg hover for draggable area on file input"
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.inverse.moderate}",
+              "$description": "Input borders."
+            },
+            "defaultAlt": {
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.faint}",
+              "$description": "Input footer bgs (e.g text editor)"
+            },
+            "content": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.harsh}",
+              "$description": "Input Text"
+            },
+            "contentAlt": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.moderate}",
+              "$description": "Hint text, placeholder text, character count etc"
+            }
           }
         },
         "focus": {
