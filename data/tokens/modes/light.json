@@ -1000,6 +1000,28 @@
               "$value": "{primitives.colors.navy}",
               "$description": "Input borders."
             }
+          },
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}",
+              "$description": "Input backgrounds."
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{modes.color.generic.fg.inverse.moderate}",
+              "$description": "Input borders."
+            },
+            "content": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.harsh}",
+              "$description": "Input Text"
+            },
+            "contentAlt": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.moderate}",
+              "$description": "Hint text, placeholder text, character count etc"
+            }
           }
         },
         "focus": {
