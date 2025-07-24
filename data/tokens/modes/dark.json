@@ -46,18 +46,6 @@
           }
         }
       },
-      "custom": {
-        "default": {
-          "$type": "color",
-          "$value": "{core.colors.brilliantGreen}",
-          "$description": "This is the color to replace in white label products. Dark mode recommended luminosity for SAGE is 75.1 (tested), but above 51.9 should be ok. See hsluv.org to be AAA text on 000000 bgs."
-        },
-        "defaultAlt": {
-          "$type": "color",
-          "$value": "{core.colors.emerald}",
-          "$description": "This is the color to replace in white label products. Ensure luminousity of custom color = 46.8 (see hsluv.org).  AAA against FFFFFF bg. "
-        }
-      },
       "colorcode": {
         "blue": {
           "deep": {
@@ -1483,7 +1471,7 @@
           },
           "default": {
             "$type": "color",
-            "$value": "{modes.color.custom.default}"
+            "$value": "{core.colors.brilliantGreen}"
           },
           "defaultAlt": {
             "$extensions": {
@@ -1618,7 +1606,7 @@
             },
             "default": {
               "$type": "color",
-              "$value": "{modes.color.custom.defaultAlt}"
+              "$value": "{core.colors.emerald}"
             },
             "defaultAlt": {
               "$extensions": {
