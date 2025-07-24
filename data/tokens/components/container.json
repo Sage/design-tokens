@@ -275,59 +275,32 @@
       }
     },
     "size": {
-      "none": {
-        "$type": "sizing",
-        "$value": "{global.size.none}"
-      },
-      "accordionstandard": {
-        "chevron": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}",
-          "$description": "Accordion chevron container"
-        }
-      },
-      "quotebar": {
-        "width": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.M}",
-          "$description": "block quote bar width"
-        }
-      },
       "chatbubble": {
-        "maxwidth": {
+        "maxWidth": {
           "$type": "sizing",
-          "$value": "{global.size.macro.XXXXL} * 5",
+          "$value": "600",
           "$description": "max width for chat bubbles"
-        }
-      },
-      "carousel": {
-        "mediaslide": {
-          "minheight": {
-            "$type": "sizing",
-            "$value": "300",
-            "$description": "max height for media visual"
-          }
         }
       },
       "copilot": {
         "emptystate": {
           "illustration": {
             "$type": "sizing",
-            "$value": "{global.size.macro.M} * 5",
+            "$value": "200",
             "$description": "Illustration size"
           },
           "content": {
-            "maxwidth": {
+            "maxWidth": {
               "$type": "sizing",
-              "$value": "{global.size.macro.XXXXL} * 5",
+              "$value": "600",
               "$description": "max-width of the insight empty state content area"
             }
           }
         },
         "overlay": {
-          "maxheight": {
+          "maxHeight": {
             "$type": "sizing",
-            "$value": "{global.size.macro.XXXXL} * 8",
+            "$value": "960",
             "$description": "max-height of the copilot container overlay "
           }
         }
@@ -348,155 +321,32 @@
           }
         },
         "minWidth": {
-          "S": {
-            "$type": "sizing",
-            "$value": "288"
-          },
-          "M": {
-            "$type": "sizing",
-            "$value": "288"
-          },
-          "L": {
-            "$type": "sizing",
-            "$value": "288"
-          }
+          "$type": "sizing",
+          "$value": "288"
         }
       },
-      "drag": {
-        "droptarget": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.XXS}",
-          "$description": "drop target width or height"
-        }
-      },
-      "drawer": {
-        "minwidth": {
-          "$type": "sizing",
-          "$value": "{container.size.responsive.XL}",
-          "$description": "min-width for drawer component"
-        },
-        "maxwidth": {
-          "$type": "sizing",
-          "$value": "{container.size.responsive.XXXXL}",
-          "$description": "max-width for drawer component"
-        },
-        "closed": {
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M}",
-            "$description": "width for the closed drawer state"
-          }
-        }
-      },
-      "footer": {
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XL}",
-          "$description": "card and tile footers"
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XS} * 3",
-          "$description": "Dialog, sidebar and drawer footer max-height"
-        }
-      },
-      "generic": {
-        "emptystate": {
-          "illustration": {
-            "primary": {
-              "S": {
-                "$type": "sizing",
-                "$value": "{global.size.macro.M} * 5",
-                "$description": "Illustration size for small error and empty states"
-              },
-              "M": {
-                "$type": "sizing",
-                "$value": "{global.size.macro.M} * 6",
-                "$description": "Illustration size for medium error and empty states"
-              },
-              "L": {
-                "$type": "sizing",
-                "$value": "{global.size.macro.M} * 8",
-                "$description": "Illustration size for large error and empty states"
-              }
-            },
-            "secondary": {
+      "emptyState": {
+        "illustration": {
+          "primary": {
+            "S": {
               "$type": "sizing",
-              "$value": "{global.size.macro.M} + {button.size.icon.M}",
-              "$description": "Illustration size for secondary empty states"
+              "$value": "200",
+              "$description": "Illustration size for small error and empty states"
+            },
+            "M": {
+              "$type": "sizing",
+              "$value": "240",
+              "$description": "Illustration size for medium error and empty states"
+            },
+            "L": {
+              "$type": "sizing",
+              "$value": "320",
+              "$description": "Illustration size for large error and empty states"
             }
           }
         }
       },
-      "icon": {
-        "S": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}"
-        },
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}"
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}",
-          "$description": "Deliberately referencing global M (20px). Accordion chevron."
-        }
-      },
-      "linkpreview": {
-        "thumbnail": {
-          "S": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XXXXL} - 3",
-            "$description": "Thumbnail height and width for small variant"
-          },
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XXXXL} + {global.size.macro.XXS}",
-            "$description": "Thumbnail height and width for medium variant"
-          },
-          "L": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XXXXL} + {global.size.macro.L}",
-            "$description": "Thumbnail height and width for large variant"
-          }
-        },
-        "headertext": {
-          "S": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.S}",
-            "$description": "fixed text layer size for small header"
-          },
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.S}",
-            "$description": "fixed text layer size for large header"
-          },
-          "L": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M}",
-            "$description": "fixed text layer size for small header"
-          }
-        },
-        "descriptiontext": {
-          "S": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M} + {global.size.micro.XS}",
-            "$description": "Fixed height for small note description text string"
-          },
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.L}",
-            "$description": "Fixed height for medium note description text string"
-          },
-          "L": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XL}",
-            "$description": "Fixed height for large note description text string"
-          }
-        }
-      },
-      "responsive": {
+      "responsiveItems": {
         "XXS": {
           "$type": "sizing",
           "$value": "{global.size.flex.XXS}",
@@ -543,13 +393,6 @@
           "$description": "Max width for single line of text."
         }
       },
-      "scrollbar": {
-        "container": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.XL}",
-          "$description": "Container that the scrollbar sits within "
-        }
-      },
       "sidebar": {
         "maxWidth": {
           "S": {
@@ -564,61 +407,9 @@
           }
         },
         "minWidth": {
-          "S": {
-            "$type": "sizing",
-            "$value": "288",
-            "$description": "min-width for S sized sidebar"
-          },
-          "M": {
-            "$type": "sizing",
-            "$value": "288",
-            "$description": "min-width for M sized sidebar"
-          }
-        }
-      },
-      "tile": {
-        "statusborder": {
           "$type": "sizing",
-          "$value": "{global.size.micro.M}",
-          "$description": "width of left status borders on tiles."
-        }
-      },
-      "tileselect": {
-        "footer": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.L}",
-          "$description": "Product identifier "
-        },
-        "productidentifier": {
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.S}",
-            "$description": "Product identifier "
-          },
-          "L": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.L}",
-            "$description": "Product identifier "
-          }
-        }
-      },
-      "tooltipArrow": {
-        "width": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.XXL}",
-          "$description": "tooltip arrow width"
-        },
-        "height": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.M}",
-          "$description": "tooltip arrow height"
-        }
-      },
-      "uploadpreview": {
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XXXL}",
-          "$description": "Thumbnail container"
+          "$value": "288",
+          "$description": "min-width for M sized sidebar"
         }
       }
     },
