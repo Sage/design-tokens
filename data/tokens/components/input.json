@@ -1,398 +1,347 @@
 {
   "input": {
-    "color": {
-      "calendar": {
-        "bg-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "bg-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.defaultAlt}"
-        },
-        "bg-duration": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.hoverAlt}"
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.hoverAlt}"
-        },
-        "border-duration": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "text-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActive}"
-        },
-        "text-alt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.contentAlt}",
-          "$description": "Days of the week subheaders"
-        },
-        "text-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.content}"
-        },
-        "text-duration": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.content}"
-        },
-        "text-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.content}"
-        },
-        "text-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withHover}"
-        },
-        "textAlt-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.contentAlt}"
-        }
+    "calendar": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.active}"
       },
-      "dropdown": {
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{input.color.popover.bg-hover}",
-          "$description": "REF POPOVER "
-        },
-        "label-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActive}"
-        },
-        "label-alt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.default}"
-        },
-        "label-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.content}"
-        },
-        "label-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.defaultAlt}"
-        },
-        "label-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withHover}"
-        },
-        "label-subtext": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.defaultAlt2}",
-          "$description": "Option subtext."
-        }
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.defaultAlt}"
       },
-      "labelset": {
+      "bg-duration": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.hoverAlt}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.hoverAlt}"
+      },
+      "border-duration": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.active}"
+      },
+      "text-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.withActive}"
+      },
+      "text-alt": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.contentAlt}",
+        "$description": "Days of the week subheaders"
+      },
+      "text-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.content}"
+      },
+      "text-duration": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.content}"
+      },
+      "text-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.content}"
+      },
+      "text-hover": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.withHover}"
+      },
+      "textAlt-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.contentAlt}"
+      }
+    },
+    "dropdown": {
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{input.popover.bg-hover}",
+        "$description": "REF POPOVER "
+      },
+      "label-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.withActive}"
+      },
+      "label-alt": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.default}"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.content}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.defaultAlt}"
+      },
+      "label-hover": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.withHover}"
+      },
+      "label-subtext": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.defaultAlt2}",
+        "$description": "Option subtext."
+      }
+    },
+    "labelset": {
+      "label-required": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.danger.default}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.content}"
+      },
+      "label-alt": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.contentAlt}",
+        "$description": "used for '(optional)' text and hint text."
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.content}"
+      },
+      "label-readOnly": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.content}"
+      },
+      "inverse": {
         "label-required": {
           "$type": "color",
-          "$value": "{modes.color.interactive.danger.default}"
+          "$value": "{modes.color.interactive.danger.inverse.default}"
         },
         "label-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.content}"
+          "$value": "{modes.color.interactive.dataEntry.inverse.content}"
         },
         "label-alt": {
           "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.contentAlt}",
+          "$value": "{modes.color.interactive.dataEntry.inverse.contentAlt}",
           "$description": "used for '(optional)' text and hint text."
-        },
-        "label-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.content}"
-        },
-        "label-readOnly": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.content}"
-        },
-        "inverse": {
-          "label-required": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.inverse.default}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.dataEntry.inverse.content}"
-          },
-          "label-alt": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.dataEntry.inverse.contentAlt}",
-            "$description": "used for '(optional)' text and hint text."
-          }
         }
+      }
+    },
+    "typical": {
+      "bg-alt": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.defaultAlt}",
+        "$description": "progress bar bg, text editor preview and text editor footer"
       },
-      "typical": {
-        "bg-alt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.defaultAlt}",
-          "$description": "progress bar bg, text editor preview and text editor footer"
-        },
-        "bg-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.defaultAlt}"
-        },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.defaultAlt}"
+      },
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.default}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.hoverAlt}"
+      },
+      "bg-readOnly": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.defaultAlt}"
+      },
+      "border-alt": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.default}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.withDefault}"
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.default}"
+      },
+      "border-hover": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.withHover}",
+        "$description": "File input draggable border state"
+      },
+      "border-readOnly": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.default}"
+      },
+      "icon-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.withActive}",
+        "$description": "used on tick in color picker and selected tick on dropdowns"
+      },
+      "icon-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.content}"
+      },
+      "icon-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.icon}"
+      },
+      "icon-hover": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.withHover}"
+      },
+      "icon-readOnly": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.iconAlt}"
+      },
+      "iconAlt-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.withActiveAlt}",
+        "$description": "used on tick in color picker"
+      },
+      "text-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.content}"
+      },
+      "text-alt": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.contentAlt}"
+      },
+      "text-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.content}"
+      },
+      "text-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.content}"
+      },
+      "text-hover": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.withHover}",
+        "$description": "text hover state when dragging a file over file input"
+      },
+      "text-readOnly": {
+        "$type": "color",
+        "$value": "{modes.color.generic.content.harsh}"
+      },
+      "inverse": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.default}"
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.hoverAlt}"
-        },
-        "bg-readOnly": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.defaultAlt}"
-        },
-        "border-alt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.default}"
+          "$value": "{modes.color.interactive.dataEntry.inverse.default}"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.withDefault}"
-        },
-        "border-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.default}"
-        },
-        "border-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.withHover}",
-          "$description": "File input draggable border state"
-        },
-        "border-readOnly": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.default}"
-        },
-        "icon-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.withActive}",
-          "$description": "used on tick in color picker and selected tick on dropdowns"
-        },
-        "icon-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.content}"
-        },
-        "icon-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.icon}"
-        },
-        "icon-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.withHover}"
-        },
-        "icon-readOnly": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.iconAlt}"
-        },
-        "iconAlt-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.withActiveAlt}",
-          "$description": "used on tick in color picker"
-        },
-        "text-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.content}"
-        },
-        "text-alt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.contentAlt}"
+          "$value": "{modes.color.interactive.dataEntry.inverse.withDefault}"
         },
         "text-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.content}"
-        },
-        "text-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.content}"
-        },
-        "text-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.withHover}",
-          "$description": "text hover state when dragging a file over file input"
-        },
-        "text-readOnly": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.harsh}"
-        },
-        "inverse": {
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.dataEntry.inverse.default}"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.dataEntry.inverse.withDefault}"
-          },
-          "text-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.dataEntry.inverse.content}"
-          }
+          "$value": "{modes.color.interactive.dataEntry.inverse.content}"
         }
+      }
+    },
+    "switch": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.active}"
       },
-      "switch": {
-        "bg-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "bg-activedisabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.default}"
-        },
-        "bg-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.defaultAlt}",
-          "$description": "for switch"
-        },
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.default}",
-          "$description": "for switch"
-        },
-        "border-active": {
-          "$type": "color",
-          "$value": "transparent"
-        },
-        "border-activedisabled": {
-          "$type": "color",
-          "$value": "transparent"
-        },
-        "border-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.default}"
-        },
-        "border-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.subtle.defaultAlt}"
-        },
-        "fg-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActive}"
-        },
-        "fg-activedisabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.contentAlt}"
-        },
-        "fg-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.default}"
-        },
-        "fg-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.subtle.defaultAlt}"
-        },
-        "label-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.content}"
-        },
-        "label-activedisabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.default}"
-        },
-        "label-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.default}"
-        },
-        "label-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.contentAlt}"
-        },
-        "icon-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.dataEntry.contentAlt}"
-        }
+      "bg-activedisabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.default}"
       },
-      "validation": {
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.defaultAlt}",
+        "$description": "for switch"
+      },
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.default}",
+        "$description": "for switch"
+      },
+      "border-active": {
+        "$type": "color",
+        "$value": "transparent"
+      },
+      "border-activedisabled": {
+        "$type": "color",
+        "$value": "transparent"
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.default}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.subtle.defaultAlt}"
+      },
+      "fg-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.withActive}"
+      },
+      "fg-activedisabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.contentAlt}"
+      },
+      "fg-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.default}"
+      },
+      "fg-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.subtle.defaultAlt}"
+      },
+      "label-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.content}"
+      },
+      "label-activedisabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.default}"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.default}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.contentAlt}"
+      },
+      "icon-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.dataEntry.contentAlt}"
+      }
+    },
+    "validation": {
+      "border-error": {
+        "$type": "color",
+        "$value": "{modes.color.status.negative.default}"
+      },
+      "bar-error": {
+        "$type": "color",
+        "$value": "{modes.color.status.negative.default}",
+        "$description": "error bar to left of inputs"
+      },
+      "bar-warning": {
+        "$type": "color",
+        "$value": "{modes.color.status.caution.default}",
+        "$description": "warning bar to left of inputs"
+      },
+      "label-error": {
+        "$type": "color",
+        "$value": "{modes.color.status.negative.text}"
+      },
+      "label-success": {
+        "$type": "color",
+        "$value": "{modes.color.status.positive.default}"
+      },
+      "label-warning": {
+        "$type": "color",
+        "$value": "{modes.color.status.caution.text}"
+      },
+      "inverse": {
         "border-error": {
           "$type": "color",
-          "$value": "{modes.color.status.negative.default}"
+          "$value": "{modes.color.status.negative.inverse.default}"
         },
         "bar-error": {
           "$type": "color",
-          "$value": "{modes.color.status.negative.default}",
+          "$value": "{modes.color.status.negative.inverse.default}",
           "$description": "error bar to left of inputs"
-        },
-        "bar-warning": {
-          "$type": "color",
-          "$value": "{modes.color.status.caution.default}",
-          "$description": "warning bar to left of inputs"
         },
         "label-error": {
           "$type": "color",
-          "$value": "{modes.color.status.negative.text}"
-        },
-        "label-success": {
-          "$type": "color",
-          "$value": "{modes.color.status.positive.default}"
-        },
-        "label-warning": {
-          "$type": "color",
-          "$value": "{modes.color.status.caution.text}"
-        },
-        "inverse": {
-          "border-error": {
-            "$type": "color",
-            "$value": "{modes.color.status.negative.inverse.default}"
-          },
-          "bar-error": {
-            "$type": "color",
-            "$value": "{modes.color.status.negative.inverse.default}",
-            "$description": "error bar to left of inputs"
-          },
-          "label-error": {
-            "$type": "color",
-            "$value": "{modes.color.status.negative.inverse.text}"
-          }
-        }
-      },
-      "popover": {
-        "bg-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}",
-          "$description": "previously action minor 850"
-        },
-        "bg-activealt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.hoverAlt}",
-          "$description": "REF'D IN FORM. "
-        },
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.nought}",
-          "$description": "REF'D IN FORM. Popover container bg"
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.hoverAlt}",
-          "$description": "REF'D IN FORM. "
-        },
-        "label-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActive}"
-        },
-        "label-activealt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withHover}"
-        },
-        "label-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.content}"
-        },
-        "label-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withHover}"
-        },
-        "label-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.defaultAlt}"
-        },
-        "submenu": {
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.bg.faint}",
-            "$description": "popover small screen submenu container bg"
-          }
+          "$value": "{modes.color.status.negative.inverse.text}"
         }
       }
     },
@@ -433,6 +382,53 @@
               "$description": "maxwidth of large size popover menu container"
             }
           }
+        }
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.active}",
+        "$description": "previously action minor 850"
+      },
+      "bg-activealt": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.hoverAlt}",
+        "$description": "REF'D IN FORM. "
+      },
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.bg.nought}",
+        "$description": "REF'D IN FORM. Popover container bg"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.hoverAlt}",
+        "$description": "REF'D IN FORM. "
+      },
+      "label-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.withActive}"
+      },
+      "label-activealt": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.withHover}"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.content}"
+      },
+      "label-hover": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.withHover}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.defaultAlt}"
+      },
+      "submenu": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.faint}",
+          "$description": "popover small screen submenu container bg"
         }
       }
     }
