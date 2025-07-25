@@ -1,40 +1,44 @@
 {
+  "AI": {
+    "color": {
+      "dialog": {
+        "borderhorizontal": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.ai.default}",
+          "$description": "top border for AI dialog component"
+        }
+      },
+      "nudge": {
+        "borderAi-horizontal": {
+          "$type": "color",
+          "$value": "{modes.color.status.ai.default-horizontal}",
+          "$description": "top and bottom border for AI nudge message component"
+        },
+        "borderAi-vertical": {
+          "$type": "color",
+          "$value": "{modes.color.status.ai.default-vertical}",
+          "$description": "left and right border for AI nudge message component"
+        }
+      },
+      "tile": {
+        "bordervertical": {
+          "$type": "color",
+          "$value": "{modes.color.status.ai.default-vertical}",
+          "$description": "left border for AI tiles and bubbles."
+        }
+      }
+    }
+  },
+  "blockquote": {
+    "color": {
+      "border": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.primary.default}"
+      }
+    }
+  },
   "container": {
     "color": {
-      "AI": {
-        "dialog": {
-          "borderhorizontal": {
-            "$type": "color",
-            "$value": "{modes.color.generic.fg.ai.default}",
-            "$description": "top border for AI dialog component"
-          }
-        },
-        "nudge": {
-          "borderAi-horizontal": {
-            "$type": "color",
-            "$value": "{modes.color.status.ai.default-horizontal}",
-            "$description": "top and bottom border for AI nudge message component"
-          },
-          "borderAi-vertical": {
-            "$type": "color",
-            "$value": "{modes.color.status.ai.default-vertical}",
-            "$description": "left and right border for AI nudge message component"
-          }
-        },
-        "tile": {
-          "bordervertical": {
-            "$type": "color",
-            "$value": "{modes.color.status.ai.default-vertical}",
-            "$description": "left border for AI tiles and bubbles."
-          }
-        }
-      },
-      "blockquote": {
-        "border": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.primary.default}"
-        }
-      },
       "interactive": {
         "bgFooter-activated": {
           "$type": "color",
@@ -225,7 +229,7 @@
         "statusborder": {
           "bg-ai": {
             "$type": "color",
-            "$value": "{container.color.AI.tile.bordervertical}"
+            "$value": "{AI.color.tile.bordervertical}"
           },
           "bg-caution": {
             "$type": "color",
@@ -412,93 +416,27 @@
           "$description": "min-width for M sized sidebar"
         }
       }
-    },
-    "boxshadow": {
-      "none": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.none}"
+    }
+  },
+  "page": {
+    "color": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.backdrop.nought}"
       },
-      "carousel": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.distant}",
-        "$description": "Carousel "
+      "bg-alt": {
+        "$type": "color",
+        "$value": "{modes.color.generic.backdrop.faint}"
       },
-      "colorpicker": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.near}",
-        "$description": "Color picker (advanced) "
+      "text-alt": {
+        "$type": "color",
+        "$value": "{modes.color.generic.content.moderate}",
+        "$description": "for subheadings etc"
       },
-      "dialog": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.distant}",
-        "$description": "Dialog "
-      },
-      "filepreview": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.distant}",
-        "$description": "File preview"
-      },
-      "nudge": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.far}",
-        "$description": "nudge shadow"
-      },
-      "sidebar": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.distant}",
-        "$description": "Sidebar"
-      },
-      "stickyfooter": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.sticky-footer}",
-        "$description": "Sticky footer in Dialog, Drawer, Sidebar."
-      },
-      "inverse": {
-        "stickyfooter": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.container.inverse.sticky-footer}",
-          "$description": "inverse Sticky footer in Dialog, Drawer, Sidebar."
-        }
-      },
-      "card": {
-        "default": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.default}",
-          "$description": "Card (enabled)"
-        },
-        "hover": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.hover}",
-          "$description": "Card (hover state)"
-        },
-        "drag": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.drag}",
-          "$description": "Card (drag state)"
-        }
-      }
-    },
-    "opacity": {
-      "carousel": {
-        "hidden": {
-          "$type": "opacity",
-          "$value": "0.3",
-          "$description": "opacity applied to next and previous carousel slides"
-        }
-      },
-      "dialog": {
-        "dimmer": {
-          "$type": "opacity",
-          "$value": "0.4",
-          "$description": "dimmer opacity value"
-        }
-      },
-      "drag": {
-        "ghost": {
-          "$type": "opacity",
-          "$value": "0.5",
-          "$description": "drag ghost state opacity value"
-        }
+      "text-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.content.harsh}",
+        "$description": "for headings, paragraph text etc "
       }
     }
   }

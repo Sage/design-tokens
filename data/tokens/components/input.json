@@ -1,5 +1,5 @@
 {
-  "form": {
+  "input": {
     "color": {
       "calendar": {
         "bg-active": {
@@ -344,6 +344,95 @@
             "$type": "color",
             "$value": "{modes.color.status.negative.inverse.text}"
           }
+        }
+      }
+    }
+  },
+  "popover": {
+    "size": {
+      "menu": {
+        "minwidth": {
+          "S": {
+            "$type": "sizing",
+            "$value": "{container.size.responsiveItems.M} / 2",
+            "$description": "minwidth of small size popover menu container"
+          },
+          "M": {
+            "$type": "sizing",
+            "$value": "{container.size.responsiveItems.XS}",
+            "$description": "minwidth of medium size popover menu container"
+          },
+          "L": {
+            "$type": "sizing",
+            "$value": "{container.size.responsiveItems.S}",
+            "$description": "minwidth of large size popover menu container"
+          }
+        },
+        "maxwidth": {
+          "S": {
+            "$type": "sizing",
+            "$value": "{container.size.responsiveItems.M}",
+            "$description": "maxwidth of small size popover menu container"
+          },
+          "M": {
+            "$type": "sizing",
+            "$value": "{container.size.responsiveItems.L}",
+            "$description": "maxwidth of medium size popover menu container"
+          },
+          "L": {
+            "$type": "sizing",
+            "$value": "{container.size.responsiveItems.XL}",
+            "$description": "maxwidth of large size popover menu container"
+          }
+        }
+      }
+    },
+    "color": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.active}",
+        "$description": "previously action minor 850"
+      },
+      "bg-activealt": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.hoverAlt}",
+        "$description": "REF'D IN FORM. "
+      },
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.bg.nought}",
+        "$description": "REF'D IN FORM. Popover container bg"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.hoverAlt}",
+        "$description": "REF'D IN FORM. "
+      },
+      "label-active": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.withActive}"
+      },
+      "label-activealt": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.withHover}"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.inactive.content}"
+      },
+      "label-hover": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.withHover}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.defaultAlt}"
+      },
+      "submenu": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.faint}",
+          "$description": "popover small screen submenu container bg"
         }
       }
     }

@@ -1,5 +1,5 @@
 {
-  "status": {
+  "feedback": {
     "color": {
       "none": {
         "$type": "color",
@@ -772,6 +772,164 @@
         "border-default": {
           "$type": "color",
           "$value": "{modes.color.status.reviews.default}"
+        }
+      }
+    }
+  },
+  "progress": {
+    "color": {
+      "bg-skeleton": {
+        "$type": "color",
+        "$value": "{modes.color.status.content.loading}"
+      },
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.progress.bg}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.fg.soft}"
+      },
+      "fg-ai": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.ai.default}",
+        "$description": "For progress ring in ai buttons"
+      },
+      "fg-alt": {
+        "$type": "color",
+        "$value": "{modes.color.status.positive.default}"
+      },
+      "fg-alt2": {
+        "$type": "color",
+        "$value": "{modes.color.generic.content.firm}"
+      },
+      "fg-caution": {
+        "$type": "color",
+        "$value": "{modes.color.status.caution.default}"
+      },
+      "fg-default": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.monochrome.active}"
+      },
+      "fg-error": {
+        "$type": "color",
+        "$value": "{modes.color.status.negative.default}"
+      },
+      "fg-info": {
+        "$type": "color",
+        "$value": "{modes.color.status.info.default}"
+      },
+      "label-alt": {
+        "$type": "color",
+        "$value": "{modes.color.generic.content.firm}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.content.harsh}"
+      },
+      "datavis": {
+        "fg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.teal.default}"
+        }
+      },
+      "loader": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.progress.bg}"
+        },
+        "fg-default": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.active}",
+          "$description": "used for loader standard loader spinner"
+        },
+        "fg-error": {
+          "$type": "color",
+          "$value": "{modes.color.status.negative.default}"
+        },
+        "fg-complete": {
+          "$type": "color",
+          "$value": "{modes.color.status.positive.default}"
+        },
+        "inverse": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.progress.bgAlt}",
+            "$description": "used for inverse loader bgs"
+          },
+          "fg-default": {
+            "$type": "color",
+            "$value": "{modes.color.interactive.monochrome.withActive}",
+            "$description": "used on inverse loading spinner"
+          }
+        }
+      },
+      "stepflow": {
+        "bg-active": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.active}"
+        },
+        "bg-complete": {
+          "$type": "color",
+          "$value": "{modes.color.status.positive.default}"
+        },
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.nought}"
+        },
+        "border-active-inner": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.nought}"
+        },
+        "border-active-outer": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.active}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.soft}"
+        },
+        "label-alt": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.firm}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.harsh}"
+        }
+      },
+      "stepindicator": {
+        "bg-active": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.active}"
+        },
+        "bg-complete": {
+          "$type": "color",
+          "$value": "{modes.color.status.positive.default}"
+        },
+        "border-active-outer": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.active}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.soft}"
+        },
+        "border-success": {
+          "$type": "color",
+          "$value": "{modes.color.status.positive.default}"
+        },
+        "label-active": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.withActive}"
+        },
+        "label-complete": {
+          "$type": "color",
+          "$value": "{modes.color.interactive.monochrome.withActive}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.content.harsh}"
         }
       }
     }
