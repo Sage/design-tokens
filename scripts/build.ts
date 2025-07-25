@@ -80,7 +80,7 @@ const getFiles = ({componentName, modeName = '', format, suffix, outputRefs = fa
 const getGlobalConfig = (): Config => {
   return {
     source: [
-      './data/tokens/primitives.json',
+      './data/tokens/core.json',
       './data/tokens/global/*.json'
     ],
     preprocessors: ['tokens-studio'],
@@ -146,7 +146,7 @@ const getGlobalConfig = (): Config => {
 const getModeConfig = (modeName: string): Config => {
   return {
     source: [
-      './data/tokens/primitives.json',
+      './data/tokens/core.json',
       './data/tokens/global/*.json',
       `./data/tokens/modes/${modeName}.json`,
       './data/tokens/components/*.json'
