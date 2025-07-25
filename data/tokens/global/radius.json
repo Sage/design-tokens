@@ -1,11 +1,6 @@
 {
   "global": {
     "radius": {
-      "scale": {
-        "$type": "borderRadius",
-        "$value": "1",
-        "$description": "We can override this to locally change the size of radius in the future if required."
-      },
       "none": {
         "$type": "borderRadius",
         "$value": "0",
@@ -19,87 +14,87 @@
       "container": {
         "XXS": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.12} * {global.radius.scale}",
+          "$value": "{core.dimension.12}",
           "$description": "Validation bar on input components"
         },
         "XS": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.25} * {global.radius.scale}",
+          "$value": "{core.dimension.25}",
           "$description": "Pill"
         },
         "S": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.50} * {global.radius.scale}"
+          "$value": "{core.dimension.50}"
         },
         "SM": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.75} * {global.radius.scale}",
+          "$value": "{core.dimension.75}",
           "$description": "L size loader and tracker corners"
         },
         "M": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.100} * {global.radius.scale}",
+          "$value": "{core.dimension.100}",
           "$description": "Card select group (outer corners), Card select (single), Color picker advanced (inner swatch container), File input (file uploads & integrated progress bar (bottom corners),  File preview (File selector assets on left), Link preview, Message, Note, Popover (menu container in Action popover, Button-split, Button-multi-action, Calendar, Dropdown), Subscription tile (currently a pattern), Table (parent container), Tile & Tile flexbox (less rounded), Toast, Tooltip"
         },
         "L": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.200} * {global.radius.scale}",
+          "$value": "{core.dimension.200}",
           "$description": "Card (less rounded), Carousel (slides), Color picker advanced (parent container), File preview (parent container), Medium Tile & Tile flexbox, Medium Card."
         },
         "XL": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.300} * {global.radius.scale}",
+          "$value": "{core.dimension.300}",
           "$description": "Card (more  rounded), Copilot Container, Carousel (parent container), Dialog (not full screen), Large Tile & Tile flexbox, Large cards"
         },
         "XXL": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.400} * {global.radius.scale}"
+          "$value": "{core.dimension.400}"
         },
         "XXXL": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.500} * {global.radius.scale}",
+          "$value": "{core.dimension.500}",
           "$description": "marketing cards and tiles"
         },
         "XXXXL": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.1000} * {global.radius.scale}",
+          "$value": "{core.dimension.1000}",
           "$description": "marketing images "
         }
       },
       "interactive": {
         "XXS": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.12} * {global.radius.scale}",
+          "$value": "{core.dimension.12}",
           "$description": "Tab baseline."
         },
         "XS": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.25} * {global.radius.scale}",
+          "$value": "{core.dimension.25}",
           "$description": "Link (focus background and underline)"
         },
         "S": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.50} * {global.radius.scale}",
+          "$value": "{core.dimension.50}",
           "$description": "S & M Checkboxes"
         },
         "M": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.100} * {global.radius.scale}",
+          "$value": "{core.dimension.100}",
           "$description": "Button subtle, L Checkboxes, Date picker input, Date range input, Dropdown select (trigger), Search, File input (draggable area),  Menu (bottom corners), Navigation: left (state bg shape), Skip focus, Tab, Text area, Text input,"
         },
         "L": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.200} * {global.radius.scale}",
+          "$value": "{core.dimension.200}",
           "$description": "Buttons S (typical and destructive, and inc bar, split and multi), Navigation left (collapsible Assets/Menu select top-right and bottom-right corners), "
         },
         "XL": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.250} * {global.radius.scale}",
+          "$value": "{core.dimension.250}",
           "$description": "Buttons M (typical and destructive and inc bar split and multi), Button toggle M (parent container)"
         },
         "XXL": {
           "$type": "borderRadius",
-          "$value": "{core.dimension.300} * {global.radius.scale}",
+          "$value": "{core.dimension.300}",
           "$description": "Buttons L (typical and destructive and inc bar split and multi), Button toggle L (parent container)"
         }
       }

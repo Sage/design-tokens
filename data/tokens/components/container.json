@@ -1,43 +1,43 @@
 {
-  "container": {
-    "AI": {
-      "color": {
-        "dialog": {
-          "borderhorizontal": {
-            "$type": "color",
-            "$value": "{modes.color.generic.fg.ai.default}",
-            "$description": "top border for AI dialog component"
-          }
-        },
-        "nudge": {
-          "borderAi-horizontal": {
-            "$type": "color",
-            "$value": "{modes.color.status.ai.default-horizontal}",
-            "$description": "top and bottom border for AI nudge message component"
-          },
-          "borderAi-vertical": {
-            "$type": "color",
-            "$value": "{modes.color.status.ai.default-vertical}",
-            "$description": "left and right border for AI nudge message component"
-          }
-        },
-        "tile": {
-          "bordervertical": {
-            "$type": "color",
-            "$value": "{modes.color.status.ai.default-vertical}",
-            "$description": "left border for AI tiles and bubbles."
-          }
-        }
-      }
-    },
-    "blockquote": {
-      "color": {
-        "border": {
+  "AI": {
+    "color": {
+      "dialog": {
+        "borderhorizontal": {
           "$type": "color",
-          "$value": "{modes.color.interactive.primary.default}"
+          "$value": "{modes.color.generic.fg.ai.default}",
+          "$description": "top border for AI dialog component"
+        }
+      },
+      "nudge": {
+        "borderAi-horizontal": {
+          "$type": "color",
+          "$value": "{modes.color.status.ai.default-horizontal}",
+          "$description": "top and bottom border for AI nudge message component"
+        },
+        "borderAi-vertical": {
+          "$type": "color",
+          "$value": "{modes.color.status.ai.default-vertical}",
+          "$description": "left and right border for AI nudge message component"
+        }
+      },
+      "tile": {
+        "bordervertical": {
+          "$type": "color",
+          "$value": "{modes.color.status.ai.default-vertical}",
+          "$description": "left border for AI tiles and bubbles."
         }
       }
-    },
+    }
+  },
+  "blockquote": {
+    "color": {
+      "border": {
+        "$type": "color",
+        "$value": "{modes.color.interactive.primary.default}"
+      }
+    }
+  },
+  "container": {
     "color": {
       "interactive": {
         "bgFooter-activated": {
@@ -229,7 +229,7 @@
         "statusborder": {
           "bg-ai": {
             "$type": "color",
-            "$value": "{container.AI.color.tile.bordervertical}"
+            "$value": "{AI.color.tile.bordervertical}"
           },
           "bg-caution": {
             "$type": "color",
@@ -416,27 +416,27 @@
           "$description": "min-width for M sized sidebar"
         }
       }
-    },
-    "page": {
-      "color": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.backdrop.nought}"
-        },
-        "bg-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.backdrop.faint}"
-        },
-        "text-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.moderate}",
-          "$description": "for subheadings etc"
-        },
-        "text-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.harsh}",
-          "$description": "for headings, paragraph text etc "
-        }
+    }
+  },
+  "page": {
+    "color": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.backdrop.nought}"
+      },
+      "bg-alt": {
+        "$type": "color",
+        "$value": "{modes.color.generic.backdrop.faint}"
+      },
+      "text-alt": {
+        "$type": "color",
+        "$value": "{modes.color.generic.content.moderate}",
+        "$description": "for subheadings etc"
+      },
+      "text-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.content.harsh}",
+        "$description": "for headings, paragraph text etc "
       }
     }
   }
