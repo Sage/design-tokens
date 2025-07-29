@@ -1,9 +1,9 @@
 {
-  "primitives": {
+  "core": {
     "colors": {
       "black": {
         "$type": "color",
-        "$value": "#000000",
+        "$value": "black",
         "$description": "Base color for different text opacities. Used as a mixer in the mid theming layer for hover states, active states etc. Dividers and table headers. Base color for secondary, Tertiary and Subtle buttons. Base color for Input borders. Focus internal border."
       },
       "blue": {
@@ -22,9 +22,161 @@
         "$description": "Sage Logo color Primary buttons on dark backgrounds"
       },
       "emerald": {
-        "$type": "color",
-        "$value": "#00811F",
-        "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.95",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.8",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.6",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.2",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.2",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.6",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.8",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.95",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        }
       },
       "verdant": {
         "$type": "color",
@@ -383,159 +535,159 @@
     "dimension": {
       "0": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 0"
+        "$value": "{core.dimension.base} * 0"
       },
       "12": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 12.5"
+        "$value": "{core.dimension.base} * 12.5"
       },
       "25": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 25"
+        "$value": "{core.dimension.base} * 25"
       },
       "38": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 37.5"
+        "$value": "{core.dimension.base} * 37.5"
       },
       "50": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 50"
+        "$value": "{core.dimension.base} * 50"
       },
       "62": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 62.5"
+        "$value": "{core.dimension.base} * 62.5"
       },
       "75": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 75"
+        "$value": "{core.dimension.base} * 75"
       },
       "100": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 100"
+        "$value": "{core.dimension.base} * 100"
       },
       "125": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 125"
+        "$value": "{core.dimension.base} * 125"
       },
       "150": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 150"
+        "$value": "{core.dimension.base} * 150"
       },
       "175": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 175"
+        "$value": "{core.dimension.base} * 175"
       },
       "200": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 200"
+        "$value": "{core.dimension.base} * 200"
       },
       "250": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 250"
+        "$value": "{core.dimension.base} * 250"
       },
       "300": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 300"
+        "$value": "{core.dimension.base} * 300"
       },
       "350": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 350"
+        "$value": "{core.dimension.base} * 350"
       },
       "400": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 400"
+        "$value": "{core.dimension.base} * 400"
       },
       "450": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 450"
+        "$value": "{core.dimension.base} * 450"
       },
       "500": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 500"
+        "$value": "{core.dimension.base} * 500"
       },
       "550": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 550"
+        "$value": "{core.dimension.base} * 550"
       },
       "600": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 600"
+        "$value": "{core.dimension.base} * 600"
       },
       "650": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 650"
+        "$value": "{core.dimension.base} * 650"
       },
       "700": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 700"
+        "$value": "{core.dimension.base} * 700"
       },
       "750": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 750"
+        "$value": "{core.dimension.base} * 750"
       },
       "800": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 800"
+        "$value": "{core.dimension.base} * 800"
       },
       "850": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 850"
+        "$value": "{core.dimension.base} * 850"
       },
       "900": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 900"
+        "$value": "{core.dimension.base} * 900"
       },
       "950": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 950"
+        "$value": "{core.dimension.base} * 950"
       },
       "1000": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 1000"
+        "$value": "{core.dimension.base} * 1000"
       },
       "1300": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 1300"
+        "$value": "{core.dimension.base} * 1300"
       },
       "1500": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 1500"
+        "$value": "{core.dimension.base} * 1500"
       },
       "1600": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 1600"
+        "$value": "{core.dimension.base} * 1600"
       },
       "2000": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 2000"
+        "$value": "{core.dimension.base} * 2000"
       },
       "2500": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 2500"
+        "$value": "{core.dimension.base} * 2500"
       },
       "3000": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 3000"
+        "$value": "{core.dimension.base} * 3000"
       },
       "3600": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 3600"
+        "$value": "{core.dimension.base} * 3600"
       },
       "4000": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 4000"
+        "$value": "{core.dimension.base} * 4000"
       },
       "7000": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 7000"
+        "$value": "{core.dimension.base} * 7000"
       },
       "9500": {
         "$type": "dimension",
-        "$value": "{primitives.dimension.base} * 9500"
+        "$value": "{core.dimension.base} * 9500"
       },
       "base": {
         "$type": "dimension",
-        "$value": "{primitives.size.SCALE} / 100"
+        "$value": "{core.size.SCALE} / 100"
       }
     },
     "fontWeights": {
@@ -596,7 +748,7 @@
               "y": "2",
               "blur": "2",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             },
             {
@@ -604,7 +756,7 @@
               "y": "5",
               "blur": "5",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             }
           ]
@@ -617,7 +769,7 @@
               "y": "1",
               "blur": "2",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             },
             {
@@ -625,7 +777,7 @@
               "y": "2",
               "blur": "10",
               "spread": "0",
-              "color": "{primitives.colors.black}33",
+              "color": "{core.colors.black}33",
               "type": "dropShadow"
             }
           ]
@@ -638,7 +790,7 @@
               "y": "2",
               "blur": "3",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             },
             {
@@ -646,7 +798,7 @@
               "y": "6",
               "blur": "30",
               "spread": "0",
-              "color": "{primitives.colors.black}26",
+              "color": "{core.colors.black}26",
               "type": "dropShadow"
             }
           ]
@@ -659,7 +811,7 @@
               "y": "3",
               "blur": "4",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             },
             {
@@ -667,7 +819,7 @@
               "y": "10",
               "blur": "60",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             }
           ]
@@ -682,7 +834,7 @@
               "y": "8",
               "blur": "4",
               "spread": "-4",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "innerShadow"
             }
           ]
@@ -697,7 +849,7 @@
               "y": "0",
               "blur": "2",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             },
             {
@@ -705,7 +857,7 @@
               "y": "0",
               "blur": "5",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             }
           ]
@@ -720,7 +872,7 @@
               "y": "0",
               "blur": "2",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             },
             {
@@ -728,7 +880,7 @@
               "y": "0",
               "blur": "5",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             }
           ]
@@ -743,7 +895,7 @@
               "y": "-1",
               "blur": "2",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             },
             {
@@ -751,7 +903,7 @@
               "y": "-2",
               "blur": "10",
               "spread": "0",
-              "color": "{primitives.colors.black}33",
+              "color": "{core.colors.black}33",
               "type": "dropShadow"
             }
           ]
@@ -764,7 +916,7 @@
               "y": "-3",
               "blur": "4",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             },
             {
@@ -772,7 +924,7 @@
               "y": "-10",
               "blur": "60",
               "spread": "0",
-              "color": "{primitives.colors.black}1A",
+              "color": "{core.colors.black}1A",
               "type": "dropShadow"
             }
           ]
@@ -787,7 +939,7 @@
               "y": "-1",
               "blur": "0",
               "spread": "0",
-              "color": "{primitives.colors.black}4D",
+              "color": "{core.colors.black}4D",
               "type": "innerShadow"
             }
           ]
@@ -795,7 +947,117 @@
       }
     },
     "fontSize": {
-      "responsive": {
+      "adaptive": {
+        "small": {
+          "stepMinus2": {
+            "$type": "fontSizes",
+            "$value": "12"
+          },
+          "stepMinus1": {
+            "$type": "fontSizes",
+            "$value": "13"
+          },
+          "step0": {
+            "$type": "fontSizes",
+            "$value": "14"
+          },
+          "step1": {
+            "$type": "fontSizes",
+            "$value": "16"
+          },
+          "step2": {
+            "$type": "fontSizes",
+            "$value": "17"
+          },
+          "step3": {
+            "$type": "fontSizes",
+            "$value": "19"
+          },
+          "step4": {
+            "$type": "fontSizes",
+            "$value": "21"
+          },
+          "step5": {
+            "$type": "fontSizes",
+            "$value": "23"
+          },
+          "step6": {
+            "$type": "fontSizes",
+            "$value": "25"
+          },
+          "step7": {
+            "$type": "fontSizes",
+            "$value": "27"
+          },
+          "step8": {
+            "$type": "fontSizes",
+            "$value": "30"
+          },
+          "step9": {
+            "$type": "fontSizes",
+            "$value": "33"
+          },
+          "step10": {
+            "$type": "fontSizes",
+            "$value": "36"
+          }
+        },
+        "large": {
+          "stepMinus2": {
+            "$type": "fontSizes",
+            "$value": "12"
+          },
+          "stepMinus1": {
+            "$type": "fontSizes",
+            "$value": "13"
+          },
+          "step0": {
+            "$type": "fontSizes",
+            "$value": "14"
+          },
+          "step1": {
+            "$type": "fontSizes",
+            "$value": "16"
+          },
+          "step2": {
+            "$type": "fontSizes",
+            "$value": "18"
+          },
+          "step3": {
+            "$type": "fontSizes",
+            "$value": "21"
+          },
+          "step4": {
+            "$type": "fontSizes",
+            "$value": "24"
+          },
+          "step5": {
+            "$type": "fontSizes",
+            "$value": "27"
+          },
+          "step6": {
+            "$type": "fontSizes",
+            "$value": "30"
+          },
+          "step7": {
+            "$type": "fontSizes",
+            "$value": "35"
+          },
+          "step8": {
+            "$type": "fontSizes",
+            "$value": "40"
+          },
+          "step9": {
+            "$type": "fontSizes",
+            "$value": "46"
+          },
+          "step10": {
+            "$type": "fontSizes",
+            "$value": "52"
+          }
+        }
+      },
+      "fluid": {
         "stepMinus2": {
           "$type": "fontSizes",
           "$value": "clamp(0.6733rem, 0.7398rem + -0.0831vw, 0.7231rem)",
@@ -884,23 +1146,23 @@
       },
       "150": {
         "$type": "paragraphSpacing",
-        "$value": "{primitives.dimension.150}"
+        "$value": "{core.dimension.150}"
       },
       "200": {
         "$type": "paragraphSpacing",
-        "$value": "{primitives.dimension.200}"
+        "$value": "{core.dimension.200}"
       },
       "250": {
         "$type": "paragraphSpacing",
-        "$value": "{primitives.dimension.250}"
+        "$value": "{core.dimension.250}"
       },
       "300": {
         "$type": "paragraphSpacing",
-        "$value": "{primitives.dimension.300}"
+        "$value": "{core.dimension.300}"
       },
       "400": {
         "$type": "paragraphSpacing",
-        "$value": "{primitives.dimension.400}"
+        "$value": "{core.dimension.400}"
       }
     },
     "color": {
@@ -946,6 +1208,34 @@
             "$description": "standard mixer for shadow"
           }
         }
+      }
+    },
+    "fontFamilies": {
+      "sage-icons": {
+        "$type": "fontFamilies",
+        "$value": "sage-icons"
+      },
+      "heading": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI"
+      },
+      "subheading": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI"
+      },
+      "body": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI"
+      },
+      "component": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI",
+        "$description": "Used in componentry such as tables, buttons, inputs etc."
+      },
+      "other": {
+        "$type": "fontFamilies",
+        "$value": "Open Sans",
+        "$description": "Fallback for when Sage fonts cannot load."
       }
     }
   }
