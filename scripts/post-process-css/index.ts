@@ -8,7 +8,6 @@ import { ScreenSizeTokens } from "./screen-size-tokens.js";
 import { ContextTokens } from "./context-tokens.js";
 import {
   ConsolidateScreenSizes,
-  FilterTypographyTokens,
   LightDarkModeFormatter,
   MathsCalc
 } from "./formatters/";
@@ -87,15 +86,12 @@ const screenSizeTokens = new ScreenSizeTokens(
 // Using "product" as a valid context name
 const contextTokens = new ContextTokens("product", [screenSizeTokens]);
 
-// Apply formatting pipeline: handle light/dark modes, filter typography
+// Apply formatting pipeline: handle light/dark modes
 const consolidateScreenSizes = new ConsolidateScreenSizes();
 const lightDarkModeFormatter = new LightDarkModeFormatter(consolidateScreenSizes);
-const filterAdaptiveTypography = new FilterTypographyTokens(
-  lightDarkModeFormatter
-);
 
 // Run tokens through the formatting pipeline
-const formattedTokens = filterAdaptiveTypography.formatTokens(contextTokens);
+const formattedTokens = lightDarkModeFormatter.formatTokens(contextTokens);
 
 // Write the combined CSS file to the root of the distribution directory
 writeCombinedCssFile(cssDistPath, formattedTokens);
