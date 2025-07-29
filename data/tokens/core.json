@@ -1,0 +1,3226 @@
+{
+  "core": {
+    "colors": {
+      "black": {
+        "$type": "color",
+        "$value": "black",
+        "$description": "Base color for different text opacities. Used as a mixer in the mid theming layer for hover states, active states etc. Dividers and table headers. Base color for secondary, Tertiary and Subtle buttons. Base color for Input borders. Focus internal border."
+      },
+      "white": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "Surface backgrounds. Text colors on buttons and on dark backgrounds. Used as a mixer in the mid theming layer for hover states, active states etc."
+      },
+      "transparent": {
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0",
+              "space": "lch"
+            }
+          }
+        },
+        "$type": "color",
+        "$value": "rgba(0,0,0,0)",
+        "$description": "For transparent backgrounds and borders."
+      },
+      "blue": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blue.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blue.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blue.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blue.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blue.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#0060A7",
+          "$description": "Base status color for light surface. AAA text on white."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blue.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blue.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blue.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blue.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blue.50}"
+        }
+      },
+      "azure": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.azure.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.azure.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.azure.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.azure.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.azure.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#007ED9",
+          "$description": "Base status color for dark surfaces. AA text  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.azure.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.azure.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.azure.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.azure.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.azure.50}"
+        }
+      },
+      "brilliantGreen": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.brilliantGreen.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.brilliantGreen.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.brilliantGreen.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.brilliantGreen.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.brilliantGreen.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#00D639",
+          "$description": "Sage Logo color Primary buttons on dark backgrounds"
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.brilliantGreen.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.brilliantGreen.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.brilliantGreen.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.brilliantGreen.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.brilliantGreen.50}"
+        }
+      },
+      "emerald": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.emerald.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.emerald.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.emerald.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.emerald.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.emerald.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.emerald.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.emerald.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.emerald.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.emerald.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.emerald.50}"
+        }
+      },
+      "verdant": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.verdant.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.verdant.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.verdant.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.verdant.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.verdant.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#009023",
+          "$description": "Base status color for dark surfaces. AA text  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.verdant.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.verdant.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.verdant.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.verdant.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.verdant.50}"
+        }
+      },
+      "orange": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.orange.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.orange.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.orange.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.orange.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.orange.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#D64309",
+          "$description": "Base status color for light surface. AA text on white. Not taken from brand portal as previous orange wasn't accessible."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.orange.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.orange.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.orange.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.orange.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.orange.50}"
+        }
+      },
+      "tangerine": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.tangerine.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.tangerine.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.tangerine.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.tangerine.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.tangerine.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#E04500",
+          "$description": "Base status color for dark surfaces. AA text  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.tangerine.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.tangerine.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.tangerine.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.tangerine.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.tangerine.50}"
+        }
+      },
+      "gold": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.gold.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.gold.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.gold.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.gold.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.gold.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#FFB500",
+          "$description": "Outer focus border."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.gold.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.gold.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.gold.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.gold.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.gold.50}"
+        }
+      },
+      "navy": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.navy.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.navy.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.navy.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.navy.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.navy.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#335B70",
+          "$description": "old action minor 500. (Pure navy is #00293F)"
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.navy.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.navy.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.navy.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.navy.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.navy.50}"
+        }
+      },
+      "storm": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.storm.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.storm.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.storm.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.storm.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.storm.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#656565",
+          "$description": "Base status color for light surface. AA text on white. Luminosity 46.8."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.storm.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.storm.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.storm.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.storm.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.storm.50}"
+        }
+      },
+      "smoke": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.smoke.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.smoke.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.smoke.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.smoke.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.smoke.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#7C7C7C",
+          "$description": "Base status color for dark surfaces. AA text  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.smoke.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.smoke.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.smoke.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.smoke.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.smoke.50}"
+        }
+      },
+      "red": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.red.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.red.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.red.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.red.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.red.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#CD384B",
+          "$description": "Base status color for light surface. AA text on white. Color taken from brand portal."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.red.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.red.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.red.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.red.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.red.50}"
+        }
+      },
+      "blush": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blush.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blush.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blush.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blush.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blush.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#E13E53",
+          "$description": "Base status color for dark surfaces. AA text  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blush.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blush.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blush.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blush.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.blush.50}"
+        }
+      },
+      "teal": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.teal.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.teal.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.teal.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.teal.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.teal.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#007c7b",
+          "$description": "Alternative colour with no semantic meaning. Used in progress tracker on light. Luminosity 46.8."
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.teal.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.teal.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.teal.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.teal.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.teal.50}"
+        }
+      },
+      "petrol": {
+        "0": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.petrol.50}"
+        },
+        "10": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.petrol.50}"
+        },
+        "20": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.petrol.50}"
+        },
+        "30": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.40",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.petrol.50}"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.petrol.50}"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#008a89",
+          "$description": "Alternative colour with no semantic meaning. Used in progress tracker on dark. Luminosity 51.9"
+        },
+        "60": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.petrol.50}"
+        },
+        "70": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.4",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.petrol.50}"
+        },
+        "80": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.75",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.petrol.50}"
+        },
+        "90": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.9",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.petrol.50}"
+        },
+        "100": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.96",
+                "space": "lch",
+                "color": "white"
+              }
+            }
+          },
+          "$type": "color",
+          "$value": "{core.colors.petrol.50}"
+        }
+      },
+      "AI": {
+        "dull": {
+          "Horizontal": {
+            "$type": "color",
+            "$value": "linear-gradient(90deg, #13A038 0%, #149197 40%, #A87CFB 90%)",
+            "$description": "AI buttons on light backgrounds."
+          },
+          "vertical": {
+            "$type": "color",
+            "$value": "linear-gradient(180deg, #13A038 0%, #149197 40%, #A87CFB 90%)",
+            "$description": "AI buttons on light backgrounds."
+          }
+        },
+        "vibrant": {
+          "horizontal": {
+            "$type": "color",
+            "$value": "linear-gradient(90deg, #00D639 0%, #00D6DE 40%, #9D60FF 90%)",
+            "$description": "AI buttons on dark backgrounds."
+          },
+          "vertical": {
+            "$type": "color",
+            "$value": "linear-gradient(180deg, #00D639 0%, #00D6DE 40%, #9D60FF 90%)",
+            "$description": "Nudge message border"
+          }
+        }
+      },
+      "supplementary": {
+        "blue": {
+          "10": {
+            "$type": "color",
+            "$value": "#00293F",
+            "$description": ">4.5:1 against white, 3:1 against 400 token."
+          },
+          "40": {
+            "$type": "color",
+            "$value": "#0071C3",
+            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
+          },
+          "50": {
+            "$type": "color",
+            "$value": "#007FD9",
+            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E,"
+          },
+          "95": {
+            "$type": "color",
+            "$value": "#CDE5FF",
+            "$description": ">4.5:1 against black text, 3:1 against 550 token."
+          }
+        },
+        "teal": {
+          "10": {
+            "$type": "color",
+            "$value": "#002B2A",
+            "$description": ">4.5:1 against white, 3:1 against 400 token. 3:1 against 100 token."
+          },
+          "40": {
+            "$type": "color",
+            "$value": "#007C7B",
+            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3, 3:1 against 100 token."
+          },
+          "50": {
+            "$type": "color",
+            "$value": "#008A89",
+            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
+          },
+          "95": {
+            "$type": "color",
+            "$value": "#C1FBFB",
+            "$description": ">4.5:1 against black text, 3:1 against 550 token."
+          }
+        },
+        "green": {
+          "10": {
+            "$type": "color",
+            "$value": "#002D05",
+            "$description": ">4.5:1 against white text, 3:1 against 400 token."
+          },
+          "40": {
+            "$type": "color",
+            "$value": "#00811F",
+            "$description": "Currently same hex as emerald. Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
+          },
+          "50": {
+            "$type": "color",
+            "$value": "#009023",
+            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E,"
+          },
+          "95": {
+            "$type": "color",
+            "$value": "#C5FFC9",
+            "$description": ">4.5:1 against black text, 3:1 against 550 token."
+          }
+        },
+        "lime": {
+          "10": {
+            "$type": "color",
+            "$value": "#171e00",
+            "$description": "4.5:1 against white. 3:1 against 400 token."
+          },
+          "40": {
+            "$type": "color",
+            "$value": "#637700",
+            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
+          },
+          "50": {
+            "$type": "color",
+            "$value": "#6E8500",
+            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
+          },
+          "95": {
+            "$type": "color",
+            "$value": "#FFFF9C",
+            "$description": ">4.5:1 against black text, 3:1 against 550 token."
+          }
+        },
+        "orange": {
+          "10": {
+            "$type": "color",
+            "$value": "#380D00",
+            "$description": "4.5:1 against white. 3:1 against 400 token."
+          },
+          "40": {
+            "$type": "color",
+            "$value": "#C54300",
+            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
+          },
+          "50": {
+            "$type": "color",
+            "$value": "#DB4B00",
+            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
+          },
+          "95": {
+            "$type": "color",
+            "$value": "#FEEAB0",
+            "$description": ">4.5:1 against black text, 3:1 against 550 token."
+          }
+        },
+        "red": {
+          "10": {
+            "$type": "color",
+            "$value": "#400011",
+            "$description": "4.5:1 against white. 3:1 against 400 & token."
+          },
+          "40": {
+            "$type": "color",
+            "$value": "#DC004E",
+            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 & token."
+          },
+          "50": {
+            "$type": "color",
+            "$value": "#F50058",
+            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E,"
+          },
+          "95": {
+            "$type": "color",
+            "$value": "#FFDBCF",
+            "$description": ">4.5:1 against black text, 3:1 against 550 token."
+          }
+        },
+        "pink": {
+          "10": {
+            "$type": "color",
+            "$value": "#3C002C",
+            "$description": "4.5:1 against white. 3:1 against 400 token."
+          },
+          "40": {
+            "$type": "color",
+            "$value": "#C8269A",
+            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
+          },
+          "50": {
+            "$type": "color",
+            "$value": "#DD2BAB",
+            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
+          },
+          "95": {
+            "$type": "color",
+            "$value": "#FFD7EE",
+            "$description": ">4.5:1 against black text, 3:1 against 550 token."
+          }
+        },
+        "purple": {
+          "10": {
+            "$type": "color",
+            "$value": "#270E41",
+            "$description": "4.5:1 against white. 3:1 against 400 token."
+          },
+          "40": {
+            "$type": "color",
+            "$value": "#8F4CD7",
+            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
+          },
+          "50": {
+            "$type": "color",
+            "$value": "#985FDC",
+            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
+          },
+          "95": {
+            "$type": "color",
+            "$value": "#E7DEF8",
+            "$description": ">4.5:1 against black text, 3:1 against 550 token."
+          }
+        },
+        "slate": {
+          "10": {
+            "$type": "color",
+            "$value": "#121D23",
+            "$description": "4.5:1 against white. 3:1 against 400 token."
+          },
+          "40": {
+            "$type": "color",
+            "$value": "#527386",
+            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
+          },
+          "50": {
+            "$type": "color",
+            "$value": "#5C8196",
+            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
+          },
+          "95": {
+            "$type": "color",
+            "$value": "#D4E5F1",
+            "$description": ">4.5:1 against black text, 3:1 against 550 token."
+          }
+        },
+        "gray": {
+          "10": {
+            "$type": "color",
+            "$value": "#1b1b1b",
+            "$description": "4.5:1 against white, 3:1 against 400 token. "
+          },
+          "40": {
+            "$type": "color",
+            "$value": "#6F6F6F",
+            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3, 3:1 against 100 token. "
+          },
+          "50": {
+            "$type": "color",
+            "$value": "#7C7C7C",
+            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E,"
+          },
+          "95": {
+            "$type": "color",
+            "$value": "#E2E2E2",
+            "$description": ">4.5:1 against black text, 3:1 against 550 token."
+          }
+        }
+      }
+    },
+    "size": {
+      "SCALE": {
+        "$type": "sizing",
+        "$value": "8",
+        "$description": "SCALE is the base-scale of all size-related tokens (size, space, dimension). It's set to 8px as this is our default multiplier used across the majority of components. If you change it, it will change all size-related tokens."
+      },
+      "breakpoint": {
+        "0": {
+          "$type": "sizing",
+          "$value": "0"
+        },
+        "320": {
+          "$type": "sizing",
+          "$value": "320"
+        },
+        "480": {
+          "$type": "sizing",
+          "$value": "480"
+        },
+        "768": {
+          "$type": "sizing",
+          "$value": "768"
+        },
+        "1024": {
+          "$type": "sizing",
+          "$value": "1024"
+        },
+        "1200": {
+          "$type": "sizing",
+          "$value": "1200"
+        },
+        "1920": {
+          "$type": "sizing",
+          "$value": "1920"
+        }
+      }
+    },
+    "dimension": {
+      "0": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 0"
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 12.5"
+      },
+      "25": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 25"
+      },
+      "38": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 37.5"
+      },
+      "50": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 50"
+      },
+      "62": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 62.5"
+      },
+      "75": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 75"
+      },
+      "100": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 100"
+      },
+      "125": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 125"
+      },
+      "150": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 150"
+      },
+      "175": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 175"
+      },
+      "200": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 200"
+      },
+      "250": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 250"
+      },
+      "300": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 300"
+      },
+      "350": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 350"
+      },
+      "400": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 400"
+      },
+      "450": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 450"
+      },
+      "500": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 500"
+      },
+      "550": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 550"
+      },
+      "600": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 600"
+      },
+      "650": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 650"
+      },
+      "700": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 700"
+      },
+      "750": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 750"
+      },
+      "800": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 800"
+      },
+      "850": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 850"
+      },
+      "900": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 900"
+      },
+      "950": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 950"
+      },
+      "1000": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 1000"
+      },
+      "1300": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 1300"
+      },
+      "1500": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 1500"
+      },
+      "1600": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 1600"
+      },
+      "2000": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 2000"
+      },
+      "2500": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 2500"
+      },
+      "3000": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 3000"
+      },
+      "3600": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 3600"
+      },
+      "4000": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 4000"
+      },
+      "7000": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 7000"
+      },
+      "9500": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 9500"
+      },
+      "base": {
+        "$type": "dimension",
+        "$value": "{core.size.SCALE} / 100"
+      }
+    },
+    "fontWeights": {
+      "regular": {
+        "$type": "fontWeights",
+        "$value": "Regular"
+      },
+      "medium": {
+        "$type": "fontWeights",
+        "$value": "Medium"
+      },
+      "bold": {
+        "$type": "fontWeights",
+        "$value": "Bold"
+      },
+      "black": {
+        "$type": "fontWeights",
+        "$value": "Black"
+      }
+    },
+    "lineHeights": {
+      "300": {
+        "$type": "lineHeights",
+        "$value": "100%",
+        "$description": "For components where space is tight"
+      },
+      "400": {
+        "$type": "lineHeights",
+        "$value": "125%",
+        "$description": "For headings"
+      },
+      "500": {
+        "$type": "lineHeights",
+        "$value": "150%",
+        "$description": "For body and components"
+      }
+    },
+    "box-shadow": {
+      "none": {
+        "$type": "boxShadow",
+        "$value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "0",
+            "spread": "0",
+            "color": "rgba(0,0,0,0)",
+            "type": "dropShadow"
+          }
+        ]
+      },
+      "down-right": {
+        "0": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "2",
+              "blur": "2",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "2",
+              "y": "5",
+              "blur": "5",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            }
+          ]
+        },
+        "1": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "1",
+              "blur": "2",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "2",
+              "y": "2",
+              "blur": "10",
+              "spread": "0",
+              "color": "{core.colors.black}33",
+              "type": "dropShadow"
+            }
+          ]
+        },
+        "2": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "2",
+              "blur": "3",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "6",
+              "y": "6",
+              "blur": "30",
+              "spread": "0",
+              "color": "{core.colors.black}26",
+              "type": "dropShadow"
+            }
+          ]
+        },
+        "3": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "3",
+              "blur": "4",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "10",
+              "y": "10",
+              "blur": "60",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            }
+          ]
+        }
+      },
+      "inner": {
+        "1": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "8",
+              "blur": "4",
+              "spread": "-4",
+              "color": "{core.colors.black}1A",
+              "type": "innerShadow"
+            }
+          ]
+        }
+      },
+      "left": {
+        "0": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "-2",
+              "y": "0",
+              "blur": "2",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "-5",
+              "y": "0",
+              "blur": "5",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            }
+          ]
+        }
+      },
+      "right": {
+        "0": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "2",
+              "y": "0",
+              "blur": "2",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "5",
+              "y": "0",
+              "blur": "5",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            }
+          ]
+        }
+      },
+      "up-right": {
+        "1": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "-1",
+              "blur": "2",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "2",
+              "y": "-2",
+              "blur": "10",
+              "spread": "0",
+              "color": "{core.colors.black}33",
+              "type": "dropShadow"
+            }
+          ]
+        },
+        "3": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "-3",
+              "blur": "4",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "10",
+              "y": "-10",
+              "blur": "60",
+              "spread": "0",
+              "color": "{core.colors.black}1A",
+              "type": "dropShadow"
+            }
+          ]
+        }
+      },
+      "solid": {
+        "border": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "-1",
+              "blur": "0",
+              "spread": "0",
+              "color": "{core.colors.black}4D",
+              "type": "innerShadow"
+            }
+          ]
+        }
+      }
+    },
+    "fontSize": {
+      "adaptive": {
+        "small": {
+          "stepMinus2": {
+            "$type": "fontSizes",
+            "$value": "12"
+          },
+          "stepMinus1": {
+            "$type": "fontSizes",
+            "$value": "13"
+          },
+          "step0": {
+            "$type": "fontSizes",
+            "$value": "14"
+          },
+          "step1": {
+            "$type": "fontSizes",
+            "$value": "16"
+          },
+          "step2": {
+            "$type": "fontSizes",
+            "$value": "17"
+          },
+          "step3": {
+            "$type": "fontSizes",
+            "$value": "19"
+          },
+          "step4": {
+            "$type": "fontSizes",
+            "$value": "21"
+          },
+          "step5": {
+            "$type": "fontSizes",
+            "$value": "23"
+          },
+          "step6": {
+            "$type": "fontSizes",
+            "$value": "25"
+          },
+          "step7": {
+            "$type": "fontSizes",
+            "$value": "27"
+          },
+          "step8": {
+            "$type": "fontSizes",
+            "$value": "30"
+          },
+          "step9": {
+            "$type": "fontSizes",
+            "$value": "33"
+          },
+          "step10": {
+            "$type": "fontSizes",
+            "$value": "36"
+          }
+        },
+        "large": {
+          "stepMinus2": {
+            "$type": "fontSizes",
+            "$value": "12"
+          },
+          "stepMinus1": {
+            "$type": "fontSizes",
+            "$value": "13"
+          },
+          "step0": {
+            "$type": "fontSizes",
+            "$value": "14"
+          },
+          "step1": {
+            "$type": "fontSizes",
+            "$value": "16"
+          },
+          "step2": {
+            "$type": "fontSizes",
+            "$value": "18"
+          },
+          "step3": {
+            "$type": "fontSizes",
+            "$value": "21"
+          },
+          "step4": {
+            "$type": "fontSizes",
+            "$value": "24"
+          },
+          "step5": {
+            "$type": "fontSizes",
+            "$value": "27"
+          },
+          "step6": {
+            "$type": "fontSizes",
+            "$value": "30"
+          },
+          "step7": {
+            "$type": "fontSizes",
+            "$value": "35"
+          },
+          "step8": {
+            "$type": "fontSizes",
+            "$value": "40"
+          },
+          "step9": {
+            "$type": "fontSizes",
+            "$value": "46"
+          },
+          "step10": {
+            "$type": "fontSizes",
+            "$value": "52"
+          }
+        }
+      },
+      "fluid": {
+        "stepMinus2": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.6733rem, 0.7398rem + -0.0831vw, 0.7231rem)",
+          "$description": "Small Viewports: 11.57, Large Viewports: 10.77"
+        },
+        "stepMinus1": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.7675rem, 0.8048rem + -0.0465vw, 0.7955rem)",
+          "$description": "Small Viewports: 12.73, Large Viewports: 12.28"
+        },
+        "step0": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.875rem, 0.875rem + 0vw, 0.875rem)",
+          "$description": "Small Viewports: 14, Large Viewports: 14"
+        },
+        "step1": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.9625rem, 0.9508rem + 0.0583vw, 0.9975rem)",
+          "$description": "Small Viewports: 15.40, Large Viewports: 15.96"
+        },
+        "step2": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.0588rem, 1.0326rem + 0.1307vw, 1.1372rem)",
+          "$description": "Small Viewports: 16.94, Large Viewports: 18.91"
+        },
+        "step3": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.1646rem, 1.1207rem + 0.2195vw, 1.2964rem)",
+          "$description": "Small Viewports: 18.63, Large Viewports: 20.74"
+        },
+        "step4": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.2811rem, 1.2155rem + 0.3279vw, 1.4778rem)",
+          "$description": "Small Viewports: 20.50, Large Viewports: 23.65"
+        },
+        "step5": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.4092rem, 1.3173rem + 0.4592vw, 1.6847rem)",
+          "$description": "Small Viewports: 22.55, Large Viewports: 26.96"
+        },
+        "step6": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.5869rem, 1.417rem + 0.8494vw, 2.4363rem)",
+          "$description": "Small Viewports: 25.39, Large Viewports: 38.98"
+        },
+        "step7": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.7051rem, 1.5437rem + 0.8073vw, 2.1895rem)",
+          "$description": "Small Viewports: 27.28, Large Viewports: 35.03"
+        },
+        "step8": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.8756rem, 1.6688rem + 1.034vw, 2.496rem)",
+          "$description": "Small Viewports: 30.01 Large Viewports: 39.94"
+        },
+        "step9": {
+          "$type": "fontSizes",
+          "$value": "clamp(2.0632rem, 1.8025rem + 1.3038vw, 2.8455rem)",
+          "$description": "Small Viewports: 33.01, Large Viewports: 45.53"
+        },
+        "step10": {
+          "$type": "fontSizes",
+          "$value": "clamp(2.2695rem, 1.9448rem + 1.6238vw, 3.2438rem)",
+          "$description": "Small Viewports: 36.31, Large Viewports: 51.90"
+        }
+      },
+      "icon": {
+        "step0": {
+          "$type": "fontSizes",
+          "$value": "20px",
+          "$description": "Small viewports: 20px, Large viewports: 20px."
+        }
+      }
+    },
+    "textDecoration": {
+      "underline": {
+        "$type": "textDecoration",
+        "$value": "underline",
+        "$description": "used for links"
+      }
+    },
+    "paragraphSpacing": {
+      "0": {
+        "$type": "paragraphSpacing",
+        "$value": "0"
+      },
+      "150": {
+        "$type": "paragraphSpacing",
+        "$value": "{core.dimension.150}"
+      },
+      "200": {
+        "$type": "paragraphSpacing",
+        "$value": "{core.dimension.200}"
+      },
+      "250": {
+        "$type": "paragraphSpacing",
+        "$value": "{core.dimension.250}"
+      },
+      "300": {
+        "$type": "paragraphSpacing",
+        "$value": "{core.dimension.300}"
+      },
+      "400": {
+        "$type": "paragraphSpacing",
+        "$value": "{core.dimension.400}"
+      }
+    },
+    "color": {
+      "modifiers": {
+        "button": {
+          "active": {
+            "$type": "other",
+            "$value": "0.30",
+            "$description": "Actve modifier used when 15% hover is used"
+          },
+          "activeAlt": {
+            "$type": "other",
+            "$value": "0.15",
+            "$description": "Active appled when 10% hover is used"
+          },
+          "hover": {
+            "$type": "other",
+            "$value": "0.15",
+            "$description": "Hover used on primary buttons"
+          },
+          "hoverAlt": {
+            "$type": "other",
+            "$value": "0.10",
+            "$description": "Hover used on secondary and tertiary buttons"
+          }
+        },
+        "input": {
+          "disabledBg": {
+            "$type": "other",
+            "$value": "0.05",
+            "$description": "less contrast"
+          },
+          "disabledFg": {
+            "$type": "other",
+            "$value": "0.30",
+            "$description": "less contrast"
+          }
+        },
+        "shadow": {
+          "standard": {
+            "$type": "other",
+            "$value": "0.5",
+            "$description": "standard mixer for shadow"
+          }
+        }
+      }
+    },
+    "fontFamilies": {
+      "sage-icons": {
+        "$type": "fontFamilies",
+        "$value": "sage-icons"
+      },
+      "heading": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI"
+      },
+      "subheading": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI"
+      },
+      "body": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI"
+      },
+      "component": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI",
+        "$description": "Used in componentry such as tables, buttons, inputs etc."
+      },
+      "other": {
+        "$type": "fontFamilies",
+        "$value": "Open Sans",
+        "$description": "Fallback for when Sage fonts cannot load."
+      }
+    }
+  }
+}
