@@ -56,11 +56,6 @@
           "$type": "color",
           "$value": "{primitives.colors.emerald}",
           "$description": "This is the color to replace in white label products. Ensure luminousity of custom color = 46.8 (see hsluv.org).  AAA against FFFFFF bg. "
-        },
-        "frozen": {
-          "$type": "color",
-          "$value": "{primitives.colors.brilliantGreen}",
-          "$description": "Replace this color in white label products that use the FROZEN theme. Ensure luminousity of custom color = 46.8 (see hsluv.org). AAA against FFFFFF bg."
         }
       },
       "colorcode": {
@@ -273,38 +268,6 @@
             "$type": "color",
             "$value": "{primitives.colors.white}",
             "$description": "Consumed within generic monochrome, progress"
-          },
-          "frozen": {
-            "delicate": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.98",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{primitives.colors.navy}",
-              "$description": "Consumed within frozen table"
-            },
-            "soft": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.96",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{primitives.colors.navy}",
-              "$description": "Consumed within frozen table"
-            }
           },
           "inverse": {
             "nought": {
@@ -634,22 +597,6 @@
             },
             "$type": "color",
             "$value": "{modes.color.generic.fg.nought}"
-          },
-          "frozen": {
-            "soft": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.32",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.generic.fg.nought}"
-            }
           },
           "ai": {
             "default": {
@@ -991,11 +938,26 @@
             "$value": "{modes.color.generic.content.moderate}",
             "$description": "Hint text, placeholder text, character count etc"
           },
-          "frozen": {
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{modes.color.generic.bg.inverse.nought}",
+              "$description": "Input backgrounds."
+            },
             "withDefault": {
               "$type": "color",
-              "$value": "{modes.color.generic.fg.moderate}",
+              "$value": "{modes.color.generic.fg.inverse.moderate}",
               "$description": "Input borders."
+            },
+            "content": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.harsh}",
+              "$description": "Input Text"
+            },
+            "contentAlt": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.inverse.moderate}",
+              "$description": "Hint text, placeholder text, character count etc"
             }
           }
         },
@@ -1089,13 +1051,6 @@
             "$type": "color",
             "$value": "{modes.color.generic.content.moderate}",
             "$description": "Readonly icon inside form inputs. "
-          },
-          "frozen": {
-            "defaultAlt": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.inactive.defaultAlt}",
-              "$description": "Disabled input and button backgrounds, button borders and input backgrounds."
-            }
           },
           "inverse": {
             "default": {
@@ -1250,76 +1205,6 @@
           "withHover": {
             "$type": "color",
             "$value": "{modes.color.generic.content.extreme}"
-          },
-          "frozen": {
-            "active": {
-              "$type": "color",
-              "$value": "{primitives.colors.white}"
-            },
-            "activeAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "{primitives.color.modifiers.button.activeAlt}",
-                    "space": "lch"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.frozen.active}"
-            },
-            "default": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.9",
-                    "space": "lch"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.frozen.active}"
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.67",
-                    "space": "lch"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.active}"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "{primitives.color.modifiers.button.hoverAlt} ",
-                    "space": "lch"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.frozen.active}"
-            },
-            "withActive": {
-              "$type": "color",
-              "$value": "{modes.color.generic.fg.nought}"
-            },
-            "withHover": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.frozen.active}"
-            },
-            "withHoverAlt": {
-              "$type": "color",
-              "$value": "{modes.color.generic.fg.nought}"
-            }
           },
           "inverse": {
             "active": {
@@ -1701,95 +1586,6 @@
             "$type": "color",
             "$value": "{primitives.colors.black}"
           },
-          "frozen": {
-            "active": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{primitives.color.modifiers.button.active}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.frozen.default}"
-            },
-            "default": {
-              "$type": "color",
-              "$value": "{modes.color.custom.default}"
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.12",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.frozen.default}"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{primitives.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.frozen.default}"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{primitives.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore} "
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.frozen.defaultAlt}",
-              "$description": "for link hover"
-            },
-            "nav": {
-              "hover": {
-                "$type": "color",
-                "$value": "{primitives.colors.frozenJade}"
-              },
-              "label-hover": {
-                "$type": "color",
-                "$value": "{modes.color.interactive.monochrome.frozen.withHover}"
-              }
-            },
-            "table": {
-              "default": {
-                "$extensions": {
-                  "studio.tokens": {
-                    "modify": {
-                      "type": "mix",
-                      "value": "0.64",
-                      "space": "lch",
-                      "color": "{modes.color.modifier.contrastLess}"
-                    }
-                  }
-                },
-                "$type": "color",
-                "$value": "{primitives.colors.navy}"
-              }
-            }
-          },
           "inverse": {
             "active": {
               "$extensions": {
@@ -1953,16 +1749,6 @@
             },
             "$type": "color",
             "$value": "{modes.color.generic.bg.nought}"
-          },
-          "frozen": {
-            "bg": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.progress.bg}"
-            },
-            "bg-alt": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.progress.bg}"
-            }
           }
         }
       },
@@ -2081,18 +1867,6 @@
             },
             "$type": "color",
             "$value": "{primitives.colors.tangerine}"
-          },
-          "frozenglobal": {
-            "default": {
-              "$type": "color",
-              "$value": "{modes.color.status.caution.default}",
-              "$description": "Global message bg"
-            },
-            "hover": {
-              "$type": "color",
-              "$value": "{modes.color.status.caution.hover}",
-              "$description": "used on global message bg"
-            }
           },
           "inverse": {
             "default": {
@@ -2929,18 +2703,6 @@
             "$value": "{modes.color.status.info.defaultAlt}",
             "$description": "used on pill hover states and message bg"
           },
-          "frozenglobal": {
-            "default": {
-              "$type": "color",
-              "$value": "{modes.color.status.info.default}",
-              "$description": "Global message bg"
-            },
-            "hover": {
-              "$type": "color",
-              "$value": "{modes.color.status.info.hover}",
-              "$description": "used on global message bg"
-            }
-          },
           "inverse": {
             "default": {
               "$type": "color",
@@ -3155,56 +2917,6 @@
             "$value": "{modes.color.status.neutral.defaultAlt}",
             "$description": "used on pill hover states and message bg"
           },
-          "frozen": {
-            "default": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.27",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.neutral.default}"
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.85",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{primitives.colors.smoke}",
-              "$description": "Subtle message bg"
-            },
-            "hover": {
-              "$type": "color",
-              "$value": "{modes.color.status.neutral.hover}"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{primitives.color.modifiers.button.hoverAlt} ",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.neutral.defaultAlt}",
-              "$description": "used on pill hover states and message bg"
-            }
-          },
           "inverse": {
             "default": {
               "$type": "color",
@@ -3383,31 +3095,6 @@
             "$type": "color",
             "$value": "{modes.color.custom.default}",
             "$description": "used on pill hover states"
-          },
-          "frozen": {
-            "default": {
-              "$type": "color",
-              "$value": "{modes.color.custom.frozen}"
-            },
-            "defaultAlt": {
-              "$type": "color",
-              "$value": "linear-gradient(90deg, {modes.color.custom.frozen} 0%, {modes.color.custom.frozen} 50%, {modes.color.generic.bg.moderate} 50%, {modes.color.generic.bg.moderate}  100%)"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{primitives.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.custom.frozen}",
-              "$description": "used on pill hover states"
-            }
           }
         }
       },
