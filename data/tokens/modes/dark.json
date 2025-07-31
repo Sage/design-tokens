@@ -844,46 +844,28 @@
         },
         "nav": {
           "active": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "0.35",
-                  "space": "lch"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{core.colors.white}",
+            "$value": "{core.colors.storm.20}",
             "$description": "active bg for nav items"
           },
           "default": {
             "$type": "color",
-            "$value": "{modes.color.generic.bg.nought}",
+            "$value": "{core.colors.black}",
             "$description": "default bg for global nav"
           },
           "defaultAlt": {
             "$type": "color",
-            "$value": "{modes.color.generic.bg.moderate}",
+            "$value": "{core.colors.storm.0}",
             "$description": "default bg for left nav container"
           },
           "hover": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{core.color.modifiers.button.hover}",
-                  "space": "lch"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{core.colors.white}",
+            "$value": "{core.colors.storm.10}",
             "$description": "hover bg for nav items"
           },
           "withActive": {
             "$type": "color",
-            "$value": "{modes.color.generic.content.extreme}",
+            "$value": "{core.colors.white}",
             "$description": "text and icons on top of active bgs in nav contexts"
           },
           "withDefault": {
@@ -898,46 +880,28 @@
           },
           "inverse": {
             "active": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.35",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{core.colors.black}",
+              "$value": "{core.colors.storm.80}",
               "$description": "active bg for nav items"
             },
             "default": {
               "$type": "color",
-              "$value": "{modes.color.generic.bg.inverse.nought}",
+              "$value": "{core.colors.white}",
               "$description": "default bg for global nav"
             },
             "defaultAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.bg.inverse.faint}",
+              "$value": "{core.colors.storm.100}",
               "$description": "default bg for left nav container"
             },
             "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{core.colors.black}",
+              "$value": "{core.colors.storm.90}",
               "$description": "hover bg for nav items"
             },
             "withActive": {
               "$type": "color",
-              "$value": "{modes.color.generic.content.nought}",
+              "$value": "{core.colors.black}",
               "$description": "text and icons on top of active bgs in nav contexts"
             },
             "withDefault": {
@@ -947,7 +911,7 @@
             },
             "withHover": {
               "$type": "color",
-              "$value": "{modes.color.generic.content.nought}",
+              "$value": "{core.colors.black}",
               "$description": "hover bg for nav items"
             }
           }
