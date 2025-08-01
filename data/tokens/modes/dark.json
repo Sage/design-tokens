@@ -314,7 +314,7 @@
           },
           "nought": {
             "$type": "color",
-            "$value": "{modes.color.modifier.contrastLess}"
+            "$value": "{core.colors.black}"
           },
           "inverse": {
             "extreme": {
@@ -391,7 +391,7 @@
             },
             "nought": {
               "$type": "color",
-              "$value": "{modes.color.modifier.contrastMore}"
+              "$value": "{core.colors.white}"
             }
           }
         },
@@ -1051,33 +1051,13 @@
         },
         "callout": {
           "defaultAlt": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.15",
-                  "space": "lch",
-                  "color": "{core.colors.brilliantGreen.50}"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{modes.color.modifier.contrastLess}",
+            "$value": "{core.colors.brilliantGreen.10}",
             "$description": "used for marketing banners"
           },
           "hoverAlt": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{core.color.modifiers.button.hoverAlt} ",
-                  "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore} "
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{modes.color.status.callout.defaultAlt}",
+            "$value": "{core.colors.brilliantGreen.20}",
             "$description": "marketing banner hover"
           }
         },
@@ -1160,17 +1140,8 @@
               "$value": "{modes.color.generic.content.extreme}"
             },
             "withDefaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.95",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{modes.color.generic.content.nought}"
+              "$value": "{modes.color.generic.content.inverse.harsh}"
             },
             "withHover": {
               "$type": "color",
@@ -1178,7 +1149,7 @@
             },
             "withHoverAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.content.nought}"
+              "$value": "{modes.color.generic.content.inverse.extreme}"
             }
           }
         },
