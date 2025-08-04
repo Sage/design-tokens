@@ -13,12 +13,12 @@
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.status.red.default}",
+          "$value": "{modes.color.status.negative.default}",
           "$description": "Used in global nav notification badges"
         },
         "bg-alt": {
           "$type": "color",
-          "$value": "{modes.color.status.blue.default}"
+          "$value": "{modes.color.status.info.default}"
         },
         "label-default": {
           "$type": "color",
@@ -35,12 +35,12 @@
           },
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.red.inverse.default}",
+            "$value": "{modes.color.status.negative.inverse.default}",
             "$description": "Used in global nav notification badges"
           },
           "bg-alt": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.inverse.default}"
+            "$value": "{modes.color.status.info.inverse.default}"
           },
           "label-default": {
             "$type": "color",
@@ -66,7 +66,7 @@
         },
         "icon-alt": {
           "$type": "color",
-          "$value": "{modes.color.status.gray.default}",
+          "$value": "{modes.color.status.neutral.default}",
           "$description": "icon on neutral status dialogs"
         },
         "text": {
@@ -81,7 +81,7 @@
           },
           "bgAlt": {
             "$type": "color",
-            "$value": "{modes.color.status.gray.defaultAlt}"
+            "$value": "{modes.color.status.neutral.defaultAlt}"
           },
           "border-default": {
             "$type": "color",
@@ -102,80 +102,80 @@
         "error": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.red.default}"
+            "$value": "{modes.color.status.negative.default}"
           },
           "bgAlt": {
             "$type": "color",
-            "$value": "{modes.color.status.red.defaultAlt}",
+            "$value": "{modes.color.status.negative.defaultAlt}",
             "$description": "Subtle message bg"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.red.default}"
+            "$value": "{modes.color.status.negative.default}"
           },
           "icon": {
             "$type": "color",
-            "$value": "{modes.color.status.red.default}",
+            "$value": "{modes.color.status.negative.default}",
             "$description": "Icon on tinted bgs"
           }
         },
         "info": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.default}"
+            "$value": "{modes.color.status.info.default}"
           },
           "bgAlt": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.defaultAlt}",
+            "$value": "{modes.color.status.info.defaultAlt}",
             "$description": "Subtle message bg"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.default}"
+            "$value": "{modes.color.status.info.default}"
           },
           "icon": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.default}",
+            "$value": "{modes.color.status.info.default}",
             "$description": "Icon on tinted bgs"
           }
         },
         "success": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.green.default}"
+            "$value": "{modes.color.status.positive.default}"
           },
           "bgAlt": {
             "$type": "color",
-            "$value": "{modes.color.status.green.defaultAlt}",
+            "$value": "{modes.color.status.positive.defaultAlt}",
             "$description": "Subtle message bg"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.green.default}"
+            "$value": "{modes.color.status.positive.default}"
           },
           "icon": {
             "$type": "color",
-            "$value": "{modes.color.status.green.default}",
+            "$value": "{modes.color.status.positive.default}",
             "$description": "Icon on tinted bgs"
           }
         },
         "warning": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.default}"
+            "$value": "{modes.color.status.warning.default}"
           },
           "bgAlt": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.defaultAlt}",
+            "$value": "{modes.color.status.warning.defaultAlt}",
             "$description": "Subtle message bg"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.default}"
+            "$value": "{modes.color.status.warning.default}"
           },
           "icon": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.default}",
+            "$value": "{modes.color.status.warning.default}",
             "$description": "Icon on tinted bgs"
           }
         }
@@ -209,32 +209,32 @@
         "info": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.defaultAlt}",
+            "$value": "{modes.color.status.info.defaultAlt}",
             "$description": "Global message bg"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.hoverAlt}"
+            "$value": "{modes.color.status.info.hoverAlt}"
           },
           "icon": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.default}",
+            "$value": "{modes.color.status.info.default}",
             "$description": "Icon on tinted bgs"
           }
         },
         "warning": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.defaultAlt}",
+            "$value": "{modes.color.status.warning.defaultAlt}",
             "$description": "Global message bg"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.hoverAlt}"
+            "$value": "{modes.color.status.warning.hoverAlt}"
           },
           "icon": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.default}",
+            "$value": "{modes.color.status.warning.default}",
             "$description": "Icon on tinted bgs"
           }
         }
@@ -337,185 +337,185 @@
         "orange": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.default}"
+            "$value": "{modes.color.status.warning.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.defaultAlt}",
+            "$value": "{modes.color.status.warning.defaultAlt}",
             "$description": "Global message bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.hoverAlt}"
+            "$value": "{modes.color.status.warning.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.hover}"
+            "$value": "{modes.color.status.warning.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.default}"
+            "$value": "{modes.color.status.warning.default}"
           }
         },
         "red": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.red.default}"
+            "$value": "{modes.color.status.negative.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.red.defaultAlt}",
+            "$value": "{modes.color.status.negative.defaultAlt}",
             "$description": "outline pill bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.red.hoverAlt}"
+            "$value": "{modes.color.status.negative.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.red.hover}"
+            "$value": "{modes.color.status.negative.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.red.default}"
+            "$value": "{modes.color.status.negative.default}"
           }
         },
         "gray": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.gray.default}"
+            "$value": "{modes.color.status.neutral.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.gray.defaultAlt}",
+            "$value": "{modes.color.status.neutral.defaultAlt}",
             "$description": "outline pill bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.gray.hoverAlt}"
+            "$value": "{modes.color.status.neutral.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.gray.hover}"
+            "$value": "{modes.color.status.neutral.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.gray.default}"
+            "$value": "{modes.color.status.neutral.default}"
           }
         },
         "purple": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.purple.default}"
+            "$value": "{modes.color.status.important.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.purple.defaultAlt}",
+            "$value": "{modes.color.status.important.defaultAlt}",
             "$description": "outline pill bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.purple.hoverAlt}"
+            "$value": "{modes.color.status.important.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.purple.hover}"
+            "$value": "{modes.color.status.important.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.purple.default}"
+            "$value": "{modes.color.status.important.default}"
           }
         },
         "green": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.green.default}"
+            "$value": "{modes.color.status.positive.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.green.defaultAlt}",
+            "$value": "{modes.color.status.positive.defaultAlt}",
             "$description": "outline pill bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.green.hoverAlt}"
+            "$value": "{modes.color.status.positive.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.green.hover}"
+            "$value": "{modes.color.status.positive.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.green.default}"
+            "$value": "{modes.color.status.positive.default}"
           }
         },
         "blue": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.default}"
+            "$value": "{modes.color.status.info.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.defaultAlt}",
+            "$value": "{modes.color.status.info.defaultAlt}",
             "$description": "outline pill bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.hoverAlt}"
+            "$value": "{modes.color.status.info.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.hover}"
+            "$value": "{modes.color.status.info.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.default}"
+            "$value": "{modes.color.status.info.default}"
           }
         }
       },
       "error": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.status.red.default}"
+          "$value": "{modes.color.status.negative.default}"
         },
         "bgAlt-default": {
           "$type": "color",
-          "$value": "{modes.color.status.red.defaultAlt}",
+          "$value": "{modes.color.status.negative.defaultAlt}",
           "$description": "outline pill bg"
         },
         "bgAlt-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.red.hoverAlt}"
+          "$value": "{modes.color.status.negative.hoverAlt}"
         },
         "bg-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.red.hover}"
+          "$value": "{modes.color.status.negative.hover}"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.status.red.default}"
+          "$value": "{modes.color.status.negative.default}"
         },
         "inverse": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.red.inverse.default}"
+            "$value": "{modes.color.status.negative.inverse.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.red.inverse.defaultAlt}",
+            "$value": "{modes.color.status.negative.inverse.defaultAlt}",
             "$description": "outline pill bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.red.inverse.hoverAlt}"
+            "$value": "{modes.color.status.negative.inverse.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.red.inverse.hover}"
+            "$value": "{modes.color.status.negative.inverse.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.red.inverse.default}"
+            "$value": "{modes.color.status.negative.inverse.default}"
           }
         }
       },
@@ -558,138 +558,138 @@
       "important": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.status.purple.default}"
+          "$value": "{modes.color.status.important.default}"
         },
         "bgAlt-default": {
           "$type": "color",
-          "$value": "{modes.color.status.purple.defaultAlt}",
+          "$value": "{modes.color.status.important.defaultAlt}",
           "$description": "outline pill bg"
         },
         "bgAlt-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.purple.hoverAlt}"
+          "$value": "{modes.color.status.important.hoverAlt}"
         },
         "bg-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.purple.hover}"
+          "$value": "{modes.color.status.important.hover}"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.status.purple.default}"
+          "$value": "{modes.color.status.important.default}"
         },
         "inverse": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.purple.default}"
+            "$value": "{modes.color.status.important.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.purple.defaultAlt}",
+            "$value": "{modes.color.status.important.defaultAlt}",
             "$description": "outline pill bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.purple.hoverAlt}"
+            "$value": "{modes.color.status.important.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.purple.hover}"
+            "$value": "{modes.color.status.important.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.purple.default}"
+            "$value": "{modes.color.status.important.default}"
           }
         }
       },
       "info": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.status.blue.default}"
+          "$value": "{modes.color.status.info.default}"
         },
         "bgAlt-default": {
           "$type": "color",
-          "$value": "{modes.color.status.blue.defaultAlt}",
+          "$value": "{modes.color.status.info.defaultAlt}",
           "$description": "outline pill bg"
         },
         "bgAlt-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.blue.hoverAlt}"
+          "$value": "{modes.color.status.info.hoverAlt}"
         },
         "bg-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.blue.hover}"
+          "$value": "{modes.color.status.info.hover}"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.status.blue.default}"
+          "$value": "{modes.color.status.info.default}"
         },
         "inverse": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.inverse.default}"
+            "$value": "{modes.color.status.info.inverse.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.inverse.defaultAlt}",
+            "$value": "{modes.color.status.info.inverse.defaultAlt}",
             "$description": "outline pill bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.inverse.hoverAlt}"
+            "$value": "{modes.color.status.info.inverse.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.inverse.hover}"
+            "$value": "{modes.color.status.info.inverse.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.blue.inverse.default}"
+            "$value": "{modes.color.status.info.inverse.default}"
           }
         }
       },
       "neutral": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.status.gray.default}"
+          "$value": "{modes.color.status.neutral.default}"
         },
         "bgAlt-default": {
           "$type": "color",
-          "$value": "{modes.color.status.gray.defaultAlt}",
+          "$value": "{modes.color.status.neutral.defaultAlt}",
           "$description": "outline pill bg"
         },
         "bgAlt-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.gray.hoverAlt}"
+          "$value": "{modes.color.status.neutral.hoverAlt}"
         },
         "bg-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.gray.hover}"
+          "$value": "{modes.color.status.neutral.hover}"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.status.gray.default}"
+          "$value": "{modes.color.status.neutral.default}"
         },
         "inverse": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.gray.inverse.default}"
+            "$value": "{modes.color.status.neutral.inverse.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.gray.inverse.defaultAlt}",
+            "$value": "{modes.color.status.neutral.inverse.defaultAlt}",
             "$description": "outline pill bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.gray.inverse.hoverAlt}"
+            "$value": "{modes.color.status.neutral.inverse.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.gray.inverse.hover}"
+            "$value": "{modes.color.status.neutral.inverse.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.gray.inverse.default}"
+            "$value": "{modes.color.status.neutral.inverse.default}"
           }
         }
       },
@@ -713,92 +713,92 @@
       "success": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.status.green.default}"
+          "$value": "{modes.color.status.positive.default}"
         },
         "bgAlt-default": {
           "$type": "color",
-          "$value": "{modes.color.status.green.defaultAlt}",
+          "$value": "{modes.color.status.positive.defaultAlt}",
           "$description": "outline pill bg"
         },
         "bgAlt-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.green.hoverAlt}"
+          "$value": "{modes.color.status.positive.hoverAlt}"
         },
         "bg-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.green.hover}"
+          "$value": "{modes.color.status.positive.hover}"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.status.green.default}"
+          "$value": "{modes.color.status.positive.default}"
         },
         "inverse": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.green.inverse.default}"
+            "$value": "{modes.color.status.positive.inverse.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.green.inverse.defaultAlt}",
+            "$value": "{modes.color.status.positive.inverse.defaultAlt}",
             "$description": "outline pill bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.green.inverse.hoverAlt}"
+            "$value": "{modes.color.status.positive.inverse.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.green.inverse.hover}"
+            "$value": "{modes.color.status.positive.inverse.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.green.inverse.default}"
+            "$value": "{modes.color.status.positive.inverse.default}"
           }
         }
       },
       "warning": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.status.orange.default}"
+          "$value": "{modes.color.status.warning.default}"
         },
         "bgAlt-default": {
           "$type": "color",
-          "$value": "{modes.color.status.orange.defaultAlt}",
+          "$value": "{modes.color.status.warning.defaultAlt}",
           "$description": "Global message bg"
         },
         "bgAlt-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.orange.hoverAlt}"
+          "$value": "{modes.color.status.warning.hoverAlt}"
         },
         "bg-hover": {
           "$type": "color",
-          "$value": "{modes.color.status.orange.hover}"
+          "$value": "{modes.color.status.warning.hover}"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.status.orange.default}"
+          "$value": "{modes.color.status.warning.default}"
         },
         "inverse": {
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.inverse.default}"
+            "$value": "{modes.color.status.warning.inverse.default}"
           },
           "bgAlt-default": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.inverse.defaultAlt}",
+            "$value": "{modes.color.status.warning.inverse.defaultAlt}",
             "$description": "Global message bg"
           },
           "bgAlt-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.inverse.hoverAlt}"
+            "$value": "{modes.color.status.warning.inverse.hoverAlt}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.inverse.hover}"
+            "$value": "{modes.color.status.warning.inverse.hover}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.status.orange.inverse.default}"
+            "$value": "{modes.color.status.warning.inverse.default}"
           }
         }
       }
@@ -823,7 +823,7 @@
       },
       "fg-alt": {
         "$type": "color",
-        "$value": "{modes.color.status.green.default}"
+        "$value": "{modes.color.status.positive.default}"
       },
       "fg-alt2": {
         "$type": "color",
@@ -831,7 +831,7 @@
       },
       "fg-caution": {
         "$type": "color",
-        "$value": "{modes.color.status.orange.default}"
+        "$value": "{modes.color.status.warning.default}"
       },
       "fg-default": {
         "$type": "color",
@@ -839,11 +839,11 @@
       },
       "fg-error": {
         "$type": "color",
-        "$value": "{modes.color.status.red.default}"
+        "$value": "{modes.color.status.negative.default}"
       },
       "fg-info": {
         "$type": "color",
-        "$value": "{modes.color.status.blue.default}"
+        "$value": "{modes.color.status.info.default}"
       },
       "label-alt": {
         "$type": "color",
@@ -871,11 +871,11 @@
         },
         "fg-error": {
           "$type": "color",
-          "$value": "{modes.color.status.red.default}"
+          "$value": "{modes.color.status.negative.default}"
         },
         "fg-complete": {
           "$type": "color",
-          "$value": "{modes.color.status.green.default}"
+          "$value": "{modes.color.status.positive.default}"
         },
         "inverse": {
           "bg-default": {
@@ -897,7 +897,7 @@
         },
         "bg-complete": {
           "$type": "color",
-          "$value": "{modes.color.status.green.default}"
+          "$value": "{modes.color.status.positive.default}"
         },
         "bg-default": {
           "$type": "color",
@@ -931,7 +931,7 @@
         },
         "bg-complete": {
           "$type": "color",
-          "$value": "{modes.color.status.green.default}"
+          "$value": "{modes.color.status.positive.default}"
         },
         "border-active-outer": {
           "$type": "color",
@@ -943,7 +943,7 @@
         },
         "border-success": {
           "$type": "color",
-          "$value": "{modes.color.status.green.default}"
+          "$value": "{modes.color.status.positive.default}"
         },
         "label-active": {
           "$type": "color",

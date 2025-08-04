@@ -46,18 +46,6 @@
           }
         }
       },
-      "custom": {
-        "default": {
-          "$type": "color",
-          "$value": "{core.colors.emerald.50}",
-          "$description": "This is the color to replace in white label products. Ensure luminousity of custom color = 46.8 (see hsluv.org).  AAA against FFFFFF bg. "
-        },
-        "defaultAlt": {
-          "$type": "color",
-          "$value": "{core.colors.brilliantGreen.50}",
-          "$description": "This is the color to replace in white label products. Dark mode recommended luminosity for SAGE is 75.1 (tested), but above 51.9 should be ok. See hsluv.org to be AAA text on 000000 bgs."
-        }
-      },
       "colorcode": {
         "blue": {
           "deep": {
@@ -1063,6 +1051,388 @@
             "$description": "used for marketing banners"
           }
         },
+        "warning": {
+          "default": {
+            "$type": "color",
+            "$value": "{core.colors.orange.50}",
+            "$description": "For pills and messages. Not accessible with white TEXT."
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{core.colors.orange.90}",
+            "$description": "Subtle message bg"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.colors.orange.40}",
+            "$description": "used on pill hover states"
+          },
+          "hoverAlt": {
+            "$type": "color",
+            "$value": "{core.colors.orange.80}",
+            "$description": "used on pill hover states and message bg"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{core.colors.orange.40}"
+          },
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{core.colors.tangerine.50}"
+            },
+            "defaultAlt": {
+              "$type": "color",
+              "$value": "{core.colors.tangerine.10}",
+              "$description": "Subtle message bg"
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{core.colors.tangerine.60}",
+              "$description": "used on pill hover states"
+            },
+            "hoverAlt": {
+              "$type": "color",
+              "$value": "{core.colors.tangerine.20}",
+              "$description": "used on pill hover states and message bg"
+            },
+            "text": {
+              "$type": "color",
+              "$value": "{core.colors.tangerine.60}"
+            }
+          }
+        },
+        "content": {
+          "withDefault": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.nought}"
+          },
+          "withDefaultAlt": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.harsh}"
+          },
+          "withHover": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.nought}",
+            "$description": "for pill hover X"
+          },
+          "withHoverAlt": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.extreme}",
+            "$description": "for message text"
+          },
+          "loading": {
+            "$type": "color",
+            "$value": "linear-gradient(135deg, #6F6F6F5c 0%, #6F6F6F0A 100%)",
+            "$description": "used on skeleton text"
+          },
+          "inverse": {
+            "withDefault": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.extreme}"
+            },
+            "withDefaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.95",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.generic.content.nought}"
+            },
+            "withHover": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.extreme}",
+              "$description": "for pill hover X"
+            },
+            "withHoverAlt": {
+              "$type": "color",
+              "$value": "{modes.color.generic.content.nought}",
+              "$description": "for message text"
+            }
+          }
+        },
+        "important": {
+          "default": {
+            "$type": "color",
+            "$value": "{core.colors.purple.50}",
+            "$description": "For tile status keylines to show if something is of high importance."
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{core.colors.purple.90}",
+            "$description": "Subtle message bg"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.colors.purple.40}",
+            "$description": "used on pill hover states"
+          },
+          "hoverAlt": {
+            "$type": "color",
+            "$value": "{core.colors.purple.80}",
+            "$description": "used on pill hover states and message bg"
+          },
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{core.colors.purple.50}"
+            },
+            "defaultAlt": {
+              "$type": "color",
+              "$value": "{core.colors.purple.10}",
+              "$description": "Subtle message bg"
+            },
+            "hover": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "{core.color.modifiers.button.hover}",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess}"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{modes.color.status.important.default}",
+              "$description": "used on pill hover states"
+            },
+            "hoverAlt": {
+              "$type": "color",
+              "$value": "{core.colors.purple.20}",
+              "$description": "used on pill hover states and message bg"
+            }
+          }
+        },
+        "inactive": {
+          "default": {
+            "$type": "color",
+            "$value": "{modes.color.generic.fg.soft}",
+            "$description": "For readonly pill bg and border"
+          },
+          "withDefault": {
+            "$type": "color",
+            "$value": "{modes.color.generic.content.firm}",
+            "$description": "For readonly filled pill text"
+          },
+          "inverse": {
+            "default": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.32",
+                    "space": "lch",
+                    "color": "{modes.color.modifier.contrastLess} "
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{core.colors.black}",
+              "$description": "For readonly pill bg and border"
+            },
+            "withDefault": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{core.colors.white}",
+              "$description": "For readonly filled pill text"
+            }
+          }
+        },
+        "info": {
+          "default": {
+            "$type": "color",
+            "$value": "{core.colors.blue.50}",
+            "$description": "For pills and messages. Not accessible with white TEXT."
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{core.colors.blue.90}",
+            "$description": "Subtle message bg"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.colors.blue.40}",
+            "$description": "used on pill hover states"
+          },
+          "hoverAlt": {
+            "$type": "color",
+            "$value": "{core.colors.blue.80}",
+            "$description": "used on pill hover states and message bg"
+          },
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{core.colors.azure.50}"
+            },
+            "defaultAlt": {
+              "$type": "color",
+              "$value": "{core.colors.azure.10}",
+              "$description": "Subtle message bg"
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{core.colors.azure.60}",
+              "$description": "used on pill hover states"
+            },
+            "hoverAlt": {
+              "$type": "color",
+              "$value": "{core.colors.azure.20}",
+              "$description": "used on pill hover states and message bg"
+            }
+          }
+        },
+        "negative": {
+          "default": {
+            "$type": "color",
+            "$value": "{core.colors.red.50}",
+            "$description": "For pills and messages. Not accessible with white TEXT."
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{core.colors.red.90}",
+            "$description": "Subtle message bg"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.colors.red.40}",
+            "$description": "used on pill hover states"
+          },
+          "hoverAlt": {
+            "$type": "color",
+            "$value": "{core.colors.red.80}",
+            "$description": "used on pill hover states and message bg"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{core.colors.red.50}"
+          },
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{core.colors.blush.50}"
+            },
+            "defaultAlt": {
+              "$type": "color",
+              "$value": "{core.colors.blush.10}",
+              "$description": "Subtle message bg"
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{core.colors.blush.60}",
+              "$description": "used on pill hover states"
+            },
+            "hoverAlt": {
+              "$type": "color",
+              "$value": "{core.colors.blush.20}",
+              "$description": "used on pill hover states and message bg"
+            },
+            "text": {
+              "$type": "color",
+              "$value": "{core.colors.blush.50}"
+            }
+          }
+        },
+        "neutral": {
+          "default": {
+            "$type": "color",
+            "$value": "{core.colors.storm.50}"
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{core.colors.storm.90}",
+            "$description": "Subtle message bg"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.colors.storm.40}",
+            "$description": "used on pill hover states"
+          },
+          "hoverAlt": {
+            "$type": "color",
+            "$value": "{core.colors.storm.80}",
+            "$description": "used on pill hover states and message bg"
+          },
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{core.colors.smoke.50}"
+            },
+            "defaultAlt": {
+              "$type": "color",
+              "$value": "{core.colors.smoke.10}",
+              "$description": "Subtle message bg"
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{core.colors.smoke.60}",
+              "$description": "used on pill hover states"
+            },
+            "hoverAlt": {
+              "$type": "color",
+              "$value": "{core.colors.smoke.20}",
+              "$description": "used on pill hover states and message bg"
+            }
+          }
+        },
+        "positive": {
+          "default": {
+            "$type": "color",
+            "$value": "{core.colors.emerald.50}",
+            "$description": "For pills and messages. Not accessible with white TEXT."
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{core.colors.emerald.90}",
+            "$description": "Subtle message bg"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.colors.emerald.40}",
+            "$description": "used on pill hover states "
+          },
+          "hoverAlt": {
+            "$type": "color",
+            "$value": "{core.colors.emerald.80}",
+            "$description": "used on pill hover states and message bg"
+          },
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{core.colors.verdant.50}"
+            },
+            "defaultAlt": {
+              "$type": "color",
+              "$value": "{core.colors.verdant.10}",
+              "$description": "Subtle message bg"
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "{core.colors.verdant.60}",
+              "$description": "used on pill hover states"
+            },
+            "hoverAlt": {
+              "$type": "color",
+              "$value": "{core.colors.verdant.20}",
+              "$description": "used on pill hover states and message bg"
+            }
+          }
+        }
+      },
+      "custom": {
         "orange": {
           "default": {
             "$type": "color",
@@ -1277,7 +1647,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.status.purple.default}",
+              "$value": "{modes.color.status.important.default}",
               "$description": "used on pill hover states"
             },
             "hoverAlt": {
