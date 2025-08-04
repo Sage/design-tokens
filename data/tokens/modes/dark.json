@@ -92,7 +92,7 @@
         "lime": {
           "deep": {
             "$type": "color",
-            "$value": "{core.colors.supplementary.lime.50}"
+            "$value": "{core.colors.lime.50}"
           },
           "muted": {
             "$type": "color",
@@ -132,7 +132,7 @@
         "purple": {
           "deep": {
             "$type": "color",
-            "$value": "{core.colors.supplementary.purple.50}"
+            "$value": "{core.colors.purple.50}"
           },
           "muted": {
             "$type": "color",
@@ -458,7 +458,7 @@
           },
           "faint": {
             "$type": "color",
-            "$value": "{core.colors.navy.10}",
+            "$value": "{core.colors.slate.10}",
             "$description": "used on full page backgrounds as an alternative option"
           }
         }
@@ -587,7 +587,7 @@
           },
           "defaultAlt": {
             "$type": "color",
-            "$value": "{core.colors.navy.0}",
+            "$value": "{core.colors.slate.0}",
             "$description": "Input footer bgs (e.g text editor)"
           },
           "content": {
@@ -1061,7 +1061,7 @@
             "$description": "marketing banner hover"
           }
         },
-        "caution": {
+        "orange": {
           "default": {
             "$type": "color",
             "$value": "{core.colors.tangerine.50}"
@@ -1153,627 +1153,111 @@
             }
           }
         },
-        "custom": {
-          "blue": {
-            "default": {
-              "$type": "color",
-              "$value": "{core.colors.supplementary.blue.50}",
-              "$description": "For pills. Not accessible with white TEXT."
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{core.colors.supplementary.blue.50}",
-              "$description": "Pill bg"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.blue.default}",
-              "$description": "used on pill hover states"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.status.info.default}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.blue.defaultAlt}",
-              "$description": "used on pill hover states"
-            }
-          },
-          "teal": {
-            "default": {
-              "$type": "color",
-              "$value": "{core.colors.supplementary.teal.50}",
-              "$description": "For pills. Not accessible with white TEXT."
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{core.colors.supplementary.teal.50}",
-              "$description": "Pill bg"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.teal.default}",
-              "$description": "used on pill hover states"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.status.info.default}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.teal.defaultAlt}",
-              "$description": "used on pill hover states"
-            }
-          },
-          "green": {
-            "default": {
-              "$type": "color",
-              "$value": "{core.colors.supplementary.green.50}",
-              "$description": "For pills. Not accessible with white TEXT."
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{core.colors.supplementary.green.50}",
-              "$description": "Pill bg"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.green.default}",
-              "$description": "used on pill hover states"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.status.info.default}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.green.defaultAlt}",
-              "$description": "used on pill hover states"
-            }
-          },
-          "lime": {
-            "default": {
-              "$type": "color",
-              "$value": "{core.colors.supplementary.lime.50}",
-              "$description": "For pills. Not accessible with white TEXT."
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{core.colors.supplementary.lime.50}",
-              "$description": "Pill bg"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.lime.default}",
-              "$description": "used on pill hover states"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.status.info.default}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.lime.defaultAlt}",
-              "$description": "used on pill hover states"
-            }
-          },
-          "orange": {
-            "default": {
-              "$type": "color",
-              "$value": "{core.colors.supplementary.orange.50}",
-              "$description": "For pills. Not accessible with white TEXT."
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{core.colors.supplementary.orange.50}",
-              "$description": "Pill bg"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.orange.default}",
-              "$description": "used on pill hover states"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.status.info.default}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.orange.defaultAlt}",
-              "$description": "used on pill hover states"
-            }
-          },
-          "red": {
-            "default": {
-              "$type": "color",
-              "$value": "{core.colors.supplementary.red.50}",
-              "$description": "For pills. Not accessible with white TEXT."
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{core.colors.supplementary.red.50}",
-              "$description": "Pill bg"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.red.default}",
-              "$description": "used on pill hover states"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.status.info.default}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.red.defaultAlt}",
-              "$description": "used on pill hover states"
-            }
-          },
-          "pink": {
-            "default": {
-              "$type": "color",
-              "$value": "{core.colors.supplementary.pink.50}",
-              "$description": "For pills. Not accessible with white TEXT."
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{core.colors.supplementary.pink.50}",
-              "$description": "Pill bg"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.pink.default}",
-              "$description": "used on pill hover states"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.status.info.default}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.pink.defaultAlt}",
-              "$description": "used on pill hover states"
-            }
-          },
-          "purple": {
-            "default": {
-              "$type": "color",
-              "$value": "{core.colors.supplementary.purple.50}",
-              "$description": "For pills. Not accessible with white TEXT."
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{core.colors.supplementary.purple.50}",
-              "$description": "Pill bg"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.purple.default}",
-              "$description": "used on pill hover states"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.status.info.default}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.purple.defaultAlt}",
-              "$description": "used on pill hover states"
-            }
-          },
-          "gray": {
-            "default": {
-              "$type": "color",
-              "$value": "{core.colors.supplementary.gray.50}",
-              "$description": "For pills. Not accessible with white TEXT."
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{core.colors.supplementary.gray.50}",
-              "$description": "Pill bg"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.gray.default}",
-              "$description": "used on pill hover states"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.status.info.default}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.gray.defaultAlt}",
-              "$description": "used on pill hover states"
-            }
-          },
-          "slate": {
-            "default": {
-              "$type": "color",
-              "$value": "{core.colors.supplementary.slate.50}",
-              "$description": "For pills. Not accessible with white TEXT."
-            },
-            "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{core.colors.supplementary.slate.50}",
-              "$description": "Pill bg"
-            },
-            "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.slate.default}",
-              "$description": "used on pill hover states"
-            },
-            "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.status.info.default}"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{modes.color.status.custom.slate.defaultAlt}",
-              "$description": "used on pill hover states"
-            }
-          }
-        },
-        "important": {
+        "teal": {
           "default": {
             "$type": "color",
-            "$value": "{core.colors.supplementary.purple.40}",
-            "$description": "For tile status keylines to show if something is of high importance."
+            "$value": "{core.colors.petrol.50}",
+            "$description": "For pills. Not accessible with white TEXT."
           },
           "defaultAlt": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "0.9",
-                  "space": "lch",
-                  "color": "{modes.color.modifier.contrastLess}"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{core.colors.supplementary.purple.40}",
-            "$description": "Subtle message bg"
+            "$value": "{core.colors.petrol.10}",
+            "$description": "Pill bg"
           },
           "hover": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{core.color.modifiers.button.hover}",
-                  "space": "lch",
-                  "color": "{modes.color.modifier.contrastMore}"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{modes.color.status.important.default}",
+            "$value": "{core.colors.petrol.60}",
             "$description": "used on pill hover states"
           },
           "hoverAlt": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "mix",
-                  "value": "{core.color.modifiers.button.hover}",
-                  "space": "lch",
-                  "color": "{modes.color.status.info.default}"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{modes.color.status.important.defaultAlt}",
+            "$value": "{core.colors.petrol.20}",
+            "$description": "used on pill hover states"
+          }
+        },
+        "lime": {
+          "default": {
+            "$type": "color",
+            "$value": "{core.colors.lime.60}",
+            "$description": "For pills. Not accessible with white TEXT."
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{core.colors.lime.10}",
+            "$description": "Pill bg"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.colors.lime.70}",
+            "$description": "used on pill hover states"
+          },
+          "hoverAlt": {
+            "$type": "color",
+            "$value": "{core.colors.lime.20}",
+            "$description": "used on pill hover states"
+          }
+        },
+        "pink": {
+          "default": {
+            "$type": "color",
+            "$value": "{core.colors.pink.60}",
+            "$description": "For pills. Not accessible with white TEXT."
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{core.colors.pink.10}",
+            "$description": "Pill bg"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.colors.pink.70}",
+            "$description": "used on pill hover states"
+          },
+          "hoverAlt": {
+            "$type": "color",
+            "$value": "{core.colors.pink.20}",
+            "$description": "used on pill hover states"
+          }
+        },
+        "purple": {
+          "default": {
+            "$type": "color",
+            "$value": "{core.colors.purple.50}"
+          },
+          "defaultAlt": {
+            "$type": "color",
+            "$value": "{core.colors.purple.10}",
+            "$description": "Subtle message bg"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.colors.purple.60}",
+            "$description": "used on pill hover states"
+          },
+          "hoverAlt": {
+            "$type": "color",
+            "$value": "{core.colors.purple.20}",
             "$description": "used on pill hover states and message bg"
           },
           "inverse": {
             "default": {
               "$type": "color",
-              "$value": "{core.colors.supplementary.purple.50}"
+              "$value": "{core.colors.purple.60}",
+              "$description": "For tile status keylines to show if something is of high importance."
             },
             "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.85",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore} "
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{core.colors.supplementary.purple.50}",
+              "$value": "{core.colors.purple.90}",
               "$description": "Subtle message bg"
             },
             "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{modes.color.status.important.inverse.default}",
+              "$value": "{core.colors.purple.70}",
               "$description": "used on pill hover states"
             },
             "hoverAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.status.info.inverse.default}"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{modes.color.status.important.inverse.defaultAlt}",
+              "$value": "{core.colors.purple.80}",
               "$description": "used on pill hover states and message bg"
             }
           }
@@ -1821,7 +1305,7 @@
             }
           }
         },
-        "info": {
+        "blue": {
           "default": {
             "$type": "color",
             "$value": "{core.colors.azure.50}"
@@ -1864,7 +1348,7 @@
             }
           }
         },
-        "negative": {
+        "red": {
           "default": {
             "$type": "color",
             "$value": "{core.colors.blush.50}"
@@ -1915,7 +1399,7 @@
             }
           }
         },
-        "neutral": {
+        "gray": {
           "default": {
             "$type": "color",
             "$value": "{core.colors.smoke.50}"
@@ -1957,7 +1441,7 @@
             }
           }
         },
-        "positive": {
+        "green": {
           "default": {
             "$type": "color",
             "$value": "{core.colors.verdant.50}"
