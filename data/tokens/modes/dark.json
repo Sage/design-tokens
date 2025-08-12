@@ -406,6 +406,10 @@
             "$type": "color",
             "$value": "{core.colors.smoke.40}"
           },
+          "extreme": {
+            "$type": "color",
+            "$value": "{core.colors.white}"
+          },
           "ai": {
             "default": {
               "$type": "color",
@@ -435,6 +439,10 @@
             "moderate": {
               "$type": "color",
               "$value": "{core.colors.smoke.60}"
+            },
+            "extreme": {
+              "$type": "color",
+              "$value": "{core.colors.black}"
             }
           }
         },
@@ -1314,18 +1322,8 @@
               "$description": "Pill bg"
             },
             "hover": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "{core.color.modifiers.button.hover}",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastMore}"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{modes.color.status.custom.purple.default}",
+              "$value": "{core.colors.plum.60}",
               "$description": "used on pill hover states"
             },
             "hoverAlt": {
@@ -1363,23 +1361,13 @@
               "$description": "For pills. Not accessible with white TEXT."
             },
             "defaultAlt": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "mix",
-                    "value": "0.9",
-                    "space": "lch",
-                    "color": "{modes.color.modifier.contrastLess}"
-                  }
-                }
-              },
               "$type": "color",
               "$value": "{core.colors.slate.10}",
               "$description": "Pill bg"
             },
             "hover": {
               "$type": "color",
-              "$value": "{core.colors.slate.40}",
+              "$value": "{core.colors.slate.60}",
               "$description": "used on pill hover states"
             },
             "hoverAlt": {
