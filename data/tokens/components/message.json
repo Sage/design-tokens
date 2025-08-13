@@ -22,7 +22,7 @@
       },
       "text": {
         "$type": "color",
-        "$value": "{modes.color.status.content.withHoverAlt}",
+        "$value": "{modes.color.status.text.withHovAlt}",
         "$description": "Message text."
       },
       "AI": {
@@ -47,26 +47,26 @@
         },
         "icon": {
           "$type": "color",
-          "$value": "{modes.color.status.content.withDefaultAlt}"
+          "$value": "{modes.color.status.text.withDefaultAlt}"
         }
       },
       "error": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.status.negative.default}"
+          "$value": "{modes.color.status.neg.default}"
         },
         "bgAlt": {
           "$type": "color",
-          "$value": "{modes.color.status.negative.defaultAlt}",
+          "$value": "{modes.color.status.neg.defaultAlt}",
           "$description": "Subtle message bg"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.status.negative.default}"
+          "$value": "{modes.color.status.neg.default}"
         },
         "icon": {
           "$type": "color",
-          "$value": "{modes.color.status.negative.default}",
+          "$value": "{modes.color.status.neg.default}",
           "$description": "Icon on tinted bgs"
         }
       },
@@ -93,40 +93,40 @@
       "success": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.status.positive.default}"
+          "$value": "{modes.color.status.pos.default}"
         },
         "bgAlt": {
           "$type": "color",
-          "$value": "{modes.color.status.positive.defaultAlt}",
+          "$value": "{modes.color.status.pos.defaultAlt}",
           "$description": "Subtle message bg"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.status.positive.default}"
+          "$value": "{modes.color.status.pos.default}"
         },
         "icon": {
           "$type": "color",
-          "$value": "{modes.color.status.positive.default}",
+          "$value": "{modes.color.status.pos.default}",
           "$description": "Icon on tinted bgs"
         }
       },
       "warning": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.status.warning.default}"
+          "$value": "{modes.color.status.warn.default}"
         },
         "bgAlt": {
           "$type": "color",
-          "$value": "{modes.color.status.warning.defaultAlt}",
+          "$value": "{modes.color.status.warn.defaultAlt}",
           "$description": "Subtle message bg"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.status.warning.default}"
+          "$value": "{modes.color.status.warn.default}"
         },
         "icon": {
           "$type": "color",
-          "$value": "{modes.color.status.warning.default}",
+          "$value": "{modes.color.status.warn.default}",
           "$description": "Icon on tinted bgs"
         }
       }
@@ -134,11 +134,11 @@
     "global": {
       "label-default": {
         "$type": "color",
-        "$value": "{modes.color.status.content.withDefaultAlt}"
+        "$value": "{modes.color.status.text.withDefaultAlt}"
       },
-      "label-hover": {
+      "label-hov": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withHover}"
+        "$value": "{modes.color.action.monochrome.withhov}"
       },
       "callout": {
         "bg-default": {
@@ -146,14 +146,14 @@
           "$value": "{modes.color.status.callout.defaultAlt}",
           "$description": "Global message bg"
         },
-        "bg-hover": {
+        "bg-hov": {
           "$type": "color",
-          "$value": "{modes.color.status.callout.hoverAlt}",
-          "$description": "global message bg hover"
+          "$value": "{modes.color.status.callout.hovAlt}",
+          "$description": "global message bg hov"
         },
         "icon": {
           "$type": "color",
-          "$value": "{modes.color.status.content.withDefaultAlt}",
+          "$value": "{modes.color.status.text.withDefaultAlt}",
           "$description": "Icon on tinted bgs"
         }
       },
@@ -163,9 +163,9 @@
           "$value": "{modes.color.status.info.defaultAlt}",
           "$description": "Global message bg"
         },
-        "bg-hover": {
+        "bg-hov": {
           "$type": "color",
-          "$value": "{modes.color.status.info.hoverAlt}"
+          "$value": "{modes.color.status.info.hovAlt}"
         },
         "icon": {
           "$type": "color",
@@ -176,16 +176,16 @@
       "warning": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.status.warning.defaultAlt}",
+          "$value": "{modes.color.status.warn.defaultAlt}",
           "$description": "Global message bg"
         },
-        "bg-hover": {
+        "bg-hov": {
           "$type": "color",
-          "$value": "{modes.color.status.warning.hoverAlt}"
+          "$value": "{modes.color.status.warn.hovAlt}"
         },
         "icon": {
           "$type": "color",
-          "$value": "{modes.color.status.warning.default}",
+          "$value": "{modes.color.status.warn.default}",
           "$description": "Icon on tinted bgs"
         }
       }

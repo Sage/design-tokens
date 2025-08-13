@@ -31,22 +31,22 @@
     "blockquote": {
       "border": {
         "$type": "color",
-        "$value": "{modes.color.interactive.primary.default}"
+        "$value": "{modes.color.action.prim.default}"
       }
     },
     "interactive": {
       "bgFooter-activated": {
         "$type": "color",
-        "$value": "{modes.color.status.positive.default}",
+        "$value": "{modes.color.status.pos.default}",
         "$description": " "
       },
       "bgFooter-active": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
+        "$value": "{modes.color.action.monochrome.active}"
       },
       "border-activated": {
         "$type": "color",
-        "$value": "{modes.color.status.positive.default}"
+        "$value": "{modes.color.status.pos.default}"
       },
       "bgFooter-default": {
         "$type": "color",
@@ -59,28 +59,28 @@
       },
       "bg-disabled": {
         "$type": "color",
-        "$value": "{modes.color.interactive.inactive.defaultAlt}"
+        "$value": "{modes.color.action.inactv.defaultAlt}"
       },
-      "bg-hover": {
+      "bg-hov": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.hoverAlt}",
-        "$description": "Used for accordion hover backgrounds "
+        "$value": "{modes.color.action.monochrome.hovAlt}",
+        "$description": "Used for accordion hov backgrounds "
       },
       "border-active": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
+        "$value": "{modes.color.action.monochrome.active}"
       },
       "border-alt": {
         "$type": "color",
         "$value": "{modes.color.generic.fg.delicate}",
         "$description": "Link preview. "
       },
-      "borderalt-hover": {
+      "borderalt-hov": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.default}",
-        "$description": "For hover border on Link preview."
+        "$value": "{modes.color.action.monochrome.default}",
+        "$description": "For hov border on Link preview."
       },
-      "border-inactive": {
+      "border-inactv": {
         "$type": "color",
         "$value": "{modes.color.generic.fg.soft}"
       },
@@ -90,55 +90,55 @@
       },
       "icon-active": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}",
+        "$value": "{modes.color.action.monochrome.active}",
         "$description": "Active chevron for any accordion."
       },
       "icon-default": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.default}",
+        "$value": "{modes.color.action.monochrome.default}",
         "$description": "Enabled chevron for any accordion."
       },
       "iconAlt-default": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.defaultAlt}",
+        "$value": "{modes.color.action.monochrome.defaultAlt}",
         "$description": "Enabled label for subtle accordion."
       },
-      "icon-hover": {
+      "icon-hov": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.default}",
-        "$description": "Hover chevron for any accordion."
+        "$value": "{modes.color.action.monochrome.default}",
+        "$description": "hov chevron for any accordion."
       },
       "labelFooter-active": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withActive}"
+        "$value": "{modes.color.action.monochrome.withActive}"
       },
       "labelFooter-activated": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withActive}"
+        "$value": "{modes.color.action.monochrome.withActive}"
       },
       "text-active": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}",
+        "$value": "{modes.color.action.monochrome.active}",
         "$description": "Active label for any accordion."
       },
       "text-disabled": {
         "$type": "color",
-        "$value": "{modes.color.interactive.inactive.content}"
+        "$value": "{modes.color.action.inactv.text}"
       },
       "text-default": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}",
+        "$value": "{modes.color.generic.text.harsh}",
         "$description": "Enabled label for standard accordion."
       },
       "textAlt-default": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.moderate}",
+        "$value": "{modes.color.generic.text.moderate}",
         "$description": "Enabled label for subtle accordion."
       },
-      "text-hover": {
+      "text-hov": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.default}",
-        "$description": "Hover label for any accordion."
+        "$value": "{modes.color.action.monochrome.default}",
+        "$description": "hov label for any accordion."
       },
       "detailedicon": {
         "bg": {
@@ -164,14 +164,14 @@
         "$type": "color",
         "$value": "{modes.color.generic.fg.moderate}"
       },
-      "inverse": {
+      "inv": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.inverse.soft}"
+          "$value": "{modes.color.generic.bg.inv.soft}"
         },
         "fg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.inverse.moderate}"
+          "$value": "{modes.color.generic.fg.inv.moderate}"
         }
       }
     },
@@ -191,7 +191,7 @@
       },
       "border-active": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
+        "$value": "{modes.color.action.monochrome.active}"
       },
       "border-alt": {
         "$type": "color",
@@ -203,7 +203,7 @@
       },
       "dimmer": {
         "$type": "color",
-        "$value": "{modes.color.interactive.inactive.mask}",
+        "$value": "{modes.color.action.inactv.mask}",
         "$description": "dimmed mask for dialogs"
       },
       "icon": {
@@ -213,12 +213,12 @@
       },
       "text-alt": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.moderate}",
+        "$value": "{modes.color.generic.text.moderate}",
         "$description": "for subheadings etc"
       },
       "text-default": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}",
+        "$value": "{modes.color.generic.text.harsh}",
         "$description": "for headings, paragraph text etc "
       },
       "statusborder": {
@@ -228,15 +228,15 @@
         },
         "bg-caution": {
           "$type": "color",
-          "$value": "{modes.color.status.warning.default}"
+          "$value": "{modes.color.status.warn.default}"
         },
         "bg-negative": {
           "$type": "color",
-          "$value": "{modes.color.status.negative.default}"
+          "$value": "{modes.color.status.neg.default}"
         },
         "bg-important": {
           "$type": "color",
-          "$value": "{modes.color.status.important.default}"
+          "$value": "{modes.color.status.prio.default}"
         },
         "bg-info": {
           "$type": "color",
@@ -248,33 +248,33 @@
         },
         "bg-positive": {
           "$type": "color",
-          "$value": "{modes.color.status.positive.default}"
+          "$value": "{modes.color.status.pos.default}"
         }
       },
-      "inverse": {
+      "inv": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.inverse.nought}"
+          "$value": "{modes.color.generic.bg.inv.nought}"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.inverse.faint}"
+          "$value": "{modes.color.generic.fg.inv.faint}"
         },
         "text-alt": {
           "$type": "color",
-          "$value": "{modes.color.generic.content.inverse.moderate}",
+          "$value": "{modes.color.generic.text.inv.moderate}",
           "$description": "for subheadings etc"
         },
         "text-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.content.inverse.harsh}",
+          "$value": "{modes.color.generic.text.inv.harsh}",
           "$description": "for headings, paragraph text etc "
         }
       }
     },
     "size": {
-      "chatbubble": {
-        "maxWidth": {
+      "bubble": {
+        "maxW": {
           "$type": "sizing",
           "$value": "600",
           "$description": "max width for chat bubbles"
@@ -287,16 +287,16 @@
             "$value": "200",
             "$description": "Illustration size"
           },
-          "content": {
-            "maxWidth": {
+          "text": {
+            "maxW": {
               "$type": "sizing",
               "$value": "600",
-              "$description": "max-width of the insight empty state content area"
+              "$description": "max-width of the insight empty state text area"
             }
           }
         },
         "overlay": {
-          "maxHeight": {
+          "maxH": {
             "$type": "sizing",
             "$value": "960",
             "$description": "max-height of the copilot container overlay "
@@ -304,7 +304,7 @@
         }
       },
       "dialog": {
-        "maxWidth": {
+        "maxW": {
           "S": {
             "$type": "sizing",
             "$value": "540"
@@ -318,7 +318,7 @@
             "$value": "1080"
           }
         },
-        "minWidth": {
+        "minW": {
           "$type": "sizing",
           "$value": "288"
         }
@@ -358,7 +358,7 @@
         "S": {
           "$type": "sizing",
           "$value": "160",
-          "$description": "min and max widths for responsive tile items. Min width for Tile select content wrapper."
+          "$description": "min and max widths for responsive tile items. Min width for Tile select text wrapper."
         },
         "M": {
           "$type": "sizing",
@@ -392,7 +392,7 @@
         }
       },
       "sidebar": {
-        "maxWidth": {
+        "maxW": {
           "S": {
             "$type": "sizing",
             "$value": "760",
@@ -404,7 +404,7 @@
             "$description": "max-width for M size sidebar"
           }
         },
-        "minWidth": {
+        "minW": {
           "$type": "sizing",
           "$value": "288",
           "$description": "min-width for M sized sidebar"
@@ -422,12 +422,12 @@
       },
       "text-alt": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.moderate}",
+        "$value": "{modes.color.generic.text.moderate}",
         "$description": "for subheadings etc"
       },
       "text-default": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}",
+        "$value": "{modes.color.generic.text.harsh}",
         "$description": "for headings, paragraph text etc "
       }
     }

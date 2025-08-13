@@ -7,7 +7,7 @@
     },
     "bg-skeleton": {
       "$type": "color",
-      "$value": "{modes.color.status.content.loading}"
+      "$value": "{modes.color.status.text.loading}"
     },
     "bg-default": {
       "$type": "color",
@@ -19,28 +19,28 @@
     },
     "fg-ai": {
       "$type": "color",
-      "$value": "{modes.color.interactive.ai.default}",
+      "$value": "{modes.color.action.ai.default}",
       "$description": "For progress ring in ai buttons"
     },
     "fg-alt": {
       "$type": "color",
-      "$value": "{modes.color.status.positive.default}"
+      "$value": "{modes.color.status.pos.default}"
     },
     "fg-alt2": {
       "$type": "color",
-      "$value": "{modes.color.generic.content.firm}"
+      "$value": "{modes.color.generic.text.firm}"
     },
     "fg-caution": {
       "$type": "color",
-      "$value": "{modes.color.status.warning.default}"
+      "$value": "{modes.color.status.warn.default}"
     },
     "fg-default": {
       "$type": "color",
-      "$value": "{modes.color.interactive.monochrome.active}"
+      "$value": "{modes.color.action.monochrome.active}"
     },
     "fg-error": {
       "$type": "color",
-      "$value": "{modes.color.status.negative.default}"
+      "$value": "{modes.color.status.neg.default}"
     },
     "fg-info": {
       "$type": "color",
@@ -48,11 +48,11 @@
     },
     "label-alt": {
       "$type": "color",
-      "$value": "{modes.color.generic.content.firm}"
+      "$value": "{modes.color.generic.text.firm}"
     },
     "label-default": {
       "$type": "color",
-      "$value": "{modes.color.generic.content.harsh}"
+      "$value": "{modes.color.generic.text.harsh}"
     },
     "datavis": {
       "fg-default": {
@@ -72,31 +72,31 @@
       },
       "fg-ai": {
         "$type": "color",
-        "$value": "{modes.color.interactive.ai.default}",
+        "$value": "{modes.color.action.ai.default}",
         "$description": "Loader ring or bar"
       },
       "fg-error": {
         "$type": "color",
-        "$value": "{modes.color.status.negative.default}"
+        "$value": "{modes.color.status.neg.default}"
       },
       "fg-complete": {
         "$type": "color",
-        "$value": "{modes.color.status.positive.default}"
+        "$value": "{modes.color.status.pos.default}"
       },
-      "inverse": {
+      "inv": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.inverse.delicate}",
-          "$description": "used for inverse loader bgs"
+          "$value": "{modes.color.generic.bg.inv.delicate}",
+          "$description": "used for inv loader bgs"
         },
         "fg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.inverse.extreme}",
-          "$description": "used on inverse loading spinner"
+          "$value": "{modes.color.generic.fg.inv.extreme}",
+          "$description": "used on inv loading spinner"
         },
         "fg-ai": {
           "$type": "color",
-          "$value": "{modes.color.interactive.ai.inverse.default}",
+          "$value": "{modes.color.action.ai.inv.default}",
           "$description": "Loader ring or bar"
         }
       }
@@ -104,11 +104,11 @@
     "stepflow": {
       "bg-active": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
+        "$value": "{modes.color.action.monochrome.active}"
       },
       "bg-complete": {
         "$type": "color",
-        "$value": "{modes.color.status.positive.default}"
+        "$value": "{modes.color.status.pos.default}"
       },
       "bg-default": {
         "$type": "color",
@@ -120,7 +120,7 @@
       },
       "border-active-outer": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
+        "$value": "{modes.color.action.monochrome.active}"
       },
       "border-default": {
         "$type": "color",
@@ -128,25 +128,25 @@
       },
       "label-alt": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.firm}"
+        "$value": "{modes.color.generic.text.firm}"
       },
       "label-default": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}"
+        "$value": "{modes.color.generic.text.harsh}"
       }
     },
     "stepindicator": {
       "bg-active": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
+        "$value": "{modes.color.action.monochrome.active}"
       },
       "bg-complete": {
         "$type": "color",
-        "$value": "{modes.color.status.positive.default}"
+        "$value": "{modes.color.status.pos.default}"
       },
       "border-active-outer": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
+        "$value": "{modes.color.action.monochrome.active}"
       },
       "border-default": {
         "$type": "color",
@@ -154,19 +154,19 @@
       },
       "border-success": {
         "$type": "color",
-        "$value": "{modes.color.status.positive.default}"
+        "$value": "{modes.color.status.pos.default}"
       },
       "label-active": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withActive}"
+        "$value": "{modes.color.action.monochrome.withActive}"
       },
       "label-complete": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withActive}"
+        "$value": "{modes.color.action.monochrome.withActive}"
       },
       "label-default": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}"
+        "$value": "{modes.color.generic.text.harsh}"
       }
     }
   }
