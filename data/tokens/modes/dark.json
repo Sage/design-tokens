@@ -15,25 +15,25 @@
         "$value": "{core.colors.white}"
       },
       "brand": {
-        "default": {
+        "def": {
           "$type": "color",
           "$value": "{core.colors.brilliantGreen.55}"
         },
-        "defaultAlt": {
+        "defAlt": {
           "$type": "color",
           "$value": "{core.colors.white}"
         },
-        "withDefaultAlt": {
+        "withDefAlt": {
           "$type": "color",
           "$value": "{core.colors.black}"
         },
         "copilot": {
           "AIIdentifier": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.white}"
             },
-            "withDefault": {
+            "withDef": {
               "$type": "color",
               "$value": "{core.colors.brilliantGreen.55}"
             }
@@ -227,7 +227,7 @@
             }
           }
         },
-        "text": {
+        "txt": {
           "extreme": {
             "$type": "color",
             "$value": "{core.colors.white}"
@@ -243,7 +243,7 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.generic.text.extreme}"
+            "$value": "{modes.color.generic.txt.extreme}"
           },
           "firm": {
             "$extensions": {
@@ -256,7 +256,7 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.generic.text.extreme}"
+            "$value": "{modes.color.generic.txt.extreme}"
           },
           "moderate": {
             "$extensions": {
@@ -269,8 +269,8 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.generic.text.extreme}",
-            "$description": "was 0.5. Increased to 0.55 so that we can use this for hint text etc too, and still be accessible."
+            "$value": "{modes.color.generic.txt.extreme}",
+            "$description": "was 0.5. Increased to 0.55 so that we can use this for hint txt etc too, and still be accessible."
           },
           "muted": {
             "$extensions": {
@@ -283,7 +283,7 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.generic.text.extreme}",
+            "$value": "{modes.color.generic.txt.extreme}",
             "$description": "accessible OBJECT against white."
           },
           "soft": {
@@ -297,8 +297,8 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.generic.text.extreme}",
-            "$description": "Used for disabled text"
+            "$value": "{modes.color.generic.txt.extreme}",
+            "$description": "Used for disabled txt"
           },
           "nought": {
             "$type": "color",
@@ -320,7 +320,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.text.inv.extreme}"
+              "$value": "{modes.color.generic.txt.inv.extreme}"
             },
             "firm": {
               "$extensions": {
@@ -333,7 +333,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.text.inv.extreme}"
+              "$value": "{modes.color.generic.txt.inv.extreme}"
             },
             "moderate": {
               "$extensions": {
@@ -346,8 +346,8 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.text.inv.extreme}",
-              "$description": "was 0.5. Increased to 0.55 so that we can use this for hint text etc too, and still be accessible."
+              "$value": "{modes.color.generic.txt.inv.extreme}",
+              "$description": "was 0.5. Increased to 0.55 so that we can use this for hint txt etc too, and still be accessible."
             },
             "muted": {
               "$extensions": {
@@ -360,7 +360,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.text.inv.extreme}",
+              "$value": "{modes.color.generic.txt.inv.extreme}",
               "$description": "accessible OBJECT against white."
             },
             "soft": {
@@ -374,8 +374,8 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.text.inv.extreme}",
-              "$description": "Used for disabled text"
+              "$value": "{modes.color.generic.txt.inv.extreme}",
+              "$description": "Used for disabled txt"
             },
             "nought": {
               "$type": "color",
@@ -411,7 +411,7 @@
             "$value": "{core.colors.white}"
           },
           "ai": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.AI.vibrant.horizontal}",
               "$description": "Dialog top border treatment"
@@ -469,12 +469,12 @@
             "$type": "color",
             "$value": "linear-gradient(90deg, #00D63914 0%, #00d6de14 40%, #9d60ff14 90%)"
           },
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.AI.vibrant.horizontal}"
           },
           "inv": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.AI.dull.horizontal}"
             }
@@ -486,11 +486,11 @@
             "$value": "{core.colors.blush.70}",
             "$description": "active button on dark"
           },
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.blush.55}"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.blush.60}",
             "$description": "for links in datatables "
@@ -513,7 +513,7 @@
             "$type": "color",
             "$value": "{core.colors.black}"
           },
-          "withDefault": {
+          "withDef": {
             "$type": "color",
             "$value": "{core.colors.black}"
           },
@@ -523,11 +523,11 @@
               "$value": "{core.colors.blush.30}",
               "$description": "used on pill hov states"
             },
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.blush.45}"
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.blush.40}",
               "$description": "For links in datatables"
@@ -551,14 +551,14 @@
               "$type": "color",
               "$value": "{core.colors.white}"
             },
-            "withDefault": {
+            "withDef": {
               "$type": "color",
               "$value": "{core.colors.white}"
             }
           }
         },
         "dataEntry": {
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.black}",
             "$description": "Input backgrounds."
@@ -575,94 +575,94 @@
           "withHov": {
             "$type": "color",
             "$value": "{core.colors.white}",
-            "$description": "text for draggable area on file input"
+            "$description": "txt for draggable area on file input"
           },
           "hovAlt": {
             "$type": "color",
             "$value": "{core.colors.smoke.10}",
             "$description": "bg hov for draggable area on file input"
           },
-          "withDefault": {
+          "withDef": {
             "$type": "color",
             "$value": "{core.colors.smoke.60}",
             "$description": "Input borders."
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.slate.0}",
-            "$description": "Input footer bgs (e.g text editor)"
+            "$description": "Input footer bgs (e.g txt editor)"
           },
-          "text": {
+          "txt": {
             "$type": "color",
             "$value": "{core.colors.white}",
-            "$description": "Input Text"
+            "$description": "Input txt"
           },
-          "textAlt": {
+          "txtAlt": {
             "$type": "color",
             "$value": "{core.colors.white}",
-            "$description": "Hint text, placeholder text, character count etc"
+            "$description": "Hint txt, placeholder txt, character count etc"
           },
           "inv": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.white}",
               "$description": "Input backgrounds."
             },
-            "withDefault": {
+            "withDef": {
               "$type": "color",
               "$value": "{core.colors.smoke.45}",
               "$description": "Input borders."
             },
-            "text": {
+            "txt": {
               "$type": "color",
               "$value": "{core.colors.black}",
-              "$description": "Input Text"
+              "$description": "Input txt"
             },
-            "textAlt": {
+            "txtAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.text.inv.moderate}",
-              "$description": "Hint text, placeholder text, character count etc"
+              "$value": "{modes.color.generic.txt.inv.moderate}",
+              "$description": "Hint txt, placeholder txt, character count etc"
             }
           }
         },
         "focus": {
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.gold.70}"
           },
-          "text": {
+          "txt": {
             "$type": "color",
             "$value": "{core.colors.white}"
           },
-          "withDefault": {
+          "withDef": {
             "$type": "color",
             "$value": "{core.colors.black}"
           },
-          "withDefaultAlt": {
+          "withDefAlt": {
             "$type": "color",
             "$value": "{core.colors.gold.40}"
           },
           "inv": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.black}"
             },
-            "text": {
+            "txt": {
               "$type": "color",
               "$value": "{core.colors.black}"
             },
-            "withDefault": {
+            "withDef": {
               "$type": "color",
               "$value": "{core.colors.gold.70}"
             },
-            "withDefaultAlt": {
+            "withDefAlt": {
               "$type": "color",
               "$value": "{core.colors.gold.80}"
             }
           }
         },
         "inactv": {
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.smoke.40}",
             "$description": "disabled buttons on dark"
@@ -672,37 +672,37 @@
             "$value": "{core.colors.white}",
             "$description": "full screen takeover token for modal dimmer"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.smoke.10}",
             "$description": "Disabled button backgrounds and borders ON DARK"
           },
-          "text": {
+          "txt": {
             "$type": "color",
-            "$value": "{modes.color.generic.text.soft}",
-            "$description": "Disabled text inside buttons"
+            "$value": "{modes.color.generic.txt.soft}",
+            "$description": "Disabled txt inside buttons"
           },
-          "textAlt": {
+          "txtAlt": {
             "$type": "color",
             "$value": "{core.colors.black}"
           },
           "icon": {
             "$type": "color",
-            "$value": "{modes.color.generic.text.soft}",
+            "$value": "{modes.color.generic.txt.soft}",
             "$description": "Disabled icon inside buttons and form inputs."
           },
           "iconAlt": {
             "$type": "color",
-            "$value": "{modes.color.generic.text.moderate}",
+            "$value": "{modes.color.generic.txt.moderate}",
             "$description": "Readonly icon inside form inputs. "
           },
           "inv": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.smoke.70}",
               "$description": "invd disabled form secondary, tertiary and input borders borders."
             },
-            "text": {
+            "txt": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -713,10 +713,10 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.text.inv.muted}",
-              "$description": "invd disabled text inside buttons and form inputs."
+              "$value": "{modes.color.generic.txt.inv.muted}",
+              "$description": "invd disabled txt inside buttons and form inputs."
             },
-            "textAlt": {
+            "txtAlt": {
               "$type": "color",
               "$value": "{core.colors.white}",
               "$description": " Disabled labels inside buttons and Switch."
@@ -732,19 +732,19 @@
             "$type": "color",
             "$value": "{core.colors.smoke.10}"
           },
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.smoke.90}"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.smoke.70}",
-            "$description": "subtle and toggle button text"
+            "$description": "subtle and toggle button txt"
           },
-          "defaultAlt2": {
+          "defAlt2": {
             "$type": "color",
             "$value": "{core.colors.smoke.60}",
-            "$description": "Dropdown option subtext."
+            "$description": "Dropdown option subtxt."
           },
           "hovAlt": {
             "$type": "color",
@@ -764,7 +764,7 @@
             "$type": "color",
             "$value": "{core.colors.white}"
           },
-          "withDefault": {
+          "withDef": {
             "$type": "color",
             "$value": "{core.colors.black}"
           },
@@ -781,11 +781,11 @@
               "$type": "color",
               "$value": "{core.colors.smoke.90}"
             },
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.smoke.10}"
             },
-            "defaultAlt": {
+            "defAlt": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -797,9 +797,9 @@
               },
               "$type": "color",
               "$value": "{core.colors.smoke.45}",
-              "$description": "subtle and toggle button text"
+              "$description": "subtle and toggle button txt"
             },
-            "defaultAlt2": {
+            "defAlt2": {
               "$type": "color",
               "$value": "{core.colors.smoke.60}",
               "$description": "Tertiary border color"
@@ -822,7 +822,7 @@
               "$type": "color",
               "$value": "{core.colors.black}"
             },
-            "withDefault": {
+            "withDef": {
               "$type": "color",
               "$value": "{core.colors.white}"
             },
@@ -832,12 +832,12 @@
             }
           },
           "subtle": {
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.smoke.60}",
               "$description": "border color for off switches"
             },
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.smoke.10}",
               "$description": "subtle table header hov"
@@ -850,15 +850,15 @@
             "$value": "{core.colors.smoke.20}",
             "$description": "active bg for nav items"
           },
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.black}",
-            "$description": "default bg for global nav"
+            "$description": "def bg for global nav"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.smoke.0}",
-            "$description": "default bg for left nav container"
+            "$description": "def bg for left nav container"
           },
           "hov": {
             "$type": "color",
@@ -868,11 +868,11 @@
           "withActv": {
             "$type": "color",
             "$value": "{core.colors.white}",
-            "$description": "text and icons on top of active bgs in nav contexts"
+            "$description": "txt and icons on top of active bgs in nav contxts"
           },
-          "withDefault": {
+          "withDef": {
             "$type": "color",
-            "$value": "{modes.color.generic.text.harsh}",
+            "$value": "{modes.color.generic.txt.harsh}",
             "$description": "hov bg for nav items"
           },
           "withhov": {
@@ -886,15 +886,15 @@
               "$value": "{core.colors.smoke.80}",
               "$description": "active bg for nav items"
             },
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.white}",
-              "$description": "default bg for global nav"
+              "$description": "def bg for global nav"
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.smoke.100}",
-              "$description": "default bg for left nav container"
+              "$description": "def bg for left nav container"
             },
             "hov": {
               "$type": "color",
@@ -904,11 +904,11 @@
             "withActv": {
               "$type": "color",
               "$value": "{core.colors.black}",
-              "$description": "text and icons on top of active bgs in nav contexts"
+              "$description": "txt and icons on top of active bgs in nav contxts"
             },
-            "withDefault": {
+            "withDef": {
               "$type": "color",
-              "$value": "{modes.color.generic.text.inv.harsh}",
+              "$value": "{modes.color.generic.txt.inv.harsh}",
               "$description": "hov bg for nav items"
             },
             "withhov": {
@@ -928,24 +928,24 @@
             "$value": "{core.colors.brilliantGreen.20}",
             "$description": "Active color for secondary and tertiary buttons"
           },
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.brilliantGreen.45}"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.brilliantGreen.40}",
             "$description": "Border color for secondary and tertiary buttons"
           },
-          "defaultAlt2": {
+          "defAlt2": {
             "$type": "color",
             "$value": "{core.colors.brilliantGreen.60}",
-            "$description": "default value for links"
+            "$description": "def value for links"
           },
-          "defaultAlt3": {
+          "defAlt3": {
             "$type": "color",
             "$value": "{core.colors.brilliantGreen.0}",
-            "$description": "default background color of secondary buttons"
+            "$description": "def background color of secondary buttons"
           },
           "hov": {
             "$type": "color",
@@ -965,7 +965,7 @@
             "$type": "color",
             "$value": "{core.colors.black}"
           },
-          "withDefault": {
+          "withDef": {
             "$type": "color",
             "$value": "{core.colors.black}"
           },
@@ -983,24 +983,24 @@
               "$value": "{core.colors.emerald.80}",
               "$description": "Active color for inv secondary and tertiary buttons"
             },
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.emerald.45}"
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.emerald.70}",
               "$description": "Borders on secondary and tertiary inv buttons"
             },
-            "defaultAlt2": {
+            "defAlt2": {
               "$type": "color",
               "$value": "{core.colors.emerald.40}",
-              "$description": "default color for links"
+              "$description": "def color for links"
             },
-            "defaultAlt3": {
+            "defAlt3": {
               "$type": "color",
               "$value": "{core.colors.emerald.100}",
-              "$description": "default background color of inv secondary buttons"
+              "$description": "def background color of inv secondary buttons"
             },
             "hov": {
               "$type": "color",
@@ -1020,7 +1020,7 @@
               "$type": "color",
               "$value": "{core.colors.white}"
             },
-            "withDefault": {
+            "withDef": {
               "$type": "color",
               "$value": "{core.colors.white}"
             },
@@ -1033,26 +1033,26 @@
       },
       "status": {
         "ai": {
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{modes.color.generic.bg.nought}"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{modes.color.generic.bg.extreme}",
-            "$description": "bg for contextual message comp"
+            "$description": "bg for contxtual message comp"
           },
-          "default-horizontal": {
+          "def-horizontal": {
             "$type": "color",
             "$value": "{core.colors.AI.vibrant.horizontal}"
           },
-          "default-vertical": {
+          "def-vertical": {
             "$type": "color",
             "$value": "{core.colors.AI.vibrant.vertical}"
           }
         },
         "callout": {
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.brilliantGreen.10}",
             "$description": "used for marketing banners"
@@ -1064,11 +1064,11 @@
           }
         },
         "warn": {
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.bloodOrange.55}"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.bloodOrange.10}",
             "$description": "Subtle message bg"
@@ -1083,17 +1083,17 @@
             "$value": "{core.colors.bloodOrange.20}",
             "$description": "used on pill hov states and message bg"
           },
-          "text": {
+          "txt": {
             "$type": "color",
             "$value": "{core.colors.bloodOrange.60}"
           },
           "inv": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.bloodOrange.45}",
-              "$description": "For pills and messages. Not accessible with white TEXT."
+              "$description": "For pills and messages. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.bloodOrange.90}",
               "$description": "Subtle message bg"
@@ -1108,61 +1108,61 @@
               "$value": "{core.colors.bloodOrange.80}",
               "$description": "used on pill hov states and message bg"
             },
-            "text": {
+            "txt": {
               "$type": "color",
               "$value": "{core.colors.bloodOrange.40}"
             }
           }
         },
-        "text": {
-          "withDefault": {
+        "txt": {
+          "withDef": {
             "$type": "color",
-            "$value": "{modes.color.generic.text.nought}"
+            "$value": "{modes.color.generic.txt.nought}"
           },
-          "withDefaultAlt": {
+          "withDefAlt": {
             "$type": "color",
-            "$value": "{modes.color.generic.text.harsh}"
+            "$value": "{modes.color.generic.txt.harsh}"
           },
           "withHov": {
             "$type": "color",
-            "$value": "{modes.color.generic.text.nought}"
+            "$value": "{modes.color.generic.txt.nought}"
           },
           "withHovAlt": {
             "$type": "color",
-            "$value": "{modes.color.generic.text.extreme}"
+            "$value": "{modes.color.generic.txt.extreme}"
           },
           "loading": {
             "$type": "color",
             "$value": "linear-gradient(135deg, #FFFFFF5C 0%, #FFFFFF0A 100%)",
-            "$description": "used on skeleton text"
+            "$description": "used on skeleton txt"
           },
           "inv": {
-            "withDefault": {
+            "withDef": {
               "$type": "color",
-              "$value": "{modes.color.generic.text.extreme}"
+              "$value": "{modes.color.generic.txt.extreme}"
             },
-            "withDefaultAlt": {
+            "withDefAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.text.inv.harsh}"
+              "$value": "{modes.color.generic.txt.inv.harsh}"
             },
             "withHov": {
               "$type": "color",
-              "$value": "{modes.color.generic.text.extreme}"
+              "$value": "{modes.color.generic.txt.extreme}"
             },
             "withHovAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.text.inv.extreme}"
+              "$value": "{modes.color.generic.txt.inv.extreme}"
             }
           }
         },
         "custom": {
           "blue": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.azure.55}",
-              "$description": "For pills. Not accessible with white TEXT."
+              "$description": "For pills. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.azure.10}",
               "$description": "Pill bg"
@@ -1179,12 +1179,12 @@
             }
           },
           "teal": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.teal.55}",
-              "$description": "For pills. Not accessible with white TEXT."
+              "$description": "For pills. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.teal.10}",
               "$description": "Pill bg"
@@ -1201,12 +1201,12 @@
             }
           },
           "green": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.emerald.55}",
-              "$description": "For pills. Not accessible with white TEXT."
+              "$description": "For pills. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.emerald.10}",
               "$description": "Pill bg"
@@ -1223,12 +1223,12 @@
             }
           },
           "lime": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.lime.55}",
-              "$description": "For pills. Not accessible with white TEXT."
+              "$description": "For pills. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.lime.10}",
               "$description": "Pill bg"
@@ -1245,12 +1245,12 @@
             }
           },
           "orange": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.bloodOrange.55}",
-              "$description": "For pills. Not accessible with white TEXT."
+              "$description": "For pills. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.bloodOrange.10}",
               "$description": "Pill bg"
@@ -1267,12 +1267,12 @@
             }
           },
           "red": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.blush.55}",
-              "$description": "For pills. Not accessible with white TEXT."
+              "$description": "For pills. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.blush.10}",
               "$description": "Pill bg"
@@ -1289,12 +1289,12 @@
             }
           },
           "pink": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.flamingo.55}",
-              "$description": "For pills. Not accessible with white TEXT."
+              "$description": "For pills. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.flamingo.10}",
               "$description": "Pill bg"
@@ -1311,12 +1311,12 @@
             }
           },
           "purple": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.plum.55}",
-              "$description": "For pills. Not accessible with white TEXT."
+              "$description": "For pills. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.plum.10}",
               "$description": "Pill bg"
@@ -1333,12 +1333,12 @@
             }
           },
           "gray": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.smoke.55}",
-              "$description": "For pills. Not accessible with white TEXT."
+              "$description": "For pills. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.smoke.10}",
               "$description": "Pill bg"
@@ -1355,12 +1355,12 @@
             }
           },
           "slate": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.slate.55}",
-              "$description": "For pills. Not accessible with white TEXT."
+              "$description": "For pills. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.slate.10}",
               "$description": "Pill bg"
@@ -1378,11 +1378,11 @@
           }
         },
         "prio": {
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.plum.55}"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.plum.10}",
             "$description": "Subtle message bg"
@@ -1398,12 +1398,12 @@
             "$description": "used on pill hov states and message bg"
           },
           "inv": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.plum.55}",
               "$description": "For tile status keylines to show if something is of high importance."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.plum.90}",
               "$description": "Subtle message bg"
@@ -1421,23 +1421,23 @@
           }
         },
         "inactv": {
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{modes.color.generic.fg.soft}",
             "$description": "For readonly pill bg and border"
           },
-          "withDefault": {
+          "withDef": {
             "$type": "color",
-            "$value": "{modes.color.generic.text.firm}",
-            "$description": "For readonly filled pill text"
+            "$value": "{modes.color.generic.txt.firm}",
+            "$description": "For readonly filled pill txt"
           },
           "inv": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{modes.color.generic.fg.inv.soft}",
               "$description": "For readonly pill bg and border"
             },
-            "withDefault": {
+            "withDef": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -1449,16 +1449,16 @@
               },
               "$type": "color",
               "$value": "{core.colors.black}",
-              "$description": "For readonly filled pill text"
+              "$description": "For readonly filled pill txt"
             }
           }
         },
         "info": {
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.azure.55}"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.azure.10}",
             "$description": "Subtle message bg"
@@ -1474,12 +1474,12 @@
             "$description": "used on pill hov states and message bg"
           },
           "inv": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.azure.55}",
-              "$description": "For pills and messages. Not accessible with white TEXT."
+              "$description": "For pills and messages. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.azure.90}",
               "$description": "Subtle message bg"
@@ -1497,11 +1497,11 @@
           }
         },
         "neg": {
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.blush.55}"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.blush.10}",
             "$description": "Subtle message bg"
@@ -1516,17 +1516,17 @@
             "$value": "{core.colors.blush.20}",
             "$description": "used on pill hov states and message bg"
           },
-          "text": {
+          "txt": {
             "$type": "color",
             "$value": "{core.colors.blush.60}"
           },
           "inv": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.blush.45}",
-              "$description": "For pills and messages. Not accessible with white TEXT."
+              "$description": "For pills and messages. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.blush.90}",
               "$description": "Subtle message bg"
@@ -1541,18 +1541,18 @@
               "$value": "{core.colors.blush.80}",
               "$description": "used on pill hov states and message bg"
             },
-            "text": {
+            "txt": {
               "$type": "color",
               "$value": "{core.colors.blush.40}"
             }
           }
         },
         "neutral": {
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.smoke.55}"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.smoke.10}",
             "$description": "Subtle message bg"
@@ -1568,11 +1568,11 @@
             "$description": "used on pill hov states and message bg"
           },
           "inv": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.smoke.45}"
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.smoke.90}",
               "$description": "Subtle message bg"
@@ -1590,11 +1590,11 @@
           }
         },
         "pos": {
-          "default": {
+          "def": {
             "$type": "color",
             "$value": "{core.colors.emerald.55}"
           },
-          "defaultAlt": {
+          "defAlt": {
             "$type": "color",
             "$value": "{core.colors.emerald.10}",
             "$description": "Subtle message bg"
@@ -1610,12 +1610,12 @@
             "$description": "used on pill hov states and message bg"
           },
           "inv": {
-            "default": {
+            "def": {
               "$type": "color",
               "$value": "{core.colors.emerald.45}",
-              "$description": "For pills and messages. Not accessible with white TEXT."
+              "$description": "For pills and messages. Not accessible with white txt."
             },
-            "defaultAlt": {
+            "defAlt": {
               "$type": "color",
               "$value": "{core.colors.emerald.90}",
               "$description": "Subtle message bg"
