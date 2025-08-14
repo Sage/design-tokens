@@ -1,0 +1,513 @@
+{
+  "button": {
+    "none": {
+      "$type": "color",
+      "$value": "{modes.color.none}",
+      "$description": "transparent override used for hiding colors when needed."
+    },
+    "ai": {
+      "bg-actv": {
+        "$type": "color",
+        "$value": "{modes.color.action.ai.actv}"
+      },
+      "bg-hov": {
+        "$type": "color",
+        "$value": "{modes.color.action.ai.hov}"
+      },
+      "border-actv": {
+        "$type": "color",
+        "$value": "{modes.color.action.ai.def}"
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.action.inactv.def}"
+      },
+      "border-def": {
+        "$type": "color",
+        "$value": "{modes.color.action.ai.def}"
+      },
+      "border-hov": {
+        "$type": "color",
+        "$value": "{modes.color.action.ai.def}"
+      },
+      "label-actv": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.withActvAlt}"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.action.inactv.txt}"
+      },
+      "label-def": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.def}"
+      },
+      "label-hov": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.withhov}"
+      }
+    },
+    "destructive": {
+      "prim": {
+        "bg-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.def}"
+        },
+        "bg-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.def}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.hov}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txtAlt}"
+        },
+        "label-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.withDef}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.withDef}"
+        }
+      },
+      "sec": {
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.hovAlt}"
+        },
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.def}"
+        },
+        "border-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.def}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.hov}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txt}"
+        },
+        "label-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.def}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.hov}"
+        }
+      }
+    },
+    "typical": {
+      "prim": {
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.actv}"
+        },
+        "border-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.withDef}",
+          "$description": "For spacer in Split button"
+        },
+        "bg-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.def}"
+        },
+        "bg-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.def}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.hov}"
+        },
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.withActv}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txtAlt}"
+        },
+        "label-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.withDef}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.withDef}"
+        },
+        "inv": {
+          "bg-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.actv}"
+          },
+          "border-def": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.withDef}",
+            "$description": "For spacer in Split button"
+          },
+          "bg-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.def}"
+          },
+          "bg-def": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.def}"
+          },
+          "bg-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.hov}"
+          },
+          "label-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.withActv}"
+          },
+          "label-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.txtAlt}"
+          },
+          "label-def": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.withDef}"
+          },
+          "label-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.withDef}"
+          }
+        }
+      },
+      "sec": {
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.actvAlt}"
+        },
+        "bg-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.defAlt3}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.hovAlt}"
+        },
+        "border-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.actv}"
+        },
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.def}"
+        },
+        "border-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.defAlt}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.hov}"
+        },
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withActvAlt}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txt}"
+        },
+        "label-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.def}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withhov}"
+        },
+        "inv": {
+          "bg-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.actvAlt}"
+          },
+          "bg-def": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.defAlt3}"
+          },
+          "bg-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.hovAlt}"
+          },
+          "border-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.actv}"
+          },
+          "border-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.def}"
+          },
+          "border-def": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.defAlt}"
+          },
+          "border-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.hov}"
+          },
+          "label-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withActvAlt}"
+          },
+          "label-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.txt}"
+          },
+          "label-def": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.def}"
+          },
+          "label-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withhov}"
+          }
+        }
+      },
+      "tertiary": {
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.actvAlt}"
+        },
+        "bg-def": {
+          "$type": "color",
+          "$value": "{button.none}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.hovAlt}"
+        },
+        "border-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.actv}"
+        },
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.def}"
+        },
+        "border-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.defAlt}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.prim.hov}"
+        },
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withActvAlt}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txt}"
+        },
+        "label-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.def}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withhov}"
+        },
+        "inv": {
+          "bg-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.actvAlt}"
+          },
+          "bg-def": {
+            "$type": "color",
+            "$value": "{button.none}"
+          },
+          "bg-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.hovAlt}"
+          },
+          "border-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.actv}"
+          },
+          "border-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.def}"
+          },
+          "border-def": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.defAlt}"
+          },
+          "border-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.prim.inv.hov}"
+          },
+          "label-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withActvAlt}"
+          },
+          "label-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.txt}"
+          },
+          "label-def": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.def}"
+          },
+          "label-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withhov}"
+          }
+        }
+      },
+      "subtle": {
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.actvAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.hovAlt}"
+        },
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withActvAlt}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txt}"
+        },
+        "label-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.def}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withhov}"
+        },
+        "inv": {
+          "bg-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.actvAlt}"
+          },
+          "bg-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.hovAlt}"
+          },
+          "label-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withActvAlt}"
+          },
+          "label-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.txt}"
+          },
+          "label-def": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.def}"
+          },
+          "label-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withhov}"
+          }
+        }
+      },
+      "toggle": {
+        "bg-actvDisabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.def}"
+        },
+        "label-actvDisabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txtAlt}"
+        },
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.actv}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.hovAlt}"
+        },
+        "border-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.def}"
+        },
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.def}"
+        },
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withActv}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txt}"
+        },
+        "label-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.defAlt}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withhov}"
+        }
+      }
+    },
+    "video": {
+      "bg-blur": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.hovAlt}"
+      },
+      "prim": {
+        "bg-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDef}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDef}"
+        },
+        "label-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.def}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.def}"
+        }
+      },
+      "sec": {
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDef}"
+        },
+        "border-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDef}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDef}"
+        },
+        "label-def": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDef}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.def}"
+        }
+      }
+    }
+  }
+}

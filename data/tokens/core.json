@@ -4,234 +4,12 @@
       "black": {
         "$type": "color",
         "$value": "black",
-        "$description": "Base color for different text opacities. Used as a mixer in the mid theming layer for hover states, active states etc. Dividers and table headers. Base color for secondary, Tertiary and Subtle buttons. Base color for Input borders. Focus internal border."
+        "$description": "Base color for different txt opacities. Used as a mixer in the mid theming layer for hover states, active states etc. Dividers and table headers. Base color for secondary, Tertiary and Subtle buttons. Base color for Input borders. Focus internal border."
       },
-      "blue": {
+      "white": {
         "$type": "color",
-        "$value": "#0060A7",
-        "$description": "Base status color for light surface. AAA text on white."
-      },
-      "azure": {
-        "$type": "color",
-        "$value": "#007ED9",
-        "$description": "Base status color for dark surfaces. AA text  on dark. Luminosity 51.9."
-      },
-      "brilliantGreen": {
-        "$type": "color",
-        "$value": "#00D639",
-        "$description": "Sage Logo color Primary buttons on dark backgrounds"
-      },
-      "emerald": {
-        "0": {
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.95",
-                "space": "lch",
-                "color": "black"
-              }
-            }
-          },
-          "$type": "color",
-          "$value": "#00811F",
-          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-        },
-        "10": {
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.8",
-                "space": "lch",
-                "color": "black"
-              }
-            }
-          },
-          "$type": "color",
-          "$value": "#00811F",
-          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-        },
-        "20": {
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.6",
-                "space": "lch",
-                "color": "black"
-              }
-            }
-          },
-          "$type": "color",
-          "$value": "#00811F",
-          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-        },
-        "30": {
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.4",
-                "space": "lch",
-                "color": "black"
-              }
-            }
-          },
-          "$type": "color",
-          "$value": "#00811F",
-          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-        },
-        "40": {
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.2",
-                "space": "lch",
-                "color": "black"
-              }
-            }
-          },
-          "$type": "color",
-          "$value": "#00811F",
-          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-        },
-        "50": {
-          "$type": "color",
-          "$value": "#00811F",
-          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-        },
-        "60": {
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.2",
-                "space": "lch",
-                "color": "white"
-              }
-            }
-          },
-          "$type": "color",
-          "$value": "#00811F",
-          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-        },
-        "70": {
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.4",
-                "space": "lch",
-                "color": "white"
-              }
-            }
-          },
-          "$type": "color",
-          "$value": "#00811F",
-          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-        },
-        "80": {
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.6",
-                "space": "lch",
-                "color": "white"
-              }
-            }
-          },
-          "$type": "color",
-          "$value": "#00811F",
-          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-        },
-        "90": {
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.8",
-                "space": "lch",
-                "color": "white"
-              }
-            }
-          },
-          "$type": "color",
-          "$value": "#00811F",
-          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-        },
-        "100": {
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "mix",
-                "value": "0.95",
-                "space": "lch",
-                "color": "white"
-              }
-            }
-          },
-          "$type": "color",
-          "$value": "#00811F",
-          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
-        }
-      },
-      "verdant": {
-        "$type": "color",
-        "$value": "#009023",
-        "$description": "Base status color for dark surfaces. AA text  on dark. Luminosity 51.9."
-      },
-      "orange": {
-        "$type": "color",
-        "$value": "#D64309",
-        "$description": "Base status color for light surface. AA text on white. Not taken from brand portal as previous orange wasn't accessible."
-      },
-      "tangerine": {
-        "$type": "color",
-        "$value": "#E04500",
-        "$description": "Base status color for dark surfaces. AA text  on dark. Luminosity 51.9."
-      },
-      "gold": {
-        "$type": "color",
-        "$value": "#FFB500",
-        "$description": "Outer focus border."
-      },
-      "navy": {
-        "$type": "color",
-        "$value": "#335B70",
-        "$description": "old action minor 500. (Pure navy is #00293F)"
-      },
-      "storm": {
-        "$type": "color",
-        "$value": "#656565",
-        "$description": "Base status color for light surface. AA text on white. Luminosity 46.8."
-      },
-      "smoke": {
-        "$type": "color",
-        "$value": "#7C7C7C",
-        "$description": "Base status color for dark surfaces. AA text  on dark. Luminosity 51.9."
-      },
-      "red": {
-        "$type": "color",
-        "$value": "#CD384B",
-        "$description": "Base status color for light surface. AA text on white. Color taken from brand portal."
-      },
-      "blush": {
-        "$type": "color",
-        "$value": "#E13E53",
-        "$description": "Base status color for dark surfaces. AA text  on dark. Luminosity 51.9."
-      },
-      "teal": {
-        "$type": "color",
-        "$value": "#007c7b",
-        "$description": "Alternative colour with no semantic meaning. Used in progress tracker on light. Luminosity 46.8."
-      },
-      "petrol": {
-        "$type": "color",
-        "$value": "#008a89",
-        "$description": "Alternative colour with no semantic meaning. Used in progress tracker on dark. Luminosity 51.9"
+        "$value": "#FFFFFF",
+        "$description": "Surface backgrounds. Text colors on buttons and on dark backgrounds. Used as a mixer in the mid theming layer for hover states, active states etc."
       },
       "transparent": {
         "$extensions": {
@@ -247,251 +25,631 @@
         "$value": "rgba(0,0,0,0)",
         "$description": "For transparent backgrounds and borders."
       },
-      "white": {
-        "$type": "color",
-        "$value": "#FFFFFF",
-        "$description": "Surface backgrounds. Text colors on buttons and on dark backgrounds. Used as a mixer in the mid theming layer for hover states, active states etc."
+      "AI": {
+        "dull": {
+          "horizontal": {
+            "$type": "color",
+            "$value": "linear-gradient(90deg, #13A038 0%, #149197 40%, #A87CFB 90%)",
+            "$description": "AI buttons on light backgrounds."
+          },
+          "vertical": {
+            "$type": "color",
+            "$value": "linear-gradient(180deg, #13A038 0%, #149197 40%, #A87CFB 90%)",
+            "$description": "AI buttons on light backgrounds."
+          }
+        },
+        "vibrant": {
+          "horizontal": {
+            "$type": "color",
+            "$value": "linear-gradient(90deg, #00D639 0%, #00D6DE 40%, #9D60FF 90%)",
+            "$description": "AI buttons on dark backgrounds."
+          },
+          "vertical": {
+            "$type": "color",
+            "$value": "linear-gradient(180deg, #00D639 0%, #00D6DE 40%, #9D60FF 90%)",
+            "$description": "Nudge message border"
+          }
+        }
       },
-      "aiH": {
-        "$type": "color",
-        "$value": "linear-gradient(90deg, #13A038 0%, #149197 40%, #A87CFB 90%)",
-        "$description": "AI buttons on light backgrounds."
+      "azure": {
+        "0": {
+          "$type": "color",
+          "$value": "#001831"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#00294D"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#003A6A"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#004881"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#00589B"
+        },
+        "45": {
+          "$type": "color",
+          "$value": "#0071C4",
+          "$description": "Base status color for light surface. AAA txt on white."
+        },
+        "55": {
+          "$type": "color",
+          "$value": "#007EDA",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#3693F2"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#73ADFF"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#D5E3FF"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#EAF1FF"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#F7F9FF"
+        }
       },
-      "aiV": {
-        "$type": "color",
-        "$value": "linear-gradient(180deg, #13A038 0%, #149197 40%, #A87CFB 90%)",
-        "$description": "AI buttons on light backgrounds."
+      "brilliantGreen": {
+        "0": {
+          "$type": "color",
+          "$value": "#001D02"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#003006"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#00440B"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#005310"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#006516"
+        },
+        "45": {
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "55": {
+          "$type": "color",
+          "$value": "#00D639",
+          "$description": "Sage Logo color Primary buttons on dark backgrounds"
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#00E23D"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#00EE40"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#83FB8E"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#C5FFC9"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#E9FFEB"
+        }
       },
-      "lightAiH": {
-        "$type": "color",
-        "$value": "linear-gradient(90deg, #00D639 0%, #00D6DE 40%, #9D60FF 90%)",
-        "$description": "AI buttons on dark backgrounds."
+      "blush": {
+        "0": {
+          "$type": "color",
+          "$value": "#33070C"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#4F1018"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#6D1924"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#85212E"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#A02A39"
+        },
+        "45": {
+          "$type": "color",
+          "$value": "#CA374A",
+          "$description": "Base status color for light surface. AA txt on white. Color taken from brand portal."
+        },
+        "55": {
+          "$type": "color",
+          "$value": "#E13E53",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#EA6572"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#EE9198"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#F8DCDD"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#FBEDEE"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#FEF8F8"
+        }
       },
-      "lightAiV": {
-        "$type": "color",
-        "$value": "linear-gradient(180deg, #00D639 0%, #00D6DE 40%, #9D60FF 90%)",
-        "$description": "Nudge message border"
+      "bloodOrange": {
+        "0": {
+          "$type": "color",
+          "$value": "#330900"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#4F1200"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#6D1D00"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#842500"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#9F2E00"
+        },
+        "45": {
+          "$type": "color",
+          "$value": "#D64309",
+          "$description": "Base status color for light surface. AA txt on white. Not taken from brand portal as previous orange wasn't accessible."
+        },
+        "55": {
+          "$type": "color",
+          "$value": "#E04500",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#FB5A2E"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#FF8A78"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#FFDAD6"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#FFEDEB"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#FFF8F7"
+        }
       },
-      "supplementary": {
-        "blue": {
-          "100": {
-            "$type": "color",
-            "$value": "#00293F",
-            "$description": ">4.5:1 against white, 3:1 against 400 token."
-          },
-          "400": {
-            "$type": "color",
-            "$value": "#0071C3",
-            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
-          },
-          "500": {
-            "$type": "color",
-            "$value": "#007FD9",
-            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E,"
-          },
-          "950": {
-            "$type": "color",
-            "$value": "#CDE5FF",
-            "$description": ">4.5:1 against black text, 3:1 against 550 token."
-          }
+      "emerald": {
+        "0": {
+          "$type": "color",
+          "$value": "#001D03"
         },
-        "teal": {
-          "100": {
-            "$type": "color",
-            "$value": "#002B2A",
-            "$description": ">4.5:1 against white, 3:1 against 400 token. 3:1 against 100 token."
-          },
-          "400": {
-            "$type": "color",
-            "$value": "#007C7B",
-            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3, 3:1 against 100 token."
-          },
-          "500": {
-            "$type": "color",
-            "$value": "#008A89",
-            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
-          },
-          "950": {
-            "$type": "color",
-            "$value": "#C1FBFB",
-            "$description": ">4.5:1 against black text, 3:1 against 550 token."
-          }
+        "10": {
+          "$type": "color",
+          "$value": "#003006"
         },
-        "green": {
-          "100": {
-            "$type": "color",
-            "$value": "#002D05",
-            "$description": ">4.5:1 against white text, 3:1 against 400 token."
-          },
-          "400": {
-            "$type": "color",
-            "$value": "#00811F",
-            "$description": "Currently same hex as emerald. Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
-          },
-          "500": {
-            "$type": "color",
-            "$value": "#009023",
-            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E,"
-          },
-          "950": {
-            "$type": "color",
-            "$value": "#C5FFC9",
-            "$description": ">4.5:1 against black text, 3:1 against 550 token."
-          }
+        "20": {
+          "$type": "color",
+          "$value": "#00440C"
         },
-        "lime": {
-          "100": {
-            "$type": "color",
-            "$value": "#171e00",
-            "$description": "4.5:1 against white. 3:1 against 400 token."
-          },
-          "400": {
-            "$type": "color",
-            "$value": "#637700",
-            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
-          },
-          "500": {
-            "$type": "color",
-            "$value": "#6E8500",
-            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
-          },
-          "950": {
-            "$type": "color",
-            "$value": "#FFFF9C",
-            "$description": ">4.5:1 against black text, 3:1 against 550 token."
-          }
+        "30": {
+          "$type": "color",
+          "$value": "#005311"
         },
-        "orange": {
-          "100": {
-            "$type": "color",
-            "$value": "#380D00",
-            "$description": "4.5:1 against white. 3:1 against 400 token."
-          },
-          "400": {
-            "$type": "color",
-            "$value": "#C54300",
-            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
-          },
-          "500": {
-            "$type": "color",
-            "$value": "#DB4B00",
-            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
-          },
-          "950": {
-            "$type": "color",
-            "$value": "#FEEAB0",
-            "$description": ">4.5:1 against black text, 3:1 against 550 token."
-          }
+        "40": {
+          "$type": "color",
+          "$value": "#006516"
         },
-        "red": {
-          "100": {
-            "$type": "color",
-            "$value": "#400011",
-            "$description": "4.5:1 against white. 3:1 against 400 & token."
-          },
-          "400": {
-            "$type": "color",
-            "$value": "#DC004E",
-            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 & token."
-          },
-          "500": {
-            "$type": "color",
-            "$value": "#F50058",
-            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E,"
-          },
-          "950": {
-            "$type": "color",
-            "$value": "#FFDBCF",
-            "$description": ">4.5:1 against black text, 3:1 against 550 token."
-          }
+        "45": {
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
         },
-        "pink": {
-          "100": {
-            "$type": "color",
-            "$value": "#3C002C",
-            "$description": "4.5:1 against white. 3:1 against 400 token."
-          },
-          "400": {
-            "$type": "color",
-            "$value": "#C8269A",
-            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
-          },
-          "500": {
-            "$type": "color",
-            "$value": "#DD2BAB",
-            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
-          },
-          "950": {
-            "$type": "color",
-            "$value": "#FFD7EE",
-            "$description": ">4.5:1 against black text, 3:1 against 550 token."
-          }
+        "55": {
+          "$type": "color",
+          "$value": "#009024",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
         },
-        "purple": {
-          "100": {
-            "$type": "color",
-            "$value": "#270E41",
-            "$description": "4.5:1 against white. 3:1 against 400 token."
-          },
-          "400": {
-            "$type": "color",
-            "$value": "#8F4CD7",
-            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
-          },
-          "500": {
-            "$type": "color",
-            "$value": "#985FDC",
-            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
-          },
-          "950": {
-            "$type": "color",
-            "$value": "#E7DEF8",
-            "$description": ">4.5:1 against black text, 3:1 against 550 token."
-          }
+        "60": {
+          "$type": "color",
+          "$value": "#1DA735"
         },
-        "slate": {
-          "100": {
-            "$type": "color",
-            "$value": "#121D23",
-            "$description": "4.5:1 against white. 3:1 against 400 token."
-          },
-          "400": {
-            "$type": "color",
-            "$value": "#527386",
-            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3. 3:1 against 100 token."
-          },
-          "500": {
-            "$type": "color",
-            "$value": "#5C8196",
-            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
-          },
-          "950": {
-            "$type": "color",
-            "$value": "#D4E5F1",
-            "$description": ">4.5:1 against black text, 3:1 against 550 token."
-          }
+        "70": {
+          "$type": "color",
+          "$value": "#35C449"
         },
-        "gray": {
-          "100": {
-            "$type": "color",
-            "$value": "#1b1b1b",
-            "$description": "4.5:1 against white, 3:1 against 400 token. "
+        "80": {
+          "$type": "color",
+          "$value": "#85FB91"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#C5FFC9"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#E9FFEB"
+        }
+      },
+      "flamingo": {
+        "0": {
+          "$type": "color",
+          "$value": "#320424"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#4E083A"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#6B1051"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#821563"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#9D1C78"
+        },
+        "45": {
+          "$type": "color",
+          "$value": "#C72699",
+          "$description": "Base status color for light surface. AAA txt on white."
+        },
+        "55": {
+          "$type": "color",
+          "$value": "#DD2BAA",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#F54AC0"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#F784CD"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#FCD9ED"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#FEECF6"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#FEF7FB"
+        }
+      },
+      "gold": {
+        "20": {
+          "$type": "color",
+          "$value": "#4D3500"
+        },
+        "40": {
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.20",
+                "space": "lch",
+                "color": "black"
+              }
+            }
           },
-          "400": {
-            "$type": "color",
-            "$value": "#6F6F6F",
-            "$description": "Lightness 46.8, 4.5:1 against #F3F3F3, 3:1 against 100 token. "
-          },
-          "500": {
-            "$type": "color",
-            "$value": "#7C7C7C",
-            "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E,"
-          },
-          "950": {
-            "$type": "color",
-            "$value": "#E2E2E2",
-            "$description": ">4.5:1 against black text, 3:1 against 550 token."
-          }
+          "$type": "color",
+          "$value": "{core.colors.gold.70}"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#FFB500",
+          "$description": "Outer focus border."
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#FFD27C"
+        }
+      },
+      "lime": {
+        "0": {
+          "$type": "color",
+          "$value": "#141A00"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#232B00"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#323E00"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#3F4C00"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#4D5D00"
+        },
+        "45": {
+          "$type": "color",
+          "$value": "#637700",
+          "$description": "Base status color for light surface. AAA txt on white."
+        },
+        "55": {
+          "$type": "color",
+          "$value": "#6F8500",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#829B00"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#9AB700"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#CEF148"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#DCFE68"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#F1FFD1"
+        }
+      },
+      "plum": {
+        "0": {
+          "$type": "color",
+          "$value": "#220B39"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#371758"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#4D2279"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#5E2B92"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#7236B0"
+        },
+        "45": {
+          "$type": "color",
+          "$value": "#8F4CD7",
+          "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
+        },
+        "55": {
+          "$type": "color",
+          "$value": "#985FDC",
+          "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#A87BE3"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#BC9DEA"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#E7DEF8"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#F3EFFB"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#FAF8FE"
+        }
+      },
+      "slate": {
+        "0": {
+          "$type": "color",
+          "$value": "#0F191F"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#1B2A32"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#293C46"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#334A57"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#3F5A69"
+        },
+        "45": {
+          "$type": "color",
+          "$value": "#527386",
+          "$description": "old action minor 500. (Pure navy is #00293F)"
+        },
+        "55": {
+          "$type": "color",
+          "$value": "#5C8196",
+          "$description": "old action minor 500. (Pure navy is #00293F)"
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#6C96AE"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#81B2CE"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#D4E5F1"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#EAF2F8"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#F7FAFC"
+        }
+      },
+      "smoke": {
+        "0": {
+          "$type": "color",
+          "$value": "#181818"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#282828"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#393939"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#474747"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#565656"
+        },
+        "45": {
+          "$type": "color",
+          "$value": "#6F6F6F",
+          "$description": "Base status color for light surface. AA txt on white. Luminosity 46.8."
+        },
+        "55": {
+          "$type": "color",
+          "$value": "#7C7C7C",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#919191"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#ABABAB"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#E2E2E2"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#F1F1F1"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#F9F9F9"
+        }
+      },
+      "teal": {
+        "0": {
+          "$type": "color",
+          "$value": "#001B1B"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#002D2D"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#004140"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#00504F"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#006160"
+        },
+        "45": {
+          "$type": "color",
+          "$value": "#007C7B",
+          "$description": "Alternative colour with no semantic meaning. Used in progress tracker on light. Luminosity 46.8."
+        },
+        "55": {
+          "$type": "color",
+          "$value": "#008A89",
+          "$description": "Alternative colour with no semantic meaning. Used in progress tracker on dark. Luminosity 51.9"
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#00A1A0"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#28BEBD"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#84F4F3"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#B0FEFD"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#E2FFFF"
         }
       }
     },
@@ -947,7 +1105,7 @@
       }
     },
     "fontSize": {
-      "adaptive": {
+      "adptv": {
         "small": {
           "stepMinus2": {
             "$type": "fontSizes",
@@ -1132,9 +1290,9 @@
         }
       }
     },
-    "textDecoration": {
+    "txtDecoration": {
       "underline": {
-        "$type": "textDecoration",
+        "$type": "txtDecoration",
         "$value": "underline",
         "$description": "used for links"
       }
@@ -1167,28 +1325,6 @@
     },
     "color": {
       "modifiers": {
-        "button": {
-          "active": {
-            "$type": "other",
-            "$value": "0.30",
-            "$description": "Actve modifier used when 15% hover is used"
-          },
-          "activeAlt": {
-            "$type": "other",
-            "$value": "0.15",
-            "$description": "Active appled when 10% hover is used"
-          },
-          "hover": {
-            "$type": "other",
-            "$value": "0.15",
-            "$description": "Hover used on primary buttons"
-          },
-          "hoverAlt": {
-            "$type": "other",
-            "$value": "0.10",
-            "$description": "Hover used on secondary and tertiary buttons"
-          }
-        },
         "input": {
           "disabledBg": {
             "$type": "other",
