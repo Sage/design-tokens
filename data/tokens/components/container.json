@@ -2,28 +2,28 @@
   "container": {
     "AI": {
       "dialog": {
-        "borderhorizontal": {
+        "borderH": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.ai.default}",
+          "$value": "{modes.color.generic.fg.ai.def}",
           "$description": "top border for AI dialog component"
         }
       },
       "nudge": {
-        "borderAi-horizontal": {
+        "borderAi-H": {
           "$type": "color",
-          "$value": "{modes.color.status.ai.default-horizontal}",
+          "$value": "{modes.color.status.ai.def-horizontal}",
           "$description": "top and bottom border for AI nudge message component"
         },
-        "borderAi-vertical": {
+        "borderAi-V": {
           "$type": "color",
-          "$value": "{modes.color.status.ai.default-vertical}",
+          "$value": "{modes.color.status.ai.def-vertical}",
           "$description": "left and right border for AI nudge message component"
         }
       },
       "tile": {
-        "bordervertical": {
+        "borderV": {
           "$type": "color",
-          "$value": "{modes.color.status.ai.default-vertical}",
+          "$value": "{modes.color.status.ai.def-vertical}",
           "$description": "left border for AI tiles and bubbles."
         }
       }
@@ -31,147 +31,147 @@
     "blockquote": {
       "border": {
         "$type": "color",
-        "$value": "{modes.color.interactive.primary.default}"
+        "$value": "{modes.color.action.prim.def}"
       }
     },
-    "interactive": {
-      "bgFooter-activated": {
+    "action": {
+      "bgFooter-Actvd": {
         "$type": "color",
-        "$value": "{modes.color.status.positive.default}",
+        "$value": "{modes.color.status.pos.def}",
         "$description": " "
       },
-      "bgFooter-active": {
+      "bgFooter-actv": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
+        "$value": "{modes.color.action.gryscl.actv}"
       },
-      "border-activated": {
+      "border-Actvd": {
         "$type": "color",
-        "$value": "{modes.color.status.positive.default}"
+        "$value": "{modes.color.status.pos.def}"
       },
-      "bgFooter-default": {
+      "bgFooter-def": {
         "$type": "color",
         "$value": "{modes.color.generic.bg.nought}",
         "$description": "tile footer bg color "
       },
-      "bg-default": {
+      "bg-def": {
         "$type": "color",
         "$value": "{modes.color.generic.bg.nought}"
       },
       "bg-disabled": {
         "$type": "color",
-        "$value": "{modes.color.interactive.inactive.defaultAlt}"
+        "$value": "{modes.color.action.inactv.defAlt}"
       },
-      "bg-hover": {
+      "bg-hov": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.hoverAlt}",
-        "$description": "Used for accordion hover backgrounds "
+        "$value": "{modes.color.action.gryscl.hovAlt}",
+        "$description": "Used for accordion hov backgrounds "
       },
-      "border-active": {
+      "border-actv": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
+        "$value": "{modes.color.action.gryscl.actv}"
       },
       "border-alt": {
         "$type": "color",
         "$value": "{modes.color.generic.fg.delicate}",
         "$description": "Link preview. "
       },
-      "borderalt-hover": {
+      "borderalt-hov": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.default}",
-        "$description": "For hover border on Link preview."
+        "$value": "{modes.color.action.gryscl.def}",
+        "$description": "For hov border on Link preview."
       },
-      "border-inactive": {
+      "border-inactv": {
         "$type": "color",
         "$value": "{modes.color.generic.fg.soft}"
       },
-      "border-default": {
+      "border-def": {
         "$type": "color",
         "$value": "{modes.color.generic.fg.moderate}"
       },
-      "icon-active": {
+      "icon-actv": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}",
+        "$value": "{modes.color.action.gryscl.actv}",
         "$description": "Active chevron for any accordion."
       },
-      "icon-default": {
+      "icon-def": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.default}",
+        "$value": "{modes.color.action.gryscl.def}",
         "$description": "Enabled chevron for any accordion."
       },
-      "iconAlt-default": {
+      "iconAlt-def": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.defaultAlt}",
+        "$value": "{modes.color.action.gryscl.defAlt}",
         "$description": "Enabled label for subtle accordion."
       },
-      "icon-hover": {
+      "icon-hov": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.default}",
-        "$description": "Hover chevron for any accordion."
+        "$value": "{modes.color.action.gryscl.def}",
+        "$description": "hov chevron for any accordion."
       },
-      "labelFooter-active": {
+      "labelFooter-actv": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withActive}"
+        "$value": "{modes.color.action.gryscl.withActv}"
       },
-      "labelFooter-activated": {
+      "labelFooter-Actvd": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withActive}"
+        "$value": "{modes.color.action.gryscl.withActv}"
       },
-      "text-active": {
+      "txt-actv": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}",
+        "$value": "{modes.color.action.gryscl.actv}",
         "$description": "Active label for any accordion."
       },
-      "text-disabled": {
+      "txt-disabled": {
         "$type": "color",
-        "$value": "{modes.color.interactive.inactive.content}"
+        "$value": "{modes.color.action.inactv.txt}"
       },
-      "text-default": {
+      "txt-def": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}",
+        "$value": "{modes.color.generic.txt.harsh}",
         "$description": "Enabled label for standard accordion."
       },
-      "textAlt-default": {
+      "txtAlt-def": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.moderate}",
+        "$value": "{modes.color.generic.txt.moderate}",
         "$description": "Enabled label for subtle accordion."
       },
-      "text-hover": {
+      "txt-hov": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.default}",
-        "$description": "Hover label for any accordion."
+        "$value": "{modes.color.action.gryscl.def}",
+        "$description": "hov label for any accordion."
       },
       "detailedicon": {
         "bg": {
           "$type": "color",
-          "$value": "{modes.color.custom.default}",
+          "$value": "{modes.color.status.custom.green.def}",
           "$description": " "
         }
       },
       "droptarget": {
-        "bg-default": {
+        "bg-def": {
           "$type": "color",
-          "$value": "{modes.color.status.info.default}",
+          "$value": "{modes.color.status.info.def}",
           "$description": "draggable drop target background color"
         }
       }
     },
     "scrollbar": {
-      "bg-default": {
+      "bg-def": {
         "$type": "color",
         "$value": "{modes.color.generic.bg.faint}"
       },
-      "fg-default": {
+      "fg-def": {
         "$type": "color",
         "$value": "{modes.color.generic.fg.moderate}"
       },
-      "inverse": {
-        "bg-default": {
+      "inv": {
+        "bg-def": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.inverse.soft}"
+          "$value": "{modes.color.generic.bg.inv.soft}"
         },
-        "fg-default": {
+        "fg-def": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.inverse.moderate}"
+          "$value": "{modes.color.generic.fg.inv.moderate}"
         }
       }
     },
@@ -180,30 +180,30 @@
         "$type": "color",
         "$value": "{modes.color.generic.bg.faint}"
       },
-      "bg-default": {
+      "bg-def": {
         "$type": "color",
         "$value": "{modes.color.generic.bg.nought}"
       },
-      "bgFooter-default": {
+      "bgFooter-def": {
         "$type": "color",
         "$value": "{modes.color.generic.bg.faint}",
         "$description": "tile footer bg color "
       },
-      "border-active": {
+      "border-actv": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
+        "$value": "{modes.color.action.gryscl.actv}"
       },
       "border-alt": {
         "$type": "color",
         "$value": "{modes.color.generic.fg.soft}"
       },
-      "border-default": {
+      "border-def": {
         "$type": "color",
         "$value": "{modes.color.generic.fg.faint}"
       },
       "dimmer": {
         "$type": "color",
-        "$value": "{modes.color.interactive.inactive.mask}",
+        "$value": "{modes.color.action.inactv.mask}",
         "$description": "dimmed mask for dialogs"
       },
       "icon": {
@@ -211,70 +211,70 @@
         "$value": "{modes.color.generic.fg.moderate}",
         "$description": "Link preview image thumbnail"
       },
-      "text-alt": {
+      "txt-alt": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.moderate}",
+        "$value": "{modes.color.generic.txt.moderate}",
         "$description": "for subheadings etc"
       },
-      "text-default": {
+      "txt-def": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}",
-        "$description": "for headings, paragraph text etc "
+        "$value": "{modes.color.generic.txt.harsh}",
+        "$description": "for headings, paragraph txt etc "
       },
       "statusborder": {
         "bg-ai": {
           "$type": "color",
-          "$value": "{container.AI.tile.bordervertical}"
+          "$value": "{container.AI.tile.borderV}"
         },
         "bg-caution": {
           "$type": "color",
-          "$value": "{modes.color.status.caution.default}"
+          "$value": "{modes.color.status.warn.def}"
         },
-        "bg-negative": {
+        "bg-neg": {
           "$type": "color",
-          "$value": "{modes.color.status.negative.default}"
+          "$value": "{modes.color.status.neg.def}"
         },
-        "bg-important": {
+        "bg-prio": {
           "$type": "color",
-          "$value": "{modes.color.status.important.default}"
+          "$value": "{modes.color.status.prio.def}"
         },
         "bg-info": {
           "$type": "color",
-          "$value": "{modes.color.status.info.default}"
+          "$value": "{modes.color.status.info.def}"
         },
         "bg-neutral": {
           "$type": "color",
-          "$value": "{modes.color.status.neutral.default}"
+          "$value": "{modes.color.status.neutral.def}"
         },
-        "bg-positive": {
+        "bg-pos": {
           "$type": "color",
-          "$value": "{modes.color.status.positive.default}"
+          "$value": "{modes.color.status.pos.def}"
         }
       },
-      "inverse": {
-        "bg-default": {
+      "inv": {
+        "bg-def": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.inverse.nought}"
+          "$value": "{modes.color.generic.bg.inv.nought}"
         },
-        "border-default": {
+        "border-def": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.inverse.faint}"
+          "$value": "{modes.color.generic.fg.inv.faint}"
         },
-        "text-alt": {
+        "txt-alt": {
           "$type": "color",
-          "$value": "{modes.color.generic.content.inverse.moderate}",
+          "$value": "{modes.color.generic.txt.inv.moderate}",
           "$description": "for subheadings etc"
         },
-        "text-default": {
+        "txt-def": {
           "$type": "color",
-          "$value": "{modes.color.generic.content.inverse.harsh}",
-          "$description": "for headings, paragraph text etc "
+          "$value": "{modes.color.generic.txt.inv.harsh}",
+          "$description": "for headings, paragraph txt etc "
         }
       }
     },
     "size": {
-      "chatbubble": {
-        "maxWidth": {
+      "bubble": {
+        "maxW": {
           "$type": "sizing",
           "$value": "600",
           "$description": "max width for chat bubbles"
@@ -287,16 +287,16 @@
             "$value": "200",
             "$description": "Illustration size"
           },
-          "content": {
-            "maxWidth": {
+          "txt": {
+            "maxW": {
               "$type": "sizing",
               "$value": "600",
-              "$description": "max-width of the insight empty state content area"
+              "$description": "max-width of the insight empty state txt area"
             }
           }
         },
         "overlay": {
-          "maxHeight": {
+          "maxH": {
             "$type": "sizing",
             "$value": "960",
             "$description": "max-height of the copilot container overlay "
@@ -304,7 +304,7 @@
         }
       },
       "dialog": {
-        "maxWidth": {
+        "maxW": {
           "S": {
             "$type": "sizing",
             "$value": "540"
@@ -318,34 +318,32 @@
             "$value": "1080"
           }
         },
-        "minWidth": {
+        "minW": {
           "$type": "sizing",
           "$value": "288"
         }
       },
       "emptyState": {
-        "illustration": {
-          "primary": {
-            "S": {
-              "$type": "sizing",
-              "$value": "200",
-              "$description": "Illustration size for small error and empty states"
-            },
-            "M": {
-              "$type": "sizing",
-              "$value": "240",
-              "$description": "Illustration size for medium error and empty states"
-            },
-            "L": {
-              "$type": "sizing",
-              "$value": "320",
-              "$description": "Illustration size for large error and empty states"
-            }
+        "prim": {
+          "S": {
+            "$type": "sizing",
+            "$value": "200",
+            "$description": "Illustration size for small error and empty states"
+          },
+          "M": {
+            "$type": "sizing",
+            "$value": "240",
+            "$description": "Illustration size for medium error and empty states"
+          },
+          "L": {
+            "$type": "sizing",
+            "$value": "320",
+            "$description": "Illustration size for large error and empty states"
           }
         }
       },
-      "responsiveItems": {
-        "XXS": {
+      "fluidItems": {
+        "2XS": {
           "$type": "sizing",
           "$value": "80",
           "$description": "min and max widths for responsive tile items"
@@ -358,7 +356,7 @@
         "S": {
           "$type": "sizing",
           "$value": "160",
-          "$description": "min and max widths for responsive tile items. Min width for Tile select content wrapper."
+          "$description": "min and max widths for responsive tile items. Min width for Tile select txt wrapper."
         },
         "M": {
           "$type": "sizing",
@@ -375,24 +373,24 @@
           "$value": "288",
           "$description": "Small screen mid width inside page margins."
         },
-        "XXL": {
+        "2XL": {
           "$type": "sizing",
           "$value": "320",
           "$description": "Small screen full page width."
         },
-        "XXXL": {
+        "3XL": {
           "$type": "sizing",
           "$value": "560",
           "$description": "min and max widths for responsive tile items"
         },
-        "XXXXL": {
+        "4XL": {
           "$type": "sizing",
           "$value": "760",
-          "$description": "Max width for single line of text."
+          "$description": "Max width for single line of txt."
         }
       },
       "sidebar": {
-        "maxWidth": {
+        "maxW": {
           "S": {
             "$type": "sizing",
             "$value": "760",
@@ -404,7 +402,7 @@
             "$description": "max-width for M size sidebar"
           }
         },
-        "minWidth": {
+        "minW": {
           "$type": "sizing",
           "$value": "288",
           "$description": "min-width for M sized sidebar"
@@ -412,7 +410,7 @@
       }
     },
     "page": {
-      "bg-default": {
+      "bg-def": {
         "$type": "color",
         "$value": "{modes.color.generic.backdrop.nought}"
       },
@@ -420,15 +418,15 @@
         "$type": "color",
         "$value": "{modes.color.generic.backdrop.faint}"
       },
-      "text-alt": {
+      "txt-alt": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.moderate}",
+        "$value": "{modes.color.generic.txt.moderate}",
         "$description": "for subheadings etc"
       },
-      "text-default": {
+      "txt-def": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}",
-        "$description": "for headings, paragraph text etc "
+        "$value": "{modes.color.generic.txt.harsh}",
+        "$description": "for headings, paragraph txt etc "
       }
     }
   }
