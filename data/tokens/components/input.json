@@ -1,122 +1,122 @@
 {
   "input": {
     "calendar": {
-      "bg-active": {
+      "bg-actv": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.active}"
+        "$value": "{modes.color.action.gryscl.actv}"
       },
       "bg-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.defaultAlt}"
+        "$value": "{modes.color.action.inactv.defAlt}"
       },
       "bg-duration": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.hovAlt}"
+        "$value": "{modes.color.action.dataEntry.hovAlt}"
       },
       "bg-hov": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.hovAlt}"
+        "$value": "{modes.color.action.gryscl.hovAlt}"
       },
       "border-duration": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.active}"
+        "$value": "{modes.color.action.gryscl.actv}"
       },
-      "txt-active": {
+      "txt-actv": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.withActive}"
+        "$value": "{modes.color.action.gryscl.withActv}"
       },
       "txt-alt": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txtAlt}",
+        "$value": "{modes.color.action.dataEntry.txtAlt}",
         "$description": "Days of the week subheaders"
       },
       "txt-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.txt}"
+        "$value": "{modes.color.action.inactv.txt}"
       },
       "txt-duration": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txt}"
+        "$value": "{modes.color.action.dataEntry.txt}"
       },
-      "txt-default": {
+      "txt-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txt}"
+        "$value": "{modes.color.action.dataEntry.txt}"
       },
       "txt-hov": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.withhov}"
+        "$value": "{modes.color.action.gryscl.withhov}"
       },
-      "txtAlt-default": {
+      "txtAlt-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txtAlt}"
+        "$value": "{modes.color.action.dataEntry.txtAlt}"
       }
     },
     "dropdown": {
       "bg-hov": {
         "$type": "color",
-        "$value": "{popover.bg-hov}",
+        "$value": "{input.popover.bg-hov}",
         "$description": "REF POPOVER "
       },
-      "label-active": {
+      "label-actv": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.withActive}"
+        "$value": "{modes.color.action.gryscl.withActv}"
       },
       "label-alt": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txt}"
+        "$value": "{modes.color.action.gryscl.def}"
       },
       "label-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.txt}"
+        "$value": "{modes.color.action.inactv.txt}"
       },
-      "label-default": {
+      "label-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txtAlt}"
+        "$value": "{modes.color.action.gryscl.defAlt}"
       },
       "label-hov": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.withhov}"
+        "$value": "{modes.color.action.gryscl.withhov}"
       },
       "label-subtxt": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txtAlt}",
+        "$value": "{modes.color.action.gryscl.defAlt2}",
         "$description": "Option subtxt."
       }
     },
     "labelset": {
       "label-required": {
         "$type": "color",
-        "$value": "{mode.color.action.danger.default}"
+        "$value": "{modes.color.action.danger.def}"
       },
-      "label-default": {
+      "label-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txt}"
+        "$value": "{modes.color.action.dataEntry.txt}"
       },
       "label-alt": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txtAlt}",
+        "$value": "{modes.color.action.dataEntry.txtAlt}",
         "$description": "used for '(optional)' txt and hint txt."
       },
       "label-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.txt}"
+        "$value": "{modes.color.action.inactv.txt}"
       },
       "label-readOnly": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txt}"
+        "$value": "{modes.color.action.dataEntry.txt}"
       },
-      "inverse": {
+      "inv": {
         "label-required": {
           "$type": "color",
-          "$value": "{mode.color.action.danger.inverse.default}"
+          "$value": "{modes.color.action.danger.inv.def}"
         },
-        "label-default": {
+        "label-def": {
           "$type": "color",
-          "$value": "{mode.color.action.dataEntry.inverse.txt}"
+          "$value": "{modes.color.action.dataEntry.inv.txt}"
         },
         "label-alt": {
           "$type": "color",
-          "$value": "{mode.color.action.dataEntry.inverse.txtAlt}",
+          "$value": "{modes.color.action.dataEntry.inv.txtAlt}",
           "$description": "used for '(optional)' txt and hint txt."
         }
       }
@@ -124,224 +124,311 @@
     "typical": {
       "bg-alt": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.defaultAlt}",
+        "$value": "{modes.color.action.dataEntry.defAlt}",
         "$description": "progress bar bg, txt editor preview and txt editor footer"
       },
       "bg-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.defaultAlt}"
+        "$value": "{modes.color.action.inactv.defAlt}"
       },
-      "bg-default": {
+      "bg-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.default}"
+        "$value": "{modes.color.action.dataEntry.def}"
       },
       "bg-hov": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.hovAlt}"
+        "$value": "{modes.color.action.dataEntry.hovAlt}"
       },
       "bg-readOnly": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.defaultAlt}"
+        "$value": "{modes.color.action.inactv.defAlt}"
       },
       "border-alt": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.default}"
+        "$value": "{modes.color.action.inactv.def}"
       },
-      "border-default": {
+      "border-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.withDefault}"
+        "$value": "{modes.color.action.dataEntry.withDef}"
       },
       "border-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.default}"
+        "$value": "{modes.color.action.inactv.def}"
       },
       "border-hov": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.withHov}",
+        "$value": "{modes.color.action.dataEntry.withHov}",
         "$description": "File input draggable border state"
       },
       "border-readOnly": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.default}"
+        "$value": "{modes.color.action.inactv.def}"
       },
-      "icon-active": {
+      "icon-actv": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.withActive}",
+        "$value": "{modes.color.action.dataEntry.withActv}",
         "$description": "used on tick in color picker and selected tick on dropdowns"
       },
-      "icon-default": {
+      "icon-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txt}"
+        "$value": "{modes.color.action.dataEntry.txt}"
       },
       "icon-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.icon}"
+        "$value": "{modes.color.action.inactv.icon}"
       },
       "icon-hov": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.withHov}"
+        "$value": "{modes.color.action.dataEntry.withHov}"
       },
       "icon-readOnly": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.iconAlt}"
+        "$value": "{modes.color.action.inactv.iconAlt}"
       },
-      "iconAlt-active": {
+      "iconAlt-actv": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.withActiveAlt}",
+        "$value": "{modes.color.action.dataEntry.withActvAlt}",
         "$description": "used on tick in color picker"
       },
-      "txt-active": {
+      "txt-actv": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txt}"
+        "$value": "{modes.color.action.dataEntry.txt}"
       },
       "txt-alt": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txtAlt}"
+        "$value": "{modes.color.action.dataEntry.txtAlt}"
       },
-      "txt-default": {
+      "txt-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txt}"
+        "$value": "{modes.color.action.dataEntry.txt}"
       },
       "txt-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.txt}"
+        "$value": "{modes.color.action.inactv.txt}"
       },
       "txt-hov": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.withHov}",
+        "$value": "{modes.color.action.dataEntry.withHov}",
         "$description": "txt hov state when dragging a file over file input"
       },
       "txt-readOnly": {
         "$type": "color",
-        "$value": "{mode.color.generic.txt.severe}"
+        "$value": "{modes.color.generic.txt.harsh}"
       },
-      "inverse": {
-        "bg-default": {
+      "inv": {
+        "bg-def": {
           "$type": "color",
-          "$value": "{mode.color.action.dataEntry.inverse.default}"
+          "$value": "{modes.color.action.dataEntry.inv.def}"
         },
-        "border-default": {
+        "border-def": {
           "$type": "color",
-          "$value": "{mode.color.action.dataEntry.inverse.withDefault}"
+          "$value": "{modes.color.action.dataEntry.inv.withDef}"
         },
-        "txt-default": {
+        "txt-def": {
           "$type": "color",
-          "$value": "{mode.color.action.dataEntry.inverse.txt}"
+          "$value": "{modes.color.action.dataEntry.inv.txt}"
         }
       }
     },
     "switch": {
-      "bg-active": {
+      "bg-actv": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.active}"
+        "$value": "{modes.color.action.gryscl.actv}"
       },
-      "bg-activateDisabled": {
+      "bg-actvdisabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.default}"
+        "$value": "{modes.color.action.inactv.def}"
       },
       "bg-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.defaultAlt}",
+        "$value": "{modes.color.action.inactv.defAlt}",
         "$description": "for switch"
       },
-      "bg-default": {
+      "bg-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.default}",
+        "$value": "{modes.color.action.dataEntry.def}",
         "$description": "for switch"
       },
-      "border-active": {
+      "border-actv": {
         "$type": "color",
         "$value": "transparent"
       },
-      "border-activeDisabled": {
+      "border-actvDisabled": {
         "$type": "color",
         "$value": "transparent"
       },
       "border-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.default}"
+        "$value": "{modes.color.action.inactv.def}"
       },
-      "border-default": {
+      "border-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.withDefault}"
+        "$value": "{modes.color.action.gryscl.subtle.defAlt}"
       },
-      "fg-active": {
+      "fg-actv": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.withActive}"
+        "$value": "{modes.color.action.gryscl.withActv}"
       },
-      "fg-activateDisabled": {
+      "fg-actvdisabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.txtAlt}"
+        "$value": "{modes.color.action.inactv.txtAlt}"
       },
       "fg-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.default}"
+        "$value": "{modes.color.action.inactv.def}"
       },
-      "fg-default": {
+      "fg-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.withDefault}"
+        "$value": "{modes.color.action.gryscl.subtle.defAlt}"
       },
-      "label-active": {
+      "label-actv": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txt}"
+        "$value": "{modes.color.action.dataEntry.txt}"
       },
-      "label-activateDisabled": {
+      "label-actvdisabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.default}"
+        "$value": "{modes.color.action.inactv.def}"
       },
       "label-disabled": {
         "$type": "color",
-        "$value": "{mode.color.action.inactive.default}"
+        "$value": "{modes.color.action.inactv.def}"
       },
-      "label-default": {
+      "label-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txtAlt}"
+        "$value": "{modes.color.action.dataEntry.txtAlt}"
       },
-      "icon-default": {
+      "icon-def": {
         "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txtAlt}"
+        "$value": "{modes.color.action.dataEntry.txtAlt}"
       }
     },
     "validation": {
       "border-error": {
         "$type": "color",
-        "$value": "{mode.color.status.negative.default}"
+        "$value": "{modes.color.status.neg.def}"
       },
       "bar-error": {
         "$type": "color",
-        "$value": "{mode.color.status.negative.default}",
+        "$value": "{modes.color.status.neg.def}",
         "$description": "error bar to left of inputs"
       },
       "bar-warn": {
         "$type": "color",
-        "$value": "{mode.color.status.warn.default}",
+        "$value": "{modes.color.status.warn.def}",
         "$description": "warning bar to left of inputs"
       },
       "label-error": {
         "$type": "color",
-        "$value": "{mode.color.status.negative.default}"
+        "$value": "{modes.color.status.neg.txt}"
       },
       "label-success": {
         "$type": "color",
-        "$value": "{mode.color.status.positive.default}"
+        "$value": "{modes.color.status.pos.def}"
       },
       "label-warn": {
         "$type": "color",
-        "$value": "{mode.color.status.warn.txt}"
+        "$value": "{modes.color.status.warn.txt}"
       },
-      "inverse": {
+      "inv": {
         "border-error": {
           "$type": "color",
-          "$value": "{mode.color.status.negative.inverse.default}"
+          "$value": "{modes.color.status.neg.inv.def}"
         },
         "bar-error": {
           "$type": "color",
-          "$value": "{mode.color.status.negative.inverse.default}",
+          "$value": "{modes.color.status.neg.inv.def}",
           "$description": "error bar to left of inputs"
         },
         "label-error": {
           "$type": "color",
-          "$value": "{mode.color.status.negative.inverse.default}"
+          "$value": "{modes.color.status.neg.inv.txt}"
+        }
+      }
+    },
+    "popover": {
+      "size": {
+        "menu": {
+          "minwidth": {
+            "S": {
+              "$type": "sizing",
+              "$value": "{container.size.fluidItems.M} / 2",
+              "$description": "minwidth of small size popover menu container"
+            },
+            "M": {
+              "$type": "sizing",
+              "$value": "{container.size.fluidItems.XS}",
+              "$description": "minwidth of medium size popover menu container"
+            },
+            "L": {
+              "$type": "sizing",
+              "$value": "{container.size.fluidItems.S}",
+              "$description": "minwidth of large size popover menu container"
+            }
+          },
+          "maxwidth": {
+            "S": {
+              "$type": "sizing",
+              "$value": "{container.size.fluidItems.M}",
+              "$description": "maxwidth of small size popover menu container"
+            },
+            "M": {
+              "$type": "sizing",
+              "$value": "{container.size.fluidItems.L}",
+              "$description": "maxwidth of medium size popover menu container"
+            },
+            "L": {
+              "$type": "sizing",
+              "$value": "{container.size.fluidItems.XL}",
+              "$description": "maxwidth of large size popover menu container"
+            }
+          }
+        }
+      },
+      "bg-actv": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.actv}",
+        "$description": "previously action minor 850"
+      },
+      "bg-actvAlt": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.hovAlt}",
+        "$description": "REF'D IN FORM. "
+      },
+      "bg-def": {
+        "$type": "color",
+        "$value": "{modes.color.generic.bg.nought}",
+        "$description": "REF'D IN FORM. Popover container bg"
+      },
+      "bg-hov": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.hovAlt}",
+        "$description": "REF'D IN FORM. "
+      },
+      "label-actv": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.withActv}"
+      },
+      "label-actvAlt": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.withhov}"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.action.inactv.txt}"
+      },
+      "label-hov": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.withhov}"
+      },
+      "label-def": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.defAlt}"
+      },
+      "submenu": {
+        "bg-def": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.faint}",
+          "$description": "popover small screen submenu container bg"
         }
       }
     }

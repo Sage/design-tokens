@@ -78,7 +78,7 @@
     },
     "bg-alt": {
       "$type": "color",
-      "$value": "{mode.color.generic.txt.severe}",
+      "$value": "{modes.color.generic.txt.harsh}",
       "$description": "For portrait image"
     },
     "bg-def": {
@@ -91,194 +91,196 @@
     },
     "label-def": {
       "$type": "color",
-      "$value": "{mode.color.generic.txt.severe}"
+      "$value": "{modes.color.generic.txt.harsh}"
     },
-    "font": {
-      "initials": {
-        "XS": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.placeholder.XS}"
+    "typog": {
+      "adptv": {
+        "initials": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.placetxt.XS}"
+          },
+          "S": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.placetxt.S}"
+          },
+          "M": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.placetxt.M}"
+          },
+          "ML": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.placetxt.ML}"
+          },
+          "L": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.placetxt.L}"
+          },
+          "XL": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.placetxt.XL}"
+          },
+          "XXL": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.placetxt.XXL}"
+          }
         },
-        "S": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.placeholder.S}"
+        "def": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.reg.S}"
+          },
+          "S": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.reg.M}"
+          },
+          "M": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.reg.M}"
+          },
+          "ML": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.reg.M}"
+          },
+          "L": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.reg.L}"
+          },
+          "XL": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.reg.L}"
+          },
+          "XXL": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.reg.L}"
+          }
         },
-        "M": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.placeholder.M}"
-        },
-        "ML": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.placeholder.ML}"
-        },
-        "L": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.placeholder.L}"
-        },
-        "XL": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.placeholder.XL}"
-        },
-        "XXL": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.placeholder.XXL}"
-        }
-      },
-      "def": {
-        "XS": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.regular.S}"
-        },
-        "S": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.regular.M}"
-        },
-        "M": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.regular.M}"
-        },
-        "ML": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.regular.M}"
-        },
-        "L": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.regular.L}"
-        },
-        "XL": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.regular.L}"
-        },
-        "XXL": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.regular.L}"
-        }
-      },
-      "heading": {
-        "XS": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.medium.S}"
-        },
-        "S": {
-          "$type": "typography",
-          "$value": "{global.font.static.comp.medium.M}"
-        },
-        "M": {
-          "$type": "typography",
-          "$value": "{global.font.static.subheading.L}"
-        },
-        "ML": {
-          "$type": "typography",
-          "$value": "{global.font.static.subheading.L}"
-        },
-        "L": {
-          "$type": "typography",
-          "$value": "{global.font.static.subheading.L}"
-        },
-        "XL": {
-          "$type": "typography",
-          "$value": "{global.font.static.heading.M}"
-        },
-        "XXL": {
-          "$type": "typography",
-          "$value": "{global.font.static.heading.L}"
+        "heading": {
+          "XS": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.med.S}"
+          },
+          "S": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.comp.med.M}"
+          },
+          "M": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.subheading.L}"
+          },
+          "ML": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.subheading.L}"
+          },
+          "L": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.subheading.L}"
+          },
+          "XL": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.heading.M}"
+          },
+          "XXL": {
+            "$type": "typography",
+            "$value": "{global.typog.adptv.large.heading.L}"
+          }
         }
       },
       "fluid": {
         "initials": {
           "XS": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.placeholder.XS}"
+            "$value": "{global.typog.fluid.comp.placetxt.XS}"
           },
           "S": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.placeholder.S}",
+            "$value": "{global.typog.fluid.comp.placetxt.S}",
             "$description": "Small Viewports: 16, Large Viewports: 16"
           },
           "M": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.placeholder.M}",
+            "$value": "{global.typog.fluid.comp.placetxt.M}",
             "$description": "Small Viewports: 18.66, Large Viewports: 21.53"
           },
           "ML": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.placeholder.ML}",
+            "$value": "{global.typog.fluid.comp.placetxt.ML}",
             "$description": "Small Viewports: 21.77, Large Viewports: 28.97"
           },
           "L": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.placeholder.L}",
+            "$value": "{global.typog.fluid.comp.placetxt.L}",
             "$description": "Small Viewports: 25.39, Large Viewports: 38.98"
           },
           "XL": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.placeholder.XL}",
+            "$value": "{global.typog.fluid.comp.placetxt.XL}",
             "$description": "Small Viewports: 29.61, Large Viewports: 52.45"
           },
           "XXL": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.placeholder.XXL}",
+            "$value": "{global.typog.fluid.comp.placetxt.XXL}",
             "$description": "Small Viewports: 34.54, Large Viewports: 70.58"
           }
         },
         "def": {
           "XS": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.regular.S}"
+            "$value": "{global.typog.fluid.comp.reg.S}"
           },
           "S": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.regular.M}"
+            "$value": "{global.typog.fluid.comp.reg.M}"
           },
           "M": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.regular.M}"
+            "$value": "{global.typog.fluid.comp.reg.M}"
           },
           "ML": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.regular.M}"
+            "$value": "{global.typog.fluid.comp.reg.M}"
           },
           "L": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.regular.L}"
+            "$value": "{global.typog.fluid.comp.reg.L}"
           },
           "XL": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.regular.L}"
+            "$value": "{global.typog.fluid.comp.reg.L}"
           },
           "XXL": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.regular.L}"
+            "$value": "{global.typog.fluid.comp.reg.L}"
           }
         },
         "heading": {
           "XS": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.medium.S}"
+            "$value": "{global.typog.fluid.comp.med.S}"
           },
           "S": {
             "$type": "typography",
-            "$value": "{global.font.fluid.comp.medium.M}"
+            "$value": "{global.typog.fluid.comp.med.M}"
           },
           "M": {
             "$type": "typography",
-            "$value": "{global.font.fluid.subheading.L}"
+            "$value": "{global.typog.fluid.subheading.L}"
           },
           "ML": {
             "$type": "typography",
-            "$value": "{global.font.fluid.subheading.L}"
+            "$value": "{global.typog.fluid.subheading.L}"
           },
           "L": {
             "$type": "typography",
-            "$value": "{global.font.fluid.subheading.L}"
+            "$value": "{global.typog.fluid.subheading.L}"
           },
           "XL": {
             "$type": "typography",
-            "$value": "{global.font.fluid.heading.M}"
+            "$value": "{global.typog.fluid.heading.M}"
           },
           "XXL": {
             "$type": "typography",
-            "$value": "{global.font.fluid.heading.L}"
+            "$value": "{global.typog.fluid.heading.L}"
           }
         }
       }
