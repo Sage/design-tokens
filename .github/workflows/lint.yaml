@@ -42,6 +42,13 @@ jobs:
           # Find all JSON files in dist directory and run validation
           npx jsonlint ./dist/**/*.json --no-duplicate-keys
 
+      - name: Check for [object Object] in SCSS
+        run: |
+          if grep -r '\[object Object\]' dist/scss; then
+            echo "Error: Found [object Object] in SCSS files."
+            exit 1
+          fi
+
       - name: Compile SCSS
         run: |
           for product in dist/scss/*; do
@@ -58,10 +65,3 @@ jobs:
               npx sass "$theme/index.scss" "$theme/index.css"
             done
           done
-
-      - name: Check for [object Object] in SCSS
-        run: |
-          if grep -r '\[object Object\]' dist/scss; then
-            echo "Error: Found [object Object] in SCSS files."
-            exit 1
-          fi
