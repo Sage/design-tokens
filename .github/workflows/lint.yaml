@@ -41,3 +41,27 @@ jobs:
         run: |
           # Find all JSON files in dist directory and run validation
           npx jsonlint ./dist/**/*.json --no-duplicate-keys
+
+      - name: Compile SCSS
+        run: |
+          for product in dist/scss/*; do
+            for theme in "$product"/*; do
+              (
+          echo "// Auto-generated entry-point.scss"
+          echo "@import '$theme/global.scss';"
+          echo "@import '$theme/dark.scss';"
+          echo "@import '$theme/light.scss';"
+          for f in "$theme/components"/*.scss; do
+            echo "@import '$f';"
+          done
+              ) > "$theme/index.scss"
+              npx sass "$theme/index.scss" "$theme/index.css"
+            done
+          done
+
+      - name: Check for [object Object] in SCSS
+        run: |
+          if grep -r '\[object Object\]' dist/scss; then
+            echo "Error: Found [object Object] in SCSS files."
+            exit 1
+          fi
