@@ -1,350 +1,286 @@
 {
   "profile": {
     "size": {
-      "profileeditor": {
-        "$type": "sizing",
-        "$value": "{global.size.macro.S} * 10",
-        "$description": "size of the circle inside the profile editor component"
-      },
       "outside": {
         "XS": {
           "$type": "sizing",
-          "$value": "{global.size.macro.XS}",
+          "$value": "{global.size.S}",
           "$description": "XS Portraits"
         },
         "S": {
           "$type": "sizing",
-          "$value": "{global.size.macro.S}",
+          "$value": "{global.size.M}",
           "$description": "S Portraits"
         },
         "M": {
           "$type": "sizing",
-          "$value": "{global.size.macro.M}",
+          "$value": "{global.size.L}",
           "$description": "M Portraits"
         },
         "ML": {
           "$type": "sizing",
-          "$value": "{global.size.macro.XL}",
+          "$value": "{global.size.2XL}",
           "$description": "L Portraits"
         },
         "L": {
           "$type": "sizing",
-          "$value": "{global.size.macro.XS} * 3",
+          "$value": "{global.size.4XL}",
           "$description": "XL Portraits"
         },
         "XL": {
           "$type": "sizing",
-          "$value": "{global.size.micro.M} * 13",
+          "$value": "104",
           "$description": "XL Portraits"
         },
         "XXL": {
           "$type": "sizing",
-          "$value": "{global.size.macro.S} * 4",
+          "$value": "128",
           "$description": "XXL Portraits"
         }
       },
       "inside": {
         "XS": {
           "$type": "sizing",
-          "$value": "{global.size.micro.XL}",
+          "$value": "{global.size.3XS}",
           "$description": "XS Portrait icons"
         },
         "S": {
           "$type": "sizing",
-          "$value": "{global.size.macro.XXS}",
+          "$value": "{global.size.2XS}",
           "$description": "S Portrait icons"
         },
         "M": {
           "$type": "sizing",
-          "$value": "{global.size.macro.XS} - {global.size.micro.XS}",
+          "$value": "{global.size.XS}",
           "$description": "M Portrait icons"
         },
         "ML": {
           "$type": "sizing",
-          "$value": "{global.size.macro.XS} + {global.size.micro.XS}",
+          "$value": "{global.size.S}",
           "$description": "L Portrait icons"
         },
         "L": {
           "$type": "sizing",
-          "$value": "{global.size.macro.M}",
+          "$value": "{global.size.L}",
           "$description": "XL Portrait icons"
         },
         "XL": {
           "$type": "sizing",
-          "$value": "{global.size.macro.XL}",
+          "$value": "{global.size.2XL}",
           "$description": "XL Portrait icons"
         },
         "XXL": {
           "$type": "sizing",
-          "$value": "{global.size.micro.M} * 9",
+          "$value": "{global.size.4XL}",
           "$description": "XXL Portraits"
         }
       }
     },
-    "color": {
-      "bg-alt": {
-        "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}",
-        "$description": "For portrait image"
-      },
-      "bg-default": {
-        "$type": "color",
-        "$value": "{modes.color.generic.bg.nought}"
-      },
-      "border-default": {
-        "$type": "color",
-        "$value": "{modes.color.generic.fg.delicate}"
-      },
-      "label-default": {
-        "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}"
-      }
+    "bg-alt": {
+      "$type": "color",
+      "$value": "{modes.color.generic.txt.harsh}",
+      "$description": "For portrait image"
     },
-    "radius": {
-      "portrait": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.circle}",
-        "$description": "Portrait"
-      }
+    "bg-default": {
+      "$type": "color",
+      "$value": "{modes.color.generic.bg.nought}"
     },
-    "space": {
-      "none": {
-        "$type": "spacing",
-        "$value": "{global.space.none}"
-      },
-      "x": {
-        "XS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XXXS}",
-          "$description": "gap between avatar and name"
-        },
-        "S": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XXS}",
-          "$description": "gap between avatar and name"
-        },
-        "M": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS}",
-          "$description": "gap between avatar and name"
-        },
-        "ML": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS}",
-          "$description": "gap between avatar and name"
-        },
-        "L": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.S}",
-          "$description": "gap between avatar and name"
-        },
-        "XL": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.M}",
-          "$description": "gap between avatar and name"
-        },
-        "XXL": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.L}",
-          "$description": "gap between avatar and name"
-        }
-      }
+    "border-default": {
+      "$type": "color",
+      "$value": "{modes.color.generic.fg.delicate}"
     },
-    "borderwidth": {
-      "portrait": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Border thickness on portrait."
-      }
+    "label-default": {
+      "$type": "color",
+      "$value": "{modes.color.generic.txt.harsh}"
     },
-    "typography": {
-      "adaptive": {
+    "typog": {
+      "adptv": {
         "initials": {
           "XS": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.placeholdertext.XS}"
+            "$value": "{global.typog.adptv.large.comp.placetxt.XS}"
           },
           "S": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.placeholdertext.S}"
+            "$value": "{global.typog.adptv.large.comp.placetxt.S}"
           },
           "M": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.placeholdertext.M}"
+            "$value": "{global.typog.adptv.large.comp.placetxt.M}"
           },
           "ML": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.placeholdertext.ML}"
+            "$value": "{global.typog.adptv.large.comp.placetxt.ML}"
           },
           "L": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.placeholdertext.L}"
+            "$value": "{global.typog.adptv.large.comp.placetxt.L}"
           },
           "XL": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.placeholdertext.XL}"
+            "$value": "{global.typog.adptv.large.comp.placetxt.XL}"
           },
           "XXL": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.placeholdertext.XXL}"
+            "$value": "{global.typog.adptv.large.comp.placetxt.XXL}"
           }
         },
         "default": {
           "XS": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.S}"
+            "$value": "{global.typog.adptv.large.comp.reg.S}"
           },
           "S": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.M}"
+            "$value": "{global.typog.adptv.large.comp.reg.M}"
           },
           "M": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.M}"
+            "$value": "{global.typog.adptv.large.comp.reg.M}"
           },
           "ML": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.M}"
+            "$value": "{global.typog.adptv.large.comp.reg.M}"
           },
           "L": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.L}"
+            "$value": "{global.typog.adptv.large.comp.reg.L}"
           },
           "XL": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.L}"
+            "$value": "{global.typog.adptv.large.comp.reg.L}"
           },
           "XXL": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.moderate.L}"
+            "$value": "{global.typog.adptv.large.comp.reg.L}"
           }
         },
         "heading": {
           "XS": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.S}"
+            "$value": "{global.typog.adptv.large.comp.med.S}"
           },
           "S": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.component.firm.M}"
+            "$value": "{global.typog.adptv.large.comp.med.M}"
           },
           "M": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.subheading.L}"
+            "$value": "{global.typog.adptv.large.subheading.L}"
           },
           "ML": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.subheading.L}"
+            "$value": "{global.typog.adptv.large.subheading.L}"
           },
           "L": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.subheading.L}"
+            "$value": "{global.typog.adptv.large.subheading.L}"
           },
           "XL": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.heading.M}"
+            "$value": "{global.typog.adptv.large.heading.M}"
           },
           "XXL": {
             "$type": "typography",
-            "$value": "{global.typography.adaptive.heading.L}"
+            "$value": "{global.typog.adptv.large.heading.L}"
           }
         }
       },
-      "responsive": {
+      "fluid": {
         "initials": {
           "XS": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.placeholdertext.XS}"
+            "$value": "{global.typog.fluid.comp.placetxt.XS}"
           },
           "S": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.placeholdertext.S}",
+            "$value": "{global.typog.fluid.comp.placetxt.S}",
             "$description": "Small Viewports: 16, Large Viewports: 16"
           },
           "M": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.placeholdertext.M}",
+            "$value": "{global.typog.fluid.comp.placetxt.M}",
             "$description": "Small Viewports: 18.66, Large Viewports: 21.53"
           },
           "ML": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.placeholdertext.ML}",
+            "$value": "{global.typog.fluid.comp.placetxt.ML}",
             "$description": "Small Viewports: 21.77, Large Viewports: 28.97"
           },
           "L": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.placeholdertext.L}",
+            "$value": "{global.typog.fluid.comp.placetxt.L}",
             "$description": "Small Viewports: 25.39, Large Viewports: 38.98"
           },
           "XL": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.placeholdertext.XL}",
+            "$value": "{global.typog.fluid.comp.placetxt.XL}",
             "$description": "Small Viewports: 29.61, Large Viewports: 52.45"
           },
           "XXL": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.placeholdertext.XXL}",
+            "$value": "{global.typog.fluid.comp.placetxt.XXL}",
             "$description": "Small Viewports: 34.54, Large Viewports: 70.58"
           }
         },
         "default": {
           "XS": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.S}"
+            "$value": "{global.typog.fluid.comp.reg.S}"
           },
           "S": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.M}"
+            "$value": "{global.typog.fluid.comp.reg.M}"
           },
           "M": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.M}"
+            "$value": "{global.typog.fluid.comp.reg.M}"
           },
           "ML": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.M}"
+            "$value": "{global.typog.fluid.comp.reg.M}"
           },
           "L": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.L}"
+            "$value": "{global.typog.fluid.comp.reg.L}"
           },
           "XL": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.L}"
+            "$value": "{global.typog.fluid.comp.reg.L}"
           },
           "XXL": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.moderate.L}"
+            "$value": "{global.typog.fluid.comp.reg.L}"
           }
         },
         "heading": {
           "XS": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.S}"
+            "$value": "{global.typog.fluid.comp.med.S}"
           },
           "S": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.component.firm.M}"
+            "$value": "{global.typog.fluid.comp.med.M}"
           },
           "M": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.subheading.L}"
+            "$value": "{global.typog.fluid.subheading.L}"
           },
           "ML": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.subheading.L}"
+            "$value": "{global.typog.fluid.subheading.L}"
           },
           "L": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.subheading.L}"
+            "$value": "{global.typog.fluid.subheading.L}"
           },
           "XL": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.heading.M}"
+            "$value": "{global.typog.fluid.heading.M}"
           },
           "XXL": {
             "$type": "typography",
-            "$value": "{global.typography.responsive.heading.L}"
+            "$value": "{global.typog.fluid.heading.L}"
           }
         }
       }

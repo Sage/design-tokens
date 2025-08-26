@@ -1,127 +1,65 @@
 {
   "link": {
-    "color": {
-      "destructive": {
+    "destructive": {
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.action.danger.defaultAlt}",
+        "$description": "."
+      },
+      "label-hov": {
+        "$type": "color",
+        "$value": "{modes.color.action.danger.hovAlt2}"
+      },
+      "inv": {
         "label-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.danger.defaultAlt}",
+          "$value": "{modes.color.action.danger.inv.defaultAlt}",
           "$description": "."
         },
-        "label-hover": {
+        "label-hov": {
           "$type": "color",
-          "$value": "{modes.color.interactive.danger.hoverAlt2}"
-        },
-        "inverse": {
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.inverse.defaultAlt}",
-            "$description": "."
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.inverse.hoverAlt2}"
-          }
+          "$value": "{modes.color.action.danger.inv.hovAlt2}"
         }
+      }
+    },
+    "typical": {
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.action.prim.defaultAlt2}"
       },
-      "typical": {
+      "label-hov": {
+        "$type": "color",
+        "$value": "{modes.color.action.prim.hovAlt2}"
+      },
+      "inv": {
         "label-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.primary.defaultAlt2}"
+          "$value": "{modes.color.action.prim.inv.defaultAlt2}"
         },
-        "label-hover": {
+        "label-hov": {
           "$type": "color",
-          "$value": "{modes.color.interactive.primary.hoverAlt2}"
-        },
-        "inverse": {
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.inverse.defaultAlt2}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.inverse.hoverAlt2}"
-          }
+          "$value": "{modes.color.action.prim.inv.hovAlt2}"
         }
+      }
+    },
+    "subtle": {
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.default}"
       },
-      "subtle": {
+      "label-hov": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.actv}"
+      },
+      "inv": {
         "label-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.default}"
+          "$value": "{modes.color.action.gryscl.inv.default}"
         },
-        "label-hover": {
+        "label-hov": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "inverse": {
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.inverse.default}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.inverse.active}"
-          }
+          "$value": "{modes.color.action.gryscl.inv.actv}"
         }
-      }
-    },
-    "size": {
-      "skiplink": {
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.M}"
-        }
-      },
-      "icon": {
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}"
-        }
-      }
-    },
-    "radius": {
-      "link": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.XS}",
-        "$description": "Link (focus bg and bottom corners of focus underline)"
-      },
-      "skiplink": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.M}",
-        "$description": "Skiplink (right corners of focus bg and border)"
-      }
-    },
-    "space": {
-      "integral": {
-        "xg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Space between icon and link text."
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Space between icon and link text."
-          }
-        }
-      },
-      "skiplink": {
-        "x": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.M}",
-          "$description": "Skiplink container"
-        },
-        "y": {
-          "$type": "spacing",
-          "$value": "{global.space.micro.XXL}",
-          "$description": "Skiplink container"
-        }
-      }
-    },
-    "boxshadow": {
-      "skiplink": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.near}"
       }
     }
   }
