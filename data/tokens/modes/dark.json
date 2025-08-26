@@ -15,11 +15,11 @@
         "$value": "{core.colors.white}"
       },
       "brand": {
-        "def": {
+        "default": {
           "$type": "color",
           "$value": "{core.colors.brilliantGreen.55}"
         },
-        "defAlt": {
+        "defaultAlt": {
           "$type": "color",
           "$value": "{core.colors.white}"
         },
@@ -29,7 +29,7 @@
         },
         "copilot": {
           "AIIdentifier": {
-            "def": {
+            "default": {
               "$type": "color",
               "$value": "{core.colors.white}"
             },
@@ -411,7 +411,7 @@
             "$value": "{core.colors.white}"
           },
           "ai": {
-            "def": {
+            "default": {
               "$type": "color",
               "$value": "{core.colors.AI.vibrant.horizontal}",
               "$description": "Dialog top border treatment"
@@ -469,7 +469,7 @@
             "$type": "color",
             "$value": "linear-gradient(90deg, #00D63914 0%, #00d6de14 40%, #9d60ff14 90%)"
           },
-          "def": {
+          "default": {
             "$type": "color",
             "$value": "{core.colors.AI.vibrant.horizontal}"
           },
@@ -486,7 +486,7 @@
             "$value": "{core.colors.blush.70}",
             "$description": "active button on dark"
           },
-          "def": {
+          "default": {
             "$type": "color",
             "$value": "{core.colors.blush.55}"
           },
@@ -523,7 +523,7 @@
               "$value": "{core.colors.blush.30}",
               "$description": "used on pill hov states"
             },
-            "def": {
+            "default": {
               "$type": "color",
               "$value": "{core.colors.blush.45}"
             },
@@ -558,7 +558,7 @@
           }
         },
         "dataEntry": {
-          "def": {
+          "default": {
             "$type": "color",
             "$value": "{core.colors.black}",
             "$description": "Input backgrounds."
@@ -587,7 +587,7 @@
             "$value": "{core.colors.smoke.60}",
             "$description": "Input borders."
           },
-          "defAlt": {
+          "defaultAlt": {
             "$type": "color",
             "$value": "{core.colors.slate.0}",
             "$description": "Input footer bgs (e.g txt editor)"
@@ -626,7 +626,7 @@
           }
         },
         "focus": {
-          "def": {
+          "default": {
             "$type": "color",
             "$value": "{core.colors.gold.70}"
           },
@@ -672,7 +672,7 @@
             "$value": "{core.colors.white}",
             "$description": "full screen takeover token for modal dimmer"
           },
-          "defAlt": {
+          "defaultAlt": {
             "$type": "color",
             "$value": "{core.colors.smoke.10}",
             "$description": "Disabled button backgrounds and borders ON DARK"
@@ -785,7 +785,7 @@
               "$type": "color",
               "$value": "{core.colors.smoke.10}"
             },
-            "defAlt": {
+            "defaultAlt": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -850,12 +850,12 @@
             "$value": "{core.colors.smoke.20}",
             "$description": "active bg for nav items"
           },
-          "def": {
+          "default": {
             "$type": "color",
             "$value": "{core.colors.black}",
             "$description": "default bg for global nav"
           },
-          "defAlt": {
+          "defaultAlt": {
             "$type": "color",
             "$value": "{core.colors.smoke.0}",
             "$description": "default bg for left nav container"
@@ -886,12 +886,12 @@
               "$value": "{core.colors.smoke.80}",
               "$description": "active bg for nav items"
             },
-            "def": {
+            "default": {
               "$type": "color",
               "$value": "{core.colors.white}",
               "$description": "default bg for global nav"
             },
-            "defAlt": {
+            "defaultAlt": {
               "$type": "color",
               "$value": "{core.colors.smoke.100}",
               "$description": "default bg for left nav container"
@@ -928,7 +928,7 @@
             "$value": "{core.colors.brilliantGreen.20}",
             "$description": "Active color for secondary and tertiary buttons"
           },
-          "def": {
+          "default": {
             "$type": "color",
             "$value": "{core.colors.brilliantGreen.45}"
           },
@@ -965,7 +965,7 @@
             "$type": "color",
             "$value": "{core.colors.black}"
           },
-          "withDef": {
+          "withDefault": {
             "$type": "color",
             "$value": "{core.colors.black}"
           },
@@ -1013,14 +1013,9 @@
             },
             "hovAlt2": {
               "$type": "color",
-              "$value": "{core.colors.emerald.30}",
-              "$description": "hov for links"
-            },
-            "withActv": {
-              "$type": "color",
               "$value": "{core.colors.white}"
             },
-            "hovAlt2": {
+            "withActv": {
               "$type": "color",
               "$value": "{core.colors.white}"
             },
