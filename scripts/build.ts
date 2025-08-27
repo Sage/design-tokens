@@ -35,7 +35,9 @@ const getMode = ({modeName = '', format, suffix}: IMode): File[] => {
         `Component name not found for ${component}`)
     }
 
-    componentArray.push(...getFiles({componentName, modeName: mode, format, suffix, outputRefs: true}))
+    // Always output references for JSON components
+    const useRefs = format.includes('json');
+    componentArray.push(...getFiles({componentName, modeName: mode, format, suffix, outputRefs: useRefs}))
   })
   
   return [
@@ -65,13 +67,16 @@ const getFiles = ({componentName, modeName = '', format, suffix, outputRefs = fa
 
   const path = getPath(componentName).trim()
 
+  const actualFormat = format === 'json/flat' && outputRefs ? 'json/flat-with-refs' : format;
+  const shouldOutputRefs = outputRefs;
+
   return [
     {
       destination: `${path}.${suffix}`,
       filter: (token: DesignToken) => FilterComponent(token, componentName, format.includes('json')),
-      format,
+      format: actualFormat,
       options: {
-        outputReferences: outputRefs
+        outputReferences: shouldOutputRefs
       }
     }
   ]
@@ -183,7 +188,10 @@ const getModeConfig = (modeName: string): Config => {
         transforms: groups.json,
         files: [
           ...getMode({modeName, format: 'json/flat', suffix: 'json'})
-        ]
+        ],
+        options: {
+          outputReferences: true // Add this at platform level
+        }
       },
       // todo: debug android build
       // android: {
@@ -222,12 +230,11 @@ await globalStyleDictionary.buildPlatform('ios')
 // await globalStyleDictionary.buildPlatform('android')
 
 // Build mode-specific tokens
-modes.forEach(async (mode) => {
+for (const mode of modes) {
   const modeName = mode.split('.json')[0]
 
   if (!modeName) {
-    throw new Error(
-      `Mode name not found for ${mode}`)
+    throw new Error(`Mode name not found for ${mode}`)
   }
 
   const modeStyleDictionary = new StyleDictionary(getModeConfig(modeName))
@@ -238,4 +245,5 @@ modes.forEach(async (mode) => {
   await modeStyleDictionary.buildPlatform('json')
   await modeStyleDictionary.buildPlatform('ios')
   // await modeStyleDictionary.buildPlatform('android')
-})
+}
+
