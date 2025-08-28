@@ -900,12 +900,30 @@
         },
         "main": {
           "actv": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.3",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.emerald.30}"
+            "$value": "{modes.color.action.main.default}"
           },
           "actvAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.15",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.emerald.80}",
+            "$value": "{modes.color.action.main.default}",
             "$description": "Active color for secondary and tertiary buttons"
           },
           "default": {
@@ -913,32 +931,87 @@
             "$value": "{core.colors.emerald.45}"
           },
           "defaultAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.8",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.emerald.70}",
+            "$value": "{modes.color.action.main.default}",
             "$description": "border color for secondary and tertiary buttons"
           },
           "defaultAlt2": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.12",
+                  "space": "lch",
+                  "color": "black"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.emerald.40}",
+            "$value": "{modes.color.action.main.default}",
             "$description": "default value for links"
           },
           "defaultAlt3": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.03",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.emerald.100}",
+            "$value": "{modes.color.action.main.default}",
             "$description": "default background color of secondary button"
           },
           "hov": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.15",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.emerald.40}"
+            "$value": "{modes.color.action.main.default}"
           },
           "hovAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.10",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.emerald.90}",
+            "$value": "{modes.color.action.main.default}",
             "$description": "hov for secondary and tertiary buttons"
           },
           "hovAlt2": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.15",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.emerald.30}",
+            "$value": "{modes.color.action.main.defaultAlt2}",
             "$description": "hov for links"
           },
           "withActv": {
@@ -955,45 +1028,117 @@
           },
           "inv": {
             "actv": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "lighten",
+                    "value": "0.3",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.brilliantGreen.70}"
+              "$value": "{modes.color.action.main.inv.default}"
             },
             "actvAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.15",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.brilliantGreen.20}",
+              "$value": "{modes.color.action.main.inv.default}",
               "$description": "Active color for inv secondary and tertiary buttons"
             },
             "default": {
               "$type": "color",
-              "$value": "{core.colors.brilliantGreen.45}"
+              "$value": "{core.colors.brilliantGreen.55}"
             },
             "defaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.8",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.brilliantGreen.40}",
+              "$value": "{modes.color.action.main.inv.default}",
               "$description": "border color for secondary and tertiary inv buttons"
             },
             "defaultAlt2": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "lighten",
+                    "value": "0.12",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.brilliantGreen.60}",
+              "$value": "{modes.color.action.main.inv.default}",
               "$description": "default color for links"
             },
             "defaultAlt3": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.03",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.brilliantGreen.0}",
+              "$value": "{modes.color.action.main.inv.default}",
               "$description": "default background color of inv secondary buttons"
             },
             "hov": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "lighten",
+                    "value": "0.15",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.brilliantGreen.60}"
+              "$value": "{modes.color.action.main.inv.default}"
             },
             "hovAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.1",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.brilliantGreen.10}",
+              "$value": "{modes.color.action.main.inv.default}",
               "$description": "hov for inv secondary and tertiary buttons"
             },
             "hovAlt2": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "lighten",
+                    "value": "0.15",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.brilliantGreen.70}",
+              "$value": "{modes.color.action.main.inv.defaultAlt2}",
               "$description": "hov for links"
             },
             "withActv": {
