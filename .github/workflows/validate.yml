@@ -21,7 +21,7 @@ jobs:
           cache: "npm"
 
       - name: Install
-        run: npm ci --prefer-offline
+        run: yarn install
 
       - name: Run tests
         run: npm test
