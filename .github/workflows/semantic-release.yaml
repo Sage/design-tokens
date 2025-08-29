@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '20'
 
-      - run: yarn install --frozen-lockfile
+      - run: yarn install
 
       - name: Append .env
         run: |
@@ -47,25 +47,6 @@ jobs:
         run: npx semantic-release --debug
         env:
           GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GIT_COMMITTER_NAME: Sage Carbon
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-
-          # GitHub registry - @amanda-mitchell/semantic-release-npm-multiple
-          GITHUB_NPM_CONFIG_REGISTRY: https://npm.pkg.github.com
-          GITHUB_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_NPM_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-
-          # NpmJS registry - @amanda-mitchell/semantic-release-npm-multiple
-          PUBLIC_NPM_CONFIG_REGISTRY: https://registry.npmjs.org
-          PUBLIC_NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          PUBLIC_NPM_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-
-          # X3 registry - @amanda-mitchell/semantic-release-npm-multiple
-          X3_NPM_CONFIG_REGISTRY: https://repository.sagex3.com:8443/repository/x3-npm-hosted/
-          X3_NPM_USERNAME: ${{ secrets.X3_NPM_USER }}
-          X3_NPM_PASSWORD: ${{ secrets.X3_NPM_PASSWORD }}
-          X3_NPM_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-

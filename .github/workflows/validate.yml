@@ -20,7 +20,7 @@ jobs:
           node-version: "20"
 
       - name: Install
-        run: yarn install --frozen-lockfile
+        run: yarn install
 
       - name: Run tests
         run: npm test
