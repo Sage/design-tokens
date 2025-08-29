@@ -1,953 +1,144 @@
 {
   "nav": {
-    "color": {
-      "bg-default": {
-        "$type": "color",
-        "$value": "{modes.color.generic.bg.nought}",
-        "$description": "nav bar bg"
+    "bg-default": {
+      "$type": "color",
+      "$value": "{modes.color.generic.bg.nought}",
+      "$description": "nav bar bg"
+    },
+    "leftnav": {
+      "container": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.inv.nought}",
+          "$description": "bg of horizontal nav variant that launches the left nav"
+        },
+        "bg-defaultAlt": {
+          "$type": "color",
+          "$value": "{modes.color.action.nav.inv.defaultAlt}",
+          "$description": "bg of the parent container"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.inv.soft}",
+          "$description": "dividing lines within parent container"
+        }
       },
       "item": {
-        "bg-active": {
+        "bg-actv": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "bg-activealt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.hoverAlt}"
+          "$value": "{modes.color.action.nav.inv.actv}"
         },
         "bg-default": {
           "$type": "color",
           "$value": "{modes.color.none}"
         },
-        "bg-hover": {
+        "bg-hov": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.hoverAlt}"
+          "$value": "{modes.color.action.nav.inv.hov}"
         },
-        "label-active": {
+        "label-actv": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActive}"
-        },
-        "label-activealt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withHover}"
+          "$value": "{modes.color.action.nav.inv.withActv}"
         },
         "label-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.default}"
+          "$value": "{modes.color.action.nav.inv.withDefault}"
         },
-        "label-hover": {
+        "label-hov": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withHover}"
-        },
-        "label-alt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.defaultAlt}"
+          "$value": "{modes.color.action.nav.inv.withhov}"
         }
-      },
-      "menu": {
+      }
+    },
+    "modal": {
+      "container": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}",
-          "$description": "menu (level 1) nav bg"
+          "$value": "{modes.color.generic.bg.nought}",
+          "$description": "bg of container holding stack of items in modal nav"
         },
-        "bg-alt": {
+        "bg-defaultAlt": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.delicate}",
-          "$description": "level 2 nav bg"
-        },
-        "bg-alt2": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.soft}",
-          "$description": "level 3 nav bg"
+          "$value": "{modes.color.generic.surface.faint}",
+          "$description": "bg of the sticky header within modal"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.delicate}",
-          "$description": "level 1 border"
+          "$value": "{modes.color.generic.fg.soft}",
+          "$description": "dividing lines within parent container"
         }
       },
-      "leftnav": {
-        "container": {
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.bg.inverse.nought}",
-            "$description": "bg of horizontal nav variant that launches the left nav"
-          },
-          "bg-defaultAlt": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.inverse.defaultAlt}",
-            "$description": "bg of the parent container"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.fg.inverse.soft}",
-            "$description": "dividing lines within parent container"
-          }
+      "item": {
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.nav.actv}"
         },
-        "item": {
-          "bg-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.inverse.active}"
-          },
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.none}"
-          },
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.inverse.hover}"
-          },
-          "label-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.inverse.withActive}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.inverse.withDefault}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.inverse.withHover}"
-          }
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.none}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.nav.hov}"
+        },
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.nav.withActv}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.nav.withDefault}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.nav.withhov}"
         }
       },
-      "modal": {
-        "container": {
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.bg.nought}",
-            "$description": "bg of container holding stack of items in modal nav"
-          },
-          "bg-defaultAlt": {
-            "$type": "color",
-            "$value": "{modes.color.generic.backdrop.faint}",
-            "$description": "bg of the sticky header within modal"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.fg.soft}",
-            "$description": "dividing lines within parent container"
-          }
-        },
-        "item": {
-          "bg-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.active}"
-          },
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.none}"
-          },
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.hover}"
-          },
-          "label-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.withActive}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.withDefault}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.withHover}"
-          }
-        },
-        "headeritem": {
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.firm}",
-            "$description": "color for subheaders passed into modal nav"
-          }
-        }
-      },
-      "topnav": {
-        "container": {
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.bg.nought}",
-            "$description": "bg of of horizontal nav variant that launches the left nav"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.fg.soft}",
-            "$description": "dividing lines within parent container"
-          }
-        },
-        "item": {
-          "bg-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.active}"
-          },
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.none}"
-          },
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.hover}"
-          },
-          "label-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.withActive}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.withDefault}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.nav.withHover}"
-          }
+      "headeritem": {
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.txt.firm}",
+          "$description": "color for subheaders passed into modal nav"
         }
       }
     },
-    "radius": {
-      "menu": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.M}",
-        "$description": "Drop list bottom corners, product popout list all corners"
-      },
-      "menuitem": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.S}",
-        "$description": "Menu (menu item state bg shape), "
-      },
-      "menumodal": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.L}",
-        "$description": "Menu on mobile"
-      },
-      "leftnav": {
-        "menuitem": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.M}",
-          "$description": "Radius on parent, child and grandchild items in left nav"
+    "topnav": {
+      "container": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.nought}",
+          "$description": "bg of of horizontal nav variant that launches the left nav"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.soft}",
+          "$description": "dividing lines within parent container"
         }
       },
-      "modal": {
-        "menuitem": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.M}",
-          "$description": "Radius on parent, child and grandchild items in left nav"
-        }
-      },
-      "topnav": {
-        "menuitem": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.M}",
-          "$description": "Radius on parent, child and grandchild items in left nav"
-        }
-      }
-    },
-    "boxshadow": {
-      "menu": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.cleanedge.near}",
-        "$description": "Menu"
-      },
-      "leftnav": {
-        "childcontainer": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.container.near}",
-          "$description": "box shadow on progressively shown child container"
-        }
-      }
-    },
-    "borderwidth": {
-      "divider": {
-        "item": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "Menu (option divider)"
+      "item": {
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.nav.actv}"
         },
-        "menu": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "level 1 border"
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.none}"
         },
-        "segment": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.L}",
-          "$description": "Menu (segment divider)"
-        }
-      },
-      "leftnav": {
-        "divider": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "Dividers between sticky header and between parent menu and child menu."
-        }
-      },
-      "modal": {
-        "divider": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "Dividers between sticky header and between parent menu and child menu."
-        }
-      },
-      "topnav": {
-        "divider": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "bottom border on secondary horizontal nav"
-        }
-      }
-    },
-    "size": {
-      "menu": {
-        "content": {
-          "y": {
-            "M": {
-              "$type": "sizing",
-              "$value": "{global.size.macro.S}",
-              "$description": "Min height of menu content"
-            }
-          },
-          "icon": {
-            "M": {
-              "$type": "sizing",
-              "$value": "{global.size.icon.M}",
-              "$description": "Icon size"
-            },
-            "L": {
-              "$type": "sizing",
-              "$value": "{global.size.icon.L}",
-              "$description": "Icon size"
-            }
-          }
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.nav.hov}"
         },
-        "option": {
-          "x": {
-            "M": {
-              "$type": "sizing",
-              "$value": "{global.size.flex.M}",
-              "$description": "Min width of options"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "sizing",
-              "$value": "{global.size.macro.M}",
-              "$description": "Min height of menu option"
-            }
-          }
-        }
-      },
-      "navbar": {
-        "content": {
-          "y": {
-            "M": {
-              "$type": "sizing",
-              "$value": "{global.size.macro.S}",
-              "$description": "Min height of nav content"
-            }
-          },
-          "icon": {
-            "M": {
-              "$type": "sizing",
-              "$value": "{global.size.icon.M}",
-              "$description": "Chevron and caret icons"
-            },
-            "L": {
-              "$type": "sizing",
-              "$value": "{global.size.icon.L}",
-              "$description": "Icon size"
-            }
-          }
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.nav.withActv}"
         },
-        "item": {
-          "x": {
-            "M": {
-              "$type": "sizing",
-              "$value": "{global.size.flex.M}",
-              "$description": "Max width of nav item"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "sizing",
-              "$value": "{global.size.macro.M}",
-              "$description": "Min height of nav item"
-            }
-          }
-        }
-      },
-      "leftnav": {
-        "parent": {
-          "minheight": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.L}",
-            "$description": "Min height of parent items"
-          }
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.nav.withDefault}"
         },
-        "child": {
-          "minheight": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M}",
-            "$description": "Min height of children items"
-          }
-        },
-        "grandchild": {
-          "minheight": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.S}",
-            "$description": "Min height of grandchildren"
-          }
-        },
-        "parentContainer": {
-          "fixedWidth": {
-            "$type": "sizing",
-            "$value": "146",
-            "$description": "fixed width of parent container"
-          }
-        },
-        "childContainer": {
-          "fixedWidth": {
-            "$type": "sizing",
-            "$value": "250",
-            "$description": "fixed width of parent container"
-          }
-        }
-      },
-      "modal": {
-        "parentitem": {
-          "minheight": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M}",
-            "$description": "Min height of parent items"
-          }
-        },
-        "childitem": {
-          "minheight": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.S}",
-            "$description": "Min height of children items"
-          }
-        },
-        "headeritem": {
-          "identifier": {
-            "M": {
-              "$type": "sizing",
-              "$value": "{global.size.icon.L}",
-              "$description": "Icon size"
-            }
-          },
-          "icon": {
-            "M": {
-              "$type": "sizing",
-              "$value": "{global.size.icon.M}",
-              "$description": "Icon size"
-            }
-          }
-        }
-      },
-      "topnav": {
-        "parent": {
-          "minheight": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.S}",
-            "$description": "Min height of parent items across items in secondary top nav "
-          }
-        },
-        "container": {
-          "minheight": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M}",
-            "$description": "Min height of secondary nav containers"
-          }
-        }
-      }
-    },
-    "space": {
-      "menu": {
-        "container": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Horizontal space on menu complex and menu items wrapper in sidebar menu"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Vertical space on mobile menu items"
-            }
-          }
-        },
-        "content": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Horizontal space on content within menu item"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Left padding for indented content in options"
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Space between content elements within menu item"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Vertical space on content within menu item"
-            }
-          }
-        },
-        "item": {
-          "x": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Horizontal space on menu option complex, small screen option"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Horizontal space on nav menu item"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Vertical space on nav menu item"
-            }
-          },
-          "yg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Space between menu item and submenu"
-            }
-          }
-        }
-      },
-      "navbar": {
-        "x": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.M}"
-          }
-        },
-        "y": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XS}",
-            "$description": "Vertical padding on nav bar"
-          }
-        },
-        "content": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Horizontal space in content within nav item"
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Gap between content elements within nav item"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Vertical space in content within nav item"
-            }
-          }
-        },
-        "item": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Horizontal space in nav item"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Vertical space in nav item"
-            }
-          }
-        },
-        "logo": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Horizontal space around logo"
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Gap between logo and divider"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Top padding on logo"
-            }
-          }
-        }
-      },
-      "leftnav": {
-        "container": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "horizontal padding on sticky quick actions header"
-            }
-          },
-          "y": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXS}",
-              "$description": "sticky header top and bottom padding"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "vertical padding inside parent and child containers"
-            }
-          },
-          "yg": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "vertical gap betweenparent items"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "vertical gap between child and grandchild items"
-            }
-          },
-          "outer": {
-            "y": {
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.macro.ML} * 2",
-                "$description": "margin outside of item containers to make items show underneath sticky headers"
-              }
-            }
-          }
-        },
-        "parentitem": {
-          "vertical": {
-            "x": {
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.S}",
-                "$description": "horizontal padding on stacked parent items"
-              }
-            },
-            "y": {
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.S}",
-                "$description": "vertical padding on stacked parent items"
-              }
-            },
-            "yg": {
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.S}",
-                "$description": "vertical gap on stacked parent items"
-              }
-            }
-          },
-          "horizontal": {
-            "x": {
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.macro.XXXS}",
-                "$description": "horizontal padding on stacked parent items"
-              }
-            },
-            "xg": {
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.S}",
-                "$description": "vertical gap on stacked parent items"
-              }
-            },
-            "y": {
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.macro.XXXS}",
-                "$description": "vertical padding on stacked parent items"
-              }
-            },
-            "yg": {
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.S}",
-                "$description": "vertical gap on stacked parent items"
-              }
-            }
-          }
-        },
-        "childitem": {
-          "yg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} / 2",
-              "$description": "vertical gap inside child items"
-            }
-          },
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "horizontal padding on child items"
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "gap spacing on child items between pills and accordion chevrons"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "vertical padding on child items"
-            }
-          }
-        },
-        "grandchilditem": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "horizontal padding on child items"
-            },
-            "indent": {
-              "$type": "spacing",
-              "$value": "33",
-              "$description": "indent on grandchild items"
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "gap spacing on child items between pills and accordion chevrons"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "vertical padding on child items"
-            }
-          },
-          "yg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} / 2",
-              "$description": "vertical gap inside grandchild items"
-            }
-          }
-        }
-      },
-      "modal": {
-        "container": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "left and right padding on modal small screen container across leftnav and horizontal"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "top and bottom padding on modal small screen container across leftnav and horizontal"
-            }
-          },
-          "yg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} - {global.space.micro.XS}",
-              "$description": "vertical gap between modal nav items"
-            }
-          },
-          "outer": {
-            "y": {
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.macro.ML} * 2",
-                "$description": "margin outside of item containers to make items show underneath sticky headers"
-              }
-            }
-          }
-        },
-        "parentitem": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "horizontal padding on stacked parent items"
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "horizontal padding between parent label and chevron"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "vertical padding on stacked parent items"
-            }
-          },
-          "yg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} / 2",
-              "$description": "vertical padding between parent label and pill"
-            }
-          }
-        },
-        "childitem": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "horizontal padding on stacked parent items"
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} / 2",
-              "$description": "horizontal padding between child label and pill"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} / 2",
-              "$description": "vertical padding on stacked child items"
-            }
-          }
-        },
-        "headeritem": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "horizontal padding on header item"
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "horizontal gap between header label and idebntifiers or icons"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "bottom padding on header items"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "top padding on header items"
-            }
-          }
-        }
-      },
-      "topnav": {
-        "container": {
-          "x": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "horizontal padding on secondary horizontal nav on small screens"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.L}",
-              "$description": "horizontal padding on secondary horizontal nav on large screens"
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} / 2",
-              "$description": "horizontal gap on secondary horizontal nav on large screens"
-            }
-          },
-          "y": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} / 2",
-              "$description": "vertical padding on secondary horizontal nav on small screens"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} / 2",
-              "$description": "vertical padding on secondary horizontal nav on large screens"
-            }
-          }
-        },
-        "parentitem": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "horizontal padding on stacked parent items"
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "gap within horizontal parent items"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS} / 2",
-              "$description": "vertical padding on stacked parent items"
-            }
-          }
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.nav.withhov}"
         }
       }
     }

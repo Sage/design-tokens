@@ -1,1442 +1,512 @@
 {
   "button": {
-    "size": {
-      "split": {
-        "$type": "sizing",
-        "$value": "{global.size.micro.XXS}",
-        "$description": "Split button (divider width)"
-      },
-      "XS": {
-        "$type": "sizing",
-        "$value": "{global.size.macro.XS}",
-        "$description": "min-height on XS Buttons"
-      },
-      "S": {
-        "$type": "sizing",
-        "$value": "{global.size.macro.S}",
-        "$description": "min-height on S Buttons"
-      },
-      "M": {
-        "$type": "sizing",
-        "$value": "{global.size.macro.M}",
-        "$description": "min-height on M Buttons"
-      },
-      "L": {
-        "$type": "sizing",
-        "$value": "{global.size.macro.L}",
-        "$description": "min-height on L Buttons"
-      },
-      "toggle": {
-        "XS": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XS}",
-          "$description": "min-height on button within S toggle group"
-        },
-        "S": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.S}",
-          "$description": "min-height on S single toggle, and on button within M toggle group"
-        },
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.M}",
-          "$description": "min-height on M single toggle, and on button within L toggle group"
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.L}",
-          "$description": "min-height on L single toggle"
-        }
-      },
-      "icon": {
-        "S": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.S}"
-        },
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}"
-        }
-      },
-      "video": {
-        "S": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.M}"
-        },
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XXL}"
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.M} * 2"
-        }
-      }
+    "none": {
+      "$type": "color",
+      "$value": "{modes.color.none}",
+      "$description": "transparent override used for hiding colors when needed."
     },
-    "space": {
-      "none": {
-        "$type": "spacing",
-        "$value": "0",
-        "$description": "top and bottom padding on small buttons"
-      },
-      "bar": {
-        "iconbutton": {
-          "x": {
-            "inner": {
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.XL}",
-                "$description": "Inner sides of all buttons. "
-              },
-              "L": {
-                "$type": "spacing",
-                "$value": "14px",
-                "$description": "Inner sides of all buttons. "
-              }
-            },
-            "outer": {
-              "M": {
-                "$type": "spacing",
-                "$value": "14px",
-                "$description": "Outer buttons, outer sides. "
-              },
-              "L": {
-                "$type": "spacing",
-                "$value": "{global.space.macro.S}",
-                "$description": "Outer buttons, outer sides. "
-              }
-            }
-          }
-        }
-      },
-      "FAB": {
-        "child": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "Left padding on FAB child container and text within FAB single "
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Right padding on FAB child container "
-            }
-          }
-        },
-        "parent": {
-          "x": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Left and right padding on FAB parent container "
-            }
-          },
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL}",
-              "$description": "Item spacing inside buttons"
-            }
-          },
-          "y": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Top and bottom padding on FAB parent container "
-            }
-          }
-        }
-      },
-      "primary": {
-        "x": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXS}",
-            "$description": "Left and right padding on small buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Left and right padding on medium buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.S}",
-            "$description": "Left and right padding on large buttons"
-          }
-        },
-        "xg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Item spacing inside buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS} / 2",
-            "$description": "Item spacing inside buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS} / 2",
-            "$description": "Item spacing inside buttons"
-          }
-        },
-        "y": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Bottom and top padding on small buttons."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Top and bottom padding on medium buttons "
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XL} - 0.5",
-            "$description": "Top and bottom padding on Large buttons "
-          }
-        },
-        "icononly": {
-          "x": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.M}",
-              "$description": "Left and right padding on icon-only S size primary buttons"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XL}",
-              "$description": "Left and right padding on icon-only M size primary buttons"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
-              "$description": "Left and right padding on icon-only L size primary buttons"
-            }
-          },
-          "y": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.M}",
-              "$description": "Top and bottom padding on icon-only S size primary buttons"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XL}",
-              "$description": "Top and bottom padding on icon-only M size primary buttons"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
-              "$description": "Top and bottom padding on icon-only L size primary buttons"
-            }
-          }
-        }
-      },
-      "secondary": {
-        "x": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Left and right padding on XS table buttons"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "Left and right padding on small buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Left and right padding on medium buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.S}",
-            "$description": "Left and right padding on large buttons"
-          }
-        },
-        "y": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "({global.space.macro.XXXS} / 4) - 0.5",
-            "$description": "top and bottom padding on XS table buttons"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Bottom and top padding on small buttons."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Top and bottom padding on medium buttons "
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XL} - 0.5",
-            "$description": "Top and bottom padding on Large buttons "
-          }
-        },
-        "xg": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Item spacing inside XS buttons"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Item spacing inside buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Item spacing inside buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Item spacing inside buttons"
-          }
-        },
-        "icononly": {
-          "x": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Left and right padding on icon-only XS size secondary buttons"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.M}",
-              "$description": "Left and right padding on icon-only S size secondary buttons"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XL}",
-              "$description": "Left and right padding on icon-only M size secondary buttons"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
-              "$description": "Left and right padding on icon-only L size secondary buttons"
-            }
-          },
-          "y": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Top and bottom padding on icon-only XS size secondary buttons"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.M}",
-              "$description": "Top and bottom padding on icon-only S size secondary buttons"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XL}",
-              "$description": "Top and bottom padding on icon-only M size secondary buttons"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
-              "$description": "Top and bottom padding on icon-only L size secondary buttons"
-            }
-          }
-        }
-      },
-      "tertiary": {
-        "y": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "({global.space.macro.XXXS} / 4) - 0.5",
-            "$description": "top and bottom padding on XS table buttons"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Bottom and top padding on small buttons."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Top and bottom padding on medium buttons "
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XL} - 0.5",
-            "$description": "Top and bottom padding on Large buttons "
-          }
-        },
-        "x": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Left and right padding on XS table buttons"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXS}",
-            "$description": "Left and right padding on small buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Left and right padding on medium buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.S}",
-            "$description": "Left and right padding on large buttons"
-          }
-        },
-        "xg": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Item spacing inside XS buttons"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Item spacing inside buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Item spacing inside buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Item spacing inside buttons"
-          }
-        },
-        "icononly": {
-          "x": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Left and right padding on icon-only XS size tertiary buttons"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.M}",
-              "$description": "Left and right padding on icon-only S size tertiary buttons"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XL}",
-              "$description": "Left and right padding on icon-only M size tertiary buttons"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
-              "$description": "Left and right padding on icon-only L size tertiary buttons"
-            }
-          },
-          "y": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Top and bottom padding on icon-only XS size tertiary buttons"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.M}",
-              "$description": "Top and bottom padding on icon-only S size tertiary buttons"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XL}",
-              "$description": "Top and bottom padding on icon-only M size tertiary buttons"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
-              "$description": "Top and bottom padding on icon-only L size tertiary buttons"
-            }
-          }
-        }
-      },
-      "subtle": {
-        "y": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "({global.space.macro.XXXS} / 4) - 0.5",
-            "$description": "top and bottom padding on XS table buttons"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Bottom and top padding on small buttons."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Top and bottom padding on medium buttons "
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XL} - 0.5",
-            "$description": "Top and bottom padding on Large buttons "
-          }
-        },
-        "x": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Left and right padding on XS table buttons"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "left and right padding on subtle buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "left and right padding on subtle buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "left and right padding on subtle buttons"
-          }
-        },
-        "xg": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Item spacing inside XS buttons"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Item spacing inside buttons"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Item spacing inside buttons"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Item spacing inside buttons"
-          }
-        },
-        "icononly": {
-          "x": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Left and right padding on icon-only XS size subtle buttons"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.M}",
-              "$description": "Left and right padding on icon-only S size subtle buttons"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XL}",
-              "$description": "Left and right padding on icon-only M size subtle buttons"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
-              "$description": "Left and right padding on icon-only L size subtle buttons"
-            }
-          },
-          "y": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Top and bottom padding on icon-only XS size subtle buttons"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.M}",
-              "$description": "Top and bottom padding on icon-only S size subtle buttons"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XL}",
-              "$description": "Top and bottom padding on icon-only M size subtle buttons"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL} + {global.space.micro.XS}",
-              "$description": "Top and bottom padding on icon-only L size subtle buttons"
-            }
-          }
-        }
-      },
-      "toggle": {
-        "button": {
-          "x": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "Left and right padding on XS asset used within S toggle group"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXS}",
-              "$description": "Left and right padding on S toggle buttons"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Left and right padding on medium toggle buttons"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.S}",
-              "$description": "Left and right padding on buttons"
-            }
-          },
-          "xg": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "Item spacing inside toggle buttons"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "Item spacing inside toggle buttons"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XXXS}",
-              "$description": "Item spacing inside toggle buttons"
-            }
-          },
-          "y": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "({global.space.macro.XXXS} / 4) - 0.5",
-              "$description": "Top and bottom padding on toggle buttons "
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Top and bottom padding on toggle buttons "
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Top and bottom padding on toggle buttons "
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XL}-0.5",
-              "$description": "Top and bottom padding on toggle buttons "
-            }
-          }
-        },
-        "container": {
-          "x": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Horizontal padding"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Horizontal padding"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Horizontal padding"
-            }
-          },
-          "xg": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Spacing between buttons in Toggle. "
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Spacing between buttons in Toggle. "
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Spacing between buttons in Toggle. "
-            }
-          },
-          "y": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Vertical padding"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Vertical padding"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Vertical padding"
-            }
-          },
-          "yg": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Row gap between buttons in wrapped toggle group. "
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Row gap between buttons in wrapped toggle group. "
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Row gap between buttons in wrapped toggle group. "
-            }
-          }
-        }
-      },
-      "video": {
-        "x": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XS}",
-            "$description": "Left padding on play icon in video button"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XS}",
-            "$description": "Left padding on play icon in video button"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XS}",
-            "$description": "Left padding on play icon in video button"
-          }
-        }
-      }
-    },
-    "color": {
-      "none": {
+    "ai": {
+      "bg-actv": {
         "$type": "color",
-        "$value": "{modes.color.none}",
-        "$description": "transparent override used for hiding colors when needed."
+        "$value": "{modes.color.action.ai.actv}"
       },
-      "ai": {
-        "bg-active": {
+      "bg-hov": {
+        "$type": "color",
+        "$value": "{modes.color.action.ai.hov}"
+      },
+      "border-actv": {
+        "$type": "color",
+        "$value": "{modes.color.action.ai.default}"
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.action.inactv.default}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.action.ai.default}"
+      },
+      "border-hov": {
+        "$type": "color",
+        "$value": "{modes.color.action.ai.default}"
+      },
+      "label-actv": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.withActvAlt}"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{modes.color.action.inactv.txt}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.default}"
+      },
+      "label-hov": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.withhov}"
+      }
+    },
+    "destrv": {
+      "primary": {
+        "bg-disabled": {
           "$type": "color",
-          "$value": "{modes.color.interactive.ai.active}"
+          "$value": "{modes.color.action.inactv.default}"
         },
-        "bg-hover": {
+        "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.ai.hover}"
+          "$value": "{modes.color.action.danger.default}"
         },
-        "border-active": {
+        "bg-hov": {
           "$type": "color",
-          "$value": "{modes.color.interactive.ai.default}"
-        },
-        "border-disabled": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.inactive.default}"
-        },
-        "border-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.ai.default}"
-        },
-        "border-hover": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.ai.default}"
-        },
-        "label-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActiveAlt}"
+          "$value": "{modes.color.action.danger.hov}"
         },
         "label-disabled": {
           "$type": "color",
-          "$value": "{modes.color.interactive.inactive.content}"
+          "$value": "{modes.color.action.inactv.txtAlt}"
         },
         "label-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.default}"
+          "$value": "{modes.color.action.danger.withDefault}"
         },
-        "label-hover": {
+        "label-hov": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withHover}"
+          "$value": "{modes.color.action.danger.withDefault}"
         }
       },
-      "destructive": {
-        "primary": {
-          "bg-disabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.default}"
-          },
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.default}"
-          },
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.hover}"
-          },
-          "label-disabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.contentAlt}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.withDefault}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.withDefault}"
-          }
+      "secondary": {
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.hovAlt}"
         },
-        "secondary": {
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.hoverAlt}"
-          },
-          "border-disabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.default}"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.default}"
-          },
-          "border-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.hover}"
-          },
-          "label-disabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.content}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.default}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.danger.hover}"
-          }
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.default}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.default}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.hov}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.default}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.danger.hov}"
         }
-      },
-      "typical": {
-        "primary": {
-          "bg-active": {
+      }
+    },
+    "typical": {
+      "primary": {
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.actv}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.withDefault}",
+          "$description": "For spacer in Split button"
+        },
+        "bg-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.default}"
+        },
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.default}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.hov}"
+        },
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.withActv}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txtAlt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.withDefault}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.withDefault}"
+        },
+        "inv": {
+          "bg-actv": {
             "$type": "color",
-            "$value": "{modes.color.interactive.primary.active}"
+            "$value": "{modes.color.action.main.inv.actv}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{modes.color.interactive.primary.withDefault}",
+            "$value": "{modes.color.action.main.inv.withDefault}",
             "$description": "For spacer in Split button"
           },
           "bg-disabled": {
             "$type": "color",
-            "$value": "{modes.color.interactive.inactive.default}"
+            "$value": "{modes.color.action.inactv.inv.default}"
           },
           "bg-default": {
             "$type": "color",
-            "$value": "{modes.color.interactive.primary.default}"
+            "$value": "{modes.color.action.main.inv.default}"
           },
-          "bg-hover": {
+          "bg-hov": {
             "$type": "color",
-            "$value": "{modes.color.interactive.primary.hover}"
+            "$value": "{modes.color.action.main.inv.hov}"
           },
-          "label-active": {
+          "label-actv": {
             "$type": "color",
-            "$value": "{modes.color.interactive.primary.withActive}"
-          },
-          "label-disabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.contentAlt}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.withDefault}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.withDefault}"
-          },
-          "inverse": {
-            "bg-active": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.active}"
-            },
-            "border-default": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.withDefault}",
-              "$description": "For spacer in Split button"
-            },
-            "bg-disabled": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.inactive.inverse.default}"
-            },
-            "bg-default": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.default}"
-            },
-            "bg-hover": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.hover}"
-            },
-            "label-active": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.withActive}"
-            },
-            "label-disabled": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.inactive.inverse.contentAlt}"
-            },
-            "label-default": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.withDefault}"
-            },
-            "label-hover": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.withDefault}"
-            }
-          }
-        },
-        "secondary": {
-          "bg-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.activeAlt}"
-          },
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.defaultAlt3}"
-          },
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.hoverAlt}"
-          },
-          "border-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.active}"
-          },
-          "border-disabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.default}"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.defaultAlt}"
-          },
-          "border-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.hover}"
-          },
-          "label-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withActiveAlt}"
+            "$value": "{modes.color.action.main.inv.withActv}"
           },
           "label-disabled": {
             "$type": "color",
-            "$value": "{modes.color.interactive.inactive.content}"
+            "$value": "{modes.color.action.inactv.inv.txtAlt}"
           },
           "label-default": {
             "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}"
+            "$value": "{modes.color.action.main.inv.withDefault}"
           },
-          "label-hover": {
+          "label-hov": {
             "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withHover}"
-          },
-          "inverse": {
-            "bg-active": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.activeAlt}"
-            },
-            "bg-default": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.defaultAlt3}"
-            },
-            "bg-hover": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.hoverAlt}"
-            },
-            "border-active": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.active}"
-            },
-            "border-disabled": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.inactive.inverse.default}"
-            },
-            "border-default": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.defaultAlt}"
-            },
-            "border-hover": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.hover}"
-            },
-            "label-active": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.inverse.withActiveAlt}"
-            },
-            "label-disabled": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.inactive.inverse.content}"
-            },
-            "label-default": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.inverse.default}"
-            },
-            "label-hover": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.inverse.withHover}"
-            }
+            "$value": "{modes.color.action.main.inv.withDefault}"
           }
-        },
-        "tertiary": {
-          "bg-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.activeAlt}"
-          },
-          "bg-default": {
-            "$type": "color",
-            "$value": "{button.color.none}"
-          },
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.hoverAlt}"
-          },
-          "border-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.active}"
-          },
-          "border-disabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.default}"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.defaultAlt}"
-          },
-          "border-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.primary.hover}"
-          },
-          "label-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withActiveAlt}"
-          },
-          "label-disabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.content}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withHover}"
-          },
-          "inverse": {
-            "bg-active": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.activeAlt}"
-            },
-            "bg-default": {
-              "$type": "color",
-              "$value": "{button.color.none}"
-            },
-            "bg-hover": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.hoverAlt}"
-            },
-            "border-active": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.active}"
-            },
-            "border-disabled": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.inactive.inverse.default}"
-            },
-            "border-default": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.defaultAlt}"
-            },
-            "border-hover": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.primary.inverse.hover}"
-            },
-            "label-active": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.inverse.withActiveAlt}"
-            },
-            "label-disabled": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.inactive.inverse.content}"
-            },
-            "label-default": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.inverse.default}"
-            },
-            "label-hover": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.inverse.withHover}"
-            }
-          }
-        },
-        "subtle": {
-          "bg-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.activeAlt}"
-          },
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.hoverAlt}"
-          },
-          "label-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withActiveAlt}"
-          },
-          "label-disabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.content}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withHover}"
-          },
-          "inverse": {
-            "bg-active": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.inverse.activeAlt}"
-            },
-            "bg-hover": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.inverse.hoverAlt}"
-            },
-            "label-active": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.inverse.withActiveAlt}"
-            },
-            "label-disabled": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.inactive.inverse.content}"
-            },
-            "label-default": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.inverse.default}"
-            },
-            "label-hover": {
-              "$type": "color",
-              "$value": "{modes.color.interactive.monochrome.inverse.withHover}"
-            }
-          }
-        },
-        "toggle": {
-          "bg-activeDisabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.default}"
-          },
-          "label-activeDisabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.contentAlt}"
-          },
-          "bg-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.active}"
-          },
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.hoverAlt}"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}"
-          },
-          "border-disabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.default}"
-          },
-          "label-active": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withActive}"
-          },
-          "label-disabled": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.inactive.content}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.defaultAlt}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withHover}"
-          }
-        }
-      },
-      "video": {
-        "bg-blur": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.hoverAlt}"
-        },
-        "primary": {
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withDefault}"
-          },
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withDefault}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}"
-          }
-        },
-        "secondary": {
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withDefault}"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withDefault}"
-          },
-          "border-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withDefault}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withDefault}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}"
-          }
-        }
-      }
-    },
-    "radius": {
-      "none": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.none}"
-      },
-      "S": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.L}",
-        "$description": "Buttons S (typical and destructive, and inc bar, split and multi),  Button toggle M (parent container)"
-      },
-      "M": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.XL}",
-        "$description": "Buttons  M (typical and destructive, and inc bar, split and multi),  Button toggle L (parent container), Button toggle M (parent container)"
-      },
-      "L": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.XXL}",
-        "$description": "Buttons L (typical and destructive, and inc bar, split and multi), Button toggle L (parent container)"
-      },
-      "chip": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.M}",
-        "$description": "Buttons chip"
-      },
-      "FAB": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.circle}",
-        "$description": "FAB Button radius"
-      },
-      "primary": {
-        "S": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.L}",
-          "$description": "Buttons S (typical and destructive, and inc bar, split and multi),  Button toggle M (parent container)"
-        },
-        "M": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XL}",
-          "$description": "Buttons  M (typical and destructive, and inc bar, split and multi),  Button toggle L (parent container), Button toggle M (parent container)"
-        },
-        "L": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XXL}",
-          "$description": "large tertiary button"
         }
       },
       "secondary": {
-        "XS": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.M} + {global.radius.interactive.S}",
-          "$description": "Consumed within XS buttons only in table context."
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.actvAlt}"
         },
-        "S": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.L}",
-          "$description": "Buttons S (typical and destructive, and inc bar, split and multi),  Button toggle M (parent container)"
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.defaultAlt3}"
         },
-        "M": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XL}",
-          "$description": "Buttons  M (typical and destructive, and inc bar, split and multi),  Button toggle L (parent container), Button toggle M (parent container)"
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.hovAlt}"
         },
-        "L": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XXL}",
-          "$description": "large tertiary button"
+        "border-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.actv}"
+        },
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.default}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.defaultAlt}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.hov}"
+        },
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withActvAlt}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.default}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withhov}"
+        },
+        "inv": {
+          "bg-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.main.inv.actvAlt}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{modes.color.action.main.inv.defaultAlt3}"
+          },
+          "bg-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.main.inv.hovAlt}"
+          },
+          "border-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.main.inv.actv}"
+          },
+          "border-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.default}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{modes.color.action.main.inv.defaultAlt}"
+          },
+          "border-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.main.inv.hov}"
+          },
+          "label-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withActvAlt}"
+          },
+          "label-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.txt}"
+          },
+          "label-default": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.default}"
+          },
+          "label-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withhov}"
+          }
         }
       },
       "tertiary": {
-        "XS": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.M} + {global.radius.interactive.S}",
-          "$description": "Consumed within XS buttons only in table context."
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.actvAlt}"
         },
-        "S": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.L}",
-          "$description": "Buttons S (typical and destructive, and inc bar, split and multi),  Button toggle M (parent container)"
+        "bg-default": {
+          "$type": "color",
+          "$value": "{button.none}"
         },
-        "M": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XL}",
-          "$description": "Buttons  M (typical and destructive, and inc bar, split and multi),  Button toggle L (parent container), Button toggle M (parent container)"
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.hovAlt}"
         },
-        "L": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XXL}",
-          "$description": "large tertiary button"
+        "border-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.actv}"
+        },
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.default}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.defaultAlt}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.main.hov}"
+        },
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withActvAlt}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.default}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withhov}"
+        },
+        "inv": {
+          "bg-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.main.inv.actvAlt}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{button.none}"
+          },
+          "bg-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.main.inv.hovAlt}"
+          },
+          "border-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.main.inv.actv}"
+          },
+          "border-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.default}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{modes.color.action.main.inv.defaultAlt}"
+          },
+          "border-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.main.inv.hov}"
+          },
+          "label-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withActvAlt}"
+          },
+          "label-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.txt}"
+          },
+          "label-default": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.default}"
+          },
+          "label-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withhov}"
+          }
         }
       },
       "subtle": {
-        "XS": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.M} + {global.radius.interactive.S}",
-          "$description": "Consumed within XS buttons only in table context."
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.actvAlt}"
         },
-        "S": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.L}",
-          "$description": "Buttons S (typical and destructive, and inc bar, split and multi), Button toggle M (parent container)"
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.hovAlt}"
         },
-        "M": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XL}",
-          "$description": "Buttons  M (typical and destructive, and inc bar, split and multi), Button toggle L (parent container), Button toggle M (parent container)"
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withActvAlt}"
         },
-        "L": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XXL}",
-          "$description": "large subtle button"
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.default}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withhov}"
+        },
+        "inv": {
+          "bg-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.actvAlt}"
+          },
+          "bg-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.hovAlt}"
+          },
+          "label-actv": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withActvAlt}"
+          },
+          "label-disabled": {
+            "$type": "color",
+            "$value": "{modes.color.action.inactv.inv.txt}"
+          },
+          "label-default": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.default}"
+          },
+          "label-hov": {
+            "$type": "color",
+            "$value": "{modes.color.action.gryscl.inv.withhov}"
+          }
         }
       },
       "toggle": {
-        "button": {
-          "XS": {
-            "$type": "borderRadius",
-            "$value": "{global.radius.interactive.XXL}/2",
-            "$description": "XS single toggle button (used within S toggle group)"
-          },
-          "S": {
-            "$type": "borderRadius",
-            "$value": "{global.radius.interactive.L}",
-            "$description": "S single toggle button (used within M toggle group)"
-          },
-          "M": {
-            "$type": "borderRadius",
-            "$value": "{global.radius.interactive.XL}",
-            "$description": "M single toggle button (used within L toggle group)"
-          },
-          "L": {
-            "$type": "borderRadius",
-            "$value": "{global.radius.interactive.XXL}",
-            "$description": "L single toggle button"
-          }
+        "bg-actvDisabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.default}"
         },
-        "container": {
-          "S": {
-            "$type": "borderRadius",
-            "$value": "{global.radius.interactive.L}",
-            "$description": "S toggle group"
-          },
-          "M": {
-            "$type": "borderRadius",
-            "$value": "{global.radius.interactive.XL}",
-            "$description": "M toggle group"
-          },
-          "L": {
-            "$type": "borderRadius",
-            "$value": "{global.radius.interactive.XXL}",
-            "$description": "L toggle group"
-          }
+        "label-actvDisabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txtAlt}"
+        },
+        "bg-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.actv}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.hovAlt}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.default}"
+        },
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.default}"
+        },
+        "label-actv": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withActv}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{modes.color.action.inactv.txt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.defaultAlt}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withhov}"
         }
       }
     },
-    "borderwidth": {
-      "none": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.none}",
-        "$description": "Override on tertiary buttons within Button-toggle. "
-      },
-      "chip": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "chip button border width"
+    "video": {
+      "bg-blur": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.hovAlt}"
       },
       "primary": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.none}",
-        "$description": "primary button border "
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDefault}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDefault}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.default}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.default}"
+        }
       },
       "secondary": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.S}",
-        "$description": "Secondary button. "
-      },
-      "tertiary": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "tertiary button border "
-      },
-      "togglecontainer": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Toggle container"
-      }
-    },
-    "dimension": {
-      "video": {
-        "$type": "dimension",
-        "$value": "40px",
-        "$description": "background blur on video"
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDefault}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDefault}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDefault}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDefault}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.default}"
+        }
       }
     }
   }

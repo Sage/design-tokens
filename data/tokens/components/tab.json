@@ -1,237 +1,89 @@
 {
   "tab": {
-    "size": {
-      "M": {
-        "$type": "sizing",
-        "$value": "{global.size.macro.M}",
-        "$description": "Anchor nav, M Tab"
-      },
-      "L": {
-        "$type": "sizing",
-        "$value": "{global.size.macro.L}",
-        "$description": "L tab"
-      },
-      "shadow": {
-        "arrow": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.M}",
-          "$description": "Shadow width for linear gradient shadow on repsonsive tab arrows."
-        }
-      },
-      "baseline": {
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.XXS}",
-          "$description": "Thickness of baseline."
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.XXS}",
-          "$description": "Thickness of baseline."
-        }
-      },
-      "icon": {
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}"
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}"
-        }
-      },
-      "indicator": {
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.XS}",
-          "$description": "Thickness of indicator for active and hover."
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.XS}",
-          "$description": "Thickness of indicator for active and hover."
-        }
-      }
+    "bg-actv": {
+      "$type": "color",
+      "$value": "{modes.color.action.gryscl.withActv}"
     },
-    "space": {
-      "x": {
-        "M": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS}",
-          "$description": "Left and right padding on Tab."
-        },
-        "L": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.M}",
-          "$description": "Left and right padding on Tab."
-        }
-      },
-      "xg": {
-        "M": {
-          "$type": "spacing",
-          "$value": "{global.space.micro.L}",
-          "$description": "Gap between elements in Tab."
-        },
-        "L": {
-          "$type": "spacing",
-          "$value": "{global.space.micro.L}",
-          "$description": "Gap between elements in Tab."
-        }
-      },
-      "y": {
-        "M": {
-          "$type": "spacing",
-          "$value": "{global.space.micro.L}",
-          "$description": "Top bottom padding in Tab."
-        },
-        "L": {
-          "$type": "spacing",
-          "$value": "{global.space.micro.XXL}",
-          "$description": "Top bottom padding in Tab."
-        }
-      }
+    "bg-default": {
+      "$type": "color",
+      "$value": "{modes.color.none}"
     },
-    "color": {
-      "bg-active": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withActive}"
-      },
+    "bg-hov": {
+      "$type": "color",
+      "$value": "{modes.color.action.gryscl.hovAlt}",
+      "$description": "For anchor nav, not tab."
+    },
+    "border-actvAlt": {
+      "$type": "color",
+      "$value": "{modes.color.generic.fg.delicate}"
+    },
+    "border-actv": {
+      "$type": "color",
+      "$value": "{modes.color.action.gryscl.actv}"
+    },
+    "border-default": {
+      "$type": "color",
+      "$value": "{modes.color.generic.fg.delicate}"
+    },
+    "border-hov": {
+      "$type": "color",
+      "$value": "{modes.color.generic.fg.moderate}"
+    },
+    "icon-default": {
+      "$type": "color",
+      "$value": "{modes.color.action.gryscl.defaultAlt}"
+    },
+    "icon-hov": {
+      "$type": "color",
+      "$value": "{modes.color.action.gryscl.withhov}"
+    },
+    "label-actv": {
+      "$type": "color",
+      "$value": "{modes.color.action.gryscl.actv}"
+    },
+    "icon-actv": {
+      "$type": "color",
+      "$value": "{modes.color.action.gryscl.actv}"
+    },
+    "label-default": {
+      "$type": "color",
+      "$value": "{modes.color.action.gryscl.default}"
+    },
+    "label-hov": {
+      "$type": "color",
+      "$value": "{modes.color.action.gryscl.withhov}"
+    },
+    "navigation": {
       "bg-default": {
         "$type": "color",
-        "$value": "{modes.color.none}"
-      },
-      "bg-hover": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.hoverAlt}",
-        "$description": "For anchor nav, not tab."
-      },
-      "border-activealt": {
-        "$type": "color",
-        "$value": "{modes.color.generic.fg.delicate}"
-      },
-      "border-active": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
-      },
-      "border-default": {
-        "$type": "color",
-        "$value": "{modes.color.generic.fg.delicate}"
-      },
-      "border-hover": {
-        "$type": "color",
-        "$value": "{modes.color.generic.fg.moderate}"
-      },
-      "icon-default": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.defaultAlt}"
-      },
-      "icon-hover": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withHover}"
-      },
-      "label-active": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
-      },
-      "icon-active": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
-      },
-      "label-default": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.default}"
-      },
-      "label-hover": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withHover}"
-      },
-      "navigation": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.nought}",
-          "$description": "For previous/next buttons on responsive tabs"
-        }
-      },
-      "validation": {
-        "border-warning": {
-          "$type": "color",
-          "$value": "{modes.color.status.caution.default}"
-        },
-        "border-error": {
-          "$type": "color",
-          "$value": "{modes.color.status.negative.default}"
-        },
-        "icon-error": {
-          "$type": "color",
-          "$value": "{modes.color.status.negative.default}"
-        },
-        "icon-warning": {
-          "$type": "color",
-          "$value": "{modes.color.status.caution.default}"
-        },
-        "label-error": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.defaultAlt}"
-        },
-        "label-warning": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.defaultAlt}"
-        }
+        "$value": "{modes.color.generic.bg.nought}",
+        "$description": "For previous/next buttons on responsive tabs"
       }
     },
-    "radius": {
-      "M": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.M}",
-        "$description": "Tab horizontal - top corners. Tab vertical - left corners."
+    "validn": {
+      "border-warn": {
+        "$type": "color",
+        "$value": "{modes.color.status.warn.default}"
       },
-      "L": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.interactive.M}",
-        "$description": "Tab horizontal - top corners. Tab vertical - left corners."
+      "border-error": {
+        "$type": "color",
+        "$value": "{modes.color.status.neg.default}"
       },
-      "baseline": {
-        "M": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XXS}"
-        },
-        "L": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XXS}"
-        }
+      "icon-error": {
+        "$type": "color",
+        "$value": "{modes.color.status.neg.default}"
       },
-      "indicator": {
-        "M": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XS}",
-          "$description": "Indicator for hover and active."
-        },
-        "L": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.interactive.XS}",
-          "$description": "Indicator for hover and active."
-        }
+      "icon-warn": {
+        "$type": "color",
+        "$value": "{modes.color.status.warn.default}"
       },
-      "none": {
-        "$type": "borderRadius",
-        "$value": "{button.radius.none}",
-        "$description": "For previous/next buttons"
-      }
-    },
-    "borderwidth": {
-      "navigation": {
-        "bottom": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.S}"
-        },
-        "side": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.S}"
-        },
-        "top": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.S}"
-        }
+      "label-error": {
+        "$type": "color",
+        "$value": "{modes.color.status.neg.txt}"
+      },
+      "label-warn": {
+        "$type": "color",
+        "$value": "{modes.color.status.warn.txt}"
       }
     }
   }

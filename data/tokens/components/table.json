@@ -1,112 +1,19 @@
 {
   "table": {
-    "color": {
-      "header": {
-        "subtle": {
-          "bg-alt": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.subtle.default}",
-            "$description": "header alt"
-          },
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.none}"
-          },
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.hover}"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.fg.delicate}",
-            "$description": "Header borders"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}"
-          }
-        },
-        "harsh": {
-          "bg-alt": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}",
-            "$description": "header alt"
-          },
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.defaultAlt}"
-          },
-          "bg-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.hover}"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.fg.soft}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withDefault}"
-          },
-          "label-hover": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.default}"
-          }
-        }
-      },
-      "row": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.nought}"
-        },
+    "header": {
+      "subtle": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.delicate}",
-          "$description": "Zebra stripes"
+          "$value": "{modes.color.action.gryscl.subtle.default}",
+          "$description": "header alt"
         },
-        "bg-alt2": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.soft}",
-          "$description": "Zebra stripes combined with child rows. Highlighted rows."
-        },
-        "bg-alt3": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}",
-          "$description": "Child rows."
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.moderate}"
-        },
-        "bg-selected": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "border-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.delicate}"
-        },
-        "label-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.harsh}"
-        },
-        "label-hover": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.extreme}"
-        },
-        "label-selected": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActive}"
-        }
-      },
-      "footer": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.moderate}"
+          "$value": "{modes.color.none}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.hov}"
         },
         "border-default": {
           "$type": "color",
@@ -115,223 +22,99 @@
         },
         "label-default": {
           "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.default}"
+          "$value": "{modes.color.action.gryscl.default}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.default}"
+        }
+      },
+      "harsh": {
+        "bg-alt": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.default}",
+          "$description": "header alt"
+        },
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.defaultAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.soft}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.withDefault}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.action.gryscl.default}"
         }
       }
     },
-    "radius": {
-      "container": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.M}",
-        "$description": "Table (parent container)"
+    "row": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.bg.nought}"
+      },
+      "bg-alt": {
+        "$type": "color",
+        "$value": "{modes.color.generic.bg.delicate}",
+        "$description": "Zebra stripes"
+      },
+      "bg-alt2": {
+        "$type": "color",
+        "$value": "{modes.color.generic.bg.soft}",
+        "$description": "Zebra stripes combined with child rows. Highlighted rows."
+      },
+      "bg-alt3": {
+        "$type": "color",
+        "$value": "{modes.color.generic.bg.faint}",
+        "$description": "Child rows."
+      },
+      "bg-hov": {
+        "$type": "color",
+        "$value": "{modes.color.generic.bg.moderate}"
+      },
+      "bg-slcted": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.actv}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.fg.delicate}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.txt.harsh}"
+      },
+      "label-hov": {
+        "$type": "color",
+        "$value": "{modes.color.generic.txt.extreme}"
+      },
+      "label-slcted": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.withActv}"
       }
     },
-    "boxshadow": {
-      "firstchild": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.inner.near}"
+    "footer": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.bg.moderate}"
       },
-      "column": {
-        "sticky-left": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.cleanedge.near-right}",
-          "$description": "Right shadow on left hand sticky column."
-        },
-        "sticky-right": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.cleanedge.near-left}",
-          "$description": "Left shadow on right hand sticky column."
-        }
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.fg.delicate}",
+        "$description": "Header borders"
       },
-      "row": {
-        "dragging": {
-          "$type": "boxShadow",
-          "$value": "{global.boxshadow.interactive.drag}",
-          "$description": "dragging state for a table row"
-        }
-      }
-    },
-    "borderwidth": {
-      "thin": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Table border. Optional choice of cell border width."
-      },
-      "medium": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.S}",
-        "$description": "Header border for subtle. Optional choice of cell border width."
-      },
-      "thick": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.M}",
-        "$description": "Optional choice of cell border width."
-      }
-    },
-    "space": {
-      "none": {
-        "$type": "spacing",
-        "$value": "{global.space.none}"
-      },
-      "yg": {
-        "$type": "spacing",
-        "$value": "{global.space.micro.S}",
-        "$description": "space between table and pagination"
-      },
-      "row": {
-        "x": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Left and right padding inside XS row cells"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Left and right padding inside S row cells"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Left and right padding inside M row cells"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Left and right padding inside L row cells"
-          },
-          "XL": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Left and right padding inside XL row cells"
-          }
-        },
-        "xg": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "internal spacing between text, checkboxes, icons etc"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "internal spacing between text, checkboxes, icons etc"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "internal spacing between text, checkboxes, icons etc"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "internal spacing between text, checkboxes, icons etc"
-          },
-          "XL": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "internal spacing between text, checkboxes, icons etc"
-          }
-        }
-      },
-      "rowchild": {
-        "x": {
-          "XS": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.L} + {global.space.micro.S}",
-            "$description": "Left padding inside XS child row cells"
-          },
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XL} + {global.space.micro.S}",
-            "$description": "Left padding inside S child row cells"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XL} + {global.space.micro.S}",
-            "$description": "Left padding inside M child row cells"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XL} + {global.space.micro.S}",
-            "$description": "Left padding inside L child row cells"
-          },
-          "XL": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XL} + {global.space.micro.S}",
-            "$description": "Left padding inside XL child row cells"
-          }
-        }
-      }
-    },
-    "size": {
-      "row": {
-        "standard": {
-          "XS": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XS}"
-          },
-          "S": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.S}"
-          },
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.M}"
-          },
-          "L": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.L}"
-          },
-          "XL": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XL} + {global.size.micro.M}"
-          }
-        },
-        "doubleheight": {
-          "XS": {
-            "$type": "sizing",
-            "$value": "{table.size.row.standard.XS} * 2"
-          },
-          "S": {
-            "$type": "sizing",
-            "$value": "{table.size.row.standard.S} * 2"
-          },
-          "M": {
-            "$type": "sizing",
-            "$value": "{table.size.row.standard.M} * 2"
-          },
-          "L": {
-            "$type": "sizing",
-            "$value": "{table.size.row.standard.L} * 2"
-          },
-          "XL": {
-            "$type": "sizing",
-            "$value": "{table.size.row.standard.XL} * 2"
-          }
-        }
-      },
-      "icon": {
-        "XS": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.S}"
-        },
-        "S": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}"
-        },
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}"
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.L}"
-        },
-        "XL": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.XL}"
-        }
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.default}"
       }
     }
   }
