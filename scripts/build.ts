@@ -134,10 +134,10 @@ const getGlobalConfig = (): Config => {
       }
     },
     log: {
-      warnings: 'warn',
-      verbosity: 'verbose',
+      warnings: "warn" as const,
+      verbosity: "verbose" as const,
       errors: {
-        brokenReferences: 'throw',
+        brokenReferences: "throw" as const,
       },
     },
   }
@@ -202,10 +202,10 @@ const getModeConfig = (modeName: string): Config => {
       }
     },
     log: {
-      warnings: 'warn',
-      verbosity: 'verbose',
+      warnings: "warn" as const,
+      verbosity: "verbose" as const,
       errors: {
-        brokenReferences: 'throw',
+        brokenReferences: "throw" as const,
       },
     },
   }
