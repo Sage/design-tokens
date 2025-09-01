@@ -1,0 +1,570 @@
+{
+  "pill": {
+    "generic": {
+      "none": {
+        "$type": "color",
+        "$value": "{modes.color.none}",
+        "$description": "transparent override used for hiding colors when needed."
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.txt.withDefault}"
+      },
+      "label-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.txt.withHov}"
+      },
+      "labelAlt-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.txt.withDefaultAlt}"
+      },
+      "labelAlt-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.txt.withDefaultAlt}"
+      },
+      "inv": {
+        "label-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.txt.inv.withDefault}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.txt.inv.withHov}"
+        },
+        "labelAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.txt.inv.withDefaultAlt}"
+        },
+        "labelAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.txt.inv.withDefaultAlt}"
+        }
+      }
+    },
+    "swatches": {
+      "teal": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.teal.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.teal.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.teal.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.teal.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.teal.default}"
+        }
+      },
+      "lime": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.lime.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.lime.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.lime.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.lime.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.lime.default}"
+        }
+      },
+      "pink": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.pink.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.pink.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.pink.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.pink.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.pink.default}"
+        }
+      },
+      "slate": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.slate.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.slate.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.slate.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.slate.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.custom.slate.default}"
+        }
+      },
+      "orange": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.warn.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.warn.defaultAlt}",
+          "$description": "Global message bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.warn.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.warn.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.warn.default}"
+        }
+      },
+      "red": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neg.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neg.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.neg.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.neg.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neg.default}"
+        }
+      },
+      "gray": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neut.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neut.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.neut.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.neut.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neut.default}"
+        }
+      },
+      "purple": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.prio.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.prio.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.prio.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.prio.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.prio.default}"
+        }
+      },
+      "green": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.pos.default}"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.pos.hovAlt}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.pos.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.pos.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.pos.default}"
+        }
+      },
+      "blue": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.info.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.info.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.info.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.info.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.info.default}"
+        }
+      }
+    },
+    "error": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.neg.default}"
+      },
+      "bgAlt-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.neg.defaultAlt}",
+        "$description": "outline pill bg"
+      },
+      "bgAlt-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.neg.hovAlt}"
+      },
+      "bg-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.neg.hov}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.neg.default}"
+      },
+      "inv": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neg.inv.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neg.inv.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.neg.inv.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.neg.inv.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neg.inv.default}"
+        }
+      }
+    },
+    "prio": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.prio.default}"
+      },
+      "bgAlt-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.prio.defaultAlt}",
+        "$description": "outline pill bg"
+      },
+      "bgAlt-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.prio.hovAlt}"
+      },
+      "bg-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.prio.hov}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.prio.default}"
+      },
+      "inv": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.prio.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.prio.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.prio.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.prio.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.prio.default}"
+        }
+      }
+    },
+    "info": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.info.default}"
+      },
+      "bgAlt-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.info.defaultAlt}",
+        "$description": "outline pill bg"
+      },
+      "bgAlt-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.info.hovAlt}"
+      },
+      "bg-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.info.hov}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.info.default}"
+      },
+      "inv": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.info.inv.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.info.inv.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.info.inv.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.info.inv.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.info.inv.default}"
+        }
+      }
+    },
+    "neut": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.neut.default}"
+      },
+      "bgAlt-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.neut.defaultAlt}",
+        "$description": "outline pill bg"
+      },
+      "bgAlt-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.neut.hovAlt}"
+      },
+      "bg-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.neut.hov}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.neut.default}"
+      },
+      "inv": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neut.inv.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neut.inv.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.neut.inv.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.neut.inv.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.neut.inv.default}"
+        }
+      }
+    },
+    "readonly": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.inactv.default}",
+        "$description": "Pill (all types, readonly, when nested in disabled parent components)"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.inactv.default}",
+        "$description": "Pill (all types, readonly, when nested in disabled parent components)"
+      },
+      "label": {
+        "$type": "color",
+        "$value": "{modes.color.generic.txt.firm}",
+        "$description": "Pill (all types, readonly, when nested in disabled parent components)"
+      }
+    },
+    "pos": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.pos.default}"
+      },
+      "bgAlt-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.pos.defaultAlt}",
+        "$description": "outline pill bg"
+      },
+      "bgAlt-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.pos.hovAlt}"
+      },
+      "bg-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.pos.hov}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.pos.default}"
+      },
+      "inv": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.pos.inv.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.pos.inv.defaultAlt}",
+          "$description": "outline pill bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.pos.inv.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.pos.inv.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.pos.inv.default}"
+        }
+      }
+    },
+    "warn": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.warn.default}"
+      },
+      "bgAlt-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.warn.defaultAlt}",
+        "$description": "Global message bg"
+      },
+      "bgAlt-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.warn.hovAlt}"
+      },
+      "bg-hov": {
+        "$type": "color",
+        "$value": "{modes.color.status.warn.hov}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.warn.default}"
+      },
+      "inv": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.warn.inv.default}"
+        },
+        "bgAlt-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.warn.inv.defaultAlt}",
+          "$description": "Global message bg"
+        },
+        "bgAlt-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.warn.inv.hovAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{modes.color.status.warn.inv.hov}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{modes.color.status.warn.inv.default}"
+        }
+      }
+    }
+  }
+}
