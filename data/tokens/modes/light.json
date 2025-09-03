@@ -751,12 +751,30 @@
             "$value": "{core.colors.black}"
           },
           "actvAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{global.modifier.button.active} ",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.smoke.10}"
+            "$value": "{modes.color.action.gryscl.actv}"
           },
           "default": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.9",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.smoke.90}"
+            "$value": "{modes.color.action.gryscl.actv}"
           },
           "defaultAlt": {
             "$type": "color",
@@ -765,7 +783,7 @@
           },
           "defaultAlt2": {
             "$type": "color",
-            "$value": "{core.colors.smoke.30}",
+            "$value": "{modes.color.generic.txt.moderate}",
             "$description": "Dropdown option subtxt."
           },
           "hovAlt": {
@@ -800,12 +818,30 @@
               "$value": "{core.colors.white}"
             },
             "actvAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{global.modifier.button.active} ",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.smoke.90}"
+              "$value": "{modes.color.action.gryscl.inv.actv}"
             },
             "default": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.9",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.smoke.10}"
+              "$value": "{modes.color.action.gryscl.inv.actv}"
             },
             "defaultAlt": {
               "$type": "color",
@@ -814,7 +850,7 @@
             },
             "defaultAlt2": {
               "$type": "color",
-              "$value": "{core.colors.smoke.70}",
+              "$value": "{modes.color.generic.txt.inv.moderate}",
               "$description": "Tertiary border color"
             },
             "hovAlt": {
