@@ -921,8 +921,17 @@
         },
         "nav": {
           "actv": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{global.modifier.button.activeAlt} ",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.smoke.20}",
+            "$value": "{core.colors.black}",
             "$description": "active bg for nav items"
           },
           "default": {
@@ -935,8 +944,17 @@
             "$description": "default bg for left nav container"
           },
           "hov": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{global.modifier.button.hoverAlt} ",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.smoke.10}",
+            "$value": "{core.colors.black}",
             "$description": "hov bg for nav items"
           },
           "withActv": {
@@ -956,8 +974,17 @@
           },
           "inv": {
             "actv": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{global.modifier.button.activeAlt} ",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.smoke.80}",
+              "$value": "{core.colors.white}",
               "$description": "active bg for nav items"
             },
             "default": {
@@ -971,8 +998,17 @@
               "$description": "default bg for left nav container"
             },
             "hov": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{global.modifier.button.hoverAlt} ",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.smoke.90}",
+              "$value": "{core.colors.white}",
               "$description": "hov bg for nav items"
             },
             "withActv": {
@@ -1278,7 +1314,7 @@
           },
           "hovAlt": {
             "$type": "color",
-            "$value": "{core.colors.brand.90}",
+            "$value": "{core.colors.brand.10}",
             "$description": "used for marketing banners"
           }
         },
