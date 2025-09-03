@@ -935,13 +935,31 @@
           },
           "subtle": {
             "defaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.5",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.smoke.30}",
+              "$value": "{core.colors.black}",
               "$description": "border color for off switches"
             },
             "default": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.05",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.smoke.5}",
+              "$value": "{core.colors.black}",
               "$description": "bg color for tertiary buttons and table headers"
             }
           }
