@@ -622,12 +622,12 @@
           },
           "txt": {
             "$type": "color",
-            "$value": "{core.colors.white}",
+            "$value": "{modes.color.generic.txt.harsh}",
             "$description": "Input txt"
           },
           "txtAlt": {
             "$type": "color",
-            "$value": "{core.colors.white}",
+            "$value": "{modes.color.generic.txt.moderate}",
             "$description": "Hint txt, placeholder txt, character count etc"
           },
           "inv": {
@@ -643,7 +643,7 @@
             },
             "txt": {
               "$type": "color",
-              "$value": "{core.colors.black}",
+              "$value": "{modes.color.generic.txt.inv.harsh}",
               "$description": "Input txt"
             },
             "txtAlt": {
@@ -1691,17 +1691,8 @@
               "$description": "For readonly pill bg and border"
             },
             "withDefault": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.67",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{core.colors.black}",
+              "$value": "{modes.color.generic.txt.inv.firm}",
               "$description": "For readonly filled pill txt"
             }
           }
