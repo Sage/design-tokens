@@ -242,7 +242,7 @@
             "$type": "color",
             "$value": "{core.colors.black}"
           },
-          "harsh": {
+          "severe": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -255,7 +255,7 @@
             "$type": "color",
             "$value": "{modes.color.generic.txt.extreme}"
           },
-          "firm": {
+          "moderate": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -268,7 +268,7 @@
             "$type": "color",
             "$value": "{modes.color.generic.txt.extreme}"
           },
-          "moderate": {
+          "soft": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -282,7 +282,7 @@
             "$value": "{modes.color.generic.txt.extreme}",
             "$description": "was 0.5. Increased to 0.55 so that we can use this for hint txt etc too, and still be accessible."
           },
-          "muted": {
+          "delicate": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -296,7 +296,7 @@
             "$value": "{modes.color.generic.txt.extreme}",
             "$description": "accessible OBJECT against white."
           },
-          "soft": {
+          "faint": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -320,7 +320,7 @@
               "$type": "color",
               "$value": "{core.colors.white}"
             },
-            "harsh": {
+            "severe": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -333,7 +333,7 @@
               "$type": "color",
               "$value": "{modes.color.generic.txt.inv.extreme}"
             },
-            "firm": {
+            "moderate": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -346,7 +346,7 @@
               "$type": "color",
               "$value": "{modes.color.generic.txt.inv.extreme}"
             },
-            "moderate": {
+            "soft": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -360,7 +360,7 @@
               "$value": "{modes.color.generic.txt.inv.extreme}",
               "$description": "was 0.5. Increased to 0.55 so that we can use this for hint txt etc too, and still be accessible."
             },
-            "muted": {
+            "delicate": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -374,7 +374,7 @@
               "$value": "{modes.color.generic.txt.inv.extreme}",
               "$description": "accessible OBJECT against white."
             },
-            "soft": {
+            "faint": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -624,12 +624,12 @@
           },
           "txt": {
             "$type": "color",
-            "$value": "{modes.color.generic.txt.harsh}",
+            "$value": "{modes.color.generic.txt.severe}",
             "$description": "Input txt"
           },
           "txtAlt": {
             "$type": "color",
-            "$value": "{modes.color.generic.txt.firm}",
+            "$value": "{modes.color.generic.txt.soft}",
             "$description": "Hint txt, placeholder txt, character count etc"
           },
           "inv": {
@@ -645,12 +645,12 @@
             },
             "txt": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.harsh}",
+              "$value": "{modes.color.generic.txt.inv.severe}",
               "$description": "Input txt"
             },
             "txtAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.firm}",
+              "$value": "{modes.color.generic.txt.inv.soft}",
               "$description": "Hint txt, placeholder txt, character count etc"
             }
           }
@@ -727,7 +727,7 @@
           },
           "txt": {
             "$type": "color",
-            "$value": "{modes.color.generic.txt.muted}",
+            "$value": "{modes.color.generic.txt.delicate}",
             "$description": "Disabled txt inside buttons and form inputs."
           },
           "txtAlt": {
@@ -737,12 +737,12 @@
           },
           "icon": {
             "$type": "color",
-            "$value": "{modes.color.generic.txt.muted}",
+            "$value": "{modes.color.generic.txt.delicate}",
             "$description": "Disabled icon inside buttons and form inputs."
           },
           "iconAlt": {
             "$type": "color",
-            "$value": "{modes.color.generic.txt.moderate}",
+            "$value": "{modes.color.generic.txt.faint}",
             "$description": "Readonly icon inside form inputs."
           },
           "inv": {
@@ -762,7 +762,7 @@
             },
             "txt": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.muted}",
+              "$value": "{modes.color.generic.txt.inv.delicate}",
               "$description": "invd disabled txt inside buttons and form inputs."
             },
             "txtAlt": {
@@ -805,7 +805,7 @@
           },
           "defaultAlt": {
             "$type": "color",
-            "$value": "{modes.color.generic.txt.firm}",
+            "$value": "{modes.color.generic.txt.soft}",
             "$description": "subtle and toggle button txt"
           },
           "hovAlt": {
@@ -885,7 +885,7 @@
             },
             "defaultAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.firm}",
+              "$value": "{modes.color.generic.txt.inv.soft}",
               "$description": "subtle and toggle button txt"
             },
             "hovAlt": {
@@ -1009,7 +1009,7 @@
           },
           "withDefault": {
             "$type": "color",
-            "$value": "{modes.color.generic.txt.harsh}",
+            "$value": "{modes.color.generic.txt.severe}",
             "$description": "hov bg for nav items"
           },
           "withhov": {
@@ -1063,7 +1063,7 @@
             },
             "withDefault": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.harsh}",
+              "$value": "{modes.color.generic.txt.inv.severe}",
               "$description": "hov bg for nav items"
             },
             "withhov": {
@@ -1347,7 +1347,7 @@
           },
           "withDefaultAlt": {
             "$type": "color",
-            "$value": "{modes.color.generic.txt.harsh}"
+            "$value": "{modes.color.generic.txt.severe}"
           },
           "withHov": {
             "$type": "color",
@@ -1657,7 +1657,7 @@
           },
           "withDefault": {
             "$type": "color",
-            "$value": "{modes.color.generic.txt.firm}",
+            "$value": "{modes.color.generic.txt.soft}",
             "$description": "For readonly filled pill txt"
           },
           "inv": {
@@ -1668,7 +1668,7 @@
             },
             "withDefault": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.firm}",
+              "$value": "{modes.color.generic.txt.inv.soft}",
               "$description": "For readonly filled pill txt"
             }
           }
