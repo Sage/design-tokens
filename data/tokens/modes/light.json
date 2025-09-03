@@ -1696,17 +1696,8 @@
               "$description": "For readonly pill bg and border"
             },
             "withDefault": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.67",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{core.colors.white}",
+              "$value": "{modes.color.generic.txt.inv.firm}",
               "$description": "For readonly filled pill txt"
             }
           }
@@ -1832,7 +1823,7 @@
             },
             "defaultAlt": {
               "$type": "color",
-              "$value": "{core.colors.smoke.5}",
+              "$value": "{core.colors.smoke.95}",
               "$description": "Subtle message bg"
             },
             "hov": {
@@ -1842,7 +1833,7 @@
             },
             "hovAlt": {
               "$type": "color",
-              "$value": "{core.colors.smoke.10}",
+              "$value": "{core.colors.smoke.90}",
               "$description": "used on pill hov states and message bg"
             }
           }
