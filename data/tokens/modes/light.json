@@ -755,7 +755,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "{global.modifier.button.active} ",
+                  "value": "{global.modifier.button.activeAlt} ",
                   "space": "lch"
                 }
               }
@@ -781,19 +781,32 @@
             "$value": "{modes.color.generic.txt.firm}",
             "$description": "subtle and toggle button txt"
           },
-          "defaultAlt2": {
-            "$type": "color",
-            "$value": "{modes.color.generic.txt.moderate}",
-            "$description": "Dropdown option subtxt."
-          },
           "hovAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{global.modifier.button.hoverAlt} ",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.smoke.10}",
+            "$value": "{modes.color.action.gryscl.actv}",
             "$description": "Accordion, secondary, tertiary, menu bg on hov"
           },
           "hov": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{global.modifier.button.hover} ",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.smoke.20}",
+            "$value": "{modes.color.action.gryscl.actv}",
             "$description": "subtle table header hov"
           },
           "withActv": {
@@ -822,7 +835,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "{global.modifier.button.active} ",
+                    "value": "{global.modifier.button.activeAlt} ",
                     "space": "lch"
                   }
                 }
@@ -848,19 +861,32 @@
               "$value": "{modes.color.generic.txt.inv.firm}",
               "$description": "subtle and toggle button txt"
             },
-            "defaultAlt2": {
-              "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.moderate}",
-              "$description": "Tertiary border color"
-            },
             "hovAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{global.modifier.button.hoverAlt} ",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.smoke.90}",
+              "$value": "{modes.color.action.gryscl.inv.actv}",
               "$description": "Accordion, secondary, tertiary, menu bg on hov"
             },
             "hov": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{global.modifier.button.hover} ",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.smoke.80}",
+              "$value": "{modes.color.action.gryscl.inv.actv}",
               "$description": "subtle table header hov"
             },
             "withActv": {

@@ -757,31 +757,62 @@
             "$value": "{core.colors.white}"
           },
           "actvAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{global.modifier.button.activeAlt} ",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.smoke.90}"
+            "$value": "{modes.color.action.gryscl.actv}"
           },
           "default": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.9",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.smoke.10}"
+            "$value": "{modes.color.action.gryscl.actv}"
           },
           "defaultAlt": {
             "$type": "color",
             "$value": "{modes.color.generic.txt.firm}",
             "$description": "subtle and toggle button txt"
           },
-          "defaultAlt2": {
-            "$type": "color",
-            "$value": "{core.colors.smoke.70}",
-            "$description": "Dropdown option subtxt."
-          },
           "hovAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{global.modifier.button.hoverAlt} ",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.smoke.90}",
+            "$value": "{modes.color.action.gryscl.actv}",
             "$description": "Accordion, secondary, tertiary, menu bg on hov"
           },
           "hov": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{global.modifier.button.hover} ",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.colors.smoke.80}",
+            "$value": "{modes.color.action.gryscl.actv}",
             "$description": "subtle table header hov"
           },
           "withActv": {
@@ -806,8 +837,17 @@
               "$value": "{core.colors.black}"
             },
             "actvAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{global.modifier.button.activeAlt} ",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.smoke.90}"
+              "$value": "{modes.color.action.gryscl.inv.actv}"
             },
             "default": {
               "$type": "color",
@@ -818,19 +858,32 @@
               "$value": "{modes.color.generic.txt.inv.firm}",
               "$description": "subtle and toggle button txt"
             },
-            "defaultAlt2": {
-              "$type": "color",
-              "$value": "{core.colors.smoke.30}",
-              "$description": "Tertiary border color"
-            },
             "hovAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{global.modifier.button.hoverAlt} ",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.smoke.10}",
+              "$value": "{modes.color.action.gryscl.inv.actv}",
               "$description": "Accordion, secondary, tertiary, menu bg on hov"
             },
             "hov": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "{global.modifier.button.hover} ",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{core.colors.smoke.20}",
+              "$value": "{modes.color.action.gryscl.inv.actv}",
               "$description": "subtle table header hov"
             },
             "withActv": {
@@ -943,7 +996,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "lighten",
-                  "value": "0.3",
+                  "value": "{global.modifier.button.active} ",
                   "space": "lch"
                 }
               }
@@ -956,7 +1009,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "0.30",
+                  "value": "{global.modifier.button.active} ",
                   "space": "lch"
                 }
               }
@@ -1016,7 +1069,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "lighten",
-                  "value": "0.15",
+                  "value": "{global.modifier.button.hover} ",
                   "space": "lch"
                 }
               }
@@ -1029,7 +1082,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "0.15",
+                  "value": "{global.modifier.button.hover} ",
                   "space": "lch"
                 }
               }
@@ -1043,7 +1096,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "lighten",
-                  "value": "0.15",
+                  "value": "{global.modifier.button.hover} ",
                   "space": "lch"
                 }
               }
@@ -1070,7 +1123,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "darken",
-                    "value": "0.3",
+                    "value": "{global.modifier.button.active} ",
                     "space": "lch"
                   }
                 }
@@ -1083,7 +1136,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "0.30",
+                    "value": "{global.modifier.button.active} ",
                     "space": "lch"
                   }
                 }
@@ -1144,7 +1197,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "darken",
-                    "value": "0.15",
+                    "value": "{global.modifier.button.hover} ",
                     "space": "lch"
                   }
                 }
@@ -1157,7 +1210,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "alpha",
-                    "value": "0.15",
+                    "value": "{global.modifier.button.hover} ",
                     "space": "lch"
                   }
                 }
@@ -1171,7 +1224,7 @@
                 "studio.tokens": {
                   "modify": {
                     "type": "darken",
-                    "value": "0.15",
+                    "value": "{global.modifier.button.hover} ",
                     "space": "lch"
                   }
                 }
