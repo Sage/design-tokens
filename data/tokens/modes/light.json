@@ -1057,17 +1057,8 @@
         },
         "main": {
           "actv": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "darken",
-                  "value": "{global.modifier.button.active}",
-                  "space": "lch"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{modes.color.action.main.default}"
+            "$value": "{core.colors.emerald.80}"
           },
           "actvAlt": {
             "$extensions": {
@@ -1102,18 +1093,8 @@
             "$description": "border color for secondary and tertiary buttons"
           },
           "defaultAlt2": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "darken",
-                  "value": "0.12",
-                  "space": "lch",
-                  "color": "black"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{modes.color.action.main.default}",
+            "$value": "{core.colors.emerald.70}",
             "$description": "default value for links"
           },
           "defaultAlt3": {
@@ -1131,17 +1112,8 @@
             "$description": "default background color of secondary button"
           },
           "hov": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "darken",
-                  "value": "{global.modifier.button.hover}",
-                  "space": "lch"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{modes.color.action.main.default}"
+            "$value": "{core.colors.emerald.70}"
           },
           "hovAlt": {
             "$extensions": {
@@ -1158,17 +1130,8 @@
             "$description": "hov for secondary and tertiary buttons"
           },
           "hovAlt2": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "darken",
-                  "value": "{global.modifier.button.hover}",
-                  "space": "lch"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{modes.color.action.main.defaultAlt2}",
+            "$value": "{core.colors.emerald.80}",
             "$description": "hov for links"
           },
           "withActv": {
@@ -1185,17 +1148,8 @@
           },
           "inv": {
             "actv": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "lighten",
-                    "value": "{global.modifier.button.active}",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{modes.color.action.main.inv.default}"
+              "$value": "{core.colors.brand.20}"
             },
             "actvAlt": {
               "$extensions": {
@@ -1213,7 +1167,7 @@
             },
             "default": {
               "$type": "color",
-              "$value": "{core.colors.brand.40}"
+              "$value": "{core.colors.brand.50}"
             },
             "defaultAlt": {
               "$extensions": {
@@ -1230,17 +1184,8 @@
               "$description": "border color for secondary and tertiary inv buttons"
             },
             "defaultAlt2": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "lighten",
-                    "value": "0.12",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{modes.color.action.main.inv.default}",
+              "$value": "{core.colors.brand.30}",
               "$description": "default color for links"
             },
             "defaultAlt3": {
@@ -1258,17 +1203,8 @@
               "$description": "default background color of inv secondary buttons"
             },
             "hov": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "lighten",
-                    "value": "{global.modifier.button.hover} ",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{modes.color.action.main.inv.default}"
+              "$value": "{core.colors.brand.30}"
             },
             "hovAlt": {
               "$extensions": {
@@ -1285,17 +1221,8 @@
               "$description": "hov for inv secondary and tertiary buttons"
             },
             "hovAlt2": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "lighten",
-                    "value": "{global.modifier.button.hover} ",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{modes.color.action.main.inv.defaultAlt2}",
+              "$value": "{core.colors.brand.20}",
               "$description": "hov for links"
             },
             "withActv": {
