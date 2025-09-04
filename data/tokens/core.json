@@ -1,6 +1,6 @@
 {
   "core": {
-    "colors": {
+    "color": {
       "black": {
         "$type": "color",
         "$value": "#000000",
@@ -588,6 +588,27 @@
           "$type": "color",
           "$value": "#001B1B"
         }
+      },
+      "modifiers": {
+        "input": {
+          "disabledBg": {
+            "$type": "other",
+            "$value": "0.05",
+            "$description": "less contrast"
+          },
+          "disabledFg": {
+            "$type": "other",
+            "$value": "0.30",
+            "$description": "less contrast"
+          }
+        },
+        "shadow": {
+          "standard": {
+            "$type": "other",
+            "$value": "0.5",
+            "$description": "standard mixer for shadow"
+          }
+        }
       }
     },
     "size": {
@@ -843,7 +864,7 @@
               "y": "2",
               "blur": "2",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             },
             {
@@ -851,7 +872,7 @@
               "y": "5",
               "blur": "5",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             }
           ]
@@ -864,7 +885,7 @@
               "y": "1",
               "blur": "2",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             },
             {
@@ -872,7 +893,7 @@
               "y": "2",
               "blur": "10",
               "spread": "0",
-              "color": "{core.colors.black}33",
+              "color": "{core.color.black}33",
               "type": "dropShadow"
             }
           ]
@@ -885,7 +906,7 @@
               "y": "2",
               "blur": "3",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             },
             {
@@ -893,7 +914,7 @@
               "y": "6",
               "blur": "30",
               "spread": "0",
-              "color": "{core.colors.black}26",
+              "color": "{core.color.black}26",
               "type": "dropShadow"
             }
           ]
@@ -906,7 +927,7 @@
               "y": "3",
               "blur": "4",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             },
             {
@@ -914,7 +935,7 @@
               "y": "10",
               "blur": "60",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             }
           ]
@@ -929,7 +950,7 @@
               "y": "8",
               "blur": "4",
               "spread": "-4",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "innerShadow"
             }
           ]
@@ -944,7 +965,7 @@
               "y": "0",
               "blur": "2",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             },
             {
@@ -952,7 +973,7 @@
               "y": "0",
               "blur": "5",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             }
           ]
@@ -967,7 +988,7 @@
               "y": "0",
               "blur": "2",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             },
             {
@@ -975,7 +996,7 @@
               "y": "0",
               "blur": "5",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             }
           ]
@@ -990,7 +1011,7 @@
               "y": "-1",
               "blur": "2",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             },
             {
@@ -998,7 +1019,7 @@
               "y": "-2",
               "blur": "10",
               "spread": "0",
-              "color": "{core.colors.black}33",
+              "color": "{core.color.black}33",
               "type": "dropShadow"
             }
           ]
@@ -1011,7 +1032,7 @@
               "y": "-3",
               "blur": "4",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             },
             {
@@ -1019,7 +1040,7 @@
               "y": "-10",
               "blur": "60",
               "spread": "0",
-              "color": "{core.colors.black}1A",
+              "color": "{core.color.black}1A",
               "type": "dropShadow"
             }
           ]
@@ -1034,7 +1055,7 @@
               "y": "-1",
               "blur": "0",
               "spread": "0",
-              "color": "{core.colors.black}4D",
+              "color": "{core.color.black}4D",
               "type": "innerShadow"
             }
           ]
@@ -1258,29 +1279,6 @@
       "400": {
         "$type": "paragraphSpacing",
         "$value": "{core.dimension.400}"
-      }
-    },
-    "color": {
-      "modifiers": {
-        "input": {
-          "disabledBg": {
-            "$type": "other",
-            "$value": "0.05",
-            "$description": "less contrast"
-          },
-          "disabledFg": {
-            "$type": "other",
-            "$value": "0.30",
-            "$description": "less contrast"
-          }
-        },
-        "shadow": {
-          "standard": {
-            "$type": "other",
-            "$value": "0.5",
-            "$description": "standard mixer for shadow"
-          }
-        }
       }
     },
     "fontFamilies": {
