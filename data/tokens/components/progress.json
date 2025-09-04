@@ -1,740 +1,172 @@
 {
   "progress": {
-    "size": {
-      "bar": {
-        "S": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.XS}",
-          "$description": "S loader bar"
-        },
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.M}",
-          "$description": "M progress tracker bar, M loader bar"
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.XL}",
-          "$description": "L loader bar"
-        }
-      },
-      "carouselselector": {
-        "dot": {
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.micro.L}"
-          }
-        },
-        "activedot": {
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XXS}"
-          }
-        },
-        "hitarea": {
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XS}"
-          }
-        }
-      },
-      "carouselslide": {
-        "x": {
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XL}",
-            "$description": "Inactive slide"
-          }
-        }
-      },
-      "spinner": {
-        "XXS": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XXS}",
-          "$description": "Loader ring for XXS size loader spinners"
-        },
-        "XS": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XS} - {global.size.micro.XS}",
-          "$description": "Loader ring for XS size loader spinners"
-        },
-        "S": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.S}",
-          "$description": "Loader ring"
-        },
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.S} * 2",
-          "$description": "Loader ring"
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XS} * 4",
-          "$description": "Loader ring"
-        }
-      },
-      "skeleton": {
-        "responsive": {
-          "text": {
-            "XS": {
-              "$type": "sizing",
-              "$value": "{primitives.fontSize.responsive.step0}",
-              "$description": "Skeleton paragraph and H5"
-            },
-            "S": {
-              "$type": "sizing",
-              "$value": "{primitives.fontSize.responsive.step2}",
-              "$description": "H4 Skeletons"
-            },
-            "M": {
-              "$type": "sizing",
-              "$value": "{primitives.fontSize.responsive.step2}",
-              "$description": "H3 Skeletons"
-            },
-            "L": {
-              "$type": "sizing",
-              "$value": "{primitives.fontSize.responsive.step3}",
-              "$description": "H2 Skeletons"
-            },
-            "XL": {
-              "$type": "sizing",
-              "$value": "{primitives.fontSize.responsive.step5}",
-              "$description": "H1 Skeletons"
-            }
-          }
-        },
-        "adaptiveLarge": {
-          "text": {
-            "XS": {
-              "$type": "sizing",
-              "$value": "{global.fontSize.adaptive.step0}",
-              "$description": "Skeleton paragraph and H5"
-            },
-            "S": {
-              "$type": "sizing",
-              "$value": "{global.fontSize.adaptive.step2}",
-              "$description": "H4 Skeletons"
-            },
-            "M": {
-              "$type": "sizing",
-              "$value": "{global.fontSize.adaptive.step2}",
-              "$description": "H3 Skeletons"
-            },
-            "L": {
-              "$type": "sizing",
-              "$value": "{global.fontSize.adaptive.step3}",
-              "$description": "H2 Skeletons"
-            },
-            "XL": {
-              "$type": "sizing",
-              "$value": "{global.fontSize.adaptive.step5}",
-              "$description": "H1 Skeletons"
-            }
-          }
-        }
-      },
-      "stepflow": {
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.M}",
-          "$description": "Step height"
-        }
-      },
-      "stepindicator": {
-        "bar": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.XXS}",
-          "$description": "step indicator bar"
-        },
-        "stepcircle": {
-          "S": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XS}",
-            "$description": "M size step indicator"
-          },
-          "M": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.S}",
-            "$description": "M size step indicator"
-          }
-        }
+    "none": {
+      "$type": "color",
+      "$value": "{modes.color.none}",
+      "$description": "transparent override used for hiding colors when needed."
+    },
+    "bg-skeleton": {
+      "$type": "color",
+      "$value": "{modes.color.status.txt.loading}"
+    },
+    "bg-default": {
+      "$type": "color",
+      "$value": "{modes.color.generic.bg.delicate}"
+    },
+    "border-default": {
+      "$type": "color",
+      "$value": "{modes.color.generic.fg.firm}"
+    },
+    "fg-ai": {
+      "$type": "color",
+      "$value": "{modes.color.action.ai.default}",
+      "$description": "For progress ring in ai buttons"
+    },
+    "fg-alt": {
+      "$type": "color",
+      "$value": "{modes.color.status.pos.default}"
+    },
+    "fg-alt2": {
+      "$type": "color",
+      "$value": "{modes.color.generic.txt.soft}"
+    },
+    "fg-caution": {
+      "$type": "color",
+      "$value": "{modes.color.status.warn.default}"
+    },
+    "fg-default": {
+      "$type": "color",
+      "$value": "{modes.color.action.gryscl.actv}"
+    },
+    "fg-error": {
+      "$type": "color",
+      "$value": "{modes.color.status.neg.default}"
+    },
+    "fg-info": {
+      "$type": "color",
+      "$value": "{modes.color.status.info.default}"
+    },
+    "label-alt": {
+      "$type": "color",
+      "$value": "{modes.color.generic.txt.soft}"
+    },
+    "label-default": {
+      "$type": "color",
+      "$value": "{modes.color.generic.txt.severe}"
+    },
+    "datavis": {
+      "fg-default": {
+        "$type": "color",
+        "$value": "{modes.color.status.custom.teal.default}"
       }
     },
-    "color": {
-      "bg-skeleton": {
-        "$type": "color",
-        "$value": "{modes.color.status.content.loading}"
-      },
+    "loader": {
       "bg-default": {
         "$type": "color",
-        "$value": "{modes.color.interactive.progress.bg}"
-      },
-      "border-default": {
-        "$type": "color",
-        "$value": "{modes.color.generic.fg.soft}"
-      },
-      "fg-ai": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.ai.default}",
-        "$description": "For progress ring in ai buttons"
-      },
-      "fg-alt": {
-        "$type": "color",
-        "$value": "{modes.color.status.positive.default}"
-      },
-      "fg-alt2": {
-        "$type": "color",
-        "$value": "{modes.color.generic.content.firm}"
-      },
-      "fg-caution": {
-        "$type": "color",
-        "$value": "{modes.color.status.caution.default}"
+        "$value": "{modes.color.generic.bg.delicate}"
       },
       "fg-default": {
         "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}"
+        "$value": "{modes.color.generic.fg.extreme}",
+        "$description": "used for loader standard loader spinner"
+      },
+      "fg-ai": {
+        "$type": "color",
+        "$value": "{modes.color.action.ai.default}",
+        "$description": "Loader ring or bar"
       },
       "fg-error": {
         "$type": "color",
-        "$value": "{modes.color.status.negative.default}"
+        "$value": "{modes.color.status.neg.default}"
       },
-      "fg-info": {
+      "fg-complete": {
         "$type": "color",
-        "$value": "{modes.color.status.info.default}"
+        "$value": "{modes.color.status.pos.default}"
+      },
+      "inv": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.bg.inv.delicate}",
+          "$description": "used for inv loader bgs"
+        },
+        "fg-default": {
+          "$type": "color",
+          "$value": "{modes.color.generic.fg.inv.extreme}",
+          "$description": "used on inv loading spinner"
+        },
+        "fg-ai": {
+          "$type": "color",
+          "$value": "{modes.color.action.ai.inv.default}",
+          "$description": "Loader ring or bar"
+        }
+      }
+    },
+    "stepflow": {
+      "bg-actv": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.actv}"
+      },
+      "bg-complete": {
+        "$type": "color",
+        "$value": "{modes.color.status.pos.default}"
+      },
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.fg.nought}"
+      },
+      "border-actv-inner": {
+        "$type": "color",
+        "$value": "{modes.color.generic.fg.nought}"
+      },
+      "border-actv-outer": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.actv}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.fg.firm}"
       },
       "label-alt": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.firm}"
+        "$value": "{modes.color.generic.txt.soft}"
       },
       "label-default": {
         "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}"
-      },
-      "datavis": {
-        "fg-default": {
-          "$type": "color",
-          "$value": "{modes.color.status.custom.teal.default}"
-        }
-      },
-      "loader": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.progress.bg}"
-        },
-        "fg-default": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}",
-          "$description": "used for loader standard loader spinner"
-        },
-        "fg-error": {
-          "$type": "color",
-          "$value": "{modes.color.status.negative.default}"
-        },
-        "fg-complete": {
-          "$type": "color",
-          "$value": "{modes.color.status.positive.default}"
-        },
-        "inverse": {
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.progress.bgAlt}",
-            "$description": "used for inverse loader bgs"
-          },
-          "fg-default": {
-            "$type": "color",
-            "$value": "{modes.color.interactive.monochrome.withActive}",
-            "$description": "used on inverse loading spinner"
-          }
-        }
-      },
-      "stepflow": {
-        "bg-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "bg-complete": {
-          "$type": "color",
-          "$value": "{modes.color.status.positive.default}"
-        },
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.nought}"
-        },
-        "border-active-inner": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.nought}"
-        },
-        "border-active-outer": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "border-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.soft}"
-        },
-        "label-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.firm}"
-        },
-        "label-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.harsh}"
-        }
-      },
-      "stepindicator": {
-        "bg-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "bg-complete": {
-          "$type": "color",
-          "$value": "{modes.color.status.positive.default}"
-        },
-        "border-active-outer": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.active}"
-        },
-        "border-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.fg.soft}"
-        },
-        "border-success": {
-          "$type": "color",
-          "$value": "{modes.color.status.positive.default}"
-        },
-        "label-active": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActive}"
-        },
-        "label-complete": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.monochrome.withActive}"
-        },
-        "label-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.harsh}"
-        }
+        "$value": "{modes.color.generic.txt.severe}"
       }
     },
-    "radius": {
-      "none": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.none}",
-        "$description": "File input (top corners of integrated progress bar),"
+    "stepindicator": {
+      "bg-actv": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.actv}"
       },
-      "stepflow": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.circle}",
-        "$description": "Step flow (step indicators)"
+      "bg-complete": {
+        "$type": "color",
+        "$value": "{modes.color.status.pos.default}"
       },
-      "stepindicator": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.circle}",
-        "$description": "step indicator circles"
+      "border-actv-outer": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.actv}"
       },
-      "carouselselector": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.circle}",
-        "$description": "Carousel (selector dot)"
+      "border-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.fg.firm}"
       },
-      "integrated": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.S}",
-        "$description": "File input (bottom corners of integrated status bar)"
+      "border-success": {
+        "$type": "color",
+        "$value": "{modes.color.status.pos.default}"
       },
-      "skeleton": {
-        "moderate": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.M}",
-          "$description": "used to represent headings, inputs and text"
-        },
-        "curved": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.L}",
-          "$description": "used to represent elements such as icons"
-        },
-        "sweeping": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.XXL}",
-          "$description": "used to represent buttons"
-        },
-        "circle": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.circle}",
-          "$description": "Used to represent circular elements such as profiles, badges etc"
-        }
+      "label-actv": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.withActv}"
       },
-      "bar": {
-        "S": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.XS}",
-          "$description": "Progress tracker S"
-        },
-        "M": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.S}",
-          "$description": "File input (bottom corners of integrated status bar), Progress tracker M, "
-        },
-        "L": {
-          "$type": "borderRadius",
-          "$value": "{global.radius.container.SM}",
-          "$description": "Progress tracker L"
-        }
-      }
-    },
-    "borderwidth": {
-      "bar": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Progress bar (all sizes) "
+      "label-complete": {
+        "$type": "color",
+        "$value": "{modes.color.action.gryscl.withActv}"
       },
-      "carouselector": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Carousel slide selector dots "
-      },
-      "integrated": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.XS}",
-        "$description": "Progress bar in File upload "
-      },
-      "stepflow": {
-        "inner": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.XS}",
-          "$description": "Step flow default (not started)"
-        },
-        "active-inner": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.S}",
-          "$description": "Step flow active step border outer"
-        },
-        "active-outer": {
-          "$type": "borderWidth",
-          "$value": "{global.borderwidth.L}",
-          "$description": "Step flow active step border outermost"
-        }
-      },
-      "stepindicator": {
-        "S": {
-          "active": {
-            "$type": "borderWidth",
-            "$value": "{global.borderwidth.S}"
-          },
-          "default": {
-            "$type": "borderWidth",
-            "$value": "{global.borderwidth.S}"
-          }
-        },
-        "M": {
-          "active": {
-            "$type": "borderWidth",
-            "$value": "{global.borderwidth.M}"
-          },
-          "default": {
-            "$type": "borderWidth",
-            "$value": "{global.borderwidth.M}"
-          }
-        }
-      }
-    },
-    "space": {
-      "carouselselector": {
-        "xg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Gap between selectors."
-          }
-        },
-        "y": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Vertical padding on selector group."
-          }
-        }
-      },
-      "integral": {
-        "x": {
-          "$type": "spacing",
-          "$value": "{global.space.micro.S}",
-          "$description": "Little space between words in progress components"
-        }
-      },
-      "loader": {
-        "yg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.M}",
-            "$description": "gap between loader visual and loading text"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "gap between loader visual and loading text"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XL}",
-            "$description": "gap between loader visual and loading text"
-          }
-        },
-        "xg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Gap between loader graphic and label."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "Gap between loader graphic and label."
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Gap between loader graphic and label."
-          }
-        }
-      },
-      "skeleton": {
-        "multiline": {
-          "yg": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "vertical gap between skeleton bars"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XL}",
-              "$description": "vertical gap between skeleton bars"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.M}",
-              "$description": "vertical gap between skeleton bars"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "vertical gap between skeleton bars"
-            },
-            "XL": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XL}",
-              "$description": "vertical gap between skeleton bars"
-            }
-          },
-          "y": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Top bottom padding on grouped lines"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Top bottom padding on grouped lines"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XS}",
-              "$description": "Top bottom padding on grouped lines"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XS}",
-              "$description": "Top bottom padding on grouped lines"
-            },
-            "XL": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Top bottom padding on grouped lines"
-            }
-          }
-        },
-        "singleline": {
-          "xg": {
-            "XS": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "horizontal gap between elements"
-            },
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "horizontal gap between elements"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL}",
-              "$description": "horizontal gap between elements"
-            },
-            "L": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL}",
-              "$description": "horizontal gap between elements"
-            },
-            "XL": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "horizontal gap between elements"
-            }
-          }
-        }
-      },
-      "stepflow": {
-        "y": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "Vertical padding around step indicators"
-          }
-        },
-        "yg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Gap between step heading and back link."
-          }
-        },
-        "steps": {
-          "xg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "Gap between step indicators"
-            }
-          },
-          "yg": {
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.S}",
-              "$description": "Gap between glow heading, step label and step indicators"
-            }
-          }
-        }
-      },
-      "tracker": {
-        "yg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.M}",
-            "$description": "Space between bar and label"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Space between bar and label"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "Space between bar and label"
-          }
-        },
-        "xg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Gap between tracker value text and description"
-          }
-        }
-      },
-      "stepindicator": {
-        "generic": {
-          "g": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.XXL}",
-              "$description": "gap between timeline visual and text"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.macro.XS}",
-              "$description": "gap between timeline visual and text"
-            }
-          },
-          "text": {
-            "yg": {
-              "S": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.S}",
-                "$description": "gap between label and subtext"
-              },
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.S}",
-                "$description": "gap between label and subtext"
-              }
-            }
-          },
-          "visual": {
-            "g": {
-              "S": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.L}",
-                "$description": "gap between step number and line"
-              },
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.L}",
-                "$description": "gap between step number and line"
-              }
-            }
-          }
-        },
-        "vertical": {
-          "y": {
-            "S": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Vertical variant top padding on parent container"
-            },
-            "M": {
-              "$type": "spacing",
-              "$value": "{global.space.micro.L}",
-              "$description": "Vertical variant top padding on parent container"
-            }
-          },
-          "text": {
-            "y": {
-              "S": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.XS}",
-                "$description": "space above text and parent container on vertical variant"
-              }
-            }
-          }
-        },
-        "horizontal": {
-          "text": {
-            "x": {
-              "S": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.S}",
-                "$description": "horizontal variant left and right padding on text container"
-              },
-              "M": {
-                "$type": "spacing",
-                "$value": "{global.space.micro.L}",
-                "$description": "horizontal variant left and right padding on text container"
-              }
-            }
-          }
-        }
-      }
-    },
-    "opacity": {
-      "carousel": {
-        "inactive": {
-          "$type": "opacity",
-          "$value": "0.3",
-          "$description": "Inactive slide IMAGE layer."
-        }
+      "label-default": {
+        "$type": "color",
+        "$value": "{modes.color.generic.txt.severe}"
       }
     }
   }

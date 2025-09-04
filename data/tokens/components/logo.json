@@ -1,60 +1,49 @@
 {
   "logo": {
-    "color": {
-      "sage": {
+    "sage": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{modes.color.brand.default}",
+        "$description": "sage logo"
+      },
+      "bg-alt": {
+        "$type": "color",
+        "$value": "{modes.color.brand.defaultAlt}"
+      },
+      "inv": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.brand.default}",
+          "$value": "{modes.color.brand.inv.default}",
           "$description": "sage logo"
         },
         "bg-alt": {
           "$type": "color",
-          "$value": "{modes.color.brand.defaultAlt}"
-        }
-      },
-      "copilot": {
-        "noBg": {
-          "fg-default": {
-            "$type": "color",
-            "$value": "{modes.color.brand.copilot.noBg.monochrome}"
-          }
-        }
-      },
-      "AIIdentifier": {
-        "bg-star": {
-          "$type": "color",
-          "$value": "{modes.color.brand.copilot.AIIdentifier.default}",
-          "$description": "star bg color"
-        },
-        "bg-dot": {
-          "$type": "color",
-          "$value": "{modes.color.brand.copilot.AIIdentifier.withDefault}"
-        },
-        "outline": {
-          "$type": "color",
-          "$value": "{modes.color.brand.copilot.AIIdentifier.default}",
-          "$description": "star outline variant"
+          "$value": "{modes.color.brand.inv.defaultAlt}"
         }
       }
     },
-    "size": {
-      "AI": {
-        "M": {
-          "$type": "sizing",
-          "$value": "14px",
-          "$description": "AI star"
+    "copilot": {
+      "noBg": {
+        "fg-default": {
+          "$type": "color",
+          "$value": "{modes.color.brand.copilot.monochrome}"
         }
       }
     },
-    "space": {
-      "AI": {
-        "xg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Space between star icon and text"
-          }
-        }
+    "AiSparkle": {
+      "bg-star": {
+        "$type": "color",
+        "$value": "{modes.color.brand.copilot.default}",
+        "$description": "star bg color"
+      },
+      "bg-dot": {
+        "$type": "color",
+        "$value": "{modes.color.brand.copilot.withDefault}"
+      },
+      "outline": {
+        "$type": "color",
+        "$value": "{modes.color.brand.copilot.default}",
+        "$description": "star outline variant"
       }
     }
   }

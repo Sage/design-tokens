@@ -3,82 +3,79 @@
     "space": {
       "none": {
         "$type": "spacing",
-        "$value": "{primitives.dimension.0}"
+        "$value": "{core.dimension.0}"
       },
-      "macroScale": {
-        "$type": "spacing",
-        "$value": "1"
-      },
-      "microScale": {
-        "$type": "spacing",
-        "$value": "1"
-      },
-      "micro": {
-        "XXS": {
+      "layout": {
+        "3XS": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.12} * {global.space.microScale}"
+          "$value": "{core.dimension.100}"
+        },
+        "2XS": {
+          "$type": "spacing",
+          "$value": "{core.dimension.200}"
         },
         "XS": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.25} * {global.space.microScale}"
+          "$value": "{core.dimension.300}"
         },
         "S": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.50} * {global.space.microScale}"
+          "$value": "{core.dimension.400}"
         },
         "M": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.75} * {global.space.microScale}"
+          "$value": "{core.dimension.500}"
         },
         "L": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.100} * {global.space.microScale}"
+          "$value": "{core.dimension.600}"
         },
         "XL": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.125} * {global.space.microScale}"
+          "$value": "{core.dimension.700}"
         },
-        "XXL": {
+        "2XL": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.150} * {global.space.microScale}"
+          "$value": "{core.dimension.800}"
+        },
+        "3XL": {
+          "$type": "spacing",
+          "$value": "{core.dimension.900}"
+        },
+        "4XL": {
+          "$type": "spacing",
+          "$value": "{core.dimension.1000}"
         }
       },
-      "macro": {
-        "XXXS": {
+      "comp": {
+        "2XS": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.100} * {global.space.macroScale}"
-        },
-        "XXS": {
-          "$type": "spacing",
-          "$value": "{primitives.dimension.150} * {global.space.macroScale}"
+          "$value": "{core.dimension.25}"
         },
         "XS": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.200} * {global.space.macroScale}"
+          "$value": "{core.dimension.50}"
         },
         "S": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.250} * {global.space.macroScale}"
+          "$value": "{core.dimension.100}"
         },
         "M": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.300} * {global.space.macroScale}"
-        },
-        "ML": {
-          "$type": "spacing",
-          "$value": "{primitives.dimension.350} * {global.space.macroScale}"
+          "$value": "{core.dimension.150}",
+          "$description": "Padding inside Medium Inputs"
         },
         "L": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.400} * {global.space.macroScale}"
+          "$value": "{core.dimension.200}"
         },
         "XL": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.500} * {global.space.macroScale}"
+          "$value": "{core.dimension.300}"
         },
-        "XXL": {
+        "2XL": {
           "$type": "spacing",
-          "$value": "{primitives.dimension.600} * {global.space.macroScale}"
+          "$value": "{core.dimension.400}"
         }
       }
     }

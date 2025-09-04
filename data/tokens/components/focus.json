@@ -1,63 +1,37 @@
 {
   "focus": {
-    "color": {
+    "bg": {
+      "$type": "color",
+      "$value": "{modes.color.action.focus.withDefaultAlt}"
+    },
+    "borderalt": {
+      "$type": "color",
+      "$value": "{modes.color.action.focus.default}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{modes.color.action.focus.withDefault}"
+    },
+    "label": {
+      "$type": "color",
+      "$value": "{modes.color.action.focus.txt}"
+    },
+    "inv": {
       "bg": {
         "$type": "color",
-        "$value": "{modes.color.interactive.focus.withDefaultAlt}"
+        "$value": "{modes.color.action.focus.inv.withDefaultAlt}"
       },
       "borderalt": {
         "$type": "color",
-        "$value": "{modes.color.interactive.focus.default}"
+        "$value": "{modes.color.action.focus.inv.default}"
       },
       "border": {
         "$type": "color",
-        "$value": "{modes.color.interactive.focus.withDefault}"
+        "$value": "{modes.color.action.focus.inv.withDefault}"
       },
       "label": {
         "$type": "color",
-        "$value": "{modes.color.interactive.focus.content}"
-      },
-      "inverse": {
-        "bg": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.focus.inverse.withDefaultAlt}"
-        },
-        "borderalt": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.focus.inverse.default}"
-        },
-        "border": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.focus.inverse.withDefault}"
-        },
-        "label": {
-          "$type": "color",
-          "$value": "{modes.color.interactive.focus.inverse.content}"
-        }
-      }
-    },
-    "size": {
-      "underline": {
-        "$type": "sizing",
-        "$value": "{global.size.micro.XS}",
-        "$description": "focus black underline on links and skiplink"
-      }
-    },
-    "borderwidth": {
-      "secondary": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.S}",
-        "$description": "Secondary focus (dropdown item)"
-      },
-      "inner": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.S}",
-        "$description": "Focus border (inner)"
-      },
-      "outer": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.L}",
-        "$description": "Focus border (outer)"
+        "$value": "{modes.color.action.focus.inv.txt}"
       }
     }
   }

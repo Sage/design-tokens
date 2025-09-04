@@ -1,150 +1,22 @@
 {
   "page": {
-    "space": {
-      "none": {
-        "$type": "spacing",
-        "$value": "{global.space.none}"
-      },
-      "x": {
-        "XXXS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS} / 4"
-        },
-        "XXS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS} / 2"
-        },
-        "XS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS}"
-        },
-        "S": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.M}"
-        },
-        "M": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.L}"
-        },
-        "L": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XL}"
-        },
-        "XL": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XL} * 2"
-        }
-      },
-      "xg": {
-        "XXXS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS} / 4"
-        },
-        "XXS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS} / 2"
-        },
-        "XS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS}"
-        },
-        "S": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.M}"
-        },
-        "M": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.L}"
-        },
-        "L": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XL}"
-        },
-        "XL": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XL} * 2"
-        }
-      },
-      "yg": {
-        "XXXS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS} / 4"
-        },
-        "XXS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS} / 2"
-        },
-        "XS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS}"
-        },
-        "S": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.M}"
-        },
-        "M": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.L}"
-        },
-        "L": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XL}"
-        },
-        "XL": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XL} * 2"
-        }
-      },
-      "y": {
-        "XXXS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS} / 4"
-        },
-        "XXS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS} / 2"
-        },
-        "XS": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XS}"
-        },
-        "S": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.M}"
-        },
-        "M": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.L}"
-        },
-        "L": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XL}"
-        },
-        "XL": {
-          "$type": "spacing",
-          "$value": "{global.space.macro.XL} * 2"
-        }
-      }
+    "bg-default": {
+      "$type": "color",
+      "$value": "{modes.color.generic.surface.nought}"
     },
-    "color": {
-      "bg-default": {
-        "$type": "color",
-        "$value": "{modes.color.generic.backdrop.nought}"
-      },
-      "bg-alt": {
-        "$type": "color",
-        "$value": "{modes.color.generic.backdrop.faint}"
-      },
-      "text-alt": {
-        "$type": "color",
-        "$value": "{modes.color.generic.content.moderate}",
-        "$description": "for subheadings etc"
-      },
-      "text-default": {
-        "$type": "color",
-        "$value": "{modes.color.generic.content.harsh}",
-        "$description": "for headings, paragraph text etc "
-      }
+    "bg-alt": {
+      "$type": "color",
+      "$value": "{modes.color.generic.surface.faint}"
+    },
+    "txt-alt": {
+      "$type": "color",
+      "$value": "{modes.color.generic.txt.faint}",
+      "$description": "for subheadings etc"
+    },
+    "txt-default": {
+      "$type": "color",
+      "$value": "{modes.color.generic.txt.severe}",
+      "$description": "for headings, paragraph txt etc "
     }
   }
 }
