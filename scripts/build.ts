@@ -147,10 +147,10 @@ const getGlobalConfig = ({contextName, sizeName}: IConfig) => {
       }
     },
     log: {
-      warnings: 'warn',
-      verbosity: 'verbose',
+      warnings: "warn" as const,
+      verbosity: "verbose" as const,
       errors: {
-        brokenReferences: 'throw',
+        brokenReferences: "throw" as const,
       },
     },
   }
@@ -219,10 +219,10 @@ const getModeConfig = ({contextName, modeName, sizeName}: IConfig) => {
       }
     },
     log: {
-      warnings: 'warn',
-      verbosity: 'verbose',
+      warnings: "warn" as const,
+      verbosity: "verbose" as const,
       errors: {
-        brokenReferences: 'throw',
+        brokenReferences: "throw" as const,
       },
     },
   }
@@ -244,7 +244,7 @@ context.forEach(async (context) => {
         `Size name not found for ${size}`)
     }
 
-    const styleDictionary = new StyleDictionary(getGlobalConfig({contextName, modeName: '', sizeName}))
+    const styleDictionary = new StyleDictionary(getGlobalConfig({contextName, sizeName} as IConfig))
 
     await styleDictionary.buildPlatform('css')
     await styleDictionary.buildPlatform('scss')

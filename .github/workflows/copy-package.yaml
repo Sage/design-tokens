@@ -1,0 +1,32 @@
+name: Copy released package to X3
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+jobs:
+  # Builds token library from current data/tokens.json file and releases it.
+  release:
+    name: Copy package to X3
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Copy released package to private GitHub NPM registry
+        run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://npm.pkg.github.com --to-email="${GIT_COMMITTER_EMAIL}" --to-token="${NODE_AUTH_TOKEN}" %40sage%2Fdesign-tokens
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+      - name: Copy released package to private to X3 Nexus Registry
+        run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://repository.sagex3.com:8443/repository/x3-npm-hosted/ --to-email="${GIT_COMMITTER_EMAIL}" --to-username="${X3_NPM_USER}"  --to-password="${X3_NPM_PASSWORD}" %40sage%2Fdesign-tokens
+        env:
+          X3_NPM_USER: ${{ secrets.X3_NPM_USER }}
+          X3_NPM_PASSWORD: ${{ secrets.X3_NPM_PASSWORD }}
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}

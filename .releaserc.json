@@ -20,22 +20,6 @@
       }
     ],
     [
-      "@amanda-mitchell/semantic-release-npm-multiple",
-      {
-        "registries": {
-          "github": {
-            "changelogFile": "docs/CHANGELOG.md",
-            "pkgRoot": "dist",
-            "tarballDir": "dist"
-          },
-          "public": {
-            "changelogFile": "docs/CHANGELOG.md",
-            "pkgRoot": "dist"
-          }
-        }
-      }
-    ],
-    [
       "@semantic-release/git",
       {
         "assets": ["docs/CHANGELOG.md", "package.json"]
