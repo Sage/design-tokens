@@ -1,0 +1,513 @@
+{
+  "button": {
+    "none": {
+      "$type": "color",
+      "$value": "{mode.color.none}",
+      "$description": "transparent override used for hiding colors when needed."
+    },
+    "ai": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.ai.active}"
+      },
+      "bg-hov": {
+        "$type": "color",
+        "$value": "{mode.color.action.ai.hov}"
+      },
+      "border-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.ai.default}"
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.ai.default}"
+      },
+      "border-hov": {
+        "$type": "color",
+        "$value": "{mode.color.action.ai.default}"
+      },
+      "label-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.gryscl.withActiveAlt}"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.txt}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.gryscl.default}"
+      },
+      "label-hov": {
+        "$type": "color",
+        "$value": "{mode.color.action.gryscl.withhov}"
+      }
+    },
+    "destructive": {
+      "primary": {
+        "bg-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.default}"
+        },
+        "bg-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.danger.default}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.danger.hov}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.txtAlt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.danger.withDefault}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.danger.withDefault}"
+        }
+      },
+      "secondary": {
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.danger.hovAlt}"
+        },
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.default}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.danger.default}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.danger.hov}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.txt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.danger.default}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.danger.hov}"
+        }
+      }
+    },
+    "typical": {
+      "primary": {
+        "bg-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.active}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.withDefault}",
+          "$description": "For spacer in Split button"
+        },
+        "bg-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.default}"
+        },
+        "bg-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.default}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.hov}"
+        },
+        "label-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.withActive}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.txtAlt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.withDefault}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.withDefault}"
+        },
+        "inverse": {
+          "bg-active": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.active}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.withDefault}",
+            "$description": "For spacer in Split button"
+          },
+          "bg-disabled": {
+            "$type": "color",
+            "$value": "{mode.color.action.inactive.inverse.default}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.default}"
+          },
+          "bg-hov": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.hov}"
+          },
+          "label-active": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.withActive}"
+          },
+          "label-disabled": {
+            "$type": "color",
+            "$value": "{mode.color.action.inactive.inverse.txtAlt}"
+          },
+          "label-default": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.withDefault}"
+          },
+          "label-hov": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.withDefault}"
+          }
+        }
+      },
+      "secondary": {
+        "bg-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.activeAlt}"
+        },
+        "bg-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.defaultAlt3}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.hovAlt}"
+        },
+        "border-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.active}"
+        },
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.default}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.defaultAlt}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.hov}"
+        },
+        "label-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withActiveAlt}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.txt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.default}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withhov}"
+        },
+        "inverse": {
+          "bg-active": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.activeAlt}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.defaultAlt3}"
+          },
+          "bg-hov": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.hovAlt}"
+          },
+          "border-active": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.active}"
+          },
+          "border-disabled": {
+            "$type": "color",
+            "$value": "{mode.color.action.inactive.inverse.default}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.defaultAlt}"
+          },
+          "border-hov": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.hov}"
+          },
+          "label-active": {
+            "$type": "color",
+            "$value": "{mode.color.action.gryscl.inverse.withActiveAlt}"
+          },
+          "label-disabled": {
+            "$type": "color",
+            "$value": "{mode.color.action.inactive.inverse.txt}"
+          },
+          "label-default": {
+            "$type": "color",
+            "$value": "{mode.color.action.gryscl.inverse.default}"
+          },
+          "label-hov": {
+            "$type": "color",
+            "$value": "{mode.color.action.gryscl.inverse.withhov}"
+          }
+        }
+      },
+      "tertiary": {
+        "bg-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.activeAlt}"
+        },
+        "bg-default": {
+          "$type": "color",
+          "$value": "{button.none}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.hovAlt}"
+        },
+        "border-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.active}"
+        },
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.default}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.defaultAlt}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.main.hov}"
+        },
+        "label-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withActiveAlt}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.txt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.default}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withhov}"
+        },
+        "inverse": {
+          "bg-active": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.activeAlt}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{button.none}"
+          },
+          "bg-hov": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.hovAlt}"
+          },
+          "border-active": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.active}"
+          },
+          "border-disabled": {
+            "$type": "color",
+            "$value": "{mode.color.action.inactive.inverse.default}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.defaultAlt}"
+          },
+          "border-hov": {
+            "$type": "color",
+            "$value": "{mode.color.action.main.inverse.hov}"
+          },
+          "label-active": {
+            "$type": "color",
+            "$value": "{mode.color.action.gryscl.inverse.withActiveAlt}"
+          },
+          "label-disabled": {
+            "$type": "color",
+            "$value": "{mode.color.action.inactive.inverse.txt}"
+          },
+          "label-default": {
+            "$type": "color",
+            "$value": "{mode.color.action.gryscl.inverse.default}"
+          },
+          "label-hov": {
+            "$type": "color",
+            "$value": "{mode.color.action.gryscl.inverse.withhov}"
+          }
+        }
+      },
+      "subtle": {
+        "bg-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.activeAlt}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.hovAlt}"
+        },
+        "label-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withActiveAlt}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.txt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.default}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withhov}"
+        },
+        "inverse": {
+          "bg-active": {
+            "$type": "color",
+            "$value": "{mode.color.action.gryscl.inverse.activeAlt}"
+          },
+          "bg-hov": {
+            "$type": "color",
+            "$value": "{mode.color.action.gryscl.inverse.hovAlt}"
+          },
+          "label-active": {
+            "$type": "color",
+            "$value": "{mode.color.action.gryscl.inverse.withActiveAlt}"
+          },
+          "label-disabled": {
+            "$type": "color",
+            "$value": "{mode.color.action.inactive.inverse.txt}"
+          },
+          "label-default": {
+            "$type": "color",
+            "$value": "{mode.color.action.gryscl.inverse.default}"
+          },
+          "label-hov": {
+            "$type": "color",
+            "$value": "{mode.color.action.gryscl.inverse.withhov}"
+          }
+        }
+      },
+      "toggle": {
+        "bg-activeDisabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.default}"
+        },
+        "label-activeDisabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.txtAlt}"
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.active}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.hovAlt}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.default}"
+        },
+        "border-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.default}"
+        },
+        "label-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withActive}"
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.txt}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.defaultAlt}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withhov}"
+        }
+      }
+    },
+    "video": {
+      "bg-blur": {
+        "$type": "color",
+        "$value": "{mode.color.action.gryscl.hovAlt}"
+      },
+      "primary": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withDefault}"
+        },
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withDefault}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.default}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.default}"
+        }
+      },
+      "secondary": {
+        "bg-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withDefault}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withDefault}"
+        },
+        "border-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withDefault}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.withDefault}"
+        },
+        "label-hov": {
+          "$type": "color",
+          "$value": "{mode.color.action.gryscl.default}"
+        }
+      }
+    }
+  }
+}
