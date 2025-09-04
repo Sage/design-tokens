@@ -27,7 +27,7 @@
           "$type": "color",
           "$value": "{core.color.black}"
         },
-        "inv": {
+        "inverse": {
           "default": {
             "$type": "color",
             "$value": "{core.color.black}"
@@ -267,7 +267,7 @@
             "$value": "{core.color.white}",
             "$description": "Consumed within generic monochrome, progress"
           },
-          "inv": {
+          "inverse": {
             "nought": {
               "$type": "color",
               "$value": "{core.color.white}"
@@ -284,7 +284,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.bg.inv.nought}"
+              "$value": "{modes.color.generic.bg.inverse.nought}"
             },
             "delicate": {
               "$extensions": {
@@ -298,7 +298,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.bg.inv.nought}"
+              "$value": "{modes.color.generic.bg.inverse.nought}"
             },
             "soft": {
               "$extensions": {
@@ -312,7 +312,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.bg.inv.nought}"
+              "$value": "{modes.color.generic.bg.inverse.nought}"
             },
             "moderate": {
               "$extensions": {
@@ -326,7 +326,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.bg.inv.nought}"
+              "$value": "{modes.color.generic.bg.inverse.nought}"
             },
             "firm": {
               "$extensions": {
@@ -340,7 +340,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.bg.inv.nought}"
+              "$value": "{modes.color.generic.bg.inverse.nought}"
             },
             "harsh": {
               "$extensions": {
@@ -354,7 +354,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.bg.inv.nought}"
+              "$value": "{modes.color.generic.bg.inverse.nought}"
             },
             "severe": {
               "$extensions": {
@@ -368,7 +368,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.bg.inv.nought}"
+              "$value": "{modes.color.generic.bg.inverse.nought}"
             },
             "extreme": {
               "$type": "color",
@@ -454,7 +454,7 @@
             "$type": "color",
             "$value": "{core.color.black}"
           },
-          "inv": {
+          "inverse": {
             "extreme": {
               "$type": "color",
               "$value": "{core.color.black}"
@@ -470,7 +470,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.extreme}"
+              "$value": "{modes.color.generic.txt.inverse.extreme}"
             },
             "moderate": {
               "$extensions": {
@@ -483,7 +483,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.extreme}"
+              "$value": "{modes.color.generic.txt.inverse.extreme}"
             },
             "soft": {
               "$extensions": {
@@ -496,7 +496,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.extreme}",
+              "$value": "{modes.color.generic.txt.inverse.extreme}",
               "$description": "was 0.5. Increased to 0.55 so that we can use this for hint txt etc too, and still be accessible."
             },
             "delicate": {
@@ -510,7 +510,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.extreme}",
+              "$value": "{modes.color.generic.txt.inverse.extreme}",
               "$description": "accessible OBJECT against white."
             },
             "faint": {
@@ -524,7 +524,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.extreme}",
+              "$value": "{modes.color.generic.txt.inverse.extreme}",
               "$description": "Used for disabled txt"
             },
             "nought": {
@@ -567,7 +567,7 @@
               "$description": "Dialog top border treatment"
             }
           },
-          "inv": {
+          "inverse": {
             "nought": {
               "$type": "color",
               "$value": "{core.color.white}"
@@ -611,7 +611,7 @@
       },
       "action": {
         "ai": {
-          "actv": {
+          "active": {
             "$type": "color",
             "$value": "linear-gradient(90deg, #00D63926 0%, #00d6de26 40%, #9d60ff26 90%)"
           },
@@ -623,7 +623,7 @@
             "$type": "color",
             "$value": "{core.color.AI.vibrant.horizontal}"
           },
-          "inv": {
+          "inverse": {
             "default": {
               "$type": "color",
               "$value": "{core.color.AI.dull.horizontal}"
@@ -631,7 +631,7 @@
           }
         },
         "danger": {
-          "actv": {
+          "active": {
             "$type": "color",
             "$value": "{core.color.blush.20}",
             "$description": "active button on dark"
@@ -668,7 +668,7 @@
             "$value": "{core.color.blush.20}",
             "$description": "for links in datatables"
           },
-          "withActv": {
+          "withActive": {
             "$type": "color",
             "$value": "{core.color.black}"
           },
@@ -676,8 +676,8 @@
             "$type": "color",
             "$value": "{core.color.black}"
           },
-          "inv": {
-            "actv": {
+          "inverse": {
+            "active": {
               "$type": "color",
               "$value": "{core.color.blush.80}",
               "$description": "used on pill hov states"
@@ -715,7 +715,7 @@
               "$value": "{core.color.blush.80}",
               "$description": "used on link hov state"
             },
-            "withActv": {
+            "withActive": {
               "$type": "color",
               "$value": "{core.color.white}"
             },
@@ -731,12 +731,12 @@
             "$value": "{core.color.black}",
             "$description": "Input backgrounds."
           },
-          "withActv": {
+          "withActive": {
             "$type": "color",
             "$value": "{core.color.white}",
             "$description": "checkbox tick icon or radio handle"
           },
-          "withActvAlt": {
+          "withActiveAlt": {
             "$type": "color",
             "$value": "{core.color.black}"
           },
@@ -770,7 +770,7 @@
             "$value": "{modes.color.generic.txt.soft}",
             "$description": "Hint txt, placeholder txt, character count etc"
           },
-          "inv": {
+          "inverse": {
             "default": {
               "$type": "color",
               "$value": "{core.color.white}",
@@ -783,12 +783,12 @@
             },
             "txt": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.severe}",
+              "$value": "{modes.color.generic.txt.inverse.severe}",
               "$description": "Input txt"
             },
             "txtAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.soft}",
+              "$value": "{modes.color.generic.txt.inverse.soft}",
               "$description": "Hint txt, placeholder txt, character count etc"
             }
           }
@@ -810,7 +810,7 @@
             "$type": "color",
             "$value": "{core.color.gold.80}"
           },
-          "inv": {
+          "inverse": {
             "default": {
               "$type": "color",
               "$value": "{core.color.gold.50}"
@@ -829,7 +829,7 @@
             }
           }
         },
-        "inactv": {
+        "inactive": {
           "default": {
             "$extensions": {
               "studio.tokens": {
@@ -882,7 +882,7 @@
             "$value": "{modes.color.generic.txt.soft}",
             "$description": "Readonly icon inside form inputs. "
           },
-          "inv": {
+          "inverse": {
             "default": {
               "$extensions": {
                 "studio.tokens": {
@@ -899,22 +899,22 @@
             },
             "txt": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.delicate}",
-              "$description": "invd disabled txt inside buttons and form inputs."
+              "$value": "{modes.color.generic.txt.inverse.delicate}",
+              "$description": "inversed disabled txt inside buttons and form inputs."
             },
             "txtAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.nought}",
+              "$value": "{modes.color.generic.txt.inverse.nought}",
               "$description": " Disabled labels inside buttons and Switch."
             }
           }
         },
         "gryscl": {
-          "actv": {
+          "active": {
             "$type": "color",
             "$value": "{core.color.white}"
           },
-          "actvAlt": {
+          "activeAlt": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -925,7 +925,7 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.action.gryscl.actv}"
+            "$value": "{modes.color.action.gryscl.active}"
           },
           "default": {
             "$extensions": {
@@ -938,7 +938,7 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.action.gryscl.actv}"
+            "$value": "{modes.color.action.gryscl.active}"
           },
           "defaultAlt": {
             "$extensions": {
@@ -951,7 +951,7 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.action.gryscl.actv}",
+            "$value": "{modes.color.action.gryscl.active}",
             "$description": "subtle and toggle button txt"
           },
           "hovAlt": {
@@ -965,7 +965,7 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.action.gryscl.actv}",
+            "$value": "{modes.color.action.gryscl.active}",
             "$description": "Accordion, secondary, tertiary, menu bg on hov"
           },
           "hov": {
@@ -979,14 +979,14 @@
               }
             },
             "$type": "color",
-            "$value": "{modes.color.action.gryscl.actv}",
+            "$value": "{modes.color.action.gryscl.active}",
             "$description": "subtle table header hov"
           },
-          "withActv": {
+          "withActive": {
             "$type": "color",
             "$value": "{core.color.black}"
           },
-          "withActvAlt": {
+          "withActiveAlt": {
             "$type": "color",
             "$value": "{core.color.white}"
           },
@@ -998,12 +998,12 @@
             "$type": "color",
             "$value": "{core.color.white}"
           },
-          "inv": {
-            "actv": {
+          "inverse": {
+            "active": {
               "$type": "color",
               "$value": "{core.color.black}"
             },
-            "actvAlt": {
+            "activeAlt": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -1014,7 +1014,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.action.gryscl.inv.actv}"
+              "$value": "{modes.color.action.gryscl.inverse.active}"
             },
             "default": {
               "$type": "color",
@@ -1031,7 +1031,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.action.gryscl.inv.actv}",
+              "$value": "{modes.color.action.gryscl.inverse.active}",
               "$description": "subtle and toggle button txt"
             },
             "hovAlt": {
@@ -1045,7 +1045,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.action.gryscl.inv.actv}",
+              "$value": "{modes.color.action.gryscl.inverse.active}",
               "$description": "Accordion, secondary, tertiary, menu bg on hov"
             },
             "hov": {
@@ -1059,14 +1059,14 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.action.gryscl.inv.actv}",
+              "$value": "{modes.color.action.gryscl.inverse.active}",
               "$description": "subtle table header hov"
             },
-            "withActv": {
+            "withActive": {
               "$type": "color",
               "$value": "{core.color.white}"
             },
-            "withActvAlt": {
+            "withActiveAlt": {
               "$type": "color",
               "$value": "{core.color.black}"
             },
@@ -1081,7 +1081,7 @@
           }
         },
         "nav": {
-          "actv": {
+          "active": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -1119,7 +1119,7 @@
             "$value": "{core.color.white}",
             "$description": "hov bg for nav items"
           },
-          "withActv": {
+          "withActive": {
             "$type": "color",
             "$value": "{core.color.white}",
             "$description": "txt and icons on top of active bgs in nav contxts"
@@ -1134,8 +1134,8 @@
             "$value": "{core.color.white}",
             "$description": "hov bg for nav items"
           },
-          "inv": {
-            "actv": {
+          "inverse": {
+            "active": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -1173,14 +1173,14 @@
               "$value": "{core.color.black}",
               "$description": "hov bg for nav items"
             },
-            "withActv": {
+            "withActive": {
               "$type": "color",
               "$value": "{core.color.black}",
               "$description": "txt and icons on top of active bgs in nav contxts"
             },
             "withDefault": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.severe}",
+              "$value": "{modes.color.generic.txt.inverse.severe}",
               "$description": "hov bg for nav items"
             },
             "withhov": {
@@ -1191,11 +1191,11 @@
           }
         },
         "main": {
-          "actv": {
+          "active": {
             "$type": "color",
             "$value": "{core.color.brand.20}"
           },
-          "actvAlt": {
+          "activeAlt": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -1207,7 +1207,7 @@
             },
             "$type": "color",
             "$value": "{modes.color.action.main.default}",
-            "$description": "Active color for inv secondary and tertiary buttons"
+            "$description": "Active color for inverse secondary and tertiary buttons"
           },
           "default": {
             "$type": "color",
@@ -1225,7 +1225,7 @@
             },
             "$type": "color",
             "$value": "{modes.color.action.main.default}",
-            "$description": "border color for secondary and tertiary inv buttons"
+            "$description": "border color for secondary and tertiary inverse buttons"
           },
           "defaultAlt2": {
             "$type": "color",
@@ -1244,7 +1244,7 @@
             },
             "$type": "color",
             "$value": "{modes.color.action.main.default}",
-            "$description": "default background color of inv secondary buttons"
+            "$description": "default background color of inverse secondary buttons"
           },
           "hov": {
             "$type": "color",
@@ -1262,14 +1262,14 @@
             },
             "$type": "color",
             "$value": "{modes.color.action.main.default}",
-            "$description": "hov for inv secondary and tertiary buttons"
+            "$description": "hov for inverse secondary and tertiary buttons"
           },
           "hovAlt2": {
             "$type": "color",
             "$value": "{core.color.brand.20}",
             "$description": "hov for links"
           },
-          "withActv": {
+          "withActive": {
             "$type": "color",
             "$value": "{core.color.black}"
           },
@@ -1281,12 +1281,12 @@
             "$type": "color",
             "$value": "{core.color.black}"
           },
-          "inv": {
-            "actv": {
+          "inverse": {
+            "active": {
               "$type": "color",
               "$value": "{core.color.brand.80}"
             },
-            "actvAlt": {
+            "activeAlt": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -1297,7 +1297,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.action.main.inv.default}",
+              "$value": "{modes.color.action.main.inverse.default}",
               "$description": "Active color for secondary and tertiary buttons"
             },
             "default": {
@@ -1315,7 +1315,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.action.main.inv.default}",
+              "$value": "{modes.color.action.main.inverse.default}",
               "$description": "border color for secondary and tertiary buttons"
             },
             "defaultAlt2": {
@@ -1334,7 +1334,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.action.main.inv.default}",
+              "$value": "{modes.color.action.main.inverse.default}",
               "$description": "default background color of secondary button"
             },
             "hov": {
@@ -1352,7 +1352,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{modes.color.action.main.inv.default}",
+              "$value": "{modes.color.action.main.inverse.default}",
               "$description": "hov for secondary and tertiary buttons"
             },
             "hovAlt2": {
@@ -1360,7 +1360,7 @@
               "$value": "{core.color.brand.80}",
               "$description": "hov for links"
             },
-            "withActv": {
+            "withActive": {
               "$type": "color",
               "$value": "{core.color.white}"
             },
@@ -1431,7 +1431,7 @@
             "$type": "color",
             "$value": "{core.color.tangerine.30}"
           },
-          "inv": {
+          "inverse": {
             "default": {
               "$type": "color",
               "$value": "{core.color.tangerine.60}"
@@ -1479,14 +1479,14 @@
             "$value": "linear-gradient(135deg, #7C7C7C5C 0%, #7C7C7C0A 100%)",
             "$description": "used on skeleton txt"
           },
-          "inv": {
+          "inverse": {
             "withDefault": {
               "$type": "color",
               "$value": "{modes.color.generic.txt.extreme}"
             },
             "withDefaultAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.severe}"
+              "$value": "{modes.color.generic.txt.inverse.severe}"
             },
             "withHov": {
               "$type": "color",
@@ -1494,7 +1494,7 @@
             },
             "withHovAlt": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.extreme}"
+              "$value": "{modes.color.generic.txt.inverse.extreme}"
             }
           }
         },
@@ -1720,7 +1720,7 @@
             }
           }
         },
-        "prio": {
+        "priority": {
           "default": {
             "$type": "color",
             "$value": "{core.color.plum.40}"
@@ -1740,7 +1740,7 @@
             "$value": "{core.color.plum.90}",
             "$description": "used on pill hov states and message bg"
           },
-          "inv": {
+          "inverse": {
             "default": {
               "$type": "color",
               "$value": "{core.color.plum.60}",
@@ -1763,7 +1763,7 @@
             }
           }
         },
-        "inactv": {
+        "inactive": {
           "default": {
             "$type": "color",
             "$value": "{modes.color.generic.fg.firm}",
@@ -1774,15 +1774,15 @@
             "$value": "{modes.color.generic.txt.soft}",
             "$description": "For readonly filled pill txt"
           },
-          "inv": {
+          "inverse": {
             "default": {
               "$type": "color",
-              "$value": "{modes.color.generic.fg.inv.firm}",
+              "$value": "{modes.color.generic.fg.inverse.firm}",
               "$description": "For readonly pill bg and border"
             },
             "withDefault": {
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.soft}",
+              "$value": "{modes.color.generic.txt.inverse.soft}",
               "$description": "For readonly filled pill txt"
             }
           }
@@ -1807,7 +1807,7 @@
             "$value": "{core.color.azure.90}",
             "$description": "used on pill hov states and message bg"
           },
-          "inv": {
+          "inverse": {
             "default": {
               "$type": "color",
               "$value": "{core.color.azure.60}"
@@ -1829,7 +1829,7 @@
             }
           }
         },
-        "neg": {
+        "negative": {
           "default": {
             "$type": "color",
             "$value": "{core.color.blush.40}"
@@ -1849,7 +1849,7 @@
             "$value": "{core.color.blush.90}",
             "$description": "used on pill hov states and message bg"
           },
-          "inv": {
+          "inverse": {
             "default": {
               "$type": "color",
               "$value": "{core.color.blush.60}"
@@ -1871,7 +1871,7 @@
             }
           }
         },
-        "neut": {
+        "neutral": {
           "default": {
             "$type": "color",
             "$value": "{core.color.smoke.40}"
@@ -1891,7 +1891,7 @@
             "$value": "{core.color.smoke.90}",
             "$description": "used on pill hov states and message bg"
           },
-          "inv": {
+          "inverse": {
             "default": {
               "$type": "color",
               "$value": "{core.color.smoke.60}"
@@ -1913,7 +1913,7 @@
             }
           }
         },
-        "pos": {
+        "positive": {
           "default": {
             "$type": "color",
             "$value": "{core.color.emerald.40}"
@@ -1933,7 +1933,7 @@
             "$value": "{core.color.emerald.90}",
             "$description": "used on pill hov states and message bg"
           },
-          "inv": {
+          "inverse": {
             "default": {
               "$type": "color",
               "$value": "{core.color.emerald.60}"
