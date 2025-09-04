@@ -944,8 +944,17 @@
             "$value": "{modes.color.action.gryscl.actv}"
           },
           "defaultAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.67",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{modes.color.generic.txt.soft}",
+            "$value": "{modes.color.action.gryscl.actv}",
             "$description": "subtle and toggle button txt"
           },
           "hovAlt": {
@@ -1024,8 +1033,17 @@
               "$value": "{modes.color.action.gryscl.inv.actv}"
             },
             "defaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.67",
+                    "space": "lch"
+                  }
+                }
+              },
               "$type": "color",
-              "$value": "{modes.color.generic.txt.inv.soft}",
+              "$value": "modes.color.action.gryscl.inv.actv",
               "$description": "subtle and toggle button txt"
             },
             "hovAlt": {
