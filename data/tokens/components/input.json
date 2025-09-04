@@ -1,13 +1,13 @@
 {
   "input": {
     "calendar": {
-      "bg-actv": {
+      "bg-active": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.actv}"
+        "$value": "{modes.color.action.gryscl.active}"
       },
       "bg-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.defaultAlt}"
+        "$value": "{modes.color.action.inactive.defaultAlt}"
       },
       "bg-duration": {
         "$type": "color",
@@ -19,11 +19,11 @@
       },
       "border-duration": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.actv}"
+        "$value": "{modes.color.action.gryscl.active}"
       },
-      "txt-actv": {
+      "txt-active": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.withActv}"
+        "$value": "{modes.color.action.gryscl.withActive}"
       },
       "txt-alt": {
         "$type": "color",
@@ -32,7 +32,7 @@
       },
       "txt-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.txt}"
+        "$value": "{modes.color.action.inactive.txt}"
       },
       "txt-duration": {
         "$type": "color",
@@ -57,9 +57,9 @@
         "$value": "{popover.bg-hov}",
         "$description": "REF POPOVER "
       },
-      "label-actv": {
+      "label-active": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.withActv}"
+        "$value": "{modes.color.action.gryscl.withActive}"
       },
       "label-alt": {
         "$type": "color",
@@ -67,7 +67,7 @@
       },
       "label-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.txt}"
+        "$value": "{modes.color.action.inactive.txt}"
       },
       "label-default": {
         "$type": "color",
@@ -99,7 +99,7 @@
       },
       "label-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.txt}"
+        "$value": "{modes.color.action.inactive.txt}"
       },
       "label-readOnly": {
         "$type": "color",
@@ -129,7 +129,7 @@
       },
       "bg-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.defaultAlt}"
+        "$value": "{modes.color.action.inactive.defaultAlt}"
       },
       "bg-default": {
         "$type": "color",
@@ -141,11 +141,11 @@
       },
       "bg-readOnly": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.defaultAlt}"
+        "$value": "{modes.color.action.inactive.defaultAlt}"
       },
       "border-alt": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.default}"
+        "$value": "{modes.color.action.inactive.default}"
       },
       "border-default": {
         "$type": "color",
@@ -153,7 +153,7 @@
       },
       "border-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.default}"
+        "$value": "{modes.color.action.inactive.default}"
       },
       "border-hov": {
         "$type": "color",
@@ -162,11 +162,11 @@
       },
       "border-readOnly": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.default}"
+        "$value": "{modes.color.action.inactive.default}"
       },
-      "icon-actv": {
+      "icon-active": {
         "$type": "color",
-        "$value": "{modes.color.action.dataEntry.withActv}",
+        "$value": "{modes.color.action.dataEntry.withActive}",
         "$description": "used on tick in color picker and selected tick on dropdowns"
       },
       "icon-default": {
@@ -175,7 +175,7 @@
       },
       "icon-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.icon}"
+        "$value": "{modes.color.action.inactive.icon}"
       },
       "icon-hov": {
         "$type": "color",
@@ -183,14 +183,14 @@
       },
       "icon-readOnly": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.iconAlt}"
+        "$value": "{modes.color.action.inactive.iconAlt}"
       },
-      "iconAlt-actv": {
+      "iconAlt-active": {
         "$type": "color",
-        "$value": "{modes.color.action.dataEntry.withActvAlt}",
+        "$value": "{modes.color.action.dataEntry.withActiveAlt}",
         "$description": "used on tick in color picker"
       },
-      "txt-actv": {
+      "txt-active": {
         "$type": "color",
         "$value": "{modes.color.action.dataEntry.txt}"
       },
@@ -204,7 +204,7 @@
       },
       "txt-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.txt}"
+        "$value": "{modes.color.action.inactive.txt}"
       },
       "txt-hov": {
         "$type": "color",
@@ -231,17 +231,17 @@
       }
     },
     "switch": {
-      "bg-actv": {
+      "bg-active": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.actv}"
+        "$value": "{modes.color.action.gryscl.active}"
       },
-      "bg-actvdisabled": {
+      "bg-activatedisabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.default}"
+        "$value": "{modes.color.action.inactive.default}"
       },
       "bg-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.defaultAlt}",
+        "$value": "{modes.color.action.inactive.defaultAlt}",
         "$description": "for switch"
       },
       "bg-default": {
@@ -249,49 +249,49 @@
         "$value": "{modes.color.action.dataEntry.default}",
         "$description": "for switch"
       },
-      "border-actv": {
+      "border-active": {
         "$type": "color",
         "$value": "transparent"
       },
-      "border-actvDisabled": {
+      "border-activeDisabled": {
         "$type": "color",
         "$value": "transparent"
       },
       "border-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.default}"
+        "$value": "{modes.color.action.inactive.default}"
       },
       "border-default": {
         "$type": "color",
         "$value": "{modes.color.action.dataEntry.withDefault}"
       },
-      "fg-actv": {
+      "fg-active": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.withActv}"
+        "$value": "{modes.color.action.gryscl.withActive}"
       },
-      "fg-actvdisabled": {
+      "fg-activatedisabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.txtAlt}"
+        "$value": "{modes.color.action.inactive.txtAlt}"
       },
       "fg-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.default}"
+        "$value": "{modes.color.action.inactive.default}"
       },
       "fg-default": {
         "$type": "color",
         "$value": "{modes.color.action.dataEntry.withDefault}"
       },
-      "label-actv": {
+      "label-active": {
         "$type": "color",
         "$value": "{modes.color.action.dataEntry.txt}"
       },
-      "label-actvdisabled": {
+      "label-activatedisabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.default}"
+        "$value": "{modes.color.action.inactive.default}"
       },
       "label-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.default}"
+        "$value": "{modes.color.action.inactive.default}"
       },
       "label-default": {
         "$type": "color",
