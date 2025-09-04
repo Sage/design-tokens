@@ -35,18 +35,18 @@
       }
     },
     "action": {
-      "bgFooter-Actvd": {
+      "bgFooter-activated": {
         "$type": "color",
-        "$value": "{modes.color.status.pos.default}",
+        "$value": "{modes.color.status.positive.default}",
         "$description": " "
       },
-      "bgFooter-actv": {
+      "bgFooter-active": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.actv}"
+        "$value": "{modes.color.action.gryscl.active}"
       },
-      "border-Actvd": {
+      "border-activated": {
         "$type": "color",
-        "$value": "{modes.color.status.pos.default}"
+        "$value": "{modes.color.status.positive.default}"
       },
       "bgFooter-default": {
         "$type": "color",
@@ -59,16 +59,16 @@
       },
       "bg-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.defaultAlt}"
+        "$value": "{modes.color.action.inactive.defaultAlt}"
       },
       "bg-hov": {
         "$type": "color",
         "$value": "{modes.color.action.gryscl.hovAlt}",
         "$description": "Used for accordion hov backgrounds "
       },
-      "border-actv": {
+      "border-active": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.actv}"
+        "$value": "{modes.color.action.gryscl.active}"
       },
       "border-alt": {
         "$type": "color",
@@ -80,7 +80,7 @@
         "$value": "{modes.color.action.gryscl.default}",
         "$description": "For hov border on Link preview."
       },
-      "border-inactv": {
+      "border-inactive": {
         "$type": "color",
         "$value": "{mode.color.generic.fg.firm}"
       },
@@ -88,9 +88,9 @@
         "$type": "color",
         "$value": "{mode.color.generic.fg.firm}"
       },
-      "icon-actv": {
+      "icon-active": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.actv}",
+        "$value": "{modes.color.action.gryscl.active}",
         "$description": "Active chevron for any accordion."
       },
       "icon-default": {
@@ -108,22 +108,22 @@
         "$value": "{modes.color.action.gryscl.default}",
         "$description": "hov chevron for any accordion."
       },
-      "labelFooter-actv": {
+      "labelFooter-active": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.withActv}"
+        "$value": "{modes.color.action.gryscl.withActive}"
       },
-      "labelFooter-Actvd": {
+      "labelFooter-activated": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.withActv}"
+        "$value": "{modes.color.action.gryscl.withActive}"
       },
-      "txt-actv": {
+      "txt-active": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.actv}",
+        "$value": "{modes.color.action.gryscl.active}",
         "$description": "Active label for any accordion."
       },
       "txt-disabled": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.txt}"
+        "$value": "{modes.color.action.inactive.txt}"
       },
       "txt-default": {
         "$type": "color",
@@ -164,14 +164,14 @@
         "$type": "color",
         "$value": "{mode.color.generic.fg.firm}"
       },
-      "inv": {
+      "inverse": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.inv.soft}"
+          "$value": "{modes.color.generic.bg.inverse.soft}"
         },
         "fg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.inv.moderate}"
+          "$value": "{modes.color.generic.fg.inverse.firm}"
         }
       }
     },
@@ -189,9 +189,9 @@
         "$value": "{mode.color.generic.bg.faint}",
         "$description": "tile footer bg color "
       },
-      "border-actv": {
+      "border-active": {
         "$type": "color",
-        "$value": "{modes.color.action.gryscl.actv}"
+        "$value": "{modes.color.action.gryscl.active}"
       },
       "border-alt": {
         "$type": "color",
@@ -203,7 +203,7 @@
       },
       "dimmer": {
         "$type": "color",
-        "$value": "{modes.color.action.inactv.mask}",
+        "$value": "{modes.color.action.inactive.mask}",
         "$description": "dimmed mask for dialogs"
       },
       "icon": {
@@ -221,7 +221,7 @@
         "$value": "{modes.color.generic.txt.harsh}",
         "$description": "for headings, paragraph txt etc "
       },
-      "statusborder": {
+      "priority": {
         "bg-ai": {
           "$type": "color",
           "$value": "{container.AI.tile.borderV}"
@@ -230,44 +230,44 @@
           "$type": "color",
           "$value": "{modes.color.status.warn.default}"
         },
-        "bg-neg": {
+        "bg-negative": {
           "$type": "color",
-          "$value": "{modes.color.status.neg.default}"
+          "$value": "{modes.color.status.negative.default}"
         },
         "bg-prio": {
           "$type": "color",
-          "$value": "{modes.color.status.prio.default}"
+          "$value": "{modes.color.status.priority.default}"
         },
         "bg-info": {
           "$type": "color",
           "$value": "{modes.color.status.info.default}"
         },
-        "bg-neut": {
+        "bg-neutral": {
           "$type": "color",
-          "$value": "{modes.color.status.neut.default}"
+          "$value": "{modes.color.status.neutral.default}"
         },
-        "bg-pos": {
+        "bg-positive": {
           "$type": "color",
-          "$value": "{modes.color.status.pos.default}"
+          "$value": "{modes.color.status.positive.default}"
         }
       },
-      "inv": {
+      "inverse": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.bg.inv.nought}"
+          "$value": "{modes.color.generic.bg.inverse.nought}"
         },
         "border-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.fg.inv.faint}"
+          "$value": "{modes.color.generic.fg.inverse.soft}"
         },
         "txt-alt": {
           "$type": "color",
-          "$value": "{modes.color.generic.txt.inv.moderate}",
+          "$value": "{modes.color.generic.txt.inverse.faint}",
           "$description": "for subheadings etc"
         },
         "txt-default": {
           "$type": "color",
-          "$value": "{modes.color.generic.txt.inv.harsh}",
+          "$value": "{modes.color.generic.txt.inverse.severe}",
           "$description": "for headings, paragraph txt etc "
         }
       }
