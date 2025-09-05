@@ -21,9 +21,10 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
+          cache: "npm"
 
-      - run: yarn install
+      - run: npm ci --prefer-offline
 
       - name: Append .env
         run: |
@@ -33,7 +34,7 @@ jobs:
           " >> .env
 
       - name: Build
-        run: yarn run build
+        run: npm run build
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6
@@ -43,7 +44,7 @@ jobs:
           git_user_signingkey: true
           git_commit_gpgsign: true
 
-      - name: Release package to NPM registries
+      - name: Release package to NPM registry
         run: npx semantic-release --debug
         env:
           GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
