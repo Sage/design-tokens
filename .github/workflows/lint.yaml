@@ -17,10 +17,11 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
+          cache: "npm"
 
       - name: Install
-        run: yarn install
+        run: npm ci --prefer-offline
 
       - name: Build project
         run: npm run build
