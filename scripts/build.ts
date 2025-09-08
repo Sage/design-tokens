@@ -9,7 +9,7 @@ import { FilterComponent } from './utils/filter-component.js'
 import { Config } from "style-dictionary"
 
 const components = fs.readdirSync('./data/tokens/components/')
-const modes = fs.readdirSync('./data/tokens/modes/')
+const modes = fs.readdirSync('./data/tokens/mode/')
 
 interface IMode {
   modeName?: string
@@ -39,7 +39,7 @@ const getMode = ({modeName = '', format, suffix}: IMode): File[] => {
   })
   
   return [
-    ...getFiles({componentName: 'modes', modeName, format, suffix}),
+    ...getFiles({componentName: 'mode', modeName, format, suffix}),
     ...componentArray
   ]
 }
@@ -50,7 +50,7 @@ const getFiles = ({componentName, modeName = '', format, suffix, outputRefs = fa
     let path = ""
 
     switch(componentName) {
-      case 'modes':
+      case 'mode':
         path = modeName;
         break
       case 'global':
@@ -148,7 +148,7 @@ const getModeConfig = (modeName: string): Config => {
     source: [
       './data/tokens/core.json',
       './data/tokens/global/*.json',
-      `./data/tokens/modes/${modeName}.json`,
+      `./data/tokens/mode/${modeName}.json`,
       './data/tokens/components/*.json'
     ],
     preprocessors: ['tokens-studio'],
