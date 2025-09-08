@@ -1,264 +1,88 @@
 {
   "popover": {
     "size": {
-      "icon": {
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.icon.M}"
-        }
-      },
-      "item": {
-        "S": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.S}",
-          "$description": "REF'D IN FORM. Menu item min height."
-        },
-        "M": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.M}",
-          "$description": "REF'D IN FORM. Menu item min height."
-        },
-        "L": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.L}",
-          "$description": "REF'D IN FORM. Menu item min height."
-        }
-      },
       "menu": {
         "minwidth": {
           "S": {
             "$type": "sizing",
-            "$value": "{container.size.responsive.M} / 2",
+            "$value": "{container.size.fluidItems.M} / 2",
             "$description": "minwidth of small size popover menu container"
           },
           "M": {
             "$type": "sizing",
-            "$value": "{container.size.responsive.XS}",
+            "$value": "{container.size.fluidItems.XS}",
             "$description": "minwidth of medium size popover menu container"
           },
           "L": {
             "$type": "sizing",
-            "$value": "{container.size.responsive.S}",
+            "$value": "{container.size.fluidItems.S}",
             "$description": "minwidth of large size popover menu container"
           }
         },
         "maxwidth": {
           "S": {
             "$type": "sizing",
-            "$value": "{container.size.responsive.M}",
+            "$value": "{container.size.fluidItems.M}",
             "$description": "maxwidth of small size popover menu container"
           },
           "M": {
             "$type": "sizing",
-            "$value": "{container.size.responsive.L}",
+            "$value": "{container.size.fluidItems.L}",
             "$description": "maxwidth of medium size popover menu container"
           },
           "L": {
             "$type": "sizing",
-            "$value": "{container.size.responsive.XL}",
+            "$value": "{container.size.fluidItems.XL}",
             "$description": "maxwidth of large size popover menu container"
           }
         }
       }
     },
-    "radius": {
-      "none": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.none}",
-        "$description": "Navigation menu top corners"
-      },
-      "container": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.M}",
-        "$description": "REF'D IN FORM. Menu container."
-      },
-      "optionfocus": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.container.M}",
-        "$description": "Popover menu option focus"
-      }
+    "bg-active": {
+      "$type": "color",
+      "$value": "{mode.color.action.gryscl.active}",
+      "$description": "previously action minor 850"
     },
-    "boxshadow": {
-      "container": {
-        "$type": "boxShadow",
-        "$value": "{global.boxshadow.container.near}",
-        "$description": "REF'D IN FORM. Popover container for Button popover, Button split, (and Form calendar, color picker, dropdown) "
-      }
+    "bg-activeAlt": {
+      "$type": "color",
+      "$value": "{mode.color.action.gryscl.hovAlt}",
+      "$description": "REF'D IN FORM. "
     },
-    "space": {
-      "menu": {
-        "x": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXS} / 2",
-            "$description": "Left and right padding token used on small popover container consumed inside number input."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Left and right padding token used on medium popover container consumed inside number input."
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXS}",
-            "$description": "Left and right padding token used on large popover container consumed inside number input."
-          }
-        },
-        "y": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXS} / 2",
-            "$description": "Top and bottom padding inside S size popover menu container"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Top and bottom padding inside M size popover menu container"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXS}",
-            "$description": "Top and bottom padding inside L size popover menu container"
-          }
-        },
-        "yg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXS} / 2",
-            "$description": "Gap spacing token used on small popover container consumed inside number input."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXXS}",
-            "$description": "Gap spacing token used on medium popover container consumed inside number input."
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XXS}",
-            "$description": "Gap spacing token used on large popover container consumed inside number input."
-          }
-        }
-      },
-      "option": {
-        "x": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "REF'D in FORM. Right left padding on popover option."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "REF'D in FORM. Right left padding on popover option."
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XXL}",
-            "$description": "REF'D in FORM. Right left padding on popover option."
-          }
-        },
-        "xg": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Gap between left icon and menu button label"
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Gap between left icon and menu button label"
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Gap between left icon and menu button label"
-          }
-        },
-        "y": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.S}",
-            "$description": "REF'D in FORM. Vertical padding on popover option."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "REF'D in FORM. Vertical padding on popover option."
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.XL}",
-            "$description": "REF'D in FORM. Vertical padding on popover option."
-          }
-        }
-      },
-      "submenu": {
-        "x": {
-          "S": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Right left padding on small screen submenu popover container."
-          },
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Right left padding on small screen submenu popover container."
-          },
-          "L": {
-            "$type": "spacing",
-            "$value": "{global.space.macro.XS}",
-            "$description": "Right left padding on small screen submenu popover container."
-          }
-        }
-      }
+    "bg-default": {
+      "$type": "color",
+      "$value": "{mode.color.generic.bg.nought}",
+      "$description": "REF'D IN FORM. Popover container bg"
     },
-    "color": {
-      "bg-active": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.active}",
-        "$description": "previously action minor 850"
-      },
-      "bg-activealt": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.hoverAlt}",
-        "$description": "REF'D IN FORM. "
-      },
+    "bg-hov": {
+      "$type": "color",
+      "$value": "{mode.color.action.gryscl.hovAlt}",
+      "$description": "REF'D IN FORM. "
+    },
+    "label-active": {
+      "$type": "color",
+      "$value": "{mode.color.action.gryscl.withActive}"
+    },
+    "label-activeAlt": {
+      "$type": "color",
+      "$value": "{mode.color.action.gryscl.withhov}"
+    },
+    "label-disabled": {
+      "$type": "color",
+      "$value": "{mode.color.action.inactive.txt}"
+    },
+    "label-hov": {
+      "$type": "color",
+      "$value": "{mode.color.action.gryscl.withhov}"
+    },
+    "label-default": {
+      "$type": "color",
+      "$value": "{mode.color.action.gryscl.defaultAlt}"
+    },
+    "submenu": {
       "bg-default": {
         "$type": "color",
-        "$value": "{modes.color.generic.bg.nought}",
-        "$description": "REF'D IN FORM. Popover container bg"
-      },
-      "bg-hover": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.hoverAlt}",
-        "$description": "REF'D IN FORM. "
-      },
-      "label-active": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withActive}"
-      },
-      "label-activealt": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withHover}"
-      },
-      "label-disabled": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.inactive.content}"
-      },
-      "label-hover": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.withHover}"
-      },
-      "label-default": {
-        "$type": "color",
-        "$value": "{modes.color.interactive.monochrome.defaultAlt}"
-      },
-      "submenu": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.bg.faint}",
-          "$description": "popover small screen submenu container bg"
-        }
+        "$value": "{mode.color.generic.bg.faint}",
+        "$description": "popover small screen submenu container bg"
       }
     }
   }
