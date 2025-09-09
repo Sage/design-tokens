@@ -847,6 +847,15 @@
             "$description": "Disabled form secondary, tertiary and input borders borders."
           },
           "mask": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.4",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
             "$value": "{core.color.black}",
             "$description": "full screen takeover token for modal dimmer"
