@@ -7,7 +7,8 @@
     },
     "bg-skeleton": {
       "$type": "color",
-      "$value": "{mode.color.status.txt.loading}"
+      "$value": "{mode.color.status.txt.loading}",
+      "$description": "This token is passed into a linear gradient 2 times with different opacities."
     },
     "bg-default": {
       "$type": "color",
@@ -48,7 +49,7 @@
     },
     "label-alt": {
       "$type": "color",
-      "$value": "{mode.color.generic.txt.soft}"
+      "$value": "{mode.color.generic.txt.moderate}"
     },
     "label-default": {
       "$type": "color",
@@ -58,6 +59,12 @@
       "fg-default": {
         "$type": "color",
         "$value": "{mode.color.status.custom.teal.default}"
+      }
+    },
+    "inverse": {
+      "label-alt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.inverse.soft}"
       }
     },
     "loader": {
