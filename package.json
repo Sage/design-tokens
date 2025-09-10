@@ -30,7 +30,6 @@
     "stylelint:dist": "npx stylelint 'dist/**/*.{css,scss}' --report-needless-disables --report-descriptionless-disables --report-invalid-scope-disables"
   },
   "devDependencies": {
-    "@amanda-mitchell/semantic-release-npm-multiple": "^3.11.1",
     "@prantlf/jsonlint": "^16.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
@@ -49,12 +48,12 @@
     "chai": "^5.1.2",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "dotenv": "^16.4.5",
-    "eslint": "^9.15.0",
+    "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-header": "^3.1.1",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-n": "^17.14.0",
-    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
     "fantasticon": "^3.0.0",
     "figma-js": "^1.16.0",
     "fs-extra": "^11.2.0",
@@ -66,6 +65,7 @@
     "nodemon": "^3.1.7",
     "prettier": "^3.4.1",
     "scss": "^0.2.4",
+    "semantic-release": "^24.0.0",
     "style-dictionary": "^4.2.0",
     "stylelint": "^16.10.0",
     "stylelint-config-standard": "^36.0.1",
@@ -75,7 +75,9 @@
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   },
-  "resolutions": {
-    "jackspeak": "2.1.1"
+  "overrides": {
+    "jackspeak": "2.1.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0"
   }
 }
