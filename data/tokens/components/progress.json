@@ -5,11 +5,6 @@
       "$value": "{mode.color.none}",
       "$description": "transparent override used for hiding colors when needed."
     },
-    "bg-skeleton": {
-      "$type": "color",
-      "$value": "{mode.color.status.txt.loading}",
-      "$description": "This token is passed into a linear gradient 2 times with different opacities."
-    },
     "bg-default": {
       "$type": "color",
       "$value": "{mode.color.generic.bg.delicate}"
@@ -71,6 +66,10 @@
       "bg-default": {
         "$type": "color",
         "$value": "{mode.color.generic.bg.delicate}"
+      },
+      "bg-skeleton": {
+        "$type": "color",
+        "$value": "linear-gradient(135deg, {mode.color.status.flex.stop-1} 15%, {mode.color.status.flex.stop-2} 85%)"
       },
       "fg-default": {
         "$type": "color",

@@ -1528,6 +1528,34 @@
             "$description": "marketing banner hover"
           }
         },
+        "flex": {
+          "stop-1": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.8",
+                  "space": "lch"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{core.color.smoke.50}"
+          },
+          "stop-2": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.04",
+                  "space": "lch"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{core.color.smoke.50}"
+          }
+        },
         "warn": {
           "default": {
             "$type": "color",
