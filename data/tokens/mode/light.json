@@ -14,6 +14,34 @@
         "$type": "color",
         "$value": "{core.color.white}"
       },
+      "ai": {
+        "stop-1": {
+          "$type": "color",
+          "$value": "{core.color.AI.dull.pea}"
+        },
+        "stop-2": {
+          "$type": "color",
+          "$value": "{core.color.AI.dull.aqua}"
+        },
+        "stop-3": {
+          "$type": "color",
+          "$value": "{core.color.AI.dull.lilac}"
+        },
+        "alt": {
+          "stop-1": {
+            "$type": "color",
+            "$value": "{core.color.AI.vibrant.pea}"
+          },
+          "stop-2": {
+            "$type": "color",
+            "$value": "{core.color.AI.vibrant.aqua}"
+          },
+          "stop-3": {
+            "$type": "color",
+            "$value": "{core.color.AI.vibrant.lilac}"
+          }
+        }
+      },
       "brand": {
         "default": {
           "$type": "color",
@@ -564,7 +592,7 @@
           "ai": {
             "default": {
               "$type": "color",
-              "$value": "{core.color.AI.vibrant.horizontal}",
+              "$value": "linear-gradient(90deg, {mode.color.ai.alt.stop-1}  0%, {mode.color.ai.alt.stop-2} 40%, {mode.color.ai.alt.stop-3} 90%)",
               "$description": "Dialog top border treatment."
             }
           },
@@ -612,22 +640,106 @@
       },
       "action": {
         "ai": {
+          "grad": {
+            "active": {
+              "$type": "color",
+              "$value": "linear-gradient(90deg, {mode.color.action.ai.active.stop-1} 0%, {mode.color.action.ai.active.stop-2} 40%, {mode.color.action.ai.active.stop-3} 90%)"
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "linear-gradient(90deg, {mode.color.action.ai.hover.stop-1} 0%, {mode.color.action.ai.hover.stop-2} 40%, {mode.color.action.ai.hover.stop-3} 90%)"
+            },
+            "default": {
+              "$type": "color",
+              "$value": "linear-gradient(90deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
+            }
+          },
           "active": {
-            "$type": "color",
-            "$value": "linear-gradient(90deg, #13A03826 0%, #14919726 40%, #a87cfb26 90%)"
+            "stop-1": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.15",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-1}"
+            },
+            "stop-2": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.15",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-2}"
+            },
+            "stop-3": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.15",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-3}"
+            }
           },
           "hover": {
-            "$type": "color",
-            "$value": "linear-gradient(90deg, #13A03814 0%, #14919714 40%, #a87cfb14 90%)"
-          },
-          "default": {
-            "$type": "color",
-            "$value": "{core.color.AI.dull.horizontal}"
+            "stop-1": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.08",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-1}"
+            },
+            "stop-2": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.08",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-2}"
+            },
+            "stop-3": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.08",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-3}"
+            }
           },
           "inverse": {
             "default": {
               "$type": "color",
-              "$value": "{core.color.AI.vibrant.horizontal}"
+              "$value": "linear-gradient(90deg, {mode.color.ai.alt.stop-1}  0%, {mode.color.ai.alt.stop-2} 40%, {mode.color.ai.alt.stop-3} 90%)"
             }
           }
         },
@@ -1408,11 +1520,11 @@
           },
           "default-horizontal": {
             "$type": "color",
-            "$value": "{core.color.AI.dull.horizontal}"
+            "$value": "linear-gradient(90deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
           },
           "default-vertical": {
             "$type": "color",
-            "$value": "{core.color.AI.dull.vertical}"
+            "$value": "linear-gradient(180deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
           }
         },
         "callout": {
