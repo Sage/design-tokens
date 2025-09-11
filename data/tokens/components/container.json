@@ -1,39 +1,5 @@
 {
   "container": {
-    "AI": {
-      "dialog": {
-        "borderH": {
-          "$type": "color",
-          "$value": "{mode.color.generic.fg.ai.default}",
-          "$description": "top border for AI dialog component"
-        }
-      },
-      "nudge": {
-        "borderAi-H": {
-          "$type": "color",
-          "$value": "{mode.color.status.ai.default-horizontal}",
-          "$description": "top and bottom border for AI nudge message component"
-        },
-        "borderAi-V": {
-          "$type": "color",
-          "$value": "{mode.color.status.ai.default-vertical}",
-          "$description": "left and right border for AI nudge message component"
-        }
-      },
-      "tile": {
-        "borderV": {
-          "$type": "color",
-          "$value": "{mode.color.status.ai.default-vertical}",
-          "$description": "left border for AI tiles and bubbles."
-        }
-      }
-    },
-    "quote": {
-      "border": {
-        "$type": "color",
-        "$value": "{mode.color.action.main.default}"
-      }
-    },
     "action": {
       "bgFooter-activated": {
         "$type": "color",
@@ -193,6 +159,16 @@
         "$type": "color",
         "$value": "{mode.color.action.gryscl.active}"
       },
+      "border-AiH": {
+        "$type": "color",
+        "$value": "{mode.color.status.ai.inverse.default-horizontal}",
+        "$description": "top border for AI dialog component"
+      },
+      "border-AiV": {
+        "$type": "color",
+        "$value": "{mode.color.status.ai.inverse.default-vertical}",
+        "$description": "left and right border for AI nudge message component"
+      },
       "border-alt": {
         "$type": "color",
         "$value": "{mode.color.generic.fg.firm}"
@@ -248,7 +224,7 @@
       "priority": {
         "bg-ai": {
           "$type": "color",
-          "$value": "{container.AI.tile.borderV}"
+          "$value": "{mode.color.status.ai.inverse.default-vertical}"
         },
         "bg-caution": {
           "$type": "color",
@@ -274,6 +250,12 @@
           "$type": "color",
           "$value": "{mode.color.status.positive.default}"
         }
+      }
+    },
+    "quote": {
+      "border": {
+        "$type": "color",
+        "$value": "{mode.color.action.main.default}"
       }
     },
     "size": {

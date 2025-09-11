@@ -589,13 +589,6 @@
             "$type": "color",
             "$value": "{core.color.black}"
           },
-          "ai": {
-            "default": {
-              "$type": "color",
-              "$value": "linear-gradient(90deg, {mode.color.ai.alt.stop-1}  0%, {mode.color.ai.alt.stop-2} 40%, {mode.color.ai.alt.stop-3} 90%)",
-              "$description": "Dialog top border treatment."
-            }
-          },
           "inverse": {
             "nought": {
               "$type": "color",
@@ -734,12 +727,6 @@
               },
               "$type": "color",
               "$value": "{mode.color.ai.stop-3}"
-            }
-          },
-          "inverse": {
-            "default": {
-              "$type": "color",
-              "$value": "linear-gradient(90deg, {mode.color.ai.alt.stop-1}  0%, {mode.color.ai.alt.stop-2} 40%, {mode.color.ai.alt.stop-3} 90%)"
             }
           }
         },
@@ -1525,6 +1512,16 @@
           "default-vertical": {
             "$type": "color",
             "$value": "linear-gradient(180deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
+          },
+          "inverse": {
+            "default-horizontal": {
+              "$type": "color",
+              "$value": "linear-gradient(90deg, {mode.color.ai.alt.stop-1}  0%, {mode.color.ai.alt.stop-2} 40%, {mode.color.ai.alt.stop-3} 90%)"
+            },
+            "default-vertical": {
+              "$type": "color",
+              "$value": "linear-gradient(180deg, {mode.color.ai.alt.stop-1}  0%, {mode.color.ai.alt.stop-2} 40%, {mode.color.ai.alt.stop-3} 90%)"
+            }
           }
         },
         "callout": {
