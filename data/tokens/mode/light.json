@@ -74,13 +74,28 @@
             "$type": "color",
             "$value": "{core.color.black}"
           },
+          "monochrome": {
+            "$type": "color",
+            "$value": "{core.color.black}"
+          },
           "withDefault": {
             "$type": "color",
             "$value": "{core.color.brand.50}"
           },
-          "monochrome": {
-            "$type": "color",
-            "$value": "{core.color.black}"
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{core.color.white}"
+            },
+            "monochrome": {
+              "$type": "color",
+              "$value": "{core.color.white}"
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{core.color.brand.50}",
+              "$description": "not accessible on white if it is intended to provide meaning"
+            }
           }
         }
       },
