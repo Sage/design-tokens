@@ -1,39 +1,5 @@
 {
   "container": {
-    "AI": {
-      "dialog": {
-        "borderH": {
-          "$type": "color",
-          "$value": "{mode.color.generic.fg.ai.default}",
-          "$description": "top border for AI dialog component"
-        }
-      },
-      "nudge": {
-        "borderAi-H": {
-          "$type": "color",
-          "$value": "{mode.color.status.ai.default-horizontal}",
-          "$description": "top and bottom border for AI nudge message component"
-        },
-        "borderAi-V": {
-          "$type": "color",
-          "$value": "{mode.color.status.ai.default-vertical}",
-          "$description": "left and right border for AI nudge message component"
-        }
-      },
-      "tile": {
-        "borderV": {
-          "$type": "color",
-          "$value": "{mode.color.status.ai.default-vertical}",
-          "$description": "left border for AI tiles and bubbles."
-        }
-      }
-    },
-    "quote": {
-      "border": {
-        "$type": "color",
-        "$value": "{mode.color.action.main.default}"
-      }
-    },
     "action": {
       "bgFooter-activated": {
         "$type": "color",
@@ -61,9 +27,9 @@
         "$type": "color",
         "$value": "{mode.color.action.inactive.defaultAlt}"
       },
-      "bg-hov": {
+      "bg-hover": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.hovAlt}",
+        "$value": "{mode.color.action.gryscl.hoverAlt}",
         "$description": "Used for accordion hov backgrounds "
       },
       "border-active": {
@@ -75,7 +41,7 @@
         "$value": "{mode.color.generic.fg.moderate}",
         "$description": "Link preview. "
       },
-      "borderalt-hov": {
+      "borderalt-hover": {
         "$type": "color",
         "$value": "{mode.color.action.gryscl.default}",
         "$description": "For hov border on Link preview."
@@ -103,7 +69,7 @@
         "$value": "{mode.color.action.gryscl.defaultAlt}",
         "$description": "Enabled label for subtle accordion."
       },
-      "icon-hov": {
+      "icon-hover": {
         "$type": "color",
         "$value": "{mode.color.action.gryscl.default}",
         "$description": "hov chevron for any accordion."
@@ -132,10 +98,10 @@
       },
       "txtAlt-default": {
         "$type": "color",
-        "$value": "{mode.color.generic.txt.faint}",
+        "$value": "{mode.color.generic.txt.moderate}",
         "$description": "Enabled label for subtle accordion."
       },
-      "txt-hov": {
+      "txt-hover": {
         "$type": "color",
         "$value": "{mode.color.action.gryscl.default}",
         "$description": "hov label for any accordion."
@@ -193,6 +159,16 @@
         "$type": "color",
         "$value": "{mode.color.action.gryscl.active}"
       },
+      "border-AiH": {
+        "$type": "color",
+        "$value": "{mode.color.status.ai.inverse.default-horizontal}",
+        "$description": "top border for AI dialog component"
+      },
+      "border-AiV": {
+        "$type": "color",
+        "$value": "{mode.color.status.ai.inverse.default-vertical}",
+        "$description": "left and right border for AI nudge message component"
+      },
       "border-alt": {
         "$type": "color",
         "$value": "{mode.color.generic.fg.firm}"
@@ -213,7 +189,7 @@
       },
       "txt-alt": {
         "$type": "color",
-        "$value": "{mode.color.generic.txt.faint}",
+        "$value": "{mode.color.generic.txt.moderate}",
         "$description": "for subheadings etc"
       },
       "txt-default": {
@@ -236,7 +212,7 @@
         },
         "txt-alt": {
           "$type": "color",
-          "$value": "{mode.color.generic.txt.inverse.faint}",
+          "$value": "{mode.color.generic.txt.inverse.moderate}",
           "$description": "for subheadings etc"
         },
         "txt-default": {
@@ -248,11 +224,11 @@
       "priority": {
         "bg-ai": {
           "$type": "color",
-          "$value": "{container.AI.tile.borderV}"
+          "$value": "{mode.color.status.ai.inverse.default-vertical}"
         },
         "bg-caution": {
           "$type": "color",
-          "$value": "{mode.color.status.warn.default}"
+          "$value": "{mode.color.status.warning.default}"
         },
         "bg-negative": {
           "$type": "color",
@@ -274,6 +250,12 @@
           "$type": "color",
           "$value": "{mode.color.status.positive.default}"
         }
+      }
+    },
+    "quote": {
+      "border": {
+        "$type": "color",
+        "$value": "{mode.color.action.main.default}"
       }
     },
     "size": {

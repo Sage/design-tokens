@@ -5,10 +5,6 @@
       "$value": "{mode.color.none}",
       "$description": "transparent override used for hiding colors when needed."
     },
-    "bg-skeleton": {
-      "$type": "color",
-      "$value": "{mode.color.status.txt.loading}"
-    },
     "bg-default": {
       "$type": "color",
       "$value": "{mode.color.generic.bg.delicate}"
@@ -16,11 +12,6 @@
     "border-default": {
       "$type": "color",
       "$value": "{mode.color.generic.fg.firm}"
-    },
-    "fg-ai": {
-      "$type": "color",
-      "$value": "{mode.color.action.ai.default}",
-      "$description": "For progress ring in ai buttons"
     },
     "fg-alt": {
       "$type": "color",
@@ -32,7 +23,7 @@
     },
     "fg-caution": {
       "$type": "color",
-      "$value": "{mode.color.status.warn.default}"
+      "$value": "{mode.color.status.warning.default}"
     },
     "fg-default": {
       "$type": "color",
@@ -48,7 +39,7 @@
     },
     "label-alt": {
       "$type": "color",
-      "$value": "{mode.color.generic.txt.soft}"
+      "$value": "{mode.color.generic.txt.moderate}"
     },
     "label-default": {
       "$type": "color",
@@ -60,10 +51,20 @@
         "$value": "{mode.color.status.custom.teal.default}"
       }
     },
+    "inverse": {
+      "label-alt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.inverse.soft}"
+      }
+    },
     "loader": {
       "bg-default": {
         "$type": "color",
         "$value": "{mode.color.generic.bg.delicate}"
+      },
+      "bg-skeleton": {
+        "$type": "color",
+        "$value": "linear-gradient(135deg, {mode.color.status.skeleton.stop-1} 15%, {mode.color.status.skeleton.stop-2} 85%)"
       },
       "fg-default": {
         "$type": "color",
@@ -72,7 +73,7 @@
       },
       "fg-ai": {
         "$type": "color",
-        "$value": "{mode.color.action.ai.default}",
+        "$value": "{mode.color.status.ai.default-horizontal}",
         "$description": "Loader ring or bar"
       },
       "fg-error": {
@@ -96,7 +97,7 @@
         },
         "fg-ai": {
           "$type": "color",
-          "$value": "{mode.color.action.ai.inverse.default}",
+          "$value": "{mode.color.status.ai.inverse.default-horizontal}",
           "$description": "Loader ring or bar"
         }
       }

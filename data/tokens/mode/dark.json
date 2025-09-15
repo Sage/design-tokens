@@ -14,6 +14,34 @@
         "$type": "color",
         "$value": "{core.color.white}"
       },
+      "ai": {
+        "stop-1": {
+          "$type": "color",
+          "$value": "{core.color.AI.vibrant.pea}"
+        },
+        "stop-2": {
+          "$type": "color",
+          "$value": "{core.color.AI.vibrant.aqua}"
+        },
+        "stop-3": {
+          "$type": "color",
+          "$value": "{core.color.AI.vibrant.lilac}"
+        },
+        "alt": {
+          "stop-1": {
+            "$type": "color",
+            "$value": "{core.color.AI.vibrant.pea}"
+          },
+          "stop-2": {
+            "$type": "color",
+            "$value": "{core.color.AI.vibrant.aqua}"
+          },
+          "stop-3": {
+            "$type": "color",
+            "$value": "{core.color.AI.vibrant.lilac}"
+          }
+        }
+      },
       "brand": {
         "default": {
           "$type": "color",
@@ -168,7 +196,7 @@
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
+                  "type": "alpha",
                   "value": "0.04",
                   "space": "lch",
                   "color": "{core.color.white}"
@@ -176,13 +204,13 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.generic.bg.nought}"
+            "$value": "{core.color.white}"
           },
           "delicate": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
+                  "type": "alpha",
                   "value": "0.08",
                   "space": "lch",
                   "color": "{core.color.white}"
@@ -190,13 +218,13 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.generic.bg.nought}"
+            "$value": "{core.color.white}"
           },
           "soft": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
+                  "type": "alpha",
                   "value": "0.117",
                   "space": "lch",
                   "color": "{core.color.white}"
@@ -204,13 +232,13 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.generic.bg.nought}"
+            "$value": "{core.color.white}"
           },
           "moderate": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
+                  "type": "alpha",
                   "value": "0.16",
                   "space": "lch",
                   "color": "{core.color.white}"
@@ -218,13 +246,13 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.generic.bg.nought}"
+            "$value": "{core.color.white}"
           },
           "firm": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
+                  "type": "alpha",
                   "value": "0.24",
                   "space": "lch",
                   "color": "{core.color.white}"
@@ -232,13 +260,13 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.generic.bg.nought}"
+            "$value": "{core.color.white}"
           },
           "harsh": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
+                  "type": "alpha",
                   "value": "0.32",
                   "space": "lch",
                   "color": "{core.color.white}"
@@ -246,13 +274,13 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.generic.bg.nought}"
+            "$value": "{core.color.white}"
           },
           "severe": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "mix",
+                  "type": "alpha",
                   "value": "0.40",
                   "space": "lch",
                   "color": "{core.color.white}"
@@ -260,7 +288,7 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.generic.bg.nought}"
+            "$value": "{core.color.white}"
           },
           "extreme": {
             "$type": "color",
@@ -276,7 +304,7 @@
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "mix",
+                    "type": "alpha",
                     "value": "0.04",
                     "space": "lch",
                     "color": "{core.color.black} "
@@ -284,13 +312,13 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.generic.bg.inverse.nought}"
+              "$value": "{core.color.black}"
             },
             "delicate": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "mix",
+                    "type": "alpha",
                     "value": "0.08",
                     "space": "lch",
                     "color": "{core.color.black}"
@@ -298,13 +326,13 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.generic.bg.inverse.nought}"
+              "$value": "{core.color.black}"
             },
             "soft": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "mix",
+                    "type": "alpha",
                     "value": "0.117",
                     "space": "lch",
                     "color": "{core.color.black} "
@@ -312,13 +340,13 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.generic.bg.inverse.nought}"
+              "$value": "{core.color.black}"
             },
             "moderate": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "mix",
+                    "type": "alpha",
                     "value": "0.16",
                     "space": "lch",
                     "color": "{core.color.black} "
@@ -326,13 +354,13 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.generic.bg.inverse.nought}"
+              "$value": "{core.color.black}"
             },
             "firm": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "mix",
+                    "type": "alpha",
                     "value": "0.24",
                     "space": "lch",
                     "color": "{core.color.black} "
@@ -340,13 +368,13 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.generic.bg.inverse.nought}"
+              "$value": "{core.color.black}"
             },
             "harsh": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "mix",
+                    "type": "alpha",
                     "value": "0.32",
                     "space": "lch",
                     "color": "{core.color.black} "
@@ -354,13 +382,13 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.generic.bg.inverse.nought}"
+              "$value": "{core.color.black}"
             },
             "severe": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
-                    "type": "mix",
+                    "type": "alpha",
                     "value": "0.40",
                     "space": "lch",
                     "color": "{core.color.black} "
@@ -368,7 +396,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.generic.bg.inverse.nought}"
+              "$value": "{core.color.black}"
             },
             "extreme": {
               "$type": "color",
@@ -560,13 +588,6 @@
             "$type": "color",
             "$value": "{core.color.white}"
           },
-          "ai": {
-            "default": {
-              "$type": "color",
-              "$value": "{core.color.AI.vibrant.horizontal}",
-              "$description": "Dialog top border treatment"
-            }
-          },
           "inverse": {
             "nought": {
               "$type": "color",
@@ -611,22 +632,100 @@
       },
       "action": {
         "ai": {
-          "active": {
-            "$type": "color",
-            "$value": "linear-gradient(90deg, #00D63926 0%, #00d6de26 40%, #9d60ff26 90%)"
-          },
-          "hov": {
-            "$type": "color",
-            "$value": "linear-gradient(90deg, #00D63914 0%, #00d6de14 40%, #9d60ff14 90%)"
-          },
-          "default": {
-            "$type": "color",
-            "$value": "{core.color.AI.vibrant.horizontal}"
-          },
-          "inverse": {
+          "grad": {
+            "active": {
+              "$type": "color",
+              "$value": "linear-gradient(90deg, {mode.color.action.ai.active.stop-1} 0%, {mode.color.action.ai.active.stop-2} 40%, {mode.color.action.ai.active.stop-3} 90%)"
+            },
+            "hover": {
+              "$type": "color",
+              "$value": "linear-gradient(90deg, {mode.color.action.ai.hover.stop-1} 0%, {mode.color.action.ai.hover.stop-2} 40%, {mode.color.action.ai.hover.stop-3} 90%)"
+            },
             "default": {
               "$type": "color",
-              "$value": "{core.color.AI.dull.horizontal}"
+              "$value": "linear-gradient(90deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
+            }
+          },
+          "active": {
+            "stop-1": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.15",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-1}"
+            },
+            "stop-2": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.15",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-2}"
+            },
+            "stop-3": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.15",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-3}"
+            }
+          },
+          "hover": {
+            "stop-1": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.08",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-1}"
+            },
+            "stop-2": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.08",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-2}"
+            },
+            "stop-3": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.08",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{mode.color.ai.stop-3}"
             }
           }
         },
@@ -645,11 +744,11 @@
             "$value": "{core.color.blush.30}",
             "$description": "for links in datatables "
           },
-          "hov": {
+          "hover": {
             "$type": "color",
             "$value": "{core.color.blush.30}"
           },
-          "hovAlt": {
+          "hoverAlt": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -661,9 +760,9 @@
             },
             "$type": "color",
             "$value": "{core.color.blush.40}",
-            "$description": "used on secondary-button hov states"
+            "$description": "used on secondary-button hover states"
           },
-          "hovAlt2": {
+          "hoverAlt2": {
             "$type": "color",
             "$value": "{core.color.blush.20}",
             "$description": "for links in datatables"
@@ -680,7 +779,7 @@
             "active": {
               "$type": "color",
               "$value": "{core.color.blush.80}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
             "default": {
               "$type": "color",
@@ -691,12 +790,12 @@
               "$value": "{core.color.blush.70}",
               "$description": "For links in datatables"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.blush.70}",
-              "$description": "used on solid-pill and primary-button hov states"
+              "$description": "used on solid-pill and primary-button hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -708,12 +807,12 @@
               },
               "$type": "color",
               "$value": "{core.color.blush.60}",
-              "$description": "used on secondary-button hov states"
+              "$description": "used on secondary-button hover states"
             },
-            "hovAlt2": {
+            "hoverAlt2": {
               "$type": "color",
               "$value": "{core.color.blush.80}",
-              "$description": "used on link hov state"
+              "$description": "used on link hover state"
             },
             "withActive": {
               "$type": "color",
@@ -740,15 +839,15 @@
             "$type": "color",
             "$value": "{core.color.black}"
           },
-          "withHov": {
+          "withHover": {
             "$type": "color",
             "$value": "{core.color.white}",
             "$description": "txt for draggable area on file input"
           },
-          "hovAlt": {
+          "hoverAlt": {
             "$type": "color",
             "$value": "{core.color.smoke.90}",
-            "$description": "bg hov for draggable area on file input"
+            "$description": "bg hover for draggable area on file input"
           },
           "withDefault": {
             "$type": "color",
@@ -813,7 +912,7 @@
           "inverse": {
             "default": {
               "$type": "color",
-              "$value": "{core.color.gold.50}"
+              "$value": "{core.color.black}"
             },
             "txt": {
               "$type": "color",
@@ -821,7 +920,7 @@
             },
             "withDefault": {
               "$type": "color",
-              "$value": "{core.color.black}"
+              "$value": "{core.color.gold.50}"
             },
             "withDefaultAlt": {
               "$type": "color",
@@ -845,6 +944,15 @@
             "$description": "Disabled form secondary, tertiary and input borders borders."
           },
           "mask": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.4",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
             "$value": "{core.color.white}",
             "$description": "full screen takeover token for modal dimmer"
@@ -954,7 +1062,7 @@
             "$value": "{mode.color.action.gryscl.active}",
             "$description": "subtle and toggle button txt"
           },
-          "hovAlt": {
+          "hoverAlt": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -966,9 +1074,9 @@
             },
             "$type": "color",
             "$value": "{mode.color.action.gryscl.active}",
-            "$description": "Accordion, secondary, tertiary, menu bg on hov"
+            "$description": "Accordion, secondary, tertiary, menu bg on hover"
           },
-          "hov": {
+          "hover": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -980,7 +1088,7 @@
             },
             "$type": "color",
             "$value": "{mode.color.action.gryscl.active}",
-            "$description": "subtle table header hov"
+            "$description": "subtle table header hover"
           },
           "withActive": {
             "$type": "color",
@@ -994,7 +1102,7 @@
             "$type": "color",
             "$value": "{core.color.black}"
           },
-          "withhov": {
+          "withHover": {
             "$type": "color",
             "$value": "{core.color.white}"
           },
@@ -1034,7 +1142,7 @@
               "$value": "{mode.color.action.gryscl.inverse.active}",
               "$description": "subtle and toggle button txt"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -1046,9 +1154,9 @@
               },
               "$type": "color",
               "$value": "{mode.color.action.gryscl.inverse.active}",
-              "$description": "Accordion, secondary, tertiary, menu bg on hov"
+              "$description": "Accordion, secondary, tertiary, menu bg on hover"
             },
-            "hov": {
+            "hover": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -1060,7 +1168,7 @@
               },
               "$type": "color",
               "$value": "{mode.color.action.gryscl.inverse.active}",
-              "$description": "subtle table header hov"
+              "$description": "subtle table header hover"
             },
             "withActive": {
               "$type": "color",
@@ -1074,7 +1182,7 @@
               "$type": "color",
               "$value": "{core.color.white}"
             },
-            "withhov": {
+            "withHover": {
               "$type": "color",
               "$value": "{core.color.black}"
             }
@@ -1105,7 +1213,7 @@
             "$value": "{core.color.smoke.95}",
             "$description": "default bg for left nav container"
           },
-          "hov": {
+          "hover": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -1117,7 +1225,7 @@
             },
             "$type": "color",
             "$value": "{core.color.white}",
-            "$description": "hov bg for nav items"
+            "$description": "hover bg for nav items"
           },
           "withActive": {
             "$type": "color",
@@ -1127,12 +1235,12 @@
           "withDefault": {
             "$type": "color",
             "$value": "{mode.color.generic.txt.severe}",
-            "$description": "hov bg for nav items"
+            "$description": "hover bg for nav items"
           },
-          "withhov": {
+          "withHover": {
             "$type": "color",
             "$value": "{core.color.white}",
-            "$description": "hov bg for nav items"
+            "$description": "hover bg for nav items"
           },
           "inverse": {
             "active": {
@@ -1159,7 +1267,7 @@
               "$value": "{core.color.smoke.5}",
               "$description": "default bg for left nav container"
             },
-            "hov": {
+            "hover": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -1171,7 +1279,7 @@
               },
               "$type": "color",
               "$value": "{core.color.black}",
-              "$description": "hov bg for nav items"
+              "$description": "hover bg for nav items"
             },
             "withActive": {
               "$type": "color",
@@ -1181,12 +1289,12 @@
             "withDefault": {
               "$type": "color",
               "$value": "{mode.color.generic.txt.inverse.severe}",
-              "$description": "hov bg for nav items"
+              "$description": "hover bg for nav items"
             },
-            "withhov": {
+            "withHover": {
               "$type": "color",
               "$value": "{core.color.black}",
-              "$description": "hov bg for nav items"
+              "$description": "hover bg for nav items"
             }
           }
         },
@@ -1246,11 +1354,11 @@
             "$value": "{mode.color.action.main.default}",
             "$description": "default background color of inverse secondary buttons"
           },
-          "hov": {
+          "hover": {
             "$type": "color",
             "$value": "{core.color.brand.30}"
           },
-          "hovAlt": {
+          "hoverAlt": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
@@ -1262,12 +1370,12 @@
             },
             "$type": "color",
             "$value": "{mode.color.action.main.default}",
-            "$description": "hov for inverse secondary and tertiary buttons"
+            "$description": "hover for inverse secondary and tertiary buttons"
           },
-          "hovAlt2": {
+          "hoverAlt2": {
             "$type": "color",
             "$value": "{core.color.brand.20}",
-            "$description": "hov for links"
+            "$description": "hover for links"
           },
           "withActive": {
             "$type": "color",
@@ -1277,7 +1385,7 @@
             "$type": "color",
             "$value": "{core.color.black}"
           },
-          "withhov": {
+          "withHover": {
             "$type": "color",
             "$value": "{core.color.black}"
           },
@@ -1337,11 +1445,11 @@
               "$value": "{mode.color.action.main.inverse.default}",
               "$description": "default background color of secondary button"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.brand.70}"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
@@ -1353,12 +1461,12 @@
               },
               "$type": "color",
               "$value": "{mode.color.action.main.inverse.default}",
-              "$description": "hov for secondary and tertiary buttons"
+              "$description": "hover for secondary and tertiary buttons"
             },
-            "hovAlt2": {
+            "hoverAlt2": {
               "$type": "color",
               "$value": "{core.color.brand.80}",
-              "$description": "hov for links"
+              "$description": "hover for links"
             },
             "withActive": {
               "$type": "color",
@@ -1368,7 +1476,7 @@
               "$type": "color",
               "$value": "{core.color.white}"
             },
-            "withhov": {
+            "withHover": {
               "$type": "color",
               "$value": "{core.color.white}"
             }
@@ -1388,11 +1496,21 @@
           },
           "default-horizontal": {
             "$type": "color",
-            "$value": "{core.color.AI.vibrant.horizontal}"
+            "$value": "linear-gradient(90deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
           },
           "default-vertical": {
             "$type": "color",
-            "$value": "{core.color.AI.vibrant.vertical}"
+            "$value": "linear-gradient(180deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
+          },
+          "inverse": {
+            "default-horizontal": {
+              "$type": "color",
+              "$value": "linear-gradient(90deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
+            },
+            "default-vertical": {
+              "$type": "color",
+              "$value": "linear-gradient(180deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
+            }
           }
         },
         "callout": {
@@ -1401,13 +1519,41 @@
             "$value": "{core.color.brand.95}",
             "$description": "used for marketing banners"
           },
-          "hovAlt": {
+          "hoverAlt": {
             "$type": "color",
             "$value": "{core.color.brand.90}",
-            "$description": "marketing banner hov"
+            "$description": "marketing banner hover"
           }
         },
-        "warn": {
+        "skeleton": {
+          "stop-1": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.8",
+                  "space": "lch"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{core.color.smoke.50}"
+          },
+          "stop-2": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.04",
+                  "space": "lch"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{core.color.smoke.50}"
+          }
+        },
+        "warning": {
           "default": {
             "$type": "color",
             "$value": "{core.color.tangerine.40}"
@@ -1417,15 +1563,15 @@
             "$value": "{core.color.tangerine.95}",
             "$description": "Subtle message bg"
           },
-          "hov": {
+          "hover": {
             "$type": "color",
             "$value": "{core.color.tangerine.30}",
-            "$description": "used on pill hov states"
+            "$description": "used on pill hover states"
           },
-          "hovAlt": {
+          "hoverAlt": {
             "$type": "color",
             "$value": "{core.color.tangerine.90}",
-            "$description": "used on pill hov states and message bg"
+            "$description": "used on pill hover states and message bg"
           },
           "txt": {
             "$type": "color",
@@ -1441,15 +1587,15 @@
               "$value": "{core.color.tangerine.5}",
               "$description": "Subtle message bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.tangerine.70}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.tangerine.10}",
-              "$description": "used on pill hov states and message bg"
+              "$description": "used on pill hover states and message bg"
             },
             "txt": {
               "$type": "color",
@@ -1466,17 +1612,17 @@
             "$type": "color",
             "$value": "{mode.color.generic.txt.severe}"
           },
-          "withHov": {
+          "withHover": {
             "$type": "color",
             "$value": "{mode.color.generic.txt.nought}"
           },
-          "withHovAlt": {
+          "withHoverAlt": {
             "$type": "color",
             "$value": "{mode.color.generic.txt.extreme}"
           },
           "loading": {
             "$type": "color",
-            "$value": "linear-gradient(135deg, #7C7C7C5C 0%, #7C7C7C0A 100%)",
+            "$value": "{core.color.smoke.50}",
             "$description": "used on skeleton txt"
           },
           "inverse": {
@@ -1488,11 +1634,11 @@
               "$type": "color",
               "$value": "{mode.color.generic.txt.inverse.severe}"
             },
-            "withHov": {
+            "withHover": {
               "$type": "color",
               "$value": "{mode.color.generic.txt.extreme}"
             },
-            "withHovAlt": {
+            "withHoverAlt": {
               "$type": "color",
               "$value": "{mode.color.generic.txt.inverse.extreme}"
             }
@@ -1510,15 +1656,15 @@
               "$value": "{core.color.azure.95}",
               "$description": "Pill bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.azure.30}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.azure.90}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             }
           },
           "teal": {
@@ -1532,15 +1678,15 @@
               "$value": "{core.color.petrol.95}",
               "$description": "Pill bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.petrol.30}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.petrol.90}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             }
           },
           "green": {
@@ -1554,15 +1700,15 @@
               "$value": "{core.color.emerald.95}",
               "$description": "Pill bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.emerald.30}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.emerald.90}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             }
           },
           "lime": {
@@ -1576,15 +1722,15 @@
               "$value": "{core.color.lime.95}",
               "$description": "Pill bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.lime.30}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.lime.90}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             }
           },
           "orange": {
@@ -1598,15 +1744,15 @@
               "$value": "{core.color.tangerine.95}",
               "$description": "Pill bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.tangerine.30}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.tangerine.90}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             }
           },
           "red": {
@@ -1620,15 +1766,15 @@
               "$value": "{core.color.blush.95}",
               "$description": "Pill bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.blush.30}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.blush.90}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             }
           },
           "pink": {
@@ -1642,15 +1788,15 @@
               "$value": "{core.color.flamingo.95}",
               "$description": "Pill bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.flamingo.30}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.flamingo.90}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             }
           },
           "purple": {
@@ -1664,15 +1810,15 @@
               "$value": "{core.color.plum.95}",
               "$description": "Pill bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.plum.30}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.plum.90}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             }
           },
           "gray": {
@@ -1686,15 +1832,15 @@
               "$value": "{core.color.smoke.95}",
               "$description": "Pill bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.smoke.30}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.smoke.90}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             }
           },
           "slate": {
@@ -1708,15 +1854,15 @@
               "$value": "{core.color.pewter.95}",
               "$description": "Pill bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.pewter.30}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.pewter.90}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             }
           }
         },
@@ -1730,15 +1876,15 @@
             "$value": "{core.color.plum.95}",
             "$description": "Subtle message bg"
           },
-          "hov": {
+          "hover": {
             "$type": "color",
             "$value": "{core.color.plum.30}",
-            "$description": "used on pill hov states"
+            "$description": "used on pill hover states"
           },
-          "hovAlt": {
+          "hoverAlt": {
             "$type": "color",
             "$value": "{core.color.plum.90}",
-            "$description": "used on pill hov states and message bg"
+            "$description": "used on pill hover states and message bg"
           },
           "inverse": {
             "default": {
@@ -1751,15 +1897,15 @@
               "$value": "{core.color.plum.5}",
               "$description": "Subtle message bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.plum.70}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.plum.10}",
-              "$description": "used on pill hov states and message bg"
+              "$description": "used on pill hover states and message bg"
             }
           }
         },
@@ -1797,15 +1943,15 @@
             "$value": "{core.color.azure.95}",
             "$description": "Subtle message bg"
           },
-          "hov": {
+          "hover": {
             "$type": "color",
             "$value": "{core.color.azure.30}",
-            "$description": "used on pill hov states"
+            "$description": "used on pill hover states"
           },
-          "hovAlt": {
+          "hoverAlt": {
             "$type": "color",
             "$value": "{core.color.azure.90}",
-            "$description": "used on pill hov states and message bg"
+            "$description": "used on pill hover states and message bg"
           },
           "inverse": {
             "default": {
@@ -1817,15 +1963,15 @@
               "$value": "{core.color.azure.5}",
               "$description": "Subtle message bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.azure.70}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.azure.10}",
-              "$description": "used on pill hov states and message bg"
+              "$description": "used on pill hover states and message bg"
             }
           }
         },
@@ -1839,15 +1985,15 @@
             "$value": "{core.color.blush.95}",
             "$description": "Subtle message bg"
           },
-          "hov": {
+          "hover": {
             "$type": "color",
             "$value": "{core.color.blush.30}",
-            "$description": "used on pill hov states"
+            "$description": "used on pill hover states"
           },
-          "hovAlt": {
+          "hoverAlt": {
             "$type": "color",
             "$value": "{core.color.blush.90}",
-            "$description": "used on pill hov states and message bg"
+            "$description": "used on pill hover states and message bg"
           },
           "inverse": {
             "default": {
@@ -1859,15 +2005,15 @@
               "$value": "{core.color.blush.5}",
               "$description": "Subtle message bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.blush.70}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.blush.10}",
-              "$description": "used on pill hov states and message bg"
+              "$description": "used on pill hover states and message bg"
             }
           }
         },
@@ -1881,15 +2027,15 @@
             "$value": "{core.color.smoke.95}",
             "$description": "Subtle message bg"
           },
-          "hov": {
+          "hover": {
             "$type": "color",
             "$value": "{core.color.smoke.30}",
-            "$description": "used on pill hov states"
+            "$description": "used on pill hover states"
           },
-          "hovAlt": {
+          "hoverAlt": {
             "$type": "color",
             "$value": "{core.color.smoke.90}",
-            "$description": "used on pill hov states and message bg"
+            "$description": "used on pill hover states and message bg"
           },
           "inverse": {
             "default": {
@@ -1901,15 +2047,15 @@
               "$value": "{core.color.smoke.5}",
               "$description": "Subtle message bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.smoke.70}",
-              "$description": "used on pill hov states"
+              "$description": "used on pill hover states"
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.smoke.10}",
-              "$description": "used on pill hov states and message bg"
+              "$description": "used on pill hover states and message bg"
             }
           }
         },
@@ -1923,15 +2069,15 @@
             "$value": "{core.color.emerald.95}",
             "$description": "Subtle message bg"
           },
-          "hov": {
+          "hover": {
             "$type": "color",
             "$value": "{core.color.emerald.30}",
-            "$description": "used on pill hov states"
+            "$description": "used on pill hover states"
           },
-          "hovAlt": {
+          "hoverAlt": {
             "$type": "color",
             "$value": "{core.color.emerald.90}",
-            "$description": "used on pill hov states and message bg"
+            "$description": "used on pill hover states and message bg"
           },
           "inverse": {
             "default": {
@@ -1943,15 +2089,15 @@
               "$value": "{core.color.emerald.5}",
               "$description": "Subtle message bg"
             },
-            "hov": {
+            "hover": {
               "$type": "color",
               "$value": "{core.color.emerald.70}",
-              "$description": "used on pill hov states "
+              "$description": "used on pill hover states "
             },
-            "hovAlt": {
+            "hoverAlt": {
               "$type": "color",
               "$value": "{core.color.emerald.10}",
-              "$description": "used on pill hov states and message bg"
+              "$description": "used on pill hover states and message bg"
             }
           }
         }

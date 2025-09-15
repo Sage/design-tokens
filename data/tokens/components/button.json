@@ -8,15 +8,15 @@
     "ai": {
       "bg-active": {
         "$type": "color",
-        "$value": "{mode.color.action.ai.active}"
+        "$value": "{mode.color.action.ai.grad.active}"
       },
-      "bg-hov": {
+      "bg-hover": {
         "$type": "color",
-        "$value": "{mode.color.action.ai.hov}"
+        "$value": "{mode.color.action.ai.grad.hover}"
       },
       "border-active": {
         "$type": "color",
-        "$value": "{mode.color.action.ai.default}"
+        "$value": "linear-gradient(90deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
       },
       "border-disabled": {
         "$type": "color",
@@ -24,11 +24,11 @@
       },
       "border-default": {
         "$type": "color",
-        "$value": "{mode.color.action.ai.default}"
+        "$value": "linear-gradient(90deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
       },
-      "border-hov": {
+      "border-hover": {
         "$type": "color",
-        "$value": "{mode.color.action.ai.default}"
+        "$value": "linear-gradient(90deg, {mode.color.ai.stop-1}  0%, {mode.color.ai.stop-2} 40%, {mode.color.ai.stop-3} 90%)"
       },
       "label-active": {
         "$type": "color",
@@ -42,9 +42,9 @@
         "$type": "color",
         "$value": "{mode.color.action.gryscl.default}"
       },
-      "label-hov": {
+      "label-hover": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.withhov}"
+        "$value": "{mode.color.action.gryscl.withHover}"
       }
     },
     "destructive": {
@@ -57,9 +57,9 @@
           "$type": "color",
           "$value": "{mode.color.action.danger.default}"
         },
-        "bg-hov": {
+        "bg-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.danger.hov}"
+          "$value": "{mode.color.action.danger.hover}"
         },
         "label-disabled": {
           "$type": "color",
@@ -69,15 +69,15 @@
           "$type": "color",
           "$value": "{mode.color.action.danger.withDefault}"
         },
-        "label-hov": {
+        "label-hover": {
           "$type": "color",
           "$value": "{mode.color.action.danger.withDefault}"
         }
       },
       "secondary": {
-        "bg-hov": {
+        "bg-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.danger.hovAlt}"
+          "$value": "{mode.color.action.danger.hoverAlt}"
         },
         "border-disabled": {
           "$type": "color",
@@ -87,9 +87,9 @@
           "$type": "color",
           "$value": "{mode.color.action.danger.default}"
         },
-        "border-hov": {
+        "border-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.danger.hov}"
+          "$value": "{mode.color.action.danger.hover}"
         },
         "label-disabled": {
           "$type": "color",
@@ -99,9 +99,9 @@
           "$type": "color",
           "$value": "{mode.color.action.danger.default}"
         },
-        "label-hov": {
+        "label-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.danger.hov}"
+          "$value": "{mode.color.action.danger.hover}"
         }
       }
     },
@@ -124,9 +124,9 @@
           "$type": "color",
           "$value": "{mode.color.action.main.default}"
         },
-        "bg-hov": {
+        "bg-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.main.hov}"
+          "$value": "{mode.color.action.main.hover}"
         },
         "label-active": {
           "$type": "color",
@@ -140,7 +140,7 @@
           "$type": "color",
           "$value": "{mode.color.action.main.withDefault}"
         },
-        "label-hov": {
+        "label-hover": {
           "$type": "color",
           "$value": "{mode.color.action.main.withDefault}"
         },
@@ -162,9 +162,9 @@
             "$type": "color",
             "$value": "{mode.color.action.main.inverse.default}"
           },
-          "bg-hov": {
+          "bg-hover": {
             "$type": "color",
-            "$value": "{mode.color.action.main.inverse.hov}"
+            "$value": "{mode.color.action.main.inverse.hover}"
           },
           "label-active": {
             "$type": "color",
@@ -178,7 +178,7 @@
             "$type": "color",
             "$value": "{mode.color.action.main.inverse.withDefault}"
           },
-          "label-hov": {
+          "label-hover": {
             "$type": "color",
             "$value": "{mode.color.action.main.inverse.withDefault}"
           }
@@ -193,9 +193,9 @@
           "$type": "color",
           "$value": "{mode.color.action.main.defaultAlt3}"
         },
-        "bg-hov": {
+        "bg-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.main.hovAlt}"
+          "$value": "{mode.color.action.main.hoverAlt}"
         },
         "border-active": {
           "$type": "color",
@@ -209,9 +209,9 @@
           "$type": "color",
           "$value": "{mode.color.action.main.defaultAlt}"
         },
-        "border-hov": {
+        "border-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.main.hov}"
+          "$value": "{mode.color.action.main.hover}"
         },
         "label-active": {
           "$type": "color",
@@ -225,9 +225,9 @@
           "$type": "color",
           "$value": "{mode.color.action.gryscl.default}"
         },
-        "label-hov": {
+        "label-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.gryscl.withhov}"
+          "$value": "{mode.color.action.gryscl.withHover}"
         },
         "inverse": {
           "bg-active": {
@@ -238,9 +238,9 @@
             "$type": "color",
             "$value": "{mode.color.action.main.inverse.defaultAlt3}"
           },
-          "bg-hov": {
+          "bg-hover": {
             "$type": "color",
-            "$value": "{mode.color.action.main.inverse.hovAlt}"
+            "$value": "{mode.color.action.main.inverse.hoverAlt}"
           },
           "border-active": {
             "$type": "color",
@@ -254,9 +254,9 @@
             "$type": "color",
             "$value": "{mode.color.action.main.inverse.defaultAlt}"
           },
-          "border-hov": {
+          "border-hover": {
             "$type": "color",
-            "$value": "{mode.color.action.main.inverse.hov}"
+            "$value": "{mode.color.action.main.inverse.hover}"
           },
           "label-active": {
             "$type": "color",
@@ -270,9 +270,9 @@
             "$type": "color",
             "$value": "{mode.color.action.gryscl.inverse.default}"
           },
-          "label-hov": {
+          "label-hover": {
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.inverse.withhov}"
+            "$value": "{mode.color.action.gryscl.inverse.withHover}"
           }
         }
       },
@@ -285,9 +285,9 @@
           "$type": "color",
           "$value": "{button.none}"
         },
-        "bg-hov": {
+        "bg-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.main.hovAlt}"
+          "$value": "{mode.color.action.main.hoverAlt}"
         },
         "border-active": {
           "$type": "color",
@@ -301,9 +301,9 @@
           "$type": "color",
           "$value": "{mode.color.action.main.defaultAlt}"
         },
-        "border-hov": {
+        "border-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.main.hov}"
+          "$value": "{mode.color.action.main.hover}"
         },
         "label-active": {
           "$type": "color",
@@ -317,9 +317,9 @@
           "$type": "color",
           "$value": "{mode.color.action.gryscl.default}"
         },
-        "label-hov": {
+        "label-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.gryscl.withhov}"
+          "$value": "{mode.color.action.gryscl.withHover}"
         },
         "inverse": {
           "bg-active": {
@@ -330,9 +330,9 @@
             "$type": "color",
             "$value": "{button.none}"
           },
-          "bg-hov": {
+          "bg-hover": {
             "$type": "color",
-            "$value": "{mode.color.action.main.inverse.hovAlt}"
+            "$value": "{mode.color.action.main.inverse.hoverAlt}"
           },
           "border-active": {
             "$type": "color",
@@ -346,9 +346,9 @@
             "$type": "color",
             "$value": "{mode.color.action.main.inverse.defaultAlt}"
           },
-          "border-hov": {
+          "border-hover": {
             "$type": "color",
-            "$value": "{mode.color.action.main.inverse.hov}"
+            "$value": "{mode.color.action.main.inverse.hover}"
           },
           "label-active": {
             "$type": "color",
@@ -362,9 +362,9 @@
             "$type": "color",
             "$value": "{mode.color.action.gryscl.inverse.default}"
           },
-          "label-hov": {
+          "label-hover": {
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.inverse.withhov}"
+            "$value": "{mode.color.action.gryscl.inverse.withHover}"
           }
         }
       },
@@ -373,9 +373,9 @@
           "$type": "color",
           "$value": "{mode.color.action.gryscl.activeAlt}"
         },
-        "bg-hov": {
+        "bg-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.gryscl.hovAlt}"
+          "$value": "{mode.color.action.gryscl.hoverAlt}"
         },
         "label-active": {
           "$type": "color",
@@ -389,18 +389,18 @@
           "$type": "color",
           "$value": "{mode.color.action.gryscl.default}"
         },
-        "label-hov": {
+        "label-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.gryscl.withhov}"
+          "$value": "{mode.color.action.gryscl.withHover}"
         },
         "inverse": {
           "bg-active": {
             "$type": "color",
             "$value": "{mode.color.action.gryscl.inverse.activeAlt}"
           },
-          "bg-hov": {
+          "bg-hover": {
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.inverse.hovAlt}"
+            "$value": "{mode.color.action.gryscl.inverse.hoverAlt}"
           },
           "label-active": {
             "$type": "color",
@@ -414,9 +414,9 @@
             "$type": "color",
             "$value": "{mode.color.action.gryscl.inverse.default}"
           },
-          "label-hov": {
+          "label-hover": {
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.inverse.withhov}"
+            "$value": "{mode.color.action.gryscl.inverse.withHover}"
           }
         }
       },
@@ -433,9 +433,9 @@
           "$type": "color",
           "$value": "{mode.color.action.gryscl.active}"
         },
-        "bg-hov": {
+        "bg-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.gryscl.hovAlt}"
+          "$value": "{mode.color.action.gryscl.hoverAlt}"
         },
         "border-default": {
           "$type": "color",
@@ -457,23 +457,23 @@
           "$type": "color",
           "$value": "{mode.color.action.gryscl.defaultAlt}"
         },
-        "label-hov": {
+        "label-hover": {
           "$type": "color",
-          "$value": "{mode.color.action.gryscl.withhov}"
+          "$value": "{mode.color.action.gryscl.withHover}"
         }
       }
     },
     "video": {
       "bg-blur": {
         "$type": "color",
-        "$value": "{mode.color.action.gryscl.hovAlt}"
+        "$value": "{mode.color.action.gryscl.hoverAlt}"
       },
       "primary": {
         "bg-default": {
           "$type": "color",
           "$value": "{mode.color.action.gryscl.withDefault}"
         },
-        "bg-hov": {
+        "bg-hover": {
           "$type": "color",
           "$value": "{mode.color.action.gryscl.withDefault}"
         },
@@ -481,13 +481,13 @@
           "$type": "color",
           "$value": "{mode.color.action.gryscl.default}"
         },
-        "label-hov": {
+        "label-hover": {
           "$type": "color",
           "$value": "{mode.color.action.gryscl.default}"
         }
       },
       "secondary": {
-        "bg-hov": {
+        "bg-hover": {
           "$type": "color",
           "$value": "{mode.color.action.gryscl.withDefault}"
         },
@@ -495,7 +495,7 @@
           "$type": "color",
           "$value": "{mode.color.action.gryscl.withDefault}"
         },
-        "border-hov": {
+        "border-hover": {
           "$type": "color",
           "$value": "{mode.color.action.gryscl.withDefault}"
         },
@@ -503,7 +503,7 @@
           "$type": "color",
           "$value": "{mode.color.action.gryscl.withDefault}"
         },
-        "label-hov": {
+        "label-hover": {
           "$type": "color",
           "$value": "{mode.color.action.gryscl.default}"
         }
