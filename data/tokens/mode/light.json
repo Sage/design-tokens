@@ -74,13 +74,28 @@
             "$type": "color",
             "$value": "{core.color.black}"
           },
+          "monochrome": {
+            "$type": "color",
+            "$value": "{core.color.black}"
+          },
           "withDefault": {
             "$type": "color",
             "$value": "{core.color.brand.50}"
           },
-          "monochrome": {
-            "$type": "color",
-            "$value": "{core.color.black}"
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{core.color.white}"
+            },
+            "monochrome": {
+              "$type": "color",
+              "$value": "{core.color.white}"
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{core.color.brand.50}",
+              "$description": "not accessible on white if it is intended to provide meaning"
+            }
           }
         }
       },
@@ -625,8 +640,18 @@
             "$description": "used on full page backgrounds"
           },
           "faint": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.04",
+                  "space": "lch",
+                  "color": "{core.color.pewter.95}"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.pewter.5}",
+            "$value": "{core.color.white}",
             "$description": "used on full page backgrounds as an alternative option"
           }
         }
@@ -847,8 +872,17 @@
             "$description": "txt for draggable area on file input"
           },
           "hoverAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{global.modifier.button.hoverAlt} ",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.smoke.10}",
+            "$value": "{core.color.black}",
             "$description": "bg hover for draggable area on file input"
           },
           "withDefault": {
@@ -960,18 +994,9 @@
             "$description": "full screen takeover token for modal dimmer"
           },
           "defaultAlt": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{global.modifier.input.disabledBg} ",
-                  "space": "lch"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{core.color.black}",
-            "$description": "Disabled input and button backgrounds, button borders and input backgrounds."
+            "$value": "{core.color.smoke.10}",
+            "$description": "Disabled input and switch backgrounds. Deliberately a solid color value as opposed to alpha based so it works within switch."
           },
           "txt": {
             "$type": "color",
@@ -1020,7 +1045,7 @@
             }
           }
         },
-        "gryscl": {
+        "grayscale": {
           "active": {
             "$type": "color",
             "$value": "{core.color.black}"
@@ -1036,7 +1061,7 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.active}"
+            "$value": "{mode.color.action.grayscale.active}"
           },
           "default": {
             "$extensions": {
@@ -1049,7 +1074,7 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.active}"
+            "$value": "{mode.color.action.grayscale.active}"
           },
           "defaultAlt": {
             "$extensions": {
@@ -1062,7 +1087,7 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.active}",
+            "$value": "{mode.color.action.grayscale.active}",
             "$description": "subtle and toggle button txt"
           },
           "hoverAlt": {
@@ -1076,7 +1101,7 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.active}",
+            "$value": "{mode.color.action.grayscale.active}",
             "$description": "Accordion, secondary, tertiary, menu bg on hover"
           },
           "hover": {
@@ -1090,7 +1115,7 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.active}",
+            "$value": "{mode.color.action.grayscale.active}",
             "$description": "subtle table header hov"
           },
           "withActive": {
@@ -1125,7 +1150,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.action.gryscl.inverse.active}"
+              "$value": "{mode.color.action.grayscale.inverse.active}"
             },
             "default": {
               "$extensions": {
@@ -1138,7 +1163,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.action.gryscl.inverse.active}"
+              "$value": "{mode.color.action.grayscale.inverse.active}"
             },
             "defaultAlt": {
               "$extensions": {
@@ -1151,7 +1176,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.action.gryscl.inverse.active}",
+              "$value": "{mode.color.action.grayscale.inverse.active}",
               "$description": "subtle and toggle button txt"
             },
             "hoverAlt": {
@@ -1165,7 +1190,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.action.gryscl.inverse.active}",
+              "$value": "{mode.color.action.grayscale.inverse.active}",
               "$description": "Accordion, secondary, tertiary, menu bg on hov"
             },
             "hover": {
@@ -1179,7 +1204,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.action.gryscl.inverse.active}",
+              "$value": "{mode.color.action.grayscale.inverse.active}",
               "$description": "subtle table header hover"
             },
             "withActive": {
