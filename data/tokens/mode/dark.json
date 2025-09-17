@@ -845,8 +845,17 @@
             "$description": "txt for draggable area on file input"
           },
           "hoverAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{global.modifier.button.hoverAlt} ",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.smoke.90}",
+            "$value": "{core.color.white}",
             "$description": "bg hover for draggable area on file input"
           },
           "withDefault": {
