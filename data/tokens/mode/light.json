@@ -984,18 +984,9 @@
             "$description": "full screen takeover token for modal dimmer"
           },
           "defaultAlt": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{global.modifier.input.disabledBg} ",
-                  "space": "lch"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{core.color.black}",
-            "$description": "Disabled input and button backgrounds, button borders and input backgrounds."
+            "$value": "{core.color.smoke.10}",
+            "$description": "Disabled input and switch backgrounds. Deliberately a solid color value as opposed to alpha based so it works within switch."
           },
           "txt": {
             "$type": "color",
