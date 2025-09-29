@@ -51,17 +51,13 @@ jobs:
 
       - name: Compile SCSS
         run: |
-          for product in dist/scss/*; do
-            for theme in "$product"/*; do
-              (
-          echo "@import 'global.scss';"
-          echo "@import 'dark.scss';"
-          echo "@import 'light.scss';"
-          for f in "$theme/components"/*.scss; do
-            fname=$(basename "$f")
-            echo "@import 'components/$fname';"
-          done
-              ) > "$theme/index.scss"
-              npx sass "$theme/index.scss" "$theme/index.css"
+          (
+            echo "@import 'global.scss';"
+            echo "@import 'dark.scss';"
+            echo "@import 'light.scss';"
+            for f in dist/scss/components/*.scss; do
+              fname=$(basename "$f")
+              echo "@import 'components/$fname';"
             done
-          done
+          ) > dist/scss/index.scss
+          npx sass dist/scss/index.scss dist/scss/index.css
