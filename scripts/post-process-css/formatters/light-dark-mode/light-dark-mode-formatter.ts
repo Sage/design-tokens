@@ -49,6 +49,14 @@ export class LightDarkModeFormatter extends Decorator {
     "--mode-color-action-main-inverse-default-alt2",
     "--mode-color-action-main-hover-alt2",
     "--mode-color-action-main-inverse-hover-alt2",
+    "--mode-color-action-main-default-alt",
+    "--mode-color-action-main-inverse-default-alt",
+    "--mode-color-action-main-default-alt3",
+    "--mode-color-action-main-inverse-default-alt3",
+    "--mode-color-action-main-hover-alt",
+    "--mode-color-action-main-inverse-hover-alt",
+    "--mode-color-action-main-active-alt",
+    "--mode-color-action-main-inverse-active-alt"
   ];
 
   private formatScreenSizeModes(
