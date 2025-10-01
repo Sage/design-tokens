@@ -6,40 +6,44 @@
     <!-- Component library styles -->
     <style>
       body {
-        font: var(--page-typography-p-typical);
-        background: var(--page-color-bg-default);
-        color: var(--page-color-text-default);
+        font: var(--global-font-fluid-body-regular-m);
+        background: var(--page-bg-default);
+        color: var(--page-txt-default);
       }
 
       h1 {
-        font: var(--page-typography-h1);
+        font: var(--global-font-fluid-heading-l);
       }
 
       h2 {
-        font: var(--page-typography-h2);
+        font: var(--global-font-fluid-heading-m);
+      }
+
+      h1,
+      h2,
+      p {
+        color: var(--page-txt-default);
       }
 
       button {
-        background: var(--button-color-typical-primary-bg-enabled);
-        padding: var(--button-space-primary-y-m) var(--button-space-primary-x-m);
-        border-radius: var(--button-radius-primary-m);
+        background: var(--button-typical-primary-bg-default);
+        padding: var(--global-space-comp-s) var(--global-space-comp-l);
+        border-radius: var(--global-radius-action-xl);
         border: none;
-        color: var(--button-color-standard-destructive-primary-label-enabled);
-        font: var(--button-typography-primary-m);
+        color: var(--button-typical-primary-label-default);
+        font: var(--global-font-static-comp-medium-m);
         cursor: pointer;
 
         &.active {
-          background: var(--button-color-typical-primary-bg-active);
-          color: var(--button-color-typical-primary-label-active);
+          background: var(--button-typical-primary-bg-active);
+          color: var(--button-typical-primary-label-active);
         }
       }
 
       section {
-        background: var(--container-color-interactive-bg-enabled);
-        border-radius: var(--container-radius-card-moderate);
-        box-shadow: var(--container-boxshadow-card-enabled);
-        padding: var(--container-space-generic-content-y-l)
-          var(--container-space-generic-content-x-l);
+        background: var(--container-standard-bg-default);
+        border-radius: var(--container-radius-container-l);
+        padding: var(--global-space-layout-xs);
       }
     </style>
 
@@ -51,8 +55,8 @@
 
       .mode-light,
       .mode-dark {
-        background: var(--page-color-bg-default);
-        color: var(--page-color-text-default);
+        background: var(--page-bg-default);
+        color: var(--page-txt-default);
       }
 
       .mode-light {
@@ -65,7 +69,7 @@
 
       section {
         + section {
-          margin-top: var(--page-space-y-l);
+          margin-top: var(--global-space-layout-xs);
         }
       }
     </style>
