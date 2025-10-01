@@ -48,6 +48,7 @@ export class ModeTokens {
     // Add token sections
     addTokenSection(this.global);
     addTokenSection(this.light);
+    addTokenSection(this.dark);
 
     // component tokens
     Object.keys(this.components).forEach((component) => {
@@ -60,20 +61,20 @@ export class ModeTokens {
     lines.push("");
 
     // dark mode overrides
-    if (this.dark.length) {
-      lines.push("@media (prefers-color-scheme: dark) {");
-      lines.push(`${space}:root {`);
-      lines.push(
-        this.dark
-          .map(
-            ({ name, value }) =>
-              `${space}${space}${name}: ${value};`
-          )
-          .join("\n")
-      );
-      lines.push(`${space}}`);
-      lines.push(`}`);
-    }
+    // if (this.dark.length) {
+    //   lines.push("@media (prefers-color-scheme: dark) {");
+    //   lines.push(`${space}:root {`);
+    //   lines.push(
+    //     this.dark
+    //       .map(
+    //         ({ name, value }) =>
+    //           `${space}${space}${name}: ${value};`
+    //       )
+    //       .join("\n")
+    //   );
+    //   lines.push(`${space}}`);
+    //   lines.push(`}`);
+    // }
 
     return lines.join("\n");
   }

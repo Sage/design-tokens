@@ -1,20 +1,18 @@
 import * as fs from "fs";
 import * as path from "path";
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from "url";
 
 import { CssProperty } from "./css-parser/css-parser.types.js";
 import { CssParser } from "./css-parser/css-parser.js";
-import {
-  ModeTokens,
-  MathsCalc
-} from "./formatters/index.js";
+import { ModeTokens, MathsCalc } from "./formatters/index.js";
+import { LightDarkModeFormatter } from "./formatters/light-dark-mode/light-dark-mode-formatter.js";
 
 type TokenOutput = {
   global: CssProperty[];
   light: CssProperty[];
   dark: CssProperty[];
   components: Record<string, CssProperty[]>;
-}
+};
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,34 +21,35 @@ const cssParser = new CssParser();
 
 const cssDistPath = path.join(__dirname, "../../dist/css");
 
-fs.readdirSync(cssDistPath, { recursive: true, withFileTypes: true }).filter((file) => {
-  return /^(?!all\.css$)[\w,\s-]+\.css$/.test(file.name)
-}).forEach((file) => {
-  const space = "  ";
-  const maths = new MathsCalc()
-  const filePath = ["global.css", "light.css", "dark.css"].includes(file.name) ? cssDistPath : `${cssDistPath}/components`;
-  const contents = fs.readFileSync(path.join(filePath, file.name), "utf8")
-  const tokens = maths.formatTokens(cssParser.parseRootVariables(contents))
+fs.readdirSync(cssDistPath, { recursive: true, withFileTypes: true })
+  .filter((file) => {
+    return /^(?!all\.css$)[\w,\s-]+\.css$/.test(file.name);
+  })
+  .forEach((file) => {
+    const space = "  ";
+    const maths = new MathsCalc();
+    const filePath = ["global.css", "light.css", "dark.css"].includes(file.name)
+      ? cssDistPath
+      : `${cssDistPath}/components`;
+    const contents = fs.readFileSync(path.join(filePath, file.name), "utf8");
+    const tokens = maths.formatTokens(cssParser.parseRootVariables(contents));
 
-  const lines: string[] = [];
-  lines.push(`:root {`);
+    const lines: string[] = [];
+    lines.push(`:root {`);
 
-  if (tokens.length) {
-    lines.push(
-      tokens
-        .map(
-          ({name, value}: CssProperty) =>
-            `${space}${name}: ${value};`
-        )
-        .join("\n")
-    );
-  }
+    if (tokens.length) {
+      lines.push(
+        tokens
+          .map(({ name, value }: CssProperty) => `${space}${name}: ${value};`)
+          .join("\n")
+      );
+    }
 
-  lines.push(`}`);
-  lines.push("");
+    lines.push(`}`);
+    lines.push("");
 
-  fs.writeFileSync(path.join(filePath, file.name), lines.join("\n"));
-})
+    fs.writeFileSync(path.join(filePath, file.name), lines.join("\n"));
+  });
 
 const rawTokens = getFlattenedTokens(cssDistPath);
 
@@ -61,7 +60,10 @@ const modeTokens = new ModeTokens(
   rawTokens.components
 );
 
-writeCombinedCssFile(cssDistPath, modeTokens);
+const lightDarkModeFormatter = new LightDarkModeFormatter();
+const formattedTokens = lightDarkModeFormatter.formatTokens(modeTokens);
+
+writeCombinedCssFile(cssDistPath, formattedTokens);
 
 // Copy usage documentation
 fs.copyFileSync(
@@ -96,15 +98,16 @@ function getFlattenedTokens(basePath: string): TokenOutput {
 
   const components: Record<string, CssProperty[]> = {};
   const componentsPath = path.join(basePath, "components");
-  
+
   if (fs.existsSync(componentsPath)) {
     fs.readdirSync(componentsPath).forEach((file) => {
       if (path.extname(file) === ".css") {
         const fileName = path.basename(file, path.extname(file));
         const componentContents = getFileContents(`components/${file}`);
-        
+
         if (componentContents) {
-          components[fileName] = cssParser.parseRootVariables(componentContents);
+          components[fileName] =
+            cssParser.parseRootVariables(componentContents);
         }
       }
     });
@@ -114,6 +117,6 @@ function getFlattenedTokens(basePath: string): TokenOutput {
     global: cssParser.parseRootVariables(globalContents),
     light: cssParser.parseRootVariables(lightContents),
     dark: cssParser.parseRootVariables(darkContents),
-    components
+    components,
   };
 }
