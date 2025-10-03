@@ -47,44 +47,101 @@ You can also add the files directly by downloading from the [releases page on Gi
 To make use of the css variables, import them into your code like so:
 
 ```css
-/* Inside css */
-@import "~@sage/design-tokens/css/all.css";
+@import url("@sage/design-tokens/css/light.css");
+@import url("@sage/design-tokens/css/dark.css") (prefers-color-scheme: dark);
+@import url("@sage/design-tokens/css/components/button.css");
 ```
+
+**Note:** For manual theme switching in JavaScript applications, we recommend using the HTML `<link>` approach rather than dynamic imports to avoid bundler complexity. You can import the component css files in your JS like below.
 
 ```js
-// For projects where you can import css files into JS
-import "@sage/design-tokens/css/all.css";
+import "@sage/design-tokens/css/components/button.css";
 ```
 
-This will add the variables to the root element of the page.
+```html
+<link rel="stylesheet" href="node_modules/@sage/design-tokens/css/light.css" id="app-theme">
+
+<script>
+function switchTheme(theme) {
+  document.getElementById('app-theme').href = 
+    `node_modules/@sage/design-tokens/css/${theme}.css`;
+}
+</script>
+```
 
 #### SCSS
 
-To make use of the scss variables, import them into your scss files like so:
+The SCSS format provides traditional Sass variables while handling mode switching through separate mode files. Due to variable naming conventions, loading both `light` and `dark` modes simultaneously would cause conflicts. To address this, dedicated mode files are provided.
 
-```scss
-@use '~@sage/design-tokens/scss/all' as tokens;
+##### Available Files
+
+- Individual component files (e.g., `button.scss`, `container.scss`) - Available for granular imports
+- The `global`, `light` and `dark` tokens are also exported in their own files for granularity as well
+
+**Note:** The current SCSS output requires the use of `@import` statements to ensure variables are properly scoped across files. While `@import` will be deprecated when Dart Sass 3.0.0 is released, we will endeavor to update our output format to support the modern `@use` module system before that release.
+
+To suppress deprecation warnings during compilation, add the `--silence-deprecation=import` flag to your Sass build command.
+
+##### Light and Dark Mode Support
+
+Create separate CSS files for each mode:
+
+Build process:
+```bash
+sass button-light.scss:button-light.css --no-source-map --silence-deprecation=import
+
+sass button-dark.scss:button-dark.css --no-source-map --silence-deprecation=import
 ```
 
-You can also use `@import`, but for scss this is [being deprecated](https://sass-lang.com/documentation/at-rules/import) in favour of `@use`;
+##### Granular Imports
+
+Import specific components when you only need certain tokens:
+
+```scss
+// button-light.scss
+@import "@sage/design-tokens/scss/global.scss";
+@import "@sage/design-tokens/scss/light.scss";
+@import "@sage/design-tokens/scss/components/button.scss";
+
+.button-destructive-primary {
+  background-color: $button-destructive-primary-bg-default;
+
+  &:hover {
+    background-color: $button-destructive-primary-bg-hover;
+  }
+}
+```
+
+```scss
+// button-dark.scss
+@import "@sage/design-tokens/scss/global.scss";
+@import "@sage/design-tokens/scss/dark.scss";
+@import "@sage/design-tokens/scss/components/button.scss";
+
+.button-destructive-primary {
+  background-color: $button-destructive-primary-bg-default;
+
+  &:hover {
+    background-color: $button-destructive-primary-bg-hover;
+  }
+}
+```
 
 #### Common JS module
 
 ```js
-const commonTokens = require("@sage/design-tokens/js/common")
-const buttonTokens = commonTokens.button
+const commonTokens = require("@sage/design-tokens/js/common");
+const buttonTokens = commonTokens.button;
 
-// Then use in code:
-element.style.color = buttonTokens.button.destructive.buttonDestructivePrimaryBgDefault;
+element.style.backgroundColor = buttonTokens.buttonDestructivePrimaryBgDefault;
 ```
 
 #### ES6 module
 
 ```js
-import * as tokens from "@sage/design-tokens/js/es6";
-
-// Then use in code:
-element.style.color = tokens.button.buttonDestructivePrimaryBgDefault;
+import { button } from "@sage/design-tokens/js/es6";
+ 
+element.style.backgroundColor = button.buttonDestructivePrimaryBgDefault;
 ```
 
 A type definition file is also included to work in projects with typescript installed.
@@ -109,4 +166,4 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-Copyright (c) 2024 Sage Group Plc. All rights reserved.
+Copyright (c) 2025 Sage Group Plc. All rights reserved.

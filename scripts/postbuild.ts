@@ -147,32 +147,13 @@ function addES6EntryFiles () {
   fs.outputFileSync(entryFilePath, entryContent)
 }
 
-function addSCSSEntryFile() {
-  const scssFiles = sync("./dist/scss/*.scss");
-  const scssComponentFiles = sync("./dist/scss/components/*.scss");
-  const indexPath = resolve(__dirname, "../dist/scss/all.scss");
-
-  const forwards = [
-    ...scssFiles
-      .map(file => {
-        const name = path.basename(file, ".scss");
-        return `@forward "./${name}";`;
-      }),
-    ...scssComponentFiles.map(file => {
-      const name = path.basename(file, ".scss");
-      return `@forward "./components/${name}";`;
-    })
-  ].join("\n");
-
-  fs.outputFileSync(indexPath, forwards);
-}
-
 function addFileHeader () {
   const files = sync("dist/**/*.@(css|js|ts|d.ts|scss|less)")
   files.forEach((file: string) => {
     try {
+      const isScss = path.extname(file) === ".scss"
       const filePath = resolve(__dirname, "../", file)
-      const outputData = HeaderContents() + "\r\n\r\n" + fs.readFileSync(filePath)
+      const outputData = HeaderContents(isScss) + "\r\n\r\n" + fs.readFileSync(filePath)
 
       fs.outputFileSync(filePath, outputData)
     } catch (er) {
@@ -199,7 +180,6 @@ function copyAssets () {
   copyAssets()
   addCommonJSEntryFile()
   addES6EntryFiles()
-  addSCSSEntryFile()
   addFileHeader()
   await Icons({
     personalAccessToken: process.env["FIGMA_ACCESS_TOKEN"],
