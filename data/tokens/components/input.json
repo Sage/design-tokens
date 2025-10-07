@@ -1,0 +1,368 @@
+{
+  "input": {
+    "calendar": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.active}"
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.defaultAlt}"
+      },
+      "bg-duration": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.hoverAlt}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.hoverAlt}"
+      },
+      "border-duration": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.active}"
+      },
+      "txt-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.withActive}"
+      },
+      "txt-alt": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txtAlt}",
+        "$description": "Days of the week subheaders"
+      },
+      "txt-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.txt}"
+      },
+      "txt-duration": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txt}"
+      },
+      "txt-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txt}"
+      },
+      "txt-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.withHover}"
+      },
+      "txtAlt-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txtAlt}"
+      }
+    },
+    "dropdown": {
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.hoverAlt}",
+        "$description": "REF POPOVER "
+      },
+      "label-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.withActive}"
+      },
+      "label-alt": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txt}"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.txt}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txtAlt}"
+      },
+      "label-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.withHover}"
+      },
+      "label-subtxt": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txtAlt}",
+        "$description": "Option subtxt."
+      }
+    },
+    "labelset": {
+      "label-required": {
+        "$type": "color",
+        "$value": "{mode.color.action.danger.default}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txt}"
+      },
+      "label-alt": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txtAlt}",
+        "$description": "used for '(optional)' txt and hint txt."
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.txt}"
+      },
+      "label-readOnly": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txt}"
+      },
+      "inverse": {
+        "label-required": {
+          "$type": "color",
+          "$value": "{mode.color.action.danger.inverse.default}"
+        },
+        "label-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.dataEntry.inverse.txt}"
+        },
+        "label-alt": {
+          "$type": "color",
+          "$value": "{mode.color.action.dataEntry.inverse.txtAlt}",
+          "$description": "used for '(optional)' txt and hint txt."
+        }
+      }
+    },
+    "typical": {
+      "bg-alt": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.defaultAlt}",
+        "$description": "progress bar bg, txt editor preview and txt editor footer"
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.defaultAlt}"
+      },
+      "bg-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.default}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.hoverAlt}"
+      },
+      "bg-readOnly": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.defaultAlt}"
+      },
+      "border-alt": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.withDefault}"
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}"
+      },
+      "border-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.withHover}",
+        "$description": "File input draggable border state"
+      },
+      "border-readOnly": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}"
+      },
+      "icon-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.withActive}",
+        "$description": "used on tick in color picker and selected tick on dropdowns"
+      },
+      "icon-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txt}"
+      },
+      "icon-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.icon}"
+      },
+      "icon-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.withHover}"
+      },
+      "icon-readOnly": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.iconAlt}"
+      },
+      "iconAlt-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.withActiveAlt}",
+        "$description": "used on tick in color picker"
+      },
+      "txt-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txt}"
+      },
+      "txt-alt": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txtAlt}"
+      },
+      "txt-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txt}"
+      },
+      "txt-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.txt}"
+      },
+      "txt-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.withHover}",
+        "$description": "txt hover state when dragging a file over file input"
+      },
+      "txt-readOnly": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.severe}"
+      },
+      "inverse": {
+        "bg-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.dataEntry.inverse.default}"
+        },
+        "border-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.dataEntry.inverse.withDefault}"
+        },
+        "txt-default": {
+          "$type": "color",
+          "$value": "{mode.color.action.dataEntry.inverse.txt}"
+        }
+      }
+    },
+    "switch": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.active}",
+        "$description": "background of switch in active state"
+      },
+      "bg-activateDisabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}",
+        "$description": "background of switch in active when disabled"
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.defaultAlt}",
+        "$description": "background of switch when disabled in off state"
+      },
+      "bg-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.default}",
+        "$description": "background of switch in off state"
+      },
+      "border-active": {
+        "$type": "color",
+        "$value": "transparent",
+        "$description": "border of switch in active state"
+      },
+      "border-activeDisabled": {
+        "$type": "color",
+        "$value": "transparent",
+        "$description": "border of switch inactive and disabled state"
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}",
+        "$description": "border of disabled switch in off state"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.withDefault}",
+        "$description": "border of switch in off state"
+      },
+      "fg-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.withActive}",
+        "$description": "switch knob in active state"
+      },
+      "fg-activateDisabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.txtAlt}",
+        "$description": "switch knob in active but disabled state."
+      },
+      "fg-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}",
+        "$description": "switch knob in off disabled state"
+      },
+      "fg-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.withDefault}",
+        "$description": "switch knob in off state"
+      },
+      "label-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txt}",
+        "$description": "label to right of switch when switch is active"
+      },
+      "label-activateDisabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}",
+        "$description": "label to right of switch when switch is active but disabled"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}",
+        "$description": "label to right of switch when switch is off but disabled"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txtAlt}",
+        "$description": "label to right of switch when switch is off "
+      }
+    },
+    "validation": {
+      "border-error": {
+        "$type": "color",
+        "$value": "{mode.color.status.negative.default}"
+      },
+      "bar-error": {
+        "$type": "color",
+        "$value": "{mode.color.status.negative.default}",
+        "$description": "error bar to left of inputs"
+      },
+      "bar-warn": {
+        "$type": "color",
+        "$value": "{mode.color.status.warning.default}",
+        "$description": "warning bar to left of inputs"
+      },
+      "label-error": {
+        "$type": "color",
+        "$value": "{mode.color.status.negative.default}"
+      },
+      "label-success": {
+        "$type": "color",
+        "$value": "{mode.color.status.positive.default}"
+      },
+      "label-warn": {
+        "$type": "color",
+        "$value": "{mode.color.status.warning.txt}"
+      },
+      "inverse": {
+        "border-error": {
+          "$type": "color",
+          "$value": "{mode.color.status.negative.inverse.default}"
+        },
+        "bar-error": {
+          "$type": "color",
+          "$value": "{mode.color.status.negative.inverse.default}",
+          "$description": "error bar to left of inputs"
+        },
+        "label-error": {
+          "$type": "color",
+          "$value": "{mode.color.status.negative.inverse.default}"
+        }
+      }
+    },
+    "size": {
+      "generic": {
+        "minW": {
+          "$type": "sizing",
+          "$value": "288",
+          "$description": "optional generic minWidth size used across some inputs such as file input."
+        }
+      }
+    }
+  }
+}

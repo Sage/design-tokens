@@ -31,11 +31,11 @@ export class CssParser {
 
       if (!value) continue;
 
-      const comment = semiColonSplit.slice(1).join(";").trim();
 
       // Sanity check
-      const expectedLine = `${name}: ${value};${comment ? ` ${comment}` : ""}`;
-      if (fullLine !== expectedLine) {
+      const expectedLine = `${name}: ${value};`;
+      const fullLineWithoutComment = fullLine?.split("/*")[0]?.trim();
+      if (fullLineWithoutComment !== expectedLine) {
         throw new Error(
           `Expected concatenation to equal "${fullLine}", but found: "${expectedLine}"`
         );
@@ -45,10 +45,6 @@ export class CssParser {
         name,
         value,
       };
-
-      if (comment) {
-        cssProp.comment = comment;
-      }
 
       cssProperties.push(cssProp);
     }
@@ -61,7 +57,7 @@ export class CssParser {
     }
 
     const duplicateTokens = findDuplicates(cssProperties.map((p) => p.name));
-    if (duplicateTokens.length > 0) {
+    if (duplicateTokens.length) {
       throw new Error(`Duplicate tokens found: ${duplicateTokens.join(", ")}`);
     }
 

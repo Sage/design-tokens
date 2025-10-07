@@ -1,101 +1,39 @@
 {
   "global": {
-    "boxshadow": {
+    "depth": {
       "none": {
         "$type": "boxShadow",
-        "$value": "{primitives.box-shadow.none}"
+        "$value": "{core.depth.none}"
       },
-      "cleanedge": {
-        "near": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.down-right.0}",
-          "$description": "Popovers used in navigation"
-        },
-        "near-left": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.left.0}",
-          "$description": "Right sticky column in Table."
-        },
-        "near-right": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.right.0}",
-          "$description": "Left sticky column in Table."
-        }
+      "lvl1": {
+        "$type": "boxShadow",
+        "$value": "{core.depth.down-right.1}",
+        "$description": "Card default state and popover menus used on split, multiaction, dropdown and action popovers"
       },
-      "container": {
-        "near": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.down-right.1}",
-          "$description": "Popover menus used on split, multiaction, dropdown and action popovers"
-        },
-        "far": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.down-right.2}",
-          "$description": "Toasts"
-        },
-        "distant": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.down-right.3}",
-          "$description": "Dialog, Menu, Sidebar "
-        },
-        "sticky-footer": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.up-right.1}",
-          "$description": "Sticky footer on dialogs, drawer and sidebar"
-        },
-        "solid-border": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.solid.border}",
-          "$description": "Solid border using box shadow tokens when using the border property is not possible. "
-        },
-        "inverse": {
-          "sticky-footer": {
-            "$type": "boxShadow",
-            "$value": [
-              {
-                "x": "0",
-                "y": "-1",
-                "blur": "2",
-                "spread": "0",
-                "color": "#ffffff1A",
-                "type": "dropShadow"
-              },
-              {
-                "x": "2",
-                "y": "-2",
-                "blur": "10",
-                "spread": "0",
-                "color": "#ffffff33",
-                "type": "dropShadow"
-              }
-            ],
-            "$description": "Sticky footer on dialogs, drawer and sidebar"
-          }
-        }
+      "lvl2": {
+        "$type": "boxShadow",
+        "$value": "{core.depth.down-right.2}",
+        "$description": "Card hover state"
       },
-      "inner": {
-        "near": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.inner.1}",
-          "$description": "inner downward shadow, used in first child table cell"
-        }
+      "lvl3": {
+        "$type": "boxShadow",
+        "$value": "{core.depth.down-right.3}",
+        "$description": "Dialog, Menu, Sidebar, Card drag state"
       },
-      "interactive": {
-        "default": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.down-right.1}",
-          "$description": "Default card state"
-        },
-        "hover": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.down-right.2}",
-          "$description": "Card hover state"
-        },
-        "drag": {
-          "$type": "boxShadow",
-          "$value": "{primitives.box-shadow.down-right.3}",
-          "$description": "Card drag state"
-        }
+      "stickyB": {
+        "$type": "boxShadow",
+        "$value": "{core.depth.up-right.1}",
+        "$description": "Sticky footer on dialogs, drawer and sidebar"
+      },
+      "stickyL": {
+        "$type": "boxShadow",
+        "$value": "{core.depth.left.0}",
+        "$description": "Right sticky column in Table."
+      },
+      "stickyR": {
+        "$type": "boxShadow",
+        "$value": "{core.depth.right.0}",
+        "$description": "Left sticky column in Table."
       }
     }
   }

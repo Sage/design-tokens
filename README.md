@@ -48,12 +48,12 @@ To make use of the css variables, import them into your code like so:
 
 ```css
 /* Inside css */
-@import "~@sage/design-tokens/css/<theme>.css";
+@import "~@sage/design-tokens/css/all.css";
 ```
 
 ```js
 // For projects where you can import css files into JS
-import "@sage/design-tokens/css/<theme>.css";
+import "@sage/design-tokens/css/all.css";
 ```
 
 This will add the variables to the root element of the page.
@@ -63,7 +63,7 @@ This will add the variables to the root element of the page.
 To make use of the scss variables, import them into your scss files like so:
 
 ```scss
-@use '~@sage/design-tokens/scss/<theme>.scss';
+@use '~@sage/design-tokens/scss/all' as tokens;
 ```
 
 You can also use `@import`, but for scss this is [being deprecated](https://sass-lang.com/documentation/at-rules/import) in favour of `@use`;
@@ -71,19 +71,20 @@ You can also use `@import`, but for scss this is [being deprecated](https://sass
 #### Common JS module
 
 ```js
-const tokens = require('@sage/design-tokens/js/<theme>/common')
+const commonTokens = require("@sage/design-tokens/js/common")
+const buttonTokens = commonTokens.button
 
 // Then use in code:
-element.style.color = tokens.colorsBase500
+element.style.color = buttonTokens.button.destructive.buttonDestructivePrimaryBgDefault;
 ```
 
 #### ES6 module
 
 ```js
-import tokens from "@sage/design-tokens/js/<theme>/es6";
+import * as tokens from "@sage/design-tokens/js/es6";
 
 // Then use in code:
-element.style.color = tokens.colorsBase500
+element.style.color = tokens.button.buttonDestructivePrimaryBgDefault;
 ```
 
 A type definition file is also included to work in projects with typescript installed.
