@@ -1,4 +1,4 @@
-import { CssProperty } from "../../css-parser/css-parser.types";
+import { CssProperty } from "../../css-parser/css-parser.types.js";
 
 interface IPartConditions {
   isLeft: boolean
@@ -45,7 +45,7 @@ export class MathsCalc {
     const partConditions: IPartConditions[] = []
 
     valueParts.forEach((part, i) => {
-      const left: string = i > 0 ? valueParts[i - 1] ?? '' : '';
+      const left: string = i ? valueParts[i - 1] ?? '' : '';
       const right: string = valueParts[i + 1] ?? '';
 
       const conditions = {

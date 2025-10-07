@@ -1,124 +1,52 @@
 {
   "badge": {
-    "color": {
-      "notification": {
-        "border-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.nought}"
-        },
-        "bg-default": {
-          "$type": "color",
-          "$value": "{modes.color.status.negative.default}",
-          "$description": "Used in global nav notification badges"
-        },
-        "bg-alt": {
-          "$type": "color",
-          "$value": "{modes.color.status.info.default}"
-        },
-        "label-default": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.nought}"
-        },
-        "label-alt": {
-          "$type": "color",
-          "$value": "{modes.color.generic.content.nought}"
-        },
-        "inverse": {
-          "border-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.extreme}"
-          },
-          "bg-default": {
-            "$type": "color",
-            "$value": "{modes.color.status.negative.inverse.default}",
-            "$description": "Used in global nav notification badges"
-          },
-          "bg-alt": {
-            "$type": "color",
-            "$value": "{modes.color.status.info.inverse.default}"
-          },
-          "label-default": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.extreme}"
-          },
-          "label-alt": {
-            "$type": "color",
-            "$value": "{modes.color.generic.content.extreme}"
-          }
-        }
-      }
+    "none": {
+      "$type": "color",
+      "$value": "{mode.color.none}",
+      "$description": "transparent override used for hiding colors when needed."
     },
-    "size": {
-      "micro": {
-        "dot": {
-          "$type": "sizing",
-          "$value": "{global.size.micro.M}",
-          "$description": "Micro dot badge size"
-        },
-        "numbered": {
-          "min": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.XXS}",
-            "$description": "Micro dot badge size with numbering"
-          },
-          "max": {
-            "$type": "sizing",
-            "$value": "{global.size.macro.S}",
-            "$description": "Micro dot badge size max width"
-          }
-        }
+    "border-default": {
+      "$type": "color",
+      "$value": "{mode.color.generic.txt.nought}"
+    },
+    "bg-default": {
+      "$type": "color",
+      "$value": "{mode.color.status.negative.default}",
+      "$description": "Used in global nav notification badges"
+    },
+    "bg-alt": {
+      "$type": "color",
+      "$value": "{mode.color.status.info.default}"
+    },
+    "label-default": {
+      "$type": "color",
+      "$value": "{mode.color.generic.txt.nought}"
+    },
+    "label-alt": {
+      "$type": "color",
+      "$value": "{mode.color.generic.txt.nought}"
+    },
+    "inverse": {
+      "border-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.extreme}"
       },
-      "standard": {
-        "min": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.XS}",
-          "$description": "standard badge size"
-        },
-        "max": {
-          "$type": "sizing",
-          "$value": "{global.size.macro.S} + {global.size.micro.XS}",
-          "$description": "Standard badge max-width"
-        }
-      }
-    },
-    "radius": {
-      "badge": {
-        "$type": "borderRadius",
-        "$value": "{global.radius.circle}",
-        "$description": "Badge"
-      }
-    },
-    "space": {
-      "x": {
-        "S": {
-          "$type": "spacing",
-          "$value": "{global.space.micro.XS}",
-          "$description": "horizontal padding on micro badges with numbering"
-        },
-        "M": {
-          "$type": "spacing",
-          "$value": "{global.space.micro.S}",
-          "$description": "horizontal padding on typical badge"
-        }
+      "bg-default": {
+        "$type": "color",
+        "$value": "{mode.color.status.negative.inverse.default}",
+        "$description": "Used in global nav notification badges"
       },
-      "y": {
-        "S": {
-          "$type": "spacing",
-          "$value": "{global.space.micro.XXS}",
-          "$description": "bottom padding on micro badge with number"
-        },
-        "M": {
-          "$type": "spacing",
-          "$value": "{global.space.micro.XXS}",
-          "$description": "bottom padding on typical badge"
-        }
-      }
-    },
-    "borderwidth": {
-      "badge": {
-        "$type": "borderWidth",
-        "$value": "{global.borderwidth.S}",
-        "$description": "Badge"
+      "bg-alt": {
+        "$type": "color",
+        "$value": "{mode.color.status.info.inverse.default}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.extreme}"
+      },
+      "label-alt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.extreme}"
       }
     }
   }

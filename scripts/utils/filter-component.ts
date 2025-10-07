@@ -1,7 +1,13 @@
 /*
-Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
+Copyright © 2025 The Sage Group plc or its licensors. All Rights reserved
  */
 
 import type { DesignToken } from 'style-dictionary/types';
 
-export const FilterComponent = (token: DesignToken, componentName: string): boolean => token.path.indexOf('origin') === -1 && (componentName ? token.path[0] === componentName : false)
+export const FilterComponent = (token: DesignToken, componentName: string, isJSON: boolean): boolean => {
+  if (token['path'].indexOf('origin') !== -1) return false;
+  if (isJSON && componentName === 'global') {
+    return token['path'][0] === 'global';
+  }
+  return componentName ? token['path'][0] === componentName : false;
+}

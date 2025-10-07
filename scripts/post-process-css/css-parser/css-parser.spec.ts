@@ -9,9 +9,9 @@ describe("CssParser", () => {
     const cssContent = `
 :root {
     --main-bg-color: #ffffff;
-    --main-text-color: #333333; /* Semi-colons(;) don't go in CSS values */
-    --main-border-radius: 5px; /* Colons(:) don't go in CSS values */
-    --header-height: 60px; /* Header height */
+    --main-text-color: #333333;
+    --main-border-radius: 5px;
+    --header-height: 60px;
 }`;
 
     const result: CssProperty[] = cssParser.parseRootVariables(cssContent);
@@ -20,17 +20,14 @@ describe("CssParser", () => {
       {
         name: "--main-text-color",
         value: "#333333",
-        comment: "/* Semi-colons(;) don't go in CSS values */",
       },
       {
         name: "--main-border-radius",
         value: "5px",
-        comment: "/* Colons(:) don't go in CSS values */",
       },
       {
         name: "--header-height",
         value: "60px",
-        comment: "/* Header height */",
       },
     ]);
   });
@@ -39,9 +36,9 @@ describe("CssParser", () => {
     const cssContent = `
 body {
     --main-bg-color: #ffffff;
-    --main-text-color: #333333; /* Semi-colons(;) don't go in CSS values */
+    --main-text-color: #333333;
     /* Random comment in middle indicating an unexpected input */
-    --header-height: 60px; /* Header height */
+    --header-height: 60px;
 }`;
 
     expect(() => cssParser.parseRootVariables(cssContent)).to.throw(
@@ -53,9 +50,9 @@ body {
     const cssContent = `
 :root {
     --main-bg-color: #ffffff;
-    --main-text-color: #333333; /* Semi-colons(;) don't go in CSS values */
+    --main-text-color: #333333;
     /* Random comment in middle indicating an unexpected input */
-    --header-height: 60px; /* Header height */
+    --header-height: 60px;
 }`;
 
     expect(() => cssParser.parseRootVariables(cssContent)).to.throw(

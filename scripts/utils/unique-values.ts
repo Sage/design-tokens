@@ -1,5 +1,5 @@
 /*
-Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
+Copyright © 2025 The Sage Group plc or its licensors. All Rights reserved
  */
 
 import { IGlyphData, IIcon } from "../icons.js"

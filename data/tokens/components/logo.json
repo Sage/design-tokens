@@ -1,59 +1,65 @@
 {
   "logo": {
-    "color": {
-      "sage": {
+    "sage": {
+      "bg-default": {
+        "$type": "color",
+        "$value": "{mode.color.brand.default}",
+        "$description": "sage logo"
+      },
+      "bg-alt": {
+        "$type": "color",
+        "$value": "{mode.color.brand.defaultAlt}"
+      },
+      "inverse": {
         "bg-default": {
           "$type": "color",
-          "$value": "{modes.color.brand.default}",
+          "$value": "{mode.color.brand.inverse.default}",
           "$description": "sage logo"
         },
         "bg-alt": {
           "$type": "color",
-          "$value": "{modes.color.brand.defaultAlt}"
+          "$value": "{mode.color.brand.inverse.defaultAlt}"
         }
-      },
-      "copilot": {
-        "noBg": {
-          "fg-default": {
-            "$type": "color",
-            "$value": "{modes.color.brand.copilot.noBg.monochrome}"
-          }
-        }
-      },
-      "AIIdentifier": {
-        "bg-star": {
+      }
+    },
+    "copilot": {
+      "noBg": {
+        "fg-default": {
           "$type": "color",
-          "$value": "{modes.color.brand.copilot.AIIdentifier.default}",
-          "$description": "star bg color"
-        },
+          "$value": "{mode.color.brand.copilot.monochrome}"
+        }
+      }
+    },
+    "AiSparkle": {
+      "bg-dot": {
+        "$type": "color",
+        "$value": "{mode.color.brand.copilot.withDefault}"
+      },
+      "bg-star": {
+        "$type": "color",
+        "$value": "{mode.color.brand.copilot.default}",
+        "$description": "star bg color"
+      },
+      "outline": {
+        "$type": "color",
+        "$value": "{mode.color.brand.copilot.default}",
+        "$description": "star outline variant"
+      },
+      "inverse": {
         "bg-dot": {
           "$type": "color",
-          "$value": "{modes.color.brand.copilot.AIIdentifier.withDefault}"
+          "$value": "{mode.color.brand.copilot.inverse.withDefault}",
+          "$description": "star outline variant"
+        },
+        "bg-star": {
+          "$type": "color",
+          "$value": "{mode.color.brand.copilot.inverse.default}",
+          "$description": "star outline variant"
         },
         "outline": {
           "$type": "color",
-          "$value": "{modes.color.brand.copilot.AIIdentifier.default}",
+          "$value": "{mode.color.brand.copilot.inverse.default}",
           "$description": "star outline variant"
-        }
-      }
-    },
-    "size": {
-      "AI": {
-        "M": {
-          "$type": "sizing",
-          "$value": "14px",
-          "$description": "AI star"
-        }
-      }
-    },
-    "space": {
-      "AI": {
-        "xg": {
-          "M": {
-            "$type": "spacing",
-            "$value": "{global.space.micro.L}",
-            "$description": "Space between star icon and text"
-          }
         }
       }
     }

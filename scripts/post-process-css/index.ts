@@ -4,21 +4,23 @@ import { fileURLToPath } from 'url';
 
 import { CssProperty } from "./css-parser/css-parser.types.js";
 import { CssParser } from "./css-parser/css-parser.js";
-import { ScreenSizeTokens } from "./screen-size-tokens.js";
-import { ContextTokens } from "./context-tokens.js";
 import {
-  ConsolidateScreenSizes,
-  FilterTypographyTokens,
-  LightDarkModeFormatter,
+  ModeTokens,
   MathsCalc
-} from "./formatters/";
+} from "./formatters/index.js";
+
+type TokenOutput = {
+  global: CssProperty[];
+  light: CssProperty[];
+  dark: CssProperty[];
+  components: Record<string, CssProperty[]>;
+}
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const cssParser = new CssParser();
 
-// Loop through token contexts
 const cssDistPath = path.join(__dirname, "../../dist/css");
 
 fs.readdirSync(cssDistPath, { recursive: true, withFileTypes: true }).filter((file) => {
@@ -26,21 +28,19 @@ fs.readdirSync(cssDistPath, { recursive: true, withFileTypes: true }).filter((fi
 }).forEach((file) => {
   const space = "  ";
   const maths = new MathsCalc()
-
-  const contents = fs.readFileSync(path.join(file.path, file.name), "utf8")
+  const filePath = ["global.css", "light.css", "dark.css"].includes(file.name) ? cssDistPath : `${cssDistPath}/components`;
+  const contents = fs.readFileSync(path.join(filePath, file.name), "utf8")
   const tokens = maths.formatTokens(cssParser.parseRootVariables(contents))
 
   const lines: string[] = [];
   lines.push(`:root {`);
 
-  if (tokens.length > 0) {
+  if (tokens.length) {
     lines.push(
       tokens
         .map(
-          (p) =>
-            `${space}${p.name}: ${p.value};${
-              p.comment ? ` ${p.comment}` : ""
-            }`
+          ({name, value}: CssProperty) =>
+            `${space}${name}: ${value};`
         )
         .join("\n")
     );
@@ -49,73 +49,71 @@ fs.readdirSync(cssDistPath, { recursive: true, withFileTypes: true }).filter((fi
   lines.push(`}`);
   lines.push("");
 
-  fs.writeFileSync(path.join(file.path, file.name), lines.join("\n"));
+  fs.writeFileSync(path.join(filePath, file.name), lines.join("\n"));
 })
 
+const rawTokens = getFlattenedTokens(cssDistPath);
 
-fs.readdirSync(cssDistPath).forEach((contextName) => {
-  const screenSizeTokens: ScreenSizeTokens[] = [];
+const modeTokens = new ModeTokens(
+  rawTokens.global,
+  rawTokens.light,
+  rawTokens.dark,
+  rawTokens.components
+);
 
-  fs.readdirSync(path.join(cssDistPath, contextName)).forEach((screenSize) => {
-    if (
-      !fs
-        .statSync(path.join(cssDistPath, contextName, screenSize))
-        .isDirectory()
-    )
-      return;
+writeCombinedCssFile(cssDistPath, modeTokens);
 
-    screenSizeTokens.push(
-      getScreenSizeTokens(path.join(cssDistPath, contextName), screenSize)
-    );
-  });
+// Copy usage documentation
+fs.copyFileSync(
+  path.join(__dirname, "../../docs/usage/index.html"),
+  path.join(cssDistPath, "index.html")
+);
 
-  const tokens = new ContextTokens(contextName, screenSizeTokens);
-
-  const consolidateScreenSizes = new ConsolidateScreenSizes();
-  const lightDarkModeFormatter = new LightDarkModeFormatter(
-    consolidateScreenSizes
-  );
-  const filterAdaptiveTypography = new FilterTypographyTokens(
-    lightDarkModeFormatter
-  );
-  const formattedTokens = filterAdaptiveTypography.formatTokens(tokens);
-
-  writeCombinedCssFile(contextName, formattedTokens);
-
-  fs.copyFileSync(
-    path.join(__dirname, "../../docs/usage/index.html"),
-    path.join(cssDistPath, contextName, "index.html")
-  );
-});
-
-function writeCombinedCssFile(file: string, tokens: ContextTokens) {
-  fs.writeFileSync(path.join(cssDistPath, file, "all.css"), tokens.toString());
+/**
+ * Writes a combined CSS file containing all formatted tokens
+ */
+function writeCombinedCssFile(outputPath: string, tokens: ModeTokens) {
+  fs.writeFileSync(path.join(outputPath, "all.css"), tokens.toString());
 }
 
-function getScreenSizeTokens(
-  basePath: string,
-  screenSize: string
-): ScreenSizeTokens {
-  const getFileContents = (file: string) =>
-    fs.readFileSync(path.join(basePath, screenSize, file), "utf8");
+/**
+ * Extracts and parses CSS tokens from the directory structure
+ */
+function getFlattenedTokens(basePath: string): TokenOutput {
+  const getFileContents = (file: string) => {
+    const filePath = path.join(basePath, file);
+    try {
+      return fs.readFileSync(filePath, "utf8");
+    } catch (error) {
+      console.warn(`Warning: Could not read ${file}, skipping...`);
+      return "";
+    }
+  };
 
   const globalContents = getFileContents("global.css");
   const darkContents = getFileContents("dark.css");
   const lightContents = getFileContents("light.css");
 
   const components: Record<string, CssProperty[]> = {};
-  fs.readdirSync(path.join(basePath, screenSize, "components")).forEach(
-    (file) => {
-      const fileName = path.basename(file, path.extname(file));
-      const componentContents = getFileContents(`components/${file}`);
-      components[fileName] = cssParser.parseRootVariables(componentContents);
-    }
-  );
+  const componentsPath = path.join(basePath, "components");
+  
+  if (fs.existsSync(componentsPath)) {
+    fs.readdirSync(componentsPath).forEach((file) => {
+      if (path.extname(file) === ".css") {
+        const fileName = path.basename(file, path.extname(file));
+        const componentContents = getFileContents(`components/${file}`);
+        
+        if (componentContents) {
+          components[fileName] = cssParser.parseRootVariables(componentContents);
+        }
+      }
+    });
+  }
 
-  return new ScreenSizeTokens(
-    cssParser.parseRootVariables(globalContents),
-    cssParser.parseRootVariables(lightContents),
-    cssParser.parseRootVariables(darkContents),
+  return {
+    global: cssParser.parseRootVariables(globalContents),
+    light: cssParser.parseRootVariables(lightContents),
+    dark: cssParser.parseRootVariables(darkContents),
     components
-  );
+  };
 }
