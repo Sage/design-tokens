@@ -61,11 +61,23 @@ import "@sage/design-tokens/css/components/button.css";
 ```html
 <link rel="stylesheet" href="node_modules/@sage/design-tokens/css/light.css" id="app-theme">
 
-<script>
-function switchTheme(theme) {
-  document.getElementById('app-theme').href = 
-    `node_modules/@sage/design-tokens/css/${theme}.css`;
-}
+<script type="text/javascript">
+  function switchTheme(theme) {
+    document.getElementById('app-theme').href = 
+      `node_modules/@sage/design-tokens/css/${theme}.css`;
+  }
+  
+  function updateTheme() {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    switchTheme(prefersDark ? "dark" : "light");
+  }
+  
+  // Listen for system preference changes
+  window.matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", updateTheme);
+
+  // Set initial theme on content load
+  document.addEventListener("DOMContentLoaded", updateTheme);
 </script>
 ```
 
@@ -82,20 +94,9 @@ The SCSS format provides traditional Sass variables while handling mode switchin
 
 To suppress deprecation warnings during compilation, add the `--silence-deprecation=import` flag to your Sass build command.
 
-##### Light and Dark Mode Support
+##### Light and Dark Mode Support with Granular Imports
 
-Create separate CSS files for each mode:
-
-Build process:
-```bash
-sass button-light.scss:button-light.css --no-source-map --silence-deprecation=import
-
-sass button-dark.scss:button-dark.css --no-source-map --silence-deprecation=import
-```
-
-##### Granular Imports
-
-Import specific components when you only need certain tokens:
+Import specific components when you only need certain tokens and create separate CSS files for each mode:
 
 ```scss
 // button-light.scss
@@ -125,6 +126,13 @@ Import specific components when you only need certain tokens:
     background-color: $button-destructive-primary-bg-hover;
   }
 }
+```
+
+Build process:
+```bash
+sass button-light.scss:button-light.css --no-source-map --silence-deprecation=import
+
+sass button-dark.scss:button-dark.css --no-source-map --silence-deprecation=import
 ```
 
 #### Common JS module
