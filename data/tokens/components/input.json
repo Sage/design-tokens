@@ -118,6 +118,10 @@
           "$type": "color",
           "$value": "{mode.color.action.dataEntry.inverse.txtAlt}",
           "$description": "used for '(optional)' txt and hint txt."
+        },
+        "label-disabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.inverse.txt}"
         }
       }
     },
@@ -312,6 +316,16 @@
         "$description": "label to right of switch when switch is off "
       },
       "inverse": {
+        "bg-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.grayscale.inverse.active}",
+          "$description": "background of switch in active state"
+        },
+        "bg-activateDisabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.inverse.default}",
+          "$description": "background of switch in active when disabled"
+        },
         "bg-disabled": {
           "$type": "color",
           "$value": "{mode.color.action.inactive.inverse.defaultAlt}",
@@ -381,16 +395,6 @@
           "$type": "color",
           "$value": "{mode.color.action.dataEntry.inverse.txtAlt}",
           "$description": "label to right of switch when switch is off "
-        },
-        "bg-active": {
-          "$type": "color",
-          "$value": "{mode.color.action.grayscale.inverse.active}",
-          "$description": "background of switch in active state"
-        },
-        "bg-activateDisabled": {
-          "$type": "color",
-          "$value": "{mode.color.action.inactive.inverse.default}",
-          "$description": "background of switch in active when disabled"
         }
       }
     },
