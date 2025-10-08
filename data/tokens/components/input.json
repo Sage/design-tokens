@@ -246,6 +246,71 @@
         "$value": "{mode.color.action.inactive.defaultAlt}",
         "$description": "background of switch when disabled in off state"
       },
+      "bg-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.default}",
+        "$description": "background of switch in off state"
+      },
+      "border-active": {
+        "$type": "color",
+        "$value": "transparent",
+        "$description": "border of switch in active state"
+      },
+      "border-activeDisabled": {
+        "$type": "color",
+        "$value": "transparent",
+        "$description": "border of switch inactive and disabled state"
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}",
+        "$description": "border of disabled switch in off state"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.withDefault}",
+        "$description": "border of switch in off state"
+      },
+      "fg-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.grayscale.withActive}",
+        "$description": "switch knob in active state"
+      },
+      "fg-activateDisabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.txtAlt}",
+        "$description": "switch knob in active but disabled state."
+      },
+      "fg-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}",
+        "$description": "switch knob in off disabled state"
+      },
+      "fg-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.withDefault}",
+        "$description": "switch knob in off state"
+      },
+      "label-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txt}",
+        "$description": "label to right of switch when switch is active"
+      },
+      "label-activateDisabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}",
+        "$description": "label to right of switch when switch is active but disabled"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{mode.color.action.inactive.default}",
+        "$description": "label to right of switch when switch is off but disabled"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.dataEntry.txtAlt}",
+        "$description": "label to right of switch when switch is off "
+      },
       "inverse": {
         "bg-disabled": {
           "$type": "color",
@@ -327,71 +392,6 @@
           "$value": "{mode.color.action.inactive.inverse.default}",
           "$description": "background of switch in active when disabled"
         }
-      },
-      "bg-default": {
-        "$type": "color",
-        "$value": "{mode.color.action.dataEntry.default}",
-        "$description": "background of switch in off state"
-      },
-      "border-active": {
-        "$type": "color",
-        "$value": "transparent",
-        "$description": "border of switch in active state"
-      },
-      "border-activeDisabled": {
-        "$type": "color",
-        "$value": "transparent",
-        "$description": "border of switch inactive and disabled state"
-      },
-      "border-disabled": {
-        "$type": "color",
-        "$value": "{mode.color.action.inactive.default}",
-        "$description": "border of disabled switch in off state"
-      },
-      "border-default": {
-        "$type": "color",
-        "$value": "{mode.color.action.dataEntry.withDefault}",
-        "$description": "border of switch in off state"
-      },
-      "fg-active": {
-        "$type": "color",
-        "$value": "{mode.color.action.grayscale.withActive}",
-        "$description": "switch knob in active state"
-      },
-      "fg-activateDisabled": {
-        "$type": "color",
-        "$value": "{mode.color.action.inactive.txtAlt}",
-        "$description": "switch knob in active but disabled state."
-      },
-      "fg-disabled": {
-        "$type": "color",
-        "$value": "{mode.color.action.inactive.default}",
-        "$description": "switch knob in off disabled state"
-      },
-      "fg-default": {
-        "$type": "color",
-        "$value": "{mode.color.action.dataEntry.withDefault}",
-        "$description": "switch knob in off state"
-      },
-      "label-active": {
-        "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txt}",
-        "$description": "label to right of switch when switch is active"
-      },
-      "label-activateDisabled": {
-        "$type": "color",
-        "$value": "{mode.color.action.inactive.default}",
-        "$description": "label to right of switch when switch is active but disabled"
-      },
-      "label-disabled": {
-        "$type": "color",
-        "$value": "{mode.color.action.inactive.default}",
-        "$description": "label to right of switch when switch is off but disabled"
-      },
-      "label-default": {
-        "$type": "color",
-        "$value": "{mode.color.action.dataEntry.txtAlt}",
-        "$description": "label to right of switch when switch is off "
       }
     },
     "validation": {
