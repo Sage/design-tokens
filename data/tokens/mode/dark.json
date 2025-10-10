@@ -81,6 +81,21 @@
           "monochrome": {
             "$type": "color",
             "$value": "{core.color.white}"
+          },
+          "inverse": {
+            "default": {
+              "$type": "color",
+              "$value": "{core.color.black}"
+            },
+            "monochrome": {
+              "$type": "color",
+              "$value": "{core.color.black}"
+            },
+            "withDefault": {
+              "$type": "color",
+              "$value": "{core.color.brand.50}",
+              "$description": "not accessible on white if it is intended to provide meaning"
+            }
           }
         }
       },
@@ -624,8 +639,18 @@
             "$description": "used on full page backgrounds"
           },
           "faint": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.04",
+                  "space": "lch",
+                  "color": "{core.color.pewter.5} "
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.pewter.95}",
+            "$value": "{core.color.black}",
             "$description": "used on full page backgrounds as an alternative option"
           }
         }
@@ -845,8 +870,17 @@
             "$description": "txt for draggable area on file input"
           },
           "hoverAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "{global.modifier.button.hoverAlt} ",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.smoke.90}",
+            "$value": "{core.color.white}",
             "$description": "bg hover for draggable area on file input"
           },
           "withDefault": {
@@ -958,18 +992,9 @@
             "$description": "full screen takeover token for modal dimmer"
           },
           "defaultAlt": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "alpha",
-                  "value": "{global.modifier.input.disabledBg} ",
-                  "space": "lch"
-                }
-              }
-            },
             "$type": "color",
-            "$value": "{core.color.white}",
-            "$description": "Disabled input and button backgrounds, button borders and input backgrounds."
+            "$value": "{core.color.smoke.90}",
+            "$description": "Disabled input and switch backgrounds. Deliberately a solid color value as opposed to alpha based so it works within switch."
           },
           "txt": {
             "$type": "color",
@@ -1017,7 +1042,7 @@
             }
           }
         },
-        "gryscl": {
+        "grayscale": {
           "active": {
             "$type": "color",
             "$value": "{core.color.white}"
@@ -1033,7 +1058,7 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.active}"
+            "$value": "{mode.color.action.grayscale.active}"
           },
           "default": {
             "$extensions": {
@@ -1046,7 +1071,7 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.active}"
+            "$value": "{mode.color.action.grayscale.active}"
           },
           "defaultAlt": {
             "$extensions": {
@@ -1059,7 +1084,7 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.active}",
+            "$value": "{mode.color.action.grayscale.active}",
             "$description": "subtle and toggle button txt"
           },
           "hoverAlt": {
@@ -1073,7 +1098,7 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.active}",
+            "$value": "{mode.color.action.grayscale.active}",
             "$description": "Accordion, secondary, tertiary, menu bg on hover"
           },
           "hover": {
@@ -1087,7 +1112,7 @@
               }
             },
             "$type": "color",
-            "$value": "{mode.color.action.gryscl.active}",
+            "$value": "{mode.color.action.grayscale.active}",
             "$description": "subtle table header hover"
           },
           "withActive": {
@@ -1122,7 +1147,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.action.gryscl.inverse.active}"
+              "$value": "{mode.color.action.grayscale.inverse.active}"
             },
             "default": {
               "$type": "color",
@@ -1139,7 +1164,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.action.gryscl.inverse.active}",
+              "$value": "{mode.color.action.grayscale.inverse.active}",
               "$description": "subtle and toggle button txt"
             },
             "hoverAlt": {
@@ -1153,7 +1178,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.action.gryscl.inverse.active}",
+              "$value": "{mode.color.action.grayscale.inverse.active}",
               "$description": "Accordion, secondary, tertiary, menu bg on hover"
             },
             "hover": {
@@ -1167,7 +1192,7 @@
                 }
               },
               "$type": "color",
-              "$value": "{mode.color.action.gryscl.inverse.active}",
+              "$value": "{mode.color.action.grayscale.inverse.active}",
               "$description": "subtle table header hover"
             },
             "withActive": {
@@ -1319,7 +1344,7 @@
           },
           "default": {
             "$type": "color",
-            "$value": "{core.color.brand.50}"
+            "$value": "{core.color.brand.40}"
           },
           "defaultAlt": {
             "$extensions": {
