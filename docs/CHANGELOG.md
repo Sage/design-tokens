@@ -1,3 +1,13 @@
+## [17.0.0](https://github.com/Sage/design-tokens/compare/v16.0.0...v17.0.0) (2025-10-13)
+
+### ⚠ BREAKING CHANGES
+
+* update token structure to remove product contexts and screen size tokens
+
+### Features
+
+* update token structure to remove product contexts and screen size tokens ([a3fe4fb](https://github.com/Sage/design-tokens/commit/a3fe4fbb3dcdbd5f0bb30332654814d3b0a5b33d))
+
 ## [16.0.0](https://github.com/Sage/design-tokens/compare/v15.4.0...v16.0.0) (2025-06-27)
 
 ### ⚠ BREAKING CHANGES
