@@ -1,22 +1,22 @@
 /*
-Copyright © 2024 The Sage Group plc or its licensors. All Rights reserved
+Copyright © 2025 The Sage Group plc or its licensors. All Rights reserved
  */
 
 import * as fs from "fs"
-import { StyleDictionary, groups } from './style-dictionary.js'
-import { DesignToken, File } from 'style-dictionary/types'
-import { FilterComponent } from './utils/filter-component.js'
+import { StyleDictionary, groups } from "./style-dictionary.js"
+import { DesignToken, File } from "style-dictionary/types"
+import { FilterComponent } from "./utils/filter-component.js"
+import { Config } from "style-dictionary"
+import { format } from "path"
 
-const components = fs.readdirSync('./data/tokens/components/')
-const context = fs.readdirSync('./data/tokens/context/')
-const modes = fs.readdirSync('./data/tokens/modes/')
-const screensize = fs.readdirSync('./data/tokens/screensize/')
+const components = fs.readdirSync("./data/tokens/components/")
+const modes = fs.readdirSync("./data/tokens/mode/")
 
 interface IMode {
   modeName?: string
   format: string
-  subType: string
   suffix: string
+  subPath?: string
 }
 
 interface IFiles extends IMode {
@@ -24,61 +24,78 @@ interface IFiles extends IMode {
   outputRefs?: boolean
 }
 
-interface IConfig {
-  contextName: string
-  modeName: string
-  sizeName: string
-}
-
-const getMode = ({modeName = '', format, subType, suffix}: IMode): File[] => {
-  const mode = format.includes('variables') ? '' : modeName
+const getMode = ({modeName = "", format, suffix, subPath}: IMode): File[] => {
+  const mode = format.includes("variables") ? "" : modeName
 
   const componentArray: File[] = []
 
   components.forEach((component) => {
-    const componentName = component.split('.json')[0]
+    const componentName = component.split(".json")[0]
 
     if (!componentName) {
       throw new Error(
         `Component name not found for ${component}`)
     }
 
-    componentArray.push(...getFiles({componentName, modeName: mode, format, subType, suffix, outputRefs: true}))
+    componentArray.push(...getFiles({componentName, modeName: mode, format, suffix, outputRefs: true, subPath}))
   })
   
   return [
-    ...getFiles({componentName: 'modes', modeName, format, subType, suffix}),
+    ...getFiles({componentName: "mode", modeName, format, suffix, subPath}),
     ...componentArray
   ]
 }
 
-const getFiles = ({componentName, modeName = '', format, subType, suffix, outputRefs = false}: IFiles): File[] => {
-  const hasRefs = suffix === 'css' || suffix === 'scss'
+const getFormat = (format: string, outputRefs: boolean, componentName: string): string => {
+  // outputRefs is true for mode and component files, false for global
+  if (format === "json/flat" && outputRefs) {
+    return "custom/json-with-refs";
+  } else if (format === "javascript/es6" && !["mode", "global", "dark", "light"].includes(componentName)) {
+    // For component files, use custom ES6 format instead of standard
+    return "custom/es6-with-refs";
+  } else if (format === "javascript/module") {
+    if (["mode", "global", "dark", "light"].includes(componentName)) {
+      // For mode/global files we want to have similar export format to ES6 rather nested objects
+      return "custom/commonjs-exports";
+    } else {
+      // For component files, use custom CommonJS format instead of standard
+      return "custom/commonjs-with-refs";
+    }
+  }
 
+  return format;
+}
+
+const getFiles = ({componentName, modeName = "", format, suffix, outputRefs = false, subPath}: IFiles): File[] => {
   const getPath = (componentName: string) => {
     let path = ""
 
     switch(componentName) {
-      case 'modes':
-        path = hasRefs ? modeName : `${modeName}/mode`;
+      case "mode":
+        path = modeName;
         break
-      case 'global':
-        path = 'global';
+      case "global":
+        path = "global";
         break
       default:
-        path = hasRefs ? `components/${componentName}` : `${modeName}/components/${componentName}`;
+        path = `components/${componentName}`;
+    }
+
+    if (subPath) {
+      path = subPath + (path ? `/${path}` : "");
     }
 
     return path
   }
 
   const path = getPath(componentName).trim()
+  const actualFormat = getFormat(format, outputRefs, componentName);
 
   return [
     {
-      destination: `${subType}/${path}.${suffix}`,
-      filter: (token: DesignToken) => FilterComponent(token, componentName),
-      format,
+      destination: `${path}.${suffix}`,
+      filter: (token: DesignToken) => FilterComponent(token, componentName, format.includes("json")),
+      format: actualFormat,
       options: {
         outputReferences: outputRefs
       }
@@ -86,63 +103,43 @@ const getFiles = ({componentName, modeName = '', format, subType, suffix, output
   ]
 }
 
-const getGlobalConfig = ({contextName, sizeName}: IConfig) => {
-  const subType = `${contextName}/${sizeName}`
-
+const getGlobalConfig = (): Config => {
   return {
     source: [
-      './data/tokens/primitives.json',
-      './data/tokens/global/*.json',
-      `./data/tokens/screensize/${sizeName}.json`
+      "./data/tokens/core.json",
+      "./data/tokens/global/*.json"
     ],
-    preprocessors: ['tokens-studio'],
+    preprocessors: ["tokens-studio"],
     platforms: {
       css: {
-        buildPath: 'dist/css/',
+        buildPath: "dist/css/",
         transforms: groups.css,
         files: [
-          ...getFiles({componentName: 'global', format: 'css/variables', subType, suffix: 'css'})
+          ...getFiles({componentName: "global", format: "css/variables", suffix: "css"})
         ]
       },
       scss: {
-        buildPath: 'dist/scss/',
+        buildPath: "dist/scss/",
         transforms: groups.scss,
         files: [
-          ...getFiles({componentName: 'global', format: 'scss/variables', subType, suffix: 'scss'})
+          ...getFiles({componentName: "global", format: "scss/variables", suffix: "scss"})
         ]
       },
       js: {
-        buildPath: 'dist/js/',
+        buildPath: "dist/js/",
         transforms: groups.js,
         files: [
-          ...getFiles({componentName: 'global', format: 'javascript/module', subType: `common/${subType}`, suffix: 'js'}),
-          ...getFiles({componentName: 'global', format: 'typescript/module-declarations', subType: `common/${subType}`, suffix: 'd.ts'}),
-          ...getFiles({componentName: 'global', format: 'javascript/es6', subType: `es6/${subType}`, suffix: 'js'}),
-          ...getFiles({componentName: 'global', format: 'typescript/es6-declarations', subType: `es6/${subType}`, suffix: 'd.ts'}),
-          ...getFiles({componentName: 'global', format: 'javascript/umd', subType: `umd/${subType}`, suffix: 'js'})
+          ...getFiles({componentName: "global", format: "javascript/module", subPath: "common", suffix: "js"}),
+          ...getFiles({componentName: "global", format: "typescript/module-declarations", subPath: "common", suffix: "d.ts"}),          
+          ...getFiles({componentName: "global", format: "javascript/es6", subPath: "es6", suffix: "js"}),
+          ...getFiles({componentName: "global", format: "typescript/es6-declarations", subPath: "es6", suffix: "d.ts"}),          
         ]
       },
       json: {
-        buildPath: 'dist/json/',
+        buildPath: "dist/json/",
         transforms: groups.json,
         files: [
-          ...getFiles({componentName: 'global', format: 'json/nested', subType: `nested/${subType}`, suffix: 'json'}),
-          ...getFiles({componentName: 'global', format: 'json/flat', subType: `flat/${subType}`, suffix: 'json'})
-        ]
-      },
-      // todo: debug android build
-      // android: {
-      //   buildPath: 'dist/android/',
-      //   transforms: groups.mobile,
-      //   files: [
-      //     ...getFiles({componentName: 'global', format: 'android/resources', subType, suffix: 'xml'})
-      //   ]
-      // },
-      ios: {
-        buildPath: 'dist/ios/',
-        transforms: groups.mobile,
-        files: [
-          ...getFiles({componentName: 'global', format: 'ios/macros', subType, suffix: 'h'})
+          ...getFiles({componentName: "global", format: "json/flat", suffix: "json"})
         ]
       }
     },
@@ -156,65 +153,45 @@ const getGlobalConfig = ({contextName, sizeName}: IConfig) => {
   }
 }
 
-const getModeConfig = ({contextName, modeName, sizeName}: IConfig) => {
-  const subType = `${contextName}/${sizeName}`
-
+const getModeConfig = (modeName: string): Config => {
   return {
     source: [
-      './data/tokens/primitives.json',
-      './data/tokens/global/*.json',
-      `./data/tokens/screensize/${sizeName}.json`,
-      `./data/tokens/modes/${modeName}.json`,
-      './data/tokens/components/*.json',
-      `./data/tokens/context/${contextName}.json`
+      "./data/tokens/core.json",
+      "./data/tokens/global/*.json",
+      `./data/tokens/mode/${modeName}.json`,
+      "./data/tokens/components/*.json"
     ],
+    preprocessors: ["tokens-studio"],
     platforms: {
       css: {
-        buildPath: 'dist/css/',
+        buildPath: "dist/css/",
         transforms: groups.css,
         files: [
-          ...getMode({modeName, format: 'css/variables', subType, suffix: 'css'})
+          ...getMode({modeName, format: "css/variables", suffix: "css"})
         ]
       },
       scss: {
-        buildPath: 'dist/scss/',
+        buildPath: "dist/scss/",
         transforms: groups.scss,
         files: [
-          ...getMode({modeName, format: 'scss/variables', subType, suffix: 'scss'})
+          ...getMode({modeName, format: "scss/variables", suffix: "scss"})
         ]
       },
       js: {
-        buildPath: 'dist/js/',
+        buildPath: "dist/js/",
         transforms: groups.js,
         files: [
-          ...getMode({modeName, format: 'javascript/module', subType: `common/${subType}`, suffix: 'js'}),
-          ...getMode({modeName, format: 'typescript/module-declarations', subType: `common/${subType}`, suffix: 'd.ts'}),
-          ...getMode({modeName, format: 'javascript/es6', subType: `es6/${subType}`, suffix: 'js'}),
-          ...getMode({modeName, format: 'typescript/es6-declarations', subType: `es6/${subType}`, suffix: 'd.ts'}),
-          ...getMode({modeName, format: 'javascript/umd', subType: `umd/${subType}`, suffix: 'js'})
+          ...getMode({modeName, format: "javascript/module", subPath: "common", suffix: "js"}),
+          ...getMode({modeName, format: "typescript/module-declarations", subPath: "common", suffix: "d.ts"}),
+          ...getMode({modeName, format: "javascript/es6", subPath: "es6", suffix: "js"}),
+          ...getMode({modeName, format: "typescript/es6-declarations", subPath: "es6", suffix: "d.ts"}),
         ]
       },
       json: {
-        buildPath: 'dist/json/',
+        buildPath: "dist/json/",
         transforms: groups.json,
         files: [
-          ...getMode({modeName, format: 'json/nested', subType: `nested/${subType}`, suffix: 'json'}),
-          ...getMode({modeName, format: 'json/flat', subType: `flat/${subType}`, suffix: 'json'})
-        ]
-      },
-      // todo: debug android build
-      // android: {
-      //   buildPath: 'dist/android/',
-      //   transforms: groups.mobile,
-      //   files: [
-      //     ...getMode({modeName, format: 'android/resources', subType, suffix: 'xml'})
-      //   ]
-      // },
-      ios: {
-        buildPath: 'dist/ios/',
-        transforms: groups.mobile,
-        files: [
-          ...getMode({modeName, format: 'ios/macros', subType, suffix: 'h'})
+          ...getMode({modeName, format: "json/flat", suffix: "json"})
         ]
       }
     },
@@ -228,47 +205,27 @@ const getModeConfig = ({contextName, modeName, sizeName}: IConfig) => {
   }
 }
 
-context.forEach(async (context) => {
-  const contextName = context.split('.json')[0]
+// Build global tokens
+const globalStyleDictionary = new StyleDictionary(getGlobalConfig())
 
-  if (!contextName) {
+await globalStyleDictionary.buildPlatform("css")
+await globalStyleDictionary.buildPlatform("scss")
+await globalStyleDictionary.buildPlatform("js")
+await globalStyleDictionary.buildPlatform("json")
+
+// Build mode-specific tokens
+modes.forEach(async (mode) => {
+  const modeName = mode.split(".json")[0]
+
+  if (!modeName) {
     throw new Error(
-      `Context name not found for ${context}`)
+      `Mode name not found for ${mode}`)
   }
 
-  screensize.forEach(async (size) => {
-    const sizeName = size.split('.json')[0]
+  const modeStyleDictionary = new StyleDictionary(getModeConfig(modeName))
 
-    if (!sizeName) {
-      throw new Error(
-        `Size name not found for ${size}`)
-    }
-
-    const styleDictionary = new StyleDictionary(getGlobalConfig({contextName, sizeName} as IConfig))
-
-    await styleDictionary.buildPlatform('css')
-    await styleDictionary.buildPlatform('scss')
-    await styleDictionary.buildPlatform('js')
-    await styleDictionary.buildPlatform('json')
-    await styleDictionary.buildPlatform('ios')
-    //await styleDictionary.buildPlatform('android')
-
-    modes.forEach(async (mode) => {
-      const modeName = mode.split('.json')[0]
-
-      if (!modeName) {
-        throw new Error(
-          `Mode name not found for ${mode}`)
-      }
-
-      const styleDictionary = new StyleDictionary(getModeConfig({contextName, modeName, sizeName}))
-
-      await styleDictionary.buildPlatform('css')
-      await styleDictionary.buildPlatform('scss')
-      await styleDictionary.buildPlatform('js')
-      await styleDictionary.buildPlatform('json')
-      await styleDictionary.buildPlatform('ios')
-      //await styleDictionary.buildPlatform('android')
-    })
-  })
-})
+  await modeStyleDictionary.buildPlatform("css")
+  await modeStyleDictionary.buildPlatform("scss")
+  await modeStyleDictionary.buildPlatform("js")
+  await modeStyleDictionary.buildPlatform("json")
+});

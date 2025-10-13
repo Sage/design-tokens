@@ -1,0 +1,1300 @@
+{
+  "core": {
+    "color": {
+      "black": {
+        "$type": "color",
+        "$value": "#000000",
+        "$description": "Base color for different txt opacities. Used as a mixer in the mid theming layer for hover states, active states etc. Dividers and table headers. Base color for secondary, Tertiary and Subtle buttons. Base color for Input borders. Focus internal border."
+      },
+      "white": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "Surface backgrounds. Text colors on buttons and on dark backgrounds. Used as a mixer in the mid theming layer for hover states, active states etc."
+      },
+      "transparent": {
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0",
+              "space": "lch"
+            }
+          }
+        },
+        "$type": "color",
+        "$value": "rgba(0,0,0,0)",
+        "$description": "For transparent backgrounds and borders."
+      },
+      "AI": {
+        "dull": {
+          "pea": {
+            "$type": "color",
+            "$value": "#13a038"
+          },
+          "aqua": {
+            "$type": "color",
+            "$value": "#149197"
+          },
+          "lilac": {
+            "$type": "color",
+            "$value": "#a87cfb"
+          }
+        },
+        "vibrant": {
+          "pea": {
+            "$type": "color",
+            "$value": "#00d639"
+          },
+          "aqua": {
+            "$type": "color",
+            "$value": "#00d6de"
+          },
+          "lilac": {
+            "$type": "color",
+            "$value": "#9d60ff"
+          }
+        }
+      },
+      "azure": {
+        "5": {
+          "$type": "color",
+          "$value": "#f5f8ff"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#e4eeff"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#58a2ff"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#008ef4"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#007fd9",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#0071c3",
+          "$description": "Base status color for light surface. AAA txt on white."
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#0063ad"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#00528f"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#001932"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#000b1c"
+        }
+      },
+      "brand": {
+        "5": {
+          "$type": "color",
+          "$value": "#e0ffe2"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#b7ffbd"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#8fff98"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#46fb5e"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#00f142"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#00d639",
+          "$description": "Sage Logo color Primary buttons on dark backgrounds"
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#00811f",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#007219"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#005e14"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#001e03"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#001001"
+        }
+      },
+      "blush": {
+        "5": {
+          "$type": "color",
+          "$value": "#fff5f6"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#ffe8ea"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#ff728d"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#ff3e6a"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#f50059",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#db004e",
+          "$description": "Base status color for light surface. AA txt on white. Color taken from brand portal."
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#c40044"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#a30037"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#3c000f"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#1e0005"
+        }
+      },
+      "tangerine": {
+        "5": {
+          "$type": "color",
+          "$value": "#fff7eb"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#ffeaca"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#f68029"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#e5631c"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#e24300",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#d64309",
+          "$description": "Base status color for light surface. AA txt on white. Not taken from brand portal as previous orange wasn't accessible."
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#b33400"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#952a00"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#360900"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#1d0300"
+        }
+      },
+      "emerald": {
+        "5": {
+          "$type": "color",
+          "$value": "#EEFCEF"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#D1F6D6"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#30b843"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#1BA12B"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#019127",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#00811F",
+          "$description": "Primary buttons on light backgrounds. Was #008047 Jade. Luminosity 46.8."
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#007219"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#005e14"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#001f03"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#001001"
+        }
+      },
+      "flamingo": {
+        "5": {
+          "$type": "color",
+          "$value": "#fff5fa"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#fee8f5"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#f571c7"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#E84DB5"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#d046a4",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#c72699",
+          "$description": "Base status color for light surface. AAA txt on white."
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#b02086"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#921a6e"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#350426"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#1e0115"
+        }
+      },
+      "gold": {
+        "5": {
+          "$type": "color",
+          "$value": "#fff8e0",
+          "$description": "Outer focus border."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#ffedb8",
+          "$description": "Outer focus border."
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#ffd274",
+          "$description": "Outer focus border."
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#ffca35",
+          "$description": "Outer focus border."
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#ffbf22"
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#FFB500"
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#9f7000"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#926709"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#885e00"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#231500"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#120900"
+        }
+      },
+      "lime": {
+        "5": {
+          "$type": "color",
+          "$value": "#f6f9f0"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#e8f1d4"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#92aa3c"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#7d9428"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#718524",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#627600",
+          "$description": "Base status color for light surface. AAA txt on white."
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#576900"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#475600"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#141a00"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#0a0e00"
+        }
+      },
+      "plum": {
+        "5": {
+          "$type": "color",
+          "$value": "#f9f6ff"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#F3EBFE"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#b190e8"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#a375dd"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#9463d7",
+          "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#8f4bd7",
+          "$description": "Ligthness 51.9, 4.5:1 against #0E0E0E."
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#803ec5"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#6a32a6"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#220c3a"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#10041f"
+        }
+      },
+      "pewter": {
+        "5": {
+          "$type": "color",
+          "$value": "#f4f9fc"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#e4eff5"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#80a5bd"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#738ea0"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#6b7f8d",
+          "$description": "old action minor 500. (Pure navy is #00293F)"
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#527386",
+          "$description": "old action minor 500. (Pure navy is #00293F)"
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#486576"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#3a5462"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#101a20"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#050a0e"
+        }
+      },
+      "smoke": {
+        "5": {
+          "$type": "color",
+          "$value": "#f8f8f8"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#eeeeee"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#a0a0a0"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#8b8b8b"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#7c7c7c",
+          "$description": "Base status color for dark surfaces. AA txt  on dark. Luminosity 51.9."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#747474"
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#6f6f6f",
+          "$description": "Base status color for light surface. AA txt on white. Luminosity 46.8."
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#616161"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#505050"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#181818"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#0b0b0b"
+        }
+      },
+      "petrol": {
+        "5": {
+          "$type": "color",
+          "$value": "#E8FCFC"
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#C8F5F5"
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#25B2B0"
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#009B99"
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#008B8A",
+          "$description": "Alternative colour with no semantic meaning. Used in progress tracker on dark. Luminosity 51.9"
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#007C7B",
+          "$description": "Alternative colour with no semantic meaning. Used in progress tracker on light. Luminosity 46.8."
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#006D6C"
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#005A59"
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#001C1C"
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#000E0E"
+        }
+      }
+    },
+    "size": {
+      "SCALE": {
+        "$type": "sizing",
+        "$value": "8",
+        "$description": "SCALE is the base-scale of all size-related tokens (size, space, dimension). It's set to 8px as this is our default multiplier used across the majority of components. If you change it, it will change all size-related tokens."
+      },
+      "breakpoint": {
+        "0": {
+          "$type": "sizing",
+          "$value": "0"
+        },
+        "320": {
+          "$type": "sizing",
+          "$value": "320"
+        },
+        "480": {
+          "$type": "sizing",
+          "$value": "480"
+        },
+        "768": {
+          "$type": "sizing",
+          "$value": "768"
+        },
+        "1024": {
+          "$type": "sizing",
+          "$value": "1024"
+        },
+        "1200": {
+          "$type": "sizing",
+          "$value": "1200"
+        },
+        "1920": {
+          "$type": "sizing",
+          "$value": "1920"
+        }
+      }
+    },
+    "dimension": {
+      "0": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 0"
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 12.5"
+      },
+      "25": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 25"
+      },
+      "38": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 37.5"
+      },
+      "50": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 50"
+      },
+      "62": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 62.5"
+      },
+      "75": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 75"
+      },
+      "100": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 100"
+      },
+      "125": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 125"
+      },
+      "150": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 150"
+      },
+      "175": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 175"
+      },
+      "200": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 200"
+      },
+      "250": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 250"
+      },
+      "300": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 300"
+      },
+      "350": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 350"
+      },
+      "400": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 400"
+      },
+      "450": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 450"
+      },
+      "500": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 500"
+      },
+      "550": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 550"
+      },
+      "600": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 600"
+      },
+      "650": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 650"
+      },
+      "700": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 700"
+      },
+      "750": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 750"
+      },
+      "800": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 800"
+      },
+      "850": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 850"
+      },
+      "900": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 900"
+      },
+      "950": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 950"
+      },
+      "1000": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 1000"
+      },
+      "1300": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 1300"
+      },
+      "1500": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 1500"
+      },
+      "1600": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 1600"
+      },
+      "2000": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 2000"
+      },
+      "2500": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 2500"
+      },
+      "3000": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 3000"
+      },
+      "3600": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 3600"
+      },
+      "4000": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 4000"
+      },
+      "7000": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 7000"
+      },
+      "9500": {
+        "$type": "dimension",
+        "$value": "{core.dimension.base} * 9500"
+      },
+      "base": {
+        "$type": "dimension",
+        "$value": "{core.size.SCALE} / 100"
+      }
+    },
+    "fontWeights": {
+      "regular": {
+        "$type": "fontWeights",
+        "$value": "Regular"
+      },
+      "medium": {
+        "$type": "fontWeights",
+        "$value": "Medium"
+      },
+      "bold": {
+        "$type": "fontWeights",
+        "$value": "Bold"
+      },
+      "black": {
+        "$type": "fontWeights",
+        "$value": "Black"
+      }
+    },
+    "lineHeights": {
+      "300": {
+        "$type": "lineHeights",
+        "$value": "100%",
+        "$description": "For components where space is tight"
+      },
+      "400": {
+        "$type": "lineHeights",
+        "$value": "125%",
+        "$description": "For headings"
+      },
+      "500": {
+        "$type": "lineHeights",
+        "$value": "150%",
+        "$description": "For body and components"
+      }
+    },
+    "depth": {
+      "none": {
+        "$type": "boxShadow",
+        "$value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "0",
+            "spread": "0",
+            "color": "rgba(0,0,0,0)",
+            "type": "dropShadow"
+          }
+        ]
+      },
+      "down-right": {
+        "0": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "2",
+              "blur": "2",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "2",
+              "y": "5",
+              "blur": "5",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            }
+          ]
+        },
+        "1": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "1",
+              "blur": "2",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "2",
+              "y": "2",
+              "blur": "10",
+              "spread": "0",
+              "color": "{core.color.black}33",
+              "type": "dropShadow"
+            }
+          ]
+        },
+        "2": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "2",
+              "blur": "3",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "6",
+              "y": "6",
+              "blur": "30",
+              "spread": "0",
+              "color": "{core.color.black}26",
+              "type": "dropShadow"
+            }
+          ]
+        },
+        "3": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "3",
+              "blur": "4",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "10",
+              "y": "10",
+              "blur": "60",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            }
+          ]
+        }
+      },
+      "inner": {
+        "1": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "8",
+              "blur": "4",
+              "spread": "-4",
+              "color": "{core.color.black}1A",
+              "type": "innerShadow"
+            }
+          ]
+        }
+      },
+      "left": {
+        "0": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "-2",
+              "y": "0",
+              "blur": "2",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "-5",
+              "y": "0",
+              "blur": "5",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            }
+          ]
+        }
+      },
+      "right": {
+        "0": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "2",
+              "y": "0",
+              "blur": "2",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "5",
+              "y": "0",
+              "blur": "5",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            }
+          ]
+        }
+      },
+      "up-right": {
+        "1": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "-1",
+              "blur": "2",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "2",
+              "y": "-2",
+              "blur": "10",
+              "spread": "0",
+              "color": "{core.color.black}33",
+              "type": "dropShadow"
+            }
+          ]
+        },
+        "3": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "-3",
+              "blur": "4",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            },
+            {
+              "x": "10",
+              "y": "-10",
+              "blur": "60",
+              "spread": "0",
+              "color": "{core.color.black}1A",
+              "type": "dropShadow"
+            }
+          ]
+        }
+      },
+      "solid": {
+        "border": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "-1",
+              "blur": "0",
+              "spread": "0",
+              "color": "{core.color.black}4D",
+              "type": "innerShadow"
+            }
+          ]
+        }
+      }
+    },
+    "fontSize": {
+      "static": {
+        "small": {
+          "stepMinus2": {
+            "$type": "fontSizes",
+            "$value": "12"
+          },
+          "stepMinus1": {
+            "$type": "fontSizes",
+            "$value": "13"
+          },
+          "step0": {
+            "$type": "fontSizes",
+            "$value": "14"
+          },
+          "step1": {
+            "$type": "fontSizes",
+            "$value": "16"
+          },
+          "step2": {
+            "$type": "fontSizes",
+            "$value": "17"
+          },
+          "step3": {
+            "$type": "fontSizes",
+            "$value": "19"
+          },
+          "step4": {
+            "$type": "fontSizes",
+            "$value": "21"
+          },
+          "step5": {
+            "$type": "fontSizes",
+            "$value": "23"
+          },
+          "step6": {
+            "$type": "fontSizes",
+            "$value": "25"
+          },
+          "step7": {
+            "$type": "fontSizes",
+            "$value": "27"
+          },
+          "step8": {
+            "$type": "fontSizes",
+            "$value": "30"
+          },
+          "step9": {
+            "$type": "fontSizes",
+            "$value": "33"
+          },
+          "step10": {
+            "$type": "fontSizes",
+            "$value": "36"
+          }
+        },
+        "large": {
+          "stepMinus2": {
+            "$type": "fontSizes",
+            "$value": "12"
+          },
+          "stepMinus1": {
+            "$type": "fontSizes",
+            "$value": "13"
+          },
+          "step0": {
+            "$type": "fontSizes",
+            "$value": "14"
+          },
+          "step1": {
+            "$type": "fontSizes",
+            "$value": "16"
+          },
+          "step2": {
+            "$type": "fontSizes",
+            "$value": "18"
+          },
+          "step3": {
+            "$type": "fontSizes",
+            "$value": "21"
+          },
+          "step4": {
+            "$type": "fontSizes",
+            "$value": "24"
+          },
+          "step5": {
+            "$type": "fontSizes",
+            "$value": "27"
+          },
+          "step6": {
+            "$type": "fontSizes",
+            "$value": "30"
+          },
+          "step7": {
+            "$type": "fontSizes",
+            "$value": "35"
+          },
+          "step8": {
+            "$type": "fontSizes",
+            "$value": "40"
+          },
+          "step9": {
+            "$type": "fontSizes",
+            "$value": "46"
+          },
+          "step10": {
+            "$type": "fontSizes",
+            "$value": "52"
+          }
+        }
+      },
+      "fluid": {
+        "stepMinus2": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.6733rem, 0.7398rem + -0.0831vw, 0.7231rem)",
+          "$description": "Small Viewports: 11.57, Large Viewports: 10.77"
+        },
+        "stepMinus1": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.7675rem, 0.8048rem + -0.0465vw, 0.7955rem)",
+          "$description": "Small Viewports: 12.73, Large Viewports: 12.28"
+        },
+        "step0": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.875rem, 0.875rem + 0vw, 0.875rem)",
+          "$description": "Small Viewports: 14, Large Viewports: 14"
+        },
+        "step1": {
+          "$type": "fontSizes",
+          "$value": "clamp(0.9625rem, 0.9508rem + 0.0583vw, 0.9975rem)",
+          "$description": "Small Viewports: 15.40, Large Viewports: 15.96"
+        },
+        "step2": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.0588rem, 1.0326rem + 0.1307vw, 1.1372rem)",
+          "$description": "Small Viewports: 16.94, Large Viewports: 18.91"
+        },
+        "step3": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.1646rem, 1.1207rem + 0.2195vw, 1.2964rem)",
+          "$description": "Small Viewports: 18.63, Large Viewports: 20.74"
+        },
+        "step4": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.2811rem, 1.2155rem + 0.3279vw, 1.4778rem)",
+          "$description": "Small Viewports: 20.50, Large Viewports: 23.65"
+        },
+        "step5": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.4092rem, 1.3173rem + 0.4592vw, 1.6847rem)",
+          "$description": "Small Viewports: 22.55, Large Viewports: 26.96"
+        },
+        "step6": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.5869rem, 1.417rem + 0.8494vw, 2.4363rem)",
+          "$description": "Small Viewports: 25.39, Large Viewports: 38.98"
+        },
+        "step7": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.7051rem, 1.5437rem + 0.8073vw, 2.1895rem)",
+          "$description": "Small Viewports: 27.28, Large Viewports: 35.03"
+        },
+        "step8": {
+          "$type": "fontSizes",
+          "$value": "clamp(1.8756rem, 1.6688rem + 1.034vw, 2.496rem)",
+          "$description": "Small Viewports: 30.01 Large Viewports: 39.94"
+        },
+        "step9": {
+          "$type": "fontSizes",
+          "$value": "clamp(2.0632rem, 1.8025rem + 1.3038vw, 2.8455rem)",
+          "$description": "Small Viewports: 33.01, Large Viewports: 45.53"
+        },
+        "step10": {
+          "$type": "fontSizes",
+          "$value": "clamp(2.2695rem, 1.9448rem + 1.6238vw, 3.2438rem)",
+          "$description": "Small Viewports: 36.31, Large Viewports: 51.90"
+        }
+      },
+      "icon": {
+        "step0": {
+          "$type": "fontSizes",
+          "$value": "20px",
+          "$description": "Small viewports: 20px, Large viewports: 20px."
+        }
+      }
+    },
+    "txtDecoration": {
+      "underline": {
+        "$type": "txtDecoration",
+        "$value": "underline",
+        "$description": "used for links"
+      }
+    },
+    "paragraphSpacing": {
+      "0": {
+        "$type": "paragraphSpacing",
+        "$value": "0"
+      },
+      "150": {
+        "$type": "paragraphSpacing",
+        "$value": "{core.dimension.150}"
+      },
+      "200": {
+        "$type": "paragraphSpacing",
+        "$value": "{core.dimension.200}"
+      },
+      "250": {
+        "$type": "paragraphSpacing",
+        "$value": "{core.dimension.250}"
+      },
+      "300": {
+        "$type": "paragraphSpacing",
+        "$value": "{core.dimension.300}"
+      },
+      "400": {
+        "$type": "paragraphSpacing",
+        "$value": "{core.dimension.400}"
+      }
+    },
+    "fontFamilies": {
+      "sage-icons": {
+        "$type": "fontFamilies",
+        "$value": "sage-icons"
+      },
+      "heading": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI"
+      },
+      "subheading": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI"
+      },
+      "body": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI"
+      },
+      "component": {
+        "$type": "fontFamilies",
+        "$value": "Sage UI",
+        "$description": "Used in componentry such as tables, buttons, inputs etc."
+      },
+      "other": {
+        "$type": "fontFamilies",
+        "$value": "Open Sans",
+        "$description": "Fallback for when Sage fonts cannot load."
+      }
+    }
+  }
+}
