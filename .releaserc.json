@@ -20,9 +20,10 @@
       }
     ],
     [
-      "@semantic-release/git",
+      "@semantic-release/npm",
       {
-        "assets": ["docs/CHANGELOG.md", "package.json"]
+        "changelogFile": "docs/CHANGELOG.md",
+        "pkgRoot": "dist"
       }
     ],
     [
