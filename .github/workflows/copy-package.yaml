@@ -4,12 +4,11 @@ on:
   release:
     types: [published]
 jobs:
-  # Builds token library from current data/tokens.json file and releases it.
   release:
     name: Copy package to X3
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
       packages: write
     steps:
       - uses: actions/checkout@v4
@@ -19,8 +18,31 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Copy released package to private to X3 Nexus Registry
-        run: npx npm-copy --from https://registry.npmjs.org --from-username any --from-password any --to=https://repository.sagex3.com:8443/repository/x3-npm-hosted/ --to-email="${GIT_COMMITTER_EMAIL}" --to-username="${X3_NPM_USER}"  --to-password="${X3_NPM_PASSWORD}" %40sage%2Fdesign-tokens
+      - name: Copy released package to X3 Nexus Registry
+        run: |
+          # Get the latest published version
+          LATEST_VERSION=$(npm view @sage/design-tokens version --registry https://registry.npmjs.org)
+          echo "Latest version: $LATEST_VERSION"
+          
+          # Download the package from npm registry
+          npm pack @sage/design-tokens@$LATEST_VERSION --registry https://registry.npmjs.org
+          
+          # Configure registry for publishing to Nexus (using _auth)
+          npm config set registry https://repository.sagex3.com:8443/repository/x3-npm-hosted/
+          npm config set //repository.sagex3.com:8443/repository/x3-npm-hosted/:_auth "$(echo -n "${X3_NPM_USER}:${X3_NPM_PASSWORD}" | base64)"
+          npm config set //repository.sagex3.com:8443/repository/x3-npm-hosted/:email "${GIT_COMMITTER_EMAIL}"
+          npm config set //repository.sagex3.com:8443/repository/x3-npm-hosted/:always-auth true
+
+          # Find the actual .tgz filename
+          TGZ_FILE=$(ls sage-design-tokens-*.tgz)
+          echo "Publishing file: $TGZ_FILE"
+          
+          # Publish the downloaded package
+          if [[ "$LATEST_VERSION" == *"beta"* ]]; then
+            npm publish "$TGZ_FILE" --tag beta --ignore-scripts
+          else
+            npm publish "$TGZ_FILE" --ignore-scripts
+          fi
         env:
           X3_NPM_USER: ${{ secrets.X3_NPM_USER }}
           X3_NPM_PASSWORD: ${{ secrets.X3_NPM_PASSWORD }}
