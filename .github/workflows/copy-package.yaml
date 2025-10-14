@@ -31,7 +31,6 @@ jobs:
           npm config set registry https://repository.sagex3.com:8443/repository/x3-npm-hosted/
           npm config set //repository.sagex3.com:8443/repository/x3-npm-hosted/:_auth "$(echo -n "${X3_NPM_USER}:${X3_NPM_PASSWORD}" | base64)"
           npm config set //repository.sagex3.com:8443/repository/x3-npm-hosted/:email "${GIT_COMMITTER_EMAIL}"
-          npm config set //repository.sagex3.com:8443/repository/x3-npm-hosted/:always-auth true
 
           # Find the actual .tgz filename
           TGZ_FILE=$(ls sage-design-tokens-*.tgz)
