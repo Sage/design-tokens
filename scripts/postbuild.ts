@@ -174,12 +174,33 @@ function copyAssets () {
   }
 }
 
+function fixCSSCalcExpressions() {
+  const cssFiles = sync("./dist/css/**/*.css");
+  cssFiles.forEach(file => {
+    try {
+      const filePath = resolve(__dirname, "../", file);
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Wrap any values with mathematical operation in calc()
+      content = content.replace(
+        /(--[\w-]+):\s*(var\(--[\w-]+\)\s*[\+\-\*\/]\s*[^;]+);/g,
+        '$1: calc($2);'
+      );
+      
+      fs.writeFileSync(filePath, content);
+    } catch (err) {
+      console.error(`Error fixing math in ${file}:`, err);
+    }
+  });  
+}
+
 (async () => {
   copyPackageJSON()
   copyReadme()
   copyAssets()
   addCommonJSEntryFile()
   addES6EntryFiles()
+  fixCSSCalcExpressions()
   addFileHeader()
   await Icons({
     personalAccessToken: process.env["FIGMA_ACCESS_TOKEN"],
