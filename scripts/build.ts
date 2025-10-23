@@ -7,7 +7,6 @@ import { StyleDictionary, groups } from "./style-dictionary.js"
 import { DesignToken, File } from "style-dictionary/types"
 import { FilterComponent } from "./utils/filter-component.js"
 import { Config } from "style-dictionary"
-import { format } from "path"
 
 const components = fs.readdirSync("./data/tokens/components/")
 const modes = fs.readdirSync("./data/tokens/mode/")
