@@ -28,6 +28,8 @@
     "test": "vitest run"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@prantlf/jsonlint": "^16.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
@@ -72,6 +74,11 @@
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vitest": "^4.0.10"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "overrides": {
     "jackspeak": "2.1.1",
