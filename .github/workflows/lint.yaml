@@ -19,7 +19,7 @@ jobs:
           cache: "npm"
 
       - name: Install
-        run: npm ci --prefer-offline
+        run: npm ci --prefer-offline --ignore-scripts
 
       - name: Build project
         run: npm run build

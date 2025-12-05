@@ -23,7 +23,7 @@ jobs:
           node-version: "22"
           cache: "npm"
 
-      - run: npm ci --prefer-offline
+      - run: npm ci --prefer-offline --ignore-scripts
 
       - name: Append .env
         run: |
