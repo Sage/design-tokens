@@ -191,13 +191,17 @@
           }
         },
         "gray": {
+          "severe": {
+            "$type": "color",
+            "$value": "{core.color.storm.90}"
+          },
           "deep": {
             "$type": "color",
-            "$value": "{core.color.smoke.60}"
+            "$value": "{core.color.storm.65}"
           },
           "muted": {
             "$type": "color",
-            "$value": "{core.color.smoke.10}"
+            "$value": "{core.color.storm.10}"
           }
         }
       },
@@ -496,20 +500,6 @@
               "$description": "accessible OBJECT against white."
             },
             "faint": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "alpha",
-                    "value": "0.3",
-                    "space": "lch"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{mode.color.generic.txt.inverse.extreme}",
-              "$description": "Used for disabled txt"
-            },
-            "faint-copy": {
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
