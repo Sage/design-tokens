@@ -179,12 +179,12 @@ function fixCSSCalcExpressions() {
   cssFiles.forEach(file => {
     try {
       const filePath = resolve(__dirname, "../", file);
-      let content = fs.readFileSync(filePath, 'utf8');
+      let content = fs.readFileSync(filePath, "utf8");
       
       // Wrap any values with mathematical operation in calc()
       content = content.replace(
         /(--[\w-]+):\s*(var\(--[\w-]+\)\s*[\+\-\*\/]\s*[^;]+);/g,
-        '$1: calc($2);'
+        "$1: calc($2);"
       );
       
       fs.writeFileSync(filePath, content);
@@ -194,6 +194,47 @@ function fixCSSCalcExpressions() {
   });  
 }
 
+function fixShadowValues() {
+  const files = sync("./dist/**/*.@(css|scss)");
+  const getShadowValue = (value: string) => value.split(",").map((shadow: string) => {
+    return shadow.replace(
+      /\b(\d+(?:\.\d+)?)\b(?!px)(?=\s)/g,
+      (_, num) => num === "0" ? num : `${num}px`
+    );
+  });
+
+  files.forEach(file => {
+    try {
+      const filePath = resolve(__dirname, "../", file);
+      let content = fs.readFileSync(filePath, "utf8");
+      
+      content = content.replace(/\b(dropShadow|innerShadow)\b\s*/g, "");
+      
+      if (path.extname(filePath) === ".scss") {
+        content = content.replace(
+          /(\$[\w-]*(?:depth|shadow)[\w-]*):\s*([^;]+);/g,
+          (_, varName, value) => {
+            return `${varName}: ${getShadowValue(value).join(",")};`;
+          }
+        );
+      } else {
+        content = content.replace(
+          /(--[\w-]*(?:depth|shadow)[\w-]*):\s*([^;]+);/g,
+          (_, varName, value) => {
+            return `${varName}: ${getShadowValue(value).join(",")};`;
+          }
+        );
+      }
+      
+      fs.writeFileSync(filePath, content);
+    } catch (err) {
+      console.error(`Error fixing shadows in ${file}:`, err);
+    }
+  });
+
+  console.log("✅ Fixed shadow values in CSS/SCSS files");
+}
+
 (async () => {
   copyPackageJSON()
   copyReadme()
@@ -201,6 +242,7 @@ function fixCSSCalcExpressions() {
   addCommonJSEntryFile()
   addES6EntryFiles()
   fixCSSCalcExpressions()
+  fixShadowValues()
   addFileHeader()
   await Icons({
     personalAccessToken: process.env["FIGMA_ACCESS_TOKEN"],
