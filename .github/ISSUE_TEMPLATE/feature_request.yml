@@ -1,0 +1,51 @@
+name: 🏗️ New feature request
+description: Is there something that we should implement? Let us know!
+labels:
+  - Enhancement
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > ⚠️ **WARNING: This feature request is public**
+        > Please do not include any confidential or commercially sensitive information.
+        > 
+        > **Do not share:**
+        > - Screenshots or links to internal products or interfaces
+        > - API keys, tokens, or authentication credentials
+        > - Customer data or internal domain names
+        > 
+        > If unsure, contact carbon@sage.com or Design.System@sage.com
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the new feature. Please detail the reason and use cases. If you intend to submit a PR for this, tell us in the description.
+      placeholder: As a developer using design tokens, I want to [goal] so that [benefit].
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any alternative solutions or approaches you've considered?
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional context
+      description: Anything else we should know?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confidentiality
+      options:
+        - label: I confirm there is no confidential or commercially sensitive information included.
+          required: true

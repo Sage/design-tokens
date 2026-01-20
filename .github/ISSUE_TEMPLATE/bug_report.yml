@@ -1,0 +1,70 @@
+name: 🐞 Bug Report
+description: Something isn't working as expected?
+labels:
+  - Bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > ⚠️ **WARNING: This bug report is public**
+        > Please do not include any confidential or commercially sensitive information.
+        > 
+        > **Do not share:**
+        > - Screenshots or links to internal products or interfaces
+        > - API keys, tokens, or authentication credentials
+        > - Customer data or internal domain names
+        > 
+        > If unsure, contact carbon@sage.com or Design.System@sage.com
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug. What did you expect vs what actually happened?
+      placeholder: I am doing... What I expect is... What actually happens is...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to reproduce
+      description: Steps needed to reproduce the bug (e.g., how to access or import the tokens, any build steps required)
+      placeholder: Import color tokens from the library, then use color-primary in a component.
+    validations:
+      required: false
+
+  - type: input
+    id: design-tokens-version
+    attributes:
+      label: Design tokens version
+      description: Full version number (not just 'latest')
+      placeholder: 17.6.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: tokens-affected
+    attributes:
+      label: Tokens affected
+      description: List the specific tokens involved in this bug
+      placeholder: color-primary, spacing-lg
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional context
+      description: Anything else we should know?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confidentiality
+      options:
+        - label: I confirm there is no confidential or commercially sensitive information included.
+          required: true
