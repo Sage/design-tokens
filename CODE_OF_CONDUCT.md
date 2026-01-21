@@ -34,10 +34,10 @@ This Code of Conduct applies both within project spaces and in public spaces whe
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported by contacting the project team on our [Teams Channel](https://teams.microsoft.com/l/channel/19%3a6125ffa9db564ac5b9fb1aec3b25888b%40thread.skype/Project%2520Team?groupId=20b4091d-cd24-4648-92c4-2712b859b3e8&tenantId=3e32dd7c-41f6-492d-a1a3-c58eb02cf4f8). All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported by contacting Design.System@sage.com. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
 
 Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
 
 ## Attribution
 
-This Code of Conduct is adapted from the  [Contributor Covenant](https://contributor-covenant.org/), version 1.4, available at  [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/)
+This Code of Conduct is adapted from the  [Contributor Covenant](https://contributor-covenant.org/), version 3.0, available at [https://www.contributor-covenant.org/version/3/0/code_of_conduct/](https://www.contributor-covenant.org/version/3/0/code_of_conduct/)
