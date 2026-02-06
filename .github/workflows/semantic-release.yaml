@@ -24,8 +24,8 @@ jobs:
           node-version: "22"
           cache: "npm"
 
-      - name: Update npm to 11.8
-        run: npm install -g npm@11.8
+      - name: Update npm to 11.9
+        run: npm install -g npm@11.9
 
       - run: npm ci --prefer-offline --ignore-scripts
 
