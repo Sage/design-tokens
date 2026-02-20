@@ -1,145 +1,146 @@
 {
   "nav": {
-    "bg-default": {
-      "$type": "color",
-      "$value": "{mode.color.generic.bg.nought}",
-      "$description": "nav bar bg"
-    },
-    "leftnav": {
-      "container": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{mode.color.generic.bg.inverse.nought}",
-          "$description": "bg of horizontal nav variant that launches the left nav"
-        },
-        "bg-defaultAlt": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.inverse.defaultAlt}",
-          "$description": "bg of the parent container"
-        },
-        "border-default": {
-          "$type": "color",
-          "$value": "{mode.color.generic.fg.inverse.firm}",
-          "$description": "dividing lines within parent container"
-        }
+    "primary": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.active}"
       },
-      "item": {
-        "bg-active": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.inverse.active}"
-        },
-        "bg-default": {
-          "$type": "color",
-          "$value": "{mode.color.none}"
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.inverse.hover}"
-        },
-        "label-active": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.inverse.withActive}"
-        },
-        "label-default": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.inverse.withDefault}"
-        },
-        "label-hover": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.inverse.withHover}"
-        }
+      "bg-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.bg.inverse.nought}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.hover}"
+      },
+      "bg-child": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.inverse.child}"
+      },
+      "bg-childAlt": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.inverse.childAlt}"
+      },
+      "bg-selected": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.soft}",
+        "$description": "selected keyline under item"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.inverse.soft}",
+        "$description": "parent container border "
+      },
+      "divider": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.inverse.firm}",
+        "$description": "divider within child menus"
+      },
+      "label-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.withActive}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.inverse.withDefault}"
+      },
+      "label-defaultAlt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.inverse.moderate}"
+      },
+      "label-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.withHover}"
       }
     },
-    "modal": {
-      "container": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{mode.color.generic.bg.nought}",
-          "$description": "bg of container holding stack of items in modal nav"
-        },
-        "bg-defaultAlt": {
-          "$type": "color",
-          "$value": "{mode.color.generic.surface.faint}",
-          "$description": "bg of the sticky header within modal"
-        },
-        "border-default": {
-          "$type": "color",
-          "$value": "{mode.color.generic.fg.firm}",
-          "$description": "dividing lines within parent container"
-        }
+    "secondary": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.active}"
       },
-      "item": {
-        "bg-active": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.active}"
-        },
-        "bg-default": {
-          "$type": "color",
-          "$value": "{mode.color.none}"
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.hover}"
-        },
-        "label-active": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.withActive}"
-        },
-        "label-default": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.withDefault}"
-        },
-        "label-hover": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.withHover}"
-        }
+      "bg-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.inverse.defaultAlt}"
       },
-      "headeritem": {
-        "label-default": {
-          "$type": "color",
-          "$value": "{mode.color.generic.txt.soft}",
-          "$description": "color for subheaders passed into modal nav"
-        }
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.hover}"
+      },
+      "bg-selected": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.soft}",
+        "$description": "selected keyline under item"
+      },
+      "label-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.withActive}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.inverse.withDefault}"
+      },
+      "label-defaultAlt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.inverse.moderate}",
+        "$description": "subheader text within a menu"
+      },
+      "label-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.withHover}"
       }
     },
-    "topnav": {
-      "container": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{mode.color.generic.bg.nought}",
-          "$description": "bg of of horizontal nav variant that launches the left nav"
-        },
-        "border-default": {
-          "$type": "color",
-          "$value": "{mode.color.generic.fg.firm}",
-          "$description": "dividing lines within parent container"
-        }
+    "tertiary": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.active}"
       },
-      "item": {
-        "bg-active": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.active}"
-        },
-        "bg-default": {
-          "$type": "color",
-          "$value": "{mode.color.none}"
-        },
-        "bg-hover": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.hover}"
-        },
-        "label-active": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.withActive}"
-        },
-        "label-default": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.withDefault}"
-        },
-        "label-hover": {
-          "$type": "color",
-          "$value": "{mode.color.action.nav.withHover}"
-        }
+      "bg-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.bg.nought}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.hover}"
+      },
+      "bg-child": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.child}"
+      },
+      "bg-childAlt": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.childAlt}"
+      },
+      "bg-selected": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.firm}",
+        "$description": "selected keyline under item"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.soft}",
+        "$description": "parent container border "
+      },
+      "divider": {
+        "$type": "color",
+        "$value": "{mode.color.generic.bg.soft}",
+        "$description": "divider within child menus"
+      },
+      "label-active": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.withActive}"
+      },
+      "label-default": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.withDefault}"
+      },
+      "label-defaultAlt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.moderate}",
+        "$description": "subheader text within a menu"
+      },
+      "label-hover": {
+        "$type": "color",
+        "$value": "{mode.color.action.nav.withHover}"
       }
     }
   }

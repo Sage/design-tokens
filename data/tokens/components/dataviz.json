@@ -1,126 +1,490 @@
 {
   "dataviz": {
     "chart": {
-      "line": {
-        "bg-default": {
-          "$type": "color",
-          "$value": "{mode.color.colorcode.green.deep}"
-        },
-        "border": {
-          "$type": "color",
-          "$value": "{mode.color.colorcode.green.deep}"
-        }
-      },
       "bar": {
-        "gray": {
+        "fuchsia": {
           "bg-alt": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.gray.muted}"
+            "$value": "{mode.color.colorcode.pink.faint}"
           },
           "bg-default": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.gray.severe}"
+            "$value": "{mode.color.colorcode.pink.intense}"
           },
           "border": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.gray.severe}"
+            "$value": "{mode.color.colorcode.pink.intense}"
           },
           "pattern": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.gray.severe}"
+            "$value": "{mode.color.colorcode.pink.intense}"
           }
         },
-        "green": {
+        "red": {
           "bg-alt": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.green.muted}"
+            "$value": "{mode.color.colorcode.red.faint}"
           },
           "bg-default": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.green.deep}"
+            "$value": "{mode.color.colorcode.red.intense}"
           },
           "border": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.green.deep}"
+            "$value": "{mode.color.colorcode.red.intense}"
           },
           "pattern": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.green.deep}"
+            "$value": "{mode.color.colorcode.red.intense}"
+          }
+        },
+        "pink": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.red.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.red.soft}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.red.soft}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.red.soft}"
           }
         },
         "orange": {
           "bg-alt": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.orange.muted}"
+            "$value": "{mode.color.colorcode.orange.faint}"
           },
           "bg-default": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.orange.deep}"
+            "$value": "{mode.color.colorcode.orange.harsh}"
           },
           "border": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.orange.deep}"
+            "$value": "{mode.color.colorcode.orange.harsh}"
           },
           "pattern": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.orange.deep}"
+            "$value": "{mode.color.colorcode.orange.harsh}"
+          }
+        },
+        "gold": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.yellow.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.yellow.soft}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.yellow.harsh}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.yellow.harsh}"
+          }
+        },
+        "lime": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.lime.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.lime.harsh}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.lime.harsh}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.lime.harsh}"
+          }
+        },
+        "green": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.green.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.green.harsh}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.green.harsh}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.green.harsh}"
+          }
+        },
+        "teal": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.teal.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.teal.soft}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.teal.soft}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.teal.soft}"
+          }
+        },
+        "blue": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.soft}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.soft}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.soft}"
+          }
+        },
+        "navy": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.intense}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.intense}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.intense}"
+          }
+        },
+        "purple": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.purple.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.purple.intense}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.purple.intense}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.purple.intense}"
+          }
+        },
+        "slate": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.slate.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.slate.intense}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.slate.intense}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.slate.intense}"
           }
         }
       },
       "donut": {
-        "gray": {
+        "fuchsia": {
           "bg-alt": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.gray.muted}"
+            "$value": "{mode.color.colorcode.pink.faint}"
           },
           "bg-default": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.gray.severe}"
+            "$value": "{mode.color.colorcode.pink.intense}"
           },
           "border": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.gray.severe}"
+            "$value": "{mode.color.colorcode.pink.intense}"
           },
           "pattern": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.gray.severe}"
+            "$value": "{mode.color.colorcode.pink.intense}"
           }
         },
-        "green": {
+        "red": {
           "bg-alt": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.green.muted}"
+            "$value": "{mode.color.colorcode.red.faint}"
           },
           "bg-default": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.green.deep}"
+            "$value": "{mode.color.colorcode.red.intense}"
           },
           "border": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.green.deep}"
+            "$value": "{mode.color.colorcode.red.intense}"
           },
           "pattern": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.green.deep}"
+            "$value": "{mode.color.colorcode.red.intense}"
+          }
+        },
+        "pink": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.red.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.red.soft}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.red.soft}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.red.soft}"
           }
         },
         "orange": {
           "bg-alt": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.orange.muted}"
+            "$value": "{mode.color.colorcode.orange.faint}"
           },
           "bg-default": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.orange.deep}"
+            "$value": "{mode.color.colorcode.orange.harsh}"
           },
           "border": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.orange.deep}"
+            "$value": "{mode.color.colorcode.orange.harsh}"
           },
           "pattern": {
             "$type": "color",
-            "$value": "{mode.color.colorcode.orange.deep}"
+            "$value": "{mode.color.colorcode.orange.harsh}"
           }
+        },
+        "gold": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.yellow.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.yellow.soft}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.yellow.harsh}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.yellow.harsh}"
+          }
+        },
+        "lime": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.lime.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.lime.harsh}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.lime.harsh}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.lime.harsh}"
+          }
+        },
+        "green": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.green.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.green.harsh}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.green.harsh}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.green.harsh}"
+          }
+        },
+        "teal": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.teal.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.teal.soft}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.teal.soft}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.teal.soft}"
+          }
+        },
+        "blue": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.soft}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.soft}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.soft}"
+          }
+        },
+        "navy": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.intense}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.intense}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.blue.intense}"
+          }
+        },
+        "purple": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.purple.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.purple.intense}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.purple.intense}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.purple.intense}"
+          }
+        },
+        "slate": {
+          "bg-alt": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.slate.faint}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.slate.intense}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.slate.intense}"
+          },
+          "pattern": {
+            "$type": "color",
+            "$value": "{mode.color.colorcode.slate.intense}"
+          }
+        }
+      },
+      "line": {
+        "fuchsia": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.pink.intense}"
+        },
+        "red": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.red.intense}"
+        },
+        "pink": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.red.soft}"
+        },
+        "orange": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.orange.harsh}"
+        },
+        "gold": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.yellow.harsh}"
+        },
+        "lime": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.lime.harsh}"
+        },
+        "green": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.green.harsh}"
+        },
+        "teal": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.teal.soft}"
+        },
+        "blue": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.blue.soft}"
+        },
+        "navy": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.blue.intense}"
+        },
+        "purple": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.purple.intense}"
+        },
+        "slate": {
+          "$type": "color",
+          "$value": "{mode.color.colorcode.slate.intense}"
         }
       }
     },
@@ -145,181 +509,181 @@
       "blue": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.blue.deep}"
+          "$value": "{mode.color.colorcode.blue.harsh}"
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.blue.muted}"
+          "$value": "{mode.color.colorcode.blue.faint}"
         },
         "border": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.blue.deep}"
+          "$value": "{mode.color.colorcode.blue.harsh}"
         },
         "pattern": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.blue.deep}"
+          "$value": "{mode.color.colorcode.blue.harsh}"
         }
       },
       "teal": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.teal.deep}"
+          "$value": "{mode.color.colorcode.teal.harsh}"
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.teal.muted}"
+          "$value": "{mode.color.colorcode.teal.faint}"
         },
         "border": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.teal.deep}"
+          "$value": "{mode.color.colorcode.teal.harsh}"
         },
         "pattern": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.teal.deep}"
+          "$value": "{mode.color.colorcode.teal.harsh}"
         }
       },
       "green": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.green.deep}"
+          "$value": "{mode.color.colorcode.green.harsh}"
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.green.muted}"
+          "$value": "{mode.color.colorcode.green.faint}"
         },
         "border": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.green.deep}"
+          "$value": "{mode.color.colorcode.green.harsh}"
         },
         "pattern": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.green.deep}"
+          "$value": "{mode.color.colorcode.green.harsh}"
         }
       },
       "lime": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.lime.deep}"
+          "$value": "{mode.color.colorcode.lime.harsh}"
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.lime.muted}"
+          "$value": "{mode.color.colorcode.lime.faint}"
         },
         "border": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.lime.deep}"
+          "$value": "{mode.color.colorcode.lime.harsh}"
         },
         "pattern": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.lime.deep}"
+          "$value": "{mode.color.colorcode.lime.harsh}"
         }
       },
       "orange": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.orange.deep}"
+          "$value": "{mode.color.colorcode.orange.harsh}"
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.orange.muted}"
+          "$value": "{mode.color.colorcode.orange.faint}"
         },
         "border": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.orange.deep}"
+          "$value": "{mode.color.colorcode.orange.harsh}"
         },
         "pattern": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.orange.deep}"
+          "$value": "{mode.color.colorcode.orange.harsh}"
         }
       },
       "red": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.red.deep}"
+          "$value": "{mode.color.colorcode.red.harsh}"
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.red.muted}"
+          "$value": "{mode.color.colorcode.red.faint}"
         },
         "border": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.red.deep}"
+          "$value": "{mode.color.colorcode.red.harsh}"
         },
         "pattern": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.red.deep}"
+          "$value": "{mode.color.colorcode.red.harsh}"
         }
       },
       "pink": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.pink.deep}"
+          "$value": "{mode.color.colorcode.pink.harsh}"
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.pink.muted}"
+          "$value": "{mode.color.colorcode.pink.faint}"
         },
         "border": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.pink.deep}"
+          "$value": "{mode.color.colorcode.pink.harsh}"
         },
         "pattern": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.pink.deep}"
+          "$value": "{mode.color.colorcode.pink.harsh}"
         }
       },
       "purple": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.purple.deep}"
+          "$value": "{mode.color.colorcode.purple.harsh}"
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.purple.muted}"
+          "$value": "{mode.color.colorcode.purple.faint}"
         },
         "border": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.purple.deep}"
+          "$value": "{mode.color.colorcode.purple.harsh}"
         },
         "pattern": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.purple.deep}"
+          "$value": "{mode.color.colorcode.purple.harsh}"
         }
       },
       "gray": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.gray.deep}"
+          "$value": "{mode.color.colorcode.gray.harsh}"
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.gray.muted}"
+          "$value": "{mode.color.colorcode.gray.faint}"
         },
         "border": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.gray.deep}"
+          "$value": "{mode.color.colorcode.gray.harsh}"
         },
         "pattern": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.gray.deep}"
+          "$value": "{mode.color.colorcode.gray.harsh}"
         }
       },
       "slate": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.slate.deep}"
+          "$value": "{mode.color.colorcode.slate.harsh}"
         },
         "bg-default": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.slate.muted}"
+          "$value": "{mode.color.colorcode.slate.faint}"
         },
         "border": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.slate.deep}"
+          "$value": "{mode.color.colorcode.slate.harsh}"
         },
         "pattern": {
           "$type": "color",
-          "$value": "{mode.color.colorcode.slate.deep}"
+          "$value": "{mode.color.colorcode.slate.harsh}"
         }
       }
     }
