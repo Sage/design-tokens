@@ -4,12 +4,16 @@
       "subtle": {
         "bg-alt": {
           "$type": "color",
-          "$value": "{mode.color.generic.bg.faint}",
+          "$value": "{mode.color.generic.surface.trace}",
           "$description": "header alt"
         },
         "bg-default": {
           "$type": "color",
           "$value": "{mode.color.none}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{mode.color.generic.surface.faint}"
         },
         "border-default": {
           "$type": "color",
@@ -19,6 +23,10 @@
         "label-default": {
           "$type": "color",
           "$value": "{mode.color.generic.txt.severe}"
+        },
+        "label-hover": {
+          "$type": "color",
+          "$value": "{mode.color.generic.txt.extreme}"
         }
       },
       "harsh": {
@@ -31,6 +39,10 @@
           "$type": "color",
           "$value": "{mode.color.generic.surface.harsh}"
         },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{mode.color.generic.surface.acute}"
+        },
         "border-default": {
           "$type": "color",
           "$value": "{mode.color.generic.fg.soft}"
@@ -38,6 +50,10 @@
         "label-default": {
           "$type": "color",
           "$value": "{mode.color.generic.txt.inverse.severe}"
+        },
+        "label-hover": {
+          "$type": "color",
+          "$value": "{mode.color.generic.txt.inverse.extreme}"
         }
       }
     },
