@@ -530,10 +530,15 @@
             "$value": "{core.color.white}",
             "$description": "used on full page backgrounds"
           },
-          "faint": {
+          "trace": {
             "$type": "color",
             "$value": "{core.color.storm.5}",
             "$description": "used on full page backgrounds as an alternative option"
+          },
+          "faint": {
+            "$type": "color",
+            "$value": "{core.color.storm.10}",
+            "$description": "table header hover color"
           },
           "harsh": {
             "$type": "color",
@@ -542,6 +547,10 @@
           "severe": {
             "$type": "color",
             "$value": "{core.color.storm.90}"
+          },
+          "acute": {
+            "$type": "color",
+            "$value": "{core.color.storm.95}"
           }
         }
       },
@@ -948,7 +957,7 @@
               "studio.tokens": {
                 "modify": {
                   "type": "alpha",
-                  "value": "0.9",
+                  "value": "0.92",
                   "space": "lch"
                 }
               }
