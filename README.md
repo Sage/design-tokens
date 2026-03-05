@@ -52,6 +52,12 @@ To make use of the css variables, import them into your code like so:
 @import url("@sage/design-tokens/css/components/button.css");
 ```
 
+Alternatively, if you prefer to import all light mode tokens in a single file, you can use `light-all.css`:
+
+```css
+@import url("@sage/design-tokens/css/light-all.css");
+```
+
 **Note:** For manual theme switching in JavaScript applications, we recommend using the HTML `<link>` approach rather than dynamic imports to avoid bundler complexity. You can import the component css files in your JS like below.
 
 ```js

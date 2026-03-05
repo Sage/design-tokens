@@ -235,6 +235,46 @@ function fixShadowValues() {
   console.log("✅ Fixed shadow values in CSS/SCSS files");
 }
 
+function createLightAllCss() {
+  try {
+    const cssFilesToCombine = [
+      "./dist/css/global.css",
+      "./dist/css/light.css",
+      ...sync("./dist/css/components/*.css"),
+    ];
+
+    const variablesContent: string[] = [];
+
+    // Extract variables from each CSS file in order (mode tokens declared first)
+    cssFilesToCombine.forEach((filePath: string) => {
+      try {
+        const content = fs.readFileSync(resolve(__dirname, "../", filePath), "utf8");
+        
+        // Extract the :root block content
+        const rootMatch = content.match(/:root\s*\{([\s\S]*?)\}/);
+        if (rootMatch && rootMatch[1]) {
+          const variables = rootMatch[1].trim();
+          if (variables) {
+            variablesContent.push(variables);
+          }
+        }
+      } catch (err) {
+        throw new Error(`Error reading CSS file ${filePath}: ${err}`);
+      }
+    });
+
+    const fileContent = `:root {\n  ${variablesContent.join("\n  ")}\n}\n`;
+
+    // Write the file (header will be added by addFileHeader())
+    const filePath = resolve(__dirname, "../dist/css/light-all.css");
+    fs.outputFileSync(filePath, fileContent);
+
+    console.log(`✅ Created light-all.css`);
+  } catch (err) {
+    throw new Error(`Error creating light-all.css: ${err}`);
+  }
+}
+
 (async () => {
   copyPackageJSON()
   copyReadme()
@@ -243,6 +283,7 @@ function fixShadowValues() {
   addES6EntryFiles()
   fixCSSCalcExpressions()
   fixShadowValues()
+  createLightAllCss()
   addFileHeader()
   await Icons({
     personalAccessToken: process.env["FIGMA_ACCESS_TOKEN"],
