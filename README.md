@@ -166,7 +166,7 @@ It is possible to export design tokens to any format or language. If you need to
 
 ## Contributing
 
-If you would like to help contribute to this library, please read our [contributing documentation](./docs/CONTRIBUTING.md),
+If you would like to help contribute to this library, please read our [contributing documentation](./CONTRIBUTING.md),
 
 ## Licence
 
