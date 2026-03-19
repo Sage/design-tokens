@@ -34,12 +34,100 @@ const containsOperation = (value: string): boolean => {
 };
 
 /**
+ * Helper: Replace {references} with var(--kebab-case) in a string value
+ */
+const processReferences = (value: string): string => {
+  if (typeof value !== 'string') return String(value);
+  if (usesReferences(value)) {
+    return value.replace(
+      /\{([^}]+)\}/g,
+      (_, refPath) => `var(--${convertToKebabCase(refPath)})`
+    );
+  }
+  return value;
+};
+
+/**
+ * Helper: Add px unit to plain numeric strings
+ */
+const addPx = (value: string): string => {
+  if (usesReferences(value)) {
+    return processReferences(value);
+  }
+
+  if (Number(value) !== 0 && /^-?\d+(\.\d+)?$/.test(value)) {
+    return `${value}px`;
+  }
+
+  return value;
+};
+
+type BoxShadowTokenValue = Array<{
+  offsetX: string;
+  offsetY: string;
+  blur: string;
+  spread: string;
+  color: string;
+  type: string;
+}>;
+
+/**
+ * Helper: Convert a boxShadow array to a CSS box-shadow string
+ */
+const processBoxShadow = (
+  shadows: BoxShadowTokenValue
+
+): string => {
+  return shadows.map(({offsetX, offsetY, blur, spread, color, type}) => {
+    const prefix = type === 'innerShadow' ? 'inset ' : '';
+    const x = addPx(offsetX);
+    const y = addPx(offsetY);
+    const blurValue = addPx(blur);
+    const spreadValue = addPx(spread);
+    const colorValue = processReferences(color);
+
+    return `${prefix}${x} ${y} ${blurValue} ${spreadValue} ${colorValue}`;
+  }).join(', ');
+};
+
+type TypographyTokenValue = {
+  fontFamily: string;
+  fontWeight: string;
+  lineHeight: string;
+  fontSize: string;
+};
+
+/**
+ * Helper: Convert a typography object to a CSS font shorthand string
+ */
+const processTypography = (
+  typography: TypographyTokenValue
+): string => {
+  const fontWeight = processReferences(typography.fontWeight);
+  const fontSize = processReferences(typography.fontSize);
+  const lineHeight = processReferences(typography.lineHeight);
+  const fontFamily = processReferences(typography.fontFamily);
+  
+  return `${fontWeight} ${fontSize}/${lineHeight} ${fontFamily}`;
+};
+
+/**
  * Helper: Outputs a token value, replacing references with CSS variable references
  * @param originalValue The original value of the token, which may include references
  * @param token The design token object
  * @returns The processed value with CSS variable references where applicable
  */
-export const outputRefForToken = (originalValue: string, token: DesignToken): string => {
+export const outputRefForToken = (originalValue: string | TypographyTokenValue | BoxShadowTokenValue, token: DesignToken): string => {
+  // Handle boxShadow arrays
+  if (Array.isArray(originalValue)) {
+    return processBoxShadow(originalValue);
+  }
+
+  // Handle typography objects
+  if (typeof originalValue === 'object') {
+    return processTypography(originalValue);
+  }
+
   if (usesReferences(originalValue)) {
     if (originalValue.startsWith("linear-gradient(")) {
       const linearCSSValue = originalValue.replace(
