@@ -33,9 +33,7 @@
         "$type": "color",
         "$value": "{mode.color.action.focus.inverse.txt}"
       }
-    }
-  },
-  "shadow": {
+    },
     "default": {
       "$type": "boxShadow",
       "$value": [
@@ -54,6 +52,27 @@
           "spread": "4",
           "color": "{focus.border}",
           "type": "dropShadow"
+        }
+      ]
+    },
+    "inset": {
+      "$type": "boxShadow",
+      "$value": [
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "0",
+          "spread": "2",
+          "color": "{focus.border}",
+          "type": "innerShadow"
+        },
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "0",
+          "spread": "4",
+          "color": "{focus.borderalt}",
+          "type": "innerShadow"
         }
       ]
     }
