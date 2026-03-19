@@ -356,5 +356,51 @@
         }
       }
     }
+  },
+  "focus": {
+    "shadow-copy": {
+      "default": {
+        "$type": "boxShadow",
+        "$value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "0",
+            "spread": "2px",
+            "color": "{focus.borderalt}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "0",
+            "spread": "4px",
+            "color": "{focus.border}",
+            "type": "dropShadow"
+          }
+        ]
+      },
+      "inner": {
+        "$type": "boxShadow",
+        "$value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "0",
+            "spread": "2px",
+            "color": "{focus.border}",
+            "type": "innerShadow"
+          },
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "0",
+            "spread": "4px",
+            "color": "{focus.borderalt}",
+            "type": "innerShadow"
+          }
+        ]
+      }
+    }
   }
 }
