@@ -6,7 +6,9 @@ import StyleDictionary from "style-dictionary"
 import { register } from "@tokens-studio/sd-transforms"
 import { removeComments } from "./transforms/removeComments.js";
 import { outputJSONWithRefs } from "./formats/outputJSONWithRefs.js";
+import { outputJSON } from "./formats/outputJSON.js";
 import { outputES6WithRefs } from "./formats/outputES6WithRefs.js";
+import { outputES6 } from "./formats/outputES6.js";
 import { outputCommonJSWithRefs } from "./formats/commonJSWithRefs.js";
 import { formatCommonJSExports } from "./formats/commonJSExports.js";
 
@@ -16,8 +18,18 @@ StyleDictionary.registerFormat({
 });
 
 StyleDictionary.registerFormat({
+  name: "custom/json",
+  format: outputJSON
+});
+
+StyleDictionary.registerFormat({
   name: "custom/es6-with-refs",
   format: outputES6WithRefs
+});
+
+StyleDictionary.registerFormat({
+  name: "custom/es6",
+  format: outputES6
 });
 
 StyleDictionary.registerFormat({

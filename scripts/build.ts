@@ -46,18 +46,21 @@ const getMode = ({modeName = "", format, suffix, subPath}: IMode): File[] => {
 }
 
 const getFormat = (format: string, outputRefs: boolean, componentName: string): string => {
-  // outputRefs is true for mode and component files, false for global
-  if (format === "json/flat" && outputRefs) {
-    return "custom/json-with-refs";
-  } else if (format === "javascript/es6" && !["mode", "global", "dark", "light"].includes(componentName)) {
-    // For component files, use custom ES6 format instead of standard
-    return "custom/es6-with-refs";
-  } else if (format === "javascript/module") {
+  // JSON formats
+  if (format === "json/flat") {
+    return outputRefs ? "custom/json-with-refs" : "custom/json";
+  } 
+  // ES6 formats
+  else if (format === "javascript/es6") {
+    // For ES6: use custom/es6-with-refs for components, custom/es6 for global/mode files
+    return outputRefs ? "custom/es6-with-refs" : "custom/es6";
+  } 
+  // CommonJS formats
+  else if (format === "javascript/module") {
     if (["mode", "global", "dark", "light"].includes(componentName)) {
       // For mode/global files we want to have similar export format to ES6 rather nested objects
       return "custom/commonjs-exports";
     } else {
-      // For component files, use custom CommonJS format instead of standard
       return "custom/commonjs-with-refs";
     }
   }
