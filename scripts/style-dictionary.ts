@@ -40,6 +40,7 @@ StyleDictionary.registerTransform({
 const groups = {
   css: [
     "custom/remove-comments",
+    "ts/shadow/innerShadow",
     "border/css/shorthand",
     "shadow/css/shorthand",
     "transition/css/shorthand",
@@ -55,6 +56,7 @@ const groups = {
   ],
   scss: [
     "custom/remove-comments",
+    "ts/shadow/innerShadow",
     "border/css/shorthand",
     "shadow/css/shorthand",
     "transition/css/shorthand", 
