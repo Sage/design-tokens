@@ -28,23 +28,25 @@ describe("light-all.css", () => {
   });
 
   it("should include all global tokens", () => {
-    globalTokens.forEach((value, key) => {
-      expect(lightAllTokens.has(key)).toBe(true);
-      expect(lightAllTokens.get(key)).toBe(value);
+    const allEntries = [...lightAllTokens];
+    [...globalTokens].forEach(([key, value], i) => {
+      expect(allEntries[i]).toEqual([key, value]);
     });
   });
 
   it("should include all light mode tokens", () => {
-    lightTokens.forEach((value, key) => {
-      expect(lightAllTokens.has(key)).toBe(true);
-      expect(lightAllTokens.get(key)).toBe(value);
+    const allEntries = [...lightAllTokens];
+    const offset = globalTokens.size;
+    [...lightTokens].forEach(([key, value], i) => {
+      expect(allEntries[offset + i]).toEqual([key, value]);
     });
   });
 
   it("should include all component tokens", () => {
-    componentTokens.forEach((value, key) => {
-      expect(lightAllTokens.has(key)).toBe(true);
-      expect(lightAllTokens.get(key)).toBe(value);
+    const allEntries = [...lightAllTokens];
+    const offset = globalTokens.size + lightTokens.size;
+    [...componentTokens].forEach(([key, value], i) => {
+      expect(allEntries[offset + i]).toEqual([key, value]);
     });
   });
 

@@ -14,7 +14,7 @@ import { sortAlphabetically } from "../utils/sortTokens.js";
  * @param dictionary The style dictionary object containing all tokens
  * @returns CommonJS module string with alphabetically sorted export statements
  */
-export const formatCommonJSExports = ({dictionary}: {dictionary: Dictionary}) => {
+export const outputCommonJSWithNoRefs = ({dictionary}: {dictionary: Dictionary}) => {
   // Build array of token exports with their names and formatted export statements
   const tokenExports = dictionary.allTokens
     .filter((token: DesignToken) => token.name)

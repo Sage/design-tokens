@@ -27,7 +27,7 @@ export function isAlphabetical(items: string[]): boolean {
     const current = items[i]
     const previous = items[i - 1]
     if (!current || !previous) return false
-    if (current.localeCompare(previous, undefined, { numeric: true, sensitivity: 'base' }) < 0) {
+    if (current.localeCompare(previous, undefined, { numeric: true, sensitivity: 'base' }) <= 0) {
       return false
     }
   }

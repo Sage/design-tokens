@@ -78,13 +78,11 @@ function sortCSSAndSCSSFiles() {
     
     // Sort CSS files - find all .css files in dist/css and its subdirectories
     const cssFiles = sync(`${distPath}/css/**/*.css`)
+      .filter(filePath => !filePath.includes('light-all.css'))
     cssFiles.forEach(filePath => {
-      // Skip light-all.css as it has special formatting and is handled separately
-      if (!filePath.includes('light-all.css')) {
-        const content = fs.readFileSync(filePath, 'utf-8')
-        const sorted = sortProperties(content, true)
-        fs.writeFileSync(filePath, sorted)
-      }
+      const content = fs.readFileSync(filePath, 'utf-8')
+      const sorted = sortProperties(content, true)
+      fs.writeFileSync(filePath, sorted)
     })
     console.log(`✅ Sorted ${cssFiles.length} CSS files`)
 

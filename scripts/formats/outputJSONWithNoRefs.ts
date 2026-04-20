@@ -11,7 +11,7 @@ import { sortAlphabetically } from "../utils/sortTokens.js";
  * @param dictionary The style dictionary object containing all tokens
  * @returns JSON string with alphabetically sorted token values
  */
-export const outputJSON = ({dictionary}: {dictionary: Dictionary}) => {
+export const outputJSONWithNoRefs = ({dictionary}: {dictionary: Dictionary}) => {
     // Build token object from all tokens in the dictionary
     const tokenObject = dictionary.allTokens.reduce((acc: Record<string, any>, token: DesignToken) => {
       const value = token.value || token.$value;
