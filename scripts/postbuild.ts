@@ -15,6 +15,7 @@ const __dirname = dirname(__filename);
 
 import { FileName } from "./utils/filename.js"
 import { HeaderContents } from "./utils/file-header.js"
+import { sortCSSAndSCSSFiles } from "./sortCSSAndSCSS.js"
 
 import { Icons } from "./icons.js"
 
@@ -237,17 +238,30 @@ function fixShadowValues() {
 
 function createLightAllCss() {
   try {
+    // Sort component files alphabetically (a-z) when combining
+    const componentFiles = sync("./dist/css/components/*.css").sort();
+    
     const cssFilesToCombine = [
-      "./dist/css/global.css",
-      "./dist/css/light.css",
-      ...sync("./dist/css/components/*.css"),
+      { path: "./dist/css/global.css", label: "GLOBAL" },
+      { path: "./dist/css/light.css", label: "LIGHT" },
+      ...componentFiles.map(path => ({ path, label: "COMPONENTS" })),
     ];
 
     const variablesContent: string[] = [];
+    let lastLabel = "";
 
-    // Extract variables from each CSS file in order (mode tokens declared first)
-    cssFilesToCombine.forEach((filePath: string) => {
+    // Extract variables from each CSS file in order (global → light → components)
+    cssFilesToCombine.forEach(({ path: filePath, label }) => {
       try {
+        // Add section comment with spacing when section changes
+        if (label !== lastLabel) {
+          if (lastLabel !== "") {
+            variablesContent.push("");
+          }
+          variablesContent.push(`/* ${label} */`);
+          lastLabel = label;
+        }
+
         const content = fs.readFileSync(resolve(__dirname, "../", filePath), "utf8");
         
         // Extract the :root block content
@@ -283,6 +297,7 @@ function createLightAllCss() {
   addES6EntryFiles()
   fixCSSCalcExpressions()
   fixShadowValues()
+  sortCSSAndSCSSFiles()
   createLightAllCss()
   addFileHeader()
   await Icons({

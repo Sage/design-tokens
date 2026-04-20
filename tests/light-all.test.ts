@@ -4,9 +4,9 @@ import {
   expect,
 } from "vitest";
 import { resolve } from "path";
-import { parseCSSFile } from "./utils/index.js";
+import { parseCSSFile, isAlphabetical } from "./utils/index.js";
 import { cwd } from "process";
-import { readdirSync } from "fs";
+import { readdirSync, readFileSync } from "fs";
 
 const distPath = resolve(cwd(), "dist");
 
@@ -28,23 +28,25 @@ describe("light-all.css", () => {
   });
 
   it("should include all global tokens", () => {
-    globalTokens.forEach((value, key) => {
-      expect(lightAllTokens.has(key)).toBe(true);
-      expect(lightAllTokens.get(key)).toBe(value);
+    const allEntries = [...lightAllTokens];
+    [...globalTokens].forEach(([key, value], i) => {
+      expect(allEntries[i]).toEqual([key, value]);
     });
   });
 
   it("should include all light mode tokens", () => {
-    lightTokens.forEach((value, key) => {
-      expect(lightAllTokens.has(key)).toBe(true);
-      expect(lightAllTokens.get(key)).toBe(value);
+    const allEntries = [...lightAllTokens];
+    const offset = globalTokens.size;
+    [...lightTokens].forEach(([key, value], i) => {
+      expect(allEntries[offset + i]).toEqual([key, value]);
     });
   });
 
   it("should include all component tokens", () => {
-    componentTokens.forEach((value, key) => {
-      expect(lightAllTokens.has(key)).toBe(true);
-      expect(lightAllTokens.get(key)).toBe(value);
+    const allEntries = [...lightAllTokens];
+    const offset = globalTokens.size + lightTokens.size;
+    [...componentTokens].forEach(([key, value], i) => {
+      expect(allEntries[offset + i]).toEqual([key, value]);
     });
   });
 
@@ -78,5 +80,66 @@ describe("light-all.css", () => {
     ]).size;
     
     expect(lightAllTokens.size).toBe(expectedTotal);
+  });
+
+  describe("section ordering", () => {
+    const lightAllContent = readFileSync(
+      resolve(distPath, "css/light-all.css"),
+      "utf-8"
+    );
+
+    it("should have GLOBAL section in alphabetical order", () => {
+      // Extract GLOBAL section (between /* GLOBAL */ and /* LIGHT */)
+      const globalMatch = lightAllContent.match(
+        /\/\*\s*GLOBAL\s*\*\/\n([\s\S]*?)\/\*\s*LIGHT\s*\*\//
+      );
+      
+      expect(globalMatch).toBeTruthy();
+      if (!globalMatch) return;
+      
+      // Extract token names from section
+      const globalTokenNames = Array.from(
+        globalMatch[1]!.matchAll(/--([a-z0-9-]+):/g)
+      ).map(match => `--${match[1]}`);
+      
+      expect(globalTokenNames.length).toBeGreaterThan(0);
+      expect(isAlphabetical(globalTokenNames)).toBe(true);
+    });
+
+    it("should have LIGHT section in alphabetical order", () => {
+      // Extract LIGHT section (between /* LIGHT */ and /* COMPONENTS */)
+      const lightMatch = lightAllContent.match(
+        /\/\*\s*LIGHT\s*\*\/\n([\s\S]*?)\/\*\s*COMPONENTS\s*\*\//
+      );
+      
+      expect(lightMatch).toBeTruthy();
+      if (!lightMatch) return;
+      
+      // Extract token names from section
+      const lightTokenNames = Array.from(
+        lightMatch[1]!.matchAll(/--([a-z0-9-]+):/g)
+      ).map(match => `--${match[1]}`);
+      
+      expect(lightTokenNames.length).toBeGreaterThan(0);
+      expect(isAlphabetical(lightTokenNames)).toBe(true);
+    });
+
+    it("should have COMPONENTS section in alphabetical order", () => {
+      // Extract COMPONENTS section (after /* COMPONENTS */)
+      const componentsMatch = lightAllContent.match(
+        /\/\*\s*COMPONENTS\s*\*\/\n([\s\S]*)/
+      );
+      
+      expect(componentsMatch).toBeTruthy();
+      if (!componentsMatch) return;
+      
+      // Extract token names from section
+      const componentTokenNames = Array.from(
+        componentsMatch[1]!.matchAll(/--([a-z0-9-]+):/g)
+      ).map(match => `--${match[1]}`);
+      
+      expect(componentTokenNames.length).toBeGreaterThan(0);
+      expect(isAlphabetical(componentTokenNames)).toBe(true);
+    });
   });
 });
