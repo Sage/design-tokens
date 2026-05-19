@@ -196,6 +196,7 @@ function fixCSSCalcExpressions() {
 
 function fixShadowValues() {
   const files = sync("./dist/**/*.@(css|scss)");
+
   const getShadowValue = (value: string) => value.split(",").map((shadow: string) => {
     return shadow.replace(
       /\b(\d+(?:\.\d+)?)\b(?!px)(?=\s)/g,

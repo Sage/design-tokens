@@ -20,7 +20,7 @@ interface IMode {
 
 interface IFiles extends IMode {
   componentName: string
-  outputRefs?: boolean
+  outputRefs?: boolean | ((token: DesignToken) => boolean)
 }
 
 const getMode = ({modeName = "", format, suffix, subPath}: IMode): File[] => {
@@ -45,9 +45,9 @@ const getMode = ({modeName = "", format, suffix, subPath}: IMode): File[] => {
   ]
 }
 
-const getFormat = (format: string, outputRefs: boolean, componentName: string): string => {
+const getFormat = (format: string, outputRefs: boolean | ((token: DesignToken) => boolean), componentName: string): string => {
   // outputRefs is true for mode and component files, false for global
-  if (format === "json/flat" && outputRefs) {
+  if (format === "json/flat" && outputRefs === true) {
     return "custom/json-with-refs";
   } else if (format === "javascript/es6" && !["mode", "global", "dark", "light"].includes(componentName)) {
     // For component files, use custom ES6 format instead of standard
@@ -102,10 +102,15 @@ const getFiles = ({componentName, modeName = "", format, suffix, outputRefs = fa
   ]
 }
 
+const shouldOutputGlobalDepthRefs = (token: DesignToken): boolean => {
+  return token["path"]?.[0] === "global" && token["path"]?.[1] === "depth"
+}
+
 const getGlobalConfig = (): Config => {
   return {
     source: [
       "./data/tokens/core.json",
+     "./data/tokens/mode/light.json",
       "./data/tokens/global/*.json"
     ],
     preprocessors: ["tokens-studio"],
@@ -114,7 +119,7 @@ const getGlobalConfig = (): Config => {
         buildPath: "dist/css/",
         transforms: groups.css,
         files: [
-          ...getFiles({componentName: "global", format: "css/variables", suffix: "css"})
+          ...getFiles({componentName: "global", format: "css/variables", suffix: "css", outputRefs: shouldOutputGlobalDepthRefs})
         ]
       },
       scss: {
