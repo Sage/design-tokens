@@ -54,9 +54,9 @@ jobs:
       - name: Compile SCSS
         run: |
           (
-            echo "@import 'global.scss';"
             echo "@import 'dark.scss';"
             echo "@import 'light.scss';"
+            echo "@import 'global.scss';"
             for f in dist/scss/components/*.scss; do
               fname=$(basename "$f")
               echo "@import 'components/$fname';"
