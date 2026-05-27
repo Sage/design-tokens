@@ -18,7 +18,12 @@ describe("dist/mcp/tokens.json", () => {
     expect(t).toBeDefined();
     expect(t.layer).toBe("component");
     expect(t.category).toBe("button");
-    expect(Array.isArray(t.refChain)).toBe(true);
+    // refChain is a flat array when identical across modes, or { light, dark } when it diverges
+    const chain = t.refChain;
+    const isArrayOrModePair =
+      Array.isArray(chain) ||
+      (!!chain && Array.isArray(chain.light) && Array.isArray(chain.dark));
+    expect(isArrayOrModePair).toBe(true);
   });
 
   it("regression: a mode-dependent token keeps BOTH light and dark values (light not lost)", () => {
