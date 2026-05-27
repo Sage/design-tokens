@@ -15,6 +15,7 @@ const __dirname = dirname(__filename);
 
 import { FileName } from "./utils/filename.js"
 import { HeaderContents } from "./utils/file-header.js"
+import { mergeMCPTokens } from "./utils/merge-mcp-tokens.js"
 
 import { Icons } from "./icons.js"
 
@@ -284,6 +285,7 @@ function createLightAllCss() {
   fixCSSCalcExpressions()
   fixShadowValues()
   createLightAllCss()
+  mergeMCPTokens()
   addFileHeader()
   await Icons({
     personalAccessToken: process.env["FIGMA_ACCESS_TOKEN"],
