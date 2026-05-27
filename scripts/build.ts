@@ -192,6 +192,19 @@ const getModeConfig = (modeName: string): Config => {
         files: [
           ...getMode({modeName, format: "json/flat", suffix: "json"})
         ]
+      },
+      mcp: {
+        buildPath: "dist/mcp/",
+        transforms: groups.css,
+        files: [
+          {
+            destination: `tokens.${modeName}.json`,
+            format: "custom/json-enriched",
+            options: {
+              outputReferences: true
+            }
+          }
+        ]
       }
     },
     log: {
@@ -227,4 +240,5 @@ modes.forEach(async (mode) => {
   await modeStyleDictionary.buildPlatform("scss")
   await modeStyleDictionary.buildPlatform("js")
   await modeStyleDictionary.buildPlatform("json")
+  await modeStyleDictionary.buildPlatform("mcp")
 });
