@@ -5,7 +5,7 @@ const layerFromFilePath = (fp = ""): string => {
   if (fp.includes("/components/")) return "component";
   if (fp.includes("/mode/")) return "mode";
   if (fp.includes("/global/")) return "global";
-  if (fp.endsWith("/core.json") || fp.endsWith("core.json")) return "core";
+  if (fp.endsWith("core.json")) return "core";
   return "unknown";
 };
 
@@ -24,10 +24,12 @@ const buildRefChain = (token: TransformedToken, dictionary: Dictionary): string[
   let current: TransformedToken | undefined = token;
 
   while (current) {
-    const orig = current["original"]?.$value ?? current["original"]?.value;
+    const orig = current.original?.$value ?? current.original?.value;
     if (typeof orig !== "string" || !usesReferences(orig)) break;
 
     const refs = getReferences(orig, dictionary.tokens);
+    // Only follow the first reference. Values like linear-gradient may contain several {…} refs,
+    // but refChain must be a single linear path — the merge logic downstream depends on this.
     const ref = refs[0];
     if (!ref) break;
 
@@ -56,7 +58,7 @@ export const outputEnrichedJSON = ({
   dictionary.allTokens.forEach((token: TransformedToken) => {
     if (!token.name) return;
 
-    const orig = token["original"]?.$value ?? token["original"]?.value;
+    const orig = token.original?.$value ?? token.original?.value;
     const reference =
       typeof orig === "string" && usesReferences(orig) ? orig : null;
 
@@ -64,8 +66,8 @@ export const outputEnrichedJSON = ({
       name: token.name,
       type: token.$type ?? token["type"],
       value: token.$value ?? token["value"],
-      layer: layerFromFilePath(token["filePath"]),
-      category: categoryFromFilePath(token["filePath"]),
+      layer: layerFromFilePath(token.filePath),
+      category: categoryFromFilePath(token.filePath),
       reference,
       refChain: buildRefChain(token, dictionary),
     };
