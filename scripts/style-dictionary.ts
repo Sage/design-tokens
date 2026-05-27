@@ -9,6 +9,7 @@ import { outputJSONWithRefs } from "./formats/outputJSONWithRefs.js";
 import { outputES6WithRefs } from "./formats/outputES6WithRefs.js";
 import { outputCommonJSWithRefs } from "./formats/commonJSWithRefs.js";
 import { formatCommonJSExports } from "./formats/commonJSExports.js";
+import { outputEnrichedJSON } from "./formats/outputEnrichedJSON.js";
 
 StyleDictionary.registerFormat({
   name: "custom/json-with-refs",
@@ -28,6 +29,11 @@ StyleDictionary.registerFormat({
 StyleDictionary.registerFormat({
   name: "custom/commonjs-exports",
   format: formatCommonJSExports
+});
+
+StyleDictionary.registerFormat({
+  name: "custom/json-enriched",
+  format: outputEnrichedJSON
 });
 
 StyleDictionary.registerTransform({
