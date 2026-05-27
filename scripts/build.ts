@@ -195,7 +195,9 @@ const getModeConfig = (modeName: string): Config => {
       },
       mcp: {
         buildPath: "dist/mcp/",
-        transforms: groups.css,
+        // Exclude custom/remove-comments so $description survives into the enriched output.
+        // That transform exists to strip description comments from SCSS output, not needed here.
+        transforms: groups.css.filter((t) => t !== "custom/remove-comments"),
         files: [
           {
             destination: `tokens.${modeName}.json`,

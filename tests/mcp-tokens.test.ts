@@ -44,4 +44,11 @@ describe("dist/mcp/tokens.json", () => {
     expect(globalEntry).toBeDefined();
     expect(typeof globalEntry.value).toBe("string");
   });
+
+  it("carries source $description through to the enriched output", () => {
+    const t = tokens["core-color-black"];
+    expect(t).toBeDefined();
+    expect(typeof t.description).toBe("string");
+    expect(t.description.length).toBeGreaterThan(0);
+  });
 });

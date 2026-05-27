@@ -29,9 +29,10 @@ export function createTools(tokens) {
   }
 
   function searchTokens({ query, category, layer, limit = 20 }) {
-    const q = String(query).toLowerCase().replace(/[\s-]/g, "");
+    const terms = String(query).toLowerCase().split(/[\s-]+/).filter(Boolean);
     const results = all.filter((t) => {
-      const nameMatch = t.name.replace(/-/g, "").includes(q);
+      const name = t.name.replace(/-/g, "");
+      const nameMatch = terms.every((term) => name.includes(term));
       const catMatch = !category || t.category === category;
       const layerMatch = !layer || t.layer === layer;
       return nameMatch && catMatch && layerMatch;
@@ -59,16 +60,17 @@ export function createTools(tokens) {
   }
 
   function listTokensByCategory({ category, limit = 50 }) {
-    const results = all.filter((t) => t.category === category).slice(0, limit);
+    const matching = all.filter((t) => t.category === category);
+    const results = matching.slice(0, limit);
     return {
       category,
-      count: results.length,
+      count: matching.length,
       tokens: results.map((t) => ({
         name: t.name,
         value: t.value,
         description: t.description,
       })),
-      truncated: results.length === limit,
+      truncated: matching.length > limit,
     };
   }
 
