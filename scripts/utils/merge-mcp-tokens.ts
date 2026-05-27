@@ -40,6 +40,7 @@ export const mergeMCPTokens = (): void => {
       reference: mergeField(l?.reference, d?.reference),
       refChain: mergeField(l?.refChain, d?.refChain),
     };
+    // Description is taken from the base (light) build: it is mode-independent metadata defined once in the source tokens.
     if (base.description) merged[name].description = base.description;
   }
 

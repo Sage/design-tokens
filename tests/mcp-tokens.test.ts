@@ -10,7 +10,7 @@ const tokens = JSON.parse(
 describe("dist/mcp/tokens.json", () => {
   it("emits a single merged file keyed by token name", () => {
     expect(typeof tokens).toBe("object");
-    expect(Object.keys(tokens).length).toBeGreaterThan(100);
+    expect(Object.keys(tokens).length).toBeGreaterThan(1000);
   });
 
   it("carries enriched fields on a component token", () => {
