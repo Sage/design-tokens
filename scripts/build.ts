@@ -202,9 +202,6 @@ const getModeConfig = (modeName: string): Config => {
           {
             destination: `tokens.${modeName}.json`,
             format: "custom/json-enriched",
-            options: {
-              outputReferences: true
-            }
           }
         ]
       }

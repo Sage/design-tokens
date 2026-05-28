@@ -8,6 +8,9 @@ export function createTools(tokens) {
 
   const reduceMode = (token, mode) => {
     if (!mode) return token;
+    if (mode !== "light" && mode !== "dark") {
+      throw new Error(`Invalid mode '${mode}'. Expected 'light' or 'dark'.`);
+    }
     const pick = (field) =>
       field && typeof field === "object" && ("light" in field || "dark" in field)
         ? field[mode]

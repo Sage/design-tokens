@@ -17,7 +17,6 @@ const categoryFromFilePath = (fp = ""): string => {
   return "core";
 };
 
-// Folgt der Alias-Kette von einem Token bis zum Literal. Linear (erste Referenz), mit Zyklusschutz.
 const buildRefChain = (token: TransformedToken, dictionary: Dictionary): string[] => {
   const chain: string[] = [];
   const seen = new Set<string>();
