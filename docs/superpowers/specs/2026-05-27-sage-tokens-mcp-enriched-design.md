@@ -1,68 +1,67 @@
-# Design: Angereicherter Sage-Tokens-MCP (Phase 1)
+# Design: Enriched Sage Tokens MCP (Phase 1)
 
-**Datum:** 2026-05-27
-**Status:** Entwurf zur Freigabe
-**Topic:** Eigenständiger MCP-Server im Repo, der die Sage Design Tokens mit
-Light/Dark-Werten, `$description`-Kontext und aufgelösten Alias/Layer-Ketten ausliefert.
-Ersetzt einen früheren externen Wrapper-Prototyp.
+**Date:** 2026-05-27
+**Status:** Draft for review
+**Topic:** Standalone MCP server inside the repo that delivers Sage Design Tokens with
+light/dark values, `$description` context, and resolved alias/layer chains.
+Replaces an earlier external wrapper prototype.
 
 ## Motivation
 
-Ein früherer externer Wrapper-Prototyp konsumierte das publizierte npm-Paket
-`@sage/design-tokens` (Export `js/common`) — den ärmsten dist-Output, reine
-`key → value`-Paare. Drei strukturelle Defizite haben diese Architekturwahl getrieben;
-jeder wird hier an der Wurzel gelöst:
+An earlier external wrapper prototype consumed the published npm package
+`@sage/design-tokens` (export `js/common`) — the leanest dist output, pure
+`key → value` pairs. Three structural deficiencies drove that architecture choice;
+each is solved here at the root:
 
-| Defizit | Ursache |
+| Deficiency | Cause |
 |---|---|
-| **Light fehlt** | Ein flacher Index per Token-Name ohne Modus-Präfix führt zu Namenskollisionen: `light`/`dark` teilen Keys (`modeColorNone`…), `dark` überschreibt `light` beim Indizieren → die Kategorie `light` verschwindet. Kein Datenverlust in der Quelle, ein Index-Bug. |
-| **Kein Kontext** | Alle publizierten dist-Outputs (`js`, `json`, `css`, `scss`) sind abgeflacht. `$description` existiert nur in den Quelldateien `data/tokens/*.json`, und `data/` wird nicht ins npm-Paket publiziert. |
-| **Keine Schichten** | Der dist ist voll aufgelöst. Die 4-Schicht-Architektur (core → global → mode → component) samt Alias-Referenzen und `$extensions` lebt ausschließlich in `data/tokens/*.json`. |
+| **Light missing** | A flattened index keyed by token name without a mode prefix causes name collisions: `light`/`dark` share keys (`modeColorNone`…), `dark` overwrites `light` during indexing → the `light` category disappears. No data loss in the source — an indexing bug. |
+| **No context** | All published dist outputs (`js`, `json`, `css`, `scss`) are flattened. `$description` exists only in the source files `data/tokens/*.json`, and `data/` is not published to the npm package. |
+| **No layers** | The dist is fully resolved. The 4-layer architecture (core → global → mode → component) together with alias references and `$extensions` lives exclusively in `data/tokens/*.json`. |
 
-Kernpunkt: Kontext und Schichten existieren **nur** in `data/tokens/` dieses Repos. Ein
-MCP, der das npm-dist-Artefakt von außen wrappt, kann sie strukturell nicht liefern;
-ein MCP, der im Repo lebt und gegen die Quelle baut, kann es.
+Key point: context and layers exist **only** in `data/tokens/` of this repo. An
+MCP that wraps the npm dist artefact externally cannot structurally deliver them;
+an MCP that lives inside the repo and builds against the source can.
 
-## Ziel & Scope
+## Goal & Scope
 
-- **Phase 1 (dieser Spec):** Den MCP lokal gegen die Repo-Quelle laufen lassen, mit Light+Dark,
-  Kontext und aufgelöster Alias-Kette. Datenquelle = lokales `design-tokens`-Repo
-  (`git pull` + `npm run build` für Aktualität).
-- **Phase 2 (eigener Spec, NICHT hier):** Das angereicherte Build-Format als PR upstream an
-  Sage einbringen, sodass es Teil von `@sage/design-tokens` wird.
+- **Phase 1 (this spec):** Run the MCP locally against the repo source, with light+dark,
+  context, and resolved alias chains. Data source = local `design-tokens` repo
+  (freshness via `git pull` + `npm run build`).
+- **Phase 2 (separate spec, NOT here):** Contribute the enriched build format upstream
+  to Sage as a PR, making it part of `@sage/design-tokens`.
 
-### Gewählter Ansatz: B — Angereichertes Build-Format
+### Chosen approach: B — Enriched build format
 
-Ein neues style-dictionary-Format erzeugt ein angereichertes JSON. Begründung gegenüber
-Alternativen:
+A new style-dictionary format produces an enriched JSON. Rationale over alternatives:
 
-- **A (eigener Resolver im MCP):** verworfen — würde die style-dictionary/sd-transforms-Auflösung
-  (lch-Modifier, resolveMath, Modus-Overrides) reimplementieren; Korrektheitsrisiko bei Werten.
-- **C (Hybrid-Merge aus `data/tokens` + `dist/json`):** verworfen — das Key-Mapping
-  Quelle (`core.color.black`) ↔ dist (`modeColorBrandDefault`) baut style-dictionary intern;
-  extern schwer korrekt nachzubauen, kein Upstream-Artefakt.
-- **B:** Auflösung kommt aus der offiziellen Pipeline (Werte exakt wie im CSS), baut auf den
-  vorhandenen `*WithRefs`-Formaten auf, und das angereicherte JSON IST das Phase-2-Upstream-Artefakt.
+- **A (custom resolver in the MCP):** rejected — would re-implement the style-dictionary/sd-transforms
+  resolution (lch modifier, resolveMath, mode overrides); correctness risk on values.
+- **C (hybrid merge from `data/tokens` + `dist/json`):** rejected — the key mapping
+  source (`core.color.black`) ↔ dist (`modeColorBrandDefault`) is built internally by
+  style-dictionary; hard to reconstruct correctly externally, no upstream artefact.
+- **B:** Resolution comes from the official pipeline (values exactly as in CSS), builds on
+  the existing `*WithRefs` formats, and the enriched JSON IS the Phase 2 upstream artefact.
 
-## Architektur
+## Architecture
 
-Alle drei Teile liegen im `design-tokens`-Repo (damit Phase 2 ein zusammenhängender PR-Ordner ist):
+All three parts live in the `design-tokens` repo (so Phase 2 is a coherent PR folder):
 
 ```
-data/tokens/*.json  ──(build)──▶  dist/mcp/tokens.json  ──(liest)──▶  mcp/server.js  ──stdio──▶ Claude
-   (Quelle: $desc,                 (angereichert,                      (dünner Wrapper)
-    Aliase, Layer)                  light+dark, refs)
+data/tokens/*.json  ──(build)──▶  dist/mcp/tokens.json  ──(reads)──▶  mcp/server.js  ──stdio──▶ Claude
+   (source: $desc,                 (enriched,                           (thin wrapper)
+    aliases, layers)                light+dark, refs)
 ```
 
-- Der MCP-Code lebt im Repo unter `mcp/` mit eigenem `package.json` und Dependencies —
-  eigenständige Komponente ohne externe Pfade.
-- Onboarding: `npm install` + `npm run build` im Repo-Root, `npm install` in `mcp/`,
-  dann den MCP-Client (z. B. Claude Code) auf `mcp/server.js` zeigen lassen. Die genauen
-  Schritte werden in `mcp/README.md` dokumentiert (separater Spec).
+- The MCP code lives in the repo under `mcp/` with its own `package.json` and dependencies —
+  a self-contained component with no external paths.
+- Onboarding: `npm install` + `npm run build` in the repo root, `npm install` in `mcp/`,
+  then point the MCP client (e.g. Claude Code) at `mcp/server.js`. The exact steps are
+  documented in `mcp/README.md` (separate spec).
 
-## Komponente 1: Angereichertes Token-Format
+## Component 1: Enriched token format
 
-### Output-Schema (pro Token in `dist/mcp/tokens.json`)
+### Output schema (per token in `dist/mcp/tokens.json`)
 
 ```json
 {
@@ -77,71 +76,70 @@ data/tokens/*.json  ──(build)──▶  dist/mcp/tokens.json  ──(liest)�
 }
 ```
 
-Feldherkunft:
+Field sourcing:
 
-- `name` — `token.name` (kebab-case, via `name/kebab`-Transform).
+- `name` — `token.name` (kebab-case, via `name/kebab` transform).
 - `type` — `token.$type`.
-- `value` — aufgelöster `token.value` aus der offiziellen Auflösung. Für mode-abhängige Tokens
-  ein Objekt `{ light, dark }`; für mode-unabhängige (core/global) ein einzelner String.
-- `layer` — abgeleitet aus dem Token-Pfad/Quelldatei: `core | global | mode | component`.
-- `category` — Komponenten-/Dateiname (wie heute: `button`, `input`, `global`, …).
-- `reference` — `token.original.$value`, falls es eine `{…}`-Referenz ist; sonst `null`.
-- `refChain` — rekursiv aufgelöste Alias-Kette von der direkten Referenz bis zum Literal-Token.
-- `description` — `token.$description` (kann fehlen → weglassen).
+- `value` — resolved `token.value` from the official resolution. For mode-dependent tokens
+  an object `{ light, dark }`; for mode-independent ones (core/global) a single string.
+- `layer` — derived from the token path/source file: `core | global | mode | component`.
+- `category` — component/file name (as today: `button`, `input`, `global`, …).
+- `reference` — `token.original.$value` if it is a `{…}` reference; otherwise `null`.
+- `refChain` — recursively resolved alias chain from the direct reference to the literal token.
+- `description` — `token.$description` (may be absent → omit).
 
-## Komponente 2: Build
+## Component 2: Build
 
-- Neues Format `custom/json-enriched` in `scripts/formats/outputEnrichedJSON.ts`,
-  registriert in `scripts/style-dictionary.ts` (analog zu `custom/json-with-refs`).
-  Arbeitet über `dictionary.allTokens` und greift pro Token auf `name`, `value`,
-  `original.$value`, `$type`, `$description` zu; `refChain` via rekursivem Folgen der Referenzen.
-- Da der Build pro Modus getrennt läuft (`build.ts` iteriert `modes`), erzeugt das Format
-  `dist/mcp/tokens.light.json` und `dist/mcp/tokens.dark.json`.
-- Ein Schritt in `scripts/postbuild.ts` merged beide zu `dist/mcp/tokens.json` mit
-  `value: { light, dark }`. Mode-unabhängige Tokens (identischer Wert in beiden) erhalten einen
-  String. **Dieser bewusste Merge behebt den Light-Bug an der Wurzel** (light wird vereint statt
-  überschrieben).
+- New format `custom/json-enriched` in `scripts/formats/outputEnrichedJSON.ts`,
+  registered in `scripts/style-dictionary.ts` (analogous to `custom/json-with-refs`).
+  Operates over `dictionary.allTokens` and accesses `name`, `value`,
+  `original.$value`, `$type`, `$description` per token; `refChain` via recursive reference following.
+- Because the build runs separately per mode (`build.ts` iterates `modes`), the format
+  produces `dist/mcp/tokens.light.json` and `dist/mcp/tokens.dark.json`.
+- A step in `scripts/postbuild.ts` merges both into `dist/mcp/tokens.json` with
+  `value: { light, dark }`. Mode-independent tokens (identical value in both) receive a
+  string. **This deliberate merge fixes the light bug at the root** (light is unified rather than overwritten).
 
-## Komponente 3: MCP-Server (`mcp/server.js`)
+## Component 3: MCP server (`mcp/server.js`)
 
-Dünner Wrapper, lädt beim Start `dist/mcp/tokens.json` in einen In-Memory-Index.
+Thin wrapper, loads `dist/mcp/tokens.json` into an in-memory index at startup.
 Tools:
 
-| Tool | Verhalten |
+| Tool | Behaviour |
 |---|---|
-| `get_token(name, mode?)` | liefert Token mit `value` (beide Modi) + `reference` + `refChain` + `description` + `layer`. `mode?` (`light`\|`dark`) reduziert `value` auf einen String. Fuzzy-Fallback bei Name-Mismatch. |
-| `search_tokens(query, category?, layer?, limit?)` | Mehrwort-Substring-Suche über Token-Namen, optional gefiltert nach `category` und/oder `layer` (`core`\|`global`\|`mode`\|`component`). Resultate enthalten `value` + `description`. |
-| `list_categories()` | listet alle Kategorien (`core`, `global`, `mode`, plus jede Komponente) mit Token-Anzahl. |
-| `list_tokens_by_category(category, limit?)` | listet Tokens einer Kategorie mit Name, Wert und Beschreibung. |
+| `get_token(name, mode?)` | Returns the token with `value` (both modes) + `reference` + `refChain` + `description` + `layer`. `mode?` (`light`\|`dark`) reduces `value` to a single string. Fuzzy fallback on name mismatch. |
+| `search_tokens(query, category?, layer?, limit?)` | Multi-word substring search over token names, optionally filtered by `category` and/or `layer` (`core`\|`global`\|`mode`\|`component`). Results include `value` + `description`. |
+| `list_categories()` | Lists all categories (`core`, `global`, `mode`, plus each component) with token count. |
+| `list_tokens_by_category(category, limit?)` | Lists tokens in a category with name, value, and description. |
 
-Kein separates `get_token_chain`-Tool — die Kette steckt in `get_token` (YAGNI).
+No separate `get_token_chain` tool — the chain is included in `get_token` (YAGNI).
 
-## Fehlerbehandlung
+## Error handling
 
-- Start ohne `dist/mcp/tokens.json` → klare Meldung „Build fehlt, führe `npm run build` aus"
-  (kein stiller leerer Index).
-- Token nicht gefunden → Fuzzy-Vorschläge (wie heute).
-- Ungültiger `layer`/`mode` → Fehler mit erlaubten Werten.
+- Start without `dist/mcp/tokens.json` → clear message "Build missing, run `npm run build`"
+  (no silent empty index).
+- Token not found → fuzzy suggestions (as today).
+- Invalid `layer`/`mode` → error with allowed values.
 
 ## Tests (vitest)
 
-- **Regression Light-Bug:** Ein `mode-color-*`-Token hat unterschiedliche `value.light`/`value.dark`,
-  und `light` geht nicht verloren.
-- **Format-Test:** `button-primary-bg-default` → prüft `value.light/dark`, `refChain`,
+- **Light-bug regression:** A `mode-color-*` token has different `value.light`/`value.dark`,
+  and `light` is not lost.
+- **Format test:** `button-primary-bg-default` → checks `value.light/dark`, `refChain`,
   `description`, `layer`.
-- **MCP-Funktion:** `get_token`, `search_tokens` mit `layer`-Filter gegen ein Fixture-`tokens.json`.
+- **MCP function:** `get_token`, `search_tokens` with `layer` filter against a fixture `tokens.json`.
 
-## Bewusst außerhalb des Scope
+## Explicitly out of scope
 
-- Nur stdio-Transport (kein HTTP).
-- Kein Auto-Rebuild/Watch — Aktualität via `git pull` + `npm run build`.
-- Keine weiteren Modi außer light/dark.
-- Phase 2 (Upstream-PR an Sage) ist ein eigener Spec/Plan.
+- stdio transport only (no HTTP).
+- No auto-rebuild/watch — freshness via `git pull` + `npm run build`.
+- No additional modes beyond light/dark.
+- Phase 2 (upstream PR to Sage) is a separate spec/plan.
 
-## Offene Risiken
+## Open risks
 
-- **`refChain`-Aufbau:** style-dictionary bietet Referenz-Utilities, aber die rekursive Auflösung
-  über mehrere Schichten muss in der Implementierung gegen reale Tokens verifiziert werden
-  (z. B. Tokens mit `$extensions`-Modifiern oder Math-Ausdrücken).
-- **light/dark-Merge-Annahme:** Setzt voraus, dass Token-Namen über beide Modus-Builds identisch
-  sind. In der Implementierung mit einem Diff der beiden Modus-Outputs verifizieren.
+- **`refChain` construction:** style-dictionary provides reference utilities, but the recursive
+  resolution across multiple layers must be verified against real tokens during implementation
+  (e.g. tokens with `$extensions` modifiers or math expressions).
+- **light/dark merge assumption:** Assumes token names are identical across both mode builds.
+  Verify during implementation with a diff of the two mode outputs.

@@ -2,56 +2,56 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Den `sage-tokens-mcp` so umbauen, dass er Light/Dark-Werte, `$description`-Kontext und aufgelöste Alias-/Layer-Ketten liefert — gespeist aus einem neuen angereicherten style-dictionary-Build-Output.
+**Goal:** Rebuild `sage-tokens-mcp` to deliver light/dark values, `$description` context and resolved alias/layer chains — sourced from a new enriched style-dictionary build output.
 
-**Architecture:** Ein neues style-dictionary-Format (`custom/json-enriched`) erzeugt pro Modus eine angereicherte JSON-Datei. Ein postbuild-Schritt merged Light+Dark zu `dist/mcp/tokens.json` mit `value:{light,dark}`. Der MCP-Server (`mcp/server.js`) liest nur diese eine Datei und exponiert erweiterte Tools. Alles liegt im `design-tokens`-Repo, damit Phase 2 (Upstream-PR) ein zusammenhängender Ordner ist.
+**Architecture:** A new style-dictionary format (`custom/json-enriched`) produces one enriched JSON file per mode. A postbuild step merges light+dark into `dist/mcp/tokens.json` with `value:{light,dark}`. The MCP server (`mcp/server.js`) reads only this single file and exposes extended tools. Everything lives in the `design-tokens` repo so that Phase 2 (upstream PR) is a self-contained folder.
 
 **Tech Stack:** TypeScript, style-dictionary v5, @tokens-studio/sd-transforms, @modelcontextprotocol/sdk, vitest, Node ≥22.
 
 **Spec:** `docs/superpowers/specs/2026-05-27-sage-tokens-mcp-enriched-design.md`
 
-**Branch:** `feat/enriched-tokens-mcp` (bereits angelegt)
+**Branch:** `feat/enriched-tokens-mcp` (already created)
 
 ---
 
-## Designentscheidungen (verbindlich für alle Tasks)
+## Design decisions (binding for all tasks)
 
-**Angereichertes Token-Schema** (Eintrag in `dist/mcp/tokens.json`, key = Token-Name in kebab-case):
+**Enriched token schema** (entry in `dist/mcp/tokens.json`, key = token name in kebab-case):
 
 ```jsonc
 {
   "button-primary-bg-default": {
     "name": "button-primary-bg-default",
     "type": "color",
-    "value": { "light": "#000000", "dark": "#FFFFFF" },   // String, falls light==dark
+    "value": { "light": "#000000", "dark": "#FFFFFF" },   // String if light==dark
     "layer": "component",                                   // core | global | mode | component
     "category": "button",                                   // button | global | core | mode
-    "reference": "{mode.color.brand.default}",              // null, falls Literal
+    "reference": "{mode.color.brand.default}",              // null if literal
     "refChain": ["mode.color.brand.default", "core.color.black"],
-    "description": "Base color for ... buttons."            // fehlt, falls keine $description
+    "description": "Base color for ... buttons."            // missing if no $description
   }
 }
 ```
 
-**Merge-Regel (Light/Dark):** Pro Feld `value`/`reference`/`refChain`: bei Gleichheit (deep-equal) → einzelner Wert; sonst → `{ "light": …, "dark": … }`. `type`/`layer`/`category`/`description` werden aus dem Light-Build übernommen (in beiden Modi identisch).
+**Merge rule (light/dark):** Per field `value`/`reference`/`refChain`: if equal (deep-equal) → single value; otherwise → `{ "light": …, "dark": … }`. `type`/`layer`/`category`/`description` are taken from the light build (identical in both modes).
 
-**Layer/Category-Ableitung** aus `token.filePath`:
+**Layer/category derivation** from `token.filePath`:
 - `/components/<x>.json` → layer `component`, category `<x>`
 - `/mode/` → layer `mode`, category `mode`
 - `/global/` → layer `global`, category `global`
 - `/core.json` → layer `core`, category `core`
 
-**Transform-Gruppe für die mcp-Plattform:** `groups.css` (liefert kebab-case Namen via `name/kebab` und CSS-aufgelöste Werte inkl. `ts/color/modifiers`).
+**Transform group for the mcp platform:** `groups.css` (provides kebab-case names via `name/kebab` and CSS-resolved values including `ts/color/modifiers`).
 
 ---
 
-## Task 1: Angereichertes Format erstellen und registrieren
+## Task 1: Create and register the enriched format
 
 **Files:**
 - Create: `scripts/formats/outputEnrichedJSON.ts`
-- Modify: `scripts/style-dictionary.ts` (Import + `registerFormat`)
+- Modify: `scripts/style-dictionary.ts` (import + `registerFormat`)
 
-- [ ] **Step 1: Format-Datei schreiben**
+- [ ] **Step 1: Write the format file**
 
 Create `scripts/formats/outputEnrichedJSON.ts`:
 
@@ -75,7 +75,7 @@ const categoryFromFilePath = (fp = ""): string => {
   return "core";
 };
 
-// Folgt der Alias-Kette von einem Token bis zum Literal. Linear (erste Referenz), mit Zyklusschutz.
+// Follows a token's alias chain down to a literal. Linear (first reference), with cycle protection.
 const buildRefChain = (token: DesignToken, dictionary: Dictionary): string[] => {
   const chain: string[] = [];
   const seen = new Set<string>();
@@ -137,15 +137,15 @@ export const outputEnrichedJSON = ({
 };
 ```
 
-- [ ] **Step 2: Format registrieren**
+- [ ] **Step 2: Register the format**
 
-Modify `scripts/style-dictionary.ts` — Import neben den anderen Format-Imports ergänzen:
+Modify `scripts/style-dictionary.ts` — add the import alongside the other format imports:
 
 ```typescript
 import { outputEnrichedJSON } from "./formats/outputEnrichedJSON.js";
 ```
 
-Und einen `registerFormat`-Block neben den bestehenden hinzufügen:
+And add a `registerFormat` block alongside the existing ones:
 
 ```typescript
 StyleDictionary.registerFormat({
@@ -154,10 +154,10 @@ StyleDictionary.registerFormat({
 });
 ```
 
-- [ ] **Step 3: TypeScript-Kompilierung verifizieren**
+- [ ] **Step 3: Verify TypeScript compilation**
 
 Run: `npx tsc --noEmit -p tsconfig.json`
-Expected: keine Fehler in `scripts/formats/outputEnrichedJSON.ts`.
+Expected: no errors in `scripts/formats/outputEnrichedJSON.ts`.
 
 - [ ] **Step 4: Commit**
 
@@ -168,14 +168,14 @@ git commit -m "feat: add custom/json-enriched style-dictionary format"
 
 ---
 
-## Task 2: mcp-Plattform im Build erzeugen (per-mode Output)
+## Task 2: Build the mcp platform (per-mode output)
 
 **Files:**
-- Modify: `scripts/build.ts` (mcp-Plattform in `getModeConfig` + `buildPlatform("mcp")`)
+- Modify: `scripts/build.ts` (mcp platform in `getModeConfig` + `buildPlatform("mcp")`)
 
-- [ ] **Step 1: mcp-Plattform zu `getModeConfig` hinzufügen**
+- [ ] **Step 1: Add the mcp platform to `getModeConfig`**
 
-In `scripts/build.ts`, innerhalb des `platforms`-Objekts von `getModeConfig` (nach dem `json`-Block, vor der schließenden `}` von `platforms`), ergänzen:
+In `scripts/build.ts`, inside the `platforms` object of `getModeConfig` (after the `json` block, before the closing `}` of `platforms`), add:
 
 ```typescript
       mcp: {
@@ -193,25 +193,25 @@ In `scripts/build.ts`, innerhalb des `platforms`-Objekts von `getModeConfig` (na
       }
 ```
 
-Hinweis: Kein `filter` → alle Tokens des Mode-Builds (core+global+mode+components) landen in einer Datei.
+Note: No `filter` → all tokens from the mode build (core+global+mode+components) land in one file.
 
-- [ ] **Step 2: mcp-Plattform in der modes-Schleife bauen**
+- [ ] **Step 2: Build the mcp platform in the modes loop**
 
-In `scripts/build.ts`, in der `modes.forEach(...)`-Schleife, nach `await modeStyleDictionary.buildPlatform("json")` ergänzen:
+In `scripts/build.ts`, in the `modes.forEach(...)` loop, add after `await modeStyleDictionary.buildPlatform("json")`:
 
 ```typescript
   await modeStyleDictionary.buildPlatform("mcp")
 ```
 
-- [ ] **Step 3: Build ausführen**
+- [ ] **Step 3: Run the build**
 
 Run: `npm run build`
-Expected: Build läuft durch; `dist/mcp/tokens.light.json` und `dist/mcp/tokens.dark.json` existieren.
+Expected: build completes; `dist/mcp/tokens.light.json` and `dist/mcp/tokens.dark.json` exist.
 
-- [ ] **Step 4: Per-mode Output manuell verifizieren**
+- [ ] **Step 4: Manually verify the per-mode output**
 
 Run: `node -e "const t=require('./dist/mcp/tokens.light.json'); const e=t['button-primary-bg-default']; console.log(JSON.stringify(e,null,2))"`
-Expected: Objekt mit `name`, `type`, `value` (String), `layer:"component"`, `category:"button"`, `reference`, `refChain` (Array), ggf. `description`.
+Expected: object with `name`, `type`, `value` (string), `layer:"component"`, `category:"button"`, `reference`, `refChain` (array), optionally `description`.
 
 - [ ] **Step 5: Commit**
 
@@ -222,14 +222,14 @@ git commit -m "feat: build per-mode enriched MCP token output"
 
 ---
 
-## Task 3: Light/Dark-Merge im postbuild + Tests
+## Task 3: Light/dark merge in postbuild + tests
 
 **Files:**
 - Create: `scripts/utils/merge-mcp-tokens.ts`
-- Modify: `scripts/postbuild.ts` (Import + Aufruf in der IIFE)
+- Modify: `scripts/postbuild.ts` (import + call in the IIFE)
 - Create: `tests/mcp-tokens.test.ts`
 
-- [ ] **Step 1: Failing test schreiben**
+- [ ] **Step 1: Write the failing test**
 
 Create `tests/mcp-tokens.test.ts`:
 
@@ -258,7 +258,7 @@ describe("dist/mcp/tokens.json", () => {
   });
 
   it("regression: a mode-dependent token keeps BOTH light and dark values (light not lost)", () => {
-    // mindestens ein mode-color Token muss unterschiedliche light/dark-Werte als Objekt tragen
+    // at least one mode-color token must carry different light/dark values as an object
     const modeColorEntries = Object.values<any>(tokens).filter(
       (t) => t.category === "mode" && t.value && typeof t.value === "object"
     );
@@ -279,12 +279,12 @@ describe("dist/mcp/tokens.json", () => {
 });
 ```
 
-- [ ] **Step 2: Test ausführen, Fehlschlag verifizieren**
+- [ ] **Step 2: Run test, verify failure**
 
 Run: `npx vitest run tests/mcp-tokens.test.ts`
-Expected: FAIL — `dist/mcp/tokens.json` existiert noch nicht (Datei-Read wirft).
+Expected: FAIL — `dist/mcp/tokens.json` does not yet exist (file read throws).
 
-- [ ] **Step 3: Merge-Util schreiben**
+- [ ] **Step 3: Write the merge utility**
 
 Create `scripts/utils/merge-mcp-tokens.ts`:
 
@@ -299,7 +299,7 @@ const root = resolve(__dirname, "../..");
 const deepEqual = (a: unknown, b: unknown): boolean =>
   JSON.stringify(a) === JSON.stringify(b);
 
-// Merged ein Feld über beide Modi: gleich -> Einzelwert, sonst { light, dark }.
+// Merges a field across both modes: equal -> single value, else { light, dark }.
 const mergeField = (light: unknown, dark: unknown): unknown =>
   deepEqual(light, dark) ? light : { light, dark };
 
@@ -339,24 +339,24 @@ export const mergeMCPTokens = (): void => {
 };
 ```
 
-- [ ] **Step 4: Merge in postbuild aufrufen**
+- [ ] **Step 4: Call the merge in postbuild**
 
-Modify `scripts/postbuild.ts` — Import nach den bestehenden Imports ergänzen:
+Modify `scripts/postbuild.ts` — add the import after the existing imports:
 
 ```typescript
 import { mergeMCPTokens } from "./utils/merge-mcp-tokens.js"
 ```
 
-In der finalen `(async () => { ... })()`-IIFE, nach `createLightAllCss()`, ergänzen:
+In the final `(async () => { ... })()` IIFE, add after `createLightAllCss()`:
 
 ```typescript
   mergeMCPTokens()
 ```
 
-- [ ] **Step 5: Build + Test ausführen**
+- [ ] **Step 5: Run build + tests**
 
 Run: `npm run build && npx vitest run tests/mcp-tokens.test.ts`
-Expected: PASS (alle 4 Tests grün).
+Expected: PASS (all 4 tests green).
 
 - [ ] **Step 6: Commit**
 
@@ -367,7 +367,7 @@ git commit -m "feat: merge light/dark enriched tokens into dist/mcp/tokens.json"
 
 ---
 
-## Task 4: MCP-Server auf neue Quelle umbauen
+## Task 4: Rebuild the MCP server on the new source
 
 **Files:**
 - Create: `mcp/server.js`
@@ -375,7 +375,7 @@ git commit -m "feat: merge light/dark enriched tokens into dist/mcp/tokens.json"
 - Create: `tests/mcp-server.test.ts`
 - Create: `tests/fixtures/mcp-tokens.json`
 
-- [ ] **Step 1: Test-Fixture anlegen**
+- [ ] **Step 1: Create the test fixture**
 
 Create `tests/fixtures/mcp-tokens.json`:
 
@@ -412,7 +412,7 @@ Create `tests/fixtures/mcp-tokens.json`:
 }
 ```
 
-- [ ] **Step 2: Failing test für die Server-Logik schreiben**
+- [ ] **Step 2: Write the failing test for the server logic**
 
 Create `tests/mcp-server.test.ts`:
 
@@ -463,12 +463,12 @@ describe("mcp server tools", () => {
 });
 ```
 
-- [ ] **Step 3: Test ausführen, Fehlschlag verifizieren**
+- [ ] **Step 3: Run test, verify failure**
 
 Run: `npx vitest run tests/mcp-server.test.ts`
-Expected: FAIL — `../mcp/server.js` existiert nicht / `createTools` undefined.
+Expected: FAIL — `../mcp/server.js` does not exist / `createTools` undefined.
 
-- [ ] **Step 4: Server implementieren**
+- [ ] **Step 4: Implement the server**
 
 Create `mcp/server.js`:
 
@@ -659,7 +659,7 @@ if (isMain) {
 }
 ```
 
-- [ ] **Step 5: MCP package.json anlegen**
+- [ ] **Step 5: Create the MCP package.json**
 
 Create `mcp/package.json`:
 
@@ -677,15 +677,15 @@ Create `mcp/package.json`:
 }
 ```
 
-- [ ] **Step 6: MCP-Abhängigkeiten installieren**
+- [ ] **Step 6: Install MCP dependencies**
 
 Run: `cd mcp && npm install && cd ..`
-Expected: `mcp/node_modules/@modelcontextprotocol` existiert.
+Expected: `mcp/node_modules/@modelcontextprotocol` exists.
 
-- [ ] **Step 7: Test ausführen, Erfolg verifizieren**
+- [ ] **Step 7: Run test, verify success**
 
 Run: `npx vitest run tests/mcp-server.test.ts`
-Expected: PASS (alle 5 Tests grün).
+Expected: PASS (all 5 tests green).
 
 - [ ] **Step 8: Commit**
 
@@ -696,12 +696,12 @@ git commit -m "feat: enriched MCP server reading dist/mcp/tokens.json"
 
 ---
 
-## Task 5: Smoke-Test des Servers gegen echte Daten
+## Task 5: Smoke-test the server against real data
 
 **Files:**
-- (keine neuen Dateien; manuelle Verifikation)
+- (no new files; manual verification)
 
-- [ ] **Step 1: Server startet und liest echte Tokens**
+- [ ] **Step 1: Server starts and reads real tokens**
 
 Run:
 ```bash
@@ -713,40 +713,39 @@ node -e "import('./mcp/server.js').then(async m => { \
   console.log('button-primary-bg-default:', JSON.stringify(tools.getToken({name:'button-primary-bg-default'}).token.value)); \
 })"
 ```
-Expected: Kategorienliste enthält `core`, `global`, `mode`, `button`, …; der Button-Token zeigt `{ "light": …, "dark": … }`.
+Expected: category list contains `core`, `global`, `mode`, `button`, …; the button token shows `{ "light": …, "dark": … }`.
 
-- [ ] **Step 2: Voller Testlauf**
+- [ ] **Step 2: Full test run**
 
 Run: `npm test`
-Expected: Alle Tests grün (bestehende + neue `mcp-tokens` + `mcp-server`).
+Expected: all tests green (existing + new `mcp-tokens` + `mcp-server`).
 
 ---
 
-## Task 6: MCP-Konfiguration umhängen (manuell)
+## Task 6: Reconfigure the MCP client (manual)
 
 **Files:**
-- Modify: `~/.claude.json` (Eintrag `mcpServers.sage-design-tokens.args`)
+- Modify: `~/.claude.json` (entry `mcpServers.sage-design-tokens.args`)
 
-- [ ] **Step 1: args-Pfad auf den neuen Server zeigen lassen**
+- [ ] **Step 1: Point the args path at the new server**
 
-In `~/.claude.json`, im Eintrag `sage-design-tokens`, `args` ändern von
+In `~/.claude.json`, in the `sage-design-tokens` entry, change `args` from
 `["/Users/ronnyhummitzsch/Projects/Sage-Design-Tokens/index.js"]`
-auf
+to
 `["/Users/ronnyhummitzsch/Projects/Sage-Design-Tokens/design-tokens/mcp/server.js"]`
 
-- [ ] **Step 2: Claude Code neu starten und MCP verifizieren**
+- [ ] **Step 2: Restart Claude Code and verify the MCP**
 
-Nach Neustart: `list_categories` aufrufen. Erwartet: enthält `core`/`global`/`mode`/Komponenten (kein separates `light`/`dark` mehr). `get_token` für `button-primary-bg-default` liefert `value:{light,dark}` + `refChain`.
+After restart: call `list_categories`. Expected: contains `core`/`global`/`mode`/components (no separate `light`/`dark` any more). `get_token` for `button-primary-bg-default` returns `value:{light,dark}` + `refChain`.
 
-- [ ] **Step 3: Alten Wrapper als überholt markieren**
+- [ ] **Step 3: Mark the old wrapper as superseded**
 
-Der alte Server unter `…/Sage-Design-Tokens/index.js` wird nicht mehr referenziert. Nicht löschen (gehört nicht zu diesem Repo); in einer kurzen Notiz dort vermerken, dass er durch `design-tokens/mcp/server.js` ersetzt wurde. Mit dem Nutzer abstimmen, bevor irgendetwas außerhalb des Repos entfernt wird.
+The old server at `…/Sage-Design-Tokens/index.js` is no longer referenced. Do not delete it (it does not belong to this repo); add a short note there stating it has been replaced by `design-tokens/mcp/server.js`. Align with the user before removing anything outside the repo.
 
 ---
 
-## Offene Risiken / in der Umsetzung zu verifizieren
+## Open risks / to verify during implementation
 
-- **`getReferences`-Signatur (Task 1):** `getReferences(value, dictionary.tokens)` und `ref.path` sind die erwartete style-dictionary-v5-API. Falls der `button-primary-bg-default`-Check in Task 2/Step 4 eine leere `refChain` zeigt, die API-Verwendung gegen `node_modules/style-dictionary` prüfen und korrigieren.
-- **mode-abhängige Referenzen:** Falls ein Token in light/dark unterschiedliche Aliase nutzt, trägt `reference`/`refChain` korrekt `{light,dark}` (durch die generische Merge-Regel abgedeckt) — der Test in Task 3 prüft nur `value`; bei Bedarf einen Assert für divergierende `refChain` ergänzen.
-- **`name`-Kollision durch `name/kebab`:** Falls zwei Tokens nach kebab-Transform denselben Namen erhalten, überschreibt das Format-Objekt einen. In Task 2/Step 4 die Token-Anzahl gegen `dist/json` gegenprüfen; bei Abweichung melden.
-```
+- **`getReferences` signature (Task 1):** `getReferences(value, dictionary.tokens)` and `ref.path` are the expected style-dictionary v5 API. If the `button-primary-bg-default` check in Task 2/Step 4 shows an empty `refChain`, inspect the API usage against `node_modules/style-dictionary` and correct it.
+- **Mode-dependent references:** If a token uses different aliases in light/dark, `reference`/`refChain` correctly carries `{light,dark}` (covered by the generic merge rule) — the test in Task 3 only asserts on `value`; add an assertion for diverging `refChain` if needed.
+- **`name` collision via `name/kebab`:** If two tokens resolve to the same name after the kebab transform, the format object will overwrite one. Cross-check the token count against `dist/json` in Task 2/Step 4; report any discrepancy.
