@@ -41,8 +41,8 @@ jobs:
 
       - name: Validate JSON
         run: |
-          # Find all JSON files in dist directory and run validation
-          npx jsonlint ./dist/**/*.json --no-duplicate-keys
+          # Lint all JSON files in dist recursively using ESLint with eslint-plugin-jsonc
+          npx eslint ./dist/**/*.json
 
       - name: Check for [object Object] in SCSS
         run: |
