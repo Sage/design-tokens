@@ -26,6 +26,7 @@
     "postbuild": "node --loader ts-node/esm --no-warnings=ExperimentalWarning ./scripts/postbuild.ts",
     "prepublishOnly": "node --loader ts-node/esm --no-warnings=ExperimentalWarning ./scripts/bump-main-package-version.ts",
     "stylelint:dist": "npx stylelint 'dist/**/*.{css,scss}' --report-needless-disables --report-descriptionless-disables --report-invalid-scope-disables",
+    "mcp:report": "node --loader ts-node/esm --no-warnings=ExperimentalWarning ./scripts/mcp-report.ts",
     "test": "vitest run"
   },
   "devDependencies": {
