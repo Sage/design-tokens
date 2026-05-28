@@ -4,7 +4,7 @@ Copyright © 2026 The Sage Group plc or its licensors. All Rights reserved.
 
 # MCP token snapshot
 
-Generated: **2026-05-28** · Commit: `b85b05f` · Branch: `feat/enriched-tokens-mcp`
+Generated: **2026-05-28** · Commit: `9afb634` · Branch: `feat/enriched-tokens-mcp`
 
 Regenerate with `npm run mcp:report`.
 
