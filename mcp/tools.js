@@ -25,6 +25,7 @@ export function createTools(tokens) {
 
   function getToken({ name, mode }) {
     const key = String(name).toLowerCase();
+    if (!key) return { found: false, error: `Token '${name}' not found.` };
     if (tokens[key]) return { found: true, token: reduceMode(tokens[key], mode) };
     const match = all.find((t) => t.name.includes(key));
     if (match) return { found: true, token: reduceMode(match, mode), fuzzy: true };
@@ -49,7 +50,7 @@ export function createTools(tokens) {
         layer: t.layer,
         description: t.description,
       })),
-      truncated: results.length > limit,
+      truncated: limit > 0 && results.length > limit,
     };
   }
 
