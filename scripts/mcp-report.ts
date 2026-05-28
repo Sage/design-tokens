@@ -49,8 +49,8 @@ const isModeDivergent = (t: TokenEntry): boolean =>
 const histogram = (lengths: number[]): Record<string, number> => {
   const bins: Record<string, number> = { "0": 0, "1": 0, "2": 0, "3": 0, "4+": 0 };
   for (const n of lengths) {
-    if (n >= 4) bins["4+"]++;
-    else bins[String(n)]++;
+    const key = n >= 4 ? "4+" : String(n);
+    bins[key] = (bins[key] ?? 0) + 1;
   }
   return bins;
 };
