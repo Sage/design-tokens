@@ -19,6 +19,14 @@ Design tokens purpose is to:
 - **Narrow value set to only needed values.** Design System uses narrow set of values (spacings, colors, typography properties and others). Those are only values that are needed for visual description of the component.
 - **Keep visual consistency across all components of the library.**
 
+## MCP server (AI coding assistants)
+
+This repo ships a Model Context Protocol server that lets AI coding
+assistants query the design tokens — with both light and dark values,
+the source `$description` context, and the resolved alias/layer chain.
+See [`mcp/README.md`](./mcp/README.md) for what it does, how to run it,
+and what its hardening guarantees.
+
 ## Docs:
 - [Generating icons](./docs/icons.md)
 
