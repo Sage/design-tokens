@@ -39,11 +39,14 @@ tests/hardening/
   adversarial-input.test.ts  # malformed tool args: createTools stays robust
   mcp-e2e.test.ts            # real server subprocess via @modelcontextprotocol/sdk Client
   agent-scenarios.test.ts    # typical AI agent queries → expected results
+  self-containment.test.ts   # repo is self-contained: no external paths, docs complete
 
-scripts/mcp-report.ts        # statistics → mcp/REPORT.md (token counts, refChain histogram, …)
+scripts/mcp-report.ts            # statistics → mcp/REPORT.md (token counts, refChain histogram, …)
+scripts/verify-fresh-clone.sh    # optional: documents the fresh-clone setup as executable steps
 
 mcp/README.md                # new: what the MCP does, how to run, what hardening guarantees
-mcp/REPORT.md                # generated snapshot (gitignored or committed — see below)
+mcp/REPORT.md                # generated snapshot, committed (see Report section)
+README.md                    # root README: add a short MCP section linking to mcp/README.md
 ```
 
 All hardening files use `.ts` and follow the existing `tests/` style
@@ -206,6 +209,47 @@ assertions (those would brittle on data updates).
 Each test uses lower-bound assertions (`>= 1` matches, contains expected
 substrings) rather than exact lists, so token additions don't break the
 suite.
+
+## Test class 5: Repository self-containment (`tests/hardening/self-containment.test.ts`)
+
+Asserts that the repository works as a standalone artefact after a fresh clone:
+no external paths, no orphan documentation, no reliance on any prior local
+installation outside the repo. This is what makes the work credible as a
+candidate for upstream contribution — anyone checking out the branch must be
+able to run the MCP without inheriting our local history.
+
+### Tests
+
+- **No host-absolute paths in versioned code.** A scan over all
+  git-tracked files under `mcp/`, `scripts/`, `tests/`, and the repo root
+  (excluding `docs/superpowers/` — historical work documents) finds zero
+  occurrences of `/Users/`, `/home/`, or a `C:\` drive prefix.
+- **No references to a legacy external wrapper.** A scan of the same
+  scope finds zero occurrences of the legacy wrapper filename
+  (`Sage-Design-Tokens/index.js`). Historical specs under
+  `docs/superpowers/` are exempt and may reference it for context.
+- **`mcp/README.md` exists with required sections.** The file is present
+  and its `##` headings include (case-insensitive substring match):
+  "what", "running", "tools", "hardening", "roadmap".
+- **Root `README.md` references the MCP.** Contains either a heading
+  mentioning MCP or a link to `mcp/README.md`.
+- **`mcp/package.json` is self-contained.** Parses as valid JSON; has a
+  `dependencies` map listing `@modelcontextprotocol/sdk`; the lockfile
+  `mcp/package-lock.json` is present (reproducible installs).
+- **`dist/mcp/tokens.json` is reproducible without secrets.** The build
+  step that produces it does not require any env var (notably
+  `FIGMA_ACCESS_TOKEN`) — the file is present after `npm run build` even
+  when a later postbuild step (icons fetch) fails. The test verifies this
+  by checking that `scripts/postbuild.ts` invokes the merge before the
+  icon fetch (textual check on the IIFE ordering).
+
+### Optional helper
+
+`scripts/verify-fresh-clone.sh` documents the fresh-clone setup as an
+executable script: `npm ci` at the root, `npm run build`, then
+`(cd mcp && npm ci)`. It is not invoked by `npm test` — it is a sanity
+aid that doubles as living documentation for onboarding. Referenced from
+`mcp/README.md`'s "Running it" section.
 
 ## Report script (`scripts/mcp-report.ts`)
 
