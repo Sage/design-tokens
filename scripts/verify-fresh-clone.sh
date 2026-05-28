@@ -9,7 +9,8 @@ cd "$(dirname "$0")/.."
 echo "▶ Installing root dependencies..."
 npm ci
 
-echo "▶ Building tokens (Figma icon step may fail without FIGMA_ACCESS_TOKEN; that is fine)..."
+echo "▶ Building tokens (removing stale artefact first; Figma icon step may fail without FIGMA_ACCESS_TOKEN — that is fine)..."
+rm -f dist/mcp/tokens.json
 npm run build || true
 
 if [[ ! -f dist/mcp/tokens.json ]]; then

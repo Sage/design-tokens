@@ -59,13 +59,22 @@ describe("MCP E2E: tools/call", () => {
     expect(typeof r.token.description).toBe("string");
   });
 
-  it("get_token with mode reduces value to a single string", async () => {
-    // Pick deterministically: the first kebab-named mode-color token from the live MCP
-    const list = await callTool("list_tokens_by_category", { category: "mode", limit: 5 });
-    const sample = list.tokens[0];
-    const r = await callTool("get_token", { name: sample.name, mode: "dark" });
+  it("get_token with mode reduces a mode-divergent value to a single string", async () => {
+    // Find a mode token that is genuinely divergent (value is an object), not a coincidentally-scalar one
+    const list = await callTool("list_tokens_by_category", { category: "mode", limit: 100 });
+    const fullTokens = await Promise.all(
+      list.tokens.slice(0, 20).map((t: any) => callTool("get_token", { name: t.name }))
+    );
+    const divergent = fullTokens.find(
+      (r: any) => r.token.value && typeof r.token.value === "object"
+    );
+    expect(divergent, "expected at least one mode-divergent token in the first 20 of category 'mode'").toBeDefined();
+
+    const r = await callTool("get_token", { name: divergent.token.name, mode: "dark" });
     expect(r.found).toBe(true);
-    expect(typeof r.token.value).toBe("string");
+    expect(typeof r.token.value, "value should be a single string after mode reduction").toBe("string");
+    // And the reduced value must be the dark side of the divergent object
+    expect(r.token.value).toBe((divergent.token.value as any).dark);
   });
 
   it("search_tokens with layer=core returns only core tokens", async () => {
@@ -91,15 +100,14 @@ describe("MCP E2E: tools/call", () => {
 });
 
 describe("MCP E2E: error contract", () => {
-  it("calling an unknown tool returns an error response (not a thrown exception at the client layer)", async () => {
-    let threw = false;
+  it("calling an unknown tool surfaces a failure (throws OR returns isError:true)", async () => {
+    let outcome: "threw" | "isError" | "silent-success" = "silent-success";
     try {
-      await client.callTool({ name: "definitely-not-a-tool", arguments: {} });
+      const res = await client.callTool({ name: "definitely-not-a-tool", arguments: {} });
+      if ((res as any).isError === true) outcome = "isError";
     } catch {
-      threw = true;
+      outcome = "threw";
     }
-    // Either the SDK surfaces it as a thrown error, or the server returns isError:true —
-    // both are acceptable. The point is: it does NOT silently succeed.
-    expect(threw || true).toBe(true); // sanity: previous try/catch reached this line
+    expect(outcome, "unknown tool must not silently succeed").not.toBe("silent-success");
   });
 });

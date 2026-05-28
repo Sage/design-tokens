@@ -24,6 +24,7 @@ export function createTools(tokens) {
   };
 
   function getToken({ name, mode }) {
+    if (name == null) return { found: false, error: `Token name is required.` };
     const key = String(name).toLowerCase();
     if (!key) return { found: false, error: `Token '${name}' not found.` };
     if (tokens[key]) return { found: true, token: reduceMode(tokens[key], mode) };
@@ -33,6 +34,7 @@ export function createTools(tokens) {
   }
 
   function searchTokens({ query, category, layer, limit = 20 }) {
+    const effectiveLimit = Math.max(0, limit);
     const terms = String(query).toLowerCase().split(/[\s-]+/).filter(Boolean);
     const results = all.filter((t) => {
       const name = t.name.replace(/-/g, "");
@@ -43,14 +45,14 @@ export function createTools(tokens) {
     });
     return {
       count: results.length,
-      results: results.slice(0, limit).map((t) => ({
+      results: results.slice(0, effectiveLimit).map((t) => ({
         name: t.name,
         value: t.value,
         category: t.category,
         layer: t.layer,
         description: t.description,
       })),
-      truncated: limit > 0 && results.length > limit,
+      truncated: effectiveLimit > 0 && results.length > effectiveLimit,
     };
   }
 
@@ -64,8 +66,9 @@ export function createTools(tokens) {
   }
 
   function listTokensByCategory({ category, limit = 50 }) {
+    const effectiveLimit = Math.max(0, limit);
     const matching = all.filter((t) => t.category === category);
-    const results = matching.slice(0, limit);
+    const results = matching.slice(0, effectiveLimit);
     return {
       category,
       count: matching.length,
@@ -74,7 +77,7 @@ export function createTools(tokens) {
         value: t.value,
         description: t.description,
       })),
-      truncated: matching.length > limit,
+      truncated: matching.length > effectiveLimit,
     };
   }
 

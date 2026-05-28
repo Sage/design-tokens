@@ -10,10 +10,6 @@ const tokens = JSON.parse(
 
 const VALID_LAYERS = new Set(["core", "global", "mode", "component"]);
 
-// kebab-case (CSS variable name without "--") -> dotted path (Tokens-Studio reference path)
-// e.g. "mode-color-brand-default" -> "mode.color.brand.default"
-const kebabToDotted = (kebab: string): string => kebab.replace(/-/g, ".");
-
 // Reverse: dotted path -> kebab-case name used by the MCP / CSS variable.
 // Tokens-Studio preserves original casing in dotted paths (e.g. "core.size.SCALE"),
 // but the MCP token map keys are all lowercase kebab — so we must lowercase.
@@ -49,28 +45,33 @@ describe("data integrity: schema invariants", () => {
 });
 
 describe("data integrity: refChain termination", () => {
-  it("every alias chain terminates at a literal token", () => {
-    const flattenChain = (chain: any): string[] => {
-      if (Array.isArray(chain)) return chain;
-      if (chain && typeof chain === "object") {
-        return [...(chain.light ?? []), ...(chain.dark ?? [])];
-      }
-      return [];
-    };
+  // Returns the set of terminal alias paths for a token: one per chain branch.
+  const terminiOf = (chain: any): string[] => {
+    if (Array.isArray(chain)) {
+      return chain.length > 0 ? [chain[chain.length - 1]] : [];
+    }
+    if (chain && typeof chain === "object") {
+      const out: string[] = [];
+      if (Array.isArray(chain.light) && chain.light.length > 0) out.push(chain.light[chain.light.length - 1]);
+      if (Array.isArray(chain.dark) && chain.dark.length > 0) out.push(chain.dark[chain.dark.length - 1]);
+      return out;
+    }
+    return [];
+  };
 
+  it("every alias chain terminates at a literal token (both light and dark branches)", () => {
     for (const t of Object.values<any>(tokens)) {
-      const chain = flattenChain(t.refChain);
-      if (chain.length === 0) continue;
-
-      const last = chain[chain.length - 1];
-      const lastKebab = dottedToKebab(last);
-      const target = tokens[lastKebab];
-      expect(target, `refChain terminus ${last} (from ${t.name}) must exist in tokens.json`).toBeDefined();
-
-      // The terminus must either be a literal (reference null) or itself terminate cleanly
-      // We only assert existence here; the recursive nature is already covered by the
-      // format's cycle guard + the existence check above being run for every token.
-      expect(target.reference === null || typeof target.reference === "string" || typeof target.reference === "object").toBe(true);
+      for (const term of terminiOf(t.refChain)) {
+        const targetKey = dottedToKebab(term);
+        const target = tokens[targetKey];
+        expect(target, `refChain terminus ${term} (from ${t.name}) must exist in tokens.json`).toBeDefined();
+        // The terminus must itself be a leaf or have a well-formed reference field shape
+        expect(
+          target.reference === null ||
+            typeof target.reference === "string" ||
+            (typeof target.reference === "object" && target.reference !== null)
+        ).toBe(true);
+      }
     }
   });
 });
