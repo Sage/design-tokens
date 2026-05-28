@@ -5,13 +5,15 @@ import { resolve } from "path";
 import { cwd } from "process";
 
 // Tracked files limited to versioned production sources + onboarding docs.
-// We exclude docs/superpowers/ (historical working documents may reference legacy paths).
+// We exclude docs/superpowers/ (historical working documents may reference legacy paths)
+// and tests/ (test files legitimately contain the very patterns we scan for — fixtures,
+// regexes, and names like the self-containment scan rules themselves).
 const trackedFiles = (): string[] => {
   const out = execSync("git ls-files", { encoding: "utf8" });
   return out
     .split("\n")
     .filter(Boolean)
-    .filter((p) => !p.startsWith("docs/superpowers/"));
+    .filter((p) => !p.startsWith("docs/superpowers/") && !p.startsWith("tests/"));
 };
 
 describe("self-containment: no host-absolute paths in versioned code", () => {
