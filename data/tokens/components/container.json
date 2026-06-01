@@ -364,5 +364,174 @@
         }
       }
     }
+  },
+  "depth": {
+    "none": {
+      "$type": "boxShadow",
+      "$value": [
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "0",
+          "spread": "0",
+          "color": "rgba(0,0,0,0)",
+          "type": "dropShadow"
+        }
+      ]
+    },
+    "lvl0": {
+      "$type": "boxShadow",
+      "$value": [
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "1",
+          "spread": "1",
+          "color": "{mode.color.generic.depth.faint}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "1",
+          "y": "2",
+          "blur": "2",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.soft}",
+          "type": "dropShadow"
+        }
+      ],
+      "$description": "Card default state"
+    },
+    "lvl1": {
+      "$type": "boxShadow",
+      "$value": [
+        {
+          "x": "0",
+          "y": "1",
+          "blur": "2",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.faint}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "2",
+          "y": "2",
+          "blur": "10",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.soft}",
+          "type": "dropShadow"
+        }
+      ],
+      "$description": "Card hover state, Popover menus used on split, multiaction, dropdown and action popovers"
+    },
+    "lvl2": {
+      "$type": "boxShadow",
+      "$value": [
+        {
+          "x": "0",
+          "y": "2",
+          "blur": "3",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.faint}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "6",
+          "y": "6",
+          "blur": "30",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.delicate}",
+          "type": "dropShadow"
+        }
+      ],
+      "$description": "Nav Menu"
+    },
+    "lvl3": {
+      "$type": "boxShadow",
+      "$value": [
+        {
+          "x": "0",
+          "y": "3",
+          "blur": "4",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.faint}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "10",
+          "y": "10",
+          "blur": "60",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.faint}",
+          "type": "dropShadow"
+        }
+      ],
+      "$description": "Dialog, Menu, Sidebar, Card drag state"
+    },
+    "stickyB": {
+      "$type": "boxShadow",
+      "$value": [
+        {
+          "x": "0",
+          "y": "-1",
+          "blur": "2",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.faint}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "2",
+          "y": "-2",
+          "blur": "10",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.soft}",
+          "type": "dropShadow"
+        }
+      ],
+      "$description": "Sticky footer on dialogs, drawer and sidebar"
+    },
+    "stickyL": {
+      "$type": "boxShadow",
+      "$value": [
+        {
+          "x": "-2",
+          "y": "0",
+          "blur": "2",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.faint}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "-5",
+          "y": "0",
+          "blur": "5",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.faint}",
+          "type": "dropShadow"
+        }
+      ],
+      "$description": "Right sticky column in Table."
+    },
+    "stickyR": {
+      "$type": "boxShadow",
+      "$value": [
+        {
+          "x": "2",
+          "y": "0",
+          "blur": "2",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.faint}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "5",
+          "y": "0",
+          "blur": "5",
+          "spread": "0",
+          "color": "{mode.color.generic.depth.faint}",
+          "type": "dropShadow"
+        }
+      ],
+      "$description": "Left sticky column in Table."
+    }
   }
 }
