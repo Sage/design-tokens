@@ -103,6 +103,52 @@
         "$type": "color",
         "$value": "{mode.color.generic.txt.severe}"
       }
+    },
+    "depth": {
+      "stickyL": {
+        "$type": "boxShadow",
+        "$value": [
+          {
+            "x": "2",
+            "y": "0",
+            "blur": "2",
+            "spread": "0",
+            "color": "{mode.color.generic.depth.faint}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "5",
+            "y": "0",
+            "blur": "5",
+            "spread": "0",
+            "color": "{mode.color.generic.depth.faint}",
+            "type": "dropShadow"
+          }
+        ],
+        "$description": "Left sticky column in Table."
+      },
+      "stickyR": {
+        "$type": "boxShadow",
+        "$value": [
+          {
+            "x": "-2",
+            "y": "0",
+            "blur": "2",
+            "spread": "0",
+            "color": "{mode.color.generic.depth.faint}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "-5",
+            "y": "0",
+            "blur": "5",
+            "spread": "0",
+            "color": "{mode.color.generic.depth.faint}",
+            "type": "dropShadow"
+          }
+        ],
+        "$description": "Right sticky column in Table."
+      }
     }
   }
 }
