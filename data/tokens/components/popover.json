@@ -48,27 +48,29 @@
       }
     },
     "depth": {
-      "lvl1": {
-        "$type": "boxShadow",
-        "$value": [
-          {
-            "x": "0",
-            "y": "1",
-            "blur": "2",
-            "spread": "0",
-            "color": "{mode.color.generic.depth.faint}",
-            "type": "dropShadow"
-          },
-          {
-            "x": "2",
-            "y": "2",
-            "blur": "10",
-            "spread": "0",
-            "color": "{mode.color.generic.depth.soft}",
-            "type": "dropShadow"
-          }
-        ],
-        "$description": "Popover menus"
+      "menu": {
+        "floating": {
+          "$type": "boxShadow",
+          "$value": [
+            {
+              "x": "0",
+              "y": "1",
+              "blur": "2",
+              "spread": "0",
+              "color": "{mode.color.generic.depth.faint}",
+              "type": "dropShadow"
+            },
+            {
+              "x": "2",
+              "y": "2",
+              "blur": "10",
+              "spread": "0",
+              "color": "{mode.color.generic.depth.soft}",
+              "type": "dropShadow"
+            }
+          ],
+          "$description": "Popover menus"
+        }
       }
     }
   }
