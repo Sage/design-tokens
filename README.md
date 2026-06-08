@@ -69,15 +69,15 @@ import "@sage/design-tokens/css/components/button.css";
 
 <script type="text/javascript">
   function switchTheme(theme) {
-    document.getElementById('app-theme').href = 
+    document.getElementById('app-theme').href =
       `node_modules/@sage/design-tokens/css/${theme}.css`;
   }
-  
+
   function updateTheme() {
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     switchTheme(prefersDark ? "dark" : "light");
   }
-  
+
   // Listen for system preference changes
   window.matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", updateTheme);
@@ -154,7 +154,7 @@ element.style.backgroundColor = buttonTokens.buttonDestructivePrimaryBgDefault;
 
 ```js
 import { button } from "@sage/design-tokens/js/es6";
- 
+
 element.style.backgroundColor = button.buttonDestructivePrimaryBgDefault;
 ```
 
