@@ -51,7 +51,7 @@ jobs:
       - name: Release package to NPM registry
         run: npx semantic-release --debug
         env:
-          GITHUB_TOKEN: ${{ secrets.ADMIN_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GIT_COMMITTER_NAME: Sage Carbon
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
