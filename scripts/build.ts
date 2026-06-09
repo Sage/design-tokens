@@ -23,7 +23,11 @@ interface IFiles extends IMode {
   outputRefs?: boolean | ((token: DesignToken) => boolean)
 }
 
-const getMode = ({modeName = "", format, suffix, subPath}: IMode): File[] => {
+const getModeOnlyFiles = ({modeName = "", format, suffix, subPath}: IMode): File[] => {
+  return getFiles({componentName: "mode", modeName, format, suffix, subPath})
+}
+
+const getComponentOnlyFiles = ({modeName = "", format, suffix, subPath}: IMode): File[] => {
   const mode = format.includes("variables") ? "" : modeName
 
   const componentArray: File[] = []
@@ -38,26 +42,21 @@ const getMode = ({modeName = "", format, suffix, subPath}: IMode): File[] => {
 
     componentArray.push(...getFiles({componentName, modeName: mode, format, suffix, outputRefs: true, subPath}))
   })
-  
-  return [
-    ...getFiles({componentName: "mode", modeName, format, suffix, subPath}),
-    ...componentArray
-  ]
+
+  return componentArray
 }
 
-const getFormat = (format: string, outputRefs: boolean | ((token: DesignToken) => boolean), componentName: string): string => {
+const getFormat = (format: string, outputRefs: boolean | ((token: DesignToken) => boolean) = false, componentName: string): string => {
+  const hasRefs = typeof outputRefs === "function" ? true : outputRefs;
   // outputRefs is true for mode and component files, false for global
-  if (format === "json/flat" && outputRefs === true) {
+  if (format === "json/flat" && hasRefs) {
     return "custom/json-with-refs";
-  } else if (format === "javascript/es6" && !["mode", "global", "dark", "light"].includes(componentName)) {
-    // For component files, use custom ES6 format instead of standard
+  } else if (format === "javascript/es6" && (hasRefs || !["mode", "global", "dark", "light"].includes(componentName))) {
     return "custom/es6-with-refs";
   } else if (format === "javascript/module") {
     if (["mode", "global", "dark", "light"].includes(componentName)) {
-      // For mode/global files we want to have similar export format to ES6 rather nested objects
       return "custom/commonjs-exports";
     } else {
-      // For component files, use custom CommonJS format instead of standard
       return "custom/commonjs-with-refs";
     }
   }
@@ -96,21 +95,17 @@ const getFiles = ({componentName, modeName = "", format, suffix, outputRefs = fa
       filter: (token: DesignToken) => FilterComponent(token, componentName, format.includes("json")),
       format: actualFormat,
       options: {
-        outputReferences: outputRefs
+        outputReferences: typeof outputRefs === "function" ? outputRefs : outputRefs
       }
     }
   ]
-}
-
-const shouldOutputGlobalDepthRefs = (token: DesignToken): boolean => {
-  return token["path"]?.[0] === "global" && token["path"]?.[1] === "depth"
 }
 
 const getGlobalConfig = (): Config => {
   return {
     source: [
       "./data/tokens/core.json",
-     "./data/tokens/mode/light.json",
+      "./data/tokens/mode/*.json",
       "./data/tokens/global/*.json"
     ],
     preprocessors: ["tokens-studio"],
@@ -119,31 +114,31 @@ const getGlobalConfig = (): Config => {
         buildPath: "dist/css/",
         transforms: groups.css,
         files: [
-          ...getFiles({componentName: "global", format: "css/variables", suffix: "css", outputRefs: shouldOutputGlobalDepthRefs})
+          ...getFiles({componentName: "global", format: "css/variables", suffix: "css", outputRefs: (token: DesignToken) => token.path[1] === 'depth'})
         ]
       },
       scss: {
         buildPath: "dist/scss/",
         transforms: groups.scss,
         files: [
-          ...getFiles({componentName: "global", format: "scss/variables", suffix: "scss"})
+          ...getFiles({componentName: "global", format: "scss/variables", suffix: "scss", outputRefs: (token: DesignToken) => token.path[1] === 'depth'})
         ]
       },
       js: {
         buildPath: "dist/js/",
         transforms: groups.js,
         files: [
-          ...getFiles({componentName: "global", format: "javascript/module", subPath: "common", suffix: "js"}),
-          ...getFiles({componentName: "global", format: "typescript/module-declarations", subPath: "common", suffix: "d.ts"}),          
-          ...getFiles({componentName: "global", format: "javascript/es6", subPath: "es6", suffix: "js"}),
-          ...getFiles({componentName: "global", format: "typescript/es6-declarations", subPath: "es6", suffix: "d.ts"}),          
+          ...getFiles({componentName: "global", format: "javascript/module", subPath: "common", suffix: "js", outputRefs: (token: DesignToken) => token.path[1] === 'depth'}),
+          ...getFiles({componentName: "global", format: "typescript/module-declarations", subPath: "common", suffix: "d.ts", outputRefs: (token: DesignToken) => token.path[1] === 'depth'}),
+          ...getFiles({componentName: "global", format: "javascript/es6", subPath: "es6", suffix: "js", outputRefs: (token: DesignToken) => token.path[1] === 'depth'}),
+          ...getFiles({componentName: "global", format: "typescript/es6-declarations", subPath: "es6", suffix: "d.ts", outputRefs: (token: DesignToken) => token.path[1] === 'depth'}),
         ]
       },
       json: {
         buildPath: "dist/json/",
         transforms: groups.json,
         files: [
-          ...getFiles({componentName: "global", format: "json/flat", suffix: "json"})
+          ...getFiles({componentName: "global", format: "json/flat", suffix: "json", outputRefs: (token: DesignToken) => token.path[1] === 'depth'})
         ]
       }
     },
@@ -157,7 +152,58 @@ const getGlobalConfig = (): Config => {
   }
 }
 
-const getModeConfig = (modeName: string): Config => {
+const getModeOnlyConfig = (modeName: string): Config => {
+  return {
+    source: [
+      "./data/tokens/core.json",
+      "./data/tokens/global/*.json",
+      `./data/tokens/mode/${modeName}.json`
+    ],
+    preprocessors: ["tokens-studio"],
+    platforms: {
+      css: {
+        buildPath: "dist/css/",
+        transforms: groups.css,
+        files: [
+          ...getModeOnlyFiles({modeName, format: "css/variables", suffix: "css"})
+        ]
+      },
+      scss: {
+        buildPath: "dist/scss/",
+        transforms: groups.scss,
+        files: [
+          ...getModeOnlyFiles({modeName, format: "scss/variables", suffix: "scss"})
+        ]
+      },
+      js: {
+        buildPath: "dist/js/",
+        transforms: groups.js,
+        files: [
+          ...getModeOnlyFiles({modeName, format: "javascript/module", subPath: "common", suffix: "js"}),
+          ...getModeOnlyFiles({modeName, format: "typescript/module-declarations", subPath: "common", suffix: "d.ts"}),
+          ...getModeOnlyFiles({modeName, format: "javascript/es6", subPath: "es6", suffix: "js"}),
+          ...getModeOnlyFiles({modeName, format: "typescript/es6-declarations", subPath: "es6", suffix: "d.ts"}),
+        ]
+      },
+      json: {
+        buildPath: "dist/json/",
+        transforms: groups.json,
+        files: [
+          ...getModeOnlyFiles({modeName, format: "json/flat", suffix: "json"})
+        ]
+      }
+    },
+    log: {
+      warnings: "warn" as const,
+      verbosity: "verbose" as const,
+      errors: {
+        brokenReferences: "throw" as const,
+      },
+    },
+  }
+}
+
+const getComponentConfig = (modeName: string): Config => {
   return {
     source: [
       "./data/tokens/core.json",
@@ -171,31 +217,31 @@ const getModeConfig = (modeName: string): Config => {
         buildPath: "dist/css/",
         transforms: groups.css,
         files: [
-          ...getMode({modeName, format: "css/variables", suffix: "css"})
+          ...getComponentOnlyFiles({modeName, format: "css/variables", suffix: "css"})
         ]
       },
       scss: {
         buildPath: "dist/scss/",
         transforms: groups.scss,
         files: [
-          ...getMode({modeName, format: "scss/variables", suffix: "scss"})
+          ...getComponentOnlyFiles({modeName, format: "scss/variables", suffix: "scss"})
         ]
       },
       js: {
         buildPath: "dist/js/",
         transforms: groups.js,
         files: [
-          ...getMode({modeName, format: "javascript/module", subPath: "common", suffix: "js"}),
-          ...getMode({modeName, format: "typescript/module-declarations", subPath: "common", suffix: "d.ts"}),
-          ...getMode({modeName, format: "javascript/es6", subPath: "es6", suffix: "js"}),
-          ...getMode({modeName, format: "typescript/es6-declarations", subPath: "es6", suffix: "d.ts"}),
+          ...getComponentOnlyFiles({modeName, format: "javascript/module", subPath: "common", suffix: "js"}),
+          ...getComponentOnlyFiles({modeName, format: "typescript/module-declarations", subPath: "common", suffix: "d.ts"}),
+          ...getComponentOnlyFiles({modeName, format: "javascript/es6", subPath: "es6", suffix: "js"}),
+          ...getComponentOnlyFiles({modeName, format: "typescript/es6-declarations", subPath: "es6", suffix: "d.ts"}),
         ]
       },
       json: {
         buildPath: "dist/json/",
         transforms: groups.json,
         files: [
-          ...getMode({modeName, format: "json/flat", suffix: "json"})
+          ...getComponentOnlyFiles({modeName, format: "json/flat", suffix: "json"})
         ]
       }
     },
@@ -209,7 +255,23 @@ const getModeConfig = (modeName: string): Config => {
   }
 }
 
-// Build global tokens
+// Phase 1: Build mode tokens first (no dependencies on global)
+for (const mode of modes) {
+  const modeName = mode.split(".json")[0]
+
+  if (!modeName) {
+    throw new Error(`Mode name not found for ${mode}`)
+  }
+
+  const modeStyleDictionary = new StyleDictionary(getModeOnlyConfig(modeName))
+
+  await modeStyleDictionary.buildPlatform("css")
+  await modeStyleDictionary.buildPlatform("scss")
+  await modeStyleDictionary.buildPlatform("js")
+  await modeStyleDictionary.buildPlatform("json")
+}
+
+// Phase 2: Build global tokens (shadow tokens reference mode tokens)
 const globalStyleDictionary = new StyleDictionary(getGlobalConfig())
 
 await globalStyleDictionary.buildPlatform("css")
@@ -217,19 +279,18 @@ await globalStyleDictionary.buildPlatform("scss")
 await globalStyleDictionary.buildPlatform("js")
 await globalStyleDictionary.buildPlatform("json")
 
-// Build mode-specific tokens
-modes.forEach(async (mode) => {
+// Phase 3: Build component tokens per mode
+for (const mode of modes) {
   const modeName = mode.split(".json")[0]
 
   if (!modeName) {
-    throw new Error(
-      `Mode name not found for ${mode}`)
+    throw new Error(`Mode name not found for ${mode}`)
   }
 
-  const modeStyleDictionary = new StyleDictionary(getModeConfig(modeName))
+  const componentStyleDictionary = new StyleDictionary(getComponentConfig(modeName))
 
-  await modeStyleDictionary.buildPlatform("css")
-  await modeStyleDictionary.buildPlatform("scss")
-  await modeStyleDictionary.buildPlatform("js")
-  await modeStyleDictionary.buildPlatform("json")
-});
+  await componentStyleDictionary.buildPlatform("css")
+  await componentStyleDictionary.buildPlatform("scss")
+  await componentStyleDictionary.buildPlatform("js")
+  await componentStyleDictionary.buildPlatform("json")
+}

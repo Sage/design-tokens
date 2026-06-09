@@ -14,8 +14,11 @@ export const outputJSONWithRefs = ({dictionary, options = {}}: {dictionary: Dict
       dictionary.allTokens.reduce((acc: Record<string, any>, token: DesignToken) => {
         const originalValue = token["original"].value || token["original"].$value;
 
-        if (outputReferences && token.name) {
-          acc[token.name] = outputRefForToken(originalValue, token);
+        if (token.name) {
+          const shouldOutputRef = typeof outputReferences === "function" ? outputReferences(token) : outputReferences;
+          acc[token.name] = shouldOutputRef
+            ? outputRefForToken(originalValue, token)
+            : (token.$value || token.value);
         }
 
         return acc;

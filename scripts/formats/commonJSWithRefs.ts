@@ -14,7 +14,8 @@ export const outputCommonJSWithRefs = ({dictionary, options = {}}: {dictionary: 
       .map((token: DesignToken) => {
         const originalValue = token["original"]?.value || token["original"]?.$value;
 
-        if (outputReferences && token.name) {
+        const shouldOutputRef = typeof outputReferences === "function" ? outputReferences(token) : outputReferences;
+        if (shouldOutputRef && token.name) {
           return `module.exports.${token.name} = "${outputRefForToken(originalValue, token)}";`;
         }
 

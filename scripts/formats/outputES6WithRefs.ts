@@ -13,14 +13,19 @@ export const outputES6WithRefs = ({dictionary, options = {}}: {dictionary: Dicti
     const tokens = dictionary.allTokens
       .map((token: DesignToken) => {
         const originalValue = token["original"]?.value || token["original"]?.$value;
+        const shouldOutputRef = typeof outputReferences === "function" ? outputReferences(token) : outputReferences;
         
-        if (outputReferences && token.name) {
+        if (!token.name) return "";
+
+        if (shouldOutputRef) {
           return `export const ${token.name} = "${outputRefForToken(originalValue, token)}";`;
         }
 
-        return "";
+        const value = token.$value ?? token.value;
+        const formatted = typeof value === "object" ? JSON.stringify(value, null, 2) : `"${value}"`;
+        return `export const ${token.name} = ${formatted};`;
       })
       .join('\n');
 
     return tokens + '\n';
-  }
+}
