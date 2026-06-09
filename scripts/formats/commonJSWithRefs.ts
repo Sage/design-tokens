@@ -12,7 +12,7 @@ export const outputCommonJSWithRefs = ({dictionary, options = {}}: {dictionary: 
 
     const tokens = dictionary.allTokens
       .map((token: DesignToken) => {
-        const originalValue = token["original"]?.value || token["original"]?.$value;
+        const originalValue = token["original"]?.value ?? token["original"]?.$value;
 
         if (outputReferences && token.name) {
           return `module.exports.${token.name} = "${outputRefForToken(originalValue, token)}";`;

@@ -12,7 +12,7 @@ export const outputJSONWithRefs = ({dictionary, options = {}}: {dictionary: Dict
     
     return JSON.stringify(
       dictionary.allTokens.reduce((acc: Record<string, any>, token: DesignToken) => {
-        const originalValue = token["original"].value || token["original"].$value;
+        const originalValue = token["original"].value ?? token["original"].$value;
 
         if (outputReferences && token.name) {
           acc[token.name] = outputRefForToken(originalValue, token);
