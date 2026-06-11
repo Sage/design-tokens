@@ -12,7 +12,7 @@ export const outputES6WithRefs = ({dictionary, options = {}}: {dictionary: Dicti
 
     const tokens = dictionary.allTokens
       .map((token: DesignToken) => {
-        const originalValue = token["original"]?.value || token["original"]?.$value;
+        const originalValue = token["original"]?.value ?? token["original"]?.$value;
         
         if (outputReferences && token.name) {
           return `export const ${token.name} = "${outputRefForToken(originalValue, token)}";`;
