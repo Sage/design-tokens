@@ -1,22 +1,103 @@
 {
   "page": {
-    "bg-default": {
-      "$type": "color",
-      "$value": "{mode.color.generic.surface.nought}"
-    },
     "bg-alt": {
       "$type": "color",
       "$value": "{mode.color.generic.surface.trace}"
     },
-    "txt-alt": {
+    "bg-default": {
       "$type": "color",
-      "$value": "{mode.color.generic.txt.moderate}",
-      "$description": "for subheadings etc"
+      "$value": "{mode.color.generic.surface.nought}"
+    },
+    "icon-default": {
+      "$type": "color",
+      "$value": "{mode.color.generic.txt.severe}",
+      "$description": "default color for standard icons"
     },
     "txt-default": {
       "$type": "color",
       "$value": "{mode.color.generic.txt.severe}",
       "$description": "for headings, paragraph txt etc "
+    },
+    "content": {
+      "icon-alt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.moderate}"
+      },
+      "icon-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.severe}",
+        "$description": "default color for standard icons"
+      },
+      "txt-alt": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.moderate}",
+        "$description": "for subheadings etc"
+      },
+      "txt-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.txt.severe}",
+        "$description": "for headings, paragraph txt etc "
+      },
+      "inverse": {
+        "icon-alt": {
+          "$type": "color",
+          "$value": "{mode.color.generic.txt.inverse.moderate}"
+        },
+        "icon-default": {
+          "$type": "color",
+          "$value": "{mode.color.generic.txt.inverse.severe}"
+        },
+        "txt-alt": {
+          "$type": "color",
+          "$value": "{mode.color.generic.txt.inverse.moderate}",
+          "$description": "for subheadings etc"
+        },
+        "txt-default": {
+          "$type": "color",
+          "$value": "{mode.color.generic.txt.inverse.severe}",
+          "$description": "for headings, paragraph txt etc "
+        }
+      },
+      "caution": {
+        "icon": {
+          "$type": "color",
+          "$value": "{mode.color.status.warning.default}"
+        },
+        "txt": {
+          "$type": "color",
+          "$value": "{mode.color.status.warning.txt}"
+        }
+      },
+      "info": {
+        "icon": {
+          "$type": "color",
+          "$value": "{mode.color.status.info.default}"
+        },
+        "txt": {
+          "$type": "color",
+          "$value": "{mode.color.status.info.default}"
+        }
+      },
+      "negative": {
+        "icon": {
+          "$type": "color",
+          "$value": "{mode.color.status.negative.default}"
+        },
+        "txt": {
+          "$type": "color",
+          "$value": "{mode.color.status.negative.default}"
+        }
+      },
+      "positive": {
+        "icon": {
+          "$type": "color",
+          "$value": "{mode.color.status.positive.default}"
+        },
+        "txt": {
+          "$type": "color",
+          "$value": "{mode.color.status.positive.default}"
+        }
+      }
     }
   }
 }
