@@ -572,6 +572,15 @@
             "$description": "used on full page backgrounds"
           },
           "trace": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.25",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
             "$value": "{core.color.storm.95}",
             "$description": "used on full page backgrounds as an alternative option"
