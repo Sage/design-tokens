@@ -1,5 +1,5 @@
 import { Dictionary, DesignToken } from "style-dictionary/types";
-import { outputRefForToken } from "./outputRefForToken.js";
+import { outputRefForToken, resolveTypographyObject } from "./outputRefForToken.js";
 
 /**
  * Custom format to output ensure commonJS variables output in the same format as ESM
@@ -16,11 +16,20 @@ export const formatCommonJSExports = ({dictionary, options = {}}: {dictionary: D
 
       if (shouldOutputRef) {
         const originalValue = token["original"]?.value ?? token["original"]?.$value;
-        return `module.exports.${token.name} = "${outputRefForToken(originalValue, token)}";`;
+        return `module.exports.${token.name} = ${JSON.stringify(outputRefForToken(originalValue, token))};`;
       }
 
       const value = token.$value ?? token.value;
-      const serialized = typeof value === "object" ? JSON.stringify(value) : `"${value}"`;
+
+      let outValue: unknown = value;
+      if (value && typeof value === "object" && !Array.isArray(value)) {
+        const original = token["original"]?.$value ?? token["original"]?.value;
+        outValue = (original && typeof original === "object")
+          ? resolveTypographyObject(original as Record<string, unknown>, value as Record<string, unknown>)
+          : value;
+      }
+
+      const serialized = typeof outValue === "object" ? JSON.stringify(outValue) : `"${outValue}"`;
       return `module.exports.${token.name} = ${serialized};`;
     })
     .join('\n');

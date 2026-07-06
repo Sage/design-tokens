@@ -1,27 +1,18 @@
 import { Dictionary, DesignToken } from "style-dictionary/types";
-import { outputRefForToken } from "./outputRefForToken.js";
+import { outputRefForToken, resolveTypographyObject } from "./outputRefForToken.js";
 
-const formatTypographyValue = (value: Record<string, unknown>): string => {
-  const fontSize = typeof value["fontSize"] === "string" ? value["fontSize"] : "";
-  const fontFamily = typeof value["fontFamily"] === "string" ? value["fontFamily"] : "";
-  const fontWeight = typeof value["fontWeight"] === "string" ? value["fontWeight"] : "";
-  const lineHeight = typeof value["lineHeight"] === "string" ? value["lineHeight"] : "";
+const formatNonRefValue = (token: DesignToken): unknown => {
+  const value = token.$value ?? token.value;
 
-  const sizeSegment = lineHeight ? `${fontSize}/${lineHeight}` : fontSize;
-  const weighted = fontWeight ? `${fontWeight} ${sizeSegment}` : sizeSegment;
-
-  return `${weighted} ${fontFamily}`.trim();
-};
-
-const formatNonRefValue = (value: unknown): string => {
   if (value && typeof value === "object" && !Array.isArray(value)) {
-    const objectValue = value as Record<string, unknown>;
-
-    if (typeof objectValue["fontSize"] === "string" && typeof objectValue["fontFamily"] === "string") {
-      return formatTypographyValue(objectValue);
+    const original = token["original"]?.$value ?? token["original"]?.value;
+    if (original && typeof original === "object") {
+      return resolveTypographyObject(
+        original as Record<string, unknown>,
+        value as Record<string, unknown>
+      );
     }
-
-    return JSON.stringify(objectValue);
+    return value;
   }
 
   return String(value);
@@ -51,7 +42,7 @@ export const outputJSONWithRefs = ({dictionary, options = {}}: {dictionary: Dict
         if (token.name) {
           acc[token.name] = shouldOutputRef(token)
             ? outputRefForToken(originalValue, token)
-            : formatNonRefValue(token.$value || token.value);
+            : formatNonRefValue(token);
         }
 
         return acc;

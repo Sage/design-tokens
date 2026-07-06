@@ -15,7 +15,7 @@ export const outputCommonJSWithRefs = ({dictionary, options = {}}: {dictionary: 
         const originalValue = token["original"]?.value ?? token["original"]?.$value;
 
         if (outputReferences && token.name) {
-          return `module.exports.${token.name} = "${outputRefForToken(originalValue, token)}";`;
+          return `module.exports.${token.name} = ${JSON.stringify(outputRefForToken(originalValue, token))};`;
         }
 
         return "";

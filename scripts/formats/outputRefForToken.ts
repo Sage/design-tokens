@@ -1,23 +1,6 @@
 import { DesignToken } from "style-dictionary/types";
 import { usesReferences } from 'style-dictionary/utils';
-
-/**
- * Helper: Converts a reference path to proper kebab-case for CSS variable names
- * @param refPath The reference path (e.g., "mode.color.action.mainWithDefault")
- * @returns The kebab-case CSS variable name
- */
-const convertToKebabCase = (refPath: string): string => {
-  return refPath
-    .split('.')
-    .map(segment => {
-      // Convert camelCase segments to kebab-case
-      return segment
-        .replace(/([a-z\d])([A-Z])/g, '$1-$2') // Handle lowercase/digit + uppercase
-        .replace(/([A-Z])([A-Z][a-z])/g, '$1-$2') // Handle consecutive capitals
-        .toLowerCase();
-    })
-    .join('-');
-};
+import { convertToKebabCase } from "../utils/convert-to-kebab-case.js";
 
 /**
  * Helper: Check if a value contains mathematical operations
@@ -97,18 +80,28 @@ type TypographyTokenValue = {
   fontSize: string;
 };
 
-/**
- * Helper: Convert a typography object to a CSS font shorthand string
- */
-const processTypography = (
-  typography: TypographyTokenValue
-): string => {
-  const fontWeight = processReferences(typography.fontWeight);
-  const fontSize = processReferences(typography.fontSize);
-  const lineHeight = processReferences(typography.lineHeight);
-  const fontFamily = processReferences(typography.fontFamily);
-  
-  return `${fontWeight} ${fontSize}/${lineHeight} ${fontFamily}`;
+export const resolveTypographyObject = (
+  original: Record<string, unknown>,
+  resolved: Record<string, unknown> = {}
+): Record<string, unknown> => {
+  const result: Record<string, unknown> = {};
+
+  for (const key of Object.keys(original)) {
+    const orig = original[key];
+
+    if (typeof orig === "string" && usesReferences(orig) && /\{global\./.test(orig)) {
+      result[key] = orig.replace(/\{([^}]+)\}/g, (match, refPath: string) =>
+        refPath.startsWith("global.")
+          ? `var(--${convertToKebabCase(refPath)})`
+          : String(resolved[key])
+      );
+    } else {
+      // core.* refs and literals: use the already-resolved value as-is (number stays number)
+      result[key] = resolved[key];
+    }
+  }
+
+  return result;
 };
 
 /**
@@ -117,7 +110,7 @@ const processTypography = (
  * @param token The design token object
  * @returns The processed value with CSS variable references where applicable
  */
-export const outputRefForToken = (originalValue: string | TypographyTokenValue | BoxShadowTokenValue, token: DesignToken): string => {
+export const outputRefForToken = (originalValue: string | TypographyTokenValue | BoxShadowTokenValue, token: DesignToken): string | Record<string, unknown> => {
   // Handle boxShadow arrays
   if (Array.isArray(originalValue)) {
     return processBoxShadow(originalValue);
@@ -125,7 +118,8 @@ export const outputRefForToken = (originalValue: string | TypographyTokenValue |
 
   // Handle typography objects
   if (typeof originalValue === 'object') {
-    return processTypography(originalValue);
+    const resolved = (token.$value ?? token.value) as Partial<TypographyTokenValue>;
+    return resolveTypographyObject(originalValue as Record<string, unknown>, resolved);
   }
 
   if (usesReferences(originalValue)) {
