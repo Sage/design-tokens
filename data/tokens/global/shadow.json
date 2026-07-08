@@ -128,6 +128,28 @@
         "$type": "boxShadow",
         "$value": [
           {
+            "x": "2",
+            "y": "0",
+            "blur": "2",
+            "spread": "0",
+            "color": "{mode.color.generic.depth.faint}",
+            "type": "dropShadow"
+          },
+          {
+            "x": "5",
+            "y": "0",
+            "blur": "5",
+            "spread": "0",
+            "color": "{mode.color.generic.depth.faint}",
+            "type": "dropShadow"
+          }
+        ],
+        "$description": "Left sticky column in Table."
+      },
+      "stickyR": {
+        "$type": "boxShadow",
+        "$value": [
+          {
             "x": "-2",
             "y": "0",
             "blur": "2",
@@ -146,27 +168,19 @@
         ],
         "$description": "Right sticky column in Table."
       },
-      "stickyR": {
+      "stickyT": {
         "$type": "boxShadow",
         "$value": [
           {
-            "x": "2",
-            "y": "0",
-            "blur": "2",
-            "spread": "0",
+            "x": "0",
+            "y": "8",
+            "blur": "4",
+            "spread": "-4",
             "color": "{mode.color.generic.depth.faint}",
-            "type": "dropShadow"
-          },
-          {
-            "x": "5",
-            "y": "0",
-            "blur": "5",
-            "spread": "0",
-            "color": "{mode.color.generic.depth.faint}",
-            "type": "dropShadow"
+            "type": "innerShadow"
           }
         ],
-        "$description": "Left sticky column in Table."
+        "$description": "Sticky inset shadow applied to first child cells on expandable table"
       }
     }
   }
