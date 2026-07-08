@@ -19,6 +19,7 @@ const depthTokenKeys = [
   "global-depth-sticky-b",
   "global-depth-sticky-l",
   "global-depth-sticky-r",
+  "global-depth-sticky-t",
 ];
 
 const depthTokenCamelKeys = [
@@ -29,6 +30,7 @@ const depthTokenCamelKeys = [
   "globalDepthStickyB",
   "globalDepthStickyL",
   "globalDepthStickyR",
+  "globalDepthStickyT",
 ];
 
 function parseScssFile(filePath: string): Map<string, string> {
