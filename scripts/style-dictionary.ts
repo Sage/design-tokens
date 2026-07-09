@@ -5,6 +5,7 @@ Copyright © 2025 The Sage Group plc or its licensors. All Rights reserved
 import StyleDictionary from "style-dictionary"
 import { register } from "@tokens-studio/sd-transforms"
 import { removeComments } from "./transforms/removeComments.js";
+import { handleFontFamiliesReferencesCSS, handleFontFamiliesReferencesScss } from "./transforms/handleFontFamilyReferences.js";
 import { outputJSONWithRefs } from "./formats/outputJSONWithRefs.js";
 import { outputES6WithRefs } from "./formats/outputES6WithRefs.js";
 import { outputCommonJSWithRefs } from "./formats/commonJSWithRefs.js";
@@ -37,6 +38,22 @@ StyleDictionary.registerTransform({
   transform: removeComments
 });
 
+StyleDictionary.registerTransform({
+  name: "custom/typography-global-family",
+  type: "value",
+  transitive: true,
+  filter: (token) => (token.$type ?? token.type) === "typography",
+  transform: handleFontFamiliesReferencesCSS,
+});
+
+StyleDictionary.registerTransform({
+  name: "custom/typography-global-family-scss",
+  type: "value",
+  transitive: true,
+  filter: (token) => (token.$type ?? token.type) === "typography",
+  transform: handleFontFamiliesReferencesScss,
+});
+
 const groups = {
   css: [
     "custom/remove-comments",
@@ -44,13 +61,13 @@ const groups = {
     "border/css/shorthand",
     "shadow/css/shorthand",
     "transition/css/shorthand",
-    "typography/css/shorthand",
     "name/kebab",
     "ts/size/px",
     "ts/opacity",
     "ts/size/lineheight",
     "ts/typography/fontWeight",
     "ts/resolveMath",
+    "custom/typography-global-family",
     "ts/size/css/letterspacing",
     "ts/color/modifiers"
   ],
@@ -60,13 +77,13 @@ const groups = {
     "border/css/shorthand",
     "shadow/css/shorthand",
     "transition/css/shorthand", 
-    "typography/css/shorthand",
     "name/kebab",
     "ts/size/px",
     "ts/opacity",
     "ts/size/lineheight",
     "ts/typography/fontWeight",
     "ts/resolveMath",
+    "custom/typography-global-family-scss",
     "ts/size/css/letterspacing",
     "ts/color/modifiers"
   ],

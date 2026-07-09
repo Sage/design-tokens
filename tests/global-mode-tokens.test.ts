@@ -82,7 +82,7 @@ describe("Global tokens", () => {
     
     // Should have the expected properties
     if (typeof fontToken === "object") {
-      expect(fontToken.fontFamily).toBe("Sage UI");
+      expect(fontToken.fontFamily).toBe("var(--global-font-families-heading)");
       expect(fontToken.fontWeight).toBe("500");
       expect(fontToken.lineHeight).toBe(1.25);
       expect(fontToken.fontSize).toContain("clamp");
