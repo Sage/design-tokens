@@ -23,7 +23,7 @@ export function parseJSONFile(filePath: string): Map<string, string> {
   const tokens = new Map<string, string>();
   
   Object.entries(data).forEach(([key, value]) => {
-    tokens.set(key, String(value));
+    tokens.set(key, typeof value === "object" ? JSON.stringify(value) : String(value));
   });
   
   return tokens;
