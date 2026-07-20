@@ -24,8 +24,8 @@ jobs:
           check-latest: true
           cache: "npm"
       
-      - name: Update npm to 11.15.0
-        run: npm install -g npm@11.15.0
+      - name: Update npm to 11.18.0
+        run: npm install -g npm@11.18.0
 
       - run: npm ci --prefer-offline --ignore-scripts
 
