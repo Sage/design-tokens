@@ -575,19 +575,30 @@
             "$extensions": {
               "studio.tokens": {
                 "modify": {
-                  "type": "darken",
-                  "value": "0.25",
-                  "space": "lch"
+                  "type": "mix",
+                  "value": "0.10",
+                  "space": "lch",
+                  "color": "{core.color.white}"
                 }
               }
             },
             "$type": "color",
-            "$value": "{core.color.storm.95}",
+            "$value": "{core.color.black}",
             "$description": "used on full page backgrounds as an alternative option"
           },
           "faint": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.25",
+                  "space": "lch",
+                  "color": "{core.color.white}"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.storm.90}",
+            "$value": "{core.color.black}",
             "$description": "table header hover color"
           },
           "harsh": {
@@ -1243,8 +1254,18 @@
         },
         "main": {
           "active": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.08",
+                  "space": "lch",
+                  "color": "{core.color.white} "
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.brand.20}"
+            "$value": "{core.color.brand.40}"
           },
           "activeAlt": {
             "$extensions": {
@@ -1261,8 +1282,18 @@
             "$description": "Active color for inverse secondary and tertiary buttons"
           },
           "default": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.08",
+                  "space": "lch",
+                  "color": "{core.color.white} "
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.brand.40}"
+            "$value": "{core.color.brand.50}"
           },
           "defaultAlt": {
             "$extensions": {
@@ -1280,7 +1311,7 @@
           },
           "defaultAlt2": {
             "$type": "color",
-            "$value": "{core.color.brand.30}",
+            "$value": "{core.color.brand.50}",
             "$description": "default color for links"
           },
           "defaultAlt3": {
@@ -1298,8 +1329,18 @@
             "$description": "default background color of inverse secondary buttons"
           },
           "hover": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.08",
+                  "space": "lch",
+                  "color": "{core.color.white} "
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.brand.30}"
+            "$value": "{core.color.brand.40}"
           },
           "hoverAlt": {
             "$extensions": {
@@ -1317,7 +1358,7 @@
           },
           "hoverAlt2": {
             "$type": "color",
-            "$value": "{core.color.brand.20}",
+            "$value": "{core.color.brand.40}",
             "$description": "hover for links"
           },
           "withActive": {
