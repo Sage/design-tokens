@@ -297,6 +297,25 @@
       }
     },
     "size": {
+      "dialog": {
+        "maxwidth": {
+          "S": {
+            "$type": "sizing",
+            "$value": "540",
+            "$description": "max width for small dialog"
+          },
+          "M": {
+            "$type": "sizing",
+            "$value": "850",
+            "$description": "max width for medium dialog"
+          },
+          "L": {
+            "$type": "sizing",
+            "$value": "1080",
+            "$description": "max width for large dialog"
+          }
+        }
+      },
       "fluidItems": {
         "2XS": {
           "$type": "sizing",
@@ -344,22 +363,27 @@
           "$description": "Max width for single line of txt."
         }
       },
-      "dialog": {
+      "layout": {
         "maxwidth": {
           "S": {
             "$type": "sizing",
-            "$value": "540",
-            "$description": "max width for small dialog"
+            "$value": "720",
+            "$description": "Used on Text blocks. Maintains optimal line length for readability."
           },
           "M": {
             "$type": "sizing",
-            "$value": "850",
-            "$description": "max width for medium dialog"
+            "$value": "1200",
+            "$description": "Used on forms and editorial with supporting elements. Prevents excessive line length, supports comprehension and scanning."
           },
           "L": {
             "$type": "sizing",
-            "$value": "1080",
-            "$description": "max width for large dialog"
+            "$value": "1520",
+            "$description": "Used on card or tile mixed layouts, dashboards and overview pages. Balances information density with readability on wide application layouts."
+          },
+          "XL": {
+            "$type": "sizing",
+            "$value": "1840",
+            "$description": "Used on data-heavy views such as dense tables or data grids. Enables wide data views without forcing horizontal scrolling. May be exceeded where tables or data‑dense views require additional horizontal space."
           }
         }
       }
