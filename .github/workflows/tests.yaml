@@ -18,8 +18,8 @@ jobs:
           node-version: "22"
           check-latest: true
 
-      - name: Update npm to 11.18.0
-        run: npm install -g npm@11.18.0
+      - name: Update npm to 11.19.1
+        run: npm install -g npm@11.19.1
 
       - name: Install
         run: npm ci --prefer-offline --ignore-scripts
