@@ -1252,6 +1252,20 @@
               "$type": "color",
               "$value": "{mode.color.generic.txt.inverse.severe}"
             },
+            "withDefaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.8",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{core.color.white}",
+              "$description": "used for subheaders within primary nav"
+            },
             "withHover": {
               "$type": "color",
               "$value": "{core.color.white}",
