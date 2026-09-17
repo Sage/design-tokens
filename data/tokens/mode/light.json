@@ -1216,6 +1216,16 @@
               "$description": "default bg for global nav"
             },
             "defaultAlt": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.07",
+                    "space": "lch",
+                    "color": "{core.color.white} "
+                  }
+                }
+              },
               "$type": "color",
               "$value": "{core.color.smoke.90}",
               "$description": "default bg for left nav container"
