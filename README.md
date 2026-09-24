@@ -160,6 +160,34 @@ element.style.backgroundColor = button.buttonDestructivePrimaryBgDefault;
 
 A type definition file is also included to work in projects with typescript installed.
 
+### iOS / Swift
+
+Swift token files are generated into the `ios/` directory.
+
+#### Add to an iOS target
+
+Add `global.swift`, `light.swift`, `dark.swift`, and `components/` to the Xcode target. The generated files import UIKit and expose public Swift namespaces, so no additional Swift import is required.
+
+#### Available files
+
+- Global tokens: `ios/global.swift`
+- Light mode tokens: `ios/light.swift`
+- Dark mode tokens: `ios/dark.swift`
+- Components: `ios/components/`
+
+The generated files expose `UIColor` colour tokens and scalar values, such as spacing and radii, through Swift namespaces:
+
+```swift
+let background = SageTokensLight.modeColorGenericBgDefault
+let buttonHeight = SageTokensLightButton.buttonPrimaryHeight
+```
+
+Each component file contains light and dark namespaces. Component token references are retained to the matching mode and global namespaces.
+
+#### Composite tokens
+
+Gradients, shadows, and static typography are exported as structured Swift descriptors. These preserve token references and expose the underlying token data without choosing a rendering framework. Responsive typography roles that use CSS `clamp()` and viewport units remain web-only; iOS consumers should map those roles to their Dynamic Type strategy. Consumers can adapt the descriptors to their platform APIs while retaining the token names, values, theme handling, and accessibility behaviour that suit their application.
+
 #### Other formats
 
 It is possible to export design tokens to any format or language. If you need to use design tokens in your technology, please contact us and describe your needs.

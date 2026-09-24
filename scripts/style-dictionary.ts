@@ -13,6 +13,7 @@ import { outputJSONWithRefs } from "./formats/outputJSONWithRefs.js";
 import { outputES6WithRefs } from "./formats/outputES6WithRefs.js";
 import { outputCommonJSWithRefs } from "./formats/commonJSWithRefs.js";
 import { formatCommonJSExports } from "./formats/commonJSExports.js";
+import { iosSwiftWithRefs } from "./formats/iosSwiftWithRefs.js";
 
 StyleDictionary.registerFormat({
   name: "custom/json-with-refs",
@@ -32,6 +33,11 @@ StyleDictionary.registerFormat({
 StyleDictionary.registerFormat({
   name: "custom/commonjs-exports",
   format: formatCommonJSExports
+});
+
+StyleDictionary.registerFormat({
+  name: "custom/ios-swift-with-refs",
+  format: iosSwiftWithRefs
 });
 
 StyleDictionary.registerTransform({
@@ -141,6 +147,14 @@ const groups = {
     "custom/radius-scale",
     "ts/size/css/letterspacing",
     "ts/color/modifiers",
+  ],
+  ios: [
+    "attribute/cti",
+    "name/camel",
+    "ts/color/modifiers",
+    "size/swift/remToCGFloat",
+    "content/swift/literal",
+    "asset/swift/literal",
   ]
 }
 
