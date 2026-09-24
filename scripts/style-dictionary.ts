@@ -152,7 +152,6 @@ const groups = {
     "attribute/cti",
     "name/camel",
     "ts/color/modifiers",
-    "size/swift/remToCGFloat",
     "content/swift/literal",
     "asset/swift/literal",
   ]

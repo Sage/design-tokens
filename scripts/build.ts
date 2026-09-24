@@ -7,10 +7,10 @@ import { StyleDictionary, groups } from "./style-dictionary.js"
 import { DesignToken, File } from "style-dictionary/types"
 import { FilterComponent } from "./utils/filter-component.js"
 import { Config } from "style-dictionary"
+import { isIOSSwiftToken } from "./formats/iosSwiftWithRefs.js"
 
 const components = fs.readdirSync("./data/tokens/components/")
 const modes = fs.readdirSync("./data/tokens/mode/")
-const iosBuildPath = "dist/ios/"
 
 interface IMode {
   modeName?: string
@@ -22,31 +22,10 @@ interface IMode {
 interface IFiles extends IMode {
   componentName: string
   outputRefs?: boolean | ((token: DesignToken) => boolean)
-  iosScope?: "common" | "themed"
 }
 
 const shouldOutputGlobalDepthRefsOnly = (token: DesignToken): boolean => {
   return token["path"]?.[0] === "global" && token["path"]?.[1] === "depth"
-}
-
-const isIOSSwiftToken = (token: DesignToken): boolean => {
-  const original = token["original"]
-  const type = original?.$type ?? original?.type ?? token.$type ?? token.type
-  const value = original?.$value ?? original?.value ?? token.$value ?? token.value
-
-  if (type === "color") {
-    return typeof value === "string"
-  }
-
-  if (type === "typography") {
-    return (token["path"] ?? []).join(".").indexOf(".font.fluid.") === -1
-  }
-
-  return [
-    "dimension", "number", "borderWidth", "borderRadius", "sizing", "spacing",
-    "typography", "boxShadow", "shadow", "fontFamilies", "fontFamily", "fontSizes", "fontSize",
-    "fontWeights", "fontWeight", "lineHeights", "lineHeight", "opacity", "other", "paragraphSpacing", "txtDecoration",
-  ].includes(type ?? "")
 }
 
 const iosClassName = (componentName: string, modeName = ""): string => {
@@ -57,30 +36,14 @@ const iosClassName = (componentName: string, modeName = ""): string => {
     return `SageTokens${mode}`
   }
 
-  if (modeName === "common") {
-    return `SageTokens${component}`
-  }
-
   return `SageTokens${mode}${component}`
-}
-
-const mergeIOSComponents = (sourcePath: string): void => {
-  const componentPath = `${iosBuildPath}components/`
-
-  fs.readdirSync(sourcePath).forEach((file) => {
-    const destination = `${componentPath}${file}`
-    const source = fs.readFileSync(`${sourcePath}${file}`, "utf-8")
-      .replace(/^import UIKit\n+/m, "")
-
-    fs.appendFileSync(destination, `\n${source}`)
-  })
 }
 
 const getModeOnlyFiles = ({modeName = "", format, suffix, subPath}: IMode): File[] => {
   return getFiles({componentName: "mode", modeName, format, suffix, subPath})
 }
 
-const getComponentOnlyFiles = ({modeName = "", format, suffix, subPath, iosScope}: IMode & Pick<IFiles, "iosScope">): File[] => {
+const getComponentOnlyFiles = ({modeName = "", format, suffix, subPath}: IMode): File[] => {
   const mode = format.includes("variables") ? "" : modeName
 
   const componentArray: File[] = []
@@ -93,7 +56,7 @@ const getComponentOnlyFiles = ({modeName = "", format, suffix, subPath, iosScope
         `Component name not found for ${component}`)
     }
 
-    componentArray.push(...getFiles({componentName, modeName: mode, format, suffix, outputRefs: true, subPath, iosScope}))
+    componentArray.push(...getFiles({componentName, modeName: mode, format, suffix, outputRefs: true, subPath}))
   })
 
   return componentArray
@@ -120,7 +83,7 @@ const getFormat = (format: string, outputRefs: boolean, componentName: string): 
   return format;
 }
 
-const getFiles = ({componentName, modeName = "", format, suffix, outputRefs = false, subPath, iosScope}: IFiles): File[] => {
+const getFiles = ({componentName, modeName = "", format, suffix, outputRefs = false, subPath}: IFiles): File[] => {
 const hasOutputRefs = Boolean(outputRefs);
 
   const getPath = (componentName: string) => {
@@ -152,19 +115,8 @@ const hasOutputRefs = Boolean(outputRefs);
     {
       destination: `${path}.${suffix}`,
       filter: (token: DesignToken) => {
-        if (!FilterComponent(token, componentName, format.includes("json")) ||
-          (isIOSSwiftFormat && !isIOSSwiftToken(token))) {
-          return false
-        }
-
-        if (!isIOSSwiftFormat || !iosScope) {
-          return true
-        }
-
-        const type = token["original"]?.$type ?? token["original"]?.type ?? token.$type ?? token.type
-        const isThemed = ["color", "boxShadow", "shadow"].includes(type ?? "")
-
-        return iosScope === "themed" ? isThemed : !isThemed
+        return FilterComponent(token, componentName, format.includes("json")) &&
+          (!isIOSSwiftFormat || isIOSSwiftToken(token))
       },
       format: actualFormat,
       options: {
@@ -172,6 +124,7 @@ const hasOutputRefs = Boolean(outputRefs);
         ...(isIOSSwiftFormat ? {
           className: iosClassName(componentName, modeName),
           modeName: componentName === "global" ? "adaptive" : modeName,
+          componentName: !["global", "mode"].includes(componentName) ? componentName : undefined,
           showFileHeader: false,
         } : {})
       }
@@ -220,7 +173,7 @@ const getGlobalConfig = (): Config => {
         ]
       },
       ios: {
-        buildPath: iosBuildPath,
+        buildPath: "dist/ios/",
         basePxFontSize: 1,
         transforms: groups.ios,
         files: [
@@ -279,7 +232,7 @@ const getModeOnlyConfig = (modeName: string): Config => {
         ]
       },
       ios: {
-        buildPath: iosBuildPath,
+        buildPath: "dist/ios/",
         basePxFontSize: 1,
         transforms: groups.ios,
         files: [
@@ -297,7 +250,7 @@ const getModeOnlyConfig = (modeName: string): Config => {
   }
 }
 
-const getComponentConfig = (modeName: string, iosScope: "common" | "themed" = "themed"): Config => {
+const getComponentConfig = (modeName: string): Config => {
   return {
     source: [
       "./data/tokens/core.json",
@@ -339,17 +292,11 @@ const getComponentConfig = (modeName: string, iosScope: "common" | "themed" = "t
         ]
       },
       ios: {
-        buildPath: iosBuildPath,
+        buildPath: "dist/ios/",
         basePxFontSize: 1,
         transforms: groups.ios,
         files: [
-          ...getComponentOnlyFiles({
-            modeName: iosScope === "common" ? "common" : modeName,
-            format: "custom/ios-swift-with-refs",
-            suffix: "swift",
-            subPath: iosScope === "common" ? "common" : modeName === "dark" ? modeName : undefined,
-            iosScope,
-          })
+          ...getComponentOnlyFiles({modeName, format: "custom/ios-swift-with-refs", suffix: "swift"})
         ]
       }
     },
@@ -403,14 +350,9 @@ for (const mode of modes) {
   await componentStyleDictionary.buildPlatform("scss")
   await componentStyleDictionary.buildPlatform("js")
   await componentStyleDictionary.buildPlatform("json")
-  await componentStyleDictionary.buildPlatform("ios")
+  // Component sources are mode-independent. The Swift formatter emits common,
+  // light, and dark namespaces from the light dictionary in one pass.
+  if (modeName === "light") {
+    await componentStyleDictionary.buildPlatform("ios")
+  }
 }
-
-const commonComponentStyleDictionary = new StyleDictionary(getComponentConfig("light", "common"))
-
-await commonComponentStyleDictionary.buildPlatform("ios")
-
-mergeIOSComponents(`${iosBuildPath}common/components/`)
-mergeIOSComponents(`${iosBuildPath}dark/components/`)
-fs.rmSync(`${iosBuildPath}common`, { recursive: true })
-fs.rmSync(`${iosBuildPath}dark`, { recursive: true })

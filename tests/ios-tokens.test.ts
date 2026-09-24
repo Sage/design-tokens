@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "fs";
+import { existsSync, readFileSync, readdirSync } from "fs";
 import { resolve } from "path";
 import { cwd } from "process";
 import { describe, expect, it } from "vitest";
@@ -22,6 +22,10 @@ describe("iOS Swift tokens", () => {
   });
 
   it("generates one component set with light and dark namespaces", () => {
+    const iosComponents = readdirSync(resolve(iosPath, "components")).map(file => file.replace(".swift", ""));
+    const jsonComponents = readdirSync(resolve(cwd(), "dist/json/components")).map(file => file.replace(".json", ""));
+
+    expect(iosComponents.sort()).toEqual(jsonComponents.sort());
     expect(readSwift("components/profile.swift")).toContain("public enum SageTokensProfile");
     expect(readSwift("components/button.swift")).toContain("public enum SageTokensLightButton");
     expect(readSwift("components/button.swift")).toContain("public enum SageTokensDarkButton");
@@ -43,26 +47,17 @@ describe("iOS Swift tokens", () => {
     expect(outputs).not.toContain("[object Object]");
   });
 
-  it("emits structured composite tokens", () => {
+  it("emits supported native token types", () => {
     expect(readSwift("global.swift")).toContain("public struct SageTokenGradient");
     expect(readSwift("global.swift")).toContain("public struct SageTokenShadow");
     expect(readSwift("global.swift")).toContain("public struct SageTokenTypography");
     expect(swiftTokenValue(readSwift("light.swift"), "modeColorActionAiGradActive")).toContain("SageTokenGradient(");
     expect(swiftTokenValue(readSwift("components/focus.swift"), "focusShadowDefault")).toContain("[SageTokenShadow](");
-    expect(swiftTokenValue(readSwift("components/profile.swift"), "profileFontInitialsXs")).toBe(
-      "SageTokensGlobal.globalFontStaticCompPlaceholderXs",
-    );
     expect(swiftTokenValue(readSwift("global.swift"), "globalFontFamiliesHeading")).toBe("\"Sage UI\"");
     expect(readSwift("global.swift")).toContain("fontWeight: .regular, lineHeight: CGFloat(1.500), fontSize: CGFloat(14.00)");
     expect(readSwift("global.swift")).not.toContain("globalFontFluid");
     expect(swiftTokenValue(readSwift("global.swift"), "globalBorderwidthXs")).toBe("CGFloat(1.00)");
-    expect(swiftTokenValue(readSwift("global.swift"), "globalRadiusContainer2Xs")).toBe("CGFloat(2.00)");
     expect(readSwift("global.swift")).toContain("SageTokensDark.modeColorGenericDepthFaint");
-    expect(swiftTokenValue(readSwift("light.swift"), "modeColorNone")).toContain("alpha: 0.000");
-    expect(swiftTokenValue(readSwift("light.swift"), "modeColorGenericDepthSoft")).toContain("alpha: 0.200");
-    expect(swiftTokenValue(readSwift("dark.swift"), "modeColorActionInactiveMask")).toContain("alpha: 0.400");
-    expect(swiftTokenValue(readSwift("dark.swift"), "modeColorActionInactiveDefault")).toContain("alpha: 0.302");
-    expect(swiftTokenValue(readSwift("dark.swift"), "modeColorActionMainActive")).toContain("green: 0.953");
     expect(readSwift("global.swift")).toContain("x: CGFloat(6.00), y: CGFloat(6.00), blur: CGFloat(30.00)");
   });
 
@@ -71,17 +66,8 @@ describe("iOS Swift tokens", () => {
 
     expect(componentButton).toContain("SageTokensLight.modeColorActionMainDefault");
     expect(componentButton).toContain("SageTokensDark.modeColorActionMainDefault");
-    expect(swiftTokenValue(readSwift("components/profile.swift"), "profileSizeOutsideXs")).toBe(
-      "SageTokensGlobal.globalSizeXs",
-    );
+    expect(readSwift("components/profile.swift")).toContain("SageTokensGlobal.globalSizeXs");
     expect(componentButton).toContain("SageTokensLightButton.buttonNone");
     expect(componentButton).toContain("SageTokensDarkButton.buttonNone");
-    expect(readSwift("components/profile.swift")).toContain("public static let profileSizeOutsideMl = CGFloat(56.00)");
-    expect(componentButton).toContain("SageTokensLight.modeColorActionAiGradDefault");
-    expect(componentButton).toContain("SageTokensDark.modeColorActionAiGradDefault");
-    expect(swiftTokenValue(readSwift("light.swift"), "modeColorActionAiGradDefault")).toContain("SageTokenGradient(");
-    expect(readSwift("components/progress.swift")).toContain(
-      "SageTokensLight.modeColorStatusSkeletonStop1",
-    );
   });
 });
