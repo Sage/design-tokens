@@ -38,3 +38,14 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Check generated Swift package source
+        run: git diff --exit-code -- Sources/SageDesignTokens/Tokens.swift
+
+  ios-swift-package:
+    name: Build iOS Swift package
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Build package in Swift 6 mode
+        run: xcodebuild -scheme SageDesignTokens -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build

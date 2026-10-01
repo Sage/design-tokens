@@ -7,6 +7,7 @@ import { StyleDictionary, groups } from "./style-dictionary.js"
 import { DesignToken, File } from "style-dictionary/types"
 import { FilterComponent } from "./utils/filter-component.js"
 import { Config } from "style-dictionary"
+import { isIOSSwiftToken } from "./formats/iosSwiftWithRefs.js"
 
 const components = fs.readdirSync("./data/tokens/components/")
 const modes = fs.readdirSync("./data/tokens/mode/")
@@ -25,6 +26,17 @@ interface IFiles extends IMode {
 
 const shouldOutputGlobalDepthRefsOnly = (token: DesignToken): boolean => {
   return token["path"]?.[0] === "global" && token["path"]?.[1] === "depth"
+}
+
+const iosClassName = (componentName: string, modeName = ""): string => {
+  const mode = modeName.charAt(0).toUpperCase() + modeName.slice(1)
+  const component = componentName.charAt(0).toUpperCase() + componentName.slice(1)
+
+  if (componentName === "mode") {
+    return `SageTokens${mode}`
+  }
+
+  return `SageTokens${mode}${component}`
 }
 
 const getModeOnlyFiles = ({modeName = "", format, suffix, subPath}: IMode): File[] => {
@@ -97,14 +109,24 @@ const hasOutputRefs = Boolean(outputRefs);
 
   const path = getPath(componentName).trim()
   const actualFormat = getFormat(format, hasOutputRefs, componentName);
+  const isIOSSwiftFormat = format === "custom/ios-swift-with-refs"
 
   return [
     {
       destination: `${path}.${suffix}`,
-      filter: (token: DesignToken) => FilterComponent(token, componentName, format.includes("json")),
+      filter: (token: DesignToken) => {
+        return FilterComponent(token, componentName, format.includes("json")) &&
+          (!isIOSSwiftFormat || isIOSSwiftToken(token))
+      },
       format: actualFormat,
       options: {
-        outputReferences: outputRefs
+        outputReferences: isIOSSwiftFormat ? !["global", "mode"].includes(componentName) : outputRefs,
+        ...(isIOSSwiftFormat ? {
+          className: iosClassName(componentName, modeName),
+          modeName: componentName === "global" ? "adaptive" : modeName,
+          componentName: !["global", "mode"].includes(componentName) ? componentName : undefined,
+          showFileHeader: false,
+        } : {})
       }
     }
   ]
@@ -148,6 +170,14 @@ const getGlobalConfig = (): Config => {
         transforms: groups.json,
         files: [
           ...getFiles({componentName: "global", format: "json/flat", suffix: "json", outputRefs: shouldOutputGlobalDepthRefsOnly})
+        ]
+      },
+      ios: {
+        buildPath: "dist/ios/",
+        basePxFontSize: 1,
+        transforms: groups.ios,
+        files: [
+          ...getFiles({componentName: "global", format: "custom/ios-swift-with-refs", suffix: "swift"})
         ]
       }
     },
@@ -199,6 +229,14 @@ const getModeOnlyConfig = (modeName: string): Config => {
         transforms: groups.json,
         files: [
           ...getModeOnlyFiles({modeName, format: "json/flat", suffix: "json"})
+        ]
+      },
+      ios: {
+        buildPath: "dist/ios/",
+        basePxFontSize: 1,
+        transforms: groups.ios,
+        files: [
+          ...getModeOnlyFiles({modeName, format: "custom/ios-swift-with-refs", suffix: "swift"})
         ]
       }
     },
@@ -252,6 +290,14 @@ const getComponentConfig = (modeName: string): Config => {
         files: [
           ...getComponentOnlyFiles({modeName, format: "json/flat", suffix: "json"})
         ]
+      },
+      ios: {
+        buildPath: "dist/ios/",
+        basePxFontSize: 1,
+        transforms: groups.ios,
+        files: [
+          ...getComponentOnlyFiles({modeName, format: "custom/ios-swift-with-refs", suffix: "swift"})
+        ]
       }
     },
     log: {
@@ -278,6 +324,7 @@ for (const mode of modes) {
   await modeStyleDictionary.buildPlatform("scss")
   await modeStyleDictionary.buildPlatform("js")
   await modeStyleDictionary.buildPlatform("json")
+  await modeStyleDictionary.buildPlatform("ios")
 }
 
 // Phase 2: Build global tokens (shadow tokens reference mode tokens)
@@ -287,8 +334,9 @@ await globalStyleDictionary.buildPlatform("css")
 await globalStyleDictionary.buildPlatform("scss")
 await globalStyleDictionary.buildPlatform("js")
 await globalStyleDictionary.buildPlatform("json")
+await globalStyleDictionary.buildPlatform("ios")
 
-// Phase 3: Build component tokens per mode
+// Phase 3: Build component tokens per mode.
 for (const mode of modes) {
   const modeName = mode.split(".json")[0]
 
@@ -302,4 +350,9 @@ for (const mode of modes) {
   await componentStyleDictionary.buildPlatform("scss")
   await componentStyleDictionary.buildPlatform("js")
   await componentStyleDictionary.buildPlatform("json")
+  // Component sources are mode-independent. The Swift formatter emits common,
+  // light, and dark namespaces from the light dictionary in one pass.
+  if (modeName === "light") {
+    await componentStyleDictionary.buildPlatform("ios")
+  }
 }
