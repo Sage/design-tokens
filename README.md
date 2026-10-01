@@ -162,31 +162,38 @@ A type definition file is also included to work in projects with typescript inst
 
 ### iOS / Swift
 
-Swift token files are generated into the `ios/` directory.
+The build generates Swift token files in `dist/ios/`, which stays out of Git. It also combines them into the single package source file at `Sources/SageDesignTokens/Tokens.swift`. Commit that generated file when tokens change so a Git checkout contains the package. The generated colours are `UIColor` values; spacing and radii are `CGFloat` values. Light and dark token namespaces remain separate, matching the source mode references.
+
+In Xcode, choose **File → Add Package Dependencies**, enter `https://github.com/Sage/design-tokens.git`, and select the `ios_spike` branch for the beta. After the package reaches a release, switch the dependency to the first version tag that includes `Package.swift`. The Swift import stays the same:
+
+```swift
+import SageDesignTokens
+import SwiftUI
+
+let background = Color(uiColor: SageTokensLight.modeColorGenericBgNought)
+let buttonBackground = Color(uiColor: SageTokensLightButton.buttonTypicalPrimaryBgDefault)
+```
+
+The package supports iOS 16 or later and builds in Swift 6 language mode.
 
 #### Add to an iOS target
 
-Add `global.swift`, `light.swift`, `dark.swift`, and `components/` to the Xcode target. The generated files import UIKit and expose public Swift namespaces, so no additional Swift import is required.
+For a direct file handoff, add `global.swift`, `light.swift`, `dark.swift`, and the required files from `components/` to the Xcode target. When files are compiled directly into the app target, no separate Swift module import is required.
 
 #### Available files
 
-- Global tokens: `ios/global.swift`
-- Light mode tokens: `ios/light.swift`
-- Dark mode tokens: `ios/dark.swift`
-- Components: `ios/components/`
-
-The generated files expose `UIColor` colour tokens and scalar values, such as spacing and radii, through Swift namespaces:
-
-```swift
-let background = SageTokensLight.modeColorGenericBgDefault
-let buttonHeight = SageTokensLightButton.buttonPrimaryHeight
-```
+- Global tokens: `dist/ios/global.swift`
+- Light mode tokens: `dist/ios/light.swift`
+- Dark mode tokens: `dist/ios/dark.swift`
+- Components: `dist/ios/components/`
 
 Each component file contains light and dark namespaces. Component token references are retained to the matching mode and global namespaces.
 
 #### Composite tokens
 
 Gradients, shadows, and static typography are exported as structured Swift descriptors. These preserve token references and expose the underlying token data without choosing a rendering framework. Responsive typography roles that use CSS `clamp()` and viewport units remain web-only; iOS consumers should map those roles to their Dynamic Type strategy. Consumers can adapt the descriptors to their platform APIs while retaining the token names, values, theme handling, and accessibility behaviour that suit their application.
+
+The generated Swift files do not include the Sage UI font files. Apps using those fonts need to provide them separately.
 
 #### Other formats
 

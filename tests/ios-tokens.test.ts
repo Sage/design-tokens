@@ -48,9 +48,11 @@ describe("iOS Swift tokens", () => {
   });
 
   it("emits supported native token types", () => {
-    expect(readSwift("global.swift")).toContain("public struct SageTokenGradient");
-    expect(readSwift("global.swift")).toContain("public struct SageTokenShadow");
-    expect(readSwift("global.swift")).toContain("public struct SageTokenTypography");
+    expect(readSwift("global.swift")).toContain("public struct SageTokenGradientStop: Sendable");
+    expect(readSwift("global.swift")).toContain("public struct SageTokenGradient: Sendable");
+    expect(readSwift("global.swift")).toContain("public enum SageTokenShadowKind: Sendable");
+    expect(readSwift("global.swift")).toContain("public struct SageTokenShadow: Sendable");
+    expect(readSwift("global.swift")).toContain("public struct SageTokenTypography: Sendable");
     expect(swiftTokenValue(readSwift("light.swift"), "modeColorActionAiGradActive")).toContain("SageTokenGradient(");
     expect(swiftTokenValue(readSwift("components/focus.swift"), "focusShadowDefault")).toContain("[SageTokenShadow](");
     expect(swiftTokenValue(readSwift("global.swift"), "globalFontFamiliesHeading")).toBe("\"Sage UI\"");

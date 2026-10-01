@@ -224,7 +224,7 @@ ${properties}
 }`
 }
 
-const compositeTypes = `public struct SageTokenGradientStop {
+const compositeTypes = `public struct SageTokenGradientStop: Sendable {
     public let color: UIColor
     public let location: CGFloat
 
@@ -234,7 +234,7 @@ const compositeTypes = `public struct SageTokenGradientStop {
     }
 }
 
-public struct SageTokenGradient {
+public struct SageTokenGradient: Sendable {
     public let angle: CGFloat
     public let stops: [SageTokenGradientStop]
 
@@ -244,12 +244,12 @@ public struct SageTokenGradient {
     }
 }
 
-public enum SageTokenShadowKind {
+public enum SageTokenShadowKind: Sendable {
     case drop
     case inset
 }
 
-public struct SageTokenShadow {
+public struct SageTokenShadow: Sendable {
     public let x: CGFloat
     public let y: CGFloat
     public let blur: CGFloat
@@ -267,7 +267,7 @@ public struct SageTokenShadow {
     }
 }
 
-public struct SageTokenTypography {
+public struct SageTokenTypography: Sendable {
     public let fontFamily: String
     public let fontWeight: UIFont.Weight
     public let lineHeight: CGFloat
