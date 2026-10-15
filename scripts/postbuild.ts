@@ -1,5 +1,5 @@
 /*
-Copyright © 2025 The Sage Group plc or its licensors. All Rights reserved
+Copyright © 2026 The Sage Group plc or its licensors. All Rights reserved
  */
 import path, { dirname, resolve } from "path"
 import { fileURLToPath } from "url"
@@ -302,7 +302,7 @@ function createLightAllCss() {
     meta: {
       description: "Sage Icon Font",
       url: "http://sage.com",
-      copyright: "Copyright © 2025 The Sage Group plc or its licensors. All Rights reserved.",
+      copyright: "Copyright © 2026 The Sage Group plc or its licensors. All Rights reserved.",
       version: "1.0"
     }
   })
