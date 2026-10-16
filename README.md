@@ -180,4 +180,4 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-Copyright (c) 2025 Sage Group Plc. All rights reserved.
+Copyright (c) 2026 Sage Group Plc. All rights reserved.
