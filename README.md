@@ -28,6 +28,8 @@ Design tokens purpose is to:
 
 To make use of these tokens in your application, import the correct variable definitions based on your styling technology.
 
+Modernisation overrides are available in `json/modernisation.json` (`dist/json/modernisation.json` after building). This JSON file uses CSS variable references and is built separately from the standard component tokens. No other formats are generated for modernisation.
+
 #### Install
 
 To add to a project using npm:
