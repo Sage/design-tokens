@@ -13,6 +13,7 @@ jobs:
     permissions:
       contents: write
       packages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v6
         with:
@@ -52,6 +53,5 @@ jobs:
         run: npx semantic-release --debug
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GIT_COMMITTER_NAME: Sage Carbon
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
