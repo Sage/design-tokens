@@ -3,11 +3,13 @@ Copyright © 2026 The Sage Group plc or its licensors. All Rights reserved
  */
 
 import * as fs from "fs"
+import { resolve } from "path"
 import { StyleDictionary, groups } from "./style-dictionary.js"
 import { DesignToken, File } from "style-dictionary/types"
 import { FilterComponent } from "./utils/filter-component.js"
 import { Config } from "style-dictionary"
 
+const modernisationSource = "./data/tokens/theme/modernisation.json"
 const components = fs.readdirSync("./data/tokens/components/")
 const modes = fs.readdirSync("./data/tokens/mode/")
 
@@ -218,7 +220,7 @@ const getComponentConfig = (modeName: string): Config => {
       "./data/tokens/core.json",
       "./data/tokens/global/*.json",
       `./data/tokens/mode/${modeName}.json`,
-      "./data/tokens/components/*.json"
+      ...components.map(component => `./data/tokens/components/${component}`)
     ],
     preprocessors: ["tokens-studio"],
     platforms: {
@@ -264,6 +266,32 @@ const getComponentConfig = (modeName: string): Config => {
   }
 }
 
+const getModernisationConfig = (): Config => {
+  return {
+    include: [
+      "./data/tokens/core.json",
+      "./data/tokens/global/*.json",
+      "./data/tokens/mode/light.json"
+    ],
+    source: [modernisationSource],
+    preprocessors: ["tokens-studio"],
+    platforms: {
+      json: {
+        buildPath: "dist/json/",
+        transforms: groups.json,
+        files: [{
+          destination: "theme/modernisation.json",
+          filter: (token: DesignToken) => resolve(token["filePath"] ?? "") === resolve(modernisationSource),
+          format: "custom/json-with-refs",
+          options: {
+            outputReferences: true
+          }
+        }]
+      }
+    }
+  }
+}
+
 // Phase 1: Build mode tokens first (no dependencies on global)
 for (const mode of modes) {
   const modeName = mode.split(".json")[0]
@@ -303,3 +331,7 @@ for (const mode of modes) {
   await componentStyleDictionary.buildPlatform("js")
   await componentStyleDictionary.buildPlatform("json")
 }
+
+// Phase 4: Build modernisation overrides separately from the standard components
+const modernisationStyleDictionary = new StyleDictionary(getModernisationConfig())
+await modernisationStyleDictionary.buildPlatform("json")
