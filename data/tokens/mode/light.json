@@ -306,16 +306,43 @@
             "$value": "{core.color.white}"
           },
           "faint": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.05",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.storm.5}"
+            "$value": "{core.color.storm.60}"
           },
           "delicate": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.1",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.storm.10}"
+            "$value": "{core.color.storm.60}"
           },
           "soft": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.15",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.storm.15}"
+            "$value": "{core.color.storm.60}"
           },
           "inverse": {
             "nought": {
@@ -573,12 +600,12 @@
           "nought": {
             "$type": "color",
             "$value": "{core.color.white}",
-            "$description": "used on full page backgrounds"
+            "$description": "used as a container color that sits on top of an off white bg"
           },
           "trace": {
             "$type": "color",
             "$value": "{core.color.storm.5}",
-            "$description": "used on full page backgrounds as an alternative option"
+            "$description": "Full page backgounds"
           },
           "faint": {
             "$type": "color",
