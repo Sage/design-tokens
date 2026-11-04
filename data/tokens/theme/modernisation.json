@@ -13,6 +13,20 @@
       }
     }
   },
+  "container": {
+    "modal": {
+      "border-default": {
+        "$type": "color",
+        "$value": "{mode.color.none}"
+      }
+    },
+    "standard": {
+      "border-default": {
+        "$type": "color",
+        "$value": "{mode.color.generic.fg.faint}"
+      }
+    }
+  },
   "nav": {
     "primary": {
       "bg-active": {
@@ -25,15 +39,15 @@
       },
       "bg-child": {
         "$type": "color",
-        "$value": "{mode.color.generic.bg.nought}"
+        "$value": "{mode.color.generic.surface.trace}"
       },
       "bg-childAlt": {
         "$type": "color",
-        "$value": "{mode.color.generic.bg.delicate}"
+        "$value": "{mode.color.generic.surface.trace}"
       },
       "bg-hover": {
         "$type": "color",
-        "$value": "{mode.color.action.grayscale.hoverAlt}"
+        "$value": "{mode.color.generic.bg.faint}"
       },
       "bg-selected": {
         "$type": "color",
@@ -68,22 +82,22 @@
       }
     }
   },
-  "page": {
-    "bg-alt": {
+  "tab": {
+    "border-activeAlt": {
+      "$type": "color",
+      "$value": "{mode.color.none}"
+    },
+    "border-activeOutline": {
       "$type": "color",
       "$value": "{mode.color.generic.surface.nought}"
     },
-    "bg-default": {
+    "border-default": {
       "$type": "color",
-      "$value": "{mode.color.generic.surface.trace}"
-    }
-  },
-  "container": {
-    "standard": {
-      "border-default": {
-        "$type": "color",
-        "$value": "{mode.color.generic.fg.faint}"
-      }
+      "$value": "{mode.color.generic.fg.faint}"
+    },
+    "bg-active": {
+      "$type": "color",
+      "$value": "{mode.color.none}"
     }
   }
 }

@@ -8,14 +8,27 @@ const modernisation = JSON.parse(readFileSync(resolve(distPath, "json/theme/mode
 
 describe("modernisation tokens", () => {
   it("exports only the overrides, preserving mode references", () => {
-    expect(Object.keys(modernisation)).toHaveLength(17);
-    expect(modernisation).toMatchObject({
+    expect(modernisation).toEqual({
       buttonTypicalToggleBgDefault: "var(--mode-color-generic-bg-faint)",
       buttonTypicalToggleBorderDefault: "var(--mode-color-none)",
+      containerModalBorderDefault: "var(--mode-color-none)",
+      containerStandardBorderDefault: "var(--mode-color-generic-fg-faint)",
       navPrimaryBgActive: "var(--mode-color-generic-bg-delicate)",
       navPrimaryBgDefault: "var(--mode-color-generic-surface-trace)",
+      navPrimaryBgChild: "var(--mode-color-generic-surface-trace)",
+      navPrimaryBgChildAlt: "var(--mode-color-generic-surface-trace)",
+      navPrimaryBgHover: "var(--mode-color-generic-bg-faint)",
       navPrimaryBgSelected: "var(--mode-color-generic-bg-inverse-nought)",
-      navPrimaryLabelDefault: "var(--mode-color-action-nav-with-default)"
+      navPrimaryBorderDefault: "var(--mode-color-none)",
+      navPrimaryDivider: "var(--mode-color-generic-fg-soft)",
+      navPrimaryLabelActive: "var(--mode-color-action-nav-with-default)",
+      navPrimaryLabelDefault: "var(--mode-color-action-nav-with-default)",
+      navPrimaryLabelDefaultAlt: "var(--mode-color-generic-txt-moderate)",
+      navPrimaryLabelHover: "var(--mode-color-action-nav-with-default)",
+      tabBorderActiveAlt: "var(--mode-color-none)",
+      tabBorderActiveOutline: "var(--mode-color-generic-surface-nought)",
+      tabBorderDefault: "var(--mode-color-generic-fg-faint)",
+      tabBgActive: "var(--mode-color-none)"
     });
     expect(Object.values(modernisation).every(value =>
       typeof value === "string" && /^var\(--mode-.*\)$/.test(value)

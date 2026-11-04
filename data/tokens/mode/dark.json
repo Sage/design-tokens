@@ -533,21 +533,57 @@
             "$value": "{core.color.black}"
           },
           "faint": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.10",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.smoke.90}"
+            "$value": "{core.color.white}"
           },
           "soft": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.20",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.smoke.80}",
+            "$value": "{core.color.white}",
             "$description": "table dividers and borders"
           },
           "moderate": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.3",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.smoke.70}"
+            "$value": "{core.color.white}"
           },
           "firm": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.4",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.smoke.60}"
+            "$value": "{core.color.white}"
           },
           "inverse": {
             "nought": {
@@ -571,24 +607,24 @@
         },
         "surface": {
           "nought": {
-            "$type": "color",
-            "$value": "{core.color.black}",
-            "$description": "used on full page backgrounds"
-          },
-          "trace": {
             "$extensions": {
               "studio.tokens": {
                 "modify": {
                   "type": "mix",
-                  "value": "0.10",
+                  "value": "0.05",
                   "space": "lch",
-                  "color": "{core.color.white}"
+                  "color": "{core.color.white} "
                 }
               }
             },
             "$type": "color",
             "$value": "{core.color.black}",
-            "$description": "used on full page backgrounds as an alternative option"
+            "$description": "used as a container color that sits on top of an off black bg"
+          },
+          "trace": {
+            "$type": "color",
+            "$value": "{core.color.black}",
+            "$description": "Full page backgrounds"
           },
           "faint": {
             "$extensions": {
@@ -834,8 +870,17 @@
             "$description": "txt for draggable area on file input"
           },
           "hoverAlt": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.95",
+                  "space": "lch"
+                }
+              }
+            },
             "$type": "color",
-            "$value": "{core.color.storm.95}",
+            "$value": "{core.color.white}",
             "$description": "bg hover for draggable area on file input"
           },
           "withDefault": {
