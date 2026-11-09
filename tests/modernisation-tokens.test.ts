@@ -13,6 +13,7 @@ describe("modernisation tokens", () => {
       buttonTypicalToggleBorderDefault: "var(--mode-color-none)",
       containerModalBorderDefault: "var(--mode-color-none)",
       containerStandardBorderDefault: "var(--mode-color-generic-fg-faint)",
+      logoSageInverseBgDefault: "var(--mode-color-brand-default)",
       navPrimaryBgActive: "var(--mode-color-generic-bg-delicate)",
       navPrimaryBgDefault: "var(--mode-color-generic-surface-trace)",
       navPrimaryBgChild: "var(--mode-color-generic-surface-trace)",
