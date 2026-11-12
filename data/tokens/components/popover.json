@@ -12,7 +12,7 @@
     },
     "bg-default": {
       "$type": "color",
-      "$value": "{mode.color.generic.bg.nought}",
+      "$value": "{mode.color.generic.bg.solid.nought}",
       "$description": "REF'D IN FORM. Popover container bg"
     },
     "bg-hover": {
@@ -43,8 +43,12 @@
     "submenu": {
       "bg-default": {
         "$type": "color",
-        "$value": "{mode.color.generic.bg.faint}",
-        "$description": "popover small screen submenu container bg"
+        "$value": "{mode.color.generic.bg.solid.faint}",
+        "$description": "popover small screen submenu container bg",
+        "$deprecated": {
+          "severity": "warning",
+          "message": "We no logner have a small screen popover variant"
+        }
       }
     }
   }

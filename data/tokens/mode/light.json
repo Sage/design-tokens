@@ -303,7 +303,12 @@
         "bg": {
           "nought": {
             "$type": "color",
-            "$value": "{core.color.white}"
+            "$value": "{core.color.white}",
+            "$deprecated": {
+              "severity": "warning",
+              "message": "This group has been replaced by separate transparent and solid colour subfolders. Update any aliases to reference tokens in the appropriate subfolder.",
+              "replacementToken": "mode.color.generic.bg.transparent.nought"
+            }
           },
           "faint": {
             "$extensions": {
@@ -316,7 +321,12 @@
               }
             },
             "$type": "color",
-            "$value": "{core.color.storm.60}"
+            "$value": "{core.color.storm.60}",
+            "$deprecated": {
+              "severity": "warning",
+              "message": "This group has been replaced by separate transparent and solid colour subfolders. Update any aliases to reference tokens in the appropriate subfolder.",
+              "replacementToken": "mode.color.generic.bg.transparent.faint"
+            }
           },
           "delicate": {
             "$extensions": {
@@ -329,7 +339,12 @@
               }
             },
             "$type": "color",
-            "$value": "{core.color.storm.60}"
+            "$value": "{core.color.storm.60}",
+            "$deprecated": {
+              "severity": "warning",
+              "message": "This group has been replaced by separate transparent and solid colour subfolders. Update any aliases to reference tokens in the appropriate subfolder.",
+              "replacementToken": "mode.color.generic.bg.transparent.delicate"
+            }
           },
           "soft": {
             "$extensions": {
@@ -342,12 +357,22 @@
               }
             },
             "$type": "color",
-            "$value": "{core.color.storm.60}"
+            "$value": "{core.color.storm.60}",
+            "$deprecated": {
+              "severity": "warning",
+              "message": "This group has been replaced by separate transparent and solid colour subfolders. Update any aliases to reference tokens in the appropriate subfolder.",
+              "replacementToken": "mode.color.generic.bg.transparent.soft"
+            }
           },
           "inverse": {
             "nought": {
               "$type": "color",
-              "$value": "{core.color.black}"
+              "$value": "{core.color.black}",
+              "$deprecated": {
+                "severity": "warning",
+                "message": "This group has been replaced by separate transparent and solid colour subfolders. Update any aliases to reference tokens in the appropriate subfolder.",
+                "replacementToken": "mode.color.generic.bg.inverse.transparent.nought"
+              }
             },
             "faint": {
               "$extensions": {
@@ -361,7 +386,12 @@
                 }
               },
               "$type": "color",
-              "$value": "{core.color.white}"
+              "$value": "{core.color.white}",
+              "$deprecated": {
+                "severity": "warning",
+                "message": "This group has been replaced by separate transparent and solid colour subfolders. Update any aliases to reference tokens in the appropriate subfolder.",
+                "replacementToken": "mode.color.generic.bg.inverse.transparent.faint"
+              }
             },
             "delicate": {
               "$extensions": {
@@ -375,7 +405,12 @@
                 }
               },
               "$type": "color",
-              "$value": "{core.color.white}"
+              "$value": "{core.color.white}",
+              "$deprecated": {
+                "severity": "warning",
+                "message": "This group has been replaced by separate transparent and solid colour subfolders. Update any aliases to reference tokens in the appropriate subfolder.",
+                "replacementToken": "mode.color.generic.bg.inverse.transparent.delicate"
+              }
             },
             "soft": {
               "$extensions": {
@@ -389,7 +424,141 @@
                 }
               },
               "$type": "color",
+              "$value": "{core.color.white}",
+              "$deprecated": {
+                "severity": "warning",
+                "message": "This group has been replaced by separate transparent and solid colour subfolders. Update any aliases to reference tokens in the appropriate subfolder.",
+                "replacementToken": "mode.color.generic.bg.inverse.transparent.soft"
+              }
+            }
+          },
+          "transparent": {
+            "nought": {
+              "$type": "color",
               "$value": "{core.color.white}"
+            },
+            "faint": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.05",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{core.color.storm.60}"
+            },
+            "delicate": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.1",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{core.color.storm.60}"
+            },
+            "soft": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "alpha",
+                    "value": "0.15",
+                    "space": "lch"
+                  }
+                }
+              },
+              "$type": "color",
+              "$value": "{core.color.storm.60}"
+            },
+            "inverse": {
+              "nought": {
+                "$type": "color",
+                "$value": "{core.color.black}"
+              },
+              "faint": {
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "alpha",
+                      "value": "0.05",
+                      "space": "lch",
+                      "color": "{core.color.white}"
+                    }
+                  }
+                },
+                "$type": "color",
+                "$value": "{core.color.white}"
+              },
+              "delicate": {
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "alpha",
+                      "value": "0.10",
+                      "space": "lch",
+                      "color": "{core.color.white}"
+                    }
+                  }
+                },
+                "$type": "color",
+                "$value": "{core.color.white}"
+              },
+              "soft": {
+                "$extensions": {
+                  "studio.tokens": {
+                    "modify": {
+                      "type": "alpha",
+                      "value": "0.15",
+                      "space": "lch",
+                      "color": "{core.color.white} "
+                    }
+                  }
+                },
+                "$type": "color",
+                "$value": "{core.color.white}"
+              }
+            }
+          },
+          "solid": {
+            "nought": {
+              "$type": "color",
+              "$value": "{core.color.white}"
+            },
+            "faint": {
+              "$type": "color",
+              "$value": "{core.color.storm.5}"
+            },
+            "delicate": {
+              "$type": "color",
+              "$value": "{core.color.storm.10}"
+            },
+            "soft": {
+              "$type": "color",
+              "$value": "{core.color.storm.15}"
+            },
+            "inverse": {
+              "nought": {
+                "$type": "color",
+                "$value": "{core.color.black}"
+              },
+              "faint": {
+                "$type": "color",
+                "$value": "{core.color.smoke.95}"
+              },
+              "delicate": {
+                "$type": "color",
+                "$value": "{core.color.smoke.90}"
+              },
+              "soft": {
+                "$type": "color",
+                "$value": "{core.color.smoke.80}"
+              }
             }
           }
         },
