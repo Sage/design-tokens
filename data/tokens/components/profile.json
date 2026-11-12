@@ -83,7 +83,15 @@
     },
     "bg-def": {
       "$type": "color",
-      "$value": "{mode.color.generic.bg.nought}"
+      "$value": "{mode.color.generic.bg.solid.nought}",
+      "$deprecated": {
+        "severity": "warning",
+        "message": "Typo on the original token"
+      }
+    },
+    "bg-default": {
+      "$type": "color",
+      "$value": "{mode.color.generic.bg.solid.nought}"
     },
     "border-default": {
       "$type": "color",
