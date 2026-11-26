@@ -1201,6 +1201,20 @@
             "$type": "color",
             "$value": "{mode.color.action.grayscale.active}"
           },
+          "activeHover": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.67",
+                  "space": "lch"
+                }
+              }
+            },
+            "$type": "color",
+            "$value": "{mode.color.action.grayscale.active}",
+            "$description": "subtle and toggle button txt"
+          },
           "default": {
             "$extensions": {
               "studio.tokens": {
@@ -1263,6 +1277,10 @@
           "withActiveAlt": {
             "$type": "color",
             "$value": "{core.color.black}"
+          },
+          "withActiveHover": {
+            "$type": "color",
+            "$value": "{core.color.white}"
           },
           "withDefault": {
             "$type": "color",
