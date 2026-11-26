@@ -421,17 +421,17 @@
         }
       },
       "toggle": {
+        "bg-active": {
+          "$type": "color",
+          "$value": "{mode.color.action.grayscale.active}"
+        },
         "bg-activeDisabled": {
           "$type": "color",
           "$value": "{mode.color.action.inactive.default}"
         },
-        "label-activeDisabled": {
+        "bg-activeHover": {
           "$type": "color",
-          "$value": "{mode.color.action.inactive.txtAlt}"
-        },
-        "bg-active": {
-          "$type": "color",
-          "$value": "{mode.color.action.grayscale.active}"
+          "$value": "{mode.color.action.grayscale.activeHover}"
         },
         "bg-default": {
           "$type": "color",
@@ -452,6 +452,14 @@
         "label-active": {
           "$type": "color",
           "$value": "{mode.color.action.grayscale.withActive}"
+        },
+        "label-activeDisabled": {
+          "$type": "color",
+          "$value": "{mode.color.action.inactive.txtAlt}"
+        },
+        "label-activeHover": {
+          "$type": "color",
+          "$value": "{mode.color.action.grayscale.withActiveHover}"
         },
         "label-disabled": {
           "$type": "color",
